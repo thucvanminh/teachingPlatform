@@ -872,11 +872,12 @@ export default function StudentDashboard() {
 
                     {isExpanded && (
                       <div className="p-6 pt-2 border-t border-slate-100 bg-slate-50/50">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-4">
+                          {/* Station 1: Bài Giảng & Từ Vựng */}
                           <div className="p-5 rounded-2xl bg-white border border-slate-200 flex flex-col justify-between shadow-sm">
                             <div>
                               <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
-                                📖 Bài Giảng & Lý Thuyết
+                                📖 Bài Giảng & 30 Từ Vựng
                               </span>
                               <h4 className="text-base font-bold text-slate-900 mt-3">
                                 {assignment.learning_units?.title}
@@ -889,31 +890,66 @@ export default function StudentDashboard() {
                               onClick={() => handleOpenLecture(assignment)}
                               className="mt-6 w-full py-2.5 bg-blue-50 hover:bg-blue-100 text-blue-700 font-semibold text-sm rounded-xl border border-blue-200 transition"
                             >
-                              Đọc Bài Giảng & Công Thức
+                              Đọc Bài Giảng & Sổ Từ Vựng
                             </button>
                           </div>
 
-                          {assignment.assessment_attempts?.map((att: any) => (
-                            <div
-                              key={att.id}
-                              className="p-5 rounded-2xl bg-white border border-slate-200 flex flex-col justify-between shadow-sm"
-                            >
-                              <div>
-                                <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200">
-                                  {att.assessments?.title || 'Bài tập rèn luyện'}
-                                </span>
-                                <h4 className="text-base font-bold text-slate-900 mt-3">
-                                  Thang điểm: {att.assessments?.max_score || 10} điểm
-                                </h4>
-                              </div>
-                              <Link
-                                href={`/student/mission/${att.id}`}
-                                className="mt-6 block w-full py-2.5 text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm rounded-xl transition shadow-sm"
+                          {/* Station 2 & 3: Luyện tập tại lớp & Bài tập về nhà */}
+                          {assignment.assessment_attempts?.map((att: any) => {
+                            const isHw = att.assessments?.type === 'HOMEWORK';
+                            const isGraded = att.status === 'GRADED';
+                            const isSubmitted = att.status === 'SUBMITTED';
+
+                            return (
+                              <div
+                                key={att.id}
+                                className="p-5 rounded-2xl bg-white border border-slate-200 flex flex-col justify-between shadow-sm"
                               >
-                                Bắt Đầu Làm Bài
-                              </Link>
-                            </div>
-                          ))}
+                                <div>
+                                  <span
+                                    className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${
+                                      isHw
+                                        ? 'bg-amber-50 text-amber-700 border-amber-200'
+                                        : 'bg-indigo-50 text-indigo-700 border-indigo-200'
+                                    }`}
+                                  >
+                                    {isHw ? '📝 Bài Tập Về Nhà (BTVN)' : '⏱️ Luyện Tập Tại Lớp (90p)'}
+                                  </span>
+                                  <h4 className="text-base font-bold text-slate-900 mt-3 leading-snug">
+                                    {att.assessments?.title}
+                                  </h4>
+                                  <p className="text-xs text-slate-500 mt-1">
+                                    Thang điểm: {att.assessments?.max_score || 10} điểm •{' '}
+                                    {att.assessments?.time_limit_minutes || 90} phút
+                                  </p>
+                                </div>
+
+                                {isGraded ? (
+                                  <Link
+                                    href={`/student/results/${att.id}`}
+                                    className="mt-6 block w-full py-2.5 text-center bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold text-sm rounded-xl transition shadow-xs"
+                                  >
+                                    Xem Điểm: {att.total_score}đ
+                                  </Link>
+                                ) : isSubmitted ? (
+                                  <div className="mt-6 w-full py-2.5 text-center bg-amber-50 text-amber-800 border border-amber-200 font-semibold text-xs rounded-xl">
+                                    Đã nộp bài • Chờ chấm
+                                  </div>
+                                ) : (
+                                  <Link
+                                    href={`/student/mission/${att.id}`}
+                                    className={`mt-6 block w-full py-2.5 text-center text-white font-semibold text-sm rounded-xl transition shadow-sm ${
+                                      isHw
+                                        ? 'bg-amber-600 hover:bg-amber-700'
+                                        : 'bg-blue-600 hover:bg-blue-700'
+                                    }`}
+                                  >
+                                    Bắt Đầu Làm Bài
+                                  </Link>
+                                )}
+                              </div>
+                            );
+                          })}
                         </div>
                       </div>
                     )}
