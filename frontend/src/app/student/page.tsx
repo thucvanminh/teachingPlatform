@@ -808,7 +808,7 @@ export default function StudentDashboard() {
           <div className="flex items-center space-x-4">
             <div className="px-5 py-3 rounded-2xl bg-slate-50 border border-slate-200 text-center shadow-xs">
               <span className="text-xs text-slate-500 block">Mục Tiêu</span>
-              <span className="text-base font-bold text-amber-600">9.0+ THPTQG</span>
+              <span className="text-base font-bold text-amber-600">7+ THPTQG</span>
             </div>
             <div className="px-5 py-3 rounded-2xl bg-slate-50 border border-slate-200 text-center shadow-xs">
               <span className="text-xs text-slate-500 block">Chuỗi Học</span>
