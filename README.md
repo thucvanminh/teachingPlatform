@@ -44,23 +44,48 @@ npm run dev
 
 Mật khẩu chung cho tất cả tài khoản: **`Password123!`**
 
-| Vai trò (Role) | Username | Họ và tên | Điểm đặc biệt của giao diện |
+| Vai trò (Role) | Username | Họ và tên | Khối lớp & Điểm đặc biệt của giao diện |
 | :--- | :--- | :--- | :--- |
-| **Học sinh (Keithley)** | `keithley` | Keithley (Cosmic Explorer) | **Phong cách Vũ Trụ:** Trạm chỉ huy, bài tập 90p quỹ đạo, công thức KaTeX |
-| **Học sinh (Bé An)** | `student_g2` | Bé An Nhiên (Lớp 2) | **Phong cách Thần Tiên:** Công chúa & rồng xanh, hoạt hình rực rỡ |
-| **Giáo viên** | `teacher` | Thầy Minh (Gia Sư) | **Bàn làm việc Bento:** Soạn bài, giao bài hàng ngày, bàn chấm bài tự luận |
-| **Phụ huynh** | `parent_nam` | Chị Mai (Mẹ em Nam/Keithley) | **Cổng Giám Sát:** Quyền Chỉ Đọc (Read-only), xem điểm và nhận xét |
+| **Học sinh** | `an_lake` | **An Lake** | **Lớp 1 - Vương Quốc Thần Tiên:** Công chúa & rồng xanh, hoạt hình rực rỡ, nút 3D |
+| **Học sinh** | `keithley` | **Keithley Lake** | **Lớp 7 & 9 - Trạm Không Gian:** Cockpit HUD vũ trụ, bài tập 90p, KaTeX & nộp ảnh |
+| **Học sinh** | `thai` | **Thái** | **Lớp 11 - Trung Học Nâng Cao:** Đọc hiểu Tiếng Anh chuyên sâu, trắc nghiệm bấm giờ |
+| **Học sinh** | `nam_viet` | **Nam Việt** | **Lớp 12 - Luyện Thi THPTQG:** Mục tiêu 9.0+, luyện đề chuẩn cấu trúc Bộ GD&ĐT |
+| **Giáo viên** | `teacher` | **Thầy Minh (Gia Sư)** | **Bàn làm việc Bento:** Soạn bài KaTeX, giao bài hàng ngày, bàn chấm bài tự luận |
+| **Phụ huynh** | `parent_nam` | **Chị Mai (Phụ huynh)** | **Cổng Giám Sát:** Quyền Chỉ Đọc (Read-only), xem điểm số và lời dặn của Thầy |
 
 ---
 
-## 🌐 Triển khai Lên Cloud (Deploy Free 100%)
+## 🌐 Hướng Dẫn Triển Khai Toàn Diện Lên Cloud (Free 100%)
 
-1. **Frontend $\rightarrow$ Vercel:**
-   - Kết nối repository `thucvanminh/teachingPlatform`.
-   - Đặt `Root Directory` là `frontend`.
-   - Cung cấp biến môi trường `NEXT_PUBLIC_API_URL` trỏ về backend Render.
-2. **Backend $\rightarrow$ Render:**
-   - Đã cấu hình sẵn file [render.yaml](./render.yaml) và [Dockerfile](./backend/Dockerfile).
-   - Chọn **Blueprint** trên Render Dashboard để triển khai 1-click.
-3. **Database & Storage $\rightarrow$ Supabase:**
-   - Đã khởi tạo hoàn tất 100% trên Supabase PostgreSQL.
+### Bước 1: Deploy Backend lên Render (Miễn phí 100%)
+Vì Frontend trên Vercel cần kết nối đến một Backend API có địa chỉ online (`https`), ta triển khai Backend lên Render trước:
+
+1. Đăng nhập [https://dashboard.render.com](https://dashboard.render.com) (chọn Login with GitHub).
+2. Bấm **New +** $\rightarrow$ chọn **Blueprint**.
+3. Chọn repository: **`thucvanminh/teachingPlatform`**.
+4. Render sẽ tự động đọc file [`render.yaml`](./render.yaml) có sẵn:
+   - Điền các biến môi trường khi Render yêu cầu:
+     - `DATABASE_URL`: `postgresql://postgres:Thuc1023%21%21%21@db.jxikmcvhamcdrsmyoyid.supabase.co:5432/postgres`
+     - `SUPABASE_URL`: `https://jxikmcvhamcdrsmyoyid.supabase.co`
+     - `SUPABASE_ANON_KEY`: *(Key Supabase anon publish)*
+     - `SUPABASE_SERVICE_ROLE_KEY`: *(Key Supabase service_role)*
+5. Bấm **Apply**. Sau khoảng 2 - 3 phút, Render sẽ cấp cho bạn một URL Backend (Ví dụ: `https://teaching-platform-backend.onrender.com`).
+   * *URL API của bạn sẽ là:* `https://teaching-platform-backend.onrender.com/api`
+
+---
+
+### Bước 2: Deploy Frontend Next.js lên Vercel (Miễn phí 100%)
+
+1. Truy cập [https://vercel.com/new](https://vercel.com/new) và đăng nhập bằng tài khoản GitHub của bạn.
+2. Tại mục **Import Git Repository**, chọn repository: **`thucvanminh/teachingPlatform`** $\rightarrow$ bấm **Import**.
+3. **CẤU HÌNH QUAN TRỌNG (Do dự án dạng Monorepo):**
+   * Tại dòng **Root Directory**: bấm nút **Edit**, chọn thư mục **`frontend`** $\rightarrow$ bấm **Continue**.
+   * Framework Preset: Vercel sẽ tự động chọn **Next.js**.
+4. **CẤU HÌNH BIẾN MÔI TRƯỜNG (Environment Variables):**
+   Bấm mở rộng mục **Environment Variables** và nhập 3 biến sau:
+   * `NEXT_PUBLIC_API_URL` = `https://teaching-platform-backend.onrender.com/api` *(hoặc URL backend Render của bạn)*
+   * `NEXT_PUBLIC_SUPABASE_URL` = `https://jxikmcvhamcdrsmyoyid.supabase.co`
+   * `NEXT_PUBLIC_SUPABASE_ANON_KEY` = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp4aWttY3ZoYW1jZHJzbXlveWlkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTMxNjQ0MTUsImV4cCI6MjEwODc0MDQxNX0.eZq3-ONcdhjw4YPYCp3FkLoVF-m7DWmxzjeGusRgQaI`
+5. Bấm **Deploy**!
+   * Vercel sẽ tự động build Next.js 15 trong khoảng 1 phút và cấp cho bạn đường link chính thức (Ví dụ: `https://teaching-platform.vercel.app`).
+   * Kể từ bây giờ, mỗi lần bạn `git push` lên nhánh `main`, Vercel sẽ tự động build và cập nhật phiên bản mới nhất!
