@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { api } from '@/lib/api';
+import { api, getUser, getToken } from '@/lib/api';
 import { Rocket, GraduationCap, Lock, User, AlertCircle } from 'lucide-react';
 
 export default function LoginPage() {
@@ -11,6 +11,16 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+
+  useEffect(() => {
+    const user = getUser();
+    const token = getToken();
+    if (user && token) {
+      if (user.role === 'TEACHER') router.replace('/teacher');
+      else if (user.role === 'STUDENT') router.replace('/student');
+      else if (user.role === 'PARENT') router.replace('/parent');
+    }
+  }, [router]);
 
   const handleLogin = async (e?: React.FormEvent) => {
     if (e) e.preventDefault();
