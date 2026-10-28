@@ -8,10 +8,7 @@ import { SpaceBackground } from '@/components/SpaceBackground';
 import { FormattedContent } from '@/components/KatexMath';
 import {
   Rocket,
-  Compass,
   Clock,
-  CheckCircle,
-  AlertCircle,
   Sparkles,
   BookOpen,
   Calendar,
@@ -21,10 +18,8 @@ import {
   ExternalLink,
   ChevronDown,
   ChevronUp,
-  GraduationCap,
-  Award,
   FileText,
-  Layers,
+  Target,
 } from 'lucide-react';
 
 function formatAssignmentDate(dateStr: string): string {
@@ -71,10 +66,6 @@ export default function StudentDashboard() {
           list = [today, ...list];
         }
         setAllAssignments(list);
-
-        // Lưu ý: User muốn ban đầu thấy các card ghi ngày (ví dụ 28/10/2026 : {Tên Bài Giảng}).
-        // Khi nhấn vào card mới bung ra bài giảng, bài tập và BTVN.
-        // Mặc định để expandedAssignmentId = null để người dùng click mở.
       } catch (e) {
         console.error(e);
       } finally {
@@ -104,9 +95,12 @@ export default function StudentDashboard() {
 
   const isCosmic =
     user?.username === 'keithley' ||
-    user?.studentProfile?.grade_level === 7 ||
-    user?.studentProfile?.grade_level === 9;
-  const isKids = user?.studentProfile?.grade_level === 2;
+    user?.full_name?.includes('Keithley') ||
+    user?.fullName?.includes('Keithley');
+  const isKids =
+    user?.username === 'an_lake' ||
+    user?.studentProfile?.grade_level === 1 ||
+    user?.student_profiles?.grade_level === 1;
 
   if (loading) {
     return (
@@ -120,7 +114,7 @@ export default function StudentDashboard() {
   }
 
   // ==========================================
-  // GIAO DIỆN VŨ TRỤ (COSMIC SPACE THEME - KEITHLEY)
+  // 1. GIAO DIỆN VŨ TRỤ (COSMIC SPACE THEME - KEITHLEY LAKE LỚP 7 & 9)
   // ==========================================
   if (isCosmic) {
     return (
@@ -136,10 +130,10 @@ export default function StudentDashboard() {
               <div>
                 <div className="flex items-center space-x-2 text-xs font-bold text-cyan-400 tracking-widest uppercase mb-1">
                   <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
-                  <span>TRẠM CHỈ HUY KHÔNG GIAN • KEITHLEY MISSION CONTROL</span>
+                  <span>TRẠM CHỈ HUY KHÔNG GIAN • KEITHLEY LAKE MISSION CONTROL</span>
                 </div>
                 <h1 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight flex items-center space-x-3">
-                  <span>Chào mừng, Phi Hành Gia Keithley!</span>
+                  <span>Chào mừng, Phi Hành Gia Keithley Lake!</span>
                   <Rocket className="w-7 h-7 text-cyan-400 hidden sm:inline-block animate-pulse" />
                 </h1>
                 <p className="text-sm text-slate-300 mt-2 max-w-xl">
@@ -433,7 +427,7 @@ export default function StudentDashboard() {
                               <div
                                 className={`rounded-2xl p-6 flex flex-col justify-between border backdrop-blur-xl transition duration-300 ${
                                   homeworkAttempt.status === 'GRADED'
-                                    ? 'bg-slate-900/90 border-emerald-500/40 shadow-[0_0_20px_rgba(16,185,129,0.15)]'
+                                    ? 'bg-slate-900/90 border-emerald-500/40 shadow-[0_0_20px_rgba(168,85,247,0.15)]'
                                     : homeworkAttempt.status === 'SUBMITTED'
                                     ? 'bg-slate-900/90 border-amber-500/40 shadow-[0_0_20px_rgba(245,158,11,0.15)]'
                                     : 'bg-slate-900/90 border-purple-500/40 hover:border-purple-300 shadow-[0_0_20px_rgba(168,85,247,0.1)]'
@@ -604,154 +598,350 @@ export default function StudentDashboard() {
   }
 
   // ==========================================
-  // GIAO DIỆN BÉ AN (TOÁN LỚP 2 - KIDS WONDERLAND)
+  // 2. GIAO DIỆN BÉ AN (TOÁN LỚP 1 - KIDS WONDERLAND)
   // ==========================================
+  if (isKids) {
+    return (
+      <div className="min-h-screen bg-amber-50 text-slate-900 py-10 px-4">
+        <div className="max-w-4xl mx-auto">
+          {/* Banner Công Chúa & Rồng Xanh */}
+          <div className="rounded-3xl p-6 bg-pink-100 border-2 border-pink-300 shadow-xl flex flex-col sm:flex-row items-center gap-6 mb-8">
+            <img
+              src="/images/kids/princess_math.png"
+              alt="Toán lớp 1"
+              className="w-32 h-32 object-cover rounded-2xl shadow-md border-2 border-pink-400"
+            />
+            <div>
+              <h1 className="text-2xl sm:text-3xl font-extrabold text-pink-700 font-serif">
+                Chào bạn An Lake! 👑
+              </h1>
+              <p className="text-sm text-pink-900 mt-2 font-medium">
+                Chào mừng bạn đến với Vương Quốc Toán Học Lớp 1. Bạn hãy bấm vào từng ngày bên dưới để xem bài học và đố vui nhé!
+              </p>
+            </div>
+          </div>
+
+          {/* DANH SÁCH BÀI HỌC THEO NGÀY CỦA AN LAKE */}
+          <h2 className="text-xl font-extrabold text-pink-800 mb-4 flex items-center space-x-2">
+            <Calendar className="w-5 h-5 text-pink-600" />
+            <span>⭐ Lịch Học Và Bài Tập Theo Ngày Của An Lake:</span>
+          </h2>
+
+          {allAssignments.length > 0 ? (
+            <div className="space-y-5">
+              {allAssignments.map((assignment: any) => {
+                const isExpanded = expandedAssignmentId === assignment.id;
+                const dateLabel = formatAssignmentDate(assignment.assigned_date);
+                const title = assignment.learning_units?.title || 'Bài học của An Lake';
+
+                return (
+                  <div
+                    key={assignment.id}
+                    className={`rounded-3xl border-2 transition duration-300 overflow-hidden bg-white ${
+                      isExpanded ? 'border-pink-500 shadow-xl ring-2 ring-pink-300' : 'border-pink-200 hover:border-pink-400 shadow-md'
+                    }`}
+                  >
+                    {/* Card Header ghi ngày */}
+                    <button
+                      onClick={() => toggleExpand(assignment.id)}
+                      className="w-full p-6 text-left flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-pink-50/50 transition"
+                    >
+                      <div>
+                        <div className="flex items-center space-x-2 mb-1">
+                          <span className="text-xs font-extrabold px-3 py-0.5 rounded-full bg-pink-500 text-white">
+                            Ngày {dateLabel}
+                          </span>
+                          <span className="text-xs font-bold text-pink-700">Toán Lớp 1</span>
+                        </div>
+                        <h3 className="text-lg sm:text-xl font-extrabold text-slate-800">
+                          {dateLabel} : {title}
+                        </h3>
+                        {assignment.teacher_daily_note && (
+                          <p className="text-xs text-pink-600 mt-1 font-semibold italic">
+                            💌 Thầy Minh dặn dò: "{assignment.teacher_daily_note}"
+                          </p>
+                        )}
+                      </div>
+
+                      <div className="flex items-center space-x-2 self-end sm:self-center">
+                        <span className="text-xs font-bold text-pink-600 bg-pink-100 px-3 py-1.5 rounded-xl flex items-center space-x-1">
+                          <span>{isExpanded ? 'Thu gọn' : 'Bấm xem bài học'}</span>
+                          {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                        </span>
+                      </div>
+                    </button>
+
+                    {/* Chi tiết khi mở card: Bài giảng + Bài tập tại lớp + Bài tập về nhà */}
+                    {isExpanded && (
+                      <div className="p-6 pt-2 border-t-2 border-pink-100 bg-pink-50/30">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                          {/* 1. Bài giảng của An Lake */}
+                          <div className="p-5 rounded-2xl bg-white border-2 border-pink-200 flex flex-col justify-between">
+                            <div>
+                              <span className="text-xs font-bold px-2.5 py-1 bg-amber-400 text-amber-950 rounded-full">
+                                📖 Bài Giảng Thần Tiên
+                              </span>
+                              <h4 className="text-base font-extrabold text-slate-800 mt-3">
+                                {assignment.learning_units?.title}
+                              </h4>
+                              <p className="text-xs text-slate-600 mt-1">
+                                {assignment.learning_units?.description || 'Bé xem ví dụ và hình vẽ phép tính nhé!'}
+                              </p>
+                            </div>
+                            <button
+                              onClick={() => handleOpenLecture(assignment)}
+                              className="mt-6 w-full py-2.5 bg-amber-400 hover:bg-amber-500 text-amber-950 font-extrabold text-sm rounded-xl transition shadow"
+                            >
+                              Đọc Bài Giảng Của An Lake 🎈
+                            </button>
+                          </div>
+
+                          {/* 2 & 3. Các bài tập */}
+                          {assignment.assessment_attempts?.map((att: any) => (
+                            <div
+                              key={att.id}
+                              className="p-5 rounded-2xl bg-white border-2 border-pink-200 flex flex-col justify-between shadow-sm"
+                            >
+                              <div>
+                                <span className="text-xs font-bold px-3 py-1 bg-pink-500 text-white rounded-full">
+                                  {att.assessments?.title || 'Bài tập'}
+                                </span>
+                                <h4 className="text-base font-bold text-slate-800 mt-3">
+                                  {att.assessments?.instructions || 'Bé làm bài để nhận thật nhiều sao phép thuật nhé!'}
+                                </h4>
+                              </div>
+                              <Link
+                                href={`/student/mission/${att.id}`}
+                                className="mt-6 block w-full py-3 text-center bg-pink-500 hover:bg-pink-600 text-white font-extrabold text-sm rounded-2xl shadow-[0_3px_0_#db2777] active:translate-y-1 transition"
+                              >
+                                Bắt Đầu Làm Bài Ngay! 🚀
+                              </Link>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="p-8 bg-white rounded-3xl text-center border-2 border-amber-200">
+              <p className="text-pink-600 font-bold">Hôm nay An Lake chưa có bài tập mới. Chúc bạn một ngày vui vẻ!</p>
+            </div>
+          )}
+
+          {/* Modal Bài Giảng của An Lake */}
+          {activeLectureAssignment && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+              <div className="w-full max-w-2xl max-h-[85vh] bg-white border-4 border-pink-300 rounded-3xl p-6 sm:p-8 flex flex-col overflow-hidden shadow-2xl">
+                <div className="flex items-center justify-between border-b-2 border-pink-100 pb-4">
+                  <div>
+                    <span className="text-xs font-extrabold text-pink-600 uppercase">
+                      Bài Học Của An Lake • {formatAssignmentDate(activeLectureAssignment.assigned_date)}
+                    </span>
+                    <h3 className="text-xl font-extrabold text-pink-800 mt-1">
+                      {activeLectureAssignment.learning_units?.title}
+                    </h3>
+                  </div>
+                  <button
+                    onClick={() => setActiveLectureAssignment(null)}
+                    className="p-2 text-slate-400 hover:text-pink-600 rounded-lg hover:bg-pink-50 transition"
+                  >
+                    ✕
+                  </button>
+                </div>
+
+                <div className="flex-1 overflow-y-auto py-6">
+                  <FormattedContent
+                    text={activeLectureAssignment.learning_units?.lecture_content_markdown || ''}
+                    className="text-slate-800 text-sm leading-relaxed"
+                  />
+                </div>
+
+                <div className="border-t-2 border-pink-100 pt-4 flex justify-end">
+                  <button
+                    onClick={() => setActiveLectureAssignment(null)}
+                    className="px-6 py-2.5 bg-pink-500 hover:bg-pink-600 text-white font-extrabold text-sm rounded-2xl shadow-[0_3px_0_#db2777] transition"
+                  >
+                    Đã Hiểu Bài Rồi! 🌟
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  // ==========================================
+  // 3. GIAO DIỆN TRUNG HỌC & LUYỆN THI (THÁI LỚP 11 & NAM VIỆT LỚP 12)
+  // ==========================================
+  const studentName = user?.fullName || user?.full_name || user?.username || 'Học Sinh';
+  const gradeLabel = user?.studentProfile?.grade_level || user?.student_profiles?.grade_level || 11;
+
   return (
-    <div className="min-h-screen bg-amber-50 text-slate-900 py-10 px-4">
-      <div className="max-w-4xl mx-auto">
-        {/* Banner Công Chúa & Rồng Xanh */}
-        <div className="rounded-3xl p-6 bg-pink-100 border-2 border-pink-300 shadow-xl flex flex-col sm:flex-row items-center gap-6 mb-8">
-          <img
-            src="/images/kids/princess_math.png"
-            alt="Toán lớp 1"
-            className="w-32 h-32 object-cover rounded-2xl shadow-md border-2 border-pink-400"
-          />
+    <div className="min-h-screen bg-slate-950 text-slate-100 py-10 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto space-y-8">
+        {/* Header Luyện Thi */}
+        <div className="rounded-3xl p-6 sm:p-8 bg-slate-900 border border-slate-800 shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-pink-700 font-serif">
-              Chào Bé An Nhiên! 👑
+            <div className="flex items-center space-x-2 text-xs font-bold text-blue-400 tracking-wider uppercase mb-1">
+              <Target className="w-4 h-4 text-blue-400" />
+              <span>KHÔNG GIAN HỌC TẬP • LỚP {gradeLabel}</span>
+            </div>
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-white">
+              Chào mừng, {studentName}!
             </h1>
-            <p className="text-sm text-pink-900 mt-2 font-medium">
-              Chào mừng bé đến với Vương Quốc Toán Học. Bé hãy bấm vào từng ngày bên dưới để xem bài học và đố vui nhé!
+            <p className="text-sm text-slate-400 mt-2 max-w-xl">
+              {todayAssignment?.teacher_daily_note ? (
+                <span className="text-amber-300 italic">"Lời dặn từ Thầy Minh: {todayAssignment.teacher_daily_note}"</span>
+              ) : (
+                'Tập trung rèn luyện tư duy, chiến thuật làm bài và tăng tốc độ giải đề.'
+              )}
             </p>
+          </div>
+
+          <div className="flex items-center space-x-4">
+            <div className="px-5 py-3 rounded-2xl bg-slate-800 border border-slate-700 text-center">
+              <span className="text-xs text-slate-400 block">Mục Tiêu</span>
+              <span className="text-base font-bold text-amber-400">9.0+ THPTQG</span>
+            </div>
+            <div className="px-5 py-3 rounded-2xl bg-slate-800 border border-slate-700 text-center">
+              <span className="text-xs text-slate-400 block">Chuỗi Học</span>
+              <span className="text-base font-bold text-blue-400">7 Ngày</span>
+            </div>
           </div>
         </div>
 
-        {/* DANH SÁCH BÀI HỌC THEO NGÀY CỦA BÉ AN */}
-        <h2 className="text-xl font-extrabold text-pink-800 mb-4 flex items-center space-x-2">
-          <Calendar className="w-5 h-5 text-pink-600" />
-          <span>⭐ Lịch Học Và Bài Tập Theo Ngày Của Bé:</span>
-        </h2>
+        {/* Lịch Học Theo Ngày */}
+        <div>
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-xl font-bold text-white flex items-center space-x-2">
+              <Calendar className="w-5 h-5 text-blue-400" />
+              <span>Lịch Bài Học & Bài Tập Theo Ngày:</span>
+            </h2>
+            <span className="text-xs text-slate-400">Nhấn vào ngày để mở rộng bài học</span>
+          </div>
 
-        {allAssignments.length > 0 ? (
-          <div className="space-y-5">
-            {allAssignments.map((assignment: any) => {
-              const isExpanded = expandedAssignmentId === assignment.id;
-              const dateLabel = formatAssignmentDate(assignment.assigned_date);
-              const title = assignment.learning_units?.title || 'Bài học của bé';
+          {allAssignments.length > 0 ? (
+            <div className="space-y-6">
+              {allAssignments.map((assignment: any) => {
+                const isExpanded = expandedAssignmentId === assignment.id;
+                const dateLabel = formatAssignmentDate(assignment.assigned_date);
+                const title = assignment.learning_units?.title || 'Bài học';
 
-              return (
-                <div
-                  key={assignment.id}
-                  className={`rounded-3xl border-2 transition duration-300 overflow-hidden bg-white ${
-                    isExpanded ? 'border-pink-500 shadow-xl ring-2 ring-pink-300' : 'border-pink-200 hover:border-pink-400 shadow-md'
-                  }`}
-                >
-                  {/* Card Header ghi ngày của Bé */}
-                  <button
-                    onClick={() => toggleExpand(assignment.id)}
-                    className="w-full p-6 text-left flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-pink-50/50 transition"
+                return (
+                  <div
+                    key={assignment.id}
+                    className={`rounded-3xl border transition duration-300 overflow-hidden bg-slate-900 ${
+                      isExpanded ? 'border-blue-500 shadow-xl ring-1 ring-blue-500/40' : 'border-slate-800 hover:border-slate-700'
+                    }`}
                   >
-                    <div>
-                      <div className="flex items-center space-x-2 mb-1">
-                        <span className="text-xs font-extrabold px-3 py-0.5 rounded-full bg-pink-500 text-white">
-                          Ngày {dateLabel}
-                        </span>
-                        <span className="text-xs font-bold text-pink-700">Toán Lớp 2</span>
-                      </div>
-                      <h3 className="text-lg sm:text-xl font-extrabold text-slate-800">
-                        {dateLabel} : {title}
-                      </h3>
-                      {assignment.teacher_daily_note && (
-                        <p className="text-xs text-pink-600 mt-1 font-semibold italic">
-                          💌 Thầy Minh dặn dò: "{assignment.teacher_daily_note}"
-                        </p>
-                      )}
-                    </div>
-
-                    <div className="flex items-center space-x-2 self-end sm:self-center">
-                      <span className="text-xs font-bold text-pink-600 bg-pink-100 px-3 py-1.5 rounded-xl flex items-center space-x-1">
-                        <span>{isExpanded ? 'Thu gọn' : 'Bấm xem bài học'}</span>
-                        {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-                      </span>
-                    </div>
-                  </button>
-
-                  {/* Chi tiết khi mở card: Bài giảng + Bài tập tại lớp + Bài tập về nhà */}
-                  {isExpanded && (
-                    <div className="p-6 pt-2 border-t-2 border-pink-100 bg-pink-50/30">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                        {/* 1. Bài giảng của bé */}
-                        <div className="p-5 rounded-2xl bg-white border-2 border-pink-200 flex flex-col justify-between">
-                          <div>
-                            <span className="text-xs font-bold px-2.5 py-1 bg-amber-400 text-amber-950 rounded-full">
-                              📖 Bài Giảng Thần Tiên
-                            </span>
-                            <h4 className="text-base font-extrabold text-slate-800 mt-3">
-                              {assignment.learning_units?.title}
-                            </h4>
-                            <p className="text-xs text-slate-600 mt-1">
-                              {assignment.learning_units?.description || 'Bé xem ví dụ và hình vẽ phép tính nhé!'}
-                            </p>
-                          </div>
-                          <button
-                            onClick={() => handleOpenLecture(assignment)}
-                            className="mt-6 w-full py-2.5 bg-amber-400 hover:bg-amber-500 text-amber-950 font-extrabold text-sm rounded-xl transition shadow"
-                          >
-                            Đọc Bài Giảng Của Bé 🎈
-                          </button>
+                    <button
+                      onClick={() => toggleExpand(assignment.id)}
+                      className="w-full p-6 text-left flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-slate-800/40 transition"
+                    >
+                      <div className="flex items-start space-x-4">
+                        <div className="w-12 h-12 rounded-2xl bg-blue-950 border border-blue-500/30 text-blue-400 flex items-center justify-center font-bold">
+                          <Calendar className="w-6 h-6" />
                         </div>
-
-                        {/* 2 & 3. Các bài tập của bé */}
-                        {assignment.assessment_attempts?.map((att: any) => (
-                          <div
-                            key={att.id}
-                            className="p-5 rounded-2xl bg-white border-2 border-pink-200 flex flex-col justify-between shadow-sm"
-                          >
-                            <div>
-                              <span className="text-xs font-bold px-3 py-1 bg-pink-500 text-white rounded-full">
-                                {att.assessments?.title || 'Bài tập'}
-                              </span>
-                              <h4 className="text-base font-bold text-slate-800 mt-3">
-                                {att.assessments?.instructions || 'Bé làm bài để nhận thật nhiều sao phép thuật nhé!'}
-                              </h4>
-                            </div>
-                            <Link
-                              href={`/student/mission/${att.id}`}
-                              className="mt-6 block w-full py-3 text-center bg-pink-500 hover:bg-pink-600 text-white font-extrabold text-sm rounded-2xl shadow-[0_3px_0_#db2777] active:translate-y-1 transition"
-                            >
-                              Bắt Đầu Làm Bài Ngay! 🚀
-                            </Link>
+                        <div>
+                          <div className="flex items-center space-x-2 mb-1">
+                            <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-950 text-blue-300 border border-blue-500/30">
+                              Ngày {dateLabel}
+                            </span>
+                            <span className="text-xs text-slate-400">Lớp {gradeLabel}</span>
                           </div>
-                        ))}
+                          <h3 className="text-lg sm:text-xl font-bold text-white">
+                            {dateLabel} : {title}
+                          </h3>
+                        </div>
                       </div>
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        ) : (
-          <div className="p-8 bg-white rounded-3xl text-center border-2 border-amber-200">
-            <p className="text-pink-600 font-bold">Hôm nay bé chưa có bài tập mới. Chúc bé một ngày vui vẻ!</p>
-          </div>
-        )}
 
-        {/* Modal Bài Giảng của Bé An */}
+                      <div className="flex items-center space-x-2 self-end sm:self-center">
+                        <span className="text-xs font-semibold text-blue-400 bg-blue-950/60 border border-blue-500/30 px-3.5 py-1.5 rounded-xl flex items-center space-x-1">
+                          <span>{isExpanded ? 'Thu gọn' : 'Xem chi tiết bài học'}</span>
+                          {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                        </span>
+                      </div>
+                    </button>
+
+                    {isExpanded && (
+                      <div className="p-6 pt-2 border-t border-slate-800 bg-slate-950/40">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                          <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
+                            <div>
+                              <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-950 text-blue-400 border border-blue-500/30">
+                                📖 Bài Giảng & Lý Thuyết
+                              </span>
+                              <h4 className="text-base font-bold text-white mt-3">
+                                {assignment.learning_units?.title}
+                              </h4>
+                              <p className="text-xs text-slate-400 mt-1 line-clamp-3">
+                                {assignment.learning_units?.description || 'Nắm vững kiến thức trọng tâm.'}
+                              </p>
+                            </div>
+                            <button
+                              onClick={() => handleOpenLecture(assignment)}
+                              className="mt-6 w-full py-2.5 bg-slate-800 hover:bg-slate-700 text-blue-300 font-semibold text-sm rounded-xl border border-blue-500/30 transition"
+                            >
+                              Đọc Bài Giảng & Công Thức
+                            </button>
+                          </div>
+
+                          {assignment.assessment_attempts?.map((att: any) => (
+                            <div
+                              key={att.id}
+                              className="p-5 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between shadow-sm"
+                            >
+                              <div>
+                                <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-950 text-purple-400 border border-purple-500/30">
+                                  {att.assessments?.title || 'Bài tập rèn luyện'}
+                                </span>
+                                <h4 className="text-base font-bold text-white mt-3">
+                                  Thang điểm: {att.assessments?.max_score || 10} điểm
+                                </h4>
+                              </div>
+                              <Link
+                                href={`/student/mission/${att.id}`}
+                                className="mt-6 block w-full py-2.5 text-center bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm rounded-xl transition shadow"
+                              >
+                                Bắt Đầu Làm Bài
+                              </Link>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="p-8 bg-slate-900 rounded-3xl text-center border border-slate-800">
+              <p className="text-slate-400">Chưa có bài học mới được giao.</p>
+            </div>
+          )}
+        </div>
+
+        {/* Modal Bài Giảng */}
         {activeLectureAssignment && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
-            <div className="w-full max-w-2xl max-h-[85vh] bg-white border-4 border-pink-300 rounded-3xl p-6 sm:p-8 flex flex-col overflow-hidden shadow-2xl">
-              <div className="flex items-center justify-between border-b-2 border-pink-100 pb-4">
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4">
+            <div className="w-full max-w-3xl max-h-[85vh] bg-slate-900 border border-slate-700 rounded-3xl p-6 sm:p-8 flex flex-col overflow-hidden shadow-2xl">
+              <div className="flex items-center justify-between border-b border-slate-800 pb-4">
                 <div>
-                  <span className="text-xs font-extrabold text-pink-600 uppercase">
-                    Bài Học Của Bé • {formatAssignmentDate(activeLectureAssignment.assigned_date)}
+                  <span className="text-xs font-bold text-blue-400 uppercase">
+                    Bài Giảng • {formatAssignmentDate(activeLectureAssignment.assigned_date)}
                   </span>
-                  <h3 className="text-xl font-extrabold text-pink-800 mt-1">
+                  <h3 className="text-xl font-bold text-white mt-1">
                     {activeLectureAssignment.learning_units?.title}
                   </h3>
                 </div>
                 <button
                   onClick={() => setActiveLectureAssignment(null)}
-                  className="p-2 text-slate-400 hover:text-pink-600 rounded-lg hover:bg-pink-50 transition"
+                  className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800"
                 >
                   ✕
                 </button>
@@ -760,16 +950,16 @@ export default function StudentDashboard() {
               <div className="flex-1 overflow-y-auto py-6">
                 <FormattedContent
                   text={activeLectureAssignment.learning_units?.lecture_content_markdown || ''}
-                  className="text-slate-800 text-sm leading-relaxed"
+                  className="text-slate-200 text-sm leading-relaxed"
                 />
               </div>
 
-              <div className="border-t-2 border-pink-100 pt-4 flex justify-end">
+              <div className="border-t border-slate-800 pt-4 flex justify-end">
                 <button
                   onClick={() => setActiveLectureAssignment(null)}
-                  className="px-6 py-2.5 bg-pink-500 hover:bg-pink-600 text-white font-extrabold text-sm rounded-2xl shadow-[0_3px_0_#db2777] transition"
+                  className="px-6 py-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm rounded-xl transition"
                 >
-                  Bé Đã Hiểu Bài Rồi! 🌟
+                  Đã Hiểu Bài
                 </button>
               </div>
             </div>

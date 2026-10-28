@@ -116,19 +116,31 @@ export default function LoginPage() {
               onClick={() => fillAccount('keithley')}
               className="py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-cyan-400 border border-cyan-500/20 text-left transition"
             >
-              🚀 <strong>Keithley</strong> (Toán 7 & Hóa 9)
+              🚀 <strong>Keithley Lake</strong> (Lớp 7 & 9)
             </button>
             <button
-              onClick={() => fillAccount('student_g2')}
+              onClick={() => fillAccount('an_lake')}
               className="py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-pink-400 border border-pink-500/20 text-left transition"
             >
-              👑 <strong>Bé An</strong> (Toán lớp 2)
+              👑 <strong>An Lake</strong> (Toán Lớp 1)
+            </button>
+            <button
+              onClick={() => fillAccount('thai')}
+              className="py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-blue-400 border border-blue-500/20 text-left transition"
+            >
+              📘 <strong>Thái</strong> (Tiếng Anh 11)
+            </button>
+            <button
+              onClick={() => fillAccount('nam_viet')}
+              className="py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-500/20 text-left transition"
+            >
+              🎓 <strong>Nam Việt</strong> (Luyện thi 12)
             </button>
             <button
               onClick={() => fillAccount('teacher')}
               className="py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-purple-400 border border-purple-500/20 text-left transition"
             >
-              🎓 <strong>Thầy Minh</strong> (Giáo viên)
+              👨‍🏫 <strong>Thầy Minh</strong> (Giáo viên)
             </button>
             <button
               onClick={() => fillAccount('parent_nam')}

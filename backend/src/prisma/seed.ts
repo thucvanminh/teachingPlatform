@@ -22,68 +22,90 @@ async function main() {
   });
   console.log('✓ Đã tạo Giáo viên:', teacher.full_name);
 
-  // 2. Tạo Học sinh Lớp 2 (Toán 2)
-  const studentG2 = await prisma.users.upsert({
-    where: { username: 'student_g2' },
-    update: {},
+  // 2. Tạo Học sinh Lớp 1: An Lake (Toán 1)
+  const studentAn = await prisma.users.upsert({
+    where: { username: 'an_lake' },
+    update: { full_name: 'An Lake', role: user_role.STUDENT },
     create: {
-      username: 'student_g2',
+      username: 'an_lake',
+      email: 'an.lake@tutoring.com',
       password_hash: defaultPasswordHash,
-      full_name: 'Bé An Nhiên (Lớp 2)',
+      full_name: 'An Lake',
       role: user_role.STUDENT,
       student_profiles: {
         create: {
-          grade_level: 2,
+          grade_level: 1,
           ui_theme: ui_mode.KIDS_ELEMENTARY,
-          default_session_minutes: 60,
-          tutor_private_notes: 'Bé thích hình ảnh minh họa sinh động, cần khen ngợi thường xuyên.',
+          default_session_minutes: 45,
+          tutor_private_notes: 'An Lake: Học sinh Lớp 1 môn Toán. Giao diện Hoạt hình Thần tiên (Kids Elementary).',
         },
       },
     },
   });
 
-  // 3. Tạo Học sinh Lớp 7 (Toán 7)
-  const studentG7 = await prisma.users.upsert({
-    where: { username: 'student_g7' },
-    update: {},
+  // 3. Tạo Học sinh Lớp 7 & 9: Keithley Lake
+  const studentKeithley = await prisma.users.upsert({
+    where: { username: 'keithley' },
+    update: { full_name: 'Keithley Lake', role: user_role.STUDENT },
     create: {
-      username: 'student_g7',
-      email: 'nam.g7@gmail.com',
+      username: 'keithley',
+      email: 'keithley@space.edu',
       password_hash: defaultPasswordHash,
-      full_name: 'Nguyễn Hoàng Nam (Lớp 7)',
+      full_name: 'Keithley Lake',
       role: user_role.STUDENT,
       student_profiles: {
         create: {
           grade_level: 7,
           ui_theme: ui_mode.STANDARD_SECONDARY,
           default_session_minutes: 90,
-          tutor_private_notes: 'Nam tư duy đại số khá tốt nhưng hay nhầm dấu trừ khi chuyển vế.',
+          tutor_private_notes: 'Keithley Lake: Theo học cả Toán 7 và Hóa học 9. Phong cách Vũ trụ (Cosmic Space HUD).',
         },
       },
     },
   });
 
-  // 4. Tạo Học sinh Lớp 12 (Tiếng Anh 12)
-  const studentG12 = await prisma.users.upsert({
-    where: { username: 'student_g12' },
-    update: {},
+  // 4. Tạo Học sinh Lớp 11: Thái (Tiếng Anh 11)
+  const studentThai = await prisma.users.upsert({
+    where: { username: 'thai' },
+    update: { full_name: 'Thái', role: user_role.STUDENT },
     create: {
-      username: 'student_g12',
-      email: 'trang.g12@gmail.com',
+      username: 'thai',
+      email: 'thai.g11@gmail.com',
       password_hash: defaultPasswordHash,
-      full_name: 'Lê Thu Trang (Lớp 12)',
+      full_name: 'Thái',
+      role: user_role.STUDENT,
+      student_profiles: {
+        create: {
+          grade_level: 11,
+          ui_theme: ui_mode.HIGH_SCHOOL_EXAM,
+          default_session_minutes: 90,
+          tutor_private_notes: 'Thái: Học sinh Lớp 11 môn Tiếng Anh 11.',
+        },
+      },
+    },
+  });
+
+  // 5. Tạo Học sinh Lớp 12: Nam Việt (Tiếng Anh 12 - Luyện thi)
+  const studentNamViet = await prisma.users.upsert({
+    where: { username: 'nam_viet' },
+    update: { full_name: 'Nam Việt', role: user_role.STUDENT },
+    create: {
+      username: 'nam_viet',
+      email: 'namviet.g12@gmail.com',
+      password_hash: defaultPasswordHash,
+      full_name: 'Nam Việt',
       role: user_role.STUDENT,
       student_profiles: {
         create: {
           grade_level: 12,
           ui_theme: ui_mode.HIGH_SCHOOL_EXAM,
           default_session_minutes: 90,
-          tutor_private_notes: 'Mục tiêu thi THPTQG 9.0+ môn Tiếng Anh. Luyện kỹ kỹ năng Reading.',
+          tutor_private_notes: 'Nam Việt: Học sinh Lớp 12 môn Tiếng Anh 12. Mục tiêu thi THPTQG 9.0+.',
         },
       },
     },
   });
-  console.log('✓ Đã tạo 3 Học sinh: Lớp 2, Lớp 7, Lớp 12');
+  console.log('✓ Đã tạo 4 Học sinh: An Lake (Lớp 1), Keithley Lake (Lớp 7 & 9), Thái (Lớp 11), Nam Việt (Lớp 12)');
 
   // 5. Tạo Phụ huynh và liên kết với học sinh Lớp 7
   const parentNam = await prisma.users.upsert({
