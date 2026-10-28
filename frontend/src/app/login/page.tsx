@@ -3,12 +3,13 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { api, getUser, getToken } from '@/lib/api';
-import { Rocket, GraduationCap, Lock, User, AlertCircle } from 'lucide-react';
+import { Eye, EyeOff, Loader2 } from 'lucide-react';
 
 export default function LoginPage() {
   const router = useRouter();
   const [identifier, setIdentifier] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -22,14 +23,16 @@ export default function LoginPage() {
     }
   }, [router]);
 
-  const handleLogin = async (e?: React.FormEvent) => {
-    if (e) e.preventDefault();
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!identifier.trim() || !password) return;
+
     setError('');
     setLoading(true);
 
     try {
-      const res = await api.login(identifier, password);
-      const role = res.user.role;
+      const res = await api.login(identifier.trim(), password);
+      const role = res.user?.role;
 
       if (role === 'TEACHER') {
         router.push('/teacher');
@@ -41,125 +44,122 @@ export default function LoginPage() {
         router.push('/');
       }
     } catch (err: any) {
-      setError(err.message || 'Đăng nhập không thành công');
+      setError(err.message || 'Tài khoản hoặc mật khẩu không chính xác.');
     } finally {
       setLoading(false);
     }
   };
 
-  const fillAccount = (u: string, p: string = 'Password123!') => {
-    setIdentifier(u);
-    setPassword(p);
-  };
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-950 px-4 py-12 relative overflow-hidden">
-      {/* Background ambient lighting */}
-      <div className="absolute w-[500px] h-[500px] bg-cyan-600/10 rounded-full blur-[120px] -top-32 -left-32 pointer-events-none" />
-      <div className="absolute w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[120px] -bottom-32 -right-32 pointer-events-none" />
-
-      <div className="w-full max-w-md bg-slate-900/90 border border-slate-800 rounded-3xl p-8 shadow-2xl backdrop-blur-xl relative z-10">
+    <div className="min-h-screen bg-[#090b10] flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8 selection:bg-zinc-800 selection:text-white">
+      <div className="sm:mx-auto sm:w-full sm:max-w-[380px]">
+        {/* Minimalist Brand Header */}
         <div className="text-center mb-8">
-          <div className="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-tr from-cyan-600 to-purple-600 flex items-center justify-center text-white shadow-[0_0_20px_rgba(6,182,212,0.4)] mb-4">
-            <Rocket className="w-7 h-7" />
+          <div className="inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-zinc-900 border border-zinc-800 text-zinc-100 shadow-sm mb-4">
+            <svg
+              className="w-5 h-5 text-zinc-200"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z" />
+              <path d="M6 6h10" />
+              <path d="M6 10h10" />
+            </svg>
           </div>
-          <h2 className="text-2xl font-bold text-white tracking-tight">Đăng Nhập Hệ Thống</h2>
-          <p className="text-xs text-slate-400 mt-1">Học sinh, Giáo viên và Phụ huynh</p>
+          <h1 className="text-xl font-semibold tracking-tight text-zinc-100">
+            Đăng nhập
+          </h1>
+          <p className="text-xs text-zinc-400 mt-1.5 font-normal">
+            Hệ thống học tập cá nhân hóa 1-on-1
+          </p>
         </div>
 
-        {error && (
-          <div className="mb-6 p-4 rounded-xl bg-red-950/60 border border-red-500/40 text-red-300 text-sm flex items-start space-x-3">
-            <AlertCircle className="w-5 h-5 flex-shrink-0 text-red-400" />
-            <span>{error}</span>
-          </div>
-        )}
+        {/* Minimalist Card */}
+        <div className="bg-zinc-900/60 border border-zinc-800/80 rounded-2xl p-6 sm:p-7 shadow-xl backdrop-blur-sm">
+          {error && (
+            <div className="mb-5 px-3.5 py-2.5 rounded-lg bg-red-950/40 border border-red-800/50 text-red-300 text-xs flex items-center justify-between">
+              <span>{error}</span>
+            </div>
+          )}
 
-        <form onSubmit={handleLogin} className="space-y-4">
-          <div>
-            <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
-              Tên đăng nhập hoặc Email
-            </label>
-            <div className="relative">
-              <User className="w-5 h-5 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
+          <form onSubmit={handleLogin} className="space-y-4">
+            <div>
+              <label
+                htmlFor="identifier"
+                className="block text-xs font-medium text-zinc-300 mb-1.5"
+              >
+                Tên đăng nhập hoặc Email
+              </label>
               <input
+                id="identifier"
                 type="text"
+                autoComplete="username"
                 required
                 value={identifier}
                 onChange={(e) => setIdentifier(e.target.value)}
-                placeholder="VD: keithley hoặc teacher"
-                className="w-full pl-11 pr-4 py-3 bg-slate-800/80 border border-slate-700 rounded-xl text-white text-sm focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition"
+                placeholder="Nhập tài khoản..."
+                className="w-full px-3.5 py-2.5 bg-zinc-950/70 border border-zinc-800 rounded-xl text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500 transition-colors"
               />
             </div>
-          </div>
 
-          <div>
-            <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
-              Mật khẩu
-            </label>
-            <div className="relative">
-              <Lock className="w-5 h-5 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
-              <input
-                type="password"
-                required
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="••••••••"
-                className="w-full pl-11 pr-4 py-3 bg-slate-800/80 border border-slate-700 rounded-xl text-white text-sm focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition"
-              />
+            <div>
+              <label
+                htmlFor="password"
+                className="block text-xs font-medium text-zinc-300 mb-1.5"
+              >
+                Mật khẩu
+              </label>
+              <div className="relative">
+                <input
+                  id="password"
+                  type={showPassword ? 'text' : 'password'}
+                  autoComplete="current-password"
+                  required
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Nhập mật khẩu..."
+                  className="w-full pl-3.5 pr-10 py-2.5 bg-zinc-950/70 border border-zinc-800 rounded-xl text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500 transition-colors"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-zinc-300 transition-colors focus:outline-none"
+                  tabIndex={-1}
+                  aria-label={showPassword ? 'Ẩn mật khẩu' : 'Hiện mật khẩu'}
+                >
+                  {showPassword ? (
+                    <EyeOff className="w-4 h-4" />
+                  ) : (
+                    <Eye className="w-4 h-4" />
+                  )}
+                </button>
+              </div>
             </div>
-          </div>
 
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full py-3.5 px-4 bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 hover:from-cyan-500 hover:to-purple-500 text-white font-semibold rounded-xl text-sm shadow-[0_0_20px_rgba(6,182,212,0.3)] transition disabled:opacity-50"
-          >
-            {loading ? 'Đang xác thực...' : 'Đăng Nhập'}
-          </button>
-        </form>
-
-        {/* Quick fill buttons */}
-        <div className="mt-8 pt-6 border-t border-slate-800">
-          <p className="text-xs text-slate-400 text-center mb-3">Tài khoản mẫu có sẵn (Click để điền nhanh):</p>
-          <div className="grid grid-cols-2 gap-2 text-xs">
-            <button
-              onClick={() => fillAccount('keithley')}
-              className="py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-cyan-400 border border-cyan-500/20 text-left transition"
-            >
-              🚀 <strong>Keithley Lake</strong> (Lớp 7 & 9)
-            </button>
-            <button
-              onClick={() => fillAccount('an_lake')}
-              className="py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-pink-400 border border-pink-500/20 text-left transition"
-            >
-              👑 <strong>An Lake</strong> (Toán Lớp 1)
-            </button>
-            <button
-              onClick={() => fillAccount('thai')}
-              className="py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-blue-400 border border-blue-500/20 text-left transition"
-            >
-              📘 <strong>Thái</strong> (Tiếng Anh 11)
-            </button>
-            <button
-              onClick={() => fillAccount('nam_viet')}
-              className="py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-500/20 text-left transition"
-            >
-              🎓 <strong>Nam Việt</strong> (Luyện thi 12)
-            </button>
-            <button
-              onClick={() => fillAccount('teacher')}
-              className="py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-purple-400 border border-purple-500/20 text-left transition"
-            >
-              👨‍🏫 <strong>Thầy Minh</strong> (Giáo viên)
-            </button>
-            <button
-              onClick={() => fillAccount('parent_nam')}
-              className="py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-emerald-400 border border-emerald-500/20 text-left transition"
-            >
-              👁️ <strong>Chị Mai</strong> (Phụ huynh)
-            </button>
-          </div>
+            <div className="pt-1">
+              <button
+                type="submit"
+                disabled={loading || !identifier.trim() || !password}
+                className="w-full flex items-center justify-center py-2.5 px-4 rounded-xl text-sm font-medium bg-zinc-100 text-zinc-950 hover:bg-white active:bg-zinc-200 transition-colors disabled:opacity-40 disabled:cursor-not-allowed shadow-sm"
+              >
+                {loading ? (
+                  <Loader2 className="w-4 h-4 animate-spin text-zinc-700" />
+                ) : (
+                  'Tiếp tục'
+                )}
+              </button>
+            </div>
+          </form>
         </div>
+
+        {/* Minimal Footer */}
+        <p className="text-center text-[11px] text-zinc-400 mt-6 font-mono">
+          © 2026 Tutoring LMS Platform
+        </p>
       </div>
     </div>
   );
