@@ -65,7 +65,7 @@ Vì Frontend trên Vercel cần kết nối đến một Backend API có địa 
 3. Chọn repository: **`thucvanminh/teachingPlatform`**.
 4. Render sẽ tự động đọc file [`render.yaml`](./render.yaml) có sẵn:
    - Điền các biến môi trường khi Render yêu cầu:
-     - `DATABASE_URL`: `postgresql://postgres:Thuc1023%21%21%21@db.jxikmcvhamcdrsmyoyid.supabase.co:5432/postgres`
+     - `DATABASE_URL`: `postgresql://postgres.jxikmcvhamcdrsmyoyid:Thuc1023%21%21%21@aws-0-ap-northeast-1.pooler.supabase.com:5432/postgres`
      - `SUPABASE_URL`: `https://jxikmcvhamcdrsmyoyid.supabase.co`
      - `SUPABASE_ANON_KEY`: *(Key Supabase anon publish)*
      - `SUPABASE_SERVICE_ROLE_KEY`: *(Key Supabase service_role)*
