@@ -88,6 +88,9 @@ export class DailyAssignmentsService {
                 title: true,
                 time_limit_minutes: true,
                 max_score: true,
+                _count: {
+                  select: { questions: true },
+                },
               },
             },
           },
@@ -111,7 +114,16 @@ export class DailyAssignmentsService {
         assessment_attempts: {
           include: {
             assessments: {
-              select: { id: true, type: true, title: true, max_score: true },
+              select: {
+                id: true,
+                type: true,
+                title: true,
+                time_limit_minutes: true,
+                max_score: true,
+                _count: {
+                  select: { questions: true },
+                },
+              },
             },
           },
         },
@@ -143,7 +155,16 @@ export class DailyAssignmentsService {
         assessment_attempts: {
           include: {
             assessments: {
-              select: { id: true, type: true, title: true, max_score: true },
+              select: {
+                id: true,
+                type: true,
+                title: true,
+                time_limit_minutes: true,
+                max_score: true,
+                _count: {
+                  select: { questions: true },
+                },
+              },
             },
           },
         },
@@ -164,7 +185,16 @@ export class DailyAssignmentsService {
         assessment_attempts: {
           include: {
             assessments: {
-              select: { id: true, type: true, title: true, max_score: true },
+              select: {
+                id: true,
+                type: true,
+                title: true,
+                time_limit_minutes: true,
+                max_score: true,
+                _count: {
+                  select: { questions: true },
+                },
+              },
             },
           },
         },

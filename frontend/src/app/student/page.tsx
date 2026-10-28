@@ -872,12 +872,25 @@ export default function StudentDashboard() {
 
                     {isExpanded && (
                       <div className="p-6 pt-2 border-t border-slate-100 bg-slate-50/50">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-4">
+                        {/* Thông báo nếu buổi học không có BTVN */}
+                        {assignment.assessment_attempts?.every((a: any) => a.assessments?.type !== 'HOMEWORK') && (
+                          <div className="mt-4 px-4 py-2.5 rounded-2xl bg-blue-50/80 border border-blue-200/80 text-blue-900 text-xs flex flex-wrap items-center justify-between gap-2">
+                            <span className="font-semibold flex items-center space-x-2">
+                              <span>🎉</span>
+                              <span>Hôm nay toàn bộ bài tập được dồn làm trực tiếp tại lớp (không có BTVN).</span>
+                            </span>
+                            <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 border border-blue-200">
+                              100 câu luyện tập tại lớp
+                            </span>
+                          </div>
+                        )}
+
+                        <div className={`grid grid-cols-1 ${assignment.assessment_attempts?.length === 1 ? 'md:grid-cols-2' : 'md:grid-cols-3'} gap-5 mt-4`}>
                           {/* Station 1: Bài Giảng & Từ Vựng */}
                           <div className="p-5 rounded-2xl bg-white border border-slate-200 flex flex-col justify-between shadow-sm">
                             <div>
                               <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
-                                📖 Bài Giảng & 30 Từ Vựng
+                                📖 Trạm 1: Bài Giảng & 30 Từ Vựng
                               </span>
                               <h4 className="text-base font-bold text-slate-900 mt-3">
                                 {assignment.learning_units?.title}
@@ -906,15 +919,22 @@ export default function StudentDashboard() {
                                 className="p-5 rounded-2xl bg-white border border-slate-200 flex flex-col justify-between shadow-sm"
                               >
                                 <div>
-                                  <span
-                                    className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${
-                                      isHw
-                                        ? 'bg-amber-50 text-amber-700 border-amber-200'
-                                        : 'bg-indigo-50 text-indigo-700 border-indigo-200'
-                                    }`}
-                                  >
-                                    {isHw ? '📝 Bài Tập Về Nhà (BTVN)' : '⏱️ Luyện Tập Tại Lớp (90p)'}
-                                  </span>
+                                  <div className="flex items-center justify-between">
+                                    <span
+                                      className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${
+                                        isHw
+                                          ? 'bg-amber-50 text-amber-700 border-amber-200'
+                                          : 'bg-indigo-50 text-indigo-700 border-indigo-200'
+                                      }`}
+                                    >
+                                      {isHw ? '📝 Trạm 3: Bài Tập Về Nhà (BTVN)' : '⏱️ Trạm 2: Luyện Tập Tại Lớp (90p)'}
+                                    </span>
+                                    {att.assessments?._count?.questions && (
+                                      <span className="text-xs font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-200">
+                                        {att.assessments._count.questions} câu
+                                      </span>
+                                    )}
+                                  </div>
                                   <h4 className="text-base font-bold text-slate-900 mt-3 leading-snug">
                                     {att.assessments?.title}
                                   </h4>
@@ -944,7 +964,13 @@ export default function StudentDashboard() {
                                         : 'bg-blue-600 hover:bg-blue-700'
                                     }`}
                                   >
-                                    Bắt Đầu Làm Bài
+                                    {att.status === 'IN_PROGRESS'
+                                      ? 'Tiếp Tục Làm Bài'
+                                      : `Bắt Đầu Làm Bài ${
+                                          att.assessments?._count?.questions
+                                            ? `(${att.assessments._count.questions} câu)`
+                                            : ''
+                                        }`}
                                   </Link>
                                 )}
                               </div>
