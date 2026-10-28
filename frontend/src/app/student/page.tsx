@@ -782,21 +782,23 @@ export default function StudentDashboard() {
   const gradeLabel = user?.studentProfile?.grade_level || user?.student_profiles?.grade_level || 11;
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 py-10 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-slate-50 text-slate-800 py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto space-y-8">
         {/* Header Luyện Thi */}
-        <div className="rounded-3xl p-6 sm:p-8 bg-slate-900 border border-slate-800 shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div className="rounded-3xl p-6 sm:p-8 bg-white border border-slate-200 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div>
-            <div className="flex items-center space-x-2 text-xs font-bold text-blue-400 tracking-wider uppercase mb-1">
-              <Target className="w-4 h-4 text-blue-400" />
+            <div className="flex items-center space-x-2 text-xs font-bold text-blue-600 tracking-wider uppercase mb-1">
+              <Target className="w-4 h-4 text-blue-600" />
               <span>KHÔNG GIAN HỌC TẬP • LỚP {gradeLabel}</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-white">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
               Chào mừng, {studentName}!
             </h1>
-            <p className="text-sm text-slate-400 mt-2 max-w-xl">
+            <p className="text-sm text-slate-500 mt-2 max-w-xl">
               {todayAssignment?.teacher_daily_note ? (
-                <span className="text-amber-300 italic">"Lời dặn từ Thầy Minh: {todayAssignment.teacher_daily_note}"</span>
+                <span className="text-amber-800 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200/80 inline-block font-medium">
+                  "Lời dặn từ Thầy Minh: {todayAssignment.teacher_daily_note}"
+                </span>
               ) : (
                 'Tập trung rèn luyện tư duy, chiến thuật làm bài và tăng tốc độ giải đề.'
               )}
@@ -804,13 +806,13 @@ export default function StudentDashboard() {
           </div>
 
           <div className="flex items-center space-x-4">
-            <div className="px-5 py-3 rounded-2xl bg-slate-800 border border-slate-700 text-center">
-              <span className="text-xs text-slate-400 block">Mục Tiêu</span>
-              <span className="text-base font-bold text-amber-400">9.0+ THPTQG</span>
+            <div className="px-5 py-3 rounded-2xl bg-slate-50 border border-slate-200 text-center shadow-xs">
+              <span className="text-xs text-slate-500 block">Mục Tiêu</span>
+              <span className="text-base font-bold text-amber-600">9.0+ THPTQG</span>
             </div>
-            <div className="px-5 py-3 rounded-2xl bg-slate-800 border border-slate-700 text-center">
-              <span className="text-xs text-slate-400 block">Chuỗi Học</span>
-              <span className="text-base font-bold text-blue-400">7 Ngày</span>
+            <div className="px-5 py-3 rounded-2xl bg-slate-50 border border-slate-200 text-center shadow-xs">
+              <span className="text-xs text-slate-500 block">Chuỗi Học</span>
+              <span className="text-base font-bold text-blue-600">7 Ngày</span>
             </div>
           </div>
         </div>
@@ -818,11 +820,11 @@ export default function StudentDashboard() {
         {/* Lịch Học Theo Ngày */}
         <div>
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xl font-bold text-white flex items-center space-x-2">
-              <Calendar className="w-5 h-5 text-blue-400" />
+            <h2 className="text-xl font-bold text-slate-900 flex items-center space-x-2">
+              <Calendar className="w-5 h-5 text-blue-600" />
               <span>Lịch Bài Học & Bài Tập Theo Ngày:</span>
             </h2>
-            <span className="text-xs text-slate-400">Nhấn vào ngày để mở rộng bài học</span>
+            <span className="text-xs text-slate-500">Nhấn vào ngày để mở rộng bài học</span>
           </div>
 
           {allAssignments.length > 0 ? (
@@ -835,33 +837,33 @@ export default function StudentDashboard() {
                 return (
                   <div
                     key={assignment.id}
-                    className={`rounded-3xl border transition duration-300 overflow-hidden bg-slate-900 ${
-                      isExpanded ? 'border-blue-500 shadow-xl ring-1 ring-blue-500/40' : 'border-slate-800 hover:border-slate-700'
+                    className={`rounded-3xl border transition duration-300 overflow-hidden bg-white ${
+                      isExpanded ? 'border-blue-500 shadow-md ring-1 ring-blue-500/30' : 'border-slate-200 hover:border-slate-300 shadow-sm'
                     }`}
                   >
                     <button
                       onClick={() => toggleExpand(assignment.id)}
-                      className="w-full p-6 text-left flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-slate-800/40 transition"
+                      className="w-full p-6 text-left flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-slate-50/70 transition"
                     >
                       <div className="flex items-start space-x-4">
-                        <div className="w-12 h-12 rounded-2xl bg-blue-950 border border-blue-500/30 text-blue-400 flex items-center justify-center font-bold">
+                        <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center font-bold">
                           <Calendar className="w-6 h-6" />
                         </div>
                         <div>
                           <div className="flex items-center space-x-2 mb-1">
-                            <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-950 text-blue-300 border border-blue-500/30">
+                            <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
                               Ngày {dateLabel}
                             </span>
-                            <span className="text-xs text-slate-400">Lớp {gradeLabel}</span>
+                            <span className="text-xs text-slate-500">Lớp {gradeLabel}</span>
                           </div>
-                          <h3 className="text-lg sm:text-xl font-bold text-white">
+                          <h3 className="text-lg sm:text-xl font-bold text-slate-900">
                             {dateLabel} : {title}
                           </h3>
                         </div>
                       </div>
 
                       <div className="flex items-center space-x-2 self-end sm:self-center">
-                        <span className="text-xs font-semibold text-blue-400 bg-blue-950/60 border border-blue-500/30 px-3.5 py-1.5 rounded-xl flex items-center space-x-1">
+                        <span className="text-xs font-semibold text-blue-600 bg-blue-50 border border-blue-200 px-3.5 py-1.5 rounded-xl flex items-center space-x-1">
                           <span>{isExpanded ? 'Thu gọn' : 'Xem chi tiết bài học'}</span>
                           {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                         </span>
@@ -869,23 +871,23 @@ export default function StudentDashboard() {
                     </button>
 
                     {isExpanded && (
-                      <div className="p-6 pt-2 border-t border-slate-800 bg-slate-950/40">
+                      <div className="p-6 pt-2 border-t border-slate-100 bg-slate-50/50">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                          <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
+                          <div className="p-5 rounded-2xl bg-white border border-slate-200 flex flex-col justify-between shadow-sm">
                             <div>
-                              <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-950 text-blue-400 border border-blue-500/30">
+                              <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
                                 📖 Bài Giảng & Lý Thuyết
                               </span>
-                              <h4 className="text-base font-bold text-white mt-3">
+                              <h4 className="text-base font-bold text-slate-900 mt-3">
                                 {assignment.learning_units?.title}
                               </h4>
-                              <p className="text-xs text-slate-400 mt-1 line-clamp-3">
+                              <p className="text-xs text-slate-500 mt-1 line-clamp-3">
                                 {assignment.learning_units?.description || 'Nắm vững kiến thức trọng tâm.'}
                               </p>
                             </div>
                             <button
                               onClick={() => handleOpenLecture(assignment)}
-                              className="mt-6 w-full py-2.5 bg-slate-800 hover:bg-slate-700 text-blue-300 font-semibold text-sm rounded-xl border border-blue-500/30 transition"
+                              className="mt-6 w-full py-2.5 bg-blue-50 hover:bg-blue-100 text-blue-700 font-semibold text-sm rounded-xl border border-blue-200 transition"
                             >
                               Đọc Bài Giảng & Công Thức
                             </button>
@@ -894,19 +896,19 @@ export default function StudentDashboard() {
                           {assignment.assessment_attempts?.map((att: any) => (
                             <div
                               key={att.id}
-                              className="p-5 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between shadow-sm"
+                              className="p-5 rounded-2xl bg-white border border-slate-200 flex flex-col justify-between shadow-sm"
                             >
                               <div>
-                                <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-950 text-purple-400 border border-purple-500/30">
+                                <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200">
                                   {att.assessments?.title || 'Bài tập rèn luyện'}
                                 </span>
-                                <h4 className="text-base font-bold text-white mt-3">
+                                <h4 className="text-base font-bold text-slate-900 mt-3">
                                   Thang điểm: {att.assessments?.max_score || 10} điểm
                                 </h4>
                               </div>
                               <Link
                                 href={`/student/mission/${att.id}`}
-                                className="mt-6 block w-full py-2.5 text-center bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm rounded-xl transition shadow"
+                                className="mt-6 block w-full py-2.5 text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm rounded-xl transition shadow-sm"
                               >
                                 Bắt Đầu Làm Bài
                               </Link>
@@ -920,28 +922,28 @@ export default function StudentDashboard() {
               })}
             </div>
           ) : (
-            <div className="p-8 bg-slate-900 rounded-3xl text-center border border-slate-800">
-              <p className="text-slate-400">Chưa có bài học mới được giao.</p>
+            <div className="p-8 bg-white rounded-3xl text-center border border-slate-200 shadow-sm">
+              <p className="text-slate-500">Chưa có bài học mới được giao.</p>
             </div>
           )}
         </div>
 
         {/* Modal Bài Giảng */}
         {activeLectureAssignment && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4">
-            <div className="w-full max-w-3xl max-h-[85vh] bg-slate-900 border border-slate-700 rounded-3xl p-6 sm:p-8 flex flex-col overflow-hidden shadow-2xl">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-4">
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 backdrop-blur-sm p-4">
+            <div className="w-full max-w-3xl max-h-[85vh] bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col overflow-hidden shadow-2xl">
+              <div className="flex items-center justify-between border-b border-slate-100 pb-4">
                 <div>
-                  <span className="text-xs font-bold text-blue-400 uppercase">
+                  <span className="text-xs font-bold text-blue-600 uppercase">
                     Bài Giảng • {formatAssignmentDate(activeLectureAssignment.assigned_date)}
                   </span>
-                  <h3 className="text-xl font-bold text-white mt-1">
+                  <h3 className="text-xl font-bold text-slate-900 mt-1">
                     {activeLectureAssignment.learning_units?.title}
                   </h3>
                 </div>
                 <button
                   onClick={() => setActiveLectureAssignment(null)}
-                  className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800"
+                  className="p-2 text-slate-400 hover:text-slate-700 rounded-lg hover:bg-slate-100 transition"
                 >
                   ✕
                 </button>
@@ -950,14 +952,14 @@ export default function StudentDashboard() {
               <div className="flex-1 overflow-y-auto py-6">
                 <FormattedContent
                   text={activeLectureAssignment.learning_units?.lecture_content_markdown || ''}
-                  className="text-slate-200 text-sm leading-relaxed"
+                  className="text-slate-700 text-sm leading-relaxed"
                 />
               </div>
 
-              <div className="border-t border-slate-800 pt-4 flex justify-end">
+              <div className="border-t border-slate-100 pt-4 flex justify-end">
                 <button
                   onClick={() => setActiveLectureAssignment(null)}
-                  className="px-6 py-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm rounded-xl transition"
+                  className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm rounded-xl transition shadow-sm"
                 >
                   Đã Hiểu Bài
                 </button>

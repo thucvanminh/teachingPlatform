@@ -41,10 +41,10 @@ export function Navbar() {
     <nav
       className={`border-b transition-all duration-300 sticky top-0 z-50 backdrop-blur-md ${
         isCosmic
-          ? 'bg-[#05070E]/80 border-cyan-500/20 text-slate-100'
+          ? 'bg-[#05070E]/90 border-cyan-500/20 text-slate-100 shadow-md'
           : isKids
-          ? 'bg-amber-50/90 border-amber-200 text-slate-800'
-          : 'bg-white/80 dark:bg-slate-900/80 border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100'
+          ? 'bg-amber-50/95 border-amber-200 text-slate-800 shadow-sm'
+          : 'bg-white/95 border-slate-200/80 text-slate-900 shadow-sm'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

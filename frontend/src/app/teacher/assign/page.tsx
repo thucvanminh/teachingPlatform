@@ -74,22 +74,22 @@ export default function AssignPage() {
   };
 
   if (loading) {
-    return <div className="min-h-screen bg-slate-950 text-white p-8">Đang tải lịch giao bài...</div>;
+    return <div className="min-h-screen bg-slate-50 text-slate-600 flex items-center justify-center p-8">Đang tải lịch giao bài...</div>;
   }
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 py-8 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-slate-50 text-slate-800 py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-6">
-        <div className="flex items-center justify-between border-b border-slate-800 pb-4">
+        <div className="flex items-center justify-between border-b border-slate-200 pb-4">
           <button
             onClick={() => router.push('/teacher')}
-            className="flex items-center space-x-2 text-xs font-semibold text-slate-400 hover:text-white transition"
+            className="flex items-center space-x-2 text-xs font-semibold text-slate-500 hover:text-slate-800 transition"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Về Bàn Làm Việc</span>
           </button>
-          <h1 className="text-xl font-bold text-white flex items-center space-x-2">
-            <Calendar className="w-5 h-5 text-purple-400" />
+          <h1 className="text-xl font-bold text-slate-900 flex items-center space-x-2">
+            <Calendar className="w-5 h-5 text-purple-600" />
             <span>Lịch Giao Bài Hàng Ngày 1-kèm-1</span>
           </h1>
           <div className="w-20" />
@@ -97,15 +97,15 @@ export default function AssignPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Form Giao Bài */}
-          <div className="lg:col-span-1 rounded-3xl p-6 bg-slate-900 border border-slate-800 h-fit">
-            <h2 className="text-base font-bold text-white mb-4">Giao Bài Học Mới Theo Ngày</h2>
+          <div className="lg:col-span-1 rounded-3xl p-6 bg-white border border-slate-200 shadow-sm h-fit">
+            <h2 className="text-base font-bold text-slate-900 mb-4">Giao Bài Học Mới Theo Ngày</h2>
             <form onSubmit={handleAssign} className="space-y-4">
               <div>
-                <label className="text-xs font-semibold text-slate-300 block mb-1">Chọn học sinh:</label>
+                <label className="text-xs font-semibold text-slate-700 block mb-1">Chọn học sinh:</label>
                 <select
                   value={studentId}
                   onChange={(e) => setStudentId(e.target.value)}
-                  className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white text-sm"
+                  className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm focus:outline-none focus:border-purple-600"
                 >
                   {students.map((s) => (
                     <option key={s.id} value={s.id}>
@@ -116,11 +116,11 @@ export default function AssignPage() {
               </div>
 
               <div>
-                <label className="text-xs font-semibold text-slate-300 block mb-1">Chọn bài học:</label>
+                <label className="text-xs font-semibold text-slate-700 block mb-1">Chọn bài học:</label>
                 <select
                   value={learningUnitId}
                   onChange={(e) => setLearningUnitId(e.target.value)}
-                  className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white text-sm"
+                  className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm focus:outline-none focus:border-purple-600"
                 >
                   {units.map((u) => (
                     <option key={u.id} value={u.id}>
@@ -131,18 +131,18 @@ export default function AssignPage() {
               </div>
 
               <div>
-                <label className="text-xs font-semibold text-slate-300 block mb-1">Ngày học:</label>
+                <label className="text-xs font-semibold text-slate-700 block mb-1">Ngày học:</label>
                 <input
                   type="date"
                   required
                   value={assignedDate}
                   onChange={(e) => setAssignedDate(e.target.value)}
-                  className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white text-sm"
+                  className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm focus:outline-none focus:border-purple-600"
                 />
               </div>
 
               <div>
-                <label className="text-xs font-semibold text-slate-300 block mb-1">
+                <label className="text-xs font-semibold text-slate-700 block mb-1">
                   Lời dặn dò của gia sư (Hiển thị cho Phụ huynh & Bé):
                 </label>
                 <textarea
@@ -150,14 +150,14 @@ export default function AssignPage() {
                   placeholder="VD: Hôm nay con nhớ ôn kỹ phần dấu trừ khi chuyển vế nhé..."
                   value={note}
                   onChange={(e) => setNote(e.target.value)}
-                  className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white text-sm"
+                  className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm focus:outline-none focus:border-purple-600"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full py-3 bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm rounded-xl flex items-center justify-center space-x-2 shadow-lg transition disabled:opacity-50"
+                className="w-full py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold text-sm rounded-xl flex items-center justify-center space-x-2 shadow-sm transition disabled:opacity-50"
               >
                 <Send className="w-4 h-4" />
                 <span>{submitting ? 'Đang giao...' : 'Giao Bài Ngay'}</span>
@@ -166,33 +166,35 @@ export default function AssignPage() {
           </div>
 
           {/* Lịch sử và danh sách các bài đã giao */}
-          <div className="lg:col-span-2 rounded-3xl p-6 bg-slate-900 border border-slate-800">
-            <h2 className="text-base font-bold text-white mb-4">Các Buổi Học Đã Lên Lịch ({assignments.length})</h2>
+          <div className="lg:col-span-2 rounded-3xl p-6 bg-white border border-slate-200 shadow-sm">
+            <h2 className="text-base font-bold text-slate-900 mb-4">Các Buổi Học Đã Lên Lịch ({assignments.length})</h2>
 
             <div className="space-y-4">
               {assignments.map((item) => (
                 <div
                   key={item.id}
-                  className="p-4 rounded-2xl bg-slate-950 border border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+                  className="p-4 rounded-2xl bg-slate-50/80 border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-xs"
                 >
                   <div>
                     <div className="flex items-center space-x-2">
-                      <span className="text-xs font-bold text-purple-400">
+                      <span className="text-xs font-bold text-purple-700">
                         {new Date(item.assigned_date).toLocaleDateString('vi-VN')}
                       </span>
-                      <span className="text-xs text-slate-500">•</span>
-                      <span className="text-xs font-semibold text-white">
+                      <span className="text-xs text-slate-400">•</span>
+                      <span className="text-xs font-semibold text-slate-900">
                         {item.users_daily_student_assignments_student_idTousers?.full_name}
                       </span>
                     </div>
-                    <h4 className="text-sm font-bold text-slate-200 mt-1">{item.learning_units?.title}</h4>
+                    <h4 className="text-sm font-bold text-slate-900 mt-1">{item.learning_units?.title}</h4>
                     {item.teacher_daily_note && (
-                      <p className="text-xs text-slate-400 mt-1 italic">"{item.teacher_daily_note}"</p>
+                      <p className="text-xs text-amber-900 bg-amber-50/80 px-2 py-1 rounded border border-amber-200/60 mt-1.5 italic">
+                        💬 "{item.teacher_daily_note}"
+                      </p>
                     )}
                   </div>
 
                   <div className="text-right">
-                    <span className="text-xs px-2.5 py-1 rounded-full bg-slate-800 text-cyan-400 font-semibold border border-cyan-500/20">
+                    <span className="text-xs px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 font-semibold border border-blue-200">
                       {item.assessment_attempts?.length || 0} bài tập
                     </span>
                   </div>

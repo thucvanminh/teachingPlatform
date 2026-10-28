@@ -77,27 +77,27 @@ export default function CurriculumPage() {
     : units;
 
   if (loading) {
-    return <div className="min-h-screen bg-slate-950 text-white p-8">Đang tải kho bài học...</div>;
+    return <div className="min-h-screen bg-slate-50 text-slate-600 flex items-center justify-center p-8">Đang tải kho bài học...</div>;
   }
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 py-8 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-slate-50 text-slate-800 py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-6">
-        <div className="flex items-center justify-between border-b border-slate-800 pb-4">
+        <div className="flex items-center justify-between border-b border-slate-200 pb-4">
           <button
             onClick={() => router.push('/teacher')}
-            className="flex items-center space-x-2 text-xs font-semibold text-slate-400 hover:text-white transition"
+            className="flex items-center space-x-2 text-xs font-semibold text-slate-500 hover:text-slate-800 transition"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Về Bàn Làm Việc</span>
           </button>
-          <h1 className="text-xl font-bold text-white flex items-center space-x-2">
-            <BookOpen className="w-5 h-5 text-purple-400" />
+          <h1 className="text-xl font-bold text-slate-900 flex items-center space-x-2">
+            <BookOpen className="w-5 h-5 text-purple-600" />
             <span>Kho Bài Học & Soạn Giáo Án KaTeX</span>
           </h1>
           <button
             onClick={() => setShowModal(true)}
-            className="py-2 px-4 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold flex items-center space-x-1.5 transition shadow-lg"
+            className="py-2 px-4 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold flex items-center space-x-1.5 transition shadow-sm"
           >
             <Plus className="w-4 h-4" />
             <span>Soạn Bài Mới</span>
@@ -112,8 +112,8 @@ export default function CurriculumPage() {
               onClick={() => setSelectedSubjectId(sub.id)}
               className={`px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition border ${
                 selectedSubjectId === sub.id
-                  ? 'bg-purple-600 text-white border-purple-500 shadow-md'
-                  : 'bg-slate-900 text-slate-400 border-slate-800 hover:text-white'
+                  ? 'bg-purple-600 text-white border-purple-500 shadow-sm'
+                  : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
               }`}
             >
               {sub.name} (Khối {sub.target_grade})
@@ -124,17 +124,17 @@ export default function CurriculumPage() {
         {/* Units Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredUnits.map((u) => (
-            <div key={u.id} className="p-6 rounded-3xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
+            <div key={u.id} className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
               <div>
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-800 text-purple-400 uppercase">
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-purple-50 text-purple-700 border border-purple-200 uppercase">
                   {u.subjects?.name}
                 </span>
-                <h3 className="text-lg font-bold text-white mt-2 leading-snug">{u.title}</h3>
-                <p className="text-xs text-slate-400 mt-2 line-clamp-2">{u.description || 'Chưa có mô tả'}</p>
+                <h3 className="text-lg font-bold text-slate-900 mt-2 leading-snug">{u.title}</h3>
+                <p className="text-xs text-slate-500 mt-2 line-clamp-2">{u.description || 'Chưa có mô tả'}</p>
 
-                <div className="mt-4 pt-3 border-t border-slate-800/80 text-xs text-slate-400 flex items-center justify-between">
+                <div className="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500 flex items-center justify-between">
                   <span>{u.assessments?.length || 0} bài tập đính kèm</span>
-                  <span className="text-purple-400 font-semibold">Tái sử dụng</span>
+                  <span className="text-purple-600 font-semibold">Tái sử dụng</span>
                 </div>
               </div>
             </div>
@@ -143,16 +143,16 @@ export default function CurriculumPage() {
 
         {/* Modal Soạn Bài Học Mới */}
         {showModal && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4">
-            <div className="w-full max-w-2xl bg-slate-900 border border-slate-800 rounded-3xl p-6 flex flex-col max-h-[90vh] overflow-y-auto">
-              <h2 className="text-xl font-bold text-white mb-4">Soạn Bài Học Mới</h2>
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 backdrop-blur-sm p-4">
+            <div className="w-full max-w-2xl bg-white border border-slate-200 rounded-3xl p-6 flex flex-col max-h-[90vh] overflow-y-auto shadow-2xl">
+              <h2 className="text-xl font-bold text-slate-900 mb-4">Soạn Bài Học Mới</h2>
               <form onSubmit={handleCreateUnit} className="space-y-4">
                 <div>
-                  <label className="text-xs font-semibold text-slate-300 block mb-1">Môn học</label>
+                  <label className="text-xs font-semibold text-slate-700 block mb-1">Môn học</label>
                   <select
                     value={selectedSubjectId}
                     onChange={(e) => setSelectedSubjectId(e.target.value)}
-                    className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white text-sm"
+                    className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm focus:outline-none focus:border-purple-600"
                   >
                     {subjects.map((s) => (
                       <option key={s.id} value={s.id}>
@@ -163,30 +163,30 @@ export default function CurriculumPage() {
                 </div>
 
                 <div>
-                  <label className="text-xs font-semibold text-slate-300 block mb-1">Tiêu đề bài học</label>
+                  <label className="text-xs font-semibold text-slate-700 block mb-1">Tiêu đề bài học</label>
                   <input
                     type="text"
                     required
                     placeholder="VD: Chuyên đề 2: Phương trình bậc nhất"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
-                    className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white text-sm"
+                    className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm focus:outline-none focus:border-purple-600"
                   />
                 </div>
 
                 <div>
-                  <label className="text-xs font-semibold text-slate-300 block mb-1">Mô tả ngắn</label>
+                  <label className="text-xs font-semibold text-slate-700 block mb-1">Mô tả ngắn</label>
                   <input
                     type="text"
                     placeholder="Tóm tắt nội dung trọng tâm..."
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
-                    className="w-full p-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white text-sm"
+                    className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm focus:outline-none focus:border-purple-600"
                   />
                 </div>
 
                 <div>
-                  <label className="text-xs font-semibold text-slate-300 block mb-1">
+                  <label className="text-xs font-semibold text-slate-700 block mb-1">
                     Nội dung lý thuyết (Hỗ trợ Markdown & KaTeX Toán/Hóa: $a^2 + b^2 = c^2$)
                   </label>
                   <textarea
@@ -194,22 +194,22 @@ export default function CurriculumPage() {
                     placeholder="# 1. Lý thuyết..."
                     value={lectureMarkdown}
                     onChange={(e) => setLectureMarkdown(e.target.value)}
-                    className="w-full p-3 bg-slate-800 border border-slate-700 rounded-xl text-white text-sm font-mono"
+                    className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm font-mono focus:outline-none focus:border-purple-600"
                   />
                 </div>
 
-                <div className="flex justify-end space-x-3 pt-4 border-t border-slate-800">
+                <div className="flex justify-end space-x-3 pt-4 border-t border-slate-100">
                   <button
                     type="button"
                     onClick={() => setShowModal(false)}
-                    className="px-4 py-2 text-sm text-slate-400 hover:text-white"
+                    className="px-4 py-2 text-sm text-slate-500 hover:text-slate-800"
                   >
                     Hủy
                   </button>
                   <button
                     type="submit"
                     disabled={creating}
-                    className="px-6 py-2 bg-purple-600 hover:bg-purple-500 text-white text-sm font-semibold rounded-xl"
+                    className="px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold rounded-xl shadow-sm"
                   >
                     {creating ? 'Đang lưu...' : 'Lưu Bài Học'}
                   </button>

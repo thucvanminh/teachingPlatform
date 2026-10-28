@@ -51,13 +51,13 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#090b10] flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8 selection:bg-zinc-800 selection:text-white">
-      <div className="sm:mx-auto sm:w-full sm:max-w-[380px]">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100/70 flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8 selection:bg-slate-200 selection:text-slate-900">
+      <div className="sm:mx-auto sm:w-full sm:max-w-[390px]">
         {/* Minimalist Brand Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-zinc-900 border border-zinc-800 text-zinc-100 shadow-sm mb-4">
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-white border border-slate-200/80 text-slate-800 shadow-[0_2px_8px_rgba(0,0,0,0.04)] mb-4">
             <svg
-              className="w-5 h-5 text-zinc-200"
+              className="w-6 h-6 text-slate-700"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -70,18 +70,18 @@ export default function LoginPage() {
               <path d="M6 10h10" />
             </svg>
           </div>
-          <h1 className="text-xl font-semibold tracking-tight text-zinc-100">
+          <h1 className="text-2xl font-bold tracking-tight text-slate-900">
             Đăng nhập
           </h1>
-          <p className="text-xs text-zinc-400 mt-1.5 font-normal">
+          <p className="text-xs text-slate-500 mt-1.5 font-normal">
             Hệ thống học tập cá nhân hóa 1-on-1
           </p>
         </div>
 
         {/* Minimalist Card */}
-        <div className="bg-zinc-900/60 border border-zinc-800/80 rounded-2xl p-6 sm:p-7 shadow-xl backdrop-blur-sm">
+        <div className="bg-white border border-slate-200/80 rounded-2xl p-7 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
           {error && (
-            <div className="mb-5 px-3.5 py-2.5 rounded-lg bg-red-950/40 border border-red-800/50 text-red-300 text-xs flex items-center justify-between">
+            <div className="mb-5 px-3.5 py-2.5 rounded-xl bg-red-50 border border-red-200/80 text-red-600 text-xs flex items-center justify-between">
               <span>{error}</span>
             </div>
           )}
@@ -90,7 +90,7 @@ export default function LoginPage() {
             <div>
               <label
                 htmlFor="identifier"
-                className="block text-xs font-medium text-zinc-300 mb-1.5"
+                className="block text-xs font-semibold text-slate-700 mb-1.5"
               >
                 Tên đăng nhập hoặc Email
               </label>
@@ -101,15 +101,15 @@ export default function LoginPage() {
                 required
                 value={identifier}
                 onChange={(e) => setIdentifier(e.target.value)}
-                placeholder="Nhập tài khoản..."
-                className="w-full px-3.5 py-2.5 bg-zinc-950/70 border border-zinc-800 rounded-xl text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500 transition-colors"
+                placeholder="Nhập tên tài khoản..."
+                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-slate-800 focus:bg-white focus:ring-1 focus:ring-slate-800 transition-all"
               />
             </div>
 
             <div>
               <label
                 htmlFor="password"
-                className="block text-xs font-medium text-zinc-300 mb-1.5"
+                className="block text-xs font-semibold text-slate-700 mb-1.5"
               >
                 Mật khẩu
               </label>
@@ -122,12 +122,12 @@ export default function LoginPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Nhập mật khẩu..."
-                  className="w-full pl-3.5 pr-10 py-2.5 bg-zinc-950/70 border border-zinc-800 rounded-xl text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500 transition-colors"
+                  className="w-full pl-3.5 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-slate-800 focus:bg-white focus:ring-1 focus:ring-slate-800 transition-all"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-zinc-300 transition-colors focus:outline-none"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 transition-colors focus:outline-none"
                   tabIndex={-1}
                   aria-label={showPassword ? 'Ẩn mật khẩu' : 'Hiện mật khẩu'}
                 >
@@ -140,16 +140,16 @@ export default function LoginPage() {
               </div>
             </div>
 
-            <div className="pt-1">
+            <div className="pt-2">
               <button
                 type="submit"
                 disabled={loading || !identifier.trim() || !password}
-                className="w-full flex items-center justify-center py-2.5 px-4 rounded-xl text-sm font-medium bg-zinc-100 text-zinc-950 hover:bg-white active:bg-zinc-200 transition-colors disabled:opacity-40 disabled:cursor-not-allowed shadow-sm"
+                className="w-full flex items-center justify-center py-2.5 px-4 rounded-xl text-sm font-semibold bg-slate-900 text-white hover:bg-slate-800 active:bg-slate-950 transition-all disabled:opacity-40 disabled:cursor-not-allowed shadow-sm"
               >
                 {loading ? (
-                  <Loader2 className="w-4 h-4 animate-spin text-zinc-700" />
+                  <Loader2 className="w-4 h-4 animate-spin text-white" />
                 ) : (
-                  'Tiếp tục'
+                  'Đăng nhập'
                 )}
               </button>
             </div>
@@ -157,7 +157,7 @@ export default function LoginPage() {
         </div>
 
         {/* Minimal Footer */}
-        <p className="text-center text-[11px] text-zinc-400 mt-6 font-mono">
+        <p className="text-center text-[11px] text-slate-400 mt-6 font-mono">
           © 2026 Tutoring LMS Platform
         </p>
       </div>
