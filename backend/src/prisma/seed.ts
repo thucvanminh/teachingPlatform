@@ -124,17 +124,17 @@ async function main() {
     where: {
       parent_id_student_id: {
         parent_id: parentNam.id,
-        student_id: studentG7.id,
+        student_id: studentKeithley.id,
       },
     },
     update: {},
     create: {
       parent_id: parentNam.id,
-      student_id: studentG7.id,
-      relationship: 'Mẹ',
+      student_id: studentKeithley.id,
+      relationship: 'Phụ huynh',
     },
   });
-  console.log('✓ Đã liên kết Phụ huynh với học sinh Nam (Lớp 7)');
+  console.log('✓ Đã liên kết Phụ huynh với Keithley Lake');
 
   // 6. Lấy môn Toán 7
   const math7 = await prisma.subjects.findUnique({
@@ -262,21 +262,21 @@ $$A + B = C \\iff A = C - B$$
       },
     });
 
-    // 10. Giao bài ngày hôm nay cho học sinh Nam (student_g7)
+    // 10. Giao bài ngày hôm nay cho Keithley Lake (keithley)
     const today = new Date();
     today.setUTCHours(0, 0, 0, 0);
 
     const assignment = await prisma.daily_student_assignments.upsert({
       where: {
         student_id_learning_unit_id_assigned_date: {
-          student_id: studentG7.id,
+          student_id: studentKeithley.id,
           learning_unit_id: sampleUnit.id,
           assigned_date: today,
         },
       },
       update: {},
       create: {
-        student_id: studentG7.id,
+        student_id: studentKeithley.id,
         learning_unit_id: sampleUnit.id,
         assigned_by: teacher.id,
         assigned_date: today,
@@ -286,7 +286,7 @@ $$A + B = C \\iff A = C - B$$
       },
     });
 
-    // Tạo sẵn 2 attempt cho Nam
+    // Tạo sẵn 2 attempt cho Keithley Lake
     await prisma.assessment_attempts.upsert({
       where: {
         daily_assignment_id_assessment_id: {
@@ -298,7 +298,7 @@ $$A + B = C \\iff A = C - B$$
       create: {
         daily_assignment_id: assignment.id,
         assessment_id: inSessionPractice.id,
-        student_id: studentG7.id,
+        student_id: studentKeithley.id,
         status: attempt_status.NOT_STARTED,
       },
     });
@@ -314,12 +314,12 @@ $$A + B = C \\iff A = C - B$$
       create: {
         daily_assignment_id: assignment.id,
         assessment_id: homework.id,
-        student_id: studentG7.id,
+        student_id: studentKeithley.id,
         status: attempt_status.NOT_STARTED,
       },
     });
 
-    console.log('✓ Đã tạo Bài học mẫu, Đề 90p, Đề BTVN, và Giao bài hôm nay cho Nam!');
+    console.log('✓ Đã tạo Bài học mẫu, Đề 90p, Đề BTVN, và Giao bài hôm nay cho Keithley Lake!');
   }
 
   console.log('--- Hoàn tất Seeding thành công 100%! ---');
