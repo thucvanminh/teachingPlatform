@@ -8,6 +8,7 @@ export function getToken(): string | null {
 export function setToken(token: string) {
   if (typeof window !== 'undefined') {
     localStorage.setItem('lms_token', token);
+    window.dispatchEvent(new Event('lms-auth-change'));
   }
 }
 
@@ -15,6 +16,7 @@ export function clearToken() {
   if (typeof window !== 'undefined') {
     localStorage.removeItem('lms_token');
     localStorage.removeItem('lms_user');
+    window.dispatchEvent(new Event('lms-auth-change'));
   }
 }
 
@@ -27,6 +29,7 @@ export function getUser(): any | null {
 export function setUser(user: any) {
   if (typeof window !== 'undefined') {
     localStorage.setItem('lms_user', JSON.stringify(user));
+    window.dispatchEvent(new Event('lms-auth-change'));
   }
 }
 

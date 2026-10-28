@@ -2,20 +2,34 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { getUser, clearToken } from '@/lib/api';
 import { LogOut, Rocket, GraduationCap, Eye, User } from 'lucide-react';
 
 export function Navbar() {
   const router = useRouter();
+  const pathname = usePathname();
   const [user, setUserState] = useState<any>(null);
 
   useEffect(() => {
-    setUserState(getUser());
-  }, []);
+    const updateUser = () => {
+      setUserState(getUser());
+    };
+
+    updateUser();
+
+    window.addEventListener('lms-auth-change', updateUser);
+    window.addEventListener('storage', updateUser);
+
+    return () => {
+      window.removeEventListener('lms-auth-change', updateUser);
+      window.removeEventListener('storage', updateUser);
+    };
+  }, [pathname]);
 
   const handleLogout = () => {
     clearToken();
+    setUserState(null);
     router.push('/login');
   };
 
