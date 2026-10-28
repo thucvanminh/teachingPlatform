@@ -1,13 +1,26 @@
-CREATE TYPE user_role AS ENUM ('TEACHER', 'STUDENT', 'PARENT');
-CREATE TYPE ui_mode AS ENUM ('KIDS_ELEMENTARY', 'STANDARD_SECONDARY', 'HIGH_SCHOOL_EXAM');
-CREATE TYPE assessment_type AS ENUM ('IN_SESSION_90M', 'HOMEWORK');
-CREATE TYPE question_type AS ENUM (
-    'MULTIPLE_CHOICE',
-    'FILL_IN_BLANK',
-    'PASSAGE_GROUP',   -- Đoạn văn/Audio có nhiều câu hỏi con (Tiếng Anh 11, 12)
-    'ESSAY_UPLOAD'     -- Tự luận gõ LaTeX hoặc chụp ảnh vở (Toán, Hóa, Writing)
-);
-CREATE TYPE attempt_status AS ENUM ('NOT_STARTED', 'IN_PROGRESS', 'SUBMITTED', 'GRADED');
+-- Khởi tạo các kiểu ENUM một cách an toàn (tránh lỗi nếu đã tồn tại hoặc chạy lại)
+DO $$ BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'user_role') THEN
+        CREATE TYPE user_role AS ENUM ('TEACHER', 'STUDENT', 'PARENT');
+    END IF;
+    IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'ui_mode') THEN
+        CREATE TYPE ui_mode AS ENUM ('KIDS_ELEMENTARY', 'STANDARD_SECONDARY', 'HIGH_SCHOOL_EXAM');
+    END IF;
+    IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'assessment_type') THEN
+        CREATE TYPE assessment_type AS ENUM ('IN_SESSION_90M', 'HOMEWORK');
+    END IF;
+    IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'question_type') THEN
+        CREATE TYPE question_type AS ENUM (
+            'MULTIPLE_CHOICE',
+            'FILL_IN_BLANK',
+            'PASSAGE_GROUP',   -- Đoạn văn/Audio có nhiều câu hỏi con (Tiếng Anh 11, 12)
+            'ESSAY_UPLOAD'     -- Tự luận gõ LaTeX hoặc chụp ảnh vở (Toán, Hóa, Writing)
+        );
+    END IF;
+    IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'attempt_status') THEN
+        CREATE TYPE attempt_status AS ENUM ('NOT_STARTED', 'IN_PROGRESS', 'SUBMITTED', 'GRADED');
+    END IF;
+END $$;
 
 -- Bảng tài khoản chung
 CREATE TABLE users (
