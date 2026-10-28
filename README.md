@@ -4,93 +4,63 @@ Hệ thống quản lý học tập (LMS) cá nhân hóa chuyên biệt cho mô 
 
 ---
 
-## 🏛️ Kiến trúc Hệ thống
+## 🏛️ Kiến trúc Toàn Diện (Fullstack Architecture)
 
-- **Backend:** NestJS 10 (TypeScript, Modular Architecture, Prisma ORM, Passport JWT, Swagger OpenAPI).
-- **Database:** PostgreSQL 15+ (Hosted trên Supabase với Row Level Security & Storage).
-- **Frontend (Dự kiến):** Next.js 15 (Tailwind CSS, shadcn/ui, KaTeX) triển khai trên Vercel.
-- **Deploy:** 
-  - Backend: Render Free Web Service (Hỗ trợ Docker & render.yaml blueprint).
-  - Database & Storage: Supabase Free Tier.
-  - Frontend: Vercel Free Tier.
-
----
-
-## 📚 Tài liệu Thiết kế & CSDL
-- [PROJECT_BRIEF.md](./PROJECT_BRIEF.md): Mục tiêu dự án, cấu trúc buổi học hàng ngày, phân quyền RBAC.
-- [database_schema.md](./database_schema.md): Đặc tả kiến trúc CSDL, từ điển dữ liệu 10 bảng, sơ đồ ERD, hợp đồng JSONB và bảo mật RLS.
-- [databases.md](./databases.md): Mã nguồn SQL DDL đã được thực thi 100% trên Supabase PostgreSQL.
+- **Frontend:** Next.js 15 (App Router, React 19, TypeScript, Tailwind CSS, KaTeX Math rendering, Lucide Icons).
+  - 🛸 **Keithley Space Mission Control (Toán 7 & Hóa 9):** Giao diện vũ trụ Neon Sci-Fi với nền cockpit/nebula, đồng hồ đếm ngược phóng tàu 90p, nộp ảnh chụp vở.
+  - 👑 **Bé An Wonderland (Toán 2):** Giao diện hoạt hình thần tiên vui nhộn, công chúa & rồng xanh, nút bấm 3D thân thiện.
+  - 🎓 **Teacher Studio (Thầy Minh):** Bàn làm việc Bento Grid, kho bài học KaTeX, giao bài theo ngày và bàn chấm bài tự luận kèm khoanh vẽ ảnh.
+  - 👁️ **Parent Read-Only Portal:** Phụ huynh theo dõi tiến độ, bài làm và nhận xét của con với quyền Chỉ Đọc (bị khóa tuyệt đối các nút nộp/sửa).
+- **Backend:** NestJS 10 (TypeScript, Prisma ORM, Passport JWT, Swagger OpenAPI, RBAC Guards, E2E Test Suite).
+- **Database & Storage:** PostgreSQL 15+ trên Supabase với 10 bảng dữ liệu, RLS và 2 Storage Buckets (`submissions`, `lectures`).
 
 ---
 
-## 🚀 Các Phân hệ Backend (NestJS Modules)
+## 🚀 Hướng Dẫn Chạy Toàn Bộ Hệ Thống (Local Development)
 
-| Phân hệ | Mô tả |
-| :--- | :--- |
-| **AuthModule** | Đăng ký, đăng nhập JWT, giải mã quyền vai trò (`TEACHER`, `STUDENT`, `PARENT`). |
-| **UsersModule** | Quản lý hồ sơ học sinh (`student_profiles`), ghi chú sư phạm, liên kết Phụ huynh - Học sinh (`parent_student_links`). |
-| **SubjectsModule** | Quản lý danh mục môn học (`MATH_2`, `MATH_7`, `CHEM_9`, `ENG_11`, `ENG_12`). |
-| **LearningUnitsModule** | Quản lý kho bài học, nội dung lý thuyết Markdown/LaTeX, file đính kèm. |
-| **AssessmentsModule** | Quản lý bộ đề (Luyện tập 90p tại lớp & BTVN) và ngân hàng câu hỏi đa hình (Trắc nghiệm, Điền từ, Nhóm bài đọc/nghe, Tự luận). |
-| **DailyAssignmentsModule** | Trái tim lộ trình cá nhân hóa 1-1: Giao bài theo từng ngày cho học sinh, theo dõi trạng thái hoàn thành. |
-| **AttemptsModule** | Phòng làm bài học sinh: Tính giờ thực tế, nộp bài, **công cụ tự động chấm trắc nghiệm & điền từ**. |
-| **GradingModule** | Bàn chấm bài giáo viên: Chấm điểm tự luận, nhập nhận xét từng câu, lời phê tổng quan và đính kèm ảnh bài làm đã khoanh đỏ chấm chữa. |
-| **StorageModule** | Tích hợp Supabase Storage (`submissions` & `lectures`), tạo Signed URL để client upload trực tiếp. |
-
----
-
-## 🔑 Tài khoản Mẫu Đã Tạo Sẵn (Seeded Accounts)
-
-Mật khẩu chung cho tất cả tài khoản mẫu: **`Password123!`**
-
-| Vai trò (Role) | Username | Email / Tên hiển thị | Khối lớp / Ghi chú |
-| :--- | :--- | :--- | :--- |
-| **TEACHER** | `teacher` | `teacher@tutoring.com` (Thầy Minh) | Quản trị viên / Gia sư toàn quyền |
-| **STUDENT** | `student_g2` | Bé An Nhiên | Lớp 2 (Giao diện Kids Elementary) |
-| **STUDENT** | `student_g7` | `nam.g7@gmail.com` (Hoàng Nam) | Lớp 7 (Toán 7 - Đại số & Hình học) |
-| **STUDENT** | `student_g12` | `trang.g12@gmail.com` (Thu Trang) | Lớp 12 (Luyện thi THPTQG Tiếng Anh) |
-| **PARENT** | `parent_nam` | `me.nam@gmail.com` (Chị Mai) | Phụ huynh em Nam (Chỉ đọc - Read only) |
-
----
-
-## 🛠️ Hướng dẫn Khởi chạy Backend (Local)
-
+### 1. Khởi chạy Backend (Port 3001)
 ```bash
-# 1. Đi vào thư mục backend
 cd backend
-
-# 2. Cài đặt thư viện (nếu chưa có)
 npm install
-
-# 3. Tạo client Prisma
 npx prisma generate
-
-# 4. Gieo dữ liệu mẫu (Seeding)
-npm run seed
-
-# 5. Khởi chạy server ở chế độ phát triển
 npm run start:dev
 ```
+- **API Base:** `http://localhost:3001/api`
+- **Swagger Docs:** `http://localhost:3001/api/docs`
+- **Health Check:** `http://localhost:3001/health`
 
-- **API Base URL:** `http://localhost:3001/api`
-- **Tài liệu Swagger OpenAPI tương tác trực tiếp:** `http://localhost:3001/api/docs`
-- **Endpoint kiểm tra Health:** `http://localhost:3001/health`
-
----
-
-## 🧪 Chạy Kiểm thử Tự động (E2E Tests)
-
-Toàn bộ 8 kịch bản e2e đã được viết và kiểm thử tự động đạt 100%:
+### 2. Khởi chạy Frontend (Port 3000)
+Mở một cửa sổ terminal mới:
 ```bash
-cd backend
-npm run test:e2e
+cd frontend
+npm install
+npm run dev
 ```
+- **Trang web học tập:** `http://localhost:3000`
 
 ---
 
-## 🌐 Triển khai lên Render (Deploy Free)
+## 🔑 Tài khoản Mẫu Trải Nghiệm Nhanh
 
-Dự án đã tích hợp sẵn file cấu hình [render.yaml](./render.yaml) và [Dockerfile](./backend/Dockerfile):
-1. Đẩy code lên GitHub.
-2. Trên [Render Dashboard](https://dashboard.render.com), bấm **New +** $\rightarrow$ **Blueprint**.
-3. Chọn repo `thucvanminh/teachingPlatform`. Render sẽ tự động đọc `render.yaml`, build Docker và cấp phát đường dẫn API miễn phí.
+Mật khẩu chung cho tất cả tài khoản: **`Password123!`**
+
+| Vai trò (Role) | Username | Họ và tên | Điểm đặc biệt của giao diện |
+| :--- | :--- | :--- | :--- |
+| **Học sinh (Keithley)** | `keithley` | Keithley (Cosmic Explorer) | **Phong cách Vũ Trụ:** Trạm chỉ huy, bài tập 90p quỹ đạo, công thức KaTeX |
+| **Học sinh (Bé An)** | `student_g2` | Bé An Nhiên (Lớp 2) | **Phong cách Thần Tiên:** Công chúa & rồng xanh, hoạt hình rực rỡ |
+| **Giáo viên** | `teacher` | Thầy Minh (Gia Sư) | **Bàn làm việc Bento:** Soạn bài, giao bài hàng ngày, bàn chấm bài tự luận |
+| **Phụ huynh** | `parent_nam` | Chị Mai (Mẹ em Nam/Keithley) | **Cổng Giám Sát:** Quyền Chỉ Đọc (Read-only), xem điểm và nhận xét |
+
+---
+
+## 🌐 Triển khai Lên Cloud (Deploy Free 100%)
+
+1. **Frontend $\rightarrow$ Vercel:**
+   - Kết nối repository `thucvanminh/teachingPlatform`.
+   - Đặt `Root Directory` là `frontend`.
+   - Cung cấp biến môi trường `NEXT_PUBLIC_API_URL` trỏ về backend Render.
+2. **Backend $\rightarrow$ Render:**
+   - Đã cấu hình sẵn file [render.yaml](./render.yaml) và [Dockerfile](./backend/Dockerfile).
+   - Chọn **Blueprint** trên Render Dashboard để triển khai 1-click.
+3. **Database & Storage $\rightarrow$ Supabase:**
+   - Đã khởi tạo hoàn tất 100% trên Supabase PostgreSQL.
