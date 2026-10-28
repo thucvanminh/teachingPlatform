@@ -1,0 +1,227 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model assessment_attempts {
+  id                                          String                    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  daily_assignment_id                         String                    @db.Uuid
+  assessment_id                               String                    @db.Uuid
+  student_id                                  String                    @db.Uuid
+  status                                      attempt_status            @default(NOT_STARTED)
+  started_at                                  DateTime?                 @db.Timestamptz(6)
+  submitted_at                                DateTime?                 @db.Timestamptz(6)
+  time_spent_seconds                          Int                       @default(0)
+  is_overtime                                 Boolean                   @default(false)
+  auto_score                                  Decimal?                  @default(0) @db.Decimal(5, 2)
+  manual_score                                Decimal?                  @default(0) @db.Decimal(5, 2)
+  total_score                                 Decimal?                  @default(0) @db.Decimal(5, 2)
+  overall_feedback                            String?
+  graded_by                                   String?                   @db.Uuid
+  graded_at                                   DateTime?                 @db.Timestamptz(6)
+  created_at                                  DateTime                  @default(now()) @db.Timestamptz(6)
+  updated_at                                  DateTime                  @default(now()) @db.Timestamptz(6)
+  assessments                                 assessments               @relation(fields: [assessment_id], references: [id], onUpdate: NoAction)
+  daily_student_assignments                   daily_student_assignments @relation(fields: [daily_assignment_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  users_assessment_attempts_graded_byTousers  users?                    @relation("assessment_attempts_graded_byTousers", fields: [graded_by], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  users_assessment_attempts_student_idTousers users                     @relation("assessment_attempts_student_idTousers", fields: [student_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  student_answers                             student_answers[]
+
+  @@unique([daily_assignment_id, assessment_id])
+  @@index([daily_assignment_id], map: "idx_assessment_attempts_assignment")
+  @@index([student_id, status], map: "idx_assessment_attempts_student_status")
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model assessments {
+  id                  String                @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  learning_unit_id    String                @db.Uuid
+  type                assessment_type
+  title               String                @db.VarChar(255)
+  instructions        String?
+  time_limit_minutes  Int?
+  max_score           Decimal               @default(10.00) @db.Decimal(5, 2)
+  created_at          DateTime              @default(now()) @db.Timestamptz(6)
+  assessment_attempts assessment_attempts[]
+  learning_units      learning_units        @relation(fields: [learning_unit_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  questions           questions[]
+
+  @@index([learning_unit_id], map: "idx_assessments_unit")
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model daily_student_assignments {
+  id                                                 String                @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  student_id                                         String                @db.Uuid
+  learning_unit_id                                   String                @db.Uuid
+  assigned_by                                        String                @db.Uuid
+  assigned_date                                      DateTime              @db.Date
+  custom_session_minutes                             Int?                  @default(90)
+  homework_due_at                                    DateTime?             @db.Timestamptz(6)
+  lecture_viewed_at                                  DateTime?             @db.Timestamptz(6)
+  teacher_daily_note                                 String?
+  is_published                                       Boolean               @default(true)
+  created_at                                         DateTime              @default(now()) @db.Timestamptz(6)
+  updated_at                                         DateTime              @default(now()) @db.Timestamptz(6)
+  assessment_attempts                                assessment_attempts[]
+  users_daily_student_assignments_assigned_byTousers users                 @relation("daily_student_assignments_assigned_byTousers", fields: [assigned_by], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  learning_units                                     learning_units        @relation(fields: [learning_unit_id], references: [id], onUpdate: NoAction)
+  users_daily_student_assignments_student_idTousers  users                 @relation("daily_student_assignments_student_idTousers", fields: [student_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@unique([student_id, learning_unit_id, assigned_date])
+  @@index([student_id, assigned_date], map: "idx_daily_assignments_student_date")
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model learning_units {
+  id                        String                      @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  subject_id                String                      @db.Uuid
+  created_by                String                      @db.Uuid
+  title                     String                      @db.VarChar(255)
+  description               String?
+  lecture_content_markdown  String?
+  lecture_attachments       Json                        @default("[]")
+  is_template               Boolean                     @default(true)
+  created_at                DateTime                    @default(now()) @db.Timestamptz(6)
+  updated_at                DateTime                    @default(now()) @db.Timestamptz(6)
+  assessments               assessments[]
+  daily_student_assignments daily_student_assignments[]
+  users                     users                       @relation(fields: [created_by], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  subjects                  subjects                    @relation(fields: [subject_id], references: [id], onUpdate: NoAction)
+
+  @@index([subject_id], map: "idx_learning_units_subject")
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model parent_student_links {
+  parent_id                                    String   @db.Uuid
+  student_id                                   String   @db.Uuid
+  relationship                                 String?  @default("Parent") @db.VarChar(50)
+  created_at                                   DateTime @default(now()) @db.Timestamptz(6)
+  users_parent_student_links_parent_idTousers  users    @relation("parent_student_links_parent_idTousers", fields: [parent_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  users_parent_student_links_student_idTousers users    @relation("parent_student_links_student_idTousers", fields: [student_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@id([parent_id, student_id])
+  @@index([parent_id], map: "idx_parent_student_links_parent")
+  @@index([student_id], map: "idx_parent_student_links_student")
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model questions {
+  id                  String            @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  assessment_id       String            @db.Uuid
+  parent_question_id  String?           @db.Uuid
+  order_index         Int               @default(0)
+  type                question_type
+  points              Decimal           @default(1.00) @db.Decimal(5, 2)
+  question_payload    Json
+  grading_key_payload Json              @default("{}")
+  created_at          DateTime          @default(now()) @db.Timestamptz(6)
+  assessments         assessments       @relation(fields: [assessment_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  questions           questions?        @relation("questionsToquestions", fields: [parent_question_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  other_questions     questions[]       @relation("questionsToquestions")
+  student_answers     student_answers[]
+
+  @@index([assessment_id, order_index], map: "idx_questions_assessment")
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model student_answers {
+  id                  String              @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  attempt_id          String              @db.Uuid
+  question_id         String              @db.Uuid
+  answer_payload      Json                @default("{}")
+  is_correct          Boolean?
+  awarded_points      Decimal?            @default(0) @db.Decimal(5, 2)
+  teacher_comment     String?
+  annotated_image_url String?
+  created_at          DateTime            @default(now()) @db.Timestamptz(6)
+  updated_at          DateTime            @default(now()) @db.Timestamptz(6)
+  assessment_attempts assessment_attempts @relation(fields: [attempt_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  questions           questions           @relation(fields: [question_id], references: [id], onUpdate: NoAction)
+
+  @@unique([attempt_id, question_id])
+  @@index([attempt_id], map: "idx_student_answers_attempt")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model student_profiles {
+  user_id                 String   @id @db.Uuid
+  grade_level             Int      @db.SmallInt
+  ui_theme                ui_mode  @default(STANDARD_SECONDARY)
+  default_session_minutes Int      @default(90)
+  tutor_private_notes     String?
+  updated_at              DateTime @default(now()) @db.Timestamptz(6)
+  users                   users    @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([grade_level], map: "idx_student_profiles_grade")
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model subjects {
+  id             String           @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  code           String           @unique @db.VarChar(50)
+  name           String           @db.VarChar(150)
+  target_grade   Int              @db.SmallInt
+  enable_latex   Boolean          @default(false)
+  created_at     DateTime         @default(now()) @db.Timestamptz(6)
+  learning_units learning_units[]
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model users {
+  id                                                                     String                      @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  username                                                               String                      @unique @db.VarChar(100)
+  email                                                                  String?                     @unique @db.VarChar(255)
+  password_hash                                                          String
+  full_name                                                              String                      @db.VarChar(150)
+  role                                                                   user_role
+  is_active                                                              Boolean                     @default(true)
+  created_at                                                             DateTime                    @default(now()) @db.Timestamptz(6)
+  updated_at                                                             DateTime                    @default(now()) @db.Timestamptz(6)
+  assessment_attempts_assessment_attempts_graded_byTousers               assessment_attempts[]       @relation("assessment_attempts_graded_byTousers")
+  assessment_attempts_assessment_attempts_student_idTousers              assessment_attempts[]       @relation("assessment_attempts_student_idTousers")
+  daily_student_assignments_daily_student_assignments_assigned_byTousers daily_student_assignments[] @relation("daily_student_assignments_assigned_byTousers")
+  daily_student_assignments_daily_student_assignments_student_idTousers  daily_student_assignments[] @relation("daily_student_assignments_student_idTousers")
+  learning_units                                                         learning_units[]
+  parent_student_links_parent_student_links_parent_idTousers             parent_student_links[]      @relation("parent_student_links_parent_idTousers")
+  parent_student_links_parent_student_links_student_idTousers            parent_student_links[]      @relation("parent_student_links_student_idTousers")
+  student_profiles                                                       student_profiles?
+}
+
+enum assessment_type {
+  IN_SESSION_90M
+  HOMEWORK
+}
+
+enum attempt_status {
+  NOT_STARTED
+  IN_PROGRESS
+  SUBMITTED
+  GRADED
+}
+
+enum question_type {
+  MULTIPLE_CHOICE
+  FILL_IN_BLANK
+  PASSAGE_GROUP
+  ESSAY_UPLOAD
+}
+
+enum ui_mode {
+  KIDS_ELEMENTARY
+  STANDARD_SECONDARY
+  HIGH_SCHOOL_EXAM
+}
+
+enum user_role {
+  TEACHER
+  STUDENT
+  PARENT
+}
