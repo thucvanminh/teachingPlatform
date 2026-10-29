@@ -449,12 +449,16 @@ const LECTURE_DATA = {
         </div>
 
         <div class="transform-formula-box">
-          <h5>★ 2 CÔNG THỨC VIẾT LẠI CÂU BẤT HỦ TRONG ĐỀ THI:</h5>
+          <h5>★ 4 CÔNG THỨC VIẾT LẠI CÂU BẤT HỦ TRONG ĐỀ THI:</h5>
           <ul>
             <li><strong>Công thức 1:</strong> The last time + S + V2/ed + was + [time] ago <br>
             ➔ <code>S + haven't / hasn't + V3/ed + for + [time]</code></li>
-            <li><strong>Công thức 2:</strong> S + started / began + V-ing + [time] ago <br>
+            <li><strong>Công thức 2:</strong> S + started / began + V-ing / to-V + [time] ago <br>
             ➔ <code>S + have / has + V3/ed + for + [time]</code></li>
+            <li><strong>Công thức 3:</strong> This is the first time + S + have/has + V3/ed <br>
+            ➔ <code>S + have / has + never + V3/ed + before</code></li>
+            <li><strong>Công thức 4:</strong> It is / It has been + [time] + since + S + (last) + V2/ed <br>
+            ➔ <code>S + haven't / hasn't + V3/ed + for + [time]</code></li>
           </ul>
         </div>
       `

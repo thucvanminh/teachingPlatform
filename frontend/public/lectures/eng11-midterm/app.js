@@ -206,92 +206,13 @@
     if (!container || !LECTURE_DATA.grammarModules) return;
 
     container.innerHTML = LECTURE_DATA.grammarModules.map((mod, index) => {
-      let contentHtml = '';
+      const focusPill = mod.focus ? `
+        <div style="font-size:0.8rem; font-weight:700; color:var(--primary-blue); margin-bottom:14px; background:var(--primary-blue-bg); padding:6px 12px; border-radius:8px; display:inline-block; border:1px solid rgba(37,99,235,0.2);">
+          🎯 ${escapeHtml(mod.focus)}
+        </div>
+      ` : '';
 
-      if (mod.id === 'tenses') {
-        contentHtml = `
-          <div class="grammar-compare-grid">
-            <div class="grammar-card past-card">
-              <h4>${escapeHtml(mod.tense1.name)}</h4>
-              <p style="font-size:0.85rem; color:#4b5563; margin-bottom:8px;">${escapeHtml(mod.tense1.usage)}</p>
-              <div class="formula-box">${escapeHtml(mod.tense1.formula)}</div>
-              <div class="signal-tag-list">
-                ${mod.tense1.signals.map(s => `<span class="signal-tag">${escapeHtml(s)}</span>`).join('')}
-              </div>
-              <div class="example-quote">${escapeHtml(mod.tense1.example)}</div>
-            </div>
-
-            <div class="grammar-card perfect-card">
-              <h4>${escapeHtml(mod.tense2.name)}</h4>
-              <p style="font-size:0.85rem; color:#4b5563; margin-bottom:8px;">${escapeHtml(mod.tense2.usage)}</p>
-              <div class="formula-box">${escapeHtml(mod.tense2.formula)}</div>
-              <div class="signal-tag-list">
-                ${mod.tense2.signals.map(s => `<span class="signal-tag">${escapeHtml(s)}</span>`).join('')}
-              </div>
-              <div class="example-quote">${escapeHtml(mod.tense2.example)}</div>
-            </div>
-          </div>
-
-          <div class="transform-formula-box" style="margin-bottom:14px;">
-            <h5>🎯 3 Cấu Trúc Viết Lại Câu Tương Đương Hay Thi Nhất:</h5>
-            <ul style="line-height:1.7;">
-              ${mod.transformFormulas.map(f => `
-                <li style="margin-bottom:8px;">
-                  <code>${escapeHtml(f.pattern)}</code><br>
-                  <span style="font-size:0.8rem; color:#451a03; font-style:italic;">Ví dụ: ${escapeHtml(f.example)}</span>
-                </li>
-              `).join('')}
-            </ul>
-          </div>
-        `;
-      } else if (mod.id === 'modal_verbs') {
-        contentHtml = `
-          <div class="modal-rules-table-wrapper" style="margin-bottom:14px;">
-            <table class="modal-rules-table">
-              <thead>
-                <tr>
-                  <th>Động Từ Khuyết Thiếu</th>
-                  <th>Ý Nghĩa & Sắc Thái</th>
-                  <th>Ví Dụ Minh Họa</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${mod.rules.map(r => `
-                  <tr>
-                    <td><strong class="color-${r.verb.toLowerCase().replace(/[^a-z]/g, '-')}">${escapeHtml(r.verb)}</strong></td>
-                    <td>${escapeHtml(r.meaning)}</td>
-                    <td class="example-quote">${escapeHtml(r.example)}</td>
-                  </tr>
-                `).join('')}
-              </tbody>
-            </table>
-          </div>
-        `;
-      } else if (mod.id === 'linking_verbs') {
-        contentHtml = `
-          <div class="formula-box" style="margin-bottom:12px; background:#f0fdf4; border:1px solid #bbf7d0; color:#166534;">
-            ${escapeHtml(mod.rule)}
-          </div>
-          <p style="font-size:0.85rem; font-weight:700; color:var(--text-main); margin-bottom:6px;">
-            Các Linking Verbs thường gặp trong đề thi:
-          </p>
-          <div class="linking-chips">
-            ${mod.verbs.map(v => `<span>${escapeHtml(v)}</span>`).join('')}
-          </div>
-        `;
-      }
-
-      // Add pitfall if exists
-      if (mod.pitfall) {
-        contentHtml += `
-          <div class="pitfall-box">
-            <strong>⚠️ Bẫy Đề Thi:</strong> ${escapeHtml(mod.pitfall.title)}
-            <ul>
-              ${mod.pitfall.points.map(p => `<li>${escapeHtml(p)}</li>`).join('')}
-            </ul>
-          </div>
-        `;
-      }
+      const contentHtml = mod.theoryHtml || '';
 
       return `
         <div class="grammar-module-accordion">
@@ -300,6 +221,7 @@
             <span class="chevron" style="font-size:0.8rem; transition:transform 0.2s;">${index === 0 ? '▲' : '▼'}</span>
           </button>
           <div class="accordion-body" style="display: ${index === 0 ? 'block' : 'none'};">
+            ${focusPill}
             ${contentHtml}
           </div>
         </div>
