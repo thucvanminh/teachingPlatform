@@ -62,14 +62,14 @@ Khi người dùng yêu cầu tạo bài, tự động nhận diện đối tư�
 *Áp dụng khi học sinh nhấn vào nút bài giảng.* Tạo thư mục `frontend/public/lectures/<slug>/` chứa 4 tệp:
 
 1. **`data.js`**: Chứa toàn bộ dữ liệu có cấu trúc:
-   - `vocabList`: 50 từ vựng.
-   - `grammarModules`: Mảng các chuyên đề ngữ pháp, mỗi chuyên đề có `theoryHtml` định dạng sẵn đẹp mắt.
-   - `collocationPairs`: 8-10 cặp ghép từ (Động từ + Cụm danh từ).
-   - `oddOneOut`: 4 câu đố phát hiện kết hợp từ sai.
-   - `wordFamilyRoots`: 4 sơ đồ cây từ loại (Gốc từ và các phái sinh Noun, Verb, Adj, Adv, Phủ định).
-   - `openCloze`: 5 câu điền dạng từ của từ trong ngoặc.
-   - `activeRecall`: 5 thử thách đoán từ qua gợi ý chữ cái đầu và định nghĩa Anh - Anh.
-   - `writingChallenges`: 4 thử thách đặt câu tương tác với từ khóa bắt buộc và các bẫy ngữ pháp cần tránh.
+   - `vocabList`: 50 từ vựng cốt lõi.
+   - `grammarModules`: 3 chuyên đề ngữ pháp, gán thẳng `theoryHtml` hoàn chỉnh.
+   - `collocationPairs`: 8-10 cặp ghép từ (bắt buộc có `id: number`, `verb`, `noun`, `meaning`).
+   - `oddOneOut`: 4 câu đố (bắt buộc `options: string[]`, `wrongIndex: number`, `explanation`).
+   - `wordFamilyRoots`: 4 sơ đồ cây (bắt buộc `derivatives: [{ word, pos, vi }]`).
+   - `openCloze`: 5 câu điền từ (bắt buộc `id: number`, `expectedAnswer: string`, `explanation`).
+   - `activeRecall`: 5 thử thách (bắt buộc `id: number`, `clue: string`, `targetWord: string`, `definition: string`).
+   - `writingChallenges`: 4 thử thách đặt câu (bắt buộc `id: number`, `keyword`, `prompt`, `requiredWords`, `forbiddenWords`, `modelAnswer`).
 2. **`style.css`**: Giao diện Light Theme hiện đại, responsive mobile-first, hiệu ứng 3D mềm mại.
 3. **`index.html`**: Khung ngữ nghĩa gồm thanh tab bar chuyển đổi 5 trạm học tập.
 4. **`app.js`**: Bộ điều khiển tương tác:
@@ -77,6 +77,9 @@ Khi người dùng yêu cầu tạo bài, tự động nhận diện đối tư�
    - **Web Audio API:** Âm thanh phản hồi khi làm đúng/sai.
    - **Render ngữ pháp:** Gán trực tiếp `mod.theoryHtml` vào accordion body (tránh lỗi rỗng do so sánh id).
    - **Bộ thẩm định viết câu:** Kiểm tra từ khóa, phát hiện bẫy (như dùng trạng từ sau linking verb) và hiển thị câu mẫu từ Thầy Thức.
+
+> [!IMPORTANT]
+> **Checklist kiểm tra chống rỗng nội dung:** Trước khi kết thúc, luôn đối chiếu các trường trong `data.js` và `app.js` khớp 100% theo đặc tả tại [interactive_studio_spec.md](./references/interactive_studio_spec.md) để đảm bảo không một trạm nào (Collocations, Word family, Recall, Writing) bị rỗng.
 
 Tham khảo chi tiết kỹ thuật tại: [interactive_studio_spec.md](./references/interactive_studio_spec.md).
 

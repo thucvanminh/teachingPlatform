@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cẩm Nang Tri Thức & Đấu Trường Từ Vựng Giữa Kì 1 - Tiếng Anh 11</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Top Hero Header -->
+    <header class="hero-header">
+      <div>
+        <div class="hero-badge-wrap">
+          <span class="hero-pill">Tiếng Anh 11 • Global Success</span>
+          <span class="hero-pill" style="background:#fef3c7; color:#b45309; border-color:#fde68a;">Ôn Thi Giữa Kì 1</span>
+          <span class="hero-pill" style="background:#ecfdf5; color:#059669; border-color:#a7f3d0;">Mục Tiêu 8.5+</span>
+        </div>
+        <h1 class="hero-title">Cẩm Nang Tri Thức & Đấu Trường Từ Vựng</h1>
+        <p class="hero-desc">
+          Biên soạn độc quyền cho <strong>Bạn Thái</strong> • Lớp 11 • Hướng dẫn: <strong>Thầy Thức</strong>
+        </p>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-chip">
+          <span class="label">Từ Vựng Trọng Tâm</span>
+          <span class="val" id="statVocabCount">50 Từ</span>
+        </div>
+        <div class="stat-chip">
+          <span class="label">Chuyên Đề Ngữ Pháp</span>
+          <span class="val">3 Trọng Điểm</span>
+        </div>
+        <div class="stat-chip">
+          <span class="label">Đấu Trường Tương Tác</span>
+          <span class="val" style="color:var(--emerald-accent);">4 Trạm Thực Hành</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs Bar -->
+    <nav class="tabs-bar" role="tablist">
+      <button class="tab-btn active" data-tab="tab-vocab" role="tab" aria-selected="true">
+        <span>📚</span> 1. Lý Thuyết & 50 Từ Vựng
+      </button>
+      <button class="tab-btn" data-tab="tab-collocations" role="tab" aria-selected="false">
+        <span>🧩</span> 2. Cặp Từ Tự Nhiên (Collocations)
+      </button>
+      <button class="tab-btn" data-tab="tab-wordfamily" role="tab" aria-selected="false">
+        <span>🌳</span> 3. Cây Từ Loại (Word Family)
+      </button>
+      <button class="tab-btn" data-tab="tab-recall" role="tab" aria-selected="false">
+        <span>⚡</span> 4. Đoán Chữ Siêu Tốc (Active Recall)
+      </button>
+      <button class="tab-btn" data-tab="tab-writing" role="tab" aria-selected="false">
+        <span>✍️</span> 5. Thử Thách Đặt Câu (Writing)
+      </button>
+    </nav>
+
+    <!-- ========================================================
+         TAB 1: VOCABULARY & GRAMMAR HUB
+         ======================================================== -->
+    <section id="tab-vocab" class="tab-content active" role="tabpanel">
+      <!-- Search & Unit Filter -->
+      <div class="search-filter-row">
+        <div class="search-input-wrap">
+          <span class="search-icon">🔍</span>
+          <input
+            type="text"
+            id="vocabSearchInput"
+            class="search-input"
+            placeholder="Tìm nhanh từ vựng, phát âm, nghĩa tiếng Việt hoặc cụm từ..."
+          >
+        </div>
+        <div class="filter-btn-group" id="filterButtonGroup">
+          <button class="filter-chip active" data-unit="all">Tất cả (50)</button>
+          <button class="filter-chip" data-unit="1">Unit 1: Sức Khỏe (17)</button>
+          <button class="filter-chip" data-unit="2">Unit 2: Khoảng Cách Thế Hệ (16)</button>
+          <button class="filter-chip" data-unit="3">Unit 3: Đô Thị Tương Lai (17)</button>
+        </div>
+      </div>
+
+      <!-- 50 Vocab Card Grid -->
+      <div class="vocab-grid" id="vocabGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+      <!-- Empty state when searching -->
+      <div id="vocabEmptyState" style="display: none; text-align: center; padding: 40px; background: white; border-radius: var(--radius-xl); border: 1px dashed var(--border-color); color: var(--text-muted);">
+        <p style="font-size: 1.1rem; font-weight: 700; margin-bottom: 6px;">Không tìm thấy từ vựng phù hợp</p>
+        <p style="font-size: 0.85rem;">Hãy thử gõ từ khóa khác hoặc bấm nút "Tất cả".</p>
+      </div>
+
+      <!-- GRAMMAR COMPENDIUM SECTION -->
+      <div class="grammar-section-wrap">
+        <h3 class="section-headline">
+          <span>⚡</span> 3 Chuyên Đề Ngữ Pháp Trọng Tâm Giữa Kì 1
+        </h3>
+        <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 18px;">
+          Bao quát trọn vẹn lý thuyết, công thức nhận diện, bẫy trắc nghiệm hay gặp và bài tập viết lại câu tương đương.
+        </p>
+
+        <div id="grammarContainer">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         TAB 2: COLLOCATION & ODD ONE OUT
+         ======================================================== -->
+    <section id="tab-collocations" class="tab-content" role="tabpanel">
+      <!-- Feature 1: Matching Game -->
+      <div class="game-instruction-banner">
+        <div>
+          <strong>🎯 Trò chơi Nối Cụm Từ (Collocation Pairing):</strong>
+          Nhấn 1 Động từ ở cột trái rồi nhấn Cụm Danh từ phù hợp ở cột phải. Tránh lỗi dịch "word-by-word"!
+        </div>
+        <button id="resetCollocBtn" class="btn-subtle" style="white-space:nowrap; margin-left: 12px; font-size:0.8rem; padding: 6px 12px;">
+          🔄 Chơi lại
+        </button>
+      </div>
+
+      <div class="colloc-match-grid" id="collocBoard">
+        <div class="match-column" id="collocVerbsCol">
+          <!-- Left items: Verbs -->
+        </div>
+        <div class="match-column" id="collocNounsCol">
+          <!-- Right items: Noun phrases -->
+        </div>
+      </div>
+
+      <div id="collocSuccessBanner" class="feedback-banner success" style="margin-bottom: 24px; text-align: center; font-weight: 700;">
+        🎉 Tuyệt vời! Thái đã ghép chuẩn xác tất cả các Collocation trọng điểm!
+      </div>
+
+      <!-- Feature 2: Odd One Out Collocation -->
+      <div class="section-headline" style="margin-top: 36px; margin-bottom: 12px;">
+        <span>🔍</span> Phát Hiện Kết Hợp Từ Sai (Odd One Out Collocation)
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">
+        Trong 4 động từ đi cùng danh từ trung tâm, có <strong>1 từ SAI ngữ pháp hoặc không tự nhiên</strong>. Hãy chạm vào từ không phù hợp!
+      </p>
+
+      <div id="oddOneOutContainer">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- ========================================================
+         TAB 3: WORD FAMILY & OPEN CLOZE
+         ======================================================== -->
+    <section id="tab-wordfamily" class="tab-content" role="tabpanel">
+      <div class="game-instruction-banner" style="background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); border-color: #e9d5ff; color: #6b21a8;">
+        <div>
+          <strong>🌳 Sơ Đồ Cây Từ Loại Tương Tác (Word Family Tree):</strong>
+          Nắm vững họ từ phái sinh (Noun - Verb - Adj - Adv) giúp bạn xử lý 100% dạng bài Biến đổi từ loại trong đề thi.
+        </div>
+      </div>
+
+      <div id="wordFamilyContainer">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+      <!-- Open Cloze Word Formation Practice -->
+      <div class="section-headline" style="margin-top: 36px; margin-bottom: 12px;">
+        <span>📝</span> Thử Thách Biến Đổi Dạng Từ (Open Cloze Word Formation)
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">
+        Xác định từ loại còn thiếu dựa vào cấu trúc ngữ pháp xung quanh ô trống, sau đó nhập dạng từ đúng của từ in hoa trong ngoặc.
+      </p>
+
+      <div id="openClozeContainer">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- ========================================================
+         TAB 4: ACTIVE RECALL (FIRST LETTER CLUE)
+         ======================================================== -->
+    <section id="tab-recall" class="tab-content" role="tabpanel">
+      <div class="game-instruction-banner" style="background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border-color: #fde68a; color: #92400e;">
+        <div>
+          <strong>⚡ Phản Xạ Truy Xuất Từ Vựng (Active Recall Challenge):</strong>
+          Đọc kỹ định nghĩa tiếng Anh và câu hoàn chỉnh khuyết từ. Sử dụng chữ cái đầu tiên làm gợi ý để tự gõ chính xác mặt chữ!
+        </div>
+      </div>
+
+      <div id="activeRecallContainer">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- ========================================================
+         TAB 5: INTERACTIVE SENTENCE WRITING
+         ======================================================== -->
+    <section id="tab-writing" class="tab-content" role="tabpanel">
+      <div class="game-instruction-banner" style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border-color: #bfdbfe; color: #1e40af;">
+        <div>
+          <strong>✍️ Thử Thách Đặt Câu Tương Tác & Phân Tích Lỗi Ngay Lập Tức:</strong>
+          Chuyển từ vựng từ thể thụ động sang chủ động bằng cách tự soạn câu theo ngữ cảnh. Thuật toán tự động chấm từ khóa, giới từ và bẫy ngữ pháp!
+        </div>
+      </div>
+
+      <div id="writingChallengesContainer">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="lecture-footer">
+      <p>Hệ Thống Giảng Dạy Trực Tuyến & Cố Vấn Học Tập • <strong>Thầy Thức</strong></p>
+      <p style="margin-top: 4px; opacity: 0.8;">Học phần: Tiếng Anh 11 Global Success • Ôn Thi Giữa Kì 1 • Dành cho học sinh Thái</p>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
