@@ -1,0 +1,24 @@
+{
+  "studentUsername": "thai",
+  "grade": 11,
+  "assignedDate": "2026-10-29T00:00:00.000Z",
+  "unitTitle": "Ôn tập thi giữa kì",
+  "unitDescription": "Phòng học tương tác: 50 từ vựng cốt lõi phát âm bản xứ, 3 chuyên đề ngữ pháp, Đấu trường Collocation, Cây từ loại & Thử thách đặt câu.",
+  "lectureMarkdown": "# 🌟 Cẩm Nang Tri Thức & Đấu Trường Từ Vựng Giữa Kì 1 - Tiếng Anh 11\n**Biên soạn riêng cho Bạn Thái • Hướng dẫn: Thầy Thức**\n\n[🚀 MỞ PHÒNG HỌC TƯƠNG TÁC TOÀN MÀN HÌNH](/lectures/eng11-midterm/index.html)",
+  "teacherNote": "Tối nay con tập trung làm bài ôn tập giữa kì 1: tập trung tối đa vào phần từ vựng và ngữ pháp trọng tâm 3 Unit đầu nhé!",
+  "assessmentTitle": "Luyện tập tại lớp: Đề ôn thi Giữa kì 1 - Trọng tâm Từ vựng & Ngữ pháp (100 câu)",
+  "timeLimitMinutes": 90,
+  "questions": [
+    {
+      "content": "Exercise and a balanced diet promote __________ and reduce chronic diseases.",
+      "options": [
+        { "id": "A", "text": "longevity" },
+        { "id": "B", "text": "bacteria" },
+        { "id": "C", "text": "infection" },
+        { "id": "D", "text": "conflict" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Longevity (n): tuổi thọ, sự sống lâu. Cụm: promote longevity (nâng cao tuổi thọ)."
+    }
+  ]
+}
