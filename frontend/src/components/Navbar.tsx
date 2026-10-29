@@ -74,7 +74,9 @@ export function Navbar() {
                   'LMS 1-on-1 Tutoring'
                 )}
               </span>
-              <p className="text-xs opacity-60">Gia Sư Cá Nhân Hóa</p>
+              <p className="text-xs opacity-60">
+                {isCosmic ? 'Personalized Space Academy' : 'Gia Sư Cá Nhân Hóa'}
+              </p>
             </div>
           </Link>
 
@@ -103,7 +105,7 @@ export function Navbar() {
                 href="/student"
                 className={`transition ${isCosmic ? 'text-cyan-400 hover:text-cyan-300 font-semibold' : 'text-blue-600'}`}
               >
-                {isCosmic ? '🛸 Trung Tâm Chỉ Huy' : 'Trang học tập'}
+                {isCosmic ? '🛸 Flight Command Center' : 'Trang học tập'}
               </Link>
             </div>
           )}
@@ -133,13 +135,13 @@ export function Navbar() {
                         : 'bg-emerald-100 text-emerald-800'
                     }`}
                   >
-                    {user.role === 'TEACHER' ? 'Giáo viên' : user.role === 'STUDENT' ? 'Học sinh' : 'Phụ huynh'}
+                    {user.role === 'TEACHER' ? 'Teacher' : user.role === 'STUDENT' ? (isCosmic ? 'Astronaut Cadet' : 'Học sinh') : 'Parent'}
                   </span>
                 </div>
                 <button
                   onClick={handleLogout}
                   className="p-2 rounded-lg hover:bg-slate-200/50 dark:hover:bg-slate-800 text-slate-500 hover:text-red-500 transition"
-                  title="Đăng xuất"
+                  title={isCosmic ? "Log Out" : "Đăng xuất"}
                 >
                   <LogOut className="w-5 h-5" />
                 </button>

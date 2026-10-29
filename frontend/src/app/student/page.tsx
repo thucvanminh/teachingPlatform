@@ -130,19 +130,19 @@ export default function StudentDashboard() {
               <div>
                 <div className="flex items-center space-x-2 text-xs font-bold text-cyan-400 tracking-widest uppercase mb-1">
                   <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
-                  <span>TRẠM CHỈ HUY KHÔNG GIAN • KEITHLEY LAKE MISSION CONTROL</span>
+                  <span>SPACE COMMAND CONTROL • KEITHLEY LAKE MISSION CONTROL</span>
                 </div>
                 <h1 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight flex items-center space-x-3">
-                  <span>Chào mừng, Phi Hành Gia Keithley Lake!</span>
+                  <span>Welcome aboard, Astronaut Keithley Lake!</span>
                   <Rocket className="w-7 h-7 text-cyan-400 hidden sm:inline-block animate-pulse" />
                 </h1>
                 <p className="text-sm text-slate-300 mt-2 max-w-xl">
                   {todayAssignment?.teacher_daily_note ? (
                     <span className="text-amber-300 italic">
-                      "Thông điệp từ Thầy Thức: {todayAssignment.teacher_daily_note}"
+                      "Tutor Note: {todayAssignment.teacher_daily_note}"
                     </span>
                   ) : (
-                    'Hệ thống đã sẵn sàng các tọa độ bài học theo từng ngày. Hãy nhấn vào thẻ ngày để bắt đầu nhiệm vụ!'
+                    'Orbital coordinates and daily flight missions are ready. Click any mission card below to begin!'
                   )}
                 </p>
               </div>
@@ -150,17 +150,17 @@ export default function StudentDashboard() {
               {/* Status Badges */}
               <div className="flex items-center space-x-4">
                 <div className="px-4 py-3 rounded-2xl bg-slate-800/80 border border-cyan-500/20 text-center">
-                  <span className="text-xs text-slate-400 block">Cấp Độ</span>
+                  <span className="text-xs text-slate-400 block">Cadet Rank</span>
                   <span className="text-base font-bold text-cyan-400 flex items-center justify-center space-x-1">
                     <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
-                    <span>Toán 7 & Hóa 9</span>
+                    <span>Grade 7 Math & Chem 9</span>
                   </span>
                 </div>
                 <div className="px-4 py-3 rounded-2xl bg-slate-800/80 border border-purple-500/20 text-center">
-                  <span className="text-xs text-slate-400 block">Chuỗi Học</span>
+                  <span className="text-xs text-slate-400 block">Flight Streak</span>
                   <span className="text-base font-bold text-purple-400 flex items-center justify-center space-x-1">
                     <Flame className="w-4 h-4 text-orange-500 fill-orange-500" />
-                    <span>5 Ngày</span>
+                    <span>5 Days</span>
                   </span>
                 </div>
               </div>
@@ -172,10 +172,10 @@ export default function StudentDashboard() {
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-xl font-bold text-cyan-300 flex items-center space-x-2 tracking-wide">
                 <Calendar className="w-5 h-5 text-cyan-400" />
-                <span>LỊCH HỌC & NHIỆM VỤ THEO NGÀY (DAILY MISSIONS)</span>
+                <span>DAILY MISSIONS & FLIGHT SCHEDULE</span>
               </h2>
               <span className="text-xs text-slate-400">
-                Nhấn vào từng ngày để xem bài giảng, bài tập 90p và BTVN
+                Click each flight date to access Briefing, In-Session Practice, and Homework
               </span>
             </div>
 
@@ -184,8 +184,8 @@ export default function StudentDashboard() {
                 {allAssignments.map((assignment: any) => {
                   const isExpanded = expandedAssignmentId === assignment.id;
                   const dateLabel = formatAssignmentDate(assignment.assigned_date);
-                  const title = assignment.learning_units?.title || 'Bài học không tên';
-                  const subjectName = assignment.learning_units?.subjects?.name || 'Môn học';
+                  const title = assignment.learning_units?.title || 'Flight Objective';
+                  const subjectName = assignment.learning_units?.subjects?.name || 'Subject';
                   const inSessionAttempt = assignment.assessment_attempts?.find(
                     (a: any) => a.assessments?.type === 'IN_SESSION_90M',
                   );
@@ -229,15 +229,15 @@ export default function StudentDashboard() {
                               </span>
                               {assignment.assigned_date && (
                                 <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-purple-950/80 border border-purple-500/40 text-purple-300">
-                                  Ngày {dateLabel}
+                                  Flight Date: {dateLabel}
                                 </span>
                               )}
                               <span className="text-xs text-slate-400">
-                                Tiến độ: {gradedCount}/{totalAttempts} bài đã hoàn thành
+                                Progress: {gradedCount}/{totalAttempts} completed
                               </span>
                             </div>
 
-                            {/* Format rõ ràng: 28/10/2026 : {Tên Bài Giảng Hôm Đó} */}
+                            {/* Format rõ ràng */}
                             <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight flex items-center space-x-2">
                               <span>
                                 {dateLabel} : {title}
@@ -246,7 +246,7 @@ export default function StudentDashboard() {
 
                             {assignment.teacher_daily_note && (
                               <p className="text-xs text-amber-300/90 mt-1.5 italic line-clamp-1">
-                                💬 Lời dặn của Thầy: "{assignment.teacher_daily_note}"
+                                💬 Tutor Note: "{assignment.teacher_daily_note}"
                               </p>
                             )}
                           </div>
@@ -261,7 +261,7 @@ export default function StudentDashboard() {
                                 : 'bg-slate-800 text-slate-300 hover:text-white border border-slate-700'
                             }`}
                           >
-                            <span>{isExpanded ? 'Đang mở (Thu gọn)' : 'Nhấn để mở bài học & bài tập'}</span>
+                            <span>{isExpanded ? 'Active Sector (Collapse)' : 'Click to Open Mission & Practice'}</span>
                             {isExpanded ? (
                               <ChevronUp className="w-4 h-4 text-cyan-400" />
                             ) : (
@@ -271,17 +271,17 @@ export default function StudentDashboard() {
                         </div>
                       </button>
 
-                      {/* NỘI DUNG CHI TIẾT KHI NHẤN VÀO CARD: BÀI GIẢNG + BÀI TẬP 90P + BTVN */}
+                      {/* NỘI DUNG CHI TIẾT KHI NHẤN VÀO CARD */}
                       {isExpanded && (
                         <div className="p-6 pt-2 border-t border-slate-800/80 bg-slate-950/40">
                           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-4">
-                            {/* 1. KHỐI BÀI GIẢNG (LÝ THUYẾT & KIẾN THỨC CỐT LÕI) */}
+                            {/* 1. KHỐI BÀI GIẢNG */}
                             <div className="rounded-2xl p-6 bg-slate-900/90 border border-cyan-500/30 flex flex-col justify-between shadow-lg">
                               <div>
                                 <div className="flex items-center justify-between mb-3">
                                   <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-cyan-950 border border-cyan-500/40 text-cyan-400 flex items-center space-x-1.5">
                                     <BookOpen className="w-3.5 h-3.5" />
-                                    <span>Trạm 1: Bài Giảng</span>
+                                    <span>Station 1: Flight Briefing</span>
                                   </span>
                                   <span
                                     className={`text-[11px] font-semibold px-2 py-0.5 rounded-full ${
@@ -290,7 +290,7 @@ export default function StudentDashboard() {
                                         : 'bg-amber-950 text-amber-400 border border-amber-500/30'
                                     }`}
                                   >
-                                    {assignment.lecture_viewed_at ? '✓ Đã đọc bài giảng' : 'Chưa đọc'}
+                                    {assignment.lecture_viewed_at ? '✓ Briefing Reviewed' : 'Pending Review'}
                                   </span>
                                 </div>
 
@@ -299,7 +299,7 @@ export default function StudentDashboard() {
                                 </h4>
                                 <p className="text-xs text-slate-400 mt-2 line-clamp-3 leading-relaxed">
                                   {assignment.learning_units?.description ||
-                                    'Nắm vững quy tắc dấu trong phép tính và ứng dụng vào bài toán tìm x.'}
+                                    'Review geometric properties and computational formulas.'}
                                 </p>
                               </div>
 
@@ -311,8 +311,8 @@ export default function StudentDashboard() {
                                   <BookOpen className="w-4 h-4 text-cyan-400" />
                                   <span>
                                     {assignment.lecture_viewed_at
-                                      ? 'Mở Lại Bài Giảng & KaTeX'
-                                      : 'Đọc Bài Giảng & Công Thức KaTeX'}
+                                      ? 'Re-open Flight Briefing & KaTeX'
+                                      : 'Read Flight Briefing & KaTeX Rules'}
                                   </span>
                                 </button>
                               </div>
@@ -323,7 +323,7 @@ export default function StudentDashboard() {
                               <div
                                 className={`rounded-2xl p-6 flex flex-col justify-between border backdrop-blur-xl transition duration-300 ${
                                   inSessionAttempt.status === 'GRADED'
-                                    ? 'bg-slate-900/90 border-emerald-500/40 shadow-[0_0_20px_rgba(16,185,129,0.15)]'
+                                    ? 'bg-slate-900/90 border-emerald-500/40 shadow-[0_0_20px_rgba(168,85,247,0.15)]'
                                     : inSessionAttempt.status === 'SUBMITTED'
                                     ? 'bg-slate-900/90 border-amber-500/40 shadow-[0_0_20px_rgba(245,158,11,0.15)]'
                                     : 'bg-slate-900/90 border-cyan-500/40 hover:border-cyan-300 shadow-[0_0_20px_rgba(6,182,212,0.1)]'
@@ -333,7 +333,7 @@ export default function StudentDashboard() {
                                   <div className="flex items-center justify-between mb-3">
                                     <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-cyan-950 text-cyan-400 border border-cyan-500/30 flex items-center space-x-1.5">
                                       <Clock className="w-3.5 h-3.5" />
-                                      <span>Trạm 2: Luyện Tập Tại Lớp</span>
+                                      <span>Station 2: In-Session Practice</span>
                                     </span>
                                     <span
                                       className={`text-[11px] font-semibold ${
@@ -347,41 +347,41 @@ export default function StudentDashboard() {
                                       }`}
                                     >
                                       {inSessionAttempt.status === 'GRADED'
-                                        ? 'Đã chấm điểm'
+                                        ? 'Graded & Reviewed'
                                         : inSessionAttempt.status === 'SUBMITTED'
-                                        ? 'Đã nộp (Chờ chấm)'
+                                        ? 'Submitted (Pending Review)'
                                         : inSessionAttempt.status === 'IN_PROGRESS'
-                                        ? 'Đang làm dở'
-                                        : 'Chưa bắt đầu'}
+                                        ? 'In Progress'
+                                        : 'Not Started'}
                                     </span>
                                   </div>
 
                                   <h4 className="text-base font-bold text-white leading-tight">
-                                    {inSessionAttempt.assessments?.title || 'Bài kiểm tra tại lớp'}
+                                    {inSessionAttempt.assessments?.title || 'In-Session Assessment'}
                                   </h4>
 
                                   <div className="mt-4 flex items-center space-x-4 text-xs text-slate-400">
                                     <div className="flex items-center space-x-1">
                                       <Clock className="w-3.5 h-3.5 text-cyan-400" />
                                       <span>
-                                        {inSessionAttempt.assessments?.time_limit_minutes || 90} phút
+                                        {inSessionAttempt.assessments?.time_limit_minutes || 90} mins
                                       </span>
                                     </div>
                                     <div className="flex items-center space-x-1">
                                       <Star className="w-3.5 h-3.5 text-amber-400" />
-                                      <span>Thang điểm: {inSessionAttempt.assessments?.max_score || 10}</span>
+                                      <span>Max Score: {inSessionAttempt.assessments?.max_score || 10}</span>
                                     </div>
                                   </div>
 
                                   {inSessionAttempt.status === 'GRADED' && (
                                     <div className="mt-4 p-3 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 text-xs">
                                       <p className="font-bold text-sm">
-                                        Điểm đạt được: {inSessionAttempt.total_score} /{' '}
+                                        Score Awarded: {inSessionAttempt.total_score} /{' '}
                                         {inSessionAttempt.assessments?.max_score}
                                       </p>
                                       {inSessionAttempt.overall_feedback && (
                                         <p className="mt-1 italic opacity-90">
-                                          Lời phê: "{inSessionAttempt.overall_feedback}"
+                                          Tutor Flight Log: "{inSessionAttempt.overall_feedback}"
                                         </p>
                                       )}
                                     </div>
@@ -394,7 +394,7 @@ export default function StudentDashboard() {
                                       href={`/student/results/${inSessionAttempt.id}`}
                                       className="w-full py-2.5 px-4 rounded-xl bg-emerald-600/30 hover:bg-emerald-600/40 border border-emerald-500/50 text-emerald-300 text-sm font-semibold flex items-center justify-center space-x-2 transition"
                                     >
-                                      <span>Xem Chi Tiết Bài Chữa</span>
+                                      <span>View Detailed Graded Review</span>
                                       <ExternalLink className="w-4 h-4" />
                                     </Link>
                                   ) : (
@@ -408,8 +408,8 @@ export default function StudentDashboard() {
                                     >
                                       <span>
                                         {inSessionAttempt.status === 'IN_PROGRESS'
-                                          ? 'Tiếp tục làm bài 90p'
-                                          : 'Khởi Động Bài Tập 90 Phút'}
+                                          ? 'Resume In-Session Flight'
+                                          : 'Launch In-Session Mission (90-120m)'}
                                       </span>
                                       <ArrowRight className="w-4 h-4" />
                                     </Link>
@@ -418,11 +418,11 @@ export default function StudentDashboard() {
                               </div>
                             ) : (
                               <div className="rounded-2xl p-6 bg-slate-900/60 border border-slate-800 flex items-center justify-center text-center text-xs text-slate-500">
-                                Chưa có bài tập tại lớp
+                                No in-session mission for this date
                               </div>
                             )}
 
-                            {/* 3. KHỐI BÀI TẬP VỀ NHÀ (BTVN CỦNG CỐ) */}
+                            {/* 3. KHỐI BÀI TẬP VỀ NHÀ */}
                             {homeworkAttempt ? (
                               <div
                                 className={`rounded-2xl p-6 flex flex-col justify-between border backdrop-blur-xl transition duration-300 ${
@@ -437,7 +437,7 @@ export default function StudentDashboard() {
                                   <div className="flex items-center justify-between mb-3">
                                     <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-purple-950 text-purple-400 border border-purple-500/30 flex items-center space-x-1.5">
                                       <FileText className="w-3.5 h-3.5" />
-                                      <span>Trạm 3: Bài Tập Về Nhà</span>
+                                      <span>Station 3: Orbital Homework</span>
                                     </span>
                                     <span
                                       className={`text-[11px] font-semibold ${
@@ -451,39 +451,39 @@ export default function StudentDashboard() {
                                       }`}
                                     >
                                       {homeworkAttempt.status === 'GRADED'
-                                        ? 'Đã chấm điểm'
+                                        ? 'Graded & Reviewed'
                                         : homeworkAttempt.status === 'SUBMITTED'
-                                        ? 'Đã nộp (Chờ chấm)'
+                                        ? 'Submitted (Pending Review)'
                                         : homeworkAttempt.status === 'IN_PROGRESS'
-                                        ? 'Đang làm dở'
-                                        : 'Chưa bắt đầu'}
+                                        ? 'In Progress'
+                                        : 'Not Started'}
                                     </span>
                                   </div>
 
                                   <h4 className="text-base font-bold text-white leading-tight">
-                                    {homeworkAttempt.assessments?.title || 'Bài tập về nhà củng cố'}
+                                    {homeworkAttempt.assessments?.title || 'Orbital Homework'}
                                   </h4>
 
                                   <div className="mt-4 flex items-center space-x-4 text-xs text-slate-400">
                                     <div className="flex items-center space-x-1">
                                       <Sparkles className="w-3.5 h-3.5 text-purple-400" />
-                                      <span>Tự luyện củng cố kiến thức</span>
+                                      <span>Self-paced orbital consolidation</span>
                                     </div>
                                     <div className="flex items-center space-x-1">
                                       <Star className="w-3.5 h-3.5 text-amber-400" />
-                                      <span>Thang điểm: {homeworkAttempt.assessments?.max_score || 10}</span>
+                                      <span>Max Score: {homeworkAttempt.assessments?.max_score || 10}</span>
                                     </div>
                                   </div>
 
                                   {homeworkAttempt.status === 'GRADED' && (
                                     <div className="mt-4 p-3 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 text-xs">
                                       <p className="font-bold text-sm">
-                                        Điểm đạt được: {homeworkAttempt.total_score} /{' '}
+                                        Score Awarded: {homeworkAttempt.total_score} /{' '}
                                         {homeworkAttempt.assessments?.max_score}
                                       </p>
                                       {homeworkAttempt.overall_feedback && (
                                         <p className="mt-1 italic opacity-90">
-                                          Lời phê: "{homeworkAttempt.overall_feedback}"
+                                          Tutor Flight Log: "{homeworkAttempt.overall_feedback}"
                                         </p>
                                       )}
                                     </div>
@@ -496,7 +496,7 @@ export default function StudentDashboard() {
                                       href={`/student/results/${homeworkAttempt.id}`}
                                       className="w-full py-2.5 px-4 rounded-xl bg-emerald-600/30 hover:bg-emerald-600/40 border border-emerald-500/50 text-emerald-300 text-sm font-semibold flex items-center justify-center space-x-2 transition"
                                     >
-                                      <span>Xem Chi Tiết Bài Chữa</span>
+                                      <span>View Graded Homework</span>
                                       <ExternalLink className="w-4 h-4" />
                                     </Link>
                                   ) : (
@@ -510,8 +510,8 @@ export default function StudentDashboard() {
                                     >
                                       <span>
                                         {homeworkAttempt.status === 'IN_PROGRESS'
-                                          ? 'Tiếp tục làm BTVN'
-                                          : 'Bắt Đầu Làm BTVN'}
+                                          ? 'Resume Homework'
+                                          : 'Launch Orbital Homework'}
                                       </span>
                                       <ArrowRight className="w-4 h-4" />
                                     </Link>
@@ -520,7 +520,7 @@ export default function StudentDashboard() {
                               </div>
                             ) : (
                               <div className="rounded-2xl p-6 bg-slate-900/60 border border-slate-800 flex items-center justify-center text-center text-xs text-slate-500">
-                                Chưa có bài tập về nhà
+                                No orbital homework assigned for this date
                               </div>
                             )}
                           </div>
@@ -533,9 +533,9 @@ export default function StudentDashboard() {
             ) : (
               <div className="rounded-3xl p-8 bg-slate-900/60 border border-slate-800 text-center">
                 <Rocket className="w-12 h-12 text-slate-600 mx-auto mb-3" />
-                <h3 className="text-lg font-bold text-slate-300">Chưa có bài học nào được giao</h3>
+                <h3 className="text-lg font-bold text-slate-300">No missions currently assigned</h3>
                 <p className="text-xs text-slate-400 mt-1">
-                  Thầy Thức sẽ lên lịch và giao bài mới vào trạm không gian của con sớm nhé!
+                  Tutor Thức will schedule your next celestial flight missions soon!
                 </p>
               </div>
             )}
@@ -558,7 +558,9 @@ export default function StudentDashboard() {
                     <div>
                       <div className="flex items-center gap-2">
                         <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest">
-                          {isMidtermApp ? 'PHÒNG HỌC TƯƠNG TÁC' : 'Nạp Nhiên Liệu Tri Thức'} •{' '}
+                          {isCosmic
+                            ? (isMidtermApp ? 'INTERACTIVE LIVE STUDIO' : 'FLIGHT BRIEFING STATION')
+                            : (isMidtermApp ? 'PHÒNG HỌC TƯƠNG TÁC' : 'Nạp Nhiên Liệu Tri Thức')} •{' '}
                           {formatAssignmentDate(activeLectureAssignment.assigned_date)}
                         </span>
                         {isMidtermApp && (
@@ -579,7 +581,7 @@ export default function StudentDashboard() {
                           rel="noopener noreferrer"
                           className="hidden sm:flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-cyan-950/80 text-cyan-300 hover:bg-cyan-900 text-xs font-bold border border-cyan-500/40 transition"
                         >
-                          <span>Toàn Màn Hình</span>
+                          <span>{isCosmic ? 'Full Screen' : 'Toàn Màn Hình'}</span>
                           <ExternalLink className="w-3.5 h-3.5" />
                         </a>
                       )}
@@ -597,7 +599,7 @@ export default function StudentDashboard() {
                       <iframe
                         src="/lectures/eng11-midterm/index.html"
                         className="w-full h-full border border-slate-700 rounded-2xl shadow-inner bg-slate-900"
-                        title="Bài Giảng Tương Tác Giữa Kì 1"
+                        title={isCosmic ? 'Interactive Live Studio' : 'Bài Giảng Tương Tác Giữa Kì 1'}
                       />
                     </div>
                   ) : (
@@ -610,10 +612,12 @@ export default function StudentDashboard() {
                       {/* Sơ đồ đính kèm */}
                       {activeLectureAssignment.learning_units?.lecture_attachments?.map((att: any, idx: number) => (
                         <div key={idx} className="mt-6 p-4 rounded-2xl bg-slate-800/80 border border-cyan-500/20">
-                          <p className="text-xs font-semibold text-cyan-300 mb-2">📌 Sơ đồ tư duy / Tài liệu học tập:</p>
+                          <p className="text-xs font-semibold text-cyan-300 mb-2">
+                            {isCosmic ? '📌 Concept Mind Map / Schematics:' : '📌 Sơ đồ tư duy / Tài liệu học tập:'}
+                          </p>
                           <img
                             src={att.url}
-                            alt={att.name || 'Tài liệu'}
+                            alt={att.name || (isCosmic ? 'Study Resource' : 'Tài liệu')}
                             className="max-h-72 w-auto mx-auto rounded-xl shadow-md border border-slate-700 object-contain"
                           />
                         </div>
@@ -625,7 +629,9 @@ export default function StudentDashboard() {
                     <div className="text-xs text-slate-400">
                       {isMidtermApp ? (
                         <span className="hidden sm:inline">
-                          🚀 Live Studio tự động chấm điểm phản xạ, phát hiện bẫy ngữ pháp và hỗ trợ phát âm bản xứ.
+                          {isCosmic
+                            ? '🚀 Live Studio tracks reflex scoring, catches grammar traps, and builds native fluency.'
+                            : '🚀 Live Studio tự động chấm điểm phản xạ, phát hiện bẫy ngữ pháp và hỗ trợ phát âm bản xứ.'}
                         </span>
                       ) : null}
                     </div>
@@ -633,7 +639,7 @@ export default function StudentDashboard() {
                       onClick={() => setActiveLectureAssignment(null)}
                       className="px-6 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white text-sm font-semibold rounded-xl transition shadow"
                     >
-                      Đã Hiểu Bài, Sẵn Sàng Làm Bài!
+                      {isCosmic ? 'Briefing Acknowledged, Launch Mission!' : 'Đã Hiểu Bài, Sẵn Sàng Làm Bài!'}
                     </button>
                   </div>
                 </div>
@@ -681,6 +687,12 @@ export default function StudentDashboard() {
                 const isExpanded = expandedAssignmentId === assignment.id;
                 const dateLabel = formatAssignmentDate(assignment.assigned_date);
                 const title = assignment.learning_units?.title || 'Bài học của An Lake';
+                const hasLecture = Boolean(
+                  assignment.learning_units?.lecture_content_markdown &&
+                  assignment.learning_units.lecture_content_markdown.trim() !== ''
+                );
+                const attempts = assignment.assessment_attempts || [];
+                const firstAttempt = attempts[0];
 
                 return (
                   <div
@@ -690,16 +702,21 @@ export default function StudentDashboard() {
                     }`}
                   >
                     {/* Card Header ghi ngày */}
-                    <button
-                      onClick={() => toggleExpand(assignment.id)}
-                      className="w-full p-6 text-left flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-pink-50/50 transition"
-                    >
-                      <div>
+                    <div className="w-full p-6 text-left flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-pink-50/50 transition">
+                      <div
+                        onClick={() => toggleExpand(assignment.id)}
+                        className="cursor-pointer flex-1"
+                      >
                         <div className="flex items-center space-x-2 mb-1">
                           <span className="text-xs font-extrabold px-3 py-0.5 rounded-full bg-pink-500 text-white">
                             Ngày {dateLabel}
                           </span>
                           <span className="text-xs font-bold text-pink-700">Toán Lớp 1</span>
+                          {!hasLecture && (
+                            <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 border border-amber-300">
+                              Chuyên đề bài tập
+                            </span>
+                          )}
                         </div>
                         <h3 className="text-lg sm:text-xl font-extrabold text-slate-800">
                           {dateLabel} : {title}
@@ -712,57 +729,81 @@ export default function StudentDashboard() {
                       </div>
 
                       <div className="flex items-center space-x-2 self-end sm:self-center">
-                        <span className="text-xs font-bold text-pink-600 bg-pink-100 px-3 py-1.5 rounded-xl flex items-center space-x-1">
-                          <span>{isExpanded ? 'Thu gọn' : 'Bấm xem bài học'}</span>
+                        {firstAttempt && (
+                          <Link
+                            href={`/student/mission/${firstAttempt.id}`}
+                            className="px-4 py-2 rounded-2xl bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-extrabold text-xs sm:text-sm shadow-[0_3px_0_#be185d] active:translate-y-0.5 transition flex items-center space-x-1.5"
+                          >
+                            <span>Làm Bài Tập Ngay 🚀</span>
+                          </Link>
+                        )}
+                        <button
+                          onClick={() => toggleExpand(assignment.id)}
+                          className="text-xs font-bold text-pink-600 bg-pink-100 hover:bg-pink-200 px-3 py-2 rounded-2xl flex items-center space-x-1 transition"
+                        >
+                          <span>{isExpanded ? 'Thu gọn' : hasLecture ? 'Xem bài học & bài tập' : 'Xem bài tập'}</span>
                           {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-                        </span>
+                        </button>
                       </div>
-                    </button>
+                    </div>
 
-                    {/* Chi tiết khi mở card: Bài giảng + Bài tập tại lớp + Bài tập về nhà */}
+                    {/* Chi tiết khi mở card: CHỈ HIỂN THỊ BÀI HỌC NẾU CÓ hasLecture */}
                     {isExpanded && (
                       <div className="p-6 pt-2 border-t-2 border-pink-100 bg-pink-50/30">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                          {/* 1. Bài giảng của An Lake */}
-                          <div className="p-5 rounded-2xl bg-white border-2 border-pink-200 flex flex-col justify-between">
-                            <div>
-                              <span className="text-xs font-bold px-2.5 py-1 bg-amber-400 text-amber-950 rounded-full">
-                                📖 Bài Giảng Thần Tiên
-                              </span>
-                              <h4 className="text-base font-extrabold text-slate-800 mt-3">
-                                {assignment.learning_units?.title}
-                              </h4>
-                              <p className="text-xs text-slate-600 mt-1">
-                                {assignment.learning_units?.description || 'Bé xem ví dụ và hình vẽ phép tính nhé!'}
-                              </p>
+                        <div className={`grid grid-cols-1 ${hasLecture ? 'md:grid-cols-2' : ''} gap-6 mt-4`}>
+                          {/* 1. Bài giảng của An Lake (CHỈ HIỆN KHI CÓ BÀI HỌC) */}
+                          {hasLecture && (
+                            <div className="p-5 rounded-2xl bg-white border-2 border-pink-200 flex flex-col justify-between">
+                              <div>
+                                <span className="text-xs font-bold px-2.5 py-1 bg-amber-400 text-amber-950 rounded-full">
+                                  📖 Bài Giảng Thần Tiên
+                                </span>
+                                <h4 className="text-base font-extrabold text-slate-800 mt-3">
+                                  {assignment.learning_units?.title}
+                                </h4>
+                                <p className="text-xs text-slate-600 mt-1">
+                                  {assignment.learning_units?.description || 'Bé xem ví dụ và hình vẽ phép tính nhé!'}
+                                </p>
+                              </div>
+                              <button
+                                onClick={() => handleOpenLecture(assignment)}
+                                className="mt-6 w-full py-2.5 bg-amber-400 hover:bg-amber-500 text-amber-950 font-extrabold text-sm rounded-xl transition shadow"
+                              >
+                                Đọc Bài Giảng Của An Lake 🎈
+                              </button>
                             </div>
-                            <button
-                              onClick={() => handleOpenLecture(assignment)}
-                              className="mt-6 w-full py-2.5 bg-amber-400 hover:bg-amber-500 text-amber-950 font-extrabold text-sm rounded-xl transition shadow"
-                            >
-                              Đọc Bài Giảng Của An Lake 🎈
-                            </button>
-                          </div>
+                          )}
 
-                          {/* 2 & 3. Các bài tập */}
-                          {assignment.assessment_attempts?.map((att: any) => (
+                          {/* 2. Danh sách bài tập */}
+                          {attempts.map((att: any) => (
                             <div
                               key={att.id}
-                              className="p-5 rounded-2xl bg-white border-2 border-pink-200 flex flex-col justify-between shadow-sm"
+                              className={`p-6 rounded-3xl bg-white border-2 border-pink-200 flex flex-col justify-between shadow-sm ${
+                                !hasLecture ? 'max-w-2xl mx-auto w-full' : ''
+                              }`}
                             >
                               <div>
-                                <span className="text-xs font-bold px-3 py-1 bg-pink-500 text-white rounded-full">
-                                  {att.assessments?.title || 'Bài tập'}
-                                </span>
+                                <div className="flex items-center justify-between mb-2">
+                                  <span className="text-xs font-bold px-3 py-1 bg-pink-500 text-white rounded-full">
+                                    {att.assessments?.title || 'Bài tập'}
+                                  </span>
+                                  <span className="text-xs font-extrabold text-pink-700 bg-pink-100 px-2.5 py-1 rounded-full">
+                                    {att.status === 'GRADED'
+                                      ? `⭐ Đạt ${att.total_score} điểm`
+                                      : att.status === 'SUBMITTED'
+                                      ? 'Đã nộp bài'
+                                      : 'Chưa làm'}
+                                  </span>
+                                </div>
                                 <h4 className="text-base font-bold text-slate-800 mt-3">
-                                  {att.assessments?.instructions || 'Bé làm bài để nhận thật nhiều sao phép thuật nhé!'}
+                                  {att.assessments?.instructions || 'Bé bấm vào làm bài để nhận thật nhiều sao phép thuật nhé!'}
                                 </h4>
                               </div>
                               <Link
                                 href={`/student/mission/${att.id}`}
-                                className="mt-6 block w-full py-3 text-center bg-pink-500 hover:bg-pink-600 text-white font-extrabold text-sm rounded-2xl shadow-[0_3px_0_#db2777] active:translate-y-1 transition"
+                                className="mt-6 block w-full py-3.5 text-center bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-extrabold text-base rounded-2xl shadow-[0_4px_0_#be185d] active:translate-y-1 transition"
                               >
-                                Bắt Đầu Làm Bài Ngay! 🚀
+                                {att.status === 'GRADED' ? 'Xem Lại Bài Làm & Điểm Số ⭐' : 'Bắt Đầu Làm Bài Tập Ngay! 🚀'}
                               </Link>
                             </div>
                           ))}

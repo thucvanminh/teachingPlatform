@@ -12,6 +12,13 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [lang, setLang] = useState<'vi' | 'en'>('vi');
+
+  useEffect(() => {
+    if (identifier.toLowerCase().includes('keithley')) {
+      setLang('en');
+    }
+  }, [identifier]);
 
   useEffect(() => {
     const user = getUser();
@@ -44,14 +51,40 @@ export default function LoginPage() {
         router.push('/');
       }
     } catch (err: any) {
-      setError(err.message || 'Tài khoản hoặc mật khẩu không chính xác.');
+      setError(
+        lang === 'en'
+          ? err.message || 'Incorrect username or password.'
+          : err.message || 'Tài khoản hoặc mật khẩu không chính xác.'
+      );
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100/70 flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8 selection:bg-slate-200 selection:text-slate-900">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100/70 flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8 selection:bg-slate-200 selection:text-slate-900 relative">
+      {/* Language Switcher */}
+      <div className="absolute top-4 right-4 sm:top-6 sm:right-6 flex items-center space-x-1 p-1 bg-white border border-slate-200 rounded-xl shadow-xs text-xs font-semibold">
+        <button
+          type="button"
+          onClick={() => setLang('vi')}
+          className={`px-2.5 py-1 rounded-lg transition ${
+            lang === 'vi' ? 'bg-slate-900 text-white' : 'text-slate-500 hover:text-slate-900'
+          }`}
+        >
+          Tiếng Việt
+        </button>
+        <button
+          type="button"
+          onClick={() => setLang('en')}
+          className={`px-2.5 py-1 rounded-lg transition ${
+            lang === 'en' ? 'bg-slate-900 text-white' : 'text-slate-500 hover:text-slate-900'
+          }`}
+        >
+          English
+        </button>
+      </div>
+
       <div className="sm:mx-auto sm:w-full sm:max-w-[390px]">
         {/* Minimalist Brand Header */}
         <div className="text-center mb-8">
@@ -71,10 +104,10 @@ export default function LoginPage() {
             </svg>
           </div>
           <h1 className="text-2xl font-bold tracking-tight text-slate-900">
-            Đăng nhập
+            {lang === 'en' ? 'Sign In' : 'Đăng nhập'}
           </h1>
           <p className="text-xs text-slate-500 mt-1.5 font-normal">
-            Hệ thống học tập cá nhân hóa 1-on-1
+            {lang === 'en' ? '1-on-1 Personalized Tutoring LMS' : 'Hệ thống học tập cá nhân hóa 1-on-1'}
           </p>
         </div>
 
@@ -92,7 +125,7 @@ export default function LoginPage() {
                 htmlFor="identifier"
                 className="block text-xs font-semibold text-slate-700 mb-1.5"
               >
-                Tên đăng nhập hoặc Email
+                {lang === 'en' ? 'Username or Email' : 'Tên đăng nhập hoặc Email'}
               </label>
               <input
                 id="identifier"
@@ -101,7 +134,7 @@ export default function LoginPage() {
                 required
                 value={identifier}
                 onChange={(e) => setIdentifier(e.target.value)}
-                placeholder="Nhập tên tài khoản..."
+                placeholder={lang === 'en' ? 'Enter username or email...' : 'Nhập tên tài khoản...'}
                 className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-slate-800 focus:bg-white focus:ring-1 focus:ring-slate-800 transition-all"
               />
             </div>
@@ -111,7 +144,7 @@ export default function LoginPage() {
                 htmlFor="password"
                 className="block text-xs font-semibold text-slate-700 mb-1.5"
               >
-                Mật khẩu
+                {lang === 'en' ? 'Password' : 'Mật khẩu'}
               </label>
               <div className="relative">
                 <input
@@ -121,7 +154,7 @@ export default function LoginPage() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Nhập mật khẩu..."
+                  placeholder={lang === 'en' ? 'Enter password...' : 'Nhập mật khẩu...'}
                   className="w-full pl-3.5 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-slate-800 focus:bg-white focus:ring-1 focus:ring-slate-800 transition-all"
                 />
                 <button
@@ -129,7 +162,11 @@ export default function LoginPage() {
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 transition-colors focus:outline-none"
                   tabIndex={-1}
-                  aria-label={showPassword ? 'Ẩn mật khẩu' : 'Hiện mật khẩu'}
+                  aria-label={
+                    showPassword
+                      ? lang === 'en' ? 'Hide password' : 'Ẩn mật khẩu'
+                      : lang === 'en' ? 'Show password' : 'Hiện mật khẩu'
+                  }
                 >
                   {showPassword ? (
                     <EyeOff className="w-4 h-4" />
@@ -149,7 +186,7 @@ export default function LoginPage() {
                 {loading ? (
                   <Loader2 className="w-4 h-4 animate-spin text-white" />
                 ) : (
-                  'Đăng nhập'
+                  lang === 'en' ? 'Sign In' : 'Đăng nhập'
                 )}
               </button>
             </div>

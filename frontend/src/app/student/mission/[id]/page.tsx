@@ -4,6 +4,7 @@ import React, { useEffect, useState, use } from 'react';
 import { useRouter } from 'next/navigation';
 import { api, getUser } from '@/lib/api';
 import { FormattedContent } from '@/components/KatexMath';
+import { SpaceBackground } from '@/components/SpaceBackground';
 import {
   Clock,
   Send,
@@ -18,6 +19,15 @@ import {
   BookOpen,
   HelpCircle,
   Award,
+  Play,
+  Pause,
+  RotateCcw,
+  Plus,
+  Minus,
+  Rocket,
+  Compass,
+  Sparkles,
+  Orbit,
 } from 'lucide-react';
 
 export default function MissionRoomPage({ params }: { params: Promise<{ id: string }> }) {
@@ -34,6 +44,10 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showGridDrawer, setShowGridDrawer] = useState(false);
   const [passageExpanded, setPassageExpanded] = useState(false);
+
+  // Per-Question Chronometer (Default: 2 minutes = 120s with +/- controls)
+  const [questionTimeLeft, setQuestionTimeLeft] = useState<number>(120);
+  const [isQuestionTimerRunning, setIsQuestionTimerRunning] = useState<boolean>(true);
 
   useEffect(() => {
     const currentUser = getUser();
@@ -62,7 +76,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
           setAnswers(ansMap);
         }
       } catch (err: any) {
-        alert(err.message || 'Lỗi tải bài tập');
+        alert(err.message || (currentUser?.username === 'keithley' ? 'Failed to load mission exercises' : 'Lỗi tải bài tập'));
       } finally {
         setLoading(false);
       }
@@ -86,6 +100,45 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
 
     return () => clearInterval(timer);
   }, [loading, attempt]);
+
+  // Reset per-question chronometer when question changes (default 2 minutes = 120s)
+  useEffect(() => {
+    setQuestionTimeLeft(120);
+    setIsQuestionTimerRunning(true);
+  }, [currentIndex]);
+
+  // Per-Question countdown timer
+  useEffect(() => {
+    if (!isQuestionTimerRunning) return;
+    const qInterval = setInterval(() => {
+      setQuestionTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
+    return () => clearInterval(qInterval);
+  }, [isQuestionTimerRunning]);
+
+  const adjustQuestionTimer = (deltaSecs: number) => {
+    setQuestionTimeLeft((prev) => Math.max(5, prev + deltaSecs));
+  };
+
+  const resetQuestionTimer = () => {
+    setQuestionTimeLeft(120);
+    setIsQuestionTimerRunning(true);
+  };
+
+  const toggleQuestionTimer = () => {
+    setIsQuestionTimerRunning((prev) => !prev);
+  };
+
+  const SOLAR_STATIONS = [
+    { name: 'Mercury Orbit', symbol: '☿', color: 'from-amber-500 to-orange-500', desc: 'Orbital Angle Foundations' },
+    { name: 'Venus Base', symbol: '♀', color: 'from-yellow-400 to-amber-500', desc: 'Linear Pairs & Adjacent Angles' },
+    { name: 'Earth Mission Control', symbol: '⊕', color: 'from-cyan-400 to-blue-500', desc: 'Vertical Opposite Angles' },
+    { name: 'Mars Outpost', symbol: '♂', color: 'from-red-500 to-orange-600', desc: 'Angle Equations & Computations' },
+    { name: 'Jupiter Station', symbol: '♃', color: 'from-amber-600 to-yellow-600', desc: 'Angle Bisectors Trajectory' },
+    { name: 'Saturn Rings', symbol: '♄', color: 'from-yellow-500 to-emerald-500', desc: 'Perpendicular Bisector Theorems' },
+    { name: 'Uranus Deep Space', symbol: '♅', color: 'from-teal-400 to-cyan-600', desc: 'Multi-Step Geometric Proofs' },
+    { name: 'Neptune Frontier', symbol: '♆', color: 'from-blue-600 to-indigo-600', desc: 'Interplanetary Telemetry' },
+  ];
 
   const questions = attempt?.assessments?.questions || [];
   const totalQuestions = questions.length;
@@ -168,7 +221,9 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
   const handleSubmit = async () => {
     const answeredCount = Object.keys(answers).length;
     const confirm = window.confirm(
-      `Con đã làm ${answeredCount}/${totalQuestions} câu hỏi. Con có chắc chắn muốn nộp bài không?`
+      isEnglish
+        ? `You have answered ${answeredCount}/${totalQuestions} questions. Are you sure you want to transmit and complete this mission?`
+        : `Con đã làm ${answeredCount}/${totalQuestions} câu hỏi. Con có chắc chắn muốn nộp bài không?`
     );
     if (!confirm) return;
 
@@ -187,10 +242,18 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
         timeSpentSeconds: Math.max(timeSpent, 60),
       });
 
-      alert('🎉 Nộp bài thành công! Thầy Thức đã nhận được bài làm của con.');
+      alert(
+        isEnglish
+          ? '🎉 Mission transmitted successfully! Telemetry logged to Command.'
+          : '🎉 Nộp bài thành công! Thầy Thức đã nhận được bài làm của con.'
+      );
       router.push('/student');
     } catch (err: any) {
-      alert(`Nộp bài thất bại: ${err.message}`);
+      alert(
+        isEnglish
+          ? `Mission submission failed: ${err.message}`
+          : `Nộp bài thất bại: ${err.message}`
+      );
     } finally {
       setSubmitting(false);
     }
@@ -204,8 +267,30 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
 
   const isCosmic =
     user?.username === 'keithley' ||
+    user?.full_name?.includes('Keithley') ||
+    user?.fullName?.includes('Keithley') ||
     user?.studentProfile?.grade_level === 7 ||
-    user?.studentProfile?.grade_level === 9;
+    user?.studentProfile?.grade_level === 9 ||
+    attempt?.assessments?.learning_units?.subjects?.code === 'MATH_7';
+
+  const isKids =
+    user?.username === 'an_lake' ||
+    user?.studentProfile?.grade_level === 1 ||
+    user?.student_profiles?.grade_level === 1 ||
+    attempt?.assessments?.learning_units?.subjects?.code === 'MATH_1';
+
+  const isEnglish =
+    user?.username === 'keithley' ||
+    user?.full_name?.includes('Keithley') ||
+    attempt?.assessments?.learning_units?.subjects?.code?.startsWith('ENG') ||
+    attempt?.assessments?.title?.toLowerCase().includes('cosmic') ||
+    attempt?.assessments?.title?.toLowerCase().includes('angle');
+
+  const stationIndex = Math.min(
+    SOLAR_STATIONS.length - 1,
+    Math.floor((currentIndex / Math.max(1, totalQuestions)) * SOLAR_STATIONS.length)
+  );
+  const currentStation = SOLAR_STATIONS[stationIndex] || SOLAR_STATIONS[0];
 
   if (loading) {
     return (
@@ -214,9 +299,11 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
           isCosmic ? 'bg-[#05070E] text-cyan-400' : 'bg-slate-50 text-slate-600'
         }`}
       >
-        <div className="flex items-center space-x-3">
-          <div className="w-5 h-5 border-2 border-blue-600 border-t-transparent rounded-full animate-spin" />
-          <span className="text-sm font-medium">Đang nạp đề bài luyện tập...</span>
+        <div className="flex flex-col items-center space-y-3">
+          <div className="w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin" />
+          <span className="text-xs font-semibold tracking-wider uppercase text-cyan-300">
+            {isEnglish ? 'Charging Orbital Telemetry & Problems...' : 'Đang nạp đề bài luyện tập...'}
+          </span>
         </div>
       </div>
     );
@@ -229,10 +316,14 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
     return ans && (ans.selected_option_id || ans.text || ans.text_response || (ans.image_urls && ans.image_urls.length > 0));
   }).length;
 
-  return (
+  const content = (
     <div
       className={`min-h-[100dvh] flex flex-col justify-between ${
-        isCosmic ? 'bg-[#05070E] text-slate-100' : 'bg-slate-50 text-slate-900'
+        isCosmic
+          ? 'text-slate-100'
+          : isKids
+          ? 'bg-gradient-to-b from-amber-50/80 via-pink-50/60 to-purple-50/60 text-slate-900'
+          : 'bg-slate-50 text-slate-900'
       }`}
     >
       {/* 1. TOP HEADER (Fixed / Sticky on Mobile) */}
@@ -240,6 +331,8 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
         className={`sticky top-0 z-30 px-3 sm:px-6 py-2.5 sm:py-3 border-b backdrop-blur-md transition-colors ${
           isCosmic
             ? 'bg-[#05070E]/90 border-cyan-500/30 text-white'
+            : isKids
+            ? 'bg-white/95 border-pink-200 text-pink-900 shadow-sm'
             : 'bg-white/95 border-slate-200 text-slate-900 shadow-xs'
         }`}
       >
@@ -247,33 +340,43 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
           {/* Back button */}
           <button
             onClick={() => {
-              if (window.confirm('Con có chắc muốn rời phòng làm bài không? Bài làm chưa nộp sẽ cần làm lại.')) {
+              const msg = isKids
+                ? 'Bé có chắc muốn rời phòng làm bài không? Kết quả chưa nộp sẽ cần làm lại nhé!'
+                : isEnglish
+                ? 'Are you sure you want to exit the cockpit? Unsaved telemetry will need to be re-entered.'
+                : 'Con có chắc muốn rời phòng làm bài không? Bài làm chưa nộp sẽ cần làm lại.';
+              if (window.confirm(msg)) {
                 router.push('/student');
               }
             }}
             className={`flex items-center space-x-1.5 text-xs font-semibold px-2.5 py-1.5 rounded-xl transition ${
               isCosmic
-                ? 'text-slate-300 hover:bg-slate-800'
+                ? 'text-slate-300 hover:bg-slate-800 border border-transparent hover:border-slate-700'
+                : isKids
+                ? 'text-pink-700 hover:bg-pink-100 border border-pink-200 font-bold'
                 : 'text-slate-600 hover:bg-slate-100'
             }`}
           >
             <ArrowLeft className="w-4 h-4" />
-            <span className="hidden sm:inline">Rời phòng</span>
+            <span className="hidden sm:inline">{isKids ? 'Về trang chủ' : isEnglish ? 'Exit Cockpit' : 'Rời phòng'}</span>
           </button>
 
           {/* Center Timer & Drawer Button */}
           <div className="flex items-center space-x-2 sm:space-x-3">
-            {/* Timer Badge */}
+            {/* Total Timer Badge */}
             <div
               className={`flex items-center space-x-1.5 px-3 py-1 rounded-xl font-mono text-xs sm:text-sm font-bold border ${
                 timeLeft < 600
-                  ? 'bg-red-50 border-red-300 text-red-600 animate-pulse'
+                  ? 'bg-red-500/20 border-red-400 text-red-500 animate-pulse'
                   : isCosmic
-                  ? 'bg-cyan-950/80 border-cyan-500/50 text-cyan-400'
+                  ? 'bg-cyan-950/80 border-cyan-500/50 text-cyan-400 shadow-[0_0_10px_rgba(6,182,212,0.2)]'
+                  : isKids
+                  ? 'bg-pink-50 border-pink-300 text-pink-700 shadow-2xs font-sans font-bold'
                   : 'bg-slate-100 border-slate-200 text-slate-800'
               }`}
+              title="Thời gian làm bài"
             >
-              <Clock className="w-3.5 h-3.5" />
+              <Clock className="w-3.5 h-3.5 text-pink-500" />
               <span>{formatTimer(timeLeft)}</span>
             </div>
 
@@ -282,14 +385,16 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
               onClick={() => setShowGridDrawer(true)}
               className={`flex items-center space-x-1 px-3 py-1 rounded-xl text-xs font-semibold border transition ${
                 isCosmic
-                  ? 'bg-slate-900 border-cyan-500/30 text-cyan-300 hover:bg-slate-800'
+                  ? 'bg-slate-900 border-cyan-500/40 text-cyan-300 hover:bg-slate-800 shadow-[0_0_10px_rgba(6,182,212,0.15)]'
+                  : isKids
+                  ? 'bg-pink-100 border-pink-300 text-pink-800 hover:bg-pink-200 font-bold'
                   : 'bg-slate-100 border-slate-200 text-slate-700 hover:bg-slate-200'
               }`}
-              title="Xem toàn bộ câu hỏi"
+              title="Xem danh sách câu hỏi"
             >
               <Grid className="w-3.5 h-3.5" />
               <span>
-                Câu <strong>{currentIndex + 1}</strong>/{totalQuestions}
+                {isKids ? 'Câu' : isEnglish ? 'Sector' : 'Câu'} <strong>{currentIndex + 1}</strong>/{totalQuestions}
               </span>
             </button>
           </div>
@@ -300,37 +405,188 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
             disabled={submitting}
             className={`py-1.5 px-3.5 rounded-xl text-xs font-bold flex items-center space-x-1.5 transition shadow-xs disabled:opacity-40 ${
               isCosmic
-                ? 'bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-500 text-white'
+                ? 'bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-500 text-white shadow-[0_0_15px_rgba(6,182,212,0.3)]'
+                : isKids
+                ? 'bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 text-white shadow-sm font-bold'
                 : 'bg-blue-600 hover:bg-blue-700 text-white'
             }`}
           >
             <Send className="w-3.5 h-3.5" />
-            <span>{submitting ? '...' : 'Nộp bài'}</span>
+            <span>{submitting ? '...' : isKids ? 'Nộp bài 🌟' : isEnglish ? 'Submit Telemetry' : 'Nộp bài'}</span>
           </button>
         </div>
 
         {/* Progress Bar Line */}
-        <div className="w-full bg-slate-200/60 dark:bg-slate-800 h-1 mt-2.5 rounded-full overflow-hidden">
+        <div className="w-full bg-slate-200 dark:bg-slate-800/80 h-2 mt-2.5 rounded-full overflow-hidden relative">
           <div
             className={`h-full transition-all duration-300 ${
-              isCosmic ? 'bg-cyan-400' : 'bg-blue-600'
+              isCosmic
+                ? 'bg-gradient-to-r from-cyan-500 via-purple-500 to-amber-400 shadow-[0_0_10px_rgba(6,182,212,0.8)]'
+                : isKids
+                ? 'bg-gradient-to-r from-pink-400 via-rose-400 to-amber-400 shadow-[0_0_10px_rgba(244,63,94,0.5)]'
+                : 'bg-blue-600'
             }`}
             style={{ width: `${progressPercent}%` }}
           />
         </div>
       </header>
 
-      {/* 2. MAIN SINGLE-QUESTION VIEW (Compact, No scroll needed) */}
+      {/* 2. MAIN SINGLE-QUESTION VIEW */}
       <main className="flex-1 max-w-3xl w-full mx-auto px-3.5 sm:px-6 py-4 flex flex-col justify-center">
         {currentQ ? (
           <div
-            className={`rounded-2xl sm:rounded-3xl p-4 sm:p-7 border shadow-sm transition flex flex-col justify-between ${
+            className={`rounded-2xl sm:rounded-3xl p-5 sm:p-8 border shadow-sm transition flex flex-col justify-between ${
               isCosmic
-                ? 'bg-[#0A0E1A]/95 border-cyan-500/30 text-slate-100 shadow-[0_0_25px_rgba(6,182,212,0.1)]'
+                ? 'bg-[#0A0E1A]/95 border-cyan-500/40 text-slate-100 shadow-[0_0_30px_rgba(6,182,212,0.15)] backdrop-blur-xl'
+                : isKids
+                ? 'bg-white border-2 border-pink-200 text-slate-800 shadow-xl ring-2 ring-pink-100/60'
                 : 'bg-white border-slate-200 text-slate-900'
             }`}
           >
-            {/* Header of Question */}
+            {/* A. BANNER THEO CHỦ ĐỀ */}
+            {isCosmic && (
+              <div className="flex items-center justify-between pb-3 mb-3 border-b border-cyan-500/20 text-xs">
+                <div className="flex items-center space-x-2.5">
+                  <span className={`w-8 h-8 rounded-xl bg-gradient-to-tr ${currentStation.color} flex items-center justify-center font-bold text-white text-base shadow-[0_0_12px_rgba(6,182,212,0.4)]`}>
+                    {currentStation.symbol}
+                  </span>
+                  <div>
+                    <span className="font-bold text-cyan-300 block leading-tight text-xs sm:text-sm tracking-wide">
+                      {currentStation.name}
+                    </span>
+                    <span className="text-[10px] text-slate-400">
+                      {currentStation.desc}
+                    </span>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-1.5 text-slate-300 text-[11px] font-mono bg-slate-900/90 px-2.5 py-1 rounded-xl border border-cyan-500/30 shadow-xs">
+                  <Rocket className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
+                  <span>{isEnglish ? 'Astronaut Keithley Lake' : 'Phi hành gia Keithley'}</span>
+                </div>
+              </div>
+            )}
+
+            {isKids && (
+              <div className="flex items-center justify-between pb-3 mb-4 border-b-2 border-pink-100 text-xs">
+                <div className="flex items-center space-x-3">
+                  <span className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-pink-400 to-rose-400 flex items-center justify-center font-bold text-white text-xl shadow-md">
+                    👑
+                  </span>
+                  <div>
+                    <span className="font-extrabold text-pink-700 block leading-tight text-sm sm:text-base">
+                      Bé An Khám Phá Bảng Cửu Chương 8
+                    </span>
+                    <span className="text-[11px] text-pink-500 font-semibold">
+                      Cùng Công chúa và Chú Rồng Xanh giải mã câu đố phép nhân 8
+                    </span>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-1 text-pink-700 text-xs font-bold bg-pink-100 px-3 py-1.5 rounded-2xl border border-pink-200">
+                  <span>Toán Lớp 1</span>
+                  <span>✨</span>
+                </div>
+              </div>
+            )}
+
+            {/* B. PER-QUESTION CHRONOMETER HUD (Chỉ hiển thị cho học sinh lớn/cosmic) */}
+            {!isKids && (
+              <div className={`p-2.5 sm:p-3 rounded-2xl mb-4 border flex flex-wrap items-center justify-between gap-2.5 transition-all ${
+                isCosmic
+                  ? questionTimeLeft <= 15
+                    ? 'bg-red-950/40 border-red-500/60 shadow-[0_0_20px_rgba(239,68,68,0.3)]'
+                    : 'bg-slate-900/90 border-cyan-500/40 shadow-[0_0_15px_rgba(6,182,212,0.15)]'
+                  : 'bg-slate-50 border-slate-200'
+              }`}>
+                <div className="flex items-center space-x-2.5">
+                  <div className={`w-8 h-8 rounded-xl flex items-center justify-center font-bold text-xs transition-colors ${
+                    questionTimeLeft <= 15
+                      ? 'bg-red-500/20 text-red-400 border border-red-500/50 animate-pulse'
+                      : isCosmic
+                      ? 'bg-cyan-950 text-cyan-400 border border-cyan-500/40'
+                      : 'bg-blue-100 text-blue-700'
+                  }`}>
+                    <Clock className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400 flex items-center space-x-1.5">
+                      <span>{isEnglish ? 'Question Chronometer' : 'Đồng hồ câu hỏi'}</span>
+                      <span className="text-cyan-400 font-normal">({isEnglish ? '2m default' : 'chuẩn 2 phút'})</span>
+                    </div>
+                    <div className={`text-base sm:text-lg font-mono font-extrabold flex items-center space-x-2 ${
+                      questionTimeLeft <= 15
+                        ? 'text-red-400 animate-pulse'
+                        : isCosmic
+                        ? 'text-cyan-300'
+                        : 'text-slate-800'
+                    }`}>
+                      <span>{formatTimer(questionTimeLeft)}</span>
+                      {questionTimeLeft === 0 && (
+                        <span className="text-[11px] font-sans text-red-400 font-semibold">
+                          {isEnglish ? 'Target time reached!' : 'Hết 2 phút mục tiêu!'}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Chronometer User Adjust Controls (+ / - / Pause / Reset) */}
+                <div className="flex items-center space-x-1 sm:space-x-1.5">
+                  <button
+                    type="button"
+                    onClick={() => adjustQuestionTimer(-30)}
+                    className="px-2 py-1 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition flex items-center space-x-0.5 active:scale-95"
+                    title={isEnglish ? "Subtract 30 seconds" : "Bớt 30 giây"}
+                  >
+                    <Minus className="w-3 h-3" />
+                    <span>30s</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => adjustQuestionTimer(30)}
+                    className="px-2 py-1 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/30 transition flex items-center space-x-0.5 active:scale-95"
+                    title={isEnglish ? "Add 30 seconds" : "Thêm 30 giây"}
+                  >
+                    <Plus className="w-3 h-3" />
+                    <span>30s</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => adjustQuestionTimer(60)}
+                    className="px-2 py-1 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/30 transition flex items-center space-x-0.5 active:scale-95"
+                    title={isEnglish ? "Add 1 minute" : "Thêm 1 phút"}
+                  >
+                    <Plus className="w-3 h-3" />
+                    <span>1m</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={toggleQuestionTimer}
+                    className={`p-1.5 rounded-lg border text-xs transition active:scale-95 ${
+                      isQuestionTimerRunning
+                        ? 'bg-amber-500/20 text-amber-300 border-amber-500/40 hover:bg-amber-500/30'
+                        : 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40 hover:bg-emerald-500/30'
+                    }`}
+                    title={isQuestionTimerRunning ? (isEnglish ? "Pause timer" : "Tạm dừng") : (isEnglish ? "Resume timer" : "Tiếp tục")}
+                  >
+                    {isQuestionTimerRunning ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={resetQuestionTimer}
+                    className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-slate-200 border border-slate-700 transition active:scale-95"
+                    title={isEnglish ? "Reset to 2:00" : "Đặt lại 2 phút"}
+                  >
+                    <RotateCcw className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* C. QUESTION METADATA HEADER */}
             <div className="flex items-center justify-between border-b pb-3 mb-3 border-slate-100 dark:border-slate-800">
               <div className="flex items-center space-x-2">
                 <span
@@ -342,21 +598,21 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                 >
                   {currentQ.question_payload?.sectionName ||
                     (currentQ.type === 'MULTIPLE_CHOICE'
-                      ? 'Trắc nghiệm'
+                      ? (isEnglish ? 'Multiple Choice' : 'Trắc nghiệm')
                       : currentQ.type === 'FILL_IN_BLANK'
-                      ? 'Điền từ'
-                      : 'Tự luận')}
+                      ? (isEnglish ? 'Numerical Fill-in' : 'Điền số')
+                      : (isEnglish ? 'Geometric Proof / Essay' : 'Tự luận'))}
                 </span>
-                <span className="text-xs text-slate-600 dark:text-slate-300 font-medium">
-                  Câu {currentIndex + 1} của {totalQuestions}
+                <span className="text-xs text-slate-400 font-medium">
+                  {isEnglish ? 'Question' : 'Câu'} {currentIndex + 1} / {totalQuestions}
                 </span>
               </div>
-              <span className="text-xs font-bold text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200">
-                {currentQ.points} điểm
+              <span className="text-xs font-bold text-amber-300 bg-amber-950/60 px-2.5 py-0.5 rounded-full border border-amber-500/40">
+                {currentQ.points} {isEnglish ? 'pts' : 'điểm'}
               </span>
             </div>
 
-            {/* Optional Collapsible Passage (Reading Cloze / Comprehension) */}
+            {/* Optional Collapsible Passage */}
             {currentQ.question_payload?.passage && (
               <div className="mb-3">
                 <button
@@ -369,11 +625,11 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                   }`}
                 >
                   <span className="flex items-center space-x-1.5">
-                    <BookOpen className="w-3.5 h-3.5 text-blue-600" />
-                    <span>Bài đọc hiểu (Reading Passage)</span>
+                    <BookOpen className="w-3.5 h-3.5 text-blue-400" />
+                    <span>{isEnglish ? 'Mission Briefing / Reference Diagram' : 'Tài liệu / Bài đọc hiểu'}</span>
                   </span>
-                  <span className="text-blue-600 font-bold">
-                    {passageExpanded ? '▲ Thu gọn' : '▼ Bấm để đọc'}
+                  <span className="text-cyan-400 font-bold">
+                    {passageExpanded ? (isEnglish ? '▲ Collapse' : '▲ Thu gọn') : (isEnglish ? '▼ Expand Briefing' : '▼ Bấm để đọc')}
                   </span>
                 </button>
 
@@ -392,8 +648,17 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
             )}
 
             {/* Question Stem / Content */}
-            <div className="text-sm sm:text-base font-semibold leading-relaxed mb-4 text-slate-900 dark:text-slate-100">
+            <div
+              className={`text-base sm:text-lg font-semibold leading-relaxed mb-5 ${
+                isCosmic
+                  ? 'text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]'
+                  : isKids
+                  ? 'text-slate-800 text-lg sm:text-xl font-bold'
+                  : 'text-slate-900'
+              }`}
+            >
               <FormattedContent
+                className={isCosmic ? 'text-white' : ''}
                 text={
                   currentQ.question_payload?.content_markdown ||
                   currentQ.question_payload?.prompt_markdown ||
@@ -414,38 +679,61 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                         key={opt.id}
                         type="button"
                         onClick={() => handleSelectOption(currentQ.id, opt.id)}
-                        className={`w-full p-3 sm:p-3.5 rounded-xl text-left border text-xs sm:text-sm font-medium transition-all flex items-center justify-between active:scale-[0.99] ${
+                        className={`w-full p-3.5 sm:p-4 rounded-2xl text-left border text-sm sm:text-base font-medium transition-all flex items-center justify-between active:scale-[0.99] ${
                           isSelected
                             ? isCosmic
-                              ? 'bg-cyan-950 border-cyan-400 text-white shadow-sm ring-1 ring-cyan-400'
+                              ? 'bg-cyan-950/90 border-cyan-400 text-white shadow-[0_0_20px_rgba(6,182,212,0.4)] ring-1 ring-cyan-400'
+                              : isKids
+                              ? 'bg-pink-100/90 border-2 border-pink-500 text-pink-950 shadow-md ring-2 ring-pink-300 font-bold scale-[1.01]'
                               : 'bg-blue-50 border-blue-600 text-blue-950 ring-1 ring-blue-600 shadow-xs'
                             : isCosmic
-                            ? 'bg-slate-800/60 border-slate-700/80 text-slate-300 hover:bg-slate-800'
+                            ? 'bg-slate-900/80 border-slate-700/80 text-white hover:bg-slate-800 hover:border-cyan-500/50'
+                            : isKids
+                            ? 'bg-white border-2 border-pink-100 text-slate-800 hover:border-pink-300 hover:bg-pink-50/60 shadow-xs'
                             : 'bg-white border-slate-200 text-slate-800 hover:bg-slate-50 hover:border-slate-300 shadow-2xs'
                         }`}
                       >
-                        <div className="flex items-center space-x-3 pr-2 min-w-0">
+                        <div className="flex items-center space-x-3.5 pr-2 min-w-0">
                           <span
-                            className={`w-7 h-7 flex-shrink-0 rounded-lg flex items-center justify-center font-bold text-xs transition-colors ${
+                            className={`w-8 h-8 sm:w-9 sm:h-9 flex-shrink-0 rounded-xl flex items-center justify-center font-bold text-sm sm:text-base transition-colors ${
                               isSelected
                                 ? isCosmic
-                                  ? 'bg-cyan-500 text-slate-950'
+                                  ? 'bg-cyan-500 text-slate-950 font-black shadow-sm'
+                                  : isKids
+                                  ? 'bg-pink-500 text-white shadow-sm font-extrabold'
                                   : 'bg-blue-600 text-white'
                                 : isCosmic
-                                ? 'bg-slate-700 text-slate-300'
+                                ? 'bg-slate-800 text-cyan-300 border border-cyan-500/30'
+                                : isKids
+                                ? 'bg-pink-100 text-pink-700 border border-pink-200 font-bold'
                                 : 'bg-slate-100 text-slate-700 border border-slate-200'
                             }`}
                           >
                             {opt.id}
                           </span>
-                          <span className="leading-snug break-words">
-                            <FormattedContent text={opt.text} />
+                          <span
+                            className={`leading-snug break-words ${
+                              isCosmic
+                                ? 'text-white font-medium'
+                                : isKids
+                                ? 'text-slate-800 font-bold text-base sm:text-lg'
+                                : 'text-slate-800'
+                            }`}
+                          >
+                            <FormattedContent
+                              text={opt.text}
+                              className={isCosmic ? 'text-white' : ''}
+                            />
                           </span>
                         </div>
                         {isSelected && (
                           <Check
-                            className={`w-4 h-4 flex-shrink-0 ${
-                              isCosmic ? 'text-cyan-400' : 'text-blue-600'
+                            className={`w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0 ${
+                              isCosmic
+                                ? 'text-cyan-400'
+                                : isKids
+                                ? 'text-pink-600 stroke-[3]'
+                                : 'text-blue-600'
                             }`}
                           />
                         )}
@@ -455,15 +743,26 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                 </div>
               )}
 
+              {/* Lời nhắc thân thiện khi Bé An đã chọn đáp án */}
+              {isKids && currentAnswer.selected_option_id && (
+                <div className="mt-4 p-3.5 bg-gradient-to-r from-pink-50 via-rose-50 to-amber-50 border-2 border-pink-200 rounded-2xl flex items-center justify-between text-pink-800 text-xs sm:text-sm font-bold shadow-xs animate-in fade-in">
+                  <span className="flex items-center space-x-2">
+                    <Sparkles className="w-4 h-4 text-pink-500" />
+                    <span>Bé đã chọn đáp án! Hãy bấm nút <strong>"Next: Câu tiếp theo ➡️"</strong> ở góc dưới nhé!</span>
+                  </span>
+                  <span className="text-xl animate-bounce">👇</span>
+                </div>
+              )}
+
               {/* FILL_IN_BLANK INPUT */}
               {currentQ.type === 'FILL_IN_BLANK' && (
                 <div>
                   <input
                     type="text"
-                    placeholder="Gõ đáp số hoặc từ của con vào đây..."
+                    placeholder={isEnglish ? "Enter numerical value or angle degree (e.g. 132 or 72°)..." : "Gõ đáp số của con vào đây..."}
                     value={currentAnswer.text || ''}
                     onChange={(e) => handleFillText(currentQ.id, e.target.value)}
-                    className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm focus:outline-none focus:border-blue-600 focus:bg-white"
+                    className="w-full p-3 bg-slate-900 border border-cyan-500/40 rounded-xl text-white text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
                   />
                 </div>
               )}
@@ -472,34 +771,41 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
               {currentQ.type === 'ESSAY_UPLOAD' && (
                 <div className="space-y-3">
                   <textarea
-                    rows={3}
-                    placeholder="Gõ lời giải ngắn gọn tại đây..."
+                    rows={4}
+                    placeholder={isEnglish ? "Type your step-by-step geometric calculations or mathematical proof here..." : "Gõ lời giải từng bước hoặc lập luận hình học tại đây..."}
                     value={currentAnswer.text_response || ''}
                     onChange={(e) => handleEssayText(currentQ.id, e.target.value)}
-                    className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm focus:outline-none focus:border-blue-600 focus:bg-white"
+                    className="w-full p-3 bg-slate-900 border border-cyan-500/40 rounded-xl text-white text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 leading-relaxed font-mono"
                   />
-                  <button
-                    type="button"
-                    onClick={() => handleAddSampleImage(currentQ.id, '/images/kids/princess_math.png')}
-                    className="px-3 py-1.5 rounded-lg bg-blue-50 text-blue-700 text-xs font-semibold flex items-center space-x-1.5 border border-blue-200"
-                  >
-                    <Upload className="w-3.5 h-3.5" />
-                    <span>Đính kèm ảnh bài làm</span>
-                  </button>
+                  <div className="flex items-center justify-between text-xs text-slate-400">
+                    <span>{isEnglish ? "Tip: You can use symbols like 180°, xOy, OM bisector..." : "Gợi ý: Con có thể gõ các góc xOy, 180°, tia OM..."}</span>
+                    <button
+                      type="button"
+                      onClick={() => handleAddSampleImage(currentQ.id, '/images/kids/princess_math.png')}
+                      className="px-3 py-1.5 rounded-lg bg-cyan-950 text-cyan-300 text-xs font-semibold flex items-center space-x-1.5 border border-cyan-500/40 hover:bg-cyan-900 transition"
+                    >
+                      <Upload className="w-3.5 h-3.5" />
+                      <span>{isEnglish ? "Attach Diagram Work" : "Đính kèm ảnh bài làm"}</span>
+                    </button>
+                  </div>
                 </div>
               )}
             </div>
           </div>
         ) : (
-          <div className="text-center py-12 text-slate-500">Đang nạp câu hỏi...</div>
+          <div className="text-center py-12 text-slate-400">
+            {isEnglish ? 'Loading orbital mission...' : 'Đang nạp câu hỏi...'}
+          </div>
         )}
       </main>
 
-      {/* 3. BOTTOM CONTROL BAR (Thumb-friendly on Mobile) */}
+      {/* 3. BOTTOM CONTROL BAR */}
       <footer
         className={`sticky bottom-0 z-30 px-3.5 sm:px-6 py-2.5 sm:py-3 border-t backdrop-blur-md ${
           isCosmic
             ? 'bg-[#05070E]/95 border-cyan-500/20'
+            : isKids
+            ? 'bg-white/95 border-pink-200 shadow-md'
             : 'bg-white/95 border-slate-200/90 shadow-sm'
         }`}
       >
@@ -512,17 +818,20 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
             className={`px-3.5 sm:px-4 py-2.5 rounded-xl border text-xs sm:text-sm font-semibold flex items-center space-x-1.5 transition disabled:opacity-40 disabled:cursor-not-allowed ${
               isCosmic
                 ? 'bg-slate-900 border-slate-800 text-slate-300 hover:bg-slate-800'
+                : isKids
+                ? 'bg-white border-2 border-pink-200 text-pink-700 hover:bg-pink-50 font-bold'
                 : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'
             }`}
           >
             <ChevronLeft className="w-4 h-4" />
-            <span>Câu trước</span>
+            <span>{isKids ? 'Câu trước' : isEnglish ? 'Previous Question' : 'Câu trước'}</span>
           </button>
 
           {/* Quick status pill */}
           <div className="text-center">
-            <span className="text-[11px] text-slate-600 dark:text-slate-300 font-medium block">
-              Đã làm: <strong className="text-blue-600">{answeredCount}</strong>/{totalQuestions}
+            <span className="text-[11px] text-slate-500 font-semibold block">
+              {isKids ? 'Bé đã làm:' : isEnglish ? 'Completed:' : 'Đã làm:'}{' '}
+              <strong className={isKids ? 'text-pink-600 font-extrabold text-sm' : 'text-cyan-400 font-bold'}>{answeredCount}</strong>/{totalQuestions} câu
             </span>
           </div>
 
@@ -531,13 +840,15 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
             <button
               type="button"
               onClick={() => setCurrentIndex((prev) => Math.min(totalQuestions - 1, prev + 1))}
-              className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex items-center space-x-1.5 transition shadow-sm active:scale-95 ${
+              className={`px-5 sm:px-6 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-base font-extrabold flex items-center space-x-2 transition shadow-sm active:scale-95 ${
                 isCosmic
-                  ? 'bg-cyan-500 hover:bg-cyan-400 text-slate-950'
+                  ? 'bg-cyan-500 hover:bg-cyan-400 text-slate-950 shadow-[0_0_15px_rgba(6,182,212,0.5)]'
+                  : isKids
+                  ? 'bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 hover:from-pink-600 hover:to-rose-600 text-white shadow-[0_4px_0_#be185d] active:translate-y-1'
                   : 'bg-blue-600 hover:bg-blue-700 text-white'
               }`}
             >
-              <span>Câu tiếp theo</span>
+              <span>{isKids ? 'Next: Câu tiếp theo ➡️' : isEnglish ? 'Next Question' : 'Câu tiếp theo'}</span>
               <ChevronRight className="w-4 h-4" />
             </button>
           ) : (
@@ -545,35 +856,43 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
               type="button"
               onClick={handleSubmit}
               disabled={submitting}
-              className="px-4 sm:px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold flex items-center space-x-1.5 transition shadow-sm active:scale-95 disabled:opacity-50"
+              className={`px-5 sm:px-6 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-base font-extrabold flex items-center space-x-2 transition shadow-sm active:scale-95 disabled:opacity-50 ${
+                isKids
+                  ? 'bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 text-white shadow-[0_4px_0_#0f766e] active:translate-y-1'
+                  : 'bg-emerald-600 hover:bg-emerald-500 text-white'
+              }`}
             >
-              <span>{submitting ? 'Đang nộp...' : 'Hoàn tất & Nộp'}</span>
+              <span>{submitting ? (isKids ? 'Đang nộp bài...' : isEnglish ? 'Transmitting...' : 'Đang nộp...') : (isKids ? 'Bé Đã Làm Xong, Nộp Bài! 🌟' : isEnglish ? 'Submit Telemetry' : 'Hoàn tất & Nộp')}</span>
               <Send className="w-4 h-4" />
             </button>
           )}
         </div>
       </footer>
 
-      {/* 4. QUESTION DRAWER MODAL (Jump to any question) */}
+      {/* 4. QUESTION DRAWER MODAL */}
       {showGridDrawer && (
-        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-slate-900/50 backdrop-blur-xs p-0 sm:p-4 animate-in fade-in duration-150">
+        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-slate-950/70 backdrop-blur-xs p-0 sm:p-4 animate-in fade-in duration-150">
           <div
             className={`w-full max-w-lg rounded-t-3xl sm:rounded-3xl border p-5 sm:p-6 shadow-2xl max-h-[80vh] flex flex-col ${
               isCosmic
-                ? 'bg-[#0A0E1A] border-cyan-500/40 text-white'
+                ? 'bg-[#0A0E1A] border-cyan-500/40 text-white shadow-[0_0_35px_rgba(6,182,212,0.25)]'
                 : 'bg-white border-slate-200 text-slate-900'
             }`}
           >
-            <div className="flex items-center justify-between border-b pb-3 mb-4 border-slate-100 dark:border-slate-800">
+            <div className="flex items-center justify-between border-b pb-3 mb-4 border-slate-800">
               <div>
-                <h3 className="font-bold text-sm">Danh Sách Câu Hỏi</h3>
-                <p className="text-xs text-slate-600 dark:text-slate-300 mt-0.5">
-                  Đã trả lời {answeredCount} trên tổng số {totalQuestions} câu
+                <h3 className="font-bold text-sm text-cyan-300">
+                  {isEnglish ? 'Cosmic Flight Question Roster' : 'Danh Sách Câu Hỏi'}
+                </h3>
+                <p className="text-xs text-slate-400 mt-0.5">
+                  {isEnglish
+                    ? `Solved ${answeredCount} of ${totalQuestions} celestial problems`
+                    : `Đã trả lời ${answeredCount} trên tổng số ${totalQuestions} câu`}
                 </p>
               </div>
               <button
                 onClick={() => setShowGridDrawer(false)}
-                className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100"
+                className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -601,7 +920,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                     }}
                     className={`h-10 rounded-xl text-xs font-bold transition flex items-center justify-center relative ${
                       isCurrent
-                        ? 'ring-2 ring-blue-600 ring-offset-2'
+                        ? 'ring-2 ring-cyan-400 ring-offset-2 ring-offset-slate-950'
                         : ''
                     } ${
                       hasAnswer
@@ -619,21 +938,21 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
               })}
             </div>
 
-            <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500">
+            <div className="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
               <div className="flex items-center space-x-2">
-                <span className="w-3 h-3 rounded-md bg-blue-600" />
-                <span>Đã làm</span>
+                <span className="w-3 h-3 rounded-md bg-cyan-400" />
+                <span>{isEnglish ? 'Answered' : 'Đã làm'}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="w-3 h-3 rounded-md bg-slate-200" />
-                <span>Chưa làm</span>
+                <span className="w-3 h-3 rounded-md bg-slate-700" />
+                <span>{isEnglish ? 'Unanswered' : 'Chưa làm'}</span>
               </div>
               <button
                 type="button"
                 onClick={() => setShowGridDrawer(false)}
-                className="px-4 py-1.5 rounded-lg bg-slate-900 text-white font-medium text-xs"
+                className="px-4 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-medium text-xs border border-slate-700"
               >
-                Đóng
+                {isEnglish ? 'Close' : 'Đóng'}
               </button>
             </div>
           </div>
@@ -641,4 +960,6 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
       )}
     </div>
   );
+
+  return isCosmic ? <SpaceBackground>{content}</SpaceBackground> : content;
 }
