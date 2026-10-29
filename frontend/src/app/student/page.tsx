@@ -542,56 +542,104 @@ export default function StudentDashboard() {
           </div>
 
           {/* Modal Xem Lý Thuyết Bài Giảng KaTeX */}
-          {activeLectureAssignment && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4">
-              <div className="w-full max-w-3xl max-h-[85vh] bg-slate-900 border border-cyan-500/40 rounded-3xl p-6 sm:p-8 flex flex-col overflow-hidden shadow-2xl">
-                <div className="flex items-center justify-between border-b border-slate-800 pb-4">
-                  <div>
-                    <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest">
-                      Nạp Nhiên Liệu Tri Thức • {formatAssignmentDate(activeLectureAssignment.assigned_date)}
-                    </span>
-                    <h3 className="text-xl font-bold text-white mt-1">
-                      {activeLectureAssignment.learning_units?.title}
-                    </h3>
+          {activeLectureAssignment && (() => {
+            const isMidtermApp =
+              activeLectureAssignment.learning_units?.title?.toLowerCase().includes('ôn tập thi giữa kì') ||
+              activeLectureAssignment.learning_units?.lecture_content_markdown?.includes('/lectures/eng11-midterm');
+
+            return (
+              <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-2 sm:p-4">
+                <div
+                  className={`w-full ${
+                    isMidtermApp ? 'max-w-6xl h-[92vh] max-h-[92vh]' : 'max-w-3xl max-h-[85vh]'
+                  } bg-slate-900 border border-cyan-500/40 rounded-3xl p-4 sm:p-8 flex flex-col overflow-hidden shadow-2xl transition-all`}
+                >
+                  <div className="flex items-center justify-between border-b border-slate-800 pb-4 flex-shrink-0">
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest">
+                          {isMidtermApp ? 'PHÒNG HỌC TƯƠNG TÁC (HTML5/JS)' : 'Nạp Nhiên Liệu Tri Thức'} •{' '}
+                          {formatAssignmentDate(activeLectureAssignment.assigned_date)}
+                        </span>
+                        {isMidtermApp && (
+                          <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-500/50">
+                            Live Studio
+                          </span>
+                        )}
+                      </div>
+                      <h3 className="text-xl font-bold text-white mt-1">
+                        {activeLectureAssignment.learning_units?.title}
+                      </h3>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      {isMidtermApp && (
+                        <a
+                          href="/lectures/eng11-midterm/index.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hidden sm:flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-cyan-950/80 text-cyan-300 hover:bg-cyan-900 text-xs font-bold border border-cyan-500/40 transition"
+                        >
+                          <span>Toàn Màn Hình</span>
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                      )}
+                      <button
+                        onClick={() => setActiveLectureAssignment(null)}
+                        className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition"
+                      >
+                        ✕
+                      </button>
+                    </div>
                   </div>
-                  <button
-                    onClick={() => setActiveLectureAssignment(null)}
-                    className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition"
-                  >
-                    ✕
-                  </button>
-                </div>
 
-                <div className="flex-1 overflow-y-auto py-6 pr-2">
-                  <FormattedContent
-                    text={activeLectureAssignment.learning_units?.lecture_content_markdown || ''}
-                    className="text-slate-200 text-sm leading-relaxed"
-                  />
-
-                  {/* Sơ đồ đính kèm */}
-                  {activeLectureAssignment.learning_units?.lecture_attachments?.map((att: any, idx: number) => (
-                    <div key={idx} className="mt-6 p-4 rounded-2xl bg-slate-800/80 border border-cyan-500/20">
-                      <p className="text-xs font-semibold text-cyan-300 mb-2">📌 Sơ đồ tư duy / Tài liệu học tập:</p>
-                      <img
-                        src={att.url}
-                        alt={att.name || 'Tài liệu'}
-                        className="max-h-72 w-auto mx-auto rounded-xl shadow-md border border-slate-700 object-contain"
+                  {isMidtermApp ? (
+                    <div className="flex-1 w-full h-full min-h-0 py-3">
+                      <iframe
+                        src="/lectures/eng11-midterm/index.html"
+                        className="w-full h-full border border-slate-700 rounded-2xl shadow-inner bg-slate-900"
+                        title="Bài Giảng Tương Tác Giữa Kì 1"
                       />
                     </div>
-                  ))}
-                </div>
+                  ) : (
+                    <div className="flex-1 overflow-y-auto py-6 pr-2">
+                      <FormattedContent
+                        text={activeLectureAssignment.learning_units?.lecture_content_markdown || ''}
+                        className="text-slate-200 text-sm leading-relaxed"
+                      />
 
-                <div className="border-t border-slate-800 pt-4 flex justify-end">
-                  <button
-                    onClick={() => setActiveLectureAssignment(null)}
-                    className="px-6 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white text-sm font-semibold rounded-xl transition shadow"
-                  >
-                    Đã Hiểu Bài, Sẵn Sàng Làm Bài!
-                  </button>
+                      {/* Sơ đồ đính kèm */}
+                      {activeLectureAssignment.learning_units?.lecture_attachments?.map((att: any, idx: number) => (
+                        <div key={idx} className="mt-6 p-4 rounded-2xl bg-slate-800/80 border border-cyan-500/20">
+                          <p className="text-xs font-semibold text-cyan-300 mb-2">📌 Sơ đồ tư duy / Tài liệu học tập:</p>
+                          <img
+                            src={att.url}
+                            alt={att.name || 'Tài liệu'}
+                            className="max-h-72 w-auto mx-auto rounded-xl shadow-md border border-slate-700 object-contain"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  <div className="border-t border-slate-800 pt-4 flex items-center justify-between flex-shrink-0">
+                    <div className="text-xs text-slate-400">
+                      {isMidtermApp ? (
+                        <span className="hidden sm:inline">
+                          🚀 Live Studio tự động chấm điểm phản xạ, phát hiện bẫy ngữ pháp và hỗ trợ phát âm bản xứ.
+                        </span>
+                      ) : null}
+                    </div>
+                    <button
+                      onClick={() => setActiveLectureAssignment(null)}
+                      className="px-6 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white text-sm font-semibold rounded-xl transition shadow"
+                    >
+                      Đã Hiểu Bài, Sẵn Sàng Làm Bài!
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
+            );
+          })()}
         </div>
       </SpaceBackground>
     );
@@ -887,25 +935,65 @@ export default function StudentDashboard() {
 
                         <div className={`grid grid-cols-1 ${assignment.assessment_attempts?.length === 1 ? 'md:grid-cols-2' : 'md:grid-cols-3'} gap-5 mt-4`}>
                           {/* Station 1: Bài Giảng & Từ Vựng */}
-                          <div className="p-5 rounded-2xl bg-white border border-slate-200 flex flex-col justify-between shadow-sm">
-                            <div>
-                              <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
-                                📖 Trạm 1: Bài Giảng & Lý Thuyết
-                              </span>
-                              <h4 className="text-base font-bold text-slate-900 mt-3">
-                                {assignment.learning_units?.title}
-                              </h4>
-                              <p className="text-xs text-slate-500 mt-1 line-clamp-3">
-                                {assignment.learning_units?.description || 'Nắm vững kiến thức trọng tâm.'}
-                              </p>
-                            </div>
-                            <button
-                              onClick={() => handleOpenLecture(assignment)}
-                              className="mt-6 w-full py-2.5 bg-blue-50 hover:bg-blue-100 text-blue-700 font-semibold text-sm rounded-xl border border-blue-200 transition"
-                            >
-                              Xem Bài Giảng & Lý Thuyết
-                            </button>
-                          </div>
+                          {(() => {
+                            const isMidtermApp =
+                              assignment.learning_units?.title?.toLowerCase().includes('ôn tập thi giữa kì') ||
+                              assignment.learning_units?.lecture_content_markdown?.includes('/lectures/eng11-midterm');
+
+                            return (
+                              <div
+                                className={`p-5 rounded-2xl bg-white border flex flex-col justify-between shadow-sm transition ${
+                                  isMidtermApp
+                                    ? 'border-blue-400 bg-gradient-to-b from-blue-50/50 to-white ring-1 ring-blue-300'
+                                    : 'border-slate-200'
+                                }`}
+                              >
+                                <div>
+                                  <div className="flex items-center justify-between gap-2">
+                                    <span
+                                      className={`text-xs font-bold px-2.5 py-1 rounded-full border ${
+                                        isMidtermApp
+                                          ? 'bg-blue-600 text-white border-blue-700'
+                                          : 'bg-blue-50 text-blue-700 border-blue-200'
+                                      }`}
+                                    >
+                                      {isMidtermApp ? '🚀 Trạm 1: Giảng Đường Tương Tác' : '📖 Trạm 1: Bài Giảng & Lý Thuyết'}
+                                    </span>
+                                    {isMidtermApp && (
+                                      <a
+                                        href="/lectures/eng11-midterm/index.html"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-xs text-blue-600 hover:text-blue-800 font-semibold flex items-center space-x-0.5"
+                                        title="Mở toàn màn hình trong tab mới"
+                                      >
+                                        <span>Tab mới</span>
+                                        <ExternalLink className="w-3 h-3" />
+                                      </a>
+                                    )}
+                                  </div>
+                                  <h4 className="text-base font-bold text-slate-900 mt-3">
+                                    {assignment.learning_units?.title}
+                                  </h4>
+                                  <p className="text-xs text-slate-500 mt-1 line-clamp-3">
+                                    {assignment.learning_units?.description || 'Nắm vững kiến thức trọng tâm.'}
+                                  </p>
+                                </div>
+                                <div className="mt-6">
+                                  <button
+                                    onClick={() => handleOpenLecture(assignment)}
+                                    className={`w-full py-2.5 font-semibold text-sm rounded-xl border transition shadow-sm ${
+                                      isMidtermApp
+                                        ? 'bg-blue-600 hover:bg-blue-700 text-white border-blue-700 shadow-blue-200'
+                                        : 'bg-blue-50 hover:bg-blue-100 text-blue-700 border-blue-200'
+                                    }`}
+                                  >
+                                    {isMidtermApp ? 'Vào Phòng Học Tương Tác (HTML/JS) 🌟' : 'Xem Bài Giảng & Lý Thuyết'}
+                                  </button>
+                                </div>
+                              </div>
+                            );
+                          })()}
 
                           {/* Station 2 & 3: Luyện tập tại lớp & Bài tập về nhà */}
                           {assignment.assessment_attempts?.map((att: any) => {
@@ -991,44 +1079,94 @@ export default function StudentDashboard() {
         </div>
 
         {/* Modal Bài Giảng */}
-        {activeLectureAssignment && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 backdrop-blur-sm p-4">
-            <div className="w-full max-w-3xl max-h-[85vh] bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col overflow-hidden shadow-2xl">
-              <div className="flex items-center justify-between border-b border-slate-100 pb-4">
-                <div>
-                  <span className="text-xs font-bold text-blue-600 uppercase">
-                    Bài Giảng • {formatAssignmentDate(activeLectureAssignment.assigned_date)}
-                  </span>
-                  <h3 className="text-xl font-bold text-slate-900 mt-1">
-                    {activeLectureAssignment.learning_units?.title}
-                  </h3>
+        {activeLectureAssignment && (() => {
+          const isMidtermApp =
+            activeLectureAssignment.learning_units?.title?.toLowerCase().includes('ôn tập thi giữa kì') ||
+            activeLectureAssignment.learning_units?.lecture_content_markdown?.includes('/lectures/eng11-midterm');
+
+          return (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-2 sm:p-4">
+              <div
+                className={`w-full ${
+                  isMidtermApp ? 'max-w-6xl h-[92vh] max-h-[92vh]' : 'max-w-3xl max-h-[85vh]'
+                } bg-white border border-slate-200 rounded-3xl p-4 sm:p-6 flex flex-col overflow-hidden shadow-2xl transition-all`}
+              >
+                <div className="flex items-center justify-between border-b border-slate-100 pb-3 sm:pb-4 flex-shrink-0">
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-bold text-blue-600 uppercase tracking-wide">
+                        {isMidtermApp ? 'PHÒNG HỌC TƯƠNG TÁC (HTML5/JS)' : 'Bài Giảng'} •{' '}
+                        {formatAssignmentDate(activeLectureAssignment.assigned_date)}
+                      </span>
+                      {isMidtermApp && (
+                        <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200">
+                          Live Studio
+                        </span>
+                      )}
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 mt-1">
+                      {activeLectureAssignment.learning_units?.title}
+                    </h3>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    {isMidtermApp && (
+                      <a
+                        href="/lectures/eng11-midterm/index.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hidden sm:flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-blue-50 text-blue-700 hover:bg-blue-100 text-xs font-bold border border-blue-200 transition"
+                      >
+                        <span>Toàn Màn Hình</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                    <button
+                      onClick={() => setActiveLectureAssignment(null)}
+                      className="p-2 text-slate-400 hover:text-slate-700 rounded-lg hover:bg-slate-100 transition"
+                    >
+                      ✕
+                    </button>
+                  </div>
                 </div>
-                <button
-                  onClick={() => setActiveLectureAssignment(null)}
-                  className="p-2 text-slate-400 hover:text-slate-700 rounded-lg hover:bg-slate-100 transition"
-                >
-                  ✕
-                </button>
-              </div>
 
-              <div className="flex-1 overflow-y-auto py-6">
-                <FormattedContent
-                  text={activeLectureAssignment.learning_units?.lecture_content_markdown || ''}
-                  className="text-slate-700 text-sm leading-relaxed"
-                />
-              </div>
+                {isMidtermApp ? (
+                  <div className="flex-1 w-full h-full min-h-0 py-3">
+                    <iframe
+                      src="/lectures/eng11-midterm/index.html"
+                      className="w-full h-full border border-slate-200 rounded-2xl shadow-inner bg-slate-50"
+                      title="Bài Giảng Tương Tác Giữa Kì 1"
+                    />
+                  </div>
+                ) : (
+                  <div className="flex-1 overflow-y-auto py-6">
+                    <FormattedContent
+                      text={activeLectureAssignment.learning_units?.lecture_content_markdown || ''}
+                      className="text-slate-700 text-sm leading-relaxed"
+                    />
+                  </div>
+                )}
 
-              <div className="border-t border-slate-100 pt-4 flex justify-end">
-                <button
-                  onClick={() => setActiveLectureAssignment(null)}
-                  className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm rounded-xl transition shadow-sm"
-                >
-                  Đã Hiểu Bài
-                </button>
+                <div className="border-t border-slate-100 pt-3 flex items-center justify-between flex-shrink-0">
+                  <div className="text-xs text-slate-500">
+                    {isMidtermApp ? (
+                      <span className="hidden sm:inline">
+                        💡 Tự động chấm điểm phản xạ, sửa lỗi ngữ pháp tức thì và phát âm giọng bản xứ.
+                      </span>
+                    ) : (
+                      <span>Thầy Thức chúc bạn học tốt!</span>
+                    )}
+                  </div>
+                  <button
+                    onClick={() => setActiveLectureAssignment(null)}
+                    className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm rounded-xl transition shadow-sm"
+                  >
+                    Đã Hiểu Bài
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          );
+        })()}
       </div>
     </div>
   );
