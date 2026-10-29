@@ -549,96 +549,92 @@ const LECTURE_DATA = {
 
   // 3. FEATURE 1: COLLOCATION MATCHING PAIRS (KÉO THẢ / NỐI CỤM TỪ)
   collocationPairs: [
-    { verb: "cut down on", noun: "fatty foods and sugary drinks", vi: "cắt giảm đồ ăn dầu mỡ & nước ngọt" },
-    { verb: "bridge", noun: "the generation gap in modern families", vi: "thu hẹp khoảng cách thế hệ trong gia đình" },
-    { verb: "follow in", noun: "parents' footsteps and take over business", vi: "tiếp bước nối nghiệp cha mẹ" },
-    { verb: "reduce", noun: "carbon footprint and greenhouse gases", vi: "cắt giảm lượng phát thải carbon" },
-    { verb: "impose", noun: "strict rules and career choices on children", vi: "áp đặt quy tắc & nghề nghiệp lên con" },
-    { verb: "prescribe", noun: "antibiotics for bacterial infections", vi: "kê đơn thuốc kháng sinh trị nhiễm khuẩn" },
-    { verb: "operate on", noun: "renewable solar and wind energy", vi: "vận hành bằng năng lượng tái tạo" },
-    { verb: "boost", noun: "the immune system with vitamin C", vi: "tăng cường hệ miễn dịch với vitamin C" }
+    { id: 1, verb: "cut down on", noun: "fatty foods and sugary drinks", meaning: "(cắt giảm thức ăn dầu mỡ & đồ ngọt)" },
+    { id: 2, verb: "bridge", noun: "the generation gap in modern families", meaning: "(thu hẹp khoảng cách thế hệ)" },
+    { id: 3, verb: "follow in", noun: "parents' footsteps and take over business", meaning: "(tiếp bước nối nghiệp cha mẹ)" },
+    { id: 4, verb: "reduce", noun: "carbon footprint and greenhouse gases", meaning: "(giảm lượng phát thải carbon)" },
+    { id: 5, verb: "impose", noun: "strict rules and career choices on children", meaning: "(áp đặt quy tắc lên con cái)" },
+    { id: 6, verb: "prescribe", noun: "antibiotics for bacterial infections", meaning: "(kê đơn thuốc kháng sinh)" },
+    { id: 7, verb: "operate on", noun: "renewable solar and wind energy", meaning: "(vận hành bằng năng lượng tái tạo)" },
+    { id: 8, verb: "boost", noun: "the immune system with vitamin C", meaning: "(tăng cường hệ miễn dịch)" }
   ],
 
   // FEATURE 1B: ODD-ONE-OUT COLLOCATION (TÌM TỪ KHÔNG ĐI CÙNG ĐƯỢC)
   oddOneOut: [
     {
+      id: 1,
       nounPhrase: "________ the generation gap",
-      options: [
-        { word: "bridge", isOdd: false },
-        { word: "narrow", isOdd: false },
-        { word: "widen", isOdd: false },
-        { word: "prescribe", isOdd: true, reason: "'prescribe' chỉ đi với 'antibiotics / medicine', không thể đi với 'generation gap'." }
-      ]
+      options: ["bridge", "narrow", "widen", "prescribe"],
+      wrongIndex: 3,
+      explanation: "Chính xác! Ta dùng 'bridge / narrow / widen the generation gap' (thu hẹp/mở rộng khoảng cách thế hệ). Từ 'prescribe' chỉ dùng cho thuốc kháng sinh!"
     },
     {
+      id: 2,
       nounPhrase: "a(n) ________ family",
-      options: [
-        { word: "nuclear", isOdd: false },
-        { word: "extended", isOdd: false },
-        { word: "single-parent", isOdd: false },
-        { word: "renewable", isOdd: true, reason: "'renewable' (có thể tái tạo) chỉ đi với năng lượng, không thể dùng miêu tả gia đình." }
-      ]
+      options: ["nuclear", "extended", "single-parent", "renewable"],
+      wrongIndex: 3,
+      explanation: "Chính xác! 'Nuclear / extended / single-parent family' là các kiểu gia đình (hạt nhân, nhiều thế hệ, đơn thân). 'Renewable' (tái tạo) chỉ dùng cho năng lượng!"
     },
     {
+      id: 3,
       nounPhrase: "________ antibiotics",
-      options: [
-        { word: "prescribe", isOdd: false },
-        { word: "take", isOdd: false },
-        { word: "overuse", isOdd: false },
-        { word: "install", isOdd: true, reason: "'install' (lắp đặt thiết bị/cảm biến), không thể dùng cho thuốc kháng sinh." }
-      ]
+      options: ["prescribe", "take", "overuse", "install"],
+      wrongIndex: 3,
+      explanation: "Chính xác! Ta nói 'prescribe / take / overuse antibiotics' (kê đơn, uống, lạm dụng kháng sinh). 'Install' (lắp đặt) chỉ dùng cho máy móc/thiết bị!"
     },
     {
+      id: 4,
       nounPhrase: "________ carbon footprint",
-      options: [
-        { word: "reduce", isOdd: false },
-        { word: "minimize", isOdd: false },
-        { word: "shrink", isOdd: false },
-        { word: "infect", isOdd: true, reason: "'infect' (lây nhiễm mầm bệnh), không thể đi với 'carbon footprint'." }
-      ]
+      options: ["reduce", "minimize", "shrink", "infect"],
+      wrongIndex: 3,
+      explanation: "Chính xác! Ta nói 'reduce / minimize / shrink carbon footprint' (giảm thiểu dấu chân carbon). 'Infect' (lây nhiễm) chỉ dùng cho mầm bệnh vi khuẩn/virus!"
     }
   ],
 
   // 4. FEATURE 2: WORD FAMILY TREE (CÂY TỪ LOẠI TƯƠNG TÁC)
   wordFamilyRoots: [
     {
+      id: 1,
       root: "SUSTAIN",
       pos: "verb",
       meaning: "duy trì, chống đỡ",
       derivatives: [
-        { form: "sustainability", pos: "noun", vi: "sự bền vững môi trường" },
-        { form: "sustainable", pos: "adjective", vi: "bền vững, thân thiện sinh thái" },
-        { form: "sustainably", pos: "adverb", vi: "một cách bền vững" }
+        { word: "sustainability", pos: "noun", vi: "sự bền vững môi trường" },
+        { word: "sustainable", pos: "adjective", vi: "bền vững, thân thiện sinh thái" },
+        { word: "sustainably", pos: "adverb", vi: "một cách bền vững" }
       ]
     },
     {
+      id: 2,
       root: "INFECT",
       pos: "verb",
       meaning: "lây nhiễm, làm nhiễm trùng",
       derivatives: [
-        { form: "infection", pos: "noun", vi: "sự nhiễm khuẩn, lây nhiễm" },
-        { form: "infectious", pos: "adjective", vi: "có tính lây nhiễm (bệnh)" },
-        { form: "disinfectant", pos: "noun", vi: "chất khử khuẩn" }
+        { word: "infection", pos: "noun", vi: "sự nhiễm khuẩn, lây nhiễm" },
+        { word: "infectious", pos: "adjective", vi: "có tính lây nhiễm (bệnh)" },
+        { word: "disinfectant", pos: "noun", vi: "chất khử khuẩn" }
       ]
     },
     {
+      id: 3,
       root: "NUTRIENT",
       pos: "noun",
       meaning: "chất dinh dưỡng",
       derivatives: [
-        { form: "nutrition", pos: "noun", vi: "ngành/chế độ dinh dưỡng" },
-        { form: "nutritious", pos: "adjective", vi: "bổ dưỡng, giàu dinh dưỡng" },
-        { form: "malnutrition", pos: "noun", vi: "suy dinh dưỡng" }
+        { word: "nutrition", pos: "noun", vi: "ngành/chế độ dinh dưỡng" },
+        { word: "nutritious", pos: "adjective", vi: "bổ dưỡng, giàu dinh dưỡng" },
+        { word: "malnutrition", pos: "noun", vi: "suy dinh dưỡng" }
       ]
     },
     {
+      id: 4,
       root: "LIVE",
       pos: "verb",
       meaning: "sống, sinh sống",
       derivatives: [
-        { form: "liveable", pos: "adjective", vi: "đáng sống (thành phố)" },
-        { form: "liveability", pos: "noun", vi: "chất lượng / độ đáng sống" },
-        { form: "livelihood", pos: "noun", vi: "kế sinh nhai" }
+        { word: "liveable", pos: "adjective", vi: "đáng sống (thành phố)" },
+        { word: "liveability", pos: "noun", vi: "chất lượng / độ đáng sống" },
+        { word: "livelihood", pos: "noun", vi: "kế sinh nhai" }
       ]
     }
   ],
@@ -646,91 +642,119 @@ const LECTURE_DATA = {
   // FEATURE 2B: OPEN CLOZE WORD FORMATION (ĐIỀN DẠNG ĐÚNG CỦA TỪ TRONG NGOẶC)
   openCloze: [
     {
-      sentence: "It is crucial to follow a _________ diet containing all vital vitamins and minerals.",
+      id: 1,
+      sentence: "It is crucial to follow a _________ diet containing all vital vitamins and minerals. (BALANCE)",
       root: "BALANCE",
-      answer: "balanced",
-      hint: "Trước danh từ 'diet' cần một TÍNH TỪ mang nghĩa 'cân bằng'."
+      expectedAnswer: "balanced",
+      explanation: "Trước danh từ 'diet' cần một TÍNH TỪ mang nghĩa 'cân bằng' ➔ balanced."
     },
     {
-      sentence: "Abundant green spaces contribute greatly to the _________ of smart cities.",
+      id: 2,
+      sentence: "Abundant green spaces contribute greatly to the _________ of smart cities. (SUSTAIN)",
       root: "SUSTAIN",
-      answer: "sustainability",
-      hint: "Sau mạo từ 'the' và trước giới từ 'of' cần một DANH TỪ chỉ 'sự bền vững'."
+      expectedAnswer: "sustainability",
+      explanation: "Sau mạo từ 'the' và trước giới từ 'of' cần một DANH TỪ chỉ 'sự bền vững' ➔ sustainability."
     },
     {
-      sentence: "Generational disputes often stem from conflicting _________ regarding career choices.",
+      id: 3,
+      sentence: "Generational disputes often stem from conflicting _________ regarding career choices. (VIEW)",
       root: "VIEW",
-      answer: "viewpoints",
-      hint: "Sau tính từ 'conflicting' cần một DANH TỪ SỐ NHIỀU chỉ 'quan điểm'."
+      expectedAnswer: "viewpoints",
+      explanation: "Sau tính từ 'conflicting' cần một DANH TỪ SỐ NHIỀU chỉ 'quan điểm' ➔ viewpoints."
     },
     {
-      sentence: "Common cold and seasonal flu are typical _________ illnesses that antibiotics cannot cure.",
+      id: 4,
+      sentence: "Common cold and seasonal flu are typical _________ illnesses that antibiotics cannot cure. (VIRUS)",
       root: "VIRUS",
-      answer: "viral",
-      hint: "Trước danh từ 'illnesses' cần TÍNH TỪ mang nghĩa 'do vi-rút gây ra'."
+      expectedAnswer: "viral",
+      explanation: "Trước danh từ 'illnesses' cần TÍNH TỪ mang nghĩa 'do vi-rút gây ra' ➔ viral."
     },
     {
-      sentence: "To boost your physical endurance, you should exercise _________ every morning.",
+      id: 5,
+      sentence: "To boost your physical endurance, you should exercise _________ every morning. (REGULAR)",
       root: "REGULAR",
-      answer: "regularly",
-      hint: "Bổ nghĩa cho động từ 'exercise' cần một TRẠNG TỪ chỉ tần suất."
+      expectedAnswer: "regularly",
+      explanation: "Bổ nghĩa cho động từ 'exercise' cần một TRẠNG TỪ chỉ tần suất ➔ regularly."
     }
   ],
 
   // 5. FEATURE 3: ACTIVE RECALL (FIRST-LETTER CLUE)
   activeRecall: [
     {
+      id: 1,
       sentence: "Modern city planners are building dedicated p_____________ zones where all motor vehicles are banned.",
-      clue: "pedestrian",
-      def: "Khu vực / tuyến đường dành riêng cho người đi bộ."
+      clue: "p",
+      targetWord: "pedestrian",
+      ipa: "/pəˈdestriən/",
+      vi: "Người đi bộ / khu vực dành riêng cho người đi bộ.",
+      definition: "A person walking rather than travelling in a vehicle; zones reserved strictly for walkers."
     },
     {
+      id: 2,
       sentence: "Eating plenty of fresh vegetables and keeping active promote human l___________ substantially.",
-      clue: "longevity",
-      def: "Tuổi thọ, sự sống lâu trăm tuổi."
+      clue: "l",
+      targetWord: "longevity",
+      ipa: "/lɒnˈdʒevəti/",
+      vi: "Tuổi thọ, sự sống lâu trăm tuổi.",
+      definition: "Long life, the fact of living for many years."
     },
     {
+      id: 3,
       sentence: "Family meals and patient conversations help b__________ the generation gap.",
-      clue: "bridge",
-      def: "Thu hẹp khoảng cách bất đồng thế hệ."
+      clue: "b",
+      targetWord: "bridge",
+      ipa: "/brɪdʒ/",
+      vi: "Thu hẹp khoảng cách bất đồng thế hệ.",
+      definition: "To make the difference between two groups smaller or overcome a divide."
     },
     {
+      id: 4,
       sentence: "Smart streetlights equipped with infrared s___________ automatically turn on when pedestrians walk past.",
-      clue: "sensors",
-      def: "Thiết bị cảm biến điện tử thông minh."
+      clue: "s",
+      targetWord: "sensors",
+      ipa: "/ˈsensəz/",
+      vi: "Thiết bị cảm biến điện tử thông minh.",
+      definition: "Devices that detect or measure physical properties and respond to them."
     },
     {
+      id: 5,
       sentence: "Her father sets a strict 9:30 PM c___________ on weekdays to ensure her safety.",
-      clue: "curfew",
-      def: "Giờ giới nghiêm buộc phải về đến nhà."
+      clue: "c",
+      targetWord: "curfew",
+      ipa: "/ˈkɜːfjuː/",
+      vi: "Giờ giới nghiêm buộc phải về đến nhà.",
+      definition: "A rule requiring people to remain indoors between specified hours, especially at night."
     }
   ],
 
   // 6. FEATURE 4: INTERACTIVE SENTENCE WRITING (THỬ THÁCH ĐẶT CÂU PHẢN HỒI NGAY)
   writingChallenges: [
     {
-      id: "w1",
+      id: 1,
       keyword: "cut down on",
       prompt: "Hãy viết 1 câu hoàn chỉnh khuyên bạn bè 'cắt giảm đồ ngọt hoặc đồ ăn nhanh để sống khỏe hơn' sử dụng cụm từ 'cut down on'.",
       requiredWords: ["cut down on"],
+      forbiddenWords: ["cut down at", "cut down in"],
       modelAnswer: "You should cut down on fast food and sugary drinks to live a healthier life."
     },
     {
-      id: "w2",
+      id: 2,
       keyword: "mustn't",
       prompt: "Hãy viết 1 câu diễn tả nội quy phòng thi: 'Học sinh không được phép sử dụng điện thoại trong giờ kiểm tra' sử dụng 'mustn't'.",
       requiredWords: ["mustn't"],
+      forbiddenWords: ["don't have to use", "doesn't have to use"],
       modelAnswer: "Students mustn't use their smartphones during the examination."
     },
     {
-      id: "w3",
+      id: 3,
       keyword: "haven't ... since",
       prompt: "Hãy viết 1 câu sử dụng thì Hiện tại hoàn thành với 'haven't' và 'since' diễn tả việc bạn chưa đến thăm một thành phố thông minh kể từ năm ngoái.",
       requiredWords: ["haven't", "since"],
+      forbiddenWords: ["haven't visited ... for 2025"],
       modelAnswer: "I haven't visited this smart city since last year."
     },
     {
-      id: "w4",
+      id: 4,
       keyword: "tastes / smells",
       prompt: "Hãy viết 1 câu khen ngợi món ăn mẹ nấu: 'Món súp này có vị rất ngon' sử dụng linking verb 'tastes' (chú ý: dùng tính từ, KHÔNG dùng trạng từ).",
       requiredWords: ["tastes"],
