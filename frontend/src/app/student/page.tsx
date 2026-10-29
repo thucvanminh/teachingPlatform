@@ -890,7 +890,7 @@ export default function StudentDashboard() {
                           <div className="p-5 rounded-2xl bg-white border border-slate-200 flex flex-col justify-between shadow-sm">
                             <div>
                               <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
-                                📖 Trạm 1: Bài Giảng & 30 Từ Vựng
+                                📖 Trạm 1: Bài Giảng & Lý Thuyết
                               </span>
                               <h4 className="text-base font-bold text-slate-900 mt-3">
                                 {assignment.learning_units?.title}
@@ -903,7 +903,7 @@ export default function StudentDashboard() {
                               onClick={() => handleOpenLecture(assignment)}
                               className="mt-6 w-full py-2.5 bg-blue-50 hover:bg-blue-100 text-blue-700 font-semibold text-sm rounded-xl border border-blue-200 transition"
                             >
-                              Đọc Bài Giảng & Sổ Từ Vựng
+                              Xem Bài Giảng & Lý Thuyết
                             </button>
                           </div>
 
