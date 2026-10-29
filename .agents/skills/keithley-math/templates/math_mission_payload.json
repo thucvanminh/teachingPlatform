@@ -1,0 +1,62 @@
+{
+  "assignedDate": "2026-10-30",
+  "unitTitle": "Lesson 9: Parallel Lines & Angles Formed by a Transversal",
+  "unitDescription": "Deep Space Telemetry: Alternate interior, corresponding, and consecutive interior angles along orbital trajectories.",
+  "teacherNote": "Review planetary flight angles carefully, Cadet Keithley! Double-check alternate interior angle theorems.",
+  "assessmentTitle": "Cosmic Geometry Mission: Parallel Lines & Transversals (90-120 mins)",
+  "assessmentDescription": "Timed celestial mathematics assessment with per-question chronometer controls.",
+  "timeLimitMinutes": 120,
+  "maxScore": 10.0,
+  "lectureMarkdown": "# 🚀 Space Flight Briefing: Parallel Lines & Transversals\n\nWelcome aboard, Astronaut Keithley! Today we navigate parallel orbital lines intersected by a traversal flight vector.\n\n### 1. Angle Pairs Along a Transversal\n- **Alternate Interior Angles:** Equal in degree measure when lines are parallel ($a \\parallel b \\Rightarrow \\widehat{A_1} = \\widehat{B_3}$).\n- **Corresponding Angles:** In identical relative positions ($\\\\widehat{A_1} = \\widehat{B_1}$).\n- **Consecutive Interior Angles:** Supplementary ($180^\\circ$).",
+  "questions": [
+    {
+      "order_index": 1,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 1: Mercury Orbit • Angle Recognition",
+      "content_markdown": "In orbital navigation, two straight trajectory lines $a$ and $b$ are parallel ($a \\parallel b$) cut by transversal line $c$. If an alternate interior angle measures $65^\\circ$, what is the measure of its corresponding alternate interior angle?",
+      "options": [
+        { "id": "A", "text": "$65^\\circ$" },
+        { "id": "B", "text": "$115^\\circ$" },
+        { "id": "C", "text": "$25^\\circ$" },
+        { "id": "D", "text": "$180^\\circ$" }
+      ],
+      "correct_option_id": "A",
+      "explanation": "ANSWER A: Parallel line theorem states that alternate interior angles are equal in measure."
+    },
+    {
+      "order_index": 2,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 2: Venus Base • Vector Diagram Analysis",
+      "content_markdown": "Refer to the orbital radar diagram below:\n\n![Figure: Parallel Trajectories cut by Flight Path](/images/geometry/question_4_intersecting_lines.svg)\n\nWhich pairs of angles are supplementary (sum = $180^\\circ$)?",
+      "options": [
+        { "id": "A", "text": "Linear pairs along line $AB$" },
+        { "id": "B", "text": "Vertical opposite angles" },
+        { "id": "C", "text": "Angles with no common rays" },
+        { "id": "D", "text": "Complementary angles only" }
+      ],
+      "correct_option_id": "A",
+      "explanation": "ANSWER A: Linear pairs always sum to 180° as their exterior rays form a straight line."
+    },
+    {
+      "order_index": 3,
+      "type": "FILL_IN_BLANK",
+      "points": 0.4,
+      "sectionName": "Sector 3: Earth Mission Control • Numerical Telemetry",
+      "content_markdown": "Given two consecutive interior angles $\\widehat{\\alpha}$ and $\\widehat{\\beta}$ along parallel orbital lines where $\\widehat{\\alpha} = 112^\\circ$. Calculate the exact degree measure of angle $\\widehat{\\beta}$. (Enter numerical value only):",
+      "expected_value": "68",
+      "acceptable_answers": ["68", "68°", "68 deg"],
+      "explanation": "ANSWER: 68. Consecutive interior angles are supplementary: 180° - 112° = 68°."
+    },
+    {
+      "order_index": 4,
+      "type": "ESSAY_UPLOAD",
+      "points": 0.5,
+      "sectionName": "Sector 7: Deep Space • Geometric Proof",
+      "content_markdown": "Prove mathematically that if a line is perpendicular to one of two parallel lines, it is also perpendicular to the other line ($c \\perp a$ and $a \\parallel b \\Rightarrow c \\perp b$). Provide step-by-step angle deductions.",
+      "rubric": "Proof deduction: 1) Angle between c and a is 90°. 2) Corresponding angle on line b equals 90° due to parallel property. 3) Therefore c ⊥ b.",
+      "explanation": "MODEL PROOF:\n1. Since c ⊥ a at point A, the angle ∠(c, a) = 90°.\n2. Given a ∥ b, transversal line c forms corresponding angles on line b that are equal: ∠(c, b) = ∠(c, a) = 90°.\n3. By definition of perpendicular lines, c ⊥ b."
+    }
+  ]
+}

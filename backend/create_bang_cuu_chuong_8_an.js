@@ -75,11 +75,13 @@ async function main() {
   });
   console.log('✓ Đã tạo Assessment:', assessment.title);
 
-  // 5. Danh sách 12 câu hỏi trắc nghiệm sinh động có kèm ảnh minh họa từ ~/Dantey/teaching/lop1
+  // 5. Danh sách 12 câu hỏi trắc nghiệm sinh động có kèm ảnh minh họa từ Supabase Storage CDN
+  const CDN_BASE = 'https://jxikmcvhamcdrsmyoyid.supabase.co/storage/v1/object/public/lectures/lop1';
+
   const questionsData = [
     {
       order_index: 1,
-      image: '/images/lop1/panels_dragon/panel_01.jpg',
+      image: `${CDN_BASE}/panels_dragon/panel_01.jpg`,
       imageAlt: 'Công chúa Amara và Chú Rồng Xanh',
       prompt: 'Chú Rồng Xanh ngoan ngoãn mang về tặng Bé An **1** giỏ táo thần kỳ. Trong giỏ có đúng **8** quả táo đỏ mọng phát sáng. Hỏi Bé An có tất cả bao nhiêu quả táo thần?\n\n*Phép tính: $8 \\times 1 = ?$*',
       options: [
@@ -94,7 +96,7 @@ async function main() {
     },
     {
       order_index: 2,
-      image: '/images/lop1/panels_candy/panel_01.jpg',
+      image: `${CDN_BASE}/panels_candy/panel_01.jpg`,
       imageAlt: 'Ngôi nhà bánh gừng ở Xứ Sở Kẹo Ngọt',
       prompt: 'Ở Xứ Sở Kẹo Ngọt, Công chúa nướng bánh quy gừng thơm phức xếp vào **2** chiếc đĩa thần kỳ. Mỗi chiếc đĩa có đúng **8** chiếc bánh quy. Hỏi Công chúa đã nướng tất cả bao nhiêu chiếc bánh quy gừng?\n\n*Phép tính: $8 \\times 2 = 8 + 8 = ?$*',
       options: [
@@ -109,7 +111,7 @@ async function main() {
     },
     {
       order_index: 3,
-      image: '/images/lop1/panels_dragon/panel_03.jpg',
+      image: `${CDN_BASE}/panels_dragon/panel_03.jpg`,
       imageAlt: 'Khu rừng nấm thần tiên lấp lánh',
       prompt: 'Chú Rồng Xanh bay vào Khu Rừng Thần Tiên và phát hiện **3** khóm nấm phát sáng bảy màu. Mỗi khóm nấm có đúng **8** cây nấm lung linh. Hỏi có tất cả bao nhiêu cây nấm phát sáng trong khu rừng?\n\n*Phép tính: $8 \\times 3 = ?$*',
       options: [
@@ -124,7 +126,7 @@ async function main() {
     },
     {
       order_index: 4,
-      image: '/images/lop1/panels_candy/panel_02.jpg',
+      image: `${CDN_BASE}/panels_candy/panel_02.jpg`,
       imageAlt: 'Cây kẹo mút khổng lồ bảy màu',
       prompt: 'Bé An hái kẹo mút cầu vồng và bó thành **4** bó kẹo thật xinh xắn. Mỗi bó kẹo có đúng **8** chiếc kẹo ngọt ngào. Hỏi Bé An có tất cả bao nhiêu chiếc kẹo mút cầu vồng?\n\n*Phép tính: $8 \\times 4 = ?$*',
       options: [
@@ -139,7 +141,7 @@ async function main() {
     },
     {
       order_index: 5,
-      image: '/images/lop1/panels_dragon/panel_09.jpg',
+      image: `${CDN_BASE}/panels_dragon/panel_09.jpg`,
       imageAlt: 'Chiếc rương kho báu vàng lấp lánh',
       prompt: 'Chú Rồng Xanh tìm thấy **5** chiếc rương kho báu vàng lấp lánh. Trong mỗi chiếc rương có đúng **8** viên ngọc rồng tỏa sáng. Hỏi Chú Rồng Xanh có tất cả bao nhiêu viên ngọc rồng?\n\n*Phép tính: $8 \\times 5 = ?$*',
       options: [
@@ -154,7 +156,7 @@ async function main() {
     },
     {
       order_index: 6,
-      image: '/images/lop1/panels_nhan_6/bee_flower.jpg',
+      image: `${CDN_BASE}/panels_nhan_6/bee_flower.jpg`,
       imageAlt: 'Những chú ong chăm chỉ lấy mật bên vườn hoa',
       prompt: 'Trong vườn hoa hoàng gia có **6** đóa hoa hướng dương rực rỡ. Mỗi đóa hoa có **8** chú ong chăm chỉ đang lấy mật. Hỏi có tất cả bao nhiêu chú ong đang chăm chỉ lấy mật?\n\n*Phép tính: $8 \\times 6 = ?$*',
       options: [
@@ -169,7 +171,7 @@ async function main() {
     },
     {
       order_index: 7,
-      image: '/images/lop1/panels_dragon/panel_06.jpg',
+      image: `${CDN_BASE}/panels_dragon/panel_06.jpg`,
       imageAlt: 'Vườn hoa pha lê và cổng đá thần tiên',
       prompt: 'Để mở cánh cổng đá bước vào lâu đài pha lê, Chú Rồng Xanh cần nhập mật mã là kết quả của phép tính $8 \\times 7$. Bé An hãy giúp Rồng Xanh chọn mật mã chính xác nhé!\n\n*Phép tính: $8 \\times 7 = ?$*',
       options: [
@@ -184,7 +186,7 @@ async function main() {
     },
     {
       order_index: 8,
-      image: '/images/lop1/panels_ocean/panel_01.jpg',
+      image: `${CDN_BASE}/panels_ocean/panel_01.jpg`,
       imageAlt: 'Đàn cá heo tung tăng dưới đại dương thần tiên',
       prompt: 'Dưới đại dương thần tiên có **8** gia đình cá heo tung tăng bơi lội. Mỗi gia đình cá heo gồm đúng **8** thành viên đáng yêu. Hỏi cả đàn cá heo có tất cả bao nhiêu thành viên?\n\n*Phép tính: $8 \\times 8 = ?$*',
       options: [
@@ -199,7 +201,7 @@ async function main() {
     },
     {
       order_index: 9,
-      image: '/images/lop1/panels_nhan_6/eagle_flight.jpg',
+      image: `${CDN_BASE}/panels_nhan_6/eagle_flight.jpg`,
       imageAlt: 'Chú đại bàng dũng mãnh vượt núi tuyết',
       prompt: 'Chú đại bàng dũng cảm bay qua **9** ngọn núi tuyết hùng vĩ. Ở mỗi ngọn núi, đại bàng tìm thấy **8** viên đá pha lê băng giá lấp lánh. Hỏi đại bàng đã thu thập được tất cả bao nhiêu viên đá pha lê?\n\n*Phép tính: $8 \\times 9 = ?$*',
       options: [
@@ -214,7 +216,7 @@ async function main() {
     },
     {
       order_index: 10,
-      image: '/images/lop1/panels_dragon/panel_12.jpg',
+      image: `${CDN_BASE}/panels_dragon/panel_12.jpg`,
       imageAlt: 'Vương miện vàng hoàng gia và tiệc mừng',
       prompt: 'Để chúc mừng Bé An về đích xuất sắc, Công chúa chuẩn bị **10** bàn tiệc hoàng gia. Mỗi bàn tiệc có **8** ly kem dâu mát lạnh. Hỏi có tất cả bao nhiêu ly kem dâu trên các bàn tiệc?\n\n*Phép tính: $8 \\times 10 = ?$*',
       options: [
@@ -229,7 +231,7 @@ async function main() {
     },
     {
       order_index: 11,
-      image: '/images/lop1/Tam_11_Cong_Chua_Va_Chu_Rong_Xanh_3_So_3_Chu_So.png',
+      image: `${CDN_BASE}/Tam_11_Cong_Chua_Va_Chu_Rong_Xanh_3_So_3_Chu_So.png`,
       imageAlt: 'Công chúa và Chú Rồng Xanh',
       prompt: '⭐ **Đố vui quy luật:** Chú Rồng Xanh bước lên bậc thang thần kỳ theo quy luật Bảng nhân 8:\n\n$$8, \\quad 16, \\quad 24, \\quad 32, \\quad [\\;?\\;]$$\n\nBé An hãy đoán xem số tiếp theo trên bậc thang thần kỳ là số mấy nhé?',
       options: [
@@ -244,7 +246,7 @@ async function main() {
     },
     {
       order_index: 12,
-      image: '/images/lop1/panels_nhan_5/magic_book.jpg',
+      image: `${CDN_BASE}/panels_nhan_5/magic_book.jpg`,
       imageAlt: 'Cuốn sách phép thuật toán học',
       prompt: '📖 **Bí kíp toán học:** Cuốn sách phép thuật mở ra câu đố: Phép cộng các số giống nhau dưới đây:\n\n$$8 + 8 + 8 + 8$$\n\nĐược viết gọn lại thành phép nhân nào dưới đây nhỉ?',
       options: [
