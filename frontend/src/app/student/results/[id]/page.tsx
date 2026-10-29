@@ -91,7 +91,7 @@ export default function StudentResultPage({ params }: { params: Promise<{ id: st
             <MessageSquare className="w-6 h-6 text-purple-400 flex-shrink-0 mt-1" />
             <div>
               <h3 className="text-sm font-bold text-purple-300">
-                Thông Điệp Đánh Giá Từ Thầy Minh (Trạm Chỉ Huy)
+                Thông Điệp Đánh Giá Từ Thầy Thức (Trạm Chỉ Huy)
               </h3>
               <p className="text-slate-200 text-sm mt-1 italic leading-relaxed">
                 "{attempt.overall_feedback}"

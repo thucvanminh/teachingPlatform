@@ -139,7 +139,7 @@ export default function StudentDashboard() {
                 <p className="text-sm text-slate-300 mt-2 max-w-xl">
                   {todayAssignment?.teacher_daily_note ? (
                     <span className="text-amber-300 italic">
-                      "Thông điệp từ Thầy Minh: {todayAssignment.teacher_daily_note}"
+                      "Thông điệp từ Thầy Thức: {todayAssignment.teacher_daily_note}"
                     </span>
                   ) : (
                     'Hệ thống đã sẵn sàng các tọa độ bài học theo từng ngày. Hãy nhấn vào thẻ ngày để bắt đầu nhiệm vụ!'
@@ -535,7 +535,7 @@ export default function StudentDashboard() {
                 <Rocket className="w-12 h-12 text-slate-600 mx-auto mb-3" />
                 <h3 className="text-lg font-bold text-slate-300">Chưa có bài học nào được giao</h3>
                 <p className="text-xs text-slate-400 mt-1">
-                  Thầy Minh sẽ lên lịch và giao bài mới vào trạm không gian của con sớm nhé!
+                  Thầy Thức sẽ lên lịch và giao bài mới vào trạm không gian của con sớm nhé!
                 </p>
               </div>
             )}
@@ -658,7 +658,7 @@ export default function StudentDashboard() {
                         </h3>
                         {assignment.teacher_daily_note && (
                           <p className="text-xs text-pink-600 mt-1 font-semibold italic">
-                            💌 Thầy Minh dặn dò: "{assignment.teacher_daily_note}"
+                            💌 Thầy Thức dặn dò: "{assignment.teacher_daily_note}"
                           </p>
                         )}
                       </div>
@@ -797,7 +797,7 @@ export default function StudentDashboard() {
             <p className="text-sm text-slate-500 mt-2 max-w-xl">
               {todayAssignment?.teacher_daily_note ? (
                 <span className="text-amber-800 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200/80 inline-block font-medium">
-                  "Lời dặn từ Thầy Minh: {todayAssignment.teacher_daily_note}"
+                  "Lời dặn từ Thầy Thức: {todayAssignment.teacher_daily_note}"
                 </span>
               ) : (
                 'Tập trung rèn luyện tư duy, chiến thuật làm bài và tăng tốc độ giải đề.'

@@ -187,7 +187,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
         timeSpentSeconds: Math.max(timeSpent, 60),
       });
 
-      alert('🎉 Nộp bài thành công! Thầy Minh đã nhận được bài làm của con.');
+      alert('🎉 Nộp bài thành công! Thầy Thức đã nhận được bài làm của con.');
       router.push('/student');
     } catch (err: any) {
       alert(`Nộp bài thất bại: ${err.message}`);

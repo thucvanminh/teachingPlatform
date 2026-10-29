@@ -109,7 +109,7 @@ export default function ParentDashboard() {
                   {/* Lời dặn dò của giáo viên */}
                   {asgn.teacher_daily_note && (
                     <div className="p-3.5 rounded-2xl bg-amber-50/80 border border-amber-200 text-xs text-amber-900 italic">
-                      💬 <strong>Lời dặn của Thầy Minh:</strong> "{asgn.teacher_daily_note}"
+                      💬 <strong>Lời dặn của Thầy Thức:</strong> "{asgn.teacher_daily_note}"
                     </div>
                   )}
 

@@ -68,7 +68,7 @@ export default function TeacherDashboard() {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-6">
           <div>
             <span className="text-xs font-bold text-purple-700 tracking-wider uppercase">
-              STUDIO GIA SƯ • THẦY MINH
+              STUDIO GIA SƯ • THẦY THỨC
             </span>
             <h1 className="text-3xl font-extrabold text-slate-900 mt-1">Bàn Làm Việc Giáo Viên</h1>
             <p className="text-sm text-slate-500 mt-1">

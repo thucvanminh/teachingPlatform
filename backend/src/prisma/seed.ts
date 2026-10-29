@@ -16,7 +16,7 @@ async function main() {
       username: 'teacher',
       email: 'teacher@tutoring.com',
       password_hash: defaultPasswordHash,
-      full_name: 'Thầy Minh (Gia Sư)',
+      full_name: 'Thầy Thức (Gia Sư)',
       role: user_role.TEACHER,
     },
   });
