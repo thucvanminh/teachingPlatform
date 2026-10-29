@@ -558,7 +558,7 @@ export default function StudentDashboard() {
                     <div>
                       <div className="flex items-center gap-2">
                         <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest">
-                          {isMidtermApp ? 'PHÒNG HỌC TƯƠNG TÁC (HTML5/JS)' : 'Nạp Nhiên Liệu Tri Thức'} •{' '}
+                          {isMidtermApp ? 'PHÒNG HỌC TƯƠNG TÁC' : 'Nạp Nhiên Liệu Tri Thức'} •{' '}
                           {formatAssignmentDate(activeLectureAssignment.assigned_date)}
                         </span>
                         {isMidtermApp && (
@@ -988,7 +988,7 @@ export default function StudentDashboard() {
                                         : 'bg-blue-50 hover:bg-blue-100 text-blue-700 border-blue-200'
                                     }`}
                                   >
-                                    {isMidtermApp ? 'Vào Phòng Học Tương Tác (HTML/JS) 🌟' : 'Xem Bài Giảng & Lý Thuyết'}
+                                    {isMidtermApp ? 'Vào Phòng Học Tương Tác 🌟' : 'Xem Bài Giảng & Lý Thuyết'}
                                   </button>
                                 </div>
                               </div>
@@ -1095,7 +1095,7 @@ export default function StudentDashboard() {
                   <div>
                     <div className="flex items-center gap-2">
                       <span className="text-xs font-bold text-blue-600 uppercase tracking-wide">
-                        {isMidtermApp ? 'PHÒNG HỌC TƯƠNG TÁC (HTML5/JS)' : 'Bài Giảng'} •{' '}
+                        {isMidtermApp ? 'PHÒNG HỌC TƯƠNG TÁC' : 'Bài Giảng'} •{' '}
                         {formatAssignmentDate(activeLectureAssignment.assigned_date)}
                       </span>
                       {isMidtermApp && (
