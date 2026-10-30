@@ -1,7 +1,7 @@
 import { Injectable, BadRequestException, NotFoundException, ForbiddenException } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
 import { SubmitAttemptDto } from './dto/submit-attempt.dto';
-import { attempt_status, question_type, user_role } from '@prisma/client';
+import { attempt_status, question_type, user_role, assessment_type } from '@prisma/client';
 
 @Injectable()
 export class AttemptsService {
@@ -211,9 +211,24 @@ export class AttemptsService {
     }
 
     // Nếu bài chưa chấm xong và người xem là học sinh/phụ huynh -> ẩn grading_key_payload
+    // Lưu ý: Đối với IN_SESSION_90M (luyện tập tương tác tại lớp), trích xuất correct_option_id vào question_payload để kích hoạt animation rung lắc, âm thanh và phản hồi tức thì
     if (user.role !== user_role.TEACHER && attempt.status !== attempt_status.GRADED) {
+      const isInSession = attempt.assessments?.type === assessment_type.IN_SESSION_90M;
       attempt.assessments.questions = attempt.assessments.questions.map((q) => {
         const { grading_key_payload, ...safeQ } = q;
+        const correctOpt =
+          (grading_key_payload as any)?.correct_option_id ||
+          (safeQ.question_payload as any)?.correct_option_id;
+
+        if (isInSession && correctOpt) {
+          return {
+            ...safeQ,
+            question_payload: {
+              ...(safeQ.question_payload as any),
+              correct_option_id: correctOpt,
+            },
+          } as any;
+        }
         return safeQ as any;
       });
     }

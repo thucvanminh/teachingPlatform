@@ -28,7 +28,139 @@ import {
   Compass,
   Sparkles,
   Orbit,
+  Volume2,
+  VolumeX,
 } from 'lucide-react';
+
+// Web Audio API Sound Synthesizer for instant, lag-free gamified audio
+class MissionSoundFX {
+  private ctx: AudioContext | null = null;
+  public muted: boolean = false;
+
+  private initCtx(): AudioContext | null {
+    if (typeof window === 'undefined') return null;
+    try {
+      if (!this.ctx) {
+        const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
+        if (AudioCtx) {
+          this.ctx = new AudioCtx();
+        }
+      }
+      if (this.ctx && this.ctx.state === 'suspended') {
+        this.ctx.resume().catch(() => {});
+      }
+      return this.ctx;
+    } catch {
+      return null;
+    }
+  }
+
+  // Play crisp buzzer on error / wrong option selection
+  playWrong() {
+    if (this.muted) return;
+    try {
+      const ctx = this.initCtx();
+      if (!ctx) return;
+      const now = ctx.currentTime;
+
+      // Primary downward saw wave (alarm buzzer)
+      const osc1 = ctx.createOscillator();
+      const gain1 = ctx.createGain();
+      osc1.type = 'sawtooth';
+      osc1.frequency.setValueAtTime(190, now);
+      osc1.frequency.exponentialRampToValueAtTime(110, now + 0.28);
+
+      gain1.gain.setValueAtTime(0.2, now);
+      gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.3);
+
+      osc1.connect(gain1);
+      gain1.connect(ctx.destination);
+      osc1.start(now);
+      osc1.stop(now + 0.3);
+
+      // Discordant square wave pulse for authentic cosmic warning sound
+      const osc2 = ctx.createOscillator();
+      const gain2 = ctx.createGain();
+      osc2.type = 'square';
+      osc2.frequency.setValueAtTime(140, now);
+      osc2.frequency.exponentialRampToValueAtTime(95, now + 0.28);
+
+      gain2.gain.setValueAtTime(0.12, now);
+      gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.3);
+
+      osc2.connect(gain2);
+      gain2.connect(ctx.destination);
+      osc2.start(now);
+      osc2.stop(now + 0.3);
+    } catch {
+      // Audio playback failed or blocked by policy
+    }
+  }
+
+  // Play ascending harmonic chime on correct answer
+  playCorrect() {
+    if (this.muted) return;
+    try {
+      const ctx = this.initCtx();
+      if (!ctx) return;
+      const now = ctx.currentTime;
+
+      // 3 ascending notes: C5 (523.25Hz), E5 (659.25Hz), G5 (783.99Hz)
+      const notes = [
+        { freq: 523.25, time: 0, dur: 0.16, gain: 0.15 },
+        { freq: 659.25, time: 0.08, dur: 0.2, gain: 0.16 },
+        { freq: 783.99, time: 0.16, dur: 0.32, gain: 0.18 },
+      ];
+
+      notes.forEach((note) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(note.freq, now + note.time);
+
+        gain.gain.setValueAtTime(note.gain, now + note.time);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + note.time + note.dur);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc.start(now + note.time);
+        osc.stop(now + note.time + note.dur);
+      });
+    } catch {
+      // Audio playback failed or blocked
+    }
+  }
+
+  // Soft subtle click for UI selection
+  playClick() {
+    if (this.muted) return;
+    try {
+      const ctx = this.initCtx();
+      if (!ctx) return;
+      const now = ctx.currentTime;
+
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(700, now);
+      osc.frequency.exponentialRampToValueAtTime(350, now + 0.04);
+
+      gain.gain.setValueAtTime(0.06, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.04);
+
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+
+      osc.start(now);
+      osc.stop(now + 0.04);
+    } catch {}
+  }
+}
+
+const sfx = new MissionSoundFX();
 
 export default function MissionRoomPage({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = use(params);
@@ -45,6 +177,11 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
   const [showGridDrawer, setShowGridDrawer] = useState(false);
   const [passageExpanded, setPassageExpanded] = useState(false);
   const [shakingOption, setShakingOption] = useState<string | null>(null);
+  const [soundMuted, setSoundMuted] = useState<boolean>(false);
+
+  useEffect(() => {
+    sfx.muted = soundMuted;
+  }, [soundMuted]);
 
   // Per-Question Chronometer (Default: 2 minutes = 120s with +/- controls)
   const [questionTimeLeft, setQuestionTimeLeft] = useState<number>(120);
@@ -184,12 +321,26 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
       ''
     ).toString().trim().toUpperCase();
 
-    if (correctOpt && optionId.toString().trim().toUpperCase() !== correctOpt) {
-      setShakingOption(optionId);
-      setTimeout(() => {
-        setShakingOption((curr) => (curr === optionId ? null : curr));
-      }, 500);
+    const normalizedChosen = optionId.toString().trim().toUpperCase();
+
+    if (correctOpt) {
+      if (normalizedChosen !== correctOpt) {
+        // Wrong answer: play alarm buzzer and trigger shake animation
+        sfx.playWrong();
+        setShakingOption(null);
+        requestAnimationFrame(() => {
+          setShakingOption(optionId);
+          setTimeout(() => {
+            setShakingOption((curr) => (curr === optionId ? null : curr));
+          }, 500);
+        });
+      } else {
+        // Correct answer: play harmonic victory chime
+        sfx.playCorrect();
+        setShakingOption(null);
+      }
     } else {
+      sfx.playClick();
       setShakingOption(null);
     }
 
@@ -319,7 +470,8 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
     user?.fullName?.includes('Keithley') ||
     user?.studentProfile?.grade_level === 7 ||
     user?.studentProfile?.grade_level === 9 ||
-    attempt?.assessments?.learning_units?.subjects?.code === 'MATH_7';
+    attempt?.assessments?.learning_units?.subjects?.code === 'MATH_7' ||
+    attempt?.assessments?.learning_units?.subjects?.code === 'CHEM_9';
 
   const isKids =
     user?.username === 'an_lake' ||
@@ -331,8 +483,11 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
     user?.username === 'keithley' ||
     user?.full_name?.includes('Keithley') ||
     attempt?.assessments?.learning_units?.subjects?.code?.startsWith('ENG') ||
+    attempt?.assessments?.learning_units?.subjects?.code === 'CHEM_9' ||
     attempt?.assessments?.title?.toLowerCase().includes('cosmic') ||
-    attempt?.assessments?.title?.toLowerCase().includes('angle');
+    attempt?.assessments?.title?.toLowerCase().includes('angle') ||
+    attempt?.assessments?.title?.toLowerCase().includes('mass percentage') ||
+    attempt?.assessments?.title?.toLowerCase().includes('chemistry');
 
   const stationIndex = Math.min(
     SOLAR_STATIONS.length - 1,
@@ -443,6 +598,26 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
               <Grid className="w-3.5 h-3.5" />
               <span>
                 {isKids ? 'Câu' : isEnglish ? 'Sector' : 'Câu'} <strong>{currentIndex + 1}</strong>/{totalQuestions}
+              </span>
+            </button>
+
+            {/* Audio SFX Toggle Button */}
+            <button
+              onClick={() => setSoundMuted((prev) => !prev)}
+              className={`p-1.5 sm:px-2.5 sm:py-1 rounded-xl text-xs font-semibold border transition flex items-center space-x-1.5 active:scale-95 ${
+                soundMuted
+                  ? 'bg-slate-800 text-slate-400 border-slate-700 hover:text-slate-200'
+                  : isCosmic
+                  ? 'bg-cyan-950/90 text-cyan-300 border-cyan-500/40 hover:bg-cyan-900/60 shadow-[0_0_10px_rgba(6,182,212,0.2)]'
+                  : isKids
+                  ? 'bg-pink-100 text-pink-700 border-pink-300 hover:bg-pink-200'
+                  : 'bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200'
+              }`}
+              title={soundMuted ? (isEnglish ? 'Unmute Sound FX' : 'Bật âm thanh') : (isEnglish ? 'Mute Sound FX' : 'Tắt âm thanh')}
+            >
+              {soundMuted ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5" />}
+              <span className="hidden sm:inline text-[11px] font-bold">
+                {soundMuted ? (isEnglish ? 'Muted' : 'Tắt tiếng') : (isEnglish ? 'SFX ON' : 'Âm thanh')}
               </span>
             </button>
           </div>

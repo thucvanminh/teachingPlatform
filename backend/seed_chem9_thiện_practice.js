@@ -535,7 +535,8 @@ async function main() {
       options: q.options,
       sectionName: q.sectionName,
       passage: null,
-      explanation: q.explanation
+      explanation: q.explanation,
+      correct_option_id: q.correct_option_id
     },
     grading_key_payload: {
       correct_option_id: q.correct_option_id,
