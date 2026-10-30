@@ -44,6 +44,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showGridDrawer, setShowGridDrawer] = useState(false);
   const [passageExpanded, setPassageExpanded] = useState(false);
+  const [shakingOption, setShakingOption] = useState<string | null>(null);
 
   // Per-Question Chronometer (Default: 2 minutes = 120s with +/- controls)
   const [questionTimeLeft, setQuestionTimeLeft] = useState<number>(120);
@@ -176,6 +177,22 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
   }, [currentIndex, totalQuestions, currentQ]);
 
   const handleSelectOption = (questionId: string, optionId: string) => {
+    const targetQ = questions.find((q: any) => q.id === questionId) || currentQ;
+    const correctOpt = (
+      targetQ?.grading_key_payload?.correct_option_id ||
+      targetQ?.question_payload?.correct_option_id ||
+      ''
+    ).toString().trim().toUpperCase();
+
+    if (correctOpt && optionId.toString().trim().toUpperCase() !== correctOpt) {
+      setShakingOption(optionId);
+      setTimeout(() => {
+        setShakingOption((curr) => (curr === optionId ? null : curr));
+      }, 500);
+    } else {
+      setShakingOption(null);
+    }
+
     setAnswers((prev) => ({
       ...prev,
       [questionId]: {
@@ -714,14 +731,38 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                 <div className="grid grid-cols-1 gap-2.5">
                   {currentQ.question_payload.options.map((opt: any) => {
                     const isSelected = currentAnswer.selected_option_id === opt.id;
+                    const correctOptionId = (
+                      currentQ.grading_key_payload?.correct_option_id ||
+                      currentQ.question_payload?.correct_option_id ||
+                      ''
+                    ).toString().trim().toUpperCase();
+
+                    const isWrong = isSelected && Boolean(correctOptionId) && opt.id.toString().trim().toUpperCase() !== correctOptionId;
+                    const isCorrect = isSelected && Boolean(correctOptionId) && opt.id.toString().trim().toUpperCase() === correctOptionId;
+                    const isShaking = shakingOption === opt.id;
+
                     return (
                       <button
                         key={opt.id}
                         type="button"
                         onClick={() => handleSelectOption(currentQ.id, opt.id)}
                         className={`w-full p-3.5 sm:p-4 rounded-2xl text-left border text-sm sm:text-base font-medium transition-all flex items-center justify-between active:scale-[0.99] ${
+                          isShaking ? 'animate-shake' : ''
+                        } ${
                           isSelected
-                            ? isCosmic
+                            ? isWrong
+                              ? isCosmic
+                                ? 'bg-rose-950/90 border-rose-500 text-rose-100 shadow-[0_0_25px_rgba(244,63,94,0.5)] ring-2 ring-rose-500/80 scale-[1.01]'
+                                : isKids
+                                ? 'bg-rose-100/90 border-2 border-rose-500 text-rose-950 shadow-md ring-2 ring-rose-300 font-bold scale-[1.01]'
+                                : 'bg-red-50 border-2 border-red-500 text-red-950 ring-2 ring-red-200 shadow-sm'
+                              : isCorrect
+                              ? isCosmic
+                                ? 'bg-emerald-950/90 border-emerald-400 text-white shadow-[0_0_25px_rgba(16,185,129,0.5)] ring-2 ring-emerald-400/80 scale-[1.01]'
+                                : isKids
+                                ? 'bg-emerald-100/90 border-2 border-emerald-500 text-emerald-950 shadow-md ring-2 ring-emerald-300 font-bold scale-[1.01]'
+                                : 'bg-emerald-50 border-2 border-emerald-600 text-emerald-950 ring-2 ring-emerald-200 shadow-xs'
+                              : isCosmic
                               ? 'bg-cyan-950/90 border-cyan-400 text-white shadow-[0_0_20px_rgba(6,182,212,0.4)] ring-1 ring-cyan-400'
                               : isKids
                               ? 'bg-pink-100/90 border-2 border-pink-500 text-pink-950 shadow-md ring-2 ring-pink-300 font-bold scale-[1.01]'
@@ -737,11 +778,23 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                           <span
                             className={`w-8 h-8 sm:w-9 sm:h-9 flex-shrink-0 rounded-xl flex items-center justify-center font-bold text-sm sm:text-base transition-colors ${
                               isSelected
-                                ? isCosmic
+                                ? isWrong
+                                  ? isCosmic
+                                    ? 'bg-rose-500 text-white font-black shadow-sm'
+                                    : isKids
+                                    ? 'bg-rose-500 text-white shadow-sm font-extrabold'
+                                    : 'bg-red-600 text-white font-bold'
+                                  : isCorrect
+                                  ? isCosmic
+                                    ? 'bg-emerald-500 text-slate-950 font-black shadow-sm'
+                                    : isKids
+                                    ? 'bg-emerald-500 text-white shadow-sm font-extrabold'
+                                    : 'bg-emerald-600 text-white font-bold'
+                                  : isCosmic
                                   ? 'bg-cyan-500 text-slate-950 font-black shadow-sm'
                                   : isKids
                                   ? 'bg-pink-500 text-white shadow-sm font-extrabold'
-                                  : 'bg-blue-600 text-white'
+                                  : 'bg-blue-600 text-white font-bold'
                                 : isCosmic
                                 ? 'bg-slate-800 text-cyan-300 border border-cyan-500/30'
                                 : isKids
@@ -754,7 +807,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                           <span
                             className={`leading-snug break-words ${
                               isCosmic
-                                ? 'text-white font-medium'
+                                ? isWrong ? 'text-rose-100 font-semibold' : isCorrect ? 'text-emerald-100 font-semibold' : 'text-white font-medium'
                                 : isKids
                                 ? 'text-slate-800 font-bold text-base sm:text-lg'
                                 : 'text-slate-800'
@@ -762,20 +815,42 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                           >
                             <FormattedContent
                               text={opt.text}
-                              className={isCosmic ? 'text-white' : ''}
+                              className={isCosmic ? (isWrong ? 'text-rose-100' : isCorrect ? 'text-emerald-100' : 'text-white') : ''}
                             />
                           </span>
                         </div>
                         {isSelected && (
-                          <Check
-                            className={`w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0 ${
-                              isCosmic
-                                ? 'text-cyan-400'
-                                : isKids
-                                ? 'text-pink-600 stroke-[3]'
-                                : 'text-blue-600'
-                            }`}
-                          />
+                          isWrong ? (
+                            <X
+                              className={`w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0 animate-in zoom-in-75 ${
+                                isCosmic
+                                  ? 'text-rose-400 stroke-[2.5]'
+                                  : isKids
+                                  ? 'text-rose-600 stroke-[3]'
+                                  : 'text-red-600 stroke-[2.5]'
+                              }`}
+                            />
+                          ) : isCorrect ? (
+                            <Check
+                              className={`w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0 animate-in zoom-in-75 ${
+                                isCosmic
+                                  ? 'text-emerald-400 stroke-[2.5]'
+                                  : isKids
+                                  ? 'text-emerald-600 stroke-[3]'
+                                  : 'text-emerald-600 stroke-[2.5]'
+                              }`}
+                            />
+                          ) : (
+                            <Check
+                              className={`w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0 ${
+                                isCosmic
+                                  ? 'text-cyan-400'
+                                  : isKids
+                                  ? 'text-pink-600 stroke-[3]'
+                                  : 'text-blue-600'
+                              }`}
+                            />
+                          )
                         )}
                       </button>
                     );
@@ -783,16 +858,57 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                 </div>
               )}
 
-              {/* Lời nhắc thân thiện khi Bé An đã chọn đáp án */}
-              {isKids && currentAnswer.selected_option_id && (
-                <div className="mt-4 p-3.5 bg-gradient-to-r from-pink-50 via-rose-50 to-amber-50 border-2 border-pink-200 rounded-2xl flex items-center justify-between text-pink-800 text-xs sm:text-sm font-bold shadow-xs animate-in fade-in">
-                  <span className="flex items-center space-x-2">
-                    <Sparkles className="w-4 h-4 text-pink-500" />
-                    <span>Bé đã chọn đáp án! Hãy bấm nút <strong>"Next: Câu tiếp theo ➡️"</strong> ở góc dưới nhé!</span>
-                  </span>
-                  <span className="text-xl animate-bounce">👇</span>
-                </div>
-              )}
+              {/* Feedback Banner for Multiple Choice */}
+              {currentQ.type === 'MULTIPLE_CHOICE' && currentAnswer.selected_option_id && Boolean(
+                (currentQ.grading_key_payload?.correct_option_id || currentQ.question_payload?.correct_option_id || '')
+              ) && (() => {
+                const correctOpt = (
+                  currentQ.grading_key_payload?.correct_option_id ||
+                  currentQ.question_payload?.correct_option_id ||
+                  ''
+                ).toString().trim().toUpperCase();
+                const isWrong = currentAnswer.selected_option_id.toString().trim().toUpperCase() !== correctOpt;
+
+                return isWrong ? (
+                  <div
+                    className={`mt-3 p-3 sm:p-3.5 rounded-2xl border text-xs sm:text-sm font-bold flex items-center space-x-2.5 animate-in fade-in slide-in-from-top-1 ${
+                      isCosmic
+                        ? 'bg-rose-950/60 border-rose-500/50 text-rose-200 shadow-[0_0_15px_rgba(244,63,94,0.25)]'
+                        : isKids
+                        ? 'bg-rose-50 border-2 border-rose-300 text-rose-900'
+                        : 'bg-red-50 border border-red-300 text-red-900'
+                    }`}
+                  >
+                    <X className="w-4 h-4 text-rose-500 flex-shrink-0 stroke-[2.5]" />
+                    <span>
+                      {isKids
+                        ? 'Ôi chưa đúng rồi! Bé An chọn thử lại đáp án khác nhé 🌸'
+                        : isEnglish
+                        ? 'Incorrect telemetry! Re-evaluate and select another option.'
+                        : 'Chưa chính xác! Con hãy suy nghĩ kỹ và chọn lại đáp án khác nhé.'}
+                    </span>
+                  </div>
+                ) : (
+                  <div
+                    className={`mt-3 p-3 sm:p-3.5 rounded-2xl border text-xs sm:text-sm font-bold flex items-center space-x-2.5 animate-in fade-in slide-in-from-top-1 ${
+                      isCosmic
+                        ? 'bg-emerald-950/60 border-emerald-500/50 text-emerald-200 shadow-[0_0_15px_rgba(16,185,129,0.25)]'
+                        : isKids
+                        ? 'bg-emerald-50 border-2 border-emerald-300 text-emerald-900'
+                        : 'bg-emerald-50 border border-emerald-300 text-emerald-900'
+                    }`}
+                  >
+                    <Check className="w-4 h-4 text-emerald-500 flex-shrink-0 stroke-[2.5]" />
+                    <span>
+                      {isKids
+                        ? 'Chính xác rồi! Bé An thông minh quá! ⭐ Bấm "Next" để qua câu tiếp theo nha!'
+                        : isEnglish
+                        ? 'Correct telemetry locked on target! 🎯 Proceed to next sector.'
+                        : 'Chính xác! Con làm rất tốt! 🎯 Bấm "Câu tiếp theo" để tiếp tục.'}
+                    </span>
+                  </div>
+                );
+              })()}
 
               {/* FILL_IN_BLANK INPUT */}
               {currentQ.type === 'FILL_IN_BLANK' && (
