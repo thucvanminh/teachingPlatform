@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050C1A"/>
+      <stop offset="50%" stop-color="#0A1628"/>
+      <stop offset="100%" stop-color="#041E28"/>
+    </linearGradient>
+
+    <!-- Beaker Liquid Gradient (Luminescent Acid) -->
+    <linearGradient id="acidGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0891B2" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <filter id="glowCyan2" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="680" height="340" rx="16" fill="url(#bgGrad2)" stroke="#0E7490" stroke-width="1.5"/>
+
+  <!-- Top Title Bar -->
+  <rect x="20" y="14" width="640" height="34" rx="8" fill="#0F172A" stroke="#06B6D4" stroke-width="1"/>
+  <text x="340" y="36" text-anchor="middle" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" letter-spacing="1.5" filter="url(#glowCyan2)">
+    STATION 2: TYPE 1 • ACTIVE METAL REACTOR VS. INERT NOBLE BYSTANDER
+  </text>
+
+  <!-- LEFT: Chemical Reactor Chamber -->
+  <g transform="translate(45, 65)">
+    <!-- Reactor Glass Body -->
+    <rect x="20" y="30" width="170" height="180" rx="16" fill="#0F172A" stroke="#38BDF8" stroke-width="2" opacity="0.95"/>
+    <!-- Liquid Level (Acid solution) -->
+    <path d="M 22 90 Q 60 85, 105 90 T 188 90 L 188 196 Q 188 208, 174 208 L 36 208 Q 22 208, 22 196 Z" fill="url(#acidGrad)" stroke="#22D3EE" stroke-width="1"/>
+    
+    <!-- Acid Label -->
+    <text x="105" y="125" text-anchor="middle" fill="#A5F3FC" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" opacity="0.8">Excess Dilute HCl</text>
+
+    <!-- Rising Gas Bubbles (H2) -->
+    <circle cx="65" cy="155" r="4" fill="#67E8F9" filter="url(#glowCyan2)"/>
+    <circle cx="85" cy="135" r="5" fill="#67E8F9" filter="url(#glowCyan2)"/>
+    <circle cx="70" cy="115" r="3.5" fill="#67E8F9" filter="url(#glowCyan2)"/>
+    <circle cx="95" cy="95" r="6" fill="#A5F3FC" filter="url(#glowCyan2)"/>
+    <circle cx="78" cy="75" r="5" fill="#E0F2FE" filter="url(#glowCyan2)"/>
+    <circle cx="90" cy="55" r="4.5" fill="#E0F2FE" filter="url(#glowCyan2)"/>
+
+    <!-- Reaction Callout on Top -->
+    <path d="M 90 40 L 90 10 L 150 10" fill="none" stroke="#22D3EE" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <rect x="145" y="-5" width="105" height="30" rx="6" fill="#042F2E" stroke="#14B8A6" stroke-width="1.2"/>
+    <text x="197" y="14" text-anchor="middle" fill="#5EEAD4" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">H₂ Gas Escape ↑</text>
+
+    <!-- Active Iron reacting in solution -->
+    <rect x="55" y="165" width="36" height="24" rx="4" fill="#475569" stroke="#94A3B8" stroke-width="1.5"/>
+    <text x="73" y="181" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11" font-weight="900">Fe</text>
+
+    <!-- Insoluble Copper pellets at the bottom -->
+    <g transform="translate(120, 185)">
+      <circle cx="5" cy="12" r="7" fill="#B45309" stroke="#F59E0B" stroke-width="1.5"/>
+      <circle cx="18" cy="14" r="8" fill="#B45309" stroke="#F59E0B" stroke-width="1.5"/>
+      <circle cx="32" cy="11" r="7.5" fill="#B45309" stroke="#F59E0B" stroke-width="1.5"/>
+      <text x="20" y="5" text-anchor="middle" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">Cu Solid</text>
+    </g>
+
+    <!-- Solid Residue Arrow Note -->
+    <text x="105" y="225" text-anchor="middle" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">
+      Insoluble Residue = Cu (6.4 g)
+    </text>
+  </g>
+
+  <!-- RIGHT: Telemetry Calculation & Reactivity Guide -->
+  <g transform="translate(320, 65)">
+    <!-- Reactivity Series Badge -->
+    <rect x="0" y="0" width="330" height="68" rx="10" fill="#082F49" stroke="#0284C7" stroke-width="1.5"/>
+    <text x="15" y="20" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">REACTIVITY LAW (Relative to H):</text>
+    <text x="15" y="38" fill="#A5F3FC" font-family="system-ui, sans-serif" font-size="11">
+      • <tspan font-weight="bold" fill="#34D399">Active (Before H):</tspan> Mg, Al, Zn, Fe → <tspan fill="#67E8F9">REACTS + H₂↑</tspan>
+    </text>
+    <text x="15" y="55" fill="#FED7AA" font-family="system-ui, sans-serif" font-size="11">
+      • <tspan font-weight="bold" fill="#F87171">Noble (After H):</tspan> Cu, Ag, Au → <tspan fill="#FBBF24">ZERO REACTION (Solid)</tspan>
+    </text>
+
+    <!-- 4-Step Telemetry Flow -->
+    <g transform="translate(0, 80)">
+      <rect x="0" y="0" width="330" height="165" rx="10" fill="#0B132B" stroke="#0E7490" stroke-width="1.2"/>
+      
+      <text x="14" y="24" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">
+        4-STEP ORBITAL RESOLUTION (Example: 12g Fe + Cu):
+      </text>
+
+      <text x="14" y="48" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">
+        <tspan fill="#38BDF8" font-weight="bold">Step 1:</tspan> Fe + 2HCl → FeCl₂ + H₂↑  (Cu does not react)
+      </text>
+      
+      <text x="14" y="74" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">
+        <tspan fill="#38BDF8" font-weight="bold">Step 2:</tspan> n(H₂) = 2.479 / 24.79 = <tspan fill="#34D399" font-weight="bold">0.1 mol</tspan>
+      </text>
+
+      <text x="14" y="100" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">
+        <tspan fill="#38BDF8" font-weight="bold">Step 3:</tspan> n(Fe) = n(H₂) = 0.1 mol → <tspan fill="#67E8F9" font-weight="bold">m(Fe) = 0.1 × 56 = 5.6 g</tspan>
+      </text>
+
+      <text x="14" y="126" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">
+        <tspan fill="#38BDF8" font-weight="bold">Step 4:</tspan> m(Cu) = 12 - 5.6 = <tspan fill="#F59E0B" font-weight="bold">6.4 g</tspan>
+      </text>
+
+      <rect x="10" y="137" width="310" height="22" rx="4" fill="#030712"/>
+      <text x="165" y="152" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">
+        %m(Fe) = <tspan fill="#38BDF8">46.67%</tspan>  |  %m(Cu) = <tspan fill="#F59E0B">53.33%</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- Bottom Pro-Tip Banner -->
+  <g transform="translate(20, 290)">
+    <rect x="0" y="0" width="640" height="38" rx="8" fill="#172554" stroke="#3B82F6" stroke-width="1.2"/>
+    <text x="25" y="24" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">
+      ⚡ TACTICAL SHORTCUT:
+    </text>
+    <text x="165" y="24" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="11">
+      "Insoluble solid residue" in acid ALWAYS equals the mass of the inert metal after Hydrogen (Cu or Ag)!
+    </text>
+  </g>
+</svg>

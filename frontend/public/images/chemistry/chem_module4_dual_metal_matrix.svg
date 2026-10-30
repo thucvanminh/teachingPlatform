@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B14"/>
+      <stop offset="50%" stop-color="#0E1726"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+
+    <filter id="glowPurple4" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowCyan4" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="680" height="340" rx="16" fill="url(#bgGrad4)" stroke="#A855F7" stroke-width="1.5"/>
+
+  <!-- Header Banner -->
+  <rect x="20" y="14" width="640" height="34" rx="8" fill="#0F172A" stroke="#C084FC" stroke-width="1"/>
+  <text x="340" y="36" text-anchor="middle" fill="#E9D5FF" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" letter-spacing="1.5" filter="url(#glowPurple4)">
+    STATION 4: TYPE 3 BOSS CHALLENGE • DUAL REACTIVE SYSTEM (x, y ALGEBRAIC MATRIX)
+  </text>
+
+  <!-- LEFT: Dual Chemical Reaction Chamber -->
+  <g transform="translate(35, 62)">
+    <rect x="0" y="0" width="270" height="215" rx="12" fill="#090D1A" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="135" y="24" text-anchor="middle" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">
+      SIMULTANEOUS DUAL REACTION
+    </text>
+
+    <!-- Metal 1: Magnesium Chamber -->
+    <g transform="translate(15, 38)">
+      <rect x="0" y="0" width="240" height="75" rx="8" fill="#0C4A6E" stroke="#0284C7" stroke-width="1.2"/>
+      <circle cx="28" cy="38" r="16" fill="#0369A1" stroke="#38BDF8" stroke-width="1.5"/>
+      <text x="28" y="42" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11" font-weight="900">Mg</text>
+      
+      <text x="55" y="26" fill="#E0F2FE" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">
+        Mg + 2HCl → MgCl₂ + H₂↑
+      </text>
+      <text x="55" y="45" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="11">
+        Let <tspan fill="#FACC15" font-weight="bold">x mol Mg</tspan> → generates <tspan fill="#34D399" font-weight="bold">x mol H₂</tspan>
+      </text>
+      <text x="55" y="63" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="10">
+        Mass component: m(Mg) = 24x grams
+      </text>
+    </g>
+
+    <!-- Metal 2: Iron Chamber -->
+    <g transform="translate(15, 125)">
+      <rect x="0" y="0" width="240" height="75" rx="8" fill="#312E81" stroke="#6366F1" stroke-width="1.2"/>
+      <circle cx="28" cy="38" r="16" fill="#4338CA" stroke="#818CF8" stroke-width="1.5"/>
+      <text x="28" y="42" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11" font-weight="900">Fe</text>
+      
+      <text x="55" y="26" fill="#EEF2FF" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">
+        Fe + 2HCl → FeCl₂ + H₂↑
+      </text>
+      <text x="55" y="45" fill="#A5B4FC" font-family="system-ui, sans-serif" font-size="11">
+        Let <tspan fill="#FACC15" font-weight="bold">y mol Fe</tspan> → generates <tspan fill="#34D399" font-weight="bold">y mol H₂</tspan>
+      </text>
+      <text x="55" y="63" fill="#C7D2FE" font-family="system-ui, sans-serif" font-size="10">
+        Mass component: m(Fe) = 56y grams
+      </text>
+    </g>
+  </g>
+
+  <!-- RIGHT: 2-Variable System Matrix Resolution -->
+  <g transform="translate(325, 62)">
+    <rect x="0" y="0" width="320" height="215" rx="12" fill="#0A0B1A" stroke="#A855F7" stroke-width="1.5"/>
+    
+    <text x="16" y="24" fill="#C084FC" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">
+      THE 2-VARIABLE LINEAR SYSTEM MATRIX:
+    </text>
+
+    <!-- Bracketed System -->
+    <g transform="translate(20, 36)">
+      <!-- Curly Bracket -->
+      <path d="M 0 0 C -8 0, -8 20, -14 28 C -8 36, -8 56, 0 56" fill="none" stroke="#FACC15" stroke-width="2.5" stroke-linecap="round"/>
+      
+      <text x="6" y="20" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">
+        ① Total Mass:  <tspan fill="#38BDF8">24x</tspan> + <tspan fill="#818CF8">56y</tspan> = <tspan fill="#FDE047">8.0 g</tspan>
+      </text>
+      <text x="6" y="46" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">
+        ② Total Gas:   <tspan fill="#38BDF8">x</tspan> + <tspan fill="#818CF8">y</tspan> = <tspan fill="#34D399">0.2 mol</tspan>
+      </text>
+    </g>
+
+    <!-- Substitution Steps Box -->
+    <g transform="translate(15, 105)">
+      <rect x="0" y="0" width="290" height="98" rx="8" fill="#18182E" stroke="#4C1D95" stroke-width="1"/>
+      <text x="12" y="19" fill="#A78BFA" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">
+        Substitution Method (Class 8 Protocol):
+      </text>
+      
+      <text x="12" y="38" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">
+        From ②: <tspan fill="#FACC15" font-weight="bold">x = 0.2 - y</tspan>. Substitute into ①:
+      </text>
+      <text x="12" y="56" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">
+        24(0.2 - y) + 56y = 8.0 → 4.8 + 32y = 8.0
+      </text>
+      <text x="12" y="74" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">
+        → 32y = 3.2 → <tspan fill="#FFFFFF">y = 0.1 mol (Fe)</tspan> &amp; <tspan fill="#FFFFFF">x = 0.1 mol (Mg)</tspan>
+      </text>
+      <text x="12" y="90" fill="#FDE047" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">
+        m(Mg) = 2.4 g (30%)  |  m(Fe) = 5.6 g (70%)
+      </text>
+    </g>
+  </g>
+
+  <!-- Bottom Pro-Tip Banner -->
+  <g transform="translate(20, 290)">
+    <rect x="0" y="0" width="640" height="38" rx="8" fill="#3B0764" stroke="#A855F7" stroke-width="1.2"/>
+    <text x="25" y="24" fill="#F3E8FF" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">
+      🛸 DEEP SPACE BOSS INSIGHT:
+    </text>
+    <text x="210" y="24" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11">
+      When all metals react, always set up a 2-equation system: Mass Sum = Total Mass, Gas Sum = Total Moles!
+    </text>
+  </g>
+</svg>

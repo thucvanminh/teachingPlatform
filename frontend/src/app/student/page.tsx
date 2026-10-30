@@ -43,6 +43,7 @@ export default function StudentDashboard() {
   const [expandedAssignmentId, setExpandedAssignmentId] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [activeLectureAssignment, setActiveLectureAssignment] = useState<any>(null);
+  const [lectureViewMode, setLectureViewMode] = useState<'interactive' | 'briefing'>('interactive');
 
   useEffect(() => {
     const currentUser = getUser();
@@ -225,7 +226,13 @@ export default function StudentDashboard() {
                           <div>
                             <div className="flex flex-wrap items-center gap-2 mb-1">
                               <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-cyan-950 border border-cyan-500/40 text-cyan-300">
-                                {subjectName}
+                                {isCosmic
+                                  ? (assignment.learning_units?.subjects?.code === 'CHEM_9'
+                                      ? 'Chemistry 9'
+                                      : assignment.learning_units?.subjects?.code === 'MATH_7'
+                                      ? 'Grade 7 Math'
+                                      : subjectName)
+                                  : subjectName}
                               </span>
                               {assignment.assigned_date && (
                                 <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-purple-950/80 border border-purple-500/40 text-purple-300">
@@ -581,27 +588,33 @@ export default function StudentDashboard() {
 
           {/* Modal Xem Lý Thuyết Bài Giảng KaTeX */}
           {activeLectureAssignment && (() => {
-            const isMidtermApp =
+            const appMatch = activeLectureAssignment.learning_units?.lecture_content_markdown?.match(/\/lectures\/[a-zA-Z0-9_\-\/]+\.html/);
+            const interactiveUrl = appMatch ? appMatch[0] : (
               activeLectureAssignment.learning_units?.title?.toLowerCase().includes('ôn tập thi giữa kì') ||
-              activeLectureAssignment.learning_units?.lecture_content_markdown?.includes('/lectures/eng11-midterm');
+              activeLectureAssignment.learning_units?.lecture_content_markdown?.includes('/lectures/eng11-midterm')
+                ? '/lectures/eng11-midterm/index.html'
+                : null
+            );
+            const hasInteractive = !!interactiveUrl;
+            const showInteractive = hasInteractive && lectureViewMode === 'interactive';
 
             return (
               <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-2 sm:p-4">
                 <div
                   className={`w-full ${
-                    isMidtermApp ? 'max-w-6xl h-[92vh] max-h-[92vh]' : 'max-w-3xl max-h-[85vh]'
+                    hasInteractive ? 'max-w-6xl h-[92vh] max-h-[92vh]' : 'max-w-3xl max-h-[85vh]'
                   } bg-slate-900 border border-cyan-500/40 rounded-3xl p-4 sm:p-8 flex flex-col overflow-hidden shadow-2xl transition-all`}
                 >
-                  <div className="flex items-center justify-between border-b border-slate-800 pb-4 flex-shrink-0">
+                  <div className="flex items-center justify-between border-b border-slate-800 pb-4 flex-shrink-0 flex-wrap gap-3">
                     <div>
                       <div className="flex items-center gap-2">
                         <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest">
                           {isCosmic
-                            ? (isMidtermApp ? 'INTERACTIVE LIVE STUDIO' : 'FLIGHT BRIEFING STATION')
-                            : (isMidtermApp ? 'PHÒNG HỌC TƯƠNG TÁC' : 'Nạp Nhiên Liệu Tri Thức')} •{' '}
+                            ? (hasInteractive ? 'ORBITAL LIVE STUDIO & TELEMETRY' : 'FLIGHT BRIEFING STATION')
+                            : (hasInteractive ? 'PHÒNG HỌC TƯƠNG TÁC' : 'Nạp Nhiên Liệu Tri Thức')} •{' '}
                           {formatAssignmentDate(activeLectureAssignment.assigned_date)}
                         </span>
-                        {isMidtermApp && (
+                        {hasInteractive && (
                           <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-500/50">
                             Live Studio
                           </span>
@@ -611,10 +624,37 @@ export default function StudentDashboard() {
                         {activeLectureAssignment.learning_units?.title}
                       </h3>
                     </div>
-                    <div className="flex items-center space-x-2">
-                      {isMidtermApp && (
+
+                    <div className="flex items-center space-x-3">
+                      {/* Tab Switcher for Interactive Studio vs KaTeX Notes */}
+                      {hasInteractive && (
+                        <div className="flex items-center gap-1 p-1 rounded-xl bg-slate-800/90 border border-slate-700">
+                          <button
+                            onClick={() => setLectureViewMode('interactive')}
+                            className={`px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${
+                              lectureViewMode === 'interactive'
+                                ? 'bg-cyan-500 text-slate-950 shadow-md'
+                                : 'text-slate-300 hover:text-white'
+                            }`}
+                          >
+                            <span>🔬 Interactive Lab</span>
+                          </button>
+                          <button
+                            onClick={() => setLectureViewMode('briefing')}
+                            className={`px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${
+                              lectureViewMode === 'briefing'
+                                ? 'bg-cyan-500 text-slate-950 shadow-md'
+                                : 'text-slate-300 hover:text-white'
+                            }`}
+                          >
+                            <span>📖 Flight Briefing (KaTeX)</span>
+                          </button>
+                        </div>
+                      )}
+
+                      {hasInteractive && interactiveUrl && (
                         <a
-                          href="/lectures/eng11-midterm/index.html"
+                          href={interactiveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="hidden sm:flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-cyan-950/80 text-cyan-300 hover:bg-cyan-900 text-xs font-bold border border-cyan-500/40 transition"
@@ -632,12 +672,12 @@ export default function StudentDashboard() {
                     </div>
                   </div>
 
-                  {isMidtermApp ? (
+                  {showInteractive && interactiveUrl ? (
                     <div className="flex-1 w-full h-full min-h-0 py-3">
                       <iframe
-                        src="/lectures/eng11-midterm/index.html"
+                        src={interactiveUrl}
                         className="w-full h-full border border-slate-700 rounded-2xl shadow-inner bg-slate-900"
-                        title={isCosmic ? 'Interactive Live Studio' : 'Bài Giảng Tương Tác Giữa Kì 1'}
+                        title={isCosmic ? 'Interactive Live Studio' : 'Bài Giảng Tương Tác'}
                       />
                     </div>
                   ) : (
@@ -665,10 +705,10 @@ export default function StudentDashboard() {
 
                   <div className="border-t border-slate-800 pt-4 flex items-center justify-between flex-shrink-0">
                     <div className="text-xs text-slate-400">
-                      {isMidtermApp ? (
+                      {hasInteractive ? (
                         <span className="hidden sm:inline">
                           {isCosmic
-                            ? '🚀 Live Studio tracks reflex scoring, catches grammar traps, and builds native fluency.'
+                            ? '💡 Switch between the Interactive Lab Simulation and the deep space Flight Briefing notes above.'
                             : '🚀 Live Studio tự động chấm điểm phản xạ, phát hiện bẫy ngữ pháp và hỗ trợ phát âm bản xứ.'}
                         </span>
                       ) : null}
@@ -677,7 +717,7 @@ export default function StudentDashboard() {
                       onClick={() => setActiveLectureAssignment(null)}
                       className="px-6 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white text-sm font-semibold rounded-xl transition shadow"
                     >
-                      {isCosmic ? 'Briefing Acknowledged, Launch Mission!' : 'Đã Hiểu Bài, Sẵn Sàng Làm Bài!'}
+                      {isCosmic ? 'Briefing Acknowledged, Telemetry Logged!' : 'Đã Hiểu Bài, Sẵn Sàng Làm Bài!'}
                     </button>
                   </div>
                 </div>

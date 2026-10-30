@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orbital Chemistry Lab: Mass & Mass Percentage in Chemical Reactions</title>
+  
+  <!-- KaTeX CSS & JS for Math Rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Starfield Canvas Background -->
+  <canvas id="starfieldCanvas"></canvas>
+
+  <div class="app-container">
+    <!-- Top Sci-Fi Header -->
+    <header class="station-header">
+      <div class="header-left">
+        <div class="status-badge">
+          <span class="pulse-dot"></span>
+          <span>ORBITAL REACTION LAB • TELEMETRY ACTIVE</span>
+        </div>
+        <h1 class="header-title">
+          <span class="gradient-text">MASS &amp; MASS PERCENTAGE</span>
+          <span class="sub-title">DEEP SPACE CHEMICAL REACTION SUITE</span>
+        </h1>
+      </div>
+      <div class="header-right">
+        <div class="cadet-badge">
+          <span class="badge-role">Astronaut Cadet</span>
+          <span class="badge-name">Thiện (Keithley Lake) • Grade 7 &amp; Chem 9</span>
+        </div>
+        <button id="soundToggleBtn" class="control-btn" title="Toggle Sound">
+          <span id="soundIcon">🔊</span> Sound
+        </button>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="sector-nav">
+      <button class="nav-tab active" data-sector="sector1">
+        <span class="tab-icon">🛰️</span>
+        <span class="tab-label">Sector 1: Core Formulas &amp; Mole Bridge</span>
+      </button>
+      <button class="nav-tab" data-sector="sector2">
+        <span class="tab-icon">🧪</span>
+        <span class="tab-label">Sector 2: Active Metal Reactor (Type 1)</span>
+      </button>
+      <button class="nav-tab" data-sector="sector3">
+        <span class="tab-icon">🟣</span>
+        <span class="tab-label">Sector 3: Bromine Hydrocarbon Trap (Type 2)</span>
+      </button>
+      <button class="nav-tab" data-sector="sector4">
+        <span class="tab-icon">⚔️</span>
+        <span class="tab-label">Sector 4: Dual Reaction Boss Matrix (Type 3)</span>
+      </button>
+    </nav>
+
+    <!-- MAIN INTERACTIVE CONTENT AREA -->
+    <main class="main-content">
+      
+      <!-- ============================================== -->
+      <!-- SECTOR 1: CORE FORMULAS & MOLE BRIDGE -->
+      <!-- ============================================== -->
+      <section id="sector1" class="sector-pane active">
+        <div class="pane-grid">
+          <!-- Left: Visual Canister Analogy -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag cyan">Visual Metaphor</span>
+              <h3>Cosmic Cargo Canister: Apples &amp; Oranges Analogy</h3>
+            </div>
+            <p class="card-desc">
+              Imagine an asteroidal ore canister weighing <strong>10.0 kg</strong> composed of <strong>Metal A</strong> and <strong>Metal B</strong>. If you extract Metal A and it weighs <strong>4.0 kg</strong>, Metal B is automatically:
+            </p>
+            
+            <div class="canister-visual-container">
+              <div class="bar-visual">
+                <div class="bar-segment a-bar" id="barSegA" style="width: 40%;">Metal A (4.0 kg - 40%)</div>
+                <div class="bar-segment b-bar" id="barSegB" style="width: 60%;">Metal B (6.0 kg - 60%)</div>
+              </div>
+              <div class="interactive-slider-box">
+                <label for="metalASlider">Adjust Mass of Metal A (kg): <strong id="sliderAVal" class="cyan-text">4.0 kg</strong></label>
+                <input type="range" id="metalASlider" min="0.5" max="9.5" step="0.5" value="4.0">
+              </div>
+            </div>
+
+            <div class="formula-box">
+              <div class="formula-title">🌟 Golden Axiom of Mixtures</div>
+              <div class="katex-display">
+                $$m_{\text{mix}} = m_A + m_B \implies m_B = m_{\text{mix}} - m_A$$
+              </div>
+              <div class="katex-display">
+                $$\%m_A = \frac{m_A}{m_{\text{mix}}} \times 100\%, \quad \%m_B = 100\% - \%m_A$$
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Mole & Gas Volume Converter -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag amber">Stoichiometric Bridge</span>
+              <h3>Real-Time Mole &amp; Gas Telemetry Converter</h3>
+            </div>
+            <p class="card-desc">
+              Every chemical problem hinges on converting between <strong>Mass ($m$)</strong>, <strong>Moles ($n$)</strong>, and <strong>Standard Gas Volume ($V$)</strong>. Select a substance to test live calculations:
+            </p>
+
+            <div class="substance-selector">
+              <button class="sub-btn active" data-formula="Fe" data-molar="56" data-gas="false">Iron (Fe: 56)</button>
+              <button class="sub-btn" data-formula="Cu" data-molar="64" data-gas="false">Copper (Cu: 64)</button>
+              <button class="sub-btn" data-formula="Mg" data-molar="24" data-gas="false">Magnesium (Mg: 24)</button>
+              <button class="sub-btn" data-formula="Al" data-molar="27" data-gas="false">Aluminium (Al: 27)</button>
+              <button class="sub-btn" data-formula="H2" data-molar="2" data-gas="true">Hydrogen (H₂: 2)</button>
+              <button class="sub-btn" data-formula="CH4" data-molar="16" data-gas="true">Methane (CH₄: 16)</button>
+              <button class="sub-btn" data-formula="C2H4" data-molar="28" data-gas="true">Ethylene (C₂H₄: 28)</button>
+              <button class="sub-btn" data-formula="Br2" data-molar="160" data-gas="false">Bromine (Br₂: 160)</button>
+            </div>
+
+            <div class="calc-grid">
+              <div class="calc-input-group">
+                <label>Mass $m$ (grams):</label>
+                <input type="number" id="calcMassInput" value="5.6" step="0.1">
+              </div>
+              <div class="calc-input-group">
+                <label>Moles $n$ (mol):</label>
+                <input type="number" id="calcMoleInput" value="0.1" step="0.01">
+              </div>
+              <div class="calc-input-group" id="volInputGroup">
+                <label>Gas Volume $V$ (Liters at $25^\circ\text{C}, 1\text{ bar}$):</label>
+                <input type="number" id="calcVolInput" value="2.479" step="0.01">
+              </div>
+            </div>
+
+            <div class="conversion-steps-box" id="calcStepsBox">
+              <p class="step-line cyan-text">Current Substance: <strong id="curSubLabel">Iron (Fe, M = 56 g/mol)</strong></p>
+              <p class="step-line" id="curSubFormula">$n = \dfrac{m}{M} = \dfrac{5.6}{56} = 0.1\text{ mol}$</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 2: ACTIVE METAL REACTOR (TYPE 1) -->
+      <!-- ============================================== -->
+      <section id="sector2" class="sector-pane">
+        <div class="pane-grid">
+          <!-- Left: Virtual Acid Reactor Simulation -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag green">Simulation Lab</span>
+              <h3>Orbital Metal-Acid Reactor: Active vs. Inert Bystander</h3>
+            </div>
+            
+            <div class="preset-row">
+              <label>Select Sample Alloy:</label>
+              <select id="alloySelect" class="styled-select">
+                <option value="fe_cu">Fe + Cu Alloy (12.0 g in excess HCl)</option>
+                <option value="mg_ag">Mg + Ag Alloy (15.6 g in excess H₂SO₄)</option>
+                <option value="al_cu">Al + Cu Alloy (11.8 g in excess HCl)</option>
+              </select>
+              <button id="igniteReactorBtn" class="action-btn primary">
+                ⚡ Inject Acid &amp; Ignite Reaction
+              </button>
+            </div>
+
+            <!-- Virtual Beaker / Reactor Visual -->
+            <div class="virtual-beaker-box">
+              <div class="beaker-graphic" id="beakerGraphic">
+                <div class="acid-liquid" id="acidLiquid">
+                  <div class="bubbles-layer" id="bubblesLayer"></div>
+                  <div class="active-metal-piece" id="activeMetalPiece">Fe</div>
+                  <div class="inert-solid-bed" id="inertSolidBed">Cu Solid Residue</div>
+                </div>
+              </div>
+              
+              <!-- Digital Gauge Telemetry -->
+              <div class="reactor-telemetry-panel">
+                <div class="telemetry-gauge">
+                  <span class="gauge-label">Gas Released ($V_{\text{H}_2}$):</span>
+                  <span class="gauge-val cyan-text" id="gaugeH2Vol">0.000 L</span>
+                </div>
+                <div class="telemetry-gauge">
+                  <span class="gauge-label">Moles of Gas ($n_{\text{H}_2}$):</span>
+                  <span class="gauge-val green-text" id="gaugeH2Mole">0.00 mol</span>
+                </div>
+                <div class="telemetry-gauge">
+                  <span class="gauge-label">Insoluble Residue ($m_{\text{inert}}$):</span>
+                  <span class="gauge-val amber-text" id="gaugeInertMass">-- g</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="tactical-rule-banner">
+              <strong>💡 Fundamental Reactivity Rule:</strong> Metals before $\text{H}$ ($\text{Mg, Al, Zn, Fe}$) displace Hydrogen to release $\text{H}_2\uparrow$. Metals after $\text{H}$ ($\text{Cu, Ag, Au}$) are inert bystanders and settle as insoluble solid!
+            </div>
+          </div>
+
+          <!-- Right: 4-Step Resolution Walkthrough -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag cyan">Step-by-Step Telemetry</span>
+              <h3>Standard 4-Step Protocol: Example Resolution</h3>
+            </div>
+            
+            <div class="step-card-accordion" id="type1StepsContainer">
+              <!-- Step 1 -->
+              <div class="step-box active">
+                <div class="step-num">Step 1</div>
+                <div class="step-content">
+                  <h4 class="step-title">Classify Reactivity &amp; Write Balanced Chemical Equation</h4>
+                  <p>In the alloy of $\text{Fe}$ and $\text{Cu}$, only $\text{Fe}$ stands before Hydrogen in the activity series:</p>
+                  <div class="katex-display">$$\text{Fe} + 2\text{HCl} \rightarrow \text{FeCl}_2 + \text{H}_2\uparrow$$</div>
+                  <p class="note-text">$\text{Cu}$ sits after Hydrogen $\implies$ zero reaction, remains as unreacted solid residue.</p>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="step-box active">
+                <div class="step-num">Step 2</div>
+                <div class="step-content">
+                  <h4 class="step-title">Compute Gas Moles from Volume Telemetry</h4>
+                  <div class="katex-display">$$n_{\text{H}_2} = \frac{V_{\text{H}_2}}{24.79} = \frac{2.479}{24.79} = 0.1\text{ (mol)}$$</div>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="step-box active">
+                <div class="step-num">Step 3</div>
+                <div class="step-content">
+                  <h4 class="step-title">Stoichiometric Bridge to Reacted Metal Mass</h4>
+                  <p>By stoichiometric ratio $1 : 1$, $n_{\text{Fe}} = n_{\text{H}_2} = 0.1\text{ mol}$:</p>
+                  <div class="katex-display">$$m_{\text{Fe}} = n_{\text{Fe}} \times M_{\text{Fe}} = 0.1 \times 56 = 5.6\text{ (g)}$$</div>
+                </div>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="step-box active">
+                <div class="step-num">Step 4</div>
+                <div class="step-content">
+                  <h4 class="step-title">Compute Remaining Inert Metal &amp; Mass Percentages</h4>
+                  <div class="katex-display">$$m_{\text{Cu}} = m_{\text{mix}} - m_{\text{Fe}} = 12.0 - 5.6 = 6.4\text{ (g)}$$</div>
+                  <div class="katex-display">$$\%m_{\text{Fe}} = \frac{5.6}{12.0} \times 100\% = 46.67\%, \quad \%m_{\text{Cu}} = 100\% - 46.67\% = 53.33\%$$</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 3: BROMINE HYDROCARBON TRAP (TYPE 2) -->
+      <!-- ============================================== -->
+      <section id="sector3" class="sector-pane">
+        <div class="pane-grid">
+          <!-- Left: Bubbler Simulation -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag purple">Gas Trap Chamber</span>
+              <h3>Hydrocarbon Separation: Alkane vs. Alkene in Bromine ($Br_2$)</h3>
+            </div>
+
+            <p class="card-desc">
+              When a gaseous mixture of <strong>Methane ($\text{CH}_4$)</strong> and <strong>Ethylene ($\text{C}_2\text{H}_4$)</strong> passes through liquid $\text{Br}_2$:
+            </p>
+
+            <!-- Bubbler Animation Stage -->
+            <div class="bubbler-stage">
+              <div class="gas-inlet-arrow">Inlet Gas Stream<br><strong>CH₄ + C₂H₄ (7.437 L)</strong></div>
+              <div class="flask-visual">
+                <div class="flask-liquid bromine-fluid" id="bromineFluid">
+                  <span class="flask-label">Liquid Br₂ (Orange-Brown)</span>
+                  <div class="flask-bubbles" id="flaskBubbles"></div>
+                </div>
+              </div>
+              <div class="gas-outlet-arrow">Exhaust Outlet<br><strong>Pure CH₄ Escapes ↑</strong></div>
+            </div>
+
+            <div class="balance-display-box">
+              <div class="balance-readout">
+                <span class="bal-label">Digital Scale Reading ($\Delta m_{\text{flask}}$):</span>
+                <span class="bal-val" id="flaskDeltaMass">+2.80 g</span>
+              </div>
+              <button id="runBubblerBtn" class="action-btn purple">
+                ⚗️ Stream Hydrocarbon Mixture Through Trap
+              </button>
+            </div>
+
+            <div class="clue-grid">
+              <div class="clue-card">
+                <span class="clue-tag amber">Golden Clue 1</span>
+                <h4>Flask Mass Increase ($\Delta m$)</h4>
+                <p>Only $\text{C}_2\text{H}_4$ reacts and gets trapped inside the solution: $$\Delta m_{\text{flask}} = m_{\text{C}_2\text{H}_4}$$</p>
+              </div>
+              <div class="clue-card">
+                <span class="clue-tag cyan">Golden Clue 2</span>
+                <h4>Escaping Gas Volume ($V_{\text{out}}$)</h4>
+                <p>$\text{CH}_4$ cannot react with $\text{Br}_2$ and passes out cleanly: $$V_{\text{exhaust}} = V_{\text{CH}_4}$$</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Full Worked Telemetry -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag cyan">Orbital Debrief</span>
+              <h3>Worked Example Resolution ($\text{CH}_4 + \text{C}_2\text{H}_4$)</h3>
+            </div>
+
+            <div class="worked-example-box">
+              <div class="problem-statement">
+                <strong>Mission Objective:</strong> Passing $7.437\text{ L}$ (std conditions) mixture of $\text{CH}_4$ and $\text{C}_2\text{H}_4$ through excess $\text{Br}_2$ solution. The flask mass increases by $2.8\text{ g}$. Determine the mass and volume percentages of each gas.
+              </div>
+
+              <div class="resolution-substeps">
+                <div class="substep">
+                  <span class="substep-badge">1</span>
+                  <div>
+                    <strong>Identify Absorbed Component:</strong>
+                    $$\text{C}_2\text{H}_4 + \text{Br}_2 \rightarrow \text{C}_2\text{H}_4\text{Br}_2$$
+                    $$m_{\text{C}_2\text{H}_4} = \Delta m_{\text{flask}} = 2.8\text{ (g)}$$
+                    $$n_{\text{C}_2\text{H}_4} = \frac{2.8}{28} = 0.1\text{ (mol)}$$
+                  </div>
+                </div>
+
+                <div class="substep">
+                  <span class="substep-badge">2</span>
+                  <div>
+                    <strong>Determine Unreacted Methane ($\text{CH}_4$):</strong>
+                    $$n_{\text{mix}} = \frac{7.437}{24.79} = 0.3\text{ (mol)}$$
+                    $$n_{\text{CH}_4} = n_{\text{mix}} - n_{\text{C}_2\text{H}_4} = 0.3 - 0.1 = 0.2\text{ (mol)}$$
+                    $$m_{\text{CH}_4} = 0.2 \times 16 = 3.2\text{ (g)}$$
+                  </div>
+                </div>
+
+                <div class="substep">
+                  <span class="substep-badge">3</span>
+                  <div>
+                    <strong>Mass Percentages ($\%m$):</strong>
+                    $$m_{\text{mix}} = 2.8 + 3.2 = 6.0\text{ (g)}$$
+                    $$\%m_{\text{C}_2\text{H}_4} = \frac{2.8}{6.0} \times 100\% = 46.67\%, \quad \%m_{\text{CH}_4} = 53.33\%$$
+                  </div>
+                </div>
+
+                <div class="substep">
+                  <span class="substep-badge">4</span>
+                  <div>
+                    <strong>Volume Percentages ($\%V$):</strong>
+                    <p class="note-text">For gases, volume fraction strictly equals mole fraction:</p>
+                    $$\%V_{\text{C}_2\text{H}_4} = \frac{0.1}{0.3} \times 100\% = 33.33\%, \quad \%V_{\text{CH}_4} = 66.67\%$$
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 4: DUAL REACTION BOSS MATRIX (TYPE 3) -->
+      <!-- ============================================== -->
+      <section id="sector4" class="sector-pane">
+        <div class="pane-grid">
+          <!-- Left: Matrix Setup & Concept -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag red">Boss Level</span>
+              <h3>Dual Reactive Systems: The 2-Variable ($x, y$) Linear System</h3>
+            </div>
+
+            <p class="card-desc">
+              When both metals lie <strong>before Hydrogen</strong> ($\text{Mg}$ and $\text{Fe}$, or $\text{Zn}$ and $\text{Al}$), there is no spectator! Both metals produce $\text{H}_2$ gas simultaneously. You must set up a <strong>System of Two Linear Equations</strong>:
+            </p>
+
+            <div class="boss-equations-panel">
+              <div class="eq-bracket">
+                <div class="bracket-symbol">{</div>
+                <div class="bracket-lines">
+                  <div class="eq-row">
+                    <span class="eq-num">Equation ① (Total Mass Balance):</span>
+                    <span class="eq-math font-mono cyan-text">M₁·x + M₂·y = m_mix</span>
+                  </div>
+                  <div class="eq-row">
+                    <span class="eq-num">Equation ② (Total Gas Mole Balance):</span>
+                    <span class="eq-math font-mono green-text">x + y = n_H2(total)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="matrix-interactive-presets">
+              <label>Select Boss Challenge Preset:</label>
+              <div class="preset-buttons">
+                <button class="preset-btn active" data-m1="24" data-m2="56" data-name1="Mg" data-name2="Fe" data-mass="8.0" data-vol="4.958">
+                  Mg + Fe (8.0 g → 4.958 L H₂)
+                </button>
+                <button class="preset-btn" data-m1="65" data-m2="56" data-name1="Zn" data-name2="Fe" data-mass="12.1" data-vol="4.958">
+                  Zn + Fe (12.1 g → 4.958 L H₂)
+                </button>
+              </div>
+            </div>
+
+            <div class="matrix-visual-balance">
+              <div class="balance-arm">
+                <div class="pan left-pan">
+                  <span class="pan-label">Metal 1 (<span id="panName1">Mg</span>)</span>
+                  <span class="pan-val cyan-text" id="panVal1">x mol</span>
+                </div>
+                <div class="pan-fulcrum">⚖️ System Balance</div>
+                <div class="pan right-pan">
+                  <span class="pan-label">Metal 2 (<span id="panName2">Fe</span>)</span>
+                  <span class="pan-val purple-text" id="panVal2">y mol</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Matrix Substitution Solver -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag amber">Algebraic Telemetry</span>
+              <h3>Class 8 Substitution Matrix: Step-by-Step Execution</h3>
+            </div>
+
+            <div class="solver-display" id="solverDisplay">
+              <div class="solver-step">
+                <div class="s-badge">1</div>
+                <div class="s-text">
+                  <strong>Define Variable Moles:</strong>
+                  Let $x = \text{mol of }\text{Mg}$ ($x > 0$), and $y = \text{mol of }\text{Fe}$ ($y > 0$).
+                </div>
+              </div>
+
+              <div class="solver-step">
+                <div class="s-badge">2</div>
+                <div class="s-text">
+                  <strong>Formulate Chemical Telemetry:</strong>
+                  $$\text{Mg} + 2\text{HCl} \rightarrow \text{MgCl}_2 + \text{H}_2\uparrow \quad (x \rightarrow x\text{ mol }\text{H}_2)$$
+                  $$\text{Fe} + 2\text{HCl} \rightarrow \text{FeCl}_2 + \text{H}_2\uparrow \quad (y \rightarrow y\text{ mol }\text{H}_2)$$
+                  $$n_{\text{H}_2} = \frac{4.958}{24.79} = 0.2\text{ (mol)}$$
+                </div>
+              </div>
+
+              <div class="solver-step">
+                <div class="s-badge">3</div>
+                <div class="s-text">
+                  <strong>Formulate System of 2 Equations:</strong>
+                  $$\begin{cases} 24x + 56y = 8.0 \quad (*) \\ x + y = 0.2 \implies x = 0.2 - y \quad (**) \end{cases}$$
+                </div>
+              </div>
+
+              <div class="solver-step">
+                <div class="s-badge">4</div>
+                <div class="s-text">
+                  <strong>Execute Substitution:</strong>
+                  Substitute $x = 0.2 - y$ into $(*)$:
+                  $$24(0.2 - y) + 56y = 8.0$$
+                  $$4.8 - 24y + 56y = 8.0 \implies 32y = 3.2 \implies \mathbf{y = 0.1\text{ mol}}$$
+                  $$\implies \mathbf{x = 0.2 - 0.1 = 0.1\text{ mol}}$$
+                </div>
+              </div>
+
+              <div class="solver-step highlight-step">
+                <div class="s-badge">5</div>
+                <div class="s-text">
+                  <strong>Telemetry Conclusion:</strong>
+                  $$m_{\text{Mg}} = 0.1 \times 24 = 2.4\text{ g} \implies \mathbf{\%m_{\text{Mg}} = \frac{2.4}{8.0} \times 100\% = 30\%}$$
+                  $$m_{\text{Fe}} = 0.1 \times 56 = 5.6\text{ g} \implies \mathbf{\%m_{\text{Fe}} = 70\%}$$
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer Status -->
+    <footer class="station-footer">
+      <div class="footer-status">
+        <span class="status-indicator"></span>
+        <span>Flight Commander: Thầy Thức • Telemetry System v2.6 Ready</span>
+      </div>
+      <div class="footer-msg">
+        100% Pure English Immersion • Cosmic Chemistry Academy
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

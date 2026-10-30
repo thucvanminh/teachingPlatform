@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B14"/>
+      <stop offset="50%" stop-color="#0B132B"/>
+      <stop offset="100%" stop-color="#061A23"/>
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowAmber" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowPurple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Metal Gradients -->
+    <linearGradient id="mixCanister" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="40%" stop-color="#38BDF8"/>
+      <stop offset="70%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <linearGradient id="cyanCanister" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0E3A4A"/>
+      <stop offset="50%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#082F49"/>
+    </linearGradient>
+
+    <linearGradient id="amberCanister" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#451A03"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#78350F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="680" height="320" rx="16" fill="url(#bgGrad)" stroke="#0E7490" stroke-width="1.5"/>
+
+  <!-- Starfield Grid Dots -->
+  <g opacity="0.25">
+    <circle cx="40" cy="40" r="1.5" fill="#38BDF8"/>
+    <circle cx="120" cy="80" r="1" fill="#FFFFFF"/>
+    <circle cx="220" cy="30" r="1.5" fill="#38BDF8"/>
+    <circle cx="340" cy="70" r="1" fill="#FFFFFF"/>
+    <circle cx="480" cy="40" r="1.5" fill="#F59E0B"/>
+    <circle cx="620" cy="90" r="1.5" fill="#38BDF8"/>
+    <circle cx="90" cy="280" r="1" fill="#FFFFFF"/>
+    <circle cx="590" cy="270" r="1.2" fill="#F59E0B"/>
+    <line x1="0" y1="240" x2="680" y2="240" stroke="#0E7490" stroke-width="0.5" stroke-dasharray="4 6"/>
+  </g>
+
+  <!-- Header Banner -->
+  <rect x="20" y="16" width="640" height="36" rx="8" fill="#0F172A" stroke="#06B6D4" stroke-width="1" opacity="0.9"/>
+  <text x="340" y="39" text-anchor="middle" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" letter-spacing="1.5" filter="url(#glowCyan)">
+    STATION 1: COSMIC CARGO BAY • CONSERVATION OF MASS &amp; PERCENTAGE TELEMETRY
+  </text>
+
+  <!-- LEFT: Composite Mixture Canister -->
+  <g transform="translate(60, 75)">
+    <!-- Glow Pod -->
+    <rect x="-10" y="-10" width="160" height="155" rx="14" fill="#0A1128" stroke="#38BDF8" stroke-width="1" stroke-dasharray="4 3" opacity="0.6"/>
+    <!-- Cylinder Base -->
+    <ellipse cx="70" cy="115" rx="45" ry="12" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+    <rect x="25" y="40" width="90" height="75" fill="url(#mixCanister)" opacity="0.85" rx="4"/>
+    <ellipse cx="70" cy="40" rx="45" ry="12" fill="#38BDF8" stroke="#E0F2FE" stroke-width="1.5" filter="url(#glowCyan)"/>
+    
+    <text x="70" y="22" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">TOTAL MIXTURE</text>
+    <text x="70" y="75" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="900">m_mix = 10.0 kg</text>
+    <text x="70" y="93" text-anchor="middle" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="10" font-weight="600">[ Metal A + Metal B ]</text>
+  </g>
+
+  <!-- CENTER: Decomposition Flux Arrows -->
+  <g transform="translate(240, 110)">
+    <path d="M 0 35 L 60 10 L 80 10" fill="none" stroke="#06B6D4" stroke-width="2.5" stroke-linecap="round" filter="url(#glowCyan)"/>
+    <polygon points="85,10 75,6 75,14" fill="#06B6D4"/>
+
+    <path d="M 0 35 L 60 60 L 80 60" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" filter="url(#glowAmber)"/>
+    <polygon points="85,60 75,56 75,64" fill="#F59E0B"/>
+
+    <circle cx="0" cy="35" r="4" fill="#38BDF8" filter="url(#glowCyan)"/>
+    <text x="40" y="2" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9" font-weight="bold">MASS SPLIT</text>
+  </g>
+
+  <!-- RIGHT TOP: Component A Canister -->
+  <g transform="translate(360, 65)">
+    <rect x="0" y="0" width="260" height="60" rx="10" fill="#082F49" stroke="#06B6D4" stroke-width="1.5" opacity="0.95"/>
+    <circle cx="30" cy="30" r="16" fill="url(#cyanCanister)" stroke="#38BDF8" stroke-width="1.5" filter="url(#glowCyan)"/>
+    <text x="30" y="34" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">A</text>
+    
+    <text x="60" y="26" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">COMPONENT A (e.g., Fe)</text>
+    <text x="60" y="44" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" font-weight="800">
+      m_A = 4.0 kg  →  <tspan fill="#38BDF8">%m_A = (4/10) × 100% = 40%</tspan>
+    </text>
+  </g>
+
+  <!-- RIGHT BOTTOM: Component B Canister -->
+  <g transform="translate(360, 135)">
+    <rect x="0" y="0" width="260" height="60" rx="10" fill="#2E1065" stroke="#F59E0B" stroke-width="1.5" opacity="0.95"/>
+    <circle cx="30" cy="30" r="16" fill="url(#amberCanister)" stroke="#F59E0B" stroke-width="1.5" filter="url(#glowAmber)"/>
+    <text x="30" y="34" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">B</text>
+    
+    <text x="60" y="26" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">COMPONENT B (e.g., Cu)</text>
+    <text x="60" y="44" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" font-weight="800">
+      m_B = 10 - 4 = 6.0 kg  →  <tspan fill="#F59E0B">%m_B = 100% - 40% = 60%</tspan>
+    </text>
+  </g>
+
+  <!-- Bottom Core Formulas Bar -->
+  <g transform="translate(20, 252)">
+    <rect x="0" y="0" width="640" height="52" rx="10" fill="#030712" stroke="#0E7490" stroke-width="1.5"/>
+    <text x="30" y="31" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">CORE FORMULAS:</text>
+    <text x="160" y="31" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">
+      %m_A = (m_A / m_mix) × 100%
+    </text>
+    <line x1="395" y1="12" x2="395" y2="40" stroke="#334155" stroke-width="1.5"/>
+    <text x="415" y="31" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">
+      %m_B = 100% - %m_A
+    </text>
+    <text x="590" y="31" text-anchor="middle" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">[ m_mix = m_A + m_B ]</text>
+  </g>
+</svg>
