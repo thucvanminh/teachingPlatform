@@ -159,6 +159,9 @@ function GradingStudioContent() {
                     {item.users_assessment_attempts_student_idTousers?.full_name}
                   </span>
                   <span className="text-xs text-slate-500 block mt-0.5">{item.assessments?.title}</span>
+                  <span className="inline-block mt-1.5 text-[11px] font-bold text-amber-800 bg-amber-100/90 px-2 py-0.5 rounded-md border border-amber-200">
+                    Đã làm {item._count?.student_answers ?? 0}/{item.assessments?._count?.questions ?? 0} câu
+                  </span>
                 </button>
               ))
             )}
@@ -173,8 +176,14 @@ function GradingStudioContent() {
                   <div>
                     <span className="text-xs font-bold text-amber-700 uppercase tracking-wider">Đang Chấm Bài</span>
                     <h2 className="text-2xl font-bold text-slate-900 mt-1">{attemptData.assessments?.title}</h2>
-                    <p className="text-xs text-slate-500 mt-1">
-                      Học sinh: <strong className="text-slate-800">{attemptData.users_assessment_attempts_student_idTousers?.full_name}</strong> • Thời gian làm bài: {Math.floor(attemptData.time_spent_seconds / 60)} phút
+                    <p className="text-xs text-slate-500 mt-1 flex flex-wrap items-center gap-2">
+                      <span>Học sinh: <strong className="text-slate-800">{attemptData.users_assessment_attempts_student_idTousers?.full_name}</strong></span>
+                      <span>•</span>
+                      <span>Thời gian làm bài: {Math.floor((attemptData.time_spent_seconds || 0) / 60)} phút</span>
+                      <span>•</span>
+                      <span className="font-extrabold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200">
+                        Đã làm: {attemptData.student_answers?.length || 0} / {attemptData.assessments?.questions?.length || 0} câu
+                      </span>
                     </p>
                   </div>
 

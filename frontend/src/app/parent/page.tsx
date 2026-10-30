@@ -164,6 +164,8 @@ export default function ParentDashboard() {
                     {asgn.assessment_attempts?.map((att: any) => {
                       const isDone = att.status === 'GRADED';
                       const isSub = att.status === 'SUBMITTED';
+                      const answeredCount = att._count?.student_answers ?? att.student_answers?.length ?? 0;
+                      const totalQuestions = att.assessments?._count?.questions ?? att.assessments?.questions?.length ?? 0;
 
                       return (
                         <div key={att.id} className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
@@ -181,10 +183,19 @@ export default function ParentDashboard() {
                               {isDone
                                 ? (isEn ? 'Graded & Evaluated' : 'Đã chấm điểm')
                                 : isSub
-                                ? (isEn ? 'Submitted (Pending Review)' : 'Đã nộp bài')
+                                ? (isEn ? `Submitted (${answeredCount}/${totalQuestions})` : `Đã nộp (${answeredCount}/${totalQuestions} câu)`)
                                 : (isEn ? 'Not Started' : 'Chưa làm')}
                             </span>
                           </div>
+
+                          {(isDone || isSub) && (
+                            <div className="p-2 rounded-xl bg-white border border-slate-200 text-xs flex items-center justify-between">
+                              <span className="text-slate-500">{isEn ? 'Progress:' : 'Số câu đã hoàn thành:'}</span>
+                              <span className="font-extrabold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200">
+                                {answeredCount} / {totalQuestions} {isEn ? 'questions' : 'câu'}
+                              </span>
+                            </div>
+                          )}
 
                           {isDone ? (
                             <div className="space-y-1">

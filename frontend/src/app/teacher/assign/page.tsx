@@ -193,10 +193,29 @@ export default function AssignPage() {
                     )}
                   </div>
 
-                  <div className="text-right">
-                    <span className="text-xs px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 font-semibold border border-blue-200">
-                      {item.assessment_attempts?.length || 0} bài tập
-                    </span>
+                  <div className="flex flex-wrap items-center gap-1.5 sm:justify-end">
+                    {item.assessment_attempts?.map((att: any) => {
+                      const answered = att._count?.student_answers ?? 0;
+                      const total = att.assessments?._count?.questions ?? 0;
+                      return (
+                        <span
+                          key={att.id}
+                          className={`text-[11px] px-2.5 py-1 rounded-lg font-bold border ${
+                            att.status === 'GRADED'
+                              ? 'bg-emerald-50 text-emerald-800 border-emerald-300'
+                              : att.status === 'SUBMITTED'
+                              ? 'bg-amber-50 text-amber-800 border-amber-300'
+                              : 'bg-slate-100 text-slate-600 border-slate-200'
+                          }`}
+                        >
+                          {att.status === 'GRADED'
+                            ? `✓ Đã chấm (${answered}/${total} câu • ${att.total_score}đ)`
+                            : att.status === 'SUBMITTED'
+                            ? `★ Đã nộp (${answered}/${total} câu)`
+                            : `Chưa làm (${total} câu)`}
+                        </span>
+                      );
+                    })}
                   </div>
                 </div>
               ))}

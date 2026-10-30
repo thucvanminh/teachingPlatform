@@ -81,6 +81,9 @@ export class DailyAssignmentsService {
         },
         assessment_attempts: {
           include: {
+            _count: {
+              select: { student_answers: true },
+            },
             assessments: {
               select: {
                 id: true,
@@ -113,6 +116,9 @@ export class DailyAssignmentsService {
         },
         assessment_attempts: {
           include: {
+            _count: {
+              select: { student_answers: true },
+            },
             assessments: {
               select: {
                 id: true,
@@ -154,6 +160,9 @@ export class DailyAssignmentsService {
         },
         assessment_attempts: {
           include: {
+            _count: {
+              select: { student_answers: true },
+            },
             assessments: {
               select: {
                 id: true,
@@ -184,6 +193,9 @@ export class DailyAssignmentsService {
         },
         assessment_attempts: {
           include: {
+            _count: {
+              select: { student_answers: true },
+            },
             assessments: {
               select: {
                 id: true,

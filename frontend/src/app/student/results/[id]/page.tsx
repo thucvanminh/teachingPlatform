@@ -56,6 +56,8 @@ export default function StudentResultPage({ params }: { params: Promise<{ id: st
 
   const questions = attempt?.assessments?.questions || [];
   const answersMap = new Map((attempt?.student_answers || []).map((a: any) => [a.question_id, a]));
+  const answeredCount = attempt?.student_answers?.length || 0;
+  const totalQuestions = questions.length;
 
   return (
     <SpaceBackground>
@@ -65,23 +67,35 @@ export default function StudentResultPage({ params }: { params: Promise<{ id: st
           className="flex items-center space-x-2 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition mb-6"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>{isCosmic ? 'Back to Mission Control' : 'Về Trung Tâm Chỉ Huy'}</span>
+          <span>{isCosmic ? 'Back to Mission Control' : 'Về Trang Tổng Quan'}</span>
         </button>
 
         {/* Score Banner */}
         <div className="p-8 rounded-3xl bg-gradient-to-r from-slate-900/90 via-slate-900/95 to-slate-900/90 border border-cyan-500/40 backdrop-blur-xl shadow-[0_0_35px_rgba(6,182,212,0.2)] mb-10 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <span className="text-xs font-bold text-cyan-400 tracking-widest uppercase">
-              {isCosmic ? 'MISSION DEBRIEF & SUMMARY' : 'BẢNG TỔNG KẾT NHIỆM VỤ'}
+              {isCosmic ? 'MISSION DEBRIEF & SUMMARY' : 'BẢNG TỔNG KẾT BÀI LÀM'}
             </span>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-white mt-1">
               {attempt.assessments?.title}
             </h1>
             <p className="text-xs text-slate-400 mt-2">
               {isCosmic
-                ? `Time Completed: ${Math.floor(attempt.time_spent_seconds / 60)} mins • Astronaut: ${attempt.users_assessment_attempts_student_idTousers?.full_name}`
-                : `Thời gian hoàn thành: ${Math.floor(attempt.time_spent_seconds / 60)} phút • Học sinh: ${attempt.users_assessment_attempts_student_idTousers?.full_name}`}
+                ? `Astronaut: ${attempt.users_assessment_attempts_student_idTousers?.full_name}`
+                : `Học sinh: ${attempt.users_assessment_attempts_student_idTousers?.full_name}`}
             </p>
+            <div className="mt-3 flex flex-wrap items-center gap-2">
+              <span className="px-3 py-1 rounded-full text-xs font-extrabold bg-cyan-950 text-cyan-300 border border-cyan-500/40">
+                {isCosmic
+                  ? `Completed: ${answeredCount}/${totalQuestions} problems`
+                  : `Đã hoàn thành: ${answeredCount}/${totalQuestions} câu`}
+              </span>
+              <span className="px-3 py-1 rounded-full text-xs font-medium bg-slate-800 text-slate-300 border border-slate-700">
+                {isCosmic
+                  ? `Time: ${Math.floor((attempt.time_spent_seconds || 0) / 60)} mins`
+                  : `Thời gian: ${Math.floor((attempt.time_spent_seconds || 0) / 60)} phút`}
+              </span>
+            </div>
           </div>
 
           <div className="flex items-center space-x-3 p-4 rounded-2xl bg-slate-800/80 border border-cyan-500/30">
@@ -123,17 +137,26 @@ export default function StudentResultPage({ params }: { params: Promise<{ id: st
 
           {questions.map((q: any, idx: number) => {
             const studentAns = answersMap.get(q.id) as any;
+            const hasAnswered = !!studentAns;
             const isCorrect = studentAns?.is_correct;
             const pointsEarned = studentAns?.awarded_points || 0;
 
             return (
               <div
                 key={q.id}
-                className="p-6 rounded-3xl bg-slate-900/80 border border-slate-800 backdrop-blur-xl"
+                className={`p-6 rounded-3xl border backdrop-blur-xl ${
+                  !hasAnswered
+                    ? 'bg-slate-900/40 border-slate-800/60'
+                    : 'bg-slate-900/80 border-slate-800'
+                }`}
               >
                 <div className="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
                   <span className="text-sm font-bold text-white flex items-center space-x-2">
-                    {isCorrect === true ? (
+                    {!hasAnswered ? (
+                      <span className="w-4 h-4 rounded-full border border-slate-600 flex items-center justify-center text-[10px] text-slate-400 font-mono">
+                        -
+                      </span>
+                    ) : isCorrect === true ? (
                       <CheckCircle className="w-4 h-4 text-emerald-400" />
                     ) : isCorrect === false ? (
                       <XCircle className="w-4 h-4 text-red-400" />
@@ -141,8 +164,13 @@ export default function StudentResultPage({ params }: { params: Promise<{ id: st
                       <Star className="w-4 h-4 text-amber-400" />
                     )}
                     <span>{isCosmic ? `Question ${idx + 1}` : `Câu ${idx + 1}`}</span>
+                    {!hasAnswered && (
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-800 text-slate-400 border border-slate-700">
+                        {isCosmic ? 'Skipped / Unanswered' : 'Chưa làm (Bỏ trống)'}
+                      </span>
+                    )}
                   </span>
-                  <span className="text-xs font-bold text-cyan-400">
+                  <span className={`text-xs font-bold ${hasAnswered ? 'text-cyan-400' : 'text-slate-500'}`}>
                     {isCosmic
                       ? `Score: ${pointsEarned} / ${q.points} pts`
                       : `Đạt: ${pointsEarned} / ${q.points} điểm`}
@@ -159,7 +187,13 @@ export default function StudentResultPage({ params }: { params: Promise<{ id: st
                   <span className="font-bold text-slate-400 block mb-1">
                     {isCosmic ? 'Cadet Submission:' : 'Bài làm của học sinh:'}
                   </span>
-                  {studentAns?.answer_payload?.selected_option_id ? (
+                  {!hasAnswered ? (
+                    <span className="italic text-slate-500 block">
+                      {isCosmic
+                        ? 'No answer submitted for this question (skipped during mission).'
+                        : 'Học sinh chưa làm câu hỏi này khi nộp bài.'}
+                    </span>
+                  ) : studentAns?.answer_payload?.selected_option_id ? (
                     <span className="font-bold text-cyan-400 text-sm">
                       {isCosmic ? 'Selected Option: ' : 'Đã chọn phương án: '}
                       {studentAns.answer_payload.selected_option_id}

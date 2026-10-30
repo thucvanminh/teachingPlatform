@@ -373,14 +373,29 @@ export default function StudentDashboard() {
                                     </div>
                                   </div>
 
+                                  {inSessionAttempt.status === 'SUBMITTED' && (
+                                    <div className="mt-4 p-3 rounded-xl bg-amber-950/40 border border-amber-500/30 text-amber-300 text-xs">
+                                      <p className="font-bold text-sm">
+                                        Completed: {inSessionAttempt._count?.student_answers ?? inSessionAttempt.student_answers?.length ?? 0} / {inSessionAttempt.assessments?._count?.questions ?? inSessionAttempt.assessments?.questions?.length ?? 0} problems
+                                      </p>
+                                      <p className="mt-1 text-[11px] text-amber-200/80">
+                                        Telemetry transmitted • Pending flight review from Command
+                                      </p>
+                                    </div>
+                                  )}
+
                                   {inSessionAttempt.status === 'GRADED' && (
                                     <div className="mt-4 p-3 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 text-xs">
-                                      <p className="font-bold text-sm">
-                                        Score Awarded: {inSessionAttempt.total_score} /{' '}
-                                        {inSessionAttempt.assessments?.max_score}
-                                      </p>
+                                      <div className="flex items-center justify-between">
+                                        <p className="font-bold text-sm">
+                                          Score: {inSessionAttempt.total_score} / {inSessionAttempt.assessments?.max_score}
+                                        </p>
+                                        <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-emerald-900/60 text-emerald-300">
+                                          {inSessionAttempt._count?.student_answers ?? inSessionAttempt.student_answers?.length ?? 0} / {inSessionAttempt.assessments?._count?.questions ?? inSessionAttempt.assessments?.questions?.length ?? 0} completed
+                                        </span>
+                                      </div>
                                       {inSessionAttempt.overall_feedback && (
-                                        <p className="mt-1 italic opacity-90">
+                                        <p className="mt-1.5 italic opacity-90">
                                           Tutor Flight Log: "{inSessionAttempt.overall_feedback}"
                                         </p>
                                       )}
@@ -397,14 +412,18 @@ export default function StudentDashboard() {
                                       <span>View Detailed Graded Review</span>
                                       <ExternalLink className="w-4 h-4" />
                                     </Link>
+                                  ) : inSessionAttempt.status === 'SUBMITTED' ? (
+                                    <Link
+                                      href={`/student/results/${inSessionAttempt.id}`}
+                                      className="w-full py-2.5 px-4 rounded-xl bg-amber-600/20 hover:bg-amber-600/30 border border-amber-500/40 text-amber-300 text-sm font-semibold flex items-center justify-center space-x-2 transition"
+                                    >
+                                      <span>View Submission Debrief ({inSessionAttempt._count?.student_answers ?? inSessionAttempt.student_answers?.length ?? 0}/{inSessionAttempt.assessments?._count?.questions ?? 0} solved)</span>
+                                      <ExternalLink className="w-4 h-4" />
+                                    </Link>
                                   ) : (
                                     <Link
                                       href={`/student/mission/${inSessionAttempt.id}`}
-                                      className={`w-full py-2.5 px-4 rounded-xl text-white text-sm font-semibold flex items-center justify-center space-x-2 transition shadow-lg ${
-                                        inSessionAttempt.status === 'SUBMITTED'
-                                          ? 'bg-slate-800 text-slate-400 cursor-not-allowed'
-                                          : 'bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 shadow-[0_0_15px_rgba(6,182,212,0.4)]'
-                                      }`}
+                                      className="w-full py-2.5 px-4 rounded-xl text-white text-sm font-semibold flex items-center justify-center space-x-2 transition shadow-lg bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 shadow-[0_0_15px_rgba(6,182,212,0.4)]"
                                     >
                                       <span>
                                         {inSessionAttempt.status === 'IN_PROGRESS'
@@ -475,14 +494,29 @@ export default function StudentDashboard() {
                                     </div>
                                   </div>
 
+                                  {homeworkAttempt.status === 'SUBMITTED' && (
+                                    <div className="mt-4 p-3 rounded-xl bg-amber-950/40 border border-amber-500/30 text-amber-300 text-xs">
+                                      <p className="font-bold text-sm">
+                                        Completed: {homeworkAttempt._count?.student_answers ?? homeworkAttempt.student_answers?.length ?? 0} / {homeworkAttempt.assessments?._count?.questions ?? homeworkAttempt.assessments?.questions?.length ?? 0} problems
+                                      </p>
+                                      <p className="mt-1 text-[11px] text-amber-200/80">
+                                        Telemetry transmitted • Pending flight review from Command
+                                      </p>
+                                    </div>
+                                  )}
+
                                   {homeworkAttempt.status === 'GRADED' && (
                                     <div className="mt-4 p-3 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 text-xs">
-                                      <p className="font-bold text-sm">
-                                        Score Awarded: {homeworkAttempt.total_score} /{' '}
-                                        {homeworkAttempt.assessments?.max_score}
-                                      </p>
+                                      <div className="flex items-center justify-between">
+                                        <p className="font-bold text-sm">
+                                          Score: {homeworkAttempt.total_score} / {homeworkAttempt.assessments?.max_score}
+                                        </p>
+                                        <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-emerald-900/60 text-emerald-300">
+                                          {homeworkAttempt._count?.student_answers ?? homeworkAttempt.student_answers?.length ?? 0} / {homeworkAttempt.assessments?._count?.questions ?? homeworkAttempt.assessments?.questions?.length ?? 0} completed
+                                        </span>
+                                      </div>
                                       {homeworkAttempt.overall_feedback && (
-                                        <p className="mt-1 italic opacity-90">
+                                        <p className="mt-1.5 italic opacity-90">
                                           Tutor Flight Log: "{homeworkAttempt.overall_feedback}"
                                         </p>
                                       )}
@@ -499,14 +533,18 @@ export default function StudentDashboard() {
                                       <span>View Graded Homework</span>
                                       <ExternalLink className="w-4 h-4" />
                                     </Link>
+                                  ) : homeworkAttempt.status === 'SUBMITTED' ? (
+                                    <Link
+                                      href={`/student/results/${homeworkAttempt.id}`}
+                                      className="w-full py-2.5 px-4 rounded-xl bg-amber-600/20 hover:bg-amber-600/30 border border-amber-500/40 text-amber-300 text-sm font-semibold flex items-center justify-center space-x-2 transition"
+                                    >
+                                      <span>View Homework Debrief ({homeworkAttempt._count?.student_answers ?? homeworkAttempt.student_answers?.length ?? 0}/{homeworkAttempt.assessments?._count?.questions ?? 0} solved)</span>
+                                      <ExternalLink className="w-4 h-4" />
+                                    </Link>
                                   ) : (
                                     <Link
                                       href={`/student/mission/${homeworkAttempt.id}`}
-                                      className={`w-full py-2.5 px-4 rounded-xl text-white text-sm font-semibold flex items-center justify-center space-x-2 transition shadow-lg ${
-                                        homeworkAttempt.status === 'SUBMITTED'
-                                          ? 'bg-slate-800 text-slate-400 cursor-not-allowed'
-                                          : 'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 shadow-[0_0_15px_rgba(168,85,247,0.4)]'
-                                      }`}
+                                      className="w-full py-2.5 px-4 rounded-xl text-white text-sm font-semibold flex items-center justify-center space-x-2 transition shadow-lg bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 shadow-[0_0_15px_rgba(168,85,247,0.4)]"
                                     >
                                       <span>
                                         {homeworkAttempt.status === 'IN_PROGRESS'
@@ -775,38 +813,56 @@ export default function StudentDashboard() {
                           )}
 
                           {/* 2. Danh sách bài tập */}
-                          {attempts.map((att: any) => (
-                            <div
-                              key={att.id}
-                              className={`p-6 rounded-3xl bg-white border-2 border-pink-200 flex flex-col justify-between shadow-sm ${
-                                !hasLecture ? 'max-w-2xl mx-auto w-full' : ''
-                              }`}
-                            >
-                              <div>
-                                <div className="flex items-center justify-between mb-2">
-                                  <span className="text-xs font-bold px-3 py-1 bg-pink-500 text-white rounded-full">
-                                    {att.assessments?.title || 'Bài tập'}
-                                  </span>
-                                  <span className="text-xs font-extrabold text-pink-700 bg-pink-100 px-2.5 py-1 rounded-full">
-                                    {att.status === 'GRADED'
-                                      ? `⭐ Đạt ${att.total_score} điểm`
-                                      : att.status === 'SUBMITTED'
-                                      ? 'Đã nộp bài'
-                                      : 'Chưa làm'}
-                                  </span>
-                                </div>
-                                <h4 className="text-base font-bold text-slate-800 mt-3">
-                                  {att.assessments?.instructions || 'Bé bấm vào làm bài để nhận thật nhiều sao phép thuật nhé!'}
-                                </h4>
-                              </div>
-                              <Link
-                                href={`/student/mission/${att.id}`}
-                                className="mt-6 block w-full py-3.5 text-center bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-extrabold text-base rounded-2xl shadow-[0_4px_0_#be185d] active:translate-y-1 transition"
+                          {attempts.map((att: any) => {
+                            const answeredCount = att._count?.student_answers ?? att.student_answers?.length ?? 0;
+                            const totalQuestions = att.assessments?._count?.questions ?? att.assessments?.questions?.length ?? 0;
+
+                            return (
+                              <div
+                                key={att.id}
+                                className={`p-6 rounded-3xl bg-white border-2 border-pink-200 flex flex-col justify-between shadow-sm ${
+                                  !hasLecture ? 'max-w-2xl mx-auto w-full' : ''
+                                }`}
                               >
-                                {att.status === 'GRADED' ? 'Xem Lại Bài Làm & Điểm Số ⭐' : 'Bắt Đầu Làm Bài Tập Ngay! 🚀'}
-                              </Link>
-                            </div>
-                          ))}
+                                <div>
+                                  <div className="flex items-center justify-between mb-2">
+                                    <span className="text-xs font-bold px-3 py-1 bg-pink-500 text-white rounded-full">
+                                      {att.assessments?.title || 'Bài tập'}
+                                    </span>
+                                    <span className="text-xs font-extrabold text-pink-700 bg-pink-100 px-2.5 py-1 rounded-full">
+                                      {att.status === 'GRADED'
+                                        ? `⭐ Đạt ${att.total_score} điểm`
+                                        : att.status === 'SUBMITTED'
+                                        ? `Đã làm ${answeredCount}/${totalQuestions} câu`
+                                        : 'Chưa làm'}
+                                    </span>
+                                  </div>
+                                  <h4 className="text-base font-bold text-slate-800 mt-3">
+                                    {att.assessments?.instructions || 'Bé bấm vào làm bài để nhận thật nhiều sao phép thuật nhé!'}
+                                  </h4>
+
+                                  {(att.status === 'SUBMITTED' || att.status === 'GRADED') && (
+                                    <div className="mt-3 p-3 bg-pink-50 border border-pink-200 rounded-2xl flex items-center justify-between text-xs font-extrabold text-pink-700">
+                                      <span>🌟 Đã hoàn thành:</span>
+                                      <span className="bg-white px-2.5 py-1 rounded-xl shadow-xs border border-pink-200">
+                                        {answeredCount} / {totalQuestions} câu
+                                      </span>
+                                    </div>
+                                  )}
+                                </div>
+                                <Link
+                                  href={att.status === 'GRADED' || att.status === 'SUBMITTED' ? `/student/results/${att.id}` : `/student/mission/${att.id}`}
+                                  className="mt-6 block w-full py-3.5 text-center bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-extrabold text-base rounded-2xl shadow-[0_4px_0_#be185d] active:translate-y-1 transition"
+                                >
+                                  {att.status === 'GRADED'
+                                    ? `Xem Lại Bài Làm (${answeredCount}/${totalQuestions} câu) ⭐`
+                                    : att.status === 'SUBMITTED'
+                                    ? `Xem Lại Bài Đã Nộp (${answeredCount}/${totalQuestions} câu) 🌟`
+                                    : 'Bắt Đầu Làm Bài Tập Ngay! 🚀'}
+                                </Link>
+                              </div>
+                            );
+                          })}
                         </div>
                       </div>
                     )}
@@ -1041,6 +1097,8 @@ export default function StudentDashboard() {
                             const isHw = att.assessments?.type === 'HOMEWORK';
                             const isGraded = att.status === 'GRADED';
                             const isSubmitted = att.status === 'SUBMITTED';
+                            const answeredCount = att._count?.student_answers ?? att.student_answers?.length ?? 0;
+                            const totalQuestions = att.assessments?._count?.questions ?? att.assessments?.questions?.length ?? 0;
 
                             return (
                               <div
@@ -1058,9 +1116,9 @@ export default function StudentDashboard() {
                                     >
                                       {isHw ? '📝 Trạm 3: Bài Tập Về Nhà (BTVN)' : '⏱️ Trạm 2: Luyện Tập Tại Lớp (90p)'}
                                     </span>
-                                    {att.assessments?._count?.questions && (
+                                    {totalQuestions > 0 && (
                                       <span className="text-xs font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-200">
-                                        {att.assessments._count.questions} câu
+                                        {totalQuestions} câu
                                       </span>
                                     )}
                                   </div>
@@ -1071,6 +1129,15 @@ export default function StudentDashboard() {
                                     Thang điểm: {att.assessments?.max_score || 10} điểm •{' '}
                                     {att.assessments?.time_limit_minutes || 90} phút
                                   </p>
+
+                                  {(isSubmitted || isGraded) && (
+                                    <div className="mt-3 p-2.5 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-between text-xs">
+                                      <span className="text-slate-600 font-medium">Tiến độ bài nộp:</span>
+                                      <span className="font-extrabold text-blue-700 bg-white px-2 py-0.5 rounded border border-slate-200">
+                                        Đã làm {answeredCount}/{totalQuestions} câu
+                                      </span>
+                                    </div>
+                                  )}
                                 </div>
 
                                 {isGraded ? (
@@ -1078,12 +1145,15 @@ export default function StudentDashboard() {
                                     href={`/student/results/${att.id}`}
                                     className="mt-6 block w-full py-2.5 text-center bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold text-sm rounded-xl transition shadow-xs"
                                   >
-                                    Xem Điểm: {att.total_score}đ
+                                    Xem Điểm: {att.total_score}đ ({answeredCount}/{totalQuestions} câu)
                                   </Link>
                                 ) : isSubmitted ? (
-                                  <div className="mt-6 w-full py-2.5 text-center bg-amber-50 text-amber-800 border border-amber-200 font-semibold text-xs rounded-xl">
-                                    Đã nộp bài • Chờ chấm
-                                  </div>
+                                  <Link
+                                    href={`/student/results/${att.id}`}
+                                    className="mt-6 block w-full py-2.5 text-center bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300 font-semibold text-xs rounded-xl transition"
+                                  >
+                                    Đã nộp bài ({answeredCount}/{totalQuestions} câu) • Xem lại bài
+                                  </Link>
                                 ) : (
                                   <Link
                                     href={`/student/mission/${att.id}`}
@@ -1096,8 +1166,8 @@ export default function StudentDashboard() {
                                     {att.status === 'IN_PROGRESS'
                                       ? 'Tiếp Tục Làm Bài'
                                       : `Bắt Đầu Làm Bài ${
-                                          att.assessments?._count?.questions
-                                            ? `(${att.assessments._count.questions} câu)`
+                                          totalQuestions
+                                            ? `(${totalQuestions} câu)`
                                             : ''
                                         }`}
                                   </Link>

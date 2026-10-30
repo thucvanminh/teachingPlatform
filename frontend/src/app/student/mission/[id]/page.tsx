@@ -219,20 +219,51 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
   };
 
   const handleSubmit = async () => {
-    const answeredCount = Object.keys(answers).length;
-    const confirm = window.confirm(
-      isEnglish
-        ? `You have answered ${answeredCount}/${totalQuestions} questions. Are you sure you want to transmit and complete this mission?`
-        : `Con đã làm ${answeredCount}/${totalQuestions} câu hỏi. Con có chắc chắn muốn nộp bài không?`
-    );
+    const currentAnswered = questions.filter((q: any) => {
+      const ans = answers[q.id];
+      return (
+        ans &&
+        ((ans.selected_option_id !== undefined && ans.selected_option_id !== '') ||
+          (ans.text !== undefined && ans.text.toString().trim() !== '') ||
+          (ans.text_response !== undefined && ans.text_response.toString().trim() !== '') ||
+          (Array.isArray(ans.image_urls) && ans.image_urls.length > 0))
+      );
+    }).length;
+
+    let confirmMsg = '';
+    if (currentAnswered < totalQuestions) {
+      const remaining = totalQuestions - currentAnswered;
+      confirmMsg = isKids
+        ? `Bé đã làm ${currentAnswered}/${totalQuestions} câu (còn ${remaining} câu chưa làm). Bé có muốn nộp bài luôn không?`
+        : isEnglish
+        ? `You have completed ${currentAnswered} of ${totalQuestions} celestial problems (${remaining} questions unanswered). Do you want to submit your mission telemetry now?`
+        : `Con đã hoàn thành ${currentAnswered}/${totalQuestions} câu hỏi (còn ${remaining} câu chưa làm). Con có chắc chắn muốn nộp bài bây giờ không?`;
+    } else {
+      confirmMsg = isKids
+        ? `Tuyệt vời! Bé đã làm đủ ${totalQuestions}/${totalQuestions} câu. Bé nộp bài nhé! 🌟`
+        : isEnglish
+        ? `Outstanding! You have completed all ${totalQuestions}/${totalQuestions} questions. Are you ready to transmit your telemetry?`
+        : `Tuyệt vời! Con đã hoàn thành đủ ${totalQuestions}/${totalQuestions} câu hỏi. Con có chắc chắn muốn nộp bài không?`;
+    }
+
+    const confirm = window.confirm(confirmMsg);
     if (!confirm) return;
 
     setSubmitting(true);
     try {
-      const formattedAnswers = Object.entries(answers).map(([qId, payload]) => ({
-        questionId: qId,
-        answerPayload: payload,
-      }));
+      const formattedAnswers = Object.entries(answers)
+        .filter(([qId, payload]) => {
+          if (!payload) return false;
+          if (payload.selected_option_id !== undefined && payload.selected_option_id !== '') return true;
+          if (payload.text !== undefined && payload.text.toString().trim() !== '') return true;
+          if (payload.text_response !== undefined && payload.text_response.toString().trim() !== '') return true;
+          if (Array.isArray(payload.image_urls) && payload.image_urls.length > 0) return true;
+          return false;
+        })
+        .map(([qId, payload]) => ({
+          questionId: qId,
+          answerPayload: payload,
+        }));
 
       const timeSpent = (attempt.assessments?.time_limit_minutes || 90) * 60 - timeLeft;
 
@@ -244,10 +275,10 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
 
       alert(
         isEnglish
-          ? '🎉 Mission transmitted successfully! Telemetry logged to Command.'
-          : '🎉 Nộp bài thành công! Thầy Thức đã nhận được bài làm của con.'
+          ? `🎉 Mission transmitted successfully! Completed ${currentAnswered}/${totalQuestions} problems. Telemetry logged to Command.`
+          : `🎉 Nộp bài thành công! Con đã hoàn thành ${currentAnswered}/${totalQuestions} câu. Thầy Thức đã nhận được bài làm của con.`
       );
-      router.push('/student');
+      router.push(`/student/results/${attemptId}`);
     } catch (err: any) {
       alert(
         isEnglish
@@ -403,16 +434,25 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
           <button
             onClick={handleSubmit}
             disabled={submitting}
+            title={isEnglish ? 'Submit your telemetry anytime' : 'Nộp bài bất cứ khi nào bạn muốn'}
             className={`py-1.5 px-3.5 rounded-xl text-xs font-bold flex items-center space-x-1.5 transition shadow-xs disabled:opacity-40 ${
               isCosmic
                 ? 'bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-500 text-white shadow-[0_0_15px_rgba(6,182,212,0.3)]'
                 : isKids
                 ? 'bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 text-white shadow-sm font-bold'
-                : 'bg-blue-600 hover:bg-blue-700 text-white'
+                : 'bg-emerald-600 hover:bg-emerald-700 text-white'
             }`}
           >
             <Send className="w-3.5 h-3.5" />
-            <span>{submitting ? '...' : isKids ? 'Nộp bài 🌟' : isEnglish ? 'Submit Telemetry' : 'Nộp bài'}</span>
+            <span>
+              {submitting
+                ? '...'
+                : isKids
+                ? `Nộp bài 🌟 (${answeredCount}/${totalQuestions})`
+                : isEnglish
+                ? `Submit (${answeredCount}/${totalQuestions})`
+                : `Nộp bài (${answeredCount}/${totalQuestions})`}
+            </span>
           </button>
         </div>
 
@@ -836,36 +876,75 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
           </div>
 
           {/* Next or Finish Button */}
-          {currentIndex < totalQuestions - 1 ? (
-            <button
-              type="button"
-              onClick={() => setCurrentIndex((prev) => Math.min(totalQuestions - 1, prev + 1))}
-              className={`px-5 sm:px-6 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-base font-extrabold flex items-center space-x-2 transition shadow-sm active:scale-95 ${
-                isCosmic
-                  ? 'bg-cyan-500 hover:bg-cyan-400 text-slate-950 shadow-[0_0_15px_rgba(6,182,212,0.5)]'
-                  : isKids
-                  ? 'bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 hover:from-pink-600 hover:to-rose-600 text-white shadow-[0_4px_0_#be185d] active:translate-y-1'
-                  : 'bg-blue-600 hover:bg-blue-700 text-white'
-              }`}
-            >
-              <span>{isKids ? 'Next: Câu tiếp theo ➡️' : isEnglish ? 'Next Question' : 'Câu tiếp theo'}</span>
-              <ChevronRight className="w-4 h-4" />
-            </button>
-          ) : (
-            <button
-              type="button"
-              onClick={handleSubmit}
-              disabled={submitting}
-              className={`px-5 sm:px-6 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-base font-extrabold flex items-center space-x-2 transition shadow-sm active:scale-95 disabled:opacity-50 ${
-                isKids
-                  ? 'bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 text-white shadow-[0_4px_0_#0f766e] active:translate-y-1'
-                  : 'bg-emerald-600 hover:bg-emerald-500 text-white'
-              }`}
-            >
-              <span>{submitting ? (isKids ? 'Đang nộp bài...' : isEnglish ? 'Transmitting...' : 'Đang nộp...') : (isKids ? 'Bé Đã Làm Xong, Nộp Bài! 🌟' : isEnglish ? 'Submit Telemetry' : 'Hoàn tất & Nộp')}</span>
-              <Send className="w-4 h-4" />
-            </button>
-          )}
+          <div className="flex items-center space-x-2">
+            {currentIndex < totalQuestions - 1 ? (
+              <>
+                <button
+                  type="button"
+                  onClick={handleSubmit}
+                  disabled={submitting}
+                  title={isEnglish ? 'Submit your telemetry anytime' : 'Nộp bài bất cứ khi nào bạn muốn'}
+                  className={`px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl sm:rounded-2xl text-xs sm:text-sm font-bold flex items-center space-x-1.5 transition border active:scale-95 disabled:opacity-40 ${
+                    isCosmic
+                      ? 'bg-slate-900/90 border-cyan-500/40 text-cyan-300 hover:bg-cyan-950/60 shadow-[0_0_10px_rgba(6,182,212,0.2)]'
+                      : isKids
+                      ? 'bg-emerald-50 border-emerald-300 text-emerald-700 hover:bg-emerald-100'
+                      : 'bg-emerald-50 border-emerald-300 text-emerald-700 hover:bg-emerald-100'
+                  }`}
+                >
+                  <Send className="w-3.5 h-3.5 text-emerald-500 dark:text-cyan-400" />
+                  <span>
+                    {isKids
+                      ? `Nộp bài ngay (${answeredCount}/${totalQuestions})`
+                      : isEnglish
+                      ? `Submit (${answeredCount}/${totalQuestions})`
+                      : `Nộp bài ngay (${answeredCount}/${totalQuestions})`}
+                  </span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => setCurrentIndex((prev) => Math.min(totalQuestions - 1, prev + 1))}
+                  className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-base font-extrabold flex items-center space-x-2 transition shadow-sm active:scale-95 ${
+                    isCosmic
+                      ? 'bg-cyan-500 hover:bg-cyan-400 text-slate-950 shadow-[0_0_15px_rgba(6,182,212,0.5)]'
+                      : isKids
+                      ? 'bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 hover:from-pink-600 hover:to-rose-600 text-white shadow-[0_4px_0_#be185d] active:translate-y-1'
+                      : 'bg-blue-600 hover:bg-blue-700 text-white'
+                  }`}
+                >
+                  <span>{isKids ? 'Next: Câu tiếp theo ➡️' : isEnglish ? 'Next Question' : 'Câu tiếp theo'}</span>
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </>
+            ) : (
+              <button
+                type="button"
+                onClick={handleSubmit}
+                disabled={submitting}
+                className={`px-5 sm:px-6 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-base font-extrabold flex items-center space-x-2 transition shadow-sm active:scale-95 disabled:opacity-50 ${
+                  isKids
+                    ? 'bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 text-white shadow-[0_4px_0_#0f766e] active:translate-y-1'
+                    : 'bg-emerald-600 hover:bg-emerald-500 text-white'
+                }`}
+              >
+                <span>
+                  {submitting
+                    ? isKids
+                      ? 'Đang nộp bài...'
+                      : isEnglish
+                      ? 'Transmitting...'
+                      : 'Đang nộp...'
+                    : isKids
+                    ? `Bé Nộp Bài! (${answeredCount}/${totalQuestions}) 🌟`
+                    : isEnglish
+                    ? `Submit Telemetry (${answeredCount}/${totalQuestions})`
+                    : `Hoàn tất & Nộp bài (${answeredCount}/${totalQuestions})`}
+                </span>
+                <Send className="w-4 h-4" />
+              </button>
+            )}
+          </div>
         </div>
       </footer>
 
@@ -938,22 +1017,50 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
               })}
             </div>
 
-            <div className="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
-              <div className="flex items-center space-x-2">
-                <span className="w-3 h-3 rounded-md bg-cyan-400" />
-                <span>{isEnglish ? 'Answered' : 'Đã làm'}</span>
+            <div className="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between gap-2 text-xs">
+              <div className="flex items-center space-x-3 text-slate-400">
+                <div className="flex items-center space-x-1.5">
+                  <span className="w-2.5 h-2.5 rounded-md bg-cyan-400" />
+                  <span>{isEnglish ? 'Done' : 'Đã làm'}</span>
+                </div>
+                <div className="flex items-center space-x-1.5">
+                  <span className="w-2.5 h-2.5 rounded-md bg-slate-700" />
+                  <span>{isEnglish ? 'Blank' : 'Chưa'}</span>
+                </div>
               </div>
+
               <div className="flex items-center space-x-2">
-                <span className="w-3 h-3 rounded-md bg-slate-700" />
-                <span>{isEnglish ? 'Unanswered' : 'Chưa làm'}</span>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowGridDrawer(false);
+                    handleSubmit();
+                  }}
+                  className={`px-3.5 py-1.5 rounded-xl text-xs font-bold flex items-center space-x-1.5 transition ${
+                    isCosmic
+                      ? 'bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black'
+                      : isKids
+                      ? 'bg-emerald-500 hover:bg-emerald-600 text-white'
+                      : 'bg-emerald-600 hover:bg-emerald-500 text-white'
+                  }`}
+                >
+                  <Send className="w-3.5 h-3.5" />
+                  <span>
+                    {isKids
+                      ? `Nộp bài ngay (${answeredCount}/${totalQuestions})`
+                      : isEnglish
+                      ? `Transmit (${answeredCount}/${totalQuestions})`
+                      : `Nộp bài ngay (${answeredCount}/${totalQuestions})`}
+                  </span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setShowGridDrawer(false)}
+                  className="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-medium text-xs border border-slate-700"
+                >
+                  {isEnglish ? 'Close' : 'Đóng'}
+                </button>
               </div>
-              <button
-                type="button"
-                onClick={() => setShowGridDrawer(false)}
-                className="px-4 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-medium text-xs border border-slate-700"
-              >
-                {isEnglish ? 'Close' : 'Đóng'}
-              </button>
             </div>
           </div>
         </div>

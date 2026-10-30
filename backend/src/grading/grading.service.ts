@@ -13,11 +13,20 @@ export class GradingService {
         status: attempt_status.SUBMITTED,
       },
       include: {
+        _count: {
+          select: { student_answers: true },
+        },
         users_assessment_attempts_student_idTousers: {
           select: { id: true, full_name: true, username: true },
         },
         assessments: {
-          select: { id: true, title: true, type: true, max_score: true },
+          select: {
+            id: true,
+            title: true,
+            type: true,
+            max_score: true,
+            _count: { select: { questions: true } },
+          },
         },
         daily_student_assignments: {
           select: { id: true, assigned_date: true },
