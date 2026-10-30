@@ -11,6 +11,7 @@ import { AttemptsModule } from './attempts/attempts.module';
 import { GradingModule } from './grading/grading.module';
 import { StorageModule } from './storage/storage.module';
 import { AppController } from './app.controller';
+import { SelfPingService } from './common/services/self-ping.service';
 
 @Module({
   imports: [
@@ -30,5 +31,6 @@ import { AppController } from './app.controller';
     StorageModule,
   ],
   controllers: [AppController],
+  providers: [SelfPingService],
 })
 export class AppModule {}
