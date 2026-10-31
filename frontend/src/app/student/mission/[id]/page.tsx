@@ -668,7 +668,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
       <main className="min-h-0 flex-1 max-w-3xl w-full mx-auto overflow-y-auto px-3.5 sm:px-6 py-4 flex flex-col justify-start lg:justify-center">
         {currentQ ? (
           <div
-            className={`rounded-2xl sm:rounded-3xl p-5 sm:p-8 border shadow-sm transition flex flex-col justify-between ${
+            className={`rounded-2xl sm:rounded-3xl p-5 sm:p-6 border shadow-sm transition flex flex-col justify-between ${
               isCosmic
                 ? 'bg-[#0A0E1A]/95 border-cyan-500/40 text-slate-100 shadow-[0_0_30px_rgba(6,182,212,0.15)] backdrop-blur-xl'
                 : isKids
@@ -882,7 +882,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
 
             {/* Question Stem / Content */}
             <div
-              className={`text-base sm:text-lg font-semibold leading-relaxed mb-5 ${
+              className={`text-base sm:text-lg font-semibold leading-relaxed mb-5 lg:max-h-40 lg:overflow-y-auto lg:pr-2 ${
                 isCosmic
                   ? 'text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]'
                   : isKids
@@ -904,7 +904,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
             <div className="space-y-2.5">
               {/* MULTIPLE_CHOICE OPTIONS */}
               {currentQ.type === 'MULTIPLE_CHOICE' && currentQ.question_payload?.options && (
-                <div className="grid grid-cols-1 gap-2.5">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-2.5 lg:gap-3">
                   {currentQ.question_payload.options.map((opt: any) => {
                     const isSelected = currentAnswer.selected_option_id === opt.id;
                     const correctOptionId = (
