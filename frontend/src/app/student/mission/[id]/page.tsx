@@ -539,7 +539,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
             : 'bg-white/95 border-slate-200 text-slate-900 shadow-xs'
         }`}
       >
-        <div className="max-w-4xl mx-auto flex items-center justify-between gap-2">
+        <div className="max-w-4xl mx-auto grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 sm:flex sm:justify-between">
           {/* Back button */}
           <button
             onClick={() => {
@@ -552,7 +552,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                 router.push('/student');
               }
             }}
-            className={`flex items-center space-x-1.5 text-xs font-semibold px-2.5 py-1.5 rounded-xl transition ${
+            className={`flex shrink-0 items-center space-x-1.5 text-xs font-semibold px-2.5 py-1.5 rounded-xl transition ${
               isCosmic
                 ? 'text-slate-300 hover:bg-slate-800 border border-transparent hover:border-slate-700'
                 : isKids
@@ -565,10 +565,10 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
           </button>
 
           {/* Center Timer & Drawer Button */}
-          <div className="flex items-center space-x-2 sm:space-x-3">
+          <div className="flex min-w-0 items-center justify-center space-x-2 sm:justify-start sm:space-x-3">
             {/* Total Timer Badge */}
             <div
-              className={`flex items-center space-x-1.5 px-3 py-1 rounded-xl font-mono text-xs sm:text-sm font-bold border ${
+              className={`flex shrink-0 items-center space-x-1.5 px-2 sm:px-3 py-1 rounded-xl font-mono text-xs sm:text-sm font-bold border ${
                 timeLeft < 600
                   ? 'bg-red-500/20 border-red-400 text-red-500 animate-pulse'
                   : isCosmic
@@ -586,7 +586,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
             {/* Question count toggle drawer */}
             <button
               onClick={() => setShowGridDrawer(true)}
-              className={`flex items-center space-x-1 px-3 py-1 rounded-xl text-xs font-semibold border transition ${
+              className={`flex shrink-0 items-center space-x-1 px-2 sm:px-3 py-1 rounded-xl text-xs font-semibold border transition ${
                 isCosmic
                   ? 'bg-slate-900 border-cyan-500/40 text-cyan-300 hover:bg-slate-800 shadow-[0_0_10px_rgba(6,182,212,0.15)]'
                   : isKids
@@ -597,7 +597,8 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
             >
               <Grid className="w-3.5 h-3.5" />
               <span>
-                {isKids ? 'Câu' : isEnglish ? 'Sector' : 'Câu'} <strong>{currentIndex + 1}</strong>/{totalQuestions}
+                <span className="hidden sm:inline">{isKids ? 'Câu' : isEnglish ? 'Sector' : 'Câu'} </span>
+                <strong>{currentIndex + 1}</strong>/{totalQuestions}
               </span>
             </button>
 
@@ -627,7 +628,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
             onClick={handleSubmit}
             disabled={submitting}
             title={isEnglish ? 'Submit your telemetry anytime' : 'Nộp bài bất cứ khi nào bạn muốn'}
-            className={`py-1.5 px-3.5 rounded-xl text-xs font-bold flex items-center space-x-1.5 transition shadow-xs disabled:opacity-40 ${
+            className={`shrink-0 p-2 sm:px-3.5 sm:py-1.5 rounded-xl text-xs font-bold flex items-center space-x-1.5 transition shadow-xs disabled:opacity-40 ${
               isCosmic
                 ? 'bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-500 text-white shadow-[0_0_15px_rgba(6,182,212,0.3)]'
                 : isKids
@@ -636,7 +637,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
             }`}
           >
             <Send className="w-3.5 h-3.5" />
-            <span>
+            <span className="hidden sm:inline">
               {submitting
                 ? '...'
                 : isKids
@@ -1140,13 +1141,13 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
             : 'bg-white/95 border-slate-200/90 shadow-sm'
         }`}
       >
-        <div className="max-w-3xl mx-auto flex items-center justify-between gap-2">
+        <div className="max-w-3xl mx-auto grid grid-cols-2 items-center gap-2 sm:flex sm:justify-between">
           {/* Previous Button */}
           <button
             type="button"
             onClick={() => setCurrentIndex((prev) => Math.max(0, prev - 1))}
             disabled={currentIndex === 0}
-            className={`px-3.5 sm:px-4 py-2.5 rounded-xl border text-xs sm:text-sm font-semibold flex items-center space-x-1.5 transition disabled:opacity-40 disabled:cursor-not-allowed ${
+            className={`w-full justify-center px-3.5 sm:w-auto sm:px-4 py-2.5 rounded-xl border text-xs sm:text-sm font-semibold flex items-center space-x-1.5 transition disabled:opacity-40 disabled:cursor-not-allowed ${
               isCosmic
                 ? 'bg-slate-900 border-slate-800 text-slate-300 hover:bg-slate-800'
                 : isKids
@@ -1155,11 +1156,12 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
             }`}
           >
             <ChevronLeft className="w-4 h-4" />
-            <span>{isKids ? 'Câu trước' : isEnglish ? 'Previous Question' : 'Câu trước'}</span>
+            <span className="sm:hidden">{isEnglish ? 'Previous' : 'Câu trước'}</span>
+            <span className="hidden sm:inline">{isKids ? 'Câu trước' : isEnglish ? 'Previous Question' : 'Câu trước'}</span>
           </button>
 
           {/* Quick status pill */}
-          <div className="text-center">
+          <div className="col-span-2 row-start-2 text-center sm:col-auto sm:row-auto">
             <span className="text-[11px] text-slate-500 font-semibold block">
               {isKids ? 'Bé đã làm:' : isEnglish ? 'Completed:' : 'Đã làm:'}{' '}
               <strong className={isKids ? 'text-pink-600 font-extrabold text-sm' : 'text-cyan-400 font-bold'}>{answeredCount}</strong>/{totalQuestions} câu
@@ -1167,7 +1169,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
           </div>
 
           {/* Next or Finish Button */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center justify-end space-x-2">
             {currentIndex < totalQuestions - 1 ? (
               <>
                 <button
@@ -1175,7 +1177,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                   onClick={handleSubmit}
                   disabled={submitting}
                   title={isEnglish ? 'Submit your telemetry anytime' : 'Nộp bài bất cứ khi nào bạn muốn'}
-                  className={`px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl sm:rounded-2xl text-xs sm:text-sm font-bold flex items-center space-x-1.5 transition border active:scale-95 disabled:opacity-40 ${
+                  className={`p-2 sm:px-4 sm:py-2.5 rounded-xl sm:rounded-2xl text-xs sm:text-sm font-bold flex items-center space-x-1.5 transition border active:scale-95 disabled:opacity-40 ${
                     isCosmic
                       ? 'bg-slate-900/90 border-cyan-500/40 text-cyan-300 hover:bg-cyan-950/60 shadow-[0_0_10px_rgba(6,182,212,0.2)]'
                       : isKids
@@ -1184,7 +1186,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                   }`}
                 >
                   <Send className="w-3.5 h-3.5 text-emerald-500 dark:text-cyan-400" />
-                  <span>
+                  <span className="hidden sm:inline">
                     {isKids
                       ? `Nộp bài ngay (${answeredCount}/${totalQuestions})`
                       : isEnglish
@@ -1196,7 +1198,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                 <button
                   type="button"
                   onClick={() => setCurrentIndex((prev) => Math.min(totalQuestions - 1, prev + 1))}
-                  className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-base font-extrabold flex items-center space-x-2 transition shadow-sm active:scale-95 ${
+                  className={`px-3 sm:px-6 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-base font-extrabold flex items-center space-x-2 transition shadow-sm active:scale-95 ${
                     isCosmic
                       ? 'bg-cyan-500 hover:bg-cyan-400 text-slate-950 shadow-[0_0_15px_rgba(6,182,212,0.5)]'
                       : isKids
@@ -1204,7 +1206,8 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                       : 'bg-blue-600 hover:bg-blue-700 text-white'
                   }`}
                 >
-                  <span>{isKids ? 'Next: Câu tiếp theo ➡️' : isEnglish ? 'Next Question' : 'Câu tiếp theo'}</span>
+                  <span className="sm:hidden">{isEnglish ? 'Next' : 'Tiếp'}</span>
+                  <span className="hidden sm:inline">{isKids ? 'Next: Câu tiếp theo ➡️' : isEnglish ? 'Next Question' : 'Câu tiếp theo'}</span>
                   <ChevronRight className="w-4 h-4" />
                 </button>
               </>
@@ -1213,13 +1216,13 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                 type="button"
                 onClick={handleSubmit}
                 disabled={submitting}
-                className={`px-5 sm:px-6 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-base font-extrabold flex items-center space-x-2 transition shadow-sm active:scale-95 disabled:opacity-50 ${
+                className={`p-2.5 sm:px-6 sm:py-3 rounded-2xl text-xs sm:text-base font-extrabold flex items-center space-x-2 transition shadow-sm active:scale-95 disabled:opacity-50 ${
                   isKids
                     ? 'bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 text-white shadow-[0_4px_0_#0f766e] active:translate-y-1'
                     : 'bg-emerald-600 hover:bg-emerald-500 text-white'
                 }`}
               >
-                <span>
+                <span className="hidden sm:inline">
                   {submitting
                     ? isKids
                       ? 'Đang nộp bài...'

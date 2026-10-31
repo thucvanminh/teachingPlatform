@@ -149,7 +149,7 @@ export default function StudentDashboard() {
               </div>
 
               {/* Status Badges */}
-              <div className="flex items-center space-x-4">
+              <div className="flex flex-wrap items-center gap-3 sm:gap-4">
                 <div className="px-4 py-3 rounded-2xl bg-slate-800/80 border border-cyan-500/20 text-center">
                   <span className="text-xs text-slate-400 block">Cadet Rank</span>
                   <span className="text-base font-bold text-cyan-400 flex items-center justify-center space-x-1">
@@ -170,7 +170,7 @@ export default function StudentDashboard() {
 
           {/* DANH SÁCH BÀI HỌC THEO NGÀY */}
           <div className="mb-12">
-            <div className="flex items-center justify-between mb-6">
+            <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between mb-6">
               <h2 className="text-xl font-bold text-cyan-300 flex items-center space-x-2 tracking-wide">
                 <Calendar className="w-5 h-5 text-cyan-400" />
                 <span>DAILY MISSIONS & FLIGHT SCHEDULE</span>
@@ -212,7 +212,7 @@ export default function StudentDashboard() {
                         onClick={() => toggleExpand(assignment.id)}
                         className="w-full p-6 text-left flex flex-col md:flex-row md:items-center justify-between gap-4 transition hover:bg-slate-800/40"
                       >
-                        <div className="flex items-start space-x-4">
+                        <div className="flex min-w-0 items-start space-x-4">
                           <div
                             className={`w-12 h-12 rounded-2xl flex-shrink-0 flex items-center justify-center transition-transform ${
                               isExpanded
@@ -223,7 +223,7 @@ export default function StudentDashboard() {
                             <Calendar className="w-6 h-6" />
                           </div>
 
-                          <div>
+                          <div className="min-w-0">
                             <div className="flex flex-wrap items-center gap-2 mb-1">
                               <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-cyan-950 border border-cyan-500/40 text-cyan-300">
                                 {isCosmic
@@ -245,7 +245,7 @@ export default function StudentDashboard() {
                             </div>
 
                             {/* Format rõ ràng */}
-                            <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight flex items-center space-x-2">
+                            <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight break-words">
                               <span>
                                 {dateLabel} : {title}
                               </span>
@@ -625,10 +625,10 @@ export default function StudentDashboard() {
                       </h3>
                     </div>
 
-                    <div className="flex items-center space-x-3">
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                       {/* Tab Switcher for Interactive Studio vs KaTeX Notes */}
                       {hasInteractive && (
-                        <div className="flex items-center gap-1 p-1 rounded-xl bg-slate-800/90 border border-slate-700">
+                        <div className="flex flex-wrap items-center gap-1 p-1 rounded-xl bg-slate-800/90 border border-slate-700">
                           <button
                             onClick={() => setLectureViewMode('interactive')}
                             className={`px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${
@@ -703,7 +703,7 @@ export default function StudentDashboard() {
                     </div>
                   )}
 
-                  <div className="border-t border-slate-800 pt-4 flex items-center justify-between flex-shrink-0">
+                  <div className="border-t border-slate-800 pt-4 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-between flex-shrink-0">
                     <div className="text-xs text-slate-400">
                       {hasInteractive ? (
                         <span className="hidden sm:inline">
@@ -715,7 +715,7 @@ export default function StudentDashboard() {
                     </div>
                     <button
                       onClick={() => setActiveLectureAssignment(null)}
-                      className="px-6 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white text-sm font-semibold rounded-xl transition shadow"
+                      className="w-full sm:w-auto px-6 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white text-sm font-semibold rounded-xl transition shadow"
                     >
                       {isCosmic ? 'Briefing Acknowledged, Telemetry Logged!' : 'Đã Hiểu Bài, Sẵn Sàng Làm Bài!'}
                     </button>

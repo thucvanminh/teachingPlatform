@@ -1058,3 +1058,160 @@ input[type=range] {
 .katex-display {
   margin: 6px 0 !important;
 }
+
+/* Phone mission control: retain every learning interaction without horizontal scrolling. */
+@media (max-width: 640px) {
+  .app-container {
+    padding: 14px 12px 36px;
+  }
+
+  .station-header {
+    padding: 16px;
+    gap: 14px;
+    border-radius: 16px;
+  }
+
+  .status-badge {
+    align-items: flex-start;
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .gradient-text {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .sub-title {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .header-right {
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .cadet-badge {
+    flex: 1;
+    min-width: 0;
+    padding: 8px 10px;
+    text-align: left;
+  }
+
+  .badge-name {
+    font-size: 11px;
+  }
+
+  .control-btn {
+    padding: 8px 10px;
+  }
+
+  .sector-nav {
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .nav-tab {
+    flex: 1 1 100%;
+    min-width: 0;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .glass-card {
+    border-radius: 16px;
+    padding: 16px;
+  }
+
+  .card-header h3 {
+    font-size: 16px;
+  }
+
+  .card-desc {
+    font-size: 12px;
+  }
+
+  .canister-visual-container,
+  .formula-box,
+  .boss-equations-panel,
+  .matrix-visual-balance {
+    padding: 12px;
+  }
+
+  .calc-grid,
+  .clue-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #volInputGroup {
+    grid-column: span 1;
+  }
+
+  .styled-select {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .virtual-beaker-box,
+  .bubbler-stage {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .beaker-graphic,
+  .flask-visual {
+    flex-shrink: 0;
+    margin: 0 auto;
+  }
+
+  .reactor-telemetry-panel {
+    width: 100%;
+  }
+
+  .telemetry-gauge {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px 12px;
+  }
+
+  .gas-inlet-arrow,
+  .gas-outlet-arrow {
+    width: 100%;
+  }
+
+  .balance-display-box,
+  .balance-arm,
+  .station-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .balance-readout,
+  .pan {
+    width: 100%;
+  }
+
+  .eq-bracket {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .bracket-symbol {
+    font-size: 34px;
+  }
+
+  .katex-display {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}

@@ -211,7 +211,7 @@ export default function StudentResultPage({ params }: { params: Promise<{ id: st
 
                   {/* Student images if any */}
                   {studentAns?.answer_payload?.image_urls && studentAns.answer_payload.image_urls.length > 0 && (
-                    <div className="flex gap-2 mt-2">
+                    <div className="flex flex-wrap gap-2 mt-2">
                       {studentAns.answer_payload.image_urls.map((u: string, i: number) => (
                         <img
                           key={i}
