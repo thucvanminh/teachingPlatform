@@ -160,6 +160,19 @@ class MissionSoundFX {
   }
 }
 
+function splitEmbeddedImage(markdown: string) {
+  const match = markdown.match(/!\[([^\]]*)\]\(([^)]+)\)/);
+  if (!match) {
+    return { text: markdown, imageSrc: null, imageAlt: null };
+  }
+
+  return {
+    text: markdown.replace(match[0], '').trim(),
+    imageSrc: match[2],
+    imageAlt: match[1] || 'Hình minh họa câu hỏi',
+  };
+}
+
 const sfx = new MissionSoundFX();
 
 export default function MissionRoomPage({ params }: { params: Promise<{ id: string }> }) {
@@ -488,6 +501,12 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
     attempt?.assessments?.title?.toLowerCase().includes('angle') ||
     attempt?.assessments?.title?.toLowerCase().includes('mass percentage') ||
     attempt?.assessments?.title?.toLowerCase().includes('chemistry');
+
+  const questionMarkdown =
+    currentQ?.question_payload?.content_markdown ||
+    currentQ?.question_payload?.prompt_markdown ||
+    '';
+  const kidsQuestionVisual = isKids ? splitEmbeddedImage(questionMarkdown) : null;
 
   const stationIndex = Math.min(
     SOLAR_STATIONS.length - 1,
@@ -880,28 +899,39 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
               </div>
             )}
 
-            {/* Question Stem / Content */}
-            <div
-              className={`text-base sm:text-lg font-semibold leading-relaxed mb-5 lg:max-h-40 lg:overflow-y-auto lg:pr-2 ${
-                isCosmic
-                  ? 'text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]'
-                  : isKids
-                  ? 'text-slate-800 text-lg sm:text-xl font-bold'
-                  : 'text-slate-900'
-              }`}
-            >
-              <FormattedContent
-                className={isCosmic ? 'text-white' : ''}
-                text={
-                  currentQ.question_payload?.content_markdown ||
-                  currentQ.question_payload?.prompt_markdown ||
-                  ''
-                }
-              />
-            </div>
+            <div className={isKids && kidsQuestionVisual?.imageSrc ? 'lg:grid lg:grid-cols-[minmax(17rem,0.85fr)_minmax(0,1.15fr)] lg:items-start lg:gap-6' : ''}>
+              {isKids && kidsQuestionVisual?.imageSrc && (
+                <figure className="mb-4 overflow-hidden rounded-2xl border-2 border-pink-200 bg-white shadow-md shadow-pink-100 lg:mb-0 lg:sticky lg:top-0">
+                  <img
+                    src={kidsQuestionVisual.imageSrc}
+                    alt={kidsQuestionVisual.imageAlt || 'Hình minh họa câu hỏi'}
+                    className="h-52 w-full bg-pink-50 object-contain sm:h-64 lg:h-72"
+                  />
+                  <figcaption className="px-3 py-2 text-center text-xs font-bold text-pink-700">
+                    {kidsQuestionVisual.imageAlt}
+                  </figcaption>
+                </figure>
+              )}
 
-            {/* Options Area */}
-            <div className="space-y-2.5">
+              <div>
+                {/* Question Stem / Content */}
+                <div
+                  className={`text-base sm:text-lg font-semibold leading-relaxed mb-5 lg:max-h-40 lg:overflow-y-auto lg:pr-2 ${
+                    isCosmic
+                      ? 'text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]'
+                      : isKids
+                      ? 'text-slate-800 text-lg sm:text-xl font-bold'
+                      : 'text-slate-900'
+                  }`}
+                >
+                  <FormattedContent
+                    className={isCosmic ? 'text-white' : ''}
+                    text={isKids ? kidsQuestionVisual?.text || questionMarkdown : questionMarkdown}
+                  />
+                </div>
+
+                {/* Options Area */}
+                <div className="space-y-2.5">
               {/* MULTIPLE_CHOICE OPTIONS */}
               {currentQ.type === 'MULTIPLE_CHOICE' && currentQ.question_payload?.options && (
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-2.5 lg:gap-3">
@@ -1122,6 +1152,8 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                   </div>
                 </div>
               )}
+                </div>
+              </div>
             </div>
           </div>
         ) : (
