@@ -1,0 +1,433 @@
+{
+  "mode": "EXERCISE_ONLY",
+  "assignedDate": "2026-10-31",
+  "unitTitle": "Deep Space Practice Mission: Reaction Telemetry & Mass Percentage Mastery",
+  "unitDescription": "In-Session 90-minute flight telemetry challenge across 8 planetary sectors. Master metal reactivity, selective gas absorption, and mass percentage stoichiometry.",
+  "teacherNote": "🚀 Welcome to your 90-minute In-Session Practice Mission for 31/10/2026, Astronaut Cadet Keithley! 28 problems across 8 planetary sectors. Clean stoichiometry, zero simultaneous reactions. Keep your focus sharp!",
+  "assessmentTitle": "Cosmic Chemistry In-Session Mission: Mass Percentage & Gas Telemetry (90 mins)",
+  "assessmentDescription": "Timed celestial chemistry assessment with per-question chronometer controls. 100% English telemetry.",
+  "timeLimitMinutes": 90,
+  "maxScore": 10.0,
+  "questions": [
+    {
+      "order_index": 1,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 1: Mercury Orbit • Reaction Recognition",
+      "content_markdown": "When dropping an asteroidal alloy powder composed of zinc ($\\text{Zn}$) and silver ($\\text{Ag}$) into excess dilute sulfuric acid ($\\text{H}_2\\text{SO}_4$), which chemical phenomenon occurs?",
+      "options": [
+        { "id": "A", "text": "Only silver ($\\text{Ag}$) undergoes reaction, evolving sulfur dioxide gas." },
+        { "id": "B", "text": "Only zinc ($\\text{Zn}$) undergoes reaction, liberating hydrogen gas ($\\text{H}_2\\uparrow$)." },
+        { "id": "C", "text": "Both zinc and silver react vigorously with the dilute acid simultaneously." },
+        { "id": "D", "text": "Neither metal reacts; the powder remains completely inert in sulfuric acid." }
+      ],
+      "correct_option_id": "B",
+      "explanation": "ANSWER B: Zinc stands before Hydrogen in the electrochemical series and reacts readily: Zn + H2SO4 → ZnSO4 + H2↑. Silver stands after Hydrogen and remains completely inert."
+    },
+    {
+      "order_index": 2,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 1: Mercury Orbit • Selective Gas Trap",
+      "content_markdown": "An atmospheric fuel sample containing ethane ($\\text{C}_2\\text{H}_6$) and ethylene ($\\text{C}_2\\text{H}_4$) is routed through a reaction chamber filled with excess bromine ($\\text{Br}_2$) solution. Which statement correctly describes the gas retention inside the chamber?",
+      "options": [
+        { "id": "A", "text": "The bromine solution is decolorized, ethylene ($\\text{C}_2\\text{H}_4$) is selectively absorbed as liquid $\\text{C}_2\\text{H}_4\\text{Br}_2$, and ethane ($\\text{C}_2\\text{H}_6$) escapes." },
+        { "id": "B", "text": "Only ethane ($\\text{C}_2\\text{H}_6$) is retained inside the chamber." },
+        { "id": "C", "text": "Both gases are trapped and permanently retained inside the liquid chamber." },
+        { "id": "D", "text": "Neither gas reacts; both pass through the exhaust vent with zero mass gain." }
+      ],
+      "correct_option_id": "A",
+      "explanation": "ANSWER A: Ethylene possesses a reactive double bond (C=C) and undergoes addition with Br2: C2H4 + Br2 → C2H4Br2 (liquid trapped in flask). Ethane has only saturated single bonds and passes out unreacted."
+    },
+    {
+      "order_index": 3,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 1: Mercury Orbit • Mixture Mass Telemetry",
+      "content_markdown": "A planetary canister holds a total mass of $25.0\\text{ g}$ containing aluminium ($\\text{Al}$) and gold ($\\text{Au}$). Spectral sensors reveal that the mass of gold ($\\text{Au}$) is $15.0\\text{ g}$. What is the **mass percentage** of aluminium ($\\text{Al}$) in the canister?",
+      "options": [
+        { "id": "A", "text": "$60\\%$" },
+        { "id": "B", "text": "$30\\%$" },
+        { "id": "C", "text": "$40\\%$" },
+        { "id": "D", "text": "$25\\%$" }
+      ],
+      "correct_option_id": "C",
+      "explanation": "ANSWER C: m(Al) = 25.0 - 15.0 = 10.0 g. Therefore, %m(Al) = (10.0 / 25.0) × 100% = 40%."
+    },
+    {
+      "order_index": 4,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 1: Mercury Orbit • Insoluble Residue Principle",
+      "content_markdown": "A $15.0\\text{ g}$ sample of metal alloy powder containing iron ($\\text{Fe}$) and copper ($\\text{Cu}$) is treated with excess dilute hydrochloric acid ($\\text{HCl}$). Following complete effervescence, an insoluble solid residue weighing $6.0\\text{ g}$ is filtered out. What was the mass of iron ($\\text{Fe}$) in the initial sample?",
+      "options": [
+        { "id": "A", "text": "$9.0\\text{ g}$" },
+        { "id": "B", "text": "$6.0\\text{ g}$" },
+        { "id": "C", "text": "$12.0\\text{ g}$" },
+        { "id": "D", "text": "$3.0\\text{ g}$" }
+      ],
+      "correct_option_id": "A",
+      "explanation": "ANSWER A: Copper stands after Hydrogen in the activity series and does not dissolve in dilute HCl. The 6.0 g insoluble residue is copper: m(Cu) = 6.0 g. Thus, m(Fe) = 15.0 - 6.0 = 9.0 g."
+    },
+    {
+      "order_index": 5,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 2: Venus Base • Solid Residue to Percentage",
+      "content_markdown": "A $25.0\\text{ g}$ ore specimen containing magnesium ($\\text{Mg}$) and silver ($\\text{Ag}$) is reacted with excess dilute $\\text{HCl}$. After the reaction ceases, an insoluble solid residue weighing $10.0\\text{ g}$ is recovered. What is the **mass percentage** of magnesium ($\\text{Mg}$) in the specimen?",
+      "options": [
+        { "id": "A", "text": "$40\\%$" },
+        { "id": "B", "text": "$60\\%$" },
+        { "id": "C", "text": "$50\\%$" },
+        { "id": "D", "text": "$75\\%$" }
+      ],
+      "correct_option_id": "B",
+      "explanation": "ANSWER B: Silver does not react with HCl: m(Ag) = 10.0 g. The mass of magnesium is m(Mg) = 25.0 - 10.0 = 15.0 g. Thus, %m(Mg) = (15.0 / 25.0) × 100% = 60%."
+    },
+    {
+      "order_index": 6,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 2: Venus Base • Chamber Mass Gain",
+      "content_markdown": "An atmospheric stream of methane ($\\text{CH}_4$) and ethylene ($\\text{C}_2\\text{H}_4$) is bubbled into a bromine ($\\text{Br}_2$) absorption chamber. Telemetry reports that the chamber mass increased by $8.4\\text{ g}$. How many moles of ethylene ($\\text{C}_2\\text{H}_4$) were present in the gas mixture? ($M_{\\text{C}_2\\text{H}_4} = 28\\text{ g/mol}$).",
+      "options": [
+        { "id": "A", "text": "$0.15\\text{ mol}$" },
+        { "id": "B", "text": "$0.20\\text{ mol}$" },
+        { "id": "C", "text": "$0.30\\text{ mol}$" },
+        { "id": "D", "text": "$0.40\\text{ mol}$" }
+      ],
+      "correct_option_id": "C",
+      "explanation": "ANSWER C: The chamber mass increase is solely due to the mass of absorbed ethylene: m(C2H4) = 8.4 g. Therefore, n(C2H4) = 8.4 / 28 = 0.30 mol."
+    },
+    {
+      "order_index": 7,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 2: Venus Base • Dual Fuel Fractionation",
+      "content_markdown": "A $10.0\\text{ g}$ sample of hydrocarbon gas composed of methane ($\\text{CH}_4$) and ethylene ($\\text{C}_2\\text{H}_4$) passes through a liquid $\\text{Br}_2$ trap. The trap mass increases by $4.2\\text{ g}$. What is the **mass percentage** of unreacted methane ($\\text{CH}_4$) in the fuel mixture?",
+      "options": [
+        { "id": "A", "text": "$42\\%$" },
+        { "id": "B", "text": "$50\\%$" },
+        { "id": "C", "text": "$58\\%$" },
+        { "id": "D", "text": "$64\\%$" }
+      ],
+      "correct_option_id": "C",
+      "explanation": "ANSWER C: Trapped ethylene has mass m(C2H4) = 4.2 g. The unreacted methane mass is m(CH4) = 10.0 - 4.2 = 5.8 g. Thus, %m(CH4) = (5.8 / 10.0) × 100% = 58%."
+    },
+    {
+      "order_index": 8,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 3: Earth Mission Control • Exhaust Gas Volume",
+      "content_markdown": "A $15.0\\text{ L}$ stream of gaseous fuel containing $\\text{CH}_4$ and $\\text{C}_2\\text{H}_4$ is scrubbed through excess liquid $\\text{Br}_2$. Exhaust sensors record that $6.0\\text{ L}$ of gas escapes unabsorbed (measured under identical conditions). What is the **volume percentage** ($\\text{\\%}V$) of ethylene ($\\text{C}_2\\text{H}_4$) in the initial stream?",
+      "options": [
+        { "id": "A", "text": "$40\\%$" },
+        { "id": "B", "text": "$60\\%$" },
+        { "id": "C", "text": "$75\\%$" },
+        { "id": "D", "text": "$50\\%$" }
+      ],
+      "correct_option_id": "B",
+      "explanation": "ANSWER B: The escaping unabsorbed gas is methane: V(CH4) = 6.0 L. Absorbed ethylene volume is V(C2H4) = 15.0 - 6.0 = 9.0 L. Thus, %V(C2H4) = (9.0 / 15.0) × 100% = 60%."
+    },
+    {
+      "order_index": 9,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 3: Earth Mission Control • Hydrogen to Metal Mass",
+      "content_markdown": "An asteroidal alloy containing zinc ($\\text{Zn}$) and copper ($\\text{Cu}$) is completely dissolved in excess dilute $\\text{HCl}$. The reaction releases $4.958\\text{ L}$ of hydrogen gas ($\\text{H}_2$) at standard conditions ($25^\\circ\\text{C}, 1\\text{ bar}$). What is the mass of zinc ($\\text{Zn}$) in the alloy? ($M_{\\text{Zn}} = 65\\text{ g/mol}$).",
+      "options": [
+        { "id": "A", "text": "$6.5\\text{ g}$" },
+        { "id": "B", "text": "$13.0\\text{ g}$" },
+        { "id": "C", "text": "$19.5\\text{ g}$" },
+        { "id": "D", "text": "$12.8\\text{ g}$" }
+      ],
+      "correct_option_id": "B",
+      "explanation": "ANSWER B: n(H2) = 4.958 / 24.79 = 0.20 mol. Zn + 2HCl → ZnCl2 + H2. n(Zn) = n(H2) = 0.20 mol. Thus, m(Zn) = 0.20 × 65 = 13.0 g."
+    },
+    {
+      "order_index": 10,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 3: Earth Mission Control • Iron-Silver Separation",
+      "content_markdown": "A $14.0\\text{ g}$ composite metallic sample of iron ($\\text{Fe}$) and silver ($\\text{Ag}$) reacts completely with excess dilute $\\text{H}_2\\text{SO}_4$, evolving $3.7185\\text{ L}$ of $\\text{H}_2$ gas at standard conditions. What is the **mass percentage** of silver ($\\text{Ag}$) in the composite? ($M_{\\text{Fe}} = 56\\text{ g/mol}$).",
+      "options": [
+        { "id": "A", "text": "$60\\%$" },
+        { "id": "B", "text": "$35\\%$" },
+        { "id": "C", "text": "$40\\%$" },
+        { "id": "D", "text": "$50\\%$" }
+      ],
+      "correct_option_id": "C",
+      "explanation": "ANSWER C: n(H2) = 3.7185 / 24.79 = 0.15 mol. Fe + H2SO4 → FeSO4 + H2. n(Fe) = 0.15 mol => m(Fe) = 0.15 × 56 = 8.4 g. Silver mass is m(Ag) = 14.0 - 8.4 = 5.6 g. %m(Ag) = (5.6 / 14.0) × 100% = 40%."
+    },
+    {
+      "order_index": 11,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 3: Earth Mission Control • Trivalent Aluminium Ratio",
+      "content_markdown": "An alloy of aluminium ($\\text{Al}$) and copper ($\\text{Cu}$) is dissolved in excess dilute $\\text{HCl}$, releasing $7.437\\text{ L}$ of $\\text{H}_2$ gas (standard conditions). How many moles of aluminium ($\\text{Al}$) reacted? ($2\\text{Al} + 6\\text{HCl} \\rightarrow 2\\text{AlCl}_3 + 3\\text{H}_2\\uparrow$).",
+      "options": [
+        { "id": "A", "text": "$0.30\\text{ mol}$" },
+        { "id": "B", "text": "$0.20\\text{ mol}$" },
+        { "id": "C", "text": "$0.15\\text{ mol}$" },
+        { "id": "D", "text": "$0.45\\text{ mol}$" }
+      ],
+      "correct_option_id": "B",
+      "explanation": "ANSWER B: n(H2) = 7.437 / 24.79 = 0.30 mol. By stoichiometric ratio: n(Al) = (2/3) × n(H2) = (2/3) × 0.30 = 0.20 mol."
+    },
+    {
+      "order_index": 12,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 4: Mars Outpost • Aluminium-Silver Percentage",
+      "content_markdown": "A $10.0\\text{ g}$ alloy specimen containing aluminium ($\\text{Al}$) and silver ($\\text{Ag}$) reacts with excess $\\text{HCl}$ to liberate $7.437\\text{ L}$ of $\\text{H}_2$ gas (standard conditions). What is the **mass percentage** of aluminium ($\\text{Al}$) in the alloy? ($M_{\\text{Al}} = 27\\text{ g/mol}$).",
+      "options": [
+        { "id": "A", "text": "$54\\%$" },
+        { "id": "B", "text": "$46\\%$" },
+        { "id": "C", "text": "$27\\%$" },
+        { "id": "D", "text": "$60\\%$" }
+      ],
+      "correct_option_id": "A",
+      "explanation": "ANSWER A: From n(Al) = 0.20 mol, m(Al) = 0.20 × 27 = 5.4 g. Thus, %m(Al) = (5.4 / 10.0) × 100% = 54%."
+    },
+    {
+      "order_index": 13,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 4: Mars Outpost • Bromine Mass to Alkene Mass",
+      "content_markdown": "A gas stream of methane ($\\text{CH}_4$) and ethylene ($\\text{C}_2\\text{H}_4$) is bubbled into a bromine solution until $16.0\\text{ g}$ of $\\text{Br}_2$ has been completely consumed. What mass of ethylene ($\\text{C}_2\\text{H}_4$) reacted? ($M_{\\text{Br}_2} = 160\\text{ g/mol}, M_{\\text{C}_2\\text{H}_4} = 28\\text{ g/mol}$).",
+      "options": [
+        { "id": "A", "text": "$5.6\\text{ g}$" },
+        { "id": "B", "text": "$2.8\\text{ g}$" },
+        { "id": "C", "text": "$1.4\\text{ g}$" },
+        { "id": "D", "text": "$4.2\\text{ g}$" }
+      ],
+      "correct_option_id": "B",
+      "explanation": "ANSWER B: n(Br2) = 16.0 / 160 = 0.10 mol. Reaction: C2H4 + Br2 → C2H4Br2. n(C2H4) = 0.10 mol => m(C2H4) = 0.10 × 28 = 2.8 g."
+    },
+    {
+      "order_index": 14,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 4: Mars Outpost • Equimolar Fuel Canister",
+      "content_markdown": "An orbital fuel canister holds $0.20\\text{ mol}$ of methane ($\\text{CH}_4$) and $0.20\\text{ mol}$ of ethylene ($\\text{C}_2\\text{H}_4$). What is the **total mass** of the fuel gas mixture?",
+      "options": [
+        { "id": "A", "text": "$8.8\\text{ g}$" },
+        { "id": "B", "text": "$4.4\\text{ g}$" },
+        { "id": "C", "text": "$9.9\\text{ g}$" },
+        { "id": "D", "text": "$6.4\\text{ g}$" }
+      ],
+      "correct_option_id": "A",
+      "explanation": "ANSWER A: m(CH4) = 0.20 × 16 = 3.2 g. m(C2H4) = 0.20 × 28 = 5.6 g. Total mass = 3.2 + 5.6 = 8.8 g."
+    },
+    {
+      "order_index": 15,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 4: Mars Outpost • Equimolar Mass Fraction Principle",
+      "content_markdown": "For an equimolar fuel gas mixture containing $0.20\\text{ mol}$ $\\text{CH}_4$ and $0.20\\text{ mol}$ $\\text{C}_2\\text{H}_4$ (total mass = $8.8\\text{ g}$), what is the exact **mass percentage** of methane ($\\text{CH}_4$)?",
+      "options": [
+        { "id": "A", "text": "$50.00\\%$" },
+        { "id": "B", "text": "$36.36\\%$" },
+        { "id": "C", "text": "$63.64\\%$" },
+        { "id": "D", "text": "$40.00\\%$" }
+      ],
+      "correct_option_id": "B",
+      "explanation": "ANSWER B: m(CH4) = 0.20 × 16 = 3.2 g. %m(CH4) = (3.2 / 8.8) × 100% ≈ 36.36%. (While volume percentage is 50%, mass percentage is lower due to smaller molar mass)."
+    },
+    {
+      "order_index": 16,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 5: Jupiter Station • Magnesium in Noble Alloy",
+      "content_markdown": "A $12.0\\text{ g}$ alloy specimen containing magnesium ($\\text{Mg}$) and unreactive copper ($\\text{Cu}$) is dissolved in excess dilute $\\text{HCl}$, releasing $7.437\\text{ L}$ of $\\text{H}_2$ gas at standard conditions. What is the **mass percentage** of magnesium ($\\text{Mg}$) in the alloy? ($M_{\\text{Mg}} = 24\\text{ g/mol}$).",
+      "options": [
+        { "id": "A", "text": "$40\\%$" },
+        { "id": "B", "text": "$60\\%$" },
+        { "id": "C", "text": "$72\\%$" },
+        { "id": "D", "text": "$50\\%$" }
+      ],
+      "correct_option_id": "B",
+      "explanation": "ANSWER B: n(H2) = 7.437 / 24.79 = 0.30 mol => n(Mg) = 0.30 mol => m(Mg) = 0.30 × 24 = 7.2 g. Thus, %m(Mg) = (7.2 / 12.0) × 100% = 60%."
+    },
+    {
+      "order_index": 17,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 5: Jupiter Station • Gas Split to Flask Mass Gain",
+      "content_markdown": "A $7.437\\text{ L}$ (standard conditions) atmospheric mixture of $\\text{CH}_4$ and $\\text{C}_2\\text{H}_4$ is routed into a bromine flask. Sensors report that $4.958\\text{ L}$ of unabsorbed gas escapes through the exhaust. By how many grams did the mass of the bromine absorption flask increase? ($M_{\\text{C}_2\\text{H}_4} = 28\\text{ g/mol}$).",
+      "options": [
+        { "id": "A", "text": "$5.6\\text{ g}$" },
+        { "id": "B", "text": "$2.8\\text{ g}$" },
+        { "id": "C", "text": "$1.6\\text{ g}$" },
+        { "id": "D", "text": "$4.4\\text{ g}$" }
+      ],
+      "correct_option_id": "B",
+      "explanation": "ANSWER B: Total moles = 7.437 / 24.79 = 0.30 mol. Escaping methane = 4.958 / 24.79 = 0.20 mol. Trapped ethylene = 0.30 - 0.20 = 0.10 mol. Flask mass gain = 0.10 × 28 = 2.8 g."
+    },
+    {
+      "order_index": 18,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 5: Jupiter Station • Reconstructing Initial Alloy Mass",
+      "content_markdown": "A planetary alloy containing zinc ($\\text{Zn}$) and silver ($\\text{Ag}$) reacts with excess $\\text{HCl}$. The process produces $4.958\\text{ L}$ of $\\text{H}_2$ gas (standard conditions) and leaves $7.0\\text{ g}$ of insoluble silver residue. What was the **total mass** of the initial alloy? ($M_{\\text{Zn}} = 65\\text{ g/mol}$).",
+      "options": [
+        { "id": "A", "text": "$13.0\\text{ g}$" },
+        { "id": "B", "text": "$17.0\\text{ g}$" },
+        { "id": "C", "text": "$20.0\\text{ g}$" },
+        { "id": "D", "text": "$25.0\\text{ g}$" }
+      ],
+      "correct_option_id": "C",
+      "explanation": "ANSWER C: n(H2) = 4.958 / 24.79 = 0.20 mol => n(Zn) = 0.20 mol => m(Zn) = 0.20 × 65 = 13.0 g. Insoluble silver residue m(Ag) = 7.0 g. Total mass = 13.0 + 7.0 = 20.0 g."
+    },
+    {
+      "order_index": 19,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 5: Jupiter Station • Propylene Alkene Trap Fractionation",
+      "content_markdown": "An extraterrestrial gas mixture containing ethane ($\\text{C}_2\\text{H}_6$, $M = 30\\text{ g/mol}$) and propylene ($\\text{C}_3\\text{H}_6$, $M = 42\\text{ g/mol}$) is bubbled through a $\\text{Br}_2$ chamber. The reaction consumes $0.10\\text{ mol}$ of $\\text{C}_3\\text{H}_6$ (chamber mass gain = $4.2\\text{ g}$), while $2.479\\text{ L}$ of ethane gas (standard conditions) escapes unreacted. What is the **total mass** of the initial gas mixture?",
+      "options": [
+        { "id": "A", "text": "$7.2\\text{ g}$" },
+        { "id": "B", "text": "$5.8\\text{ g}$" },
+        { "id": "C", "text": "$8.4\\text{ g}$" },
+        { "id": "D", "text": "$6.0\\text{ g}$" }
+      ],
+      "correct_option_id": "A",
+      "explanation": "ANSWER A: Trapped propylene: m(C3H6) = 4.2 g. Escaping ethane: n(C2H6) = 2.479 / 24.79 = 0.10 mol => m(C2H6) = 0.10 × 30 = 3.0 g. Total mass = 4.2 + 3.0 = 7.2 g."
+    },
+    {
+      "order_index": 20,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 6: Saturn Rings • Protocol Analysis: Magnesium vs Copper",
+      "content_markdown": "**Telemetry Evaluation:** Dissolving $12.0\\text{ g}$ of a magnesium ($\\text{Mg}$) and copper ($\\text{Cu}$) alloy in excess dilute $\\text{HCl}$ evolves $4.958\\text{ L}$ of $\\text{H}_2$ gas (standard conditions). An engineer asserts: *\"Both metals react with $\\text{HCl}$, and the mass percentage of magnesium is $40\\%$.\"* Which evaluation is scientifically accurate?",
+      "options": [
+        { "id": "A", "text": "The engineer's assertion is completely correct in both parts." },
+        { "id": "B", "text": "Flawed: Copper stands after Hydrogen and does not react; only magnesium reacts ($m_{\\text{Mg}} = 4.8\\text{ g}$), making magnesium $40\\%$ and copper $60\\%$." },
+        { "id": "C", "text": "Flawed: Magnesium is inert while copper produces all the hydrogen gas." },
+        { "id": "D", "text": "Flawed: Both metals react but copper accounts for $80\\%$ of the total mass." }
+      ],
+      "correct_option_id": "B",
+      "explanation": "ANSWER B: Copper stands below Hydrogen in the activity series and does not react with HCl. Magnesium reacts: n(Mg) = n(H2) = 0.20 mol => m(Mg) = 0.20 × 24 = 4.8 g (40%). Unreacted copper is 12.0 - 4.8 = 7.2 g (60%)."
+    },
+    {
+      "order_index": 21,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 6: Saturn Rings • Protocol Analysis: Zinc-Silver Stoichiometry",
+      "content_markdown": "**Telemetry Evaluation:** A $16.5\\text{ g}$ alloy of zinc ($\\text{Zn}$) and silver ($\\text{Ag}$) dissolves in excess dilute $\\text{H}_2\\text{SO}_4$, evolving $3.7185\\text{ L}$ of $\\text{H}_2$ gas (standard conditions). What are the correct stoichiometric moles of reacted zinc and the mass percentage of silver ($\\text{Ag}$)? ($M_{\\text{Zn}} = 65, M_{\\text{Ag}} = 108$).",
+      "options": [
+        { "id": "A", "text": "$n_{\\text{Zn}} = 0.15\\text{ mol}, \\quad \\%m_{\\text{Ag}} \\approx 40.91\\%$" },
+        { "id": "B", "text": "$n_{\\text{Zn}} = 0.30\\text{ mol}, \\quad \\%m_{\\text{Ag}} = 50.00\\%$" },
+        { "id": "C", "text": "$n_{\\text{Zn}} = 0.15\\text{ mol}, \\quad \\%m_{\\text{Ag}} = 59.09\\%$" },
+        { "id": "D", "text": "$n_{\\text{Zn}} = 0.10\\text{ mol}, \\quad \\%m_{\\text{Ag}} = 25.00\\%$" }
+      ],
+      "correct_option_id": "A",
+      "explanation": "ANSWER A: n(H2) = 3.7185 / 24.79 = 0.15 mol => n(Zn) = 0.15 mol => m(Zn) = 0.15 × 65 = 9.75 g. Silver mass is m(Ag) = 16.5 - 9.75 = 6.75 g => %m(Ag) = (6.75 / 16.5) × 100% ≈ 40.91%."
+    },
+    {
+      "order_index": 22,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 6: Saturn Rings • Protocol Analysis: Hydrocarbon Absorption Check",
+      "content_markdown": "**Telemetry Evaluation:** A $9.916\\text{ L}$ (standard conditions) stream of $\\text{CH}_4$ and $\\text{C}_2\\text{H}_4$ causes a bromine flask mass gain of $8.4\\text{ g}$. What are the respective molar amounts of ethylene ($\\text{C}_2\\text{H}_4$) and methane ($\\text{CH}_4$)? ($M_{\\text{C}_2\\text{H}_4} = 28\\text{ g/mol}$).",
+      "options": [
+        { "id": "A", "text": "$n_{\\text{C}_2\\text{H}_4} = 0.30\\text{ mol}, \\quad n_{\\text{CH}_4} = 0.10\\text{ mol}$" },
+        { "id": "B", "text": "$n_{\\text{C}_2\\text{H}_4} = 0.20\\text{ mol}, \\quad n_{\\text{CH}_4} = 0.20\\text{ mol}$" },
+        { "id": "C", "text": "$n_{\\text{C}_2\\text{H}_4} = 0.10\\text{ mol}, \\quad n_{\\text{CH}_4} = 0.30\\text{ mol}$" },
+        { "id": "D", "text": "$n_{\\text{C}_2\\text{H}_4} = 0.40\\text{ mol}, \\quad n_{\\text{CH}_4} = 0.00\\text{ mol}$" }
+      ],
+      "correct_option_id": "A",
+      "explanation": "ANSWER A: Total moles = 9.916 / 24.79 = 0.40 mol. m(C2H4) = 8.4 g => n(C2H4) = 8.4 / 28 = 0.30 mol. n(CH4) = 0.40 - 0.30 = 0.10 mol."
+    },
+    {
+      "order_index": 23,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.35,
+      "sectionName": "Sector 6: Saturn Rings • Protocol Analysis: Volume vs Mass Distinction",
+      "content_markdown": "**Telemetry Evaluation:** A gas mixture containing $0.10\\text{ mol}$ $\\text{CH}_4$ ($1.6\\text{ g}$) and $0.30\\text{ mol}$ $\\text{C}_2\\text{H}_4$ ($8.4\\text{ g}$) has total mass $10.0\\text{ g}$ and total volume $9.916\\text{ L}$ (standard conditions). What is the volume percentage ($\\text{\\%}V$) versus mass percentage ($\\text{\\%}m$) of methane ($\\text{CH}_4$)?",
+      "options": [
+        { "id": "A", "text": "$\\text{\\%}V = 25.00\\%, \\quad \\text{\\%}m = 16.00\\%$" },
+        { "id": "B", "text": "$\\text{\\%}V = 16.00\\%, \\quad \\text{\\%}m = 25.00\\%$" },
+        { "id": "C", "text": "$\\text{\\%}V = 25.00\\%, \\quad \\text{\\%}m = 25.00\\%$" },
+        { "id": "D", "text": "$\\text{\\%}V = 50.00\\%, \\quad \\text{\\%}m = 16.00\\%$" }
+      ],
+      "correct_option_id": "A",
+      "explanation": "ANSWER A: Total moles = 0.10 + 0.30 = 0.40 mol => %V(CH4) = (0.10 / 0.40) × 100% = 25.00%. Total mass = 10.0 g => %m(CH4) = (1.6 / 10.0) × 100% = 16.00%."
+    },
+    {
+      "order_index": 24,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.40,
+      "sectionName": "Sector 7: Uranus Deep Space • Quantitative Mission: Zinc-Copper Alloy Breakdown",
+      "content_markdown": "An alloy specimen weighing $15.0\\text{ g}$ composed of zinc ($\\text{Zn}$) and copper ($\\text{Cu}$) reacts with excess dilute $\\text{HCl}$. The reaction produces $3.7185\\text{ L}$ of $\\text{H}_2$ gas (standard conditions) and unreacted copper residue. Determine the masses ($m_{\\text{Zn}}, m_{\\text{Cu}}$) and the mass percentage of zinc ($\\text{\\%}m_{\\text{Zn}}$). ($M_{\\text{Zn}} = 65\\text{ g/mol}$).",
+      "options": [
+        { "id": "A", "text": "$m_{\\text{Zn}} = 9.75\\text{ g}, \\quad m_{\\text{Cu}} = 5.25\\text{ g}, \\quad \\%m_{\\text{Zn}} = 65\\%$" },
+        { "id": "B", "text": "$m_{\\text{Zn}} = 6.50\\text{ g}, \\quad m_{\\text{Cu}} = 8.50\\text{ g}, \\quad \\%m_{\\text{Zn}} = 43.33\\%$" },
+        { "id": "C", "text": "$m_{\\text{Zn}} = 10.0\\text{ g}, \\quad m_{\\text{Cu}} = 5.0\\text{ g}, \\quad \\%m_{\\text{Zn}} = 66.67\\%$" },
+        { "id": "D", "text": "$m_{\\text{Zn}} = 5.25\\text{ g}, \\quad m_{\\text{Cu}} = 9.75\\text{ g}, \\quad \\%m_{\\text{Zn}} = 35\\%$" }
+      ],
+      "correct_option_id": "A",
+      "explanation": "ANSWER A: n(H2) = 3.7185 / 24.79 = 0.15 mol => n(Zn) = 0.15 mol => m(Zn) = 0.15 × 65 = 9.75 g. Residue m(Cu) = 15.0 - 9.75 = 5.25 g. %m(Zn) = (9.75 / 15.0) × 100% = 65%."
+    },
+    {
+      "order_index": 25,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.40,
+      "sectionName": "Sector 7: Uranus Deep Space • Quantitative Mission: Anhydrous Salt Telemetry",
+      "content_markdown": "A $10.0\\text{ g}$ sample containing zinc ($\\text{Zn}$) and copper ($\\text{Cu}$) reacts completely with excess dilute $\\text{HCl}$, evolving $2.479\\text{ L}$ of $\\text{H}_2$ gas (standard conditions). If the filtered solution is evaporated to dryness, what mass of anhydrous zinc chloride ($\\text{ZnCl}_2$) salt is obtained? ($M_{\\text{ZnCl}_2} = 136\\text{ g/mol}$).",
+      "options": [
+        { "id": "A", "text": "$6.8\\text{ g}$" },
+        { "id": "B", "text": "$13.6\\text{ g}$" },
+        { "id": "C", "text": "$27.2\\text{ g}$" },
+        { "id": "D", "text": "$10.0\\text{ g}$" }
+      ],
+      "correct_option_id": "B",
+      "explanation": "ANSWER B: Zn + 2HCl → ZnCl2 + H2. n(H2) = 2.479 / 24.79 = 0.10 mol => n(ZnCl2) = 0.10 mol. Thus, m(ZnCl2) = 0.10 × 136 = 13.6 g."
+    },
+    {
+      "order_index": 26,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.40,
+      "sectionName": "Sector 7: Uranus Deep Space • Quantitative Mission: Aluminium Reconstitution",
+      "content_markdown": "A powder mixture of aluminium ($\\text{Al}$) and silver ($\\text{Ag}$) is treated with excess dilute $\\text{H}_2\\text{SO}_4$. The reaction produces $11.1555\\text{ L}$ of $\\text{H}_2$ gas (standard conditions) and leaves $6.9\\text{ g}$ of insoluble silver. What was the **total mass** of the initial mixture, and what is the mass percentage of aluminium ($\\text{\\%}m_{\\text{Al}}$)? ($M_{\\text{Al}} = 27\\text{ g/mol}$).",
+      "options": [
+        { "id": "A", "text": "$m_{\\text{tot}} = 15.0\\text{ g}, \\quad \\%m_{\\text{Al}} = 54\\%$" },
+        { "id": "B", "text": "$m_{\\text{tot}} = 12.0\\text{ g}, \\quad \\%m_{\\text{Al}} = 40\\%$" },
+        { "id": "C", "text": "$m_{\\text{tot}} = 18.0\\text{ g}, \\quad \\%m_{\\text{Al}} = 60\\%$" },
+        { "id": "D", "text": "$m_{\\text{tot}} = 15.0\\text{ g}, \\quad \\%m_{\\text{Al}} = 46\\%$" }
+      ],
+      "correct_option_id": "A",
+      "explanation": "ANSWER A: n(H2) = 11.1555 / 24.79 = 0.45 mol. 2Al + 3H2SO4 → Al2(SO4)3 + 3H2. n(Al) = (2/3) × 0.45 = 0.30 mol => m(Al) = 0.30 × 27 = 8.1 g. Total mass = 8.1 + 6.9 = 15.0 g. %m(Al) = (8.1 / 15.0) × 100% = 54%."
+    },
+    {
+      "order_index": 27,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.40,
+      "sectionName": "Sector 8: Neptune Frontier • Deep Space Gas Fractionation",
+      "content_markdown": "A $9.916\\text{ L}$ (standard conditions) stream of fuel gas containing methane ($\\text{CH}_4$) and ethylene ($\\text{C}_2\\text{H}_4$) is passed through a $\\text{Br}_2$ absorption chamber. The chamber mass increases by $5.6\\text{ g}$. What are the volume percentage ($\\text{\\%}V$) and mass percentage ($\\text{\\%}m$) of ethylene ($\\text{C}_2\\text{H}_4$)? ($M_{\\text{C}_2\\text{H}_4} = 28, M_{\\text{CH}_4} = 16$).",
+      "options": [
+        { "id": "A", "text": "$\\text{\\%}V = 50.00\\%, \\quad \\text{\\%}m \\approx 63.64\\%$" },
+        { "id": "B", "text": "$\\text{\\%}V = 63.64\\%, \\quad \\text{\\%}m = 50.00\\%$" },
+        { "id": "C", "text": "$\\text{\\%}V = 50.00\\%, \\quad \\text{\\%}m = 50.00\\%$" },
+        { "id": "D", "text": "$\\text{\\%}V = 40.00\\%, \\quad \\text{\\%}m \\approx 70.00\\%$" }
+      ],
+      "correct_option_id": "A",
+      "explanation": "ANSWER A: Total moles = 9.916 / 24.79 = 0.40 mol. m(C2H4) = 5.6 g => n(C2H4) = 0.20 mol => %V = (0.20 / 0.40) × 100% = 50.00%. n(CH4) = 0.20 mol => m(CH4) = 3.2 g. Total mass = 5.6 + 3.2 = 8.8 g => %m(C2H4) = (5.6 / 8.8) × 100% ≈ 63.64%."
+    },
+    {
+      "order_index": 28,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.40,
+      "sectionName": "Sector 8: Neptune Frontier • Dual-Phase Planetary Gas Cycle",
+      "content_markdown": "A $12.395\\text{ L}$ (standard conditions) mixture of $\\text{CH}_4$ and $\\text{C}_2\\text{H}_4$ is scrubbed through liquid $\\text{Br}_2$, causing a chamber mass gain of $8.4\\text{ g}$. The entire volume of escaping unreacted gas is subsequently combusted completely in excess oxygen: $\\text{CH}_4 + 2\\text{O}_2 \\xrightarrow{t^\\circ} \\text{CO}_2 + 2\\text{H}_2\\text{O}$. What volume of $\\text{CO}_2$ gas (at standard conditions) is collected?",
+      "options": [
+        { "id": "A", "text": "$2.479\\text{ L}$" },
+        { "id": "B", "text": "$4.958\\text{ L}$" },
+        { "id": "C", "text": "$7.437\\text{ L}$" },
+        { "id": "D", "text": "$1.2395\\text{ L}$" }
+      ],
+      "correct_option_id": "B",
+      "explanation": "ANSWER B: Total moles = 12.395 / 24.79 = 0.50 mol. Trapped ethylene: m(C2H4) = 8.4 g => n(C2H4) = 0.30 mol. Escaping methane: n(CH4) = 0.50 - 0.30 = 0.20 mol. Combustion of 0.20 mol CH4 yields 0.20 mol CO2. V(CO2) = 0.20 × 24.79 = 4.958 L."
+    }
+  ]
+}
