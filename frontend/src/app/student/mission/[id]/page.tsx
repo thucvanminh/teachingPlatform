@@ -521,7 +521,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
 
   const content = (
     <div
-      className={`min-h-[100dvh] flex flex-col justify-between ${
+      className={`h-[calc(100dvh-4rem)] min-h-[calc(100dvh-4rem)] overflow-hidden flex flex-col ${
         isCosmic
           ? 'text-slate-100'
           : isKids
@@ -531,7 +531,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
     >
       {/* 1. TOP HEADER (Fixed / Sticky on Mobile) */}
       <header
-        className={`sticky top-0 z-30 px-3 sm:px-6 py-2.5 sm:py-3 border-b backdrop-blur-md transition-colors ${
+        className={`z-30 shrink-0 px-3 sm:px-6 py-2.5 sm:py-3 border-b backdrop-blur-md transition-colors ${
           isCosmic
             ? 'bg-[#05070E]/90 border-cyan-500/30 text-white'
             : isKids
@@ -665,7 +665,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
       </header>
 
       {/* 2. MAIN SINGLE-QUESTION VIEW */}
-      <main className="flex-1 max-w-3xl w-full mx-auto px-3.5 sm:px-6 py-4 flex flex-col justify-center">
+      <main className="min-h-0 flex-1 max-w-3xl w-full mx-auto overflow-y-auto px-3.5 sm:px-6 py-4 flex flex-col justify-start lg:justify-center">
         {currentQ ? (
           <div
             className={`rounded-2xl sm:rounded-3xl p-5 sm:p-8 border shadow-sm transition flex flex-col justify-between ${
@@ -1133,7 +1133,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
 
       {/* 3. BOTTOM CONTROL BAR */}
       <footer
-        className={`sticky bottom-0 z-30 px-3.5 sm:px-6 py-2.5 sm:py-3 border-t backdrop-blur-md ${
+        className={`z-30 shrink-0 px-3.5 sm:px-6 py-2.5 sm:py-3 border-t backdrop-blur-md ${
           isCosmic
             ? 'bg-[#05070E]/95 border-cyan-500/20'
             : isKids
