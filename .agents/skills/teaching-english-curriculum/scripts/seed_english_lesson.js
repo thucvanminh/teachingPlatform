@@ -14,11 +14,11 @@ const CONSTANTS = {
   TEACHER_ID: 'dc62e5df-2344-4785-b058-b95f5dbe0983', // Thầy Thức
   STUDENTS: {
     thai: '9208f557-3288-442e-accf-15fc8c763e68',     // Lớp 11
-    nam_viet: 'c4217be5-4c07-4286-905c-e67d26456fae'  // Lớp 12
+    nam_viet: 'd76bd9d6-6cf5-409c-847b-b0e5c07a0876'  // Lớp 12
   },
   SUBJECTS: {
     11: 'f36e3e6b-46e2-4839-a2e8-8a78ff88a9a0',       // ENG_11
-    12: '9b343ae3-1f19-4bbd-986d-069cb158a127'        // ENG_12
+    12: 'a15d4b19-412a-4bff-acd5-86714381b7af'        // ENG_12
   }
 };
 
@@ -36,12 +36,20 @@ async function seed(payload) {
     questions = []
   } = payload;
 
-  const studentId = CONSTANTS.STUDENTS[studentUsername];
+  // Look up student from DB or constants
+  let student = await prisma.users.findUnique({
+    where: { username: studentUsername }
+  });
+  const studentId = student ? student.id : CONSTANTS.STUDENTS[studentUsername];
   if (!studentId) {
     throw new Error(`Unknown student username: "${studentUsername}". Expected "thai" or "nam_viet".`);
   }
 
-  const subjectId = CONSTANTS.SUBJECTS[grade];
+  // Look up subject from DB or constants
+  let subject = await prisma.subjects.findFirst({
+    where: { code: `ENG_${grade}` }
+  });
+  const subjectId = subject ? subject.id : CONSTANTS.SUBJECTS[grade];
   if (!subjectId) {
     throw new Error(`Unsupported grade: "${grade}". Expected 11 or 12.`);
   }
@@ -79,8 +87,7 @@ async function seed(payload) {
   // 3. Create Assessment
   const assessment = await prisma.assessments.create({
     data: {
-      unit_id: unit.id,
-      created_by: CONSTANTS.TEACHER_ID,
+      learning_unit_id: unit.id,
       title: assessmentTitle || `Luyện tập tại lớp: ${unitTitle} (${questions.length} câu)`,
       type: 'IN_SESSION_90M',
       time_limit_minutes: timeLimitMinutes,
@@ -94,13 +101,18 @@ async function seed(payload) {
     const pointsPerQuestion = Number((10 / questions.length).toFixed(4));
     const questionRecords = questions.map((q, idx) => ({
       assessment_id: assessment.id,
-      content: q.content,
-      question_type: 'MULTIPLE_CHOICE',
-      options: q.options,
-      correct_answer: q.correctAnswer,
-      explanation: q.explanation || 'Đáp án chính xác được Thầy Thức biên soạn.',
+      order_index: idx + 1,
+      type: 'MULTIPLE_CHOICE',
       points: pointsPerQuestion,
-      order_index: idx + 1
+      question_payload: {
+        content_markdown: q.content,
+        options: q.options,
+        correct_option_id: q.correctAnswer
+      },
+      grading_key_payload: {
+        correct_option_id: q.correctAnswer,
+        explanation_markdown: q.explanation || 'Đáp án chính xác được Thầy Thức biên soạn.'
+      }
     }));
 
     await prisma.questions.createMany({
@@ -115,8 +127,8 @@ async function seed(payload) {
       daily_assignment_id: assignment.id,
       assessment_id: assessment.id,
       student_id: studentId,
-      status: 'IN_PROGRESS',
-      max_score: 10
+      status: 'NOT_STARTED',
+      total_score: 0.0
     }
   });
   console.log(`✅ Created Assessment Attempt: ${attempt.id}`);

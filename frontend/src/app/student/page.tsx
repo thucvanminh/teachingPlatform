@@ -1065,7 +1065,7 @@ export default function StudentDashboard() {
                               <span>Hôm nay toàn bộ bài tập được dồn làm trực tiếp tại lớp (không có BTVN).</span>
                             </span>
                             <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 border border-blue-200">
-                              100 câu luyện tập tại lớp
+                              {assignment.assessment_attempts?.[0]?.assessments?.title?.match(/\d+\s*câu/)?.[0] ? `${assignment.assessment_attempts[0].assessments.title.match(/\d+\s*câu/)[0]} luyện tập tại lớp` : 'Luyện tập tại lớp'}
                             </span>
                           </div>
                         )}
@@ -1073,14 +1073,19 @@ export default function StudentDashboard() {
                         <div className={`grid grid-cols-1 ${assignment.assessment_attempts?.length === 1 ? 'md:grid-cols-2' : 'md:grid-cols-3'} gap-5 mt-4`}>
                           {/* Station 1: Bài Giảng & Từ Vựng */}
                           {(() => {
-                            const isMidtermApp =
+                            const appMatch = assignment.learning_units?.lecture_content_markdown?.match(/\/lectures\/[a-zA-Z0-9_\-\/]+\.html/);
+                            const interactiveUrl = appMatch ? appMatch[0] : (
                               assignment.learning_units?.title?.toLowerCase().includes('ôn tập thi giữa kì') ||
-                              assignment.learning_units?.lecture_content_markdown?.includes('/lectures/eng11-midterm');
+                              assignment.learning_units?.lecture_content_markdown?.includes('/lectures/eng11-midterm')
+                                ? '/lectures/eng11-midterm/index.html'
+                                : null
+                            );
+                            const hasInteractive = !!interactiveUrl;
 
                             return (
                               <div
                                 className={`p-5 rounded-2xl bg-white border flex flex-col justify-between shadow-sm transition ${
-                                  isMidtermApp
+                                  hasInteractive
                                     ? 'border-blue-400 bg-gradient-to-b from-blue-50/50 to-white ring-1 ring-blue-300'
                                     : 'border-slate-200'
                                 }`}
@@ -1089,16 +1094,16 @@ export default function StudentDashboard() {
                                   <div className="flex items-center justify-between gap-2">
                                     <span
                                       className={`text-xs font-bold px-2.5 py-1 rounded-full border ${
-                                        isMidtermApp
+                                        hasInteractive
                                           ? 'bg-blue-600 text-white border-blue-700'
                                           : 'bg-blue-50 text-blue-700 border-blue-200'
                                       }`}
                                     >
-                                      {isMidtermApp ? '🚀 Trạm 1: Giảng Đường Tương Tác' : '📖 Trạm 1: Bài Giảng & Lý Thuyết'}
+                                      {hasInteractive ? '🚀 Trạm 1: Giảng Đường Tương Tác' : '📖 Trạm 1: Bài Giảng & Lý Thuyết'}
                                     </span>
-                                    {isMidtermApp && (
+                                    {hasInteractive && interactiveUrl && (
                                       <a
-                                        href="/lectures/eng11-midterm/index.html"
+                                        href={interactiveUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-xs text-blue-600 hover:text-blue-800 font-semibold flex items-center space-x-0.5"
@@ -1120,12 +1125,12 @@ export default function StudentDashboard() {
                                   <button
                                     onClick={() => handleOpenLecture(assignment)}
                                     className={`w-full py-2.5 font-semibold text-sm rounded-xl border transition shadow-sm ${
-                                      isMidtermApp
+                                      hasInteractive
                                         ? 'bg-blue-600 hover:bg-blue-700 text-white border-blue-700 shadow-blue-200'
                                         : 'bg-blue-50 hover:bg-blue-100 text-blue-700 border-blue-200'
                                     }`}
                                   >
-                                    {isMidtermApp ? 'Vào Phòng Học Tương Tác 🌟' : 'Xem Bài Giảng & Lý Thuyết'}
+                                    {hasInteractive ? 'Vào Phòng Học Tương Tác 🌟' : 'Xem Bài Giảng & Lý Thuyết'}
                                   </button>
                                 </div>
                               </div>
@@ -1231,25 +1236,30 @@ export default function StudentDashboard() {
 
         {/* Modal Bài Giảng */}
         {activeLectureAssignment && (() => {
-          const isMidtermApp =
+          const appMatch = activeLectureAssignment.learning_units?.lecture_content_markdown?.match(/\/lectures\/[a-zA-Z0-9_\-\/]+\.html/);
+          const interactiveUrl = appMatch ? appMatch[0] : (
             activeLectureAssignment.learning_units?.title?.toLowerCase().includes('ôn tập thi giữa kì') ||
-            activeLectureAssignment.learning_units?.lecture_content_markdown?.includes('/lectures/eng11-midterm');
+            activeLectureAssignment.learning_units?.lecture_content_markdown?.includes('/lectures/eng11-midterm')
+              ? '/lectures/eng11-midterm/index.html'
+              : null
+          );
+          const hasInteractive = !!interactiveUrl;
 
           return (
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-2 sm:p-4">
               <div
                 className={`w-full ${
-                  isMidtermApp ? 'max-w-6xl h-[92vh] max-h-[92vh]' : 'max-w-3xl max-h-[85vh]'
+                  hasInteractive ? 'max-w-6xl h-[92vh] max-h-[92vh]' : 'max-w-3xl max-h-[85vh]'
                 } bg-white border border-slate-200 rounded-3xl p-4 sm:p-6 flex flex-col overflow-hidden shadow-2xl transition-all`}
               >
                 <div className="flex items-center justify-between border-b border-slate-100 pb-3 sm:pb-4 flex-shrink-0">
                   <div>
                     <div className="flex items-center gap-2">
                       <span className="text-xs font-bold text-blue-600 uppercase tracking-wide">
-                        {isMidtermApp ? 'PHÒNG HỌC TƯƠNG TÁC' : 'Bài Giảng'} •{' '}
+                        {hasInteractive ? 'PHÒNG HỌC TƯƠNG TÁC' : 'Bài Giảng'} •{' '}
                         {formatAssignmentDate(activeLectureAssignment.assigned_date)}
                       </span>
-                      {isMidtermApp && (
+                      {hasInteractive && (
                         <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200">
                           Live Studio
                         </span>
@@ -1260,9 +1270,9 @@ export default function StudentDashboard() {
                     </h3>
                   </div>
                   <div className="flex items-center space-x-2">
-                    {isMidtermApp && (
+                    {hasInteractive && interactiveUrl && (
                       <a
-                        href="/lectures/eng11-midterm/index.html"
+                        href={interactiveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hidden sm:flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-blue-50 text-blue-700 hover:bg-blue-100 text-xs font-bold border border-blue-200 transition"
@@ -1280,12 +1290,12 @@ export default function StudentDashboard() {
                   </div>
                 </div>
 
-                {isMidtermApp ? (
+                {hasInteractive && interactiveUrl ? (
                   <div className="flex-1 w-full h-full min-h-0 py-3">
                     <iframe
-                      src="/lectures/eng11-midterm/index.html"
+                      src={interactiveUrl}
                       className="w-full h-full border border-slate-200 rounded-2xl shadow-inner bg-slate-50"
-                      title="Bài Giảng Tương Tác Giữa Kì 1"
+                      title={activeLectureAssignment.learning_units?.title || "Bài Giảng Tương Tác"}
                     />
                   </div>
                 ) : (
@@ -1299,7 +1309,7 @@ export default function StudentDashboard() {
 
                 <div className="border-t border-slate-100 pt-3 flex items-center justify-between flex-shrink-0">
                   <div className="text-xs text-slate-500">
-                    {isMidtermApp ? (
+                    {hasInteractive ? (
                       <span className="hidden sm:inline">
                         💡 Tự động chấm điểm phản xạ, sửa lỗi ngữ pháp tức thì và phát âm giọng bản xứ.
                       </span>

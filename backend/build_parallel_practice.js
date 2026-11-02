@@ -1,6 +1,7 @@
 // Rebuild the reviewed English workbook payload and schematic SVG assets.
 const fs = require('node:fs');
 const path = require('node:path');
+const { overheadAngles } = require('./parallel_angle_notation');
 const source = fs.readFileSync(process.argv[2] || '/home/dantey/Dantey/teaching/lop6/Math/90_minute_practice_by_problem_types_parallel_lines_for_keithley.md', 'utf8');
 const vietnamese = /[À-ỹĐđ]/;
 function english(text) {
@@ -45,6 +46,7 @@ const questions = matches.map((m, index) => {
     method_markdown: methods[type-1],
     reference_note: 'WORKBOOK LABELS: 1 top-left; 2 top-right; 3 bottom-right; 4 bottom-left. These labels differ from the lecture map. Use this workbook diagram.',
     ...(options.length ? {options} : {}),
+    ...(kind === 'Question' ? { correct_option_id: body.match(/\*\*Answer:\*\* `([A-D])`/)[1] } : {}),
   };
   if(id==='E5.2') {
     payload.content_markdown = 'Draw $\\angle xOy=70^\\circ$. Ray $Oz$ bisects this angle. Point $A$ lies on ray $Ox$, with $O,A,x$ in that order. Draw ray $At$ in the same half-plane as $Oz$, inside $\\angle xOy$, so that $\\angle xAt=35^\\circ$.\n\na) Calculate $\\angle xOz$.\nb) Use the corresponding angles $\\angle xAt$ and $\\angle xOz$ to prove $At\\parallel Oz$.';
@@ -62,7 +64,7 @@ if(questions.length!==35 || questions.filter(q=>q.type==='MULTIPLE_CHOICE').leng
 for(const q of questions){if(vietnamese.test(JSON.stringify(q)))throw Error('Non-English text: '+q.question_payload.source_ref);if(!q.grading_key_payload.explanation_markdown)throw Error('Missing solution');}
 const payload = {title:'Parallel Paths Expedition: 90-Minute Practice',instructions:'35 problems · 20 multiple-choice + 15 written workouts · 90 minutes. Type 1: 15 min; Type 2: 20 min; Type 3: 25 min; Type 4: 15 min; Type 5: 15 min. Use the workbook angle map: labels run clockwise from top-left. Give values, angle positions and reasons in written solutions.',questions};
 fs.mkdirSync(path.join(__dirname,'content'),{recursive:true});
-fs.writeFileSync(path.join(__dirname,'content/parallel_practice_2026_11_01.json'),JSON.stringify(payload,null,2)+'\n');
+fs.writeFileSync(path.join(__dirname,'content/parallel_practice_2026_11_01.json'),JSON.stringify(overheadAngles(payload),null,2)+'\n');
 const labels = texts => `<g fill="#f1f5f9" font-family="system-ui,sans-serif" font-size="16">${texts.map(([x,y,t])=>`<text x="${x}" y="${y}">${t}</text>`).join('')}</g>`;
 const lines = d=>`<path d="${d}" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>`;
 const shapes = {

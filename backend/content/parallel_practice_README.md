@@ -8,6 +8,8 @@ solutions and rubrics. MCQs carry 0.2 points and written exercises 0.4 points:
 
 ## Editorial decisions
 
+- Angle names use overhead notation, such as `\widehat{ABC}` and
+  `\widehat{A_1}`, throughout prompts, options and solutions.
 - Use the workbook numbering, clockwise from top-left: 1, 2, 3, 4 at each
   intersection. The UI explicitly warns that the earlier lecture uses a
   different numbering convention.
@@ -32,6 +34,11 @@ The preview finds the existing Keithley Lesson 9 card dated 2026-11-01. Apply
 adds an assessment and a NOT_STARTED attempt under that card in a transaction.
 It does not delete or replace an existing assessment, attempt, answer, lecture
 or assignment. Repeating apply leaves an existing matching assessment alone.
+
+To update angle notation on the already published lesson and practice, run
+`node backend/update_parallel_angle_notation.js` to preview, then repeat with
+`--apply`. This changes only lecture text and question/grading payloads, preserving
+question IDs, student answers, progress and scores. Repeating it is a no-op.
 
 ## Layout verification
 

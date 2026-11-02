@@ -10,7 +10,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "Q1.1",
         "sectionName": "Type 1: Angle Pair Scanner",
-        "content_markdown": "Using the Standard Diagram, $\\angle A_1$ (Top-Left) and $\\angle B_1$ (Top-Left) are a pair of:",
+        "content_markdown": "Using the Standard Diagram, $\\widehat{A_1}$ (Top-Left) and $\\widehat{B_1}$ (Top-Left) are a pair of:",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "Check positions first. Same corner: corresponding (F). Both inside, opposite sides: alternate interior (Z). Both inside, same side: consecutive interior (U).",
@@ -32,11 +32,12 @@
             "id": "D",
             "text": "Vertically opposite angles"
           }
-        ]
+        ],
+        "correct_option_id": "B"
       },
       "grading_key_payload": {
         "correct_option_id": "B",
-        "explanation_markdown": "Both $\\angle A_1$ and $\\angle B_1$ are in the Top-Left corner of their vertices, so they are **corresponding angles**."
+        "explanation_markdown": "Both $\\widehat{A_1}$ and $\\widehat{B_1}$ are in the Top-Left corner of their vertices, so they are **corresponding angles**."
       }
     },
     {
@@ -47,7 +48,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "Q1.2",
         "sectionName": "Type 1: Angle Pair Scanner",
-        "content_markdown": "Using the Standard Diagram, which angle forms a pair of **alternate interior angles** (*so le trong*) with $\\angle A_4$ (Bottom-Left)?",
+        "content_markdown": "Using the Standard Diagram, which angle forms a pair of **alternate interior angles** (*so le trong*) with $\\widehat{A_4}$ (Bottom-Left)?",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "Check positions first. Same corner: corresponding (F). Both inside, opposite sides: alternate interior (Z). Both inside, same side: consecutive interior (U).",
@@ -55,25 +56,26 @@
         "options": [
           {
             "id": "A",
-            "text": "$\\angle B_1$ (Top-Left)"
+            "text": "$\\widehat{B_1}$ (Top-Left)"
           },
           {
             "id": "B",
-            "text": "$\\angle B_2$ (Top-Right)"
+            "text": "$\\widehat{B_2}$ (Top-Right)"
           },
           {
             "id": "C",
-            "text": "$\\angle B_3$ (Bottom-Right)"
+            "text": "$\\widehat{B_3}$ (Bottom-Right)"
           },
           {
             "id": "D",
-            "text": "$\\angle B_4$ (Bottom-Left)"
+            "text": "$\\widehat{B_4}$ (Bottom-Left)"
           }
-        ]
+        ],
+        "correct_option_id": "B"
       },
       "grading_key_payload": {
         "correct_option_id": "B",
-        "explanation_markdown": "$\\angle A_4$ is inside and on the left; $\\angle B_2$ is inside and on the right. Together they make a **Z** shape."
+        "explanation_markdown": "$\\widehat{A_4}$ is inside and on the left; $\\widehat{B_2}$ is inside and on the right. Together they make a **Z** shape."
       }
     },
     {
@@ -84,7 +86,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "Q1.3",
         "sectionName": "Type 1: Angle Pair Scanner",
-        "content_markdown": "Using the Standard Diagram, $\\angle A_3$ (Bottom-Right) and $\\angle B_2$ (Top-Right) are both inside lines $a$ and $b$, and both are on the right side of transversal $c$. What kind of angle pair are they?",
+        "content_markdown": "Using the Standard Diagram, $\\widehat{A_3}$ (Bottom-Right) and $\\widehat{B_2}$ (Top-Right) are both inside lines $a$ and $b$, and both are on the right side of transversal $c$. What kind of angle pair are they?",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "Check positions first. Same corner: corresponding (F). Both inside, opposite sides: alternate interior (Z). Both inside, same side: consecutive interior (U).",
@@ -106,7 +108,8 @@
             "id": "D",
             "text": "Linear pair"
           }
-        ]
+        ],
+        "correct_option_id": "C"
       },
       "grading_key_payload": {
         "correct_option_id": "C",
@@ -121,7 +124,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "Q1.4",
         "sectionName": "Type 1: Angle Pair Scanner",
-        "content_markdown": "At vertex $A$ alone, $\\angle A_1$ (Top-Left) and $\\angle A_3$ (Bottom-Right) share the same vertex and are opposite each other like an **X**. What are they called?",
+        "content_markdown": "At vertex $A$ alone, $\\widehat{A_1}$ (Top-Left) and $\\widehat{A_3}$ (Bottom-Right) share the same vertex and are opposite each other like an **X**. What are they called?",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "Check positions first. Same corner: corresponding (F). Both inside, opposite sides: alternate interior (Z). Both inside, same side: consecutive interior (U).",
@@ -143,7 +146,8 @@
             "id": "D",
             "text": "Right angles"
           }
-        ]
+        ],
+        "correct_option_id": "A"
       },
       "grading_key_payload": {
         "correct_option_id": "A",
@@ -158,7 +162,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "E1.1",
         "sectionName": "Type 1: Angle Pair Scanner",
-        "content_markdown": "Look at the Standard Diagram where transversal $c$ cuts lines $a$ and $b$ at $A$ and $B$. Fill in the blank with the correct angle name:\na) The angle corresponding  to $\\angle A_3$ is `______`.\nb) The angle alternate interior (*so le trong*) to $\\angle A_3$ is `______`.\nc) The angle consecutive interior  to $\\angle A_4$ is `______`.\nd) The angle vertically opposite  to $\\angle B_2$ is `______`.",
+        "content_markdown": "Look at the Standard Diagram where transversal $c$ cuts lines $a$ and $b$ at $A$ and $B$. Fill in the blank with the correct angle name:\na) The angle corresponding  to $\\widehat{A_3}$ is `______`.\nb) The angle alternate interior (*so le trong*) to $\\widehat{A_3}$ is `______`.\nc) The angle consecutive interior  to $\\widehat{A_4}$ is `______`.\nd) The angle vertically opposite  to $\\widehat{B_2}$ is `______`.",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "Check positions first. Same corner: corresponding (F). Both inside, opposite sides: alternate interior (Z). Both inside, same side: consecutive interior (U).",
@@ -166,7 +170,7 @@
       },
       "grading_key_payload": {
         "rubric_markdown": "Award up to 0.4 points: 0.2 for correct values/classification and 0.2 for valid reasoning covering every requested part. Accept equivalent correct methods.",
-        "explanation_markdown": "* **a)** $\\angle B_3$ (both are Bottom-Right).\n  * **b)** $\\angle B_1$ (inside, opposite sides of line $c$).\n  * **c)** $\\angle B_1$ (inside, both on the left side of line $c$).\n  * **d)** $\\angle B_4$ (at vertex $B$, opposite to Top-Right is Bottom-Left)."
+        "explanation_markdown": "* **a)** $\\widehat{B_3}$ (both are Bottom-Right).\n  * **b)** $\\widehat{B_1}$ (inside, opposite sides of line $c$).\n  * **c)** $\\widehat{B_1}$ (inside, both on the left side of line $c$).\n  * **d)** $\\widehat{B_4}$ (at vertex $B$, opposite to Top-Right is Bottom-Left)."
       }
     },
     {
@@ -177,7 +181,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "E1.2",
         "sectionName": "Type 1: Angle Pair Scanner",
-        "content_markdown": "Draw two horizontal lines $AB$ (top) and $CD$ (bottom). A slanted segment $AC$ connects them.\na) With transversal $AC$, what kind of angle pair are $\\angle BAC$ and $\\angle ACD$ (if $B$ is to the right of $A$, and $D$ is to the left of $C$)?\nb) What if both $B$ and $D$ are on the **right side** of line $AC$? What kind of angle pair are $\\angle BAC$ and $\\angle ACD$ then?",
+        "content_markdown": "Draw two horizontal lines $AB$ (top) and $CD$ (bottom). A slanted segment $AC$ connects them.\na) With transversal $AC$, what kind of angle pair are $\\widehat{BAC}$ and $\\widehat{ACD}$ (if $B$ is to the right of $A$, and $D$ is to the left of $C$)?\nb) What if both $B$ and $D$ are on the **right side** of line $AC$? What kind of angle pair are $\\widehat{BAC}$ and $\\widehat{ACD}$ then?",
         "diagram_url": "/images/geometry/parallel_practice_pairs.svg",
         "diagram_alt": "Angle Pair Scanner: schematic reference diagram, not to scale. Use the measures stated in the question.",
         "method_markdown": "Check positions first. Same corner: corresponding (F). Both inside, opposite sides: alternate interior (Z). Both inside, same side: consecutive interior (U).",
@@ -185,7 +189,7 @@
       },
       "grading_key_payload": {
         "rubric_markdown": "Award up to 0.4 points: 0.2 for correct values/classification and 0.2 for valid reasoning covering every requested part. Accept equivalent correct methods.",
-        "explanation_markdown": "* **a)** Since $B$ is on the right and $D$ is on the left of transversal $AC$, the segments $AB$, $AC$, $CD$ form a **Z** shape. Thus, $\\angle BAC$ and $\\angle ACD$ are **alternate interior angles** .\n  * **b)** Since both $B$ and $D$ are on the right side of transversal $AC$, the segments form a **C** (or **U**) shape. Thus, $\\angle BAC$ and $\\angle ACD$ are **consecutive interior angles** ."
+        "explanation_markdown": "* **a)** Since $B$ is on the right and $D$ is on the left of transversal $AC$, the segments $AB$, $AC$, $CD$ form a **Z** shape. Thus, $\\widehat{BAC}$ and $\\widehat{ACD}$ are **alternate interior angles** .\n  * **b)** Since both $B$ and $D$ are on the right side of transversal $AC$, the segments form a **C** (or **U**) shape. Thus, $\\widehat{BAC}$ and $\\widehat{ACD}$ are **consecutive interior angles** ."
       }
     },
     {
@@ -196,7 +200,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "Q2.1",
         "sectionName": "Type 2: Direct Parallel Proofs",
-        "content_markdown": "Using the Standard Diagram, suppose $\\angle A_4 = 65^\\circ$ and $\\angle B_2 = 65^\\circ$. Why is $a \\parallel b$?",
+        "content_markdown": "Using the Standard Diagram, suppose $\\widehat{A_4} = 65^\\circ$ and $\\widehat{B_2} = 65^\\circ$. Why is $a \\parallel b$?",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "Use one valid test: equal corresponding angles, equal alternate interior angles, or consecutive interior angles with a sum of 180°. Always state the positions and the numerical relationship.",
@@ -218,11 +222,12 @@
             "id": "D",
             "text": "They are not parallel."
           }
-        ]
+        ],
+        "correct_option_id": "B"
       },
       "grading_key_payload": {
         "correct_option_id": "B",
-        "explanation_markdown": "$\\angle A_4$ (Bottom-Left) and $\\angle B_2$ (Top-Right) are alternate interior angles and both equal $65^\\circ$."
+        "explanation_markdown": "$\\widehat{A_4}$ (Bottom-Left) and $\\widehat{B_2}$ (Top-Right) are alternate interior angles and both equal $65^\\circ$."
       }
     },
     {
@@ -241,25 +246,26 @@
         "options": [
           {
             "id": "A",
-            "text": "$\\angle A_1 = 70^\\circ$ and $\\angle B_1 = 80^\\circ$"
+            "text": "$\\widehat{A_1} = 70^\\circ$ and $\\widehat{B_1} = 80^\\circ$"
           },
           {
             "id": "B",
-            "text": "$\\angle A_3 = 50^\\circ$ and $\\angle B_1 = 50^\\circ$"
+            "text": "$\\widehat{A_3} = 50^\\circ$ and $\\widehat{B_1} = 50^\\circ$"
           },
           {
             "id": "C",
-            "text": "$\\angle A_4 = 60^\\circ$ and $\\angle B_2 = 120^\\circ$"
+            "text": "$\\widehat{A_4} = 60^\\circ$ and $\\widehat{B_2} = 120^\\circ$"
           },
           {
             "id": "D",
-            "text": "$\\angle A_2 = 100^\\circ$ and $\\angle B_2 = 80^\\circ$"
+            "text": "$\\widehat{A_2} = 100^\\circ$ and $\\widehat{B_2} = 80^\\circ$"
           }
-        ]
+        ],
+        "correct_option_id": "B"
       },
       "grading_key_payload": {
         "correct_option_id": "B",
-        "explanation_markdown": "$\\angle A_3$ and $\\angle B_1$ are alternate interior angles and both equal $50^\\circ$, so $a \\parallel b$."
+        "explanation_markdown": "$\\widehat{A_3}$ and $\\widehat{B_1}$ are alternate interior angles and both equal $50^\\circ$, so $a \\parallel b$."
       }
     },
     {
@@ -270,7 +276,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "Q2.3",
         "sectionName": "Type 2: Direct Parallel Proofs",
-        "content_markdown": "Line $c$ cuts lines $x$ and $y$ at $M$ and $N$. Given a pair of corresponding angles $\\angle M_1 = 115^\\circ$ and $\\angle N_1 = 115^\\circ$. Which statement is correct?",
+        "content_markdown": "Line $c$ cuts lines $x$ and $y$ at $M$ and $N$. Given a pair of corresponding angles $\\widehat{M_1} = 115^\\circ$ and $\\widehat{N_1} = 115^\\circ$. Which statement is correct?",
         "diagram_url": "/images/geometry/parallel_practice_renamed.svg",
         "diagram_alt": "Direct Parallel Proofs: schematic reference diagram, not to scale. Use the measures stated in the question.",
         "method_markdown": "Use one valid test: equal corresponding angles, equal alternate interior angles, or consecutive interior angles with a sum of 180°. Always state the positions and the numerical relationship.",
@@ -292,7 +298,8 @@
             "id": "D",
             "text": "$c \\perp x$"
           }
-        ]
+        ],
+        "correct_option_id": "B"
       },
       "grading_key_payload": {
         "correct_option_id": "B",
@@ -307,7 +314,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "Q2.4",
         "sectionName": "Type 2: Direct Parallel Proofs",
-        "content_markdown": "Using the Standard Diagram, $\\angle A_4$ (Bottom-Left) and $\\angle B_1$ (Top-Left) are consecutive interior angles. Which pair of angle measures makes $a \\parallel b$?",
+        "content_markdown": "Using the Standard Diagram, $\\widehat{A_4}$ (Bottom-Left) and $\\widehat{B_1}$ (Top-Left) are consecutive interior angles. Which pair of angle measures makes $a \\parallel b$?",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "Use one valid test: equal corresponding angles, equal alternate interior angles, or consecutive interior angles with a sum of 180°. Always state the positions and the numerical relationship.",
@@ -315,21 +322,22 @@
         "options": [
           {
             "id": "A",
-            "text": "$\\angle A_4 = 70^\\circ$ and $\\angle B_1 = 70^\\circ$"
+            "text": "$\\widehat{A_4} = 70^\\circ$ and $\\widehat{B_1} = 70^\\circ$"
           },
           {
             "id": "B",
-            "text": "$\\angle A_4 = 110^\\circ$ and $\\angle B_1 = 70^\\circ$"
+            "text": "$\\widehat{A_4} = 110^\\circ$ and $\\widehat{B_1} = 70^\\circ$"
           },
           {
             "id": "C",
-            "text": "$\\angle A_4 = 50^\\circ$ and $\\angle B_1 = 40^\\circ$"
+            "text": "$\\widehat{A_4} = 50^\\circ$ and $\\widehat{B_1} = 40^\\circ$"
           },
           {
             "id": "D",
-            "text": "$\\angle A_4 = 100^\\circ$ and $\\angle B_1 = 100^\\circ$"
+            "text": "$\\widehat{A_4} = 100^\\circ$ and $\\widehat{B_1} = 100^\\circ$"
           }
-        ]
+        ],
+        "correct_option_id": "B"
       },
       "grading_key_payload": {
         "correct_option_id": "B",
@@ -344,7 +352,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "E2.1",
         "sectionName": "Type 2: Direct Parallel Proofs",
-        "content_markdown": "Using the Standard Diagram, given that $\\angle A_2 = 125^\\circ$ and $\\angle B_2 = 125^\\circ$. Prove that $a \\parallel b$ using the 3-line template.",
+        "content_markdown": "Using the Standard Diagram, given that $\\widehat{A_2} = 125^\\circ$ and $\\widehat{B_2} = 125^\\circ$. Prove that $a \\parallel b$ using the 3-line template.",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "Use one valid test: equal corresponding angles, equal alternate interior angles, or consecutive interior angles with a sum of 180°. Always state the positions and the numerical relationship.",
@@ -352,7 +360,7 @@
       },
       "grading_key_payload": {
         "rubric_markdown": "Award up to 0.4 points: 0.2 for correct values/classification and 0.2 for valid reasoning covering every requested part. Accept equivalent correct methods.",
-        "explanation_markdown": "Line $c$ intersects lines $a$ and $b$ at $A$ and $B$, and we have:\n  1. $\\angle A_2 = \\angle B_2 = 125^\\circ$.\n  2. $\\angle A_2$ and $\\angle B_2$ are in **corresponding** positions .\n  3. Therefore, $a \\parallel b$ (by the sign of recognition for parallel lines)."
+        "explanation_markdown": "Line $c$ intersects lines $a$ and $b$ at $A$ and $B$, and we have:\n  1. $\\widehat{A_2} = \\widehat{B_2} = 125^\\circ$.\n  2. $\\widehat{A_2}$ and $\\widehat{B_2}$ are in **corresponding** positions .\n  3. Therefore, $a \\parallel b$ (by the sign of recognition for parallel lines)."
       }
     },
     {
@@ -363,7 +371,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "E2.2",
         "sectionName": "Type 2: Direct Parallel Proofs",
-        "content_markdown": "Determine whether line $a$ and line $b$ are parallel ($a \\parallel b$) in each case below, and explain why in one sentence:\na) **Case 1:** $\\angle A_3 = 48^\\circ$ and $\\angle B_1 = 48^\\circ$ (where $\\angle A_3, \\angle B_1$ are alternate interior angles).\nb) **Case 2:** $\\angle A_1 = 95^\\circ$ and $\\angle B_1 = 92^\\circ$ (where $\\angle A_1, \\angle B_1$ are corresponding angles).\nc) **Case 3:** $\\angle A_3 = 75^\\circ$ and $\\angle B_3 = 75^\\circ$ (where $\\angle A_3, \\angle B_3$ are corresponding angles).",
+        "content_markdown": "Determine whether line $a$ and line $b$ are parallel ($a \\parallel b$) in each case below, and explain why in one sentence:\na) **Case 1:** $\\widehat{A_3} = 48^\\circ$ and $\\widehat{B_1} = 48^\\circ$ (where $\\widehat{A_3}, \\widehat{B_1}$ are alternate interior angles).\nb) **Case 2:** $\\widehat{A_1} = 95^\\circ$ and $\\widehat{B_1} = 92^\\circ$ (where $\\widehat{A_1}, \\widehat{B_1}$ are corresponding angles).\nc) **Case 3:** $\\widehat{A_3} = 75^\\circ$ and $\\widehat{B_3} = 75^\\circ$ (where $\\widehat{A_3}, \\widehat{B_3}$ are corresponding angles).",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "Use one valid test: equal corresponding angles, equal alternate interior angles, or consecutive interior angles with a sum of 180°. Always state the positions and the numerical relationship.",
@@ -371,7 +379,7 @@
       },
       "grading_key_payload": {
         "rubric_markdown": "Award up to 0.4 points: 0.2 for correct values/classification and 0.2 for valid reasoning covering every requested part. Accept equivalent correct methods.",
-        "explanation_markdown": "* **a) Parallel ($a \\parallel b$):** Because $\\angle A_3$ and $\\angle B_1$ are alternate interior angles and they are equal ($48^\\circ = 48^\\circ$).\n  * **b) NOT Parallel:** Because the corresponding angles $\\angle A_1$ and $\\angle B_1$ are not equal ($95^\\circ \\neq 92^\\circ$).\n  * **c) Parallel ($a \\parallel b$):** Because $\\angle A_3$ and $\\angle B_3$ are corresponding angles and they are equal ($75^\\circ = 75^\\circ$)."
+        "explanation_markdown": "* **a) Parallel ($a \\parallel b$):** Because $\\widehat{A_3}$ and $\\widehat{B_1}$ are alternate interior angles and they are equal ($48^\\circ = 48^\\circ$).\n  * **b) NOT Parallel:** Because the corresponding angles $\\widehat{A_1}$ and $\\widehat{B_1}$ are not equal ($95^\\circ \\neq 92^\\circ$).\n  * **c) Parallel ($a \\parallel b$):** Because $\\widehat{A_3}$ and $\\widehat{B_3}$ are corresponding angles and they are equal ($75^\\circ = 75^\\circ$)."
       }
     },
     {
@@ -382,7 +390,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "E2.3",
         "sectionName": "Type 2: Direct Parallel Proofs",
-        "content_markdown": "A transversal line $t$ intersects three lines $x, y, z$ at points $D, E, F$ respectively. The corresponding angles at the Top-Right corner of each intersection are:\n$$\\angle D_2 = 60^\\circ, \\quad \\angle E_2 = 65^\\circ, \\quad \\angle F_2 = 60^\\circ$$\nWhich two lines are parallel to each other? Prove your answer.",
+        "content_markdown": "A transversal line $t$ intersects three lines $x, y, z$ at points $D, E, F$ respectively. The corresponding angles at the Top-Right corner of each intersection are:\n$$\\widehat{D_2} = 60^\\circ, \\quad \\widehat{E_2} = 65^\\circ, \\quad \\widehat{F_2} = 60^\\circ$$\nWhich two lines are parallel to each other? Prove your answer.",
         "diagram_url": "/images/geometry/parallel_practice_three.svg",
         "diagram_alt": "Direct Parallel Proofs: schematic reference diagram, not to scale. Use the measures stated in the question.",
         "method_markdown": "Use one valid test: equal corresponding angles, equal alternate interior angles, or consecutive interior angles with a sum of 180°. Always state the positions and the numerical relationship.",
@@ -390,7 +398,7 @@
       },
       "grading_key_payload": {
         "rubric_markdown": "Award up to 0.4 points: 0.2 for correct values/classification and 0.2 for valid reasoning covering every requested part. Accept equivalent correct methods.",
-        "explanation_markdown": "* Line $x$ is parallel to line $z$ ($x \\parallel z$).\n  * **Proof:**\n    * We have $\\angle D_2 = \\angle F_2 = 60^\\circ$.\n    * Also, $\\angle D_2$ and $\\angle F_2$ are **corresponding angles** .\n    * Therefore, $x \\parallel z$. *(Note: Line $y$ is not parallel to $x$ or $z$ because $65^\\circ \\neq 60^\\circ$).*"
+        "explanation_markdown": "* Line $x$ is parallel to line $z$ ($x \\parallel z$).\n  * **Proof:**\n    * We have $\\widehat{D_2} = \\widehat{F_2} = 60^\\circ$.\n    * Also, $\\widehat{D_2}$ and $\\widehat{F_2}$ are **corresponding angles** .\n    * Therefore, $x \\parallel z$. *(Note: Line $y$ is not parallel to $x$ or $z$ because $65^\\circ \\neq 60^\\circ$).*"
       }
     },
     {
@@ -401,7 +409,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "Q3.1",
         "sectionName": "Type 3: Hidden Angle Bridges",
-        "content_markdown": "Using the Standard Diagram, you are given $\\angle A_1 = 60^\\circ$ (Top-Left) and $\\angle B_1 = 60^\\circ$ (Top-Left). What is the measure of $\\angle A_3$ (Bottom-Right, vertically opposite to $\\angle A_1$)?",
+        "content_markdown": "Using the Standard Diagram, you are given $\\widehat{A_1} = 60^\\circ$ (Top-Left) and $\\widehat{B_1} = 60^\\circ$ (Top-Left). What is the measure of $\\widehat{A_3}$ (Bottom-Right, vertically opposite to $\\widehat{A_1}$)?",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "Find the hidden angle using vertical angles (equal) or a linear pair (sum 180°). Then compare angles at the two intersections and name the parallel-line test.",
@@ -423,11 +431,12 @@
             "id": "D",
             "text": "$90^\\circ$"
           }
-        ]
+        ],
+        "correct_option_id": "B"
       },
       "grading_key_payload": {
         "correct_option_id": "B",
-        "explanation_markdown": "Vertically opposite angles  are always equal, so $\\angle A_3 = \\angle A_1 = 60^\\circ$."
+        "explanation_markdown": "Vertically opposite angles  are always equal, so $\\widehat{A_3} = \\widehat{A_1} = 60^\\circ$."
       }
     },
     {
@@ -438,7 +447,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "Q3.2",
         "sectionName": "Type 3: Hidden Angle Bridges",
-        "content_markdown": "Using the Standard Diagram, $\\angle A_1$ (Top-Left) and $\\angle A_2$ (Top-Right) form a linear pair  on line $a$. If $\\angle A_1 = 130^\\circ$, what is the measure of $\\angle A_2$?",
+        "content_markdown": "Using the Standard Diagram, $\\widehat{A_1}$ (Top-Left) and $\\widehat{A_2}$ (Top-Right) form a linear pair  on line $a$. If $\\widehat{A_1} = 130^\\circ$, what is the measure of $\\widehat{A_2}$?",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "Find the hidden angle using vertical angles (equal) or a linear pair (sum 180°). Then compare angles at the two intersections and name the parallel-line test.",
@@ -460,11 +469,12 @@
             "id": "D",
             "text": "$40^\\circ$"
           }
-        ]
+        ],
+        "correct_option_id": "C"
       },
       "grading_key_payload": {
         "correct_option_id": "C",
-        "explanation_markdown": "$\\angle A_1 + \\angle A_2 = 180^\\circ \\implies \\angle A_2 = 180^\\circ - 130^\\circ = 50^\\circ$."
+        "explanation_markdown": "$\\widehat{A_1} + \\widehat{A_2} = 180^\\circ \\implies \\widehat{A_2} = 180^\\circ - 130^\\circ = 50^\\circ$."
       }
     },
     {
@@ -475,7 +485,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "Q3.3",
         "sectionName": "Type 3: Hidden Angle Bridges",
-        "content_markdown": "Using the Standard Diagram, given $\\angle A_1 = 110^\\circ$ (Top-Left) and $\\angle B_2 = 70^\\circ$ (Top-Right). Are lines $a$ and $b$ parallel?",
+        "content_markdown": "Using the Standard Diagram, given $\\widehat{A_1} = 110^\\circ$ (Top-Left) and $\\widehat{B_2} = 70^\\circ$ (Top-Right). Are lines $a$ and $b$ parallel?",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "Find the hidden angle using vertical angles (equal) or a linear pair (sum 180°). Then compare angles at the two intersections and name the parallel-line test.",
@@ -487,7 +497,7 @@
           },
           {
             "id": "B",
-            "text": "Yes, because $\\angle A_2 = 180^\\circ - 110^\\circ = 70^\\circ$, which equals the corresponding angle $\\angle B_2 = 70^\\circ$."
+            "text": "Yes, because $\\widehat{A_2} = 180^\\circ - 110^\\circ = 70^\\circ$, which equals the corresponding angle $\\widehat{B_2} = 70^\\circ$."
           },
           {
             "id": "C",
@@ -495,13 +505,14 @@
           },
           {
             "id": "D",
-            "text": "Only if $\\angle B_2 = 90^\\circ$."
+            "text": "Only if $\\widehat{B_2} = 90^\\circ$."
           }
-        ]
+        ],
+        "correct_option_id": "B"
       },
       "grading_key_payload": {
         "correct_option_id": "B",
-        "explanation_markdown": "At vertex $A$, $\\angle A_1$ and $\\angle A_2$ are a linear pair, so $\\angle A_2 = 180^\\circ - 110^\\circ = 70^\\circ$. Then $\\angle A_2 = \\angle B_2 = 70^\\circ$ (corresponding angles), so $a \\parallel b$!"
+        "explanation_markdown": "At vertex $A$, $\\widehat{A_1}$ and $\\widehat{A_2}$ are a linear pair, so $\\widehat{A_2} = 180^\\circ - 110^\\circ = 70^\\circ$. Then $\\widehat{A_2} = \\widehat{B_2} = 70^\\circ$ (corresponding angles), so $a \\parallel b$!"
       }
     },
     {
@@ -512,7 +523,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "Q3.4",
         "sectionName": "Type 3: Hidden Angle Bridges",
-        "content_markdown": "Using the Standard Diagram, given $\\angle A_2 = 55^\\circ$ (Top-Right) and $\\angle B_2 = 55^\\circ$ (Top-Right). If we first use vertically opposite angles at vertex $A$ ($\\angle A_4 = \\angle A_2 = 55^\\circ$), which angle pair proves $a \\parallel b$?",
+        "content_markdown": "Using the Standard Diagram, given $\\widehat{A_2} = 55^\\circ$ (Top-Right) and $\\widehat{B_2} = 55^\\circ$ (Top-Right). If we first use vertically opposite angles at vertex $A$ ($\\widehat{A_4} = \\widehat{A_2} = 55^\\circ$), which angle pair proves $a \\parallel b$?",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "Find the hidden angle using vertical angles (equal) or a linear pair (sum 180°). Then compare angles at the two intersections and name the parallel-line test.",
@@ -520,25 +531,26 @@
         "options": [
           {
             "id": "A",
-            "text": "$\\angle A_4$ and $\\angle B_2$ (Alternate interior angles)"
+            "text": "$\\widehat{A_4}$ and $\\widehat{B_2}$ (Alternate interior angles)"
           },
           {
             "id": "B",
-            "text": "$\\angle A_4$ and $\\angle B_1$ (Consecutive interior angles)"
+            "text": "$\\widehat{A_4}$ and $\\widehat{B_1}$ (Consecutive interior angles)"
           },
           {
             "id": "C",
-            "text": "$\\angle A_1$ and $\\angle B_3$ (Exterior angles)"
+            "text": "$\\widehat{A_1}$ and $\\widehat{B_3}$ (Exterior angles)"
           },
           {
             "id": "D",
             "text": "None of the above"
           }
-        ]
+        ],
+        "correct_option_id": "A"
       },
       "grading_key_payload": {
         "correct_option_id": "A",
-        "explanation_markdown": "$\\angle A_4$ (Bottom-Left) and $\\angle B_2$ (Top-Right) are alternate interior angles  and both equal $55^\\circ$."
+        "explanation_markdown": "$\\widehat{A_4}$ (Bottom-Left) and $\\widehat{B_2}$ (Top-Right) are alternate interior angles  and both equal $55^\\circ$."
       }
     },
     {
@@ -549,7 +561,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "E3.1",
         "sectionName": "Type 3: Hidden Angle Bridges",
-        "content_markdown": "Using the Standard Diagram, suppose $\\angle A_1 = 72^\\circ$ (Top-Left) and $\\angle B_1 = 72^\\circ$ (Top-Left).\nSuppose Keithley wants to prove $a \\parallel b$ using **alternate interior angles** .\na) Find the measure of $\\angle A_3$ (Bottom-Right). Explain why.\nb) Compare $\\angle A_3$ and $\\angle B_1$ to conclude that $a \\parallel b$.",
+        "content_markdown": "Using the Standard Diagram, suppose $\\widehat{A_1} = 72^\\circ$ (Top-Left) and $\\widehat{B_1} = 72^\\circ$ (Top-Left).\nSuppose Keithley wants to prove $a \\parallel b$ using **alternate interior angles** .\na) Find the measure of $\\widehat{A_3}$ (Bottom-Right). Explain why.\nb) Compare $\\widehat{A_3}$ and $\\widehat{B_1}$ to conclude that $a \\parallel b$.",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "Find the hidden angle using vertical angles (equal) or a linear pair (sum 180°). Then compare angles at the two intersections and name the parallel-line test.",
@@ -557,7 +569,7 @@
       },
       "grading_key_payload": {
         "rubric_markdown": "Award up to 0.4 points: 0.2 for correct values/classification and 0.2 for valid reasoning covering every requested part. Accept equivalent correct methods.",
-        "explanation_markdown": "* **a)** Since $\\angle A_1$ and $\\angle A_3$ are vertically opposite angles, we have:\n    $$\\angle A_3 = \\angle A_1 = 72^\\circ$$\n  * **b)** Line $c$ cuts lines $a$ and $b$ at $A$ and $B$:\n    * We have $\\angle A_3 = \\angle B_1 = 72^\\circ$.\n    * $\\angle A_3$ and $\\angle B_1$ are **alternate interior angles** .\n    * Therefore, $a \\parallel b$."
+        "explanation_markdown": "* **a)** Since $\\widehat{A_1}$ and $\\widehat{A_3}$ are vertically opposite angles, we have:\n    $$\\widehat{A_3} = \\widehat{A_1} = 72^\\circ$$\n  * **b)** Line $c$ cuts lines $a$ and $b$ at $A$ and $B$:\n    * We have $\\widehat{A_3} = \\widehat{B_1} = 72^\\circ$.\n    * $\\widehat{A_3}$ and $\\widehat{B_1}$ are **alternate interior angles** .\n    * Therefore, $a \\parallel b$."
       }
     },
     {
@@ -568,7 +580,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "E3.2",
         "sectionName": "Type 3: Hidden Angle Bridges",
-        "content_markdown": "Using the Standard Diagram, given that $\\angle A_4 = 115^\\circ$ (Bottom-Left) and $\\angle B_1 = 65^\\circ$ (Top-Left).\na) Since $\\angle A_1$ (Top-Left) and $\\angle A_4$ (Bottom-Left) form a linear pair  along line $c$, calculate $\\angle A_1$.\nb) Compare $\\angle A_1$ with $\\angle B_1$ to prove that $a \\parallel b$.",
+        "content_markdown": "Using the Standard Diagram, given that $\\widehat{A_4} = 115^\\circ$ (Bottom-Left) and $\\widehat{B_1} = 65^\\circ$ (Top-Left).\na) Since $\\widehat{A_1}$ (Top-Left) and $\\widehat{A_4}$ (Bottom-Left) form a linear pair  along line $c$, calculate $\\widehat{A_1}$.\nb) Compare $\\widehat{A_1}$ with $\\widehat{B_1}$ to prove that $a \\parallel b$.",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "Find the hidden angle using vertical angles (equal) or a linear pair (sum 180°). Then compare angles at the two intersections and name the parallel-line test.",
@@ -576,7 +588,7 @@
       },
       "grading_key_payload": {
         "rubric_markdown": "Award up to 0.4 points: 0.2 for correct values/classification and 0.2 for valid reasoning covering every requested part. Accept equivalent correct methods.",
-        "explanation_markdown": "* **a)** Because $\\angle A_1$ and $\\angle A_4$ are a linear pair , we have:\n    $$\\angle A_1 + \\angle A_4 = 180^\\circ \\implies \\angle A_1 = 180^\\circ - 115^\\circ = 65^\\circ$$\n  * **b)** Line $c$ cuts lines $a$ and $b$ at $A$ and $B$:\n    * We have $\\angle A_1 = \\angle B_1 = 65^\\circ$.\n    * $\\angle A_1$ and $\\angle B_1$ are **corresponding angles** .\n    * Therefore, $a \\parallel b$."
+        "explanation_markdown": "* **a)** Because $\\widehat{A_1}$ and $\\widehat{A_4}$ are a linear pair , we have:\n    $$\\widehat{A_1} + \\widehat{A_4} = 180^\\circ \\implies \\widehat{A_1} = 180^\\circ - 115^\\circ = 65^\\circ$$\n  * **b)** Line $c$ cuts lines $a$ and $b$ at $A$ and $B$:\n    * We have $\\widehat{A_1} = \\widehat{B_1} = 65^\\circ$.\n    * $\\widehat{A_1}$ and $\\widehat{B_1}$ are **corresponding angles** .\n    * Therefore, $a \\parallel b$."
       }
     },
     {
@@ -587,7 +599,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "E3.3",
         "sectionName": "Type 3: Hidden Angle Bridges",
-        "content_markdown": "Using the Standard Diagram, given that $\\angle A_3 = 105^\\circ$ (Bottom-Right) and $\\angle B_2 = 75^\\circ$ (Top-Right).\na) Since $\\angle A_3$ (Bottom-Right) and $\\angle A_4$ (Bottom-Left) form a linear pair  on line $a$, calculate $\\angle A_4$.\nb) Compare $\\angle A_4$ with $\\angle B_2$ to prove that $a \\parallel b$.",
+        "content_markdown": "Using the Standard Diagram, given that $\\widehat{A_3} = 105^\\circ$ (Bottom-Right) and $\\widehat{B_2} = 75^\\circ$ (Top-Right).\na) Since $\\widehat{A_3}$ (Bottom-Right) and $\\widehat{A_4}$ (Bottom-Left) form a linear pair  on line $a$, calculate $\\widehat{A_4}$.\nb) Compare $\\widehat{A_4}$ with $\\widehat{B_2}$ to prove that $a \\parallel b$.",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "Find the hidden angle using vertical angles (equal) or a linear pair (sum 180°). Then compare angles at the two intersections and name the parallel-line test.",
@@ -595,7 +607,7 @@
       },
       "grading_key_payload": {
         "rubric_markdown": "Award up to 0.4 points: 0.2 for correct values/classification and 0.2 for valid reasoning covering every requested part. Accept equivalent correct methods.",
-        "explanation_markdown": "* **a)** Because $\\angle A_3$ and $\\angle A_4$ are a linear pair , we have:\n    $$\\angle A_3 + \\angle A_4 = 180^\\circ \\implies \\angle A_4 = 180^\\circ - 105^\\circ = 75^\\circ$$\n  * **b)** Line $c$ cuts lines $a$ and $b$ at $A$ and $B$:\n    * We have $\\angle A_4 = \\angle B_2 = 75^\\circ$.\n    * $\\angle A_4$ and $\\angle B_2$ are **alternate interior angles** .\n    * Therefore, $a \\parallel b$."
+        "explanation_markdown": "* **a)** Because $\\widehat{A_3}$ and $\\widehat{A_4}$ are a linear pair , we have:\n    $$\\widehat{A_3} + \\widehat{A_4} = 180^\\circ \\implies \\widehat{A_4} = 180^\\circ - 105^\\circ = 75^\\circ$$\n  * **b)** Line $c$ cuts lines $a$ and $b$ at $A$ and $B$:\n    * We have $\\widehat{A_4} = \\widehat{B_2} = 75^\\circ$.\n    * $\\widehat{A_4}$ and $\\widehat{B_2}$ are **alternate interior angles** .\n    * Therefore, $a \\parallel b$."
       }
     },
     {
@@ -606,7 +618,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "E3.4",
         "sectionName": "Type 3: Hidden Angle Bridges",
-        "content_markdown": "Using the Standard Diagram, given that $\\angle A_1 = 120^\\circ$ (Top-Left) and $\\angle B_3 = 120^\\circ$ (Bottom-Right).\na) Find $\\angle A_3$ (Bottom-Right) using vertically opposite angles at vertex $A$.\nb) Compare $\\angle A_3$ and $\\angle B_3$ to prove that $a \\parallel b$.",
+        "content_markdown": "Using the Standard Diagram, given that $\\widehat{A_1} = 120^\\circ$ (Top-Left) and $\\widehat{B_3} = 120^\\circ$ (Bottom-Right).\na) Find $\\widehat{A_3}$ (Bottom-Right) using vertically opposite angles at vertex $A$.\nb) Compare $\\widehat{A_3}$ and $\\widehat{B_3}$ to prove that $a \\parallel b$.",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "Find the hidden angle using vertical angles (equal) or a linear pair (sum 180°). Then compare angles at the two intersections and name the parallel-line test.",
@@ -614,7 +626,7 @@
       },
       "grading_key_payload": {
         "rubric_markdown": "Award up to 0.4 points: 0.2 for correct values/classification and 0.2 for valid reasoning covering every requested part. Accept equivalent correct methods.",
-        "explanation_markdown": "* **a)** Since $\\angle A_3$ and $\\angle A_1$ are vertically opposite angles , we have:\n    $$\\angle A_3 = \\angle A_1 = 120^\\circ$$\n  * **b)** We see that $\\angle A_3 = \\angle B_3 = 120^\\circ$, and they are in **corresponding** positions . Therefore, $a \\parallel b$."
+        "explanation_markdown": "* **a)** Since $\\widehat{A_3}$ and $\\widehat{A_1}$ are vertically opposite angles , we have:\n    $$\\widehat{A_3} = \\widehat{A_1} = 120^\\circ$$\n  * **b)** We see that $\\widehat{A_3} = \\widehat{B_3} = 120^\\circ$, and they are in **corresponding** positions . Therefore, $a \\parallel b$."
       }
     },
     {
@@ -625,7 +637,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "Q4.1",
         "sectionName": "Type 4: Unknown Angle Codes",
-        "content_markdown": "Using the Standard Diagram, $\\angle A_4 = x$ and $\\angle B_2 = 58^\\circ$ are alternate interior angles. Find $x$ so that $a \\parallel b$.",
+        "content_markdown": "Using the Standard Diagram, $\\widehat{A_4} = x$ and $\\widehat{B_2} = 58^\\circ$ are alternate interior angles. Find $x$ so that $a \\parallel b$.",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "For corresponding or alternate interior angles, equate the measures. For consecutive interior angles, set their sum to 180°. Solve and check your answer.",
@@ -647,7 +659,8 @@
             "id": "D",
             "text": "$x = 90^\\circ$"
           }
-        ]
+        ],
+        "correct_option_id": "A"
       },
       "grading_key_payload": {
         "correct_option_id": "A",
@@ -662,7 +675,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "Q4.2",
         "sectionName": "Type 4: Unknown Angle Codes",
-        "content_markdown": "Using the Standard Diagram, $\\angle A_2 = (x + 15)^\\circ$ and $\\angle B_2 = 85^\\circ$ are corresponding angles. Find $x$ so that $a \\parallel b$.",
+        "content_markdown": "Using the Standard Diagram, $\\widehat{A_2} = (x + 15)^\\circ$ and $\\widehat{B_2} = 85^\\circ$ are corresponding angles. Find $x$ so that $a \\parallel b$.",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "For corresponding or alternate interior angles, equate the measures. For consecutive interior angles, set their sum to 180°. Solve and check your answer.",
@@ -684,7 +697,8 @@
             "id": "D",
             "text": "$x = 75$"
           }
-        ]
+        ],
+        "correct_option_id": "B"
       },
       "grading_key_payload": {
         "correct_option_id": "B",
@@ -699,7 +713,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "Q4.3",
         "sectionName": "Type 4: Unknown Angle Codes",
-        "content_markdown": "Using the Standard Diagram, $\\angle A_3 = 2x^\\circ$ and $\\angle B_1 = 84^\\circ$ are alternate interior angles. Find $x$ so that $a \\parallel b$.",
+        "content_markdown": "Using the Standard Diagram, $\\widehat{A_3} = 2x^\\circ$ and $\\widehat{B_1} = 84^\\circ$ are alternate interior angles. Find $x$ so that $a \\parallel b$.",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "For corresponding or alternate interior angles, equate the measures. For consecutive interior angles, set their sum to 180°. Solve and check your answer.",
@@ -721,7 +735,8 @@
             "id": "D",
             "text": "$x = 168$"
           }
-        ]
+        ],
+        "correct_option_id": "B"
       },
       "grading_key_payload": {
         "correct_option_id": "B",
@@ -736,7 +751,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "Q4.4",
         "sectionName": "Type 4: Unknown Angle Codes",
-        "content_markdown": "Using the Standard Diagram, $\\angle A_4 = x^\\circ$ and $\\angle B_1 = 110^\\circ$ are consecutive interior angles . Find $x$ so that $a \\parallel b$.",
+        "content_markdown": "Using the Standard Diagram, $\\widehat{A_4} = x^\\circ$ and $\\widehat{B_1} = 110^\\circ$ are consecutive interior angles . Find $x$ so that $a \\parallel b$.",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "For corresponding or alternate interior angles, equate the measures. For consecutive interior angles, set their sum to 180°. Solve and check your answer.",
@@ -758,7 +773,8 @@
             "id": "D",
             "text": "$x = 90$"
           }
-        ]
+        ],
+        "correct_option_id": "B"
       },
       "grading_key_payload": {
         "correct_option_id": "B",
@@ -773,7 +789,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "E4.1",
         "sectionName": "Type 4: Unknown Angle Codes",
-        "content_markdown": "Line $c$ cuts lines $a$ and $b$ at $A$ and $B$. Given that $\\angle A_1$ and $\\angle B_1$ are corresponding angles, with $\\angle A_1 = (3x - 10)^\\circ$ and $\\angle B_1 = 80^\\circ$. Find the value of $x$ so that $a \\parallel b$.",
+        "content_markdown": "Line $c$ cuts lines $a$ and $b$ at $A$ and $B$. Given that $\\widehat{A_1}$ and $\\widehat{B_1}$ are corresponding angles, with $\\widehat{A_1} = (3x - 10)^\\circ$ and $\\widehat{B_1} = 80^\\circ$. Find the value of $x$ so that $a \\parallel b$.",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "For corresponding or alternate interior angles, equate the measures. For consecutive interior angles, set their sum to 180°. Solve and check your answer.",
@@ -781,7 +797,7 @@
       },
       "grading_key_payload": {
         "rubric_markdown": "Award up to 0.4 points: 0.2 for correct values/classification and 0.2 for valid reasoning covering every requested part. Accept equivalent correct methods.",
-        "explanation_markdown": "* Since $\\angle A_1$ and $\\angle B_1$ are corresponding angles, for $a \\parallel b$ we must have:\n    $$\\angle A_1 = \\angle B_1$$\n    $$3x - 10 = 80$$\n    $$3x = 80 + 10 = 90$$\n    $$x = 90 \\div 3 = 30$$\n  * Thus, $x = 30$."
+        "explanation_markdown": "* Since $\\widehat{A_1}$ and $\\widehat{B_1}$ are corresponding angles, for $a \\parallel b$ we must have:\n    $$\\widehat{A_1} = \\widehat{B_1}$$\n    $$3x - 10 = 80$$\n    $$3x = 80 + 10 = 90$$\n    $$x = 90 \\div 3 = 30$$\n  * Thus, $x = 30$."
       }
     },
     {
@@ -792,7 +808,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "E4.2",
         "sectionName": "Type 4: Unknown Angle Codes",
-        "content_markdown": "Line $c$ cuts lines $a$ and $b$ at $A$ and $B$. Given that $\\angle A_3$ and $\\angle B_1$ are alternate interior angles, with $\\angle A_3 = (2x + 12)^\\circ$ and $\\angle B_1 = 68^\\circ$. Find the value of $x$ so that $a \\parallel b$.",
+        "content_markdown": "Line $c$ cuts lines $a$ and $b$ at $A$ and $B$. Given that $\\widehat{A_3}$ and $\\widehat{B_1}$ are alternate interior angles, with $\\widehat{A_3} = (2x + 12)^\\circ$ and $\\widehat{B_1} = 68^\\circ$. Find the value of $x$ so that $a \\parallel b$.",
         "diagram_url": "/images/geometry/parallel_practice_standard.svg",
         "diagram_alt": "Workbook angle map: clockwise from top-left, 1, 2, 3, 4 at A and B. Schematic, not to scale.",
         "method_markdown": "For corresponding or alternate interior angles, equate the measures. For consecutive interior angles, set their sum to 180°. Solve and check your answer.",
@@ -800,7 +816,7 @@
       },
       "grading_key_payload": {
         "rubric_markdown": "Award up to 0.4 points: 0.2 for correct values/classification and 0.2 for valid reasoning covering every requested part. Accept equivalent correct methods.",
-        "explanation_markdown": "* Since $\\angle A_3$ and $\\angle B_1$ are alternate interior angles, for $a \\parallel b$ we must have:\n    $$\\angle A_3 = \\angle B_1$$\n    $$2x + 12 = 68$$\n    $$2x = 68 - 12 = 56$$\n    $$x = 56 \\div 2 = 28$$\n  * Thus, $x = 28$."
+        "explanation_markdown": "* Since $\\widehat{A_3}$ and $\\widehat{B_1}$ are alternate interior angles, for $a \\parallel b$ we must have:\n    $$\\widehat{A_3} = \\widehat{B_1}$$\n    $$2x + 12 = 68$$\n    $$2x = 68 - 12 = 56$$\n    $$x = 56 \\div 2 = 28$$\n  * Thus, $x = 28$."
       }
     },
     {
@@ -811,7 +827,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "E4.3",
         "sectionName": "Type 4: Unknown Angle Codes",
-        "content_markdown": "Keithley is building a wooden bookshelf with two horizontal shelves $AB$ and $CD$ connected by a slanted side frame $AC$. The interior angle at the bottom shelf is $\\angle ACD = 75^\\circ$. What must the consecutive interior angle $\\angle BAC$ (on the same side of frame $AC$) be so that the top shelf $AB$ is perfectly parallel to the bottom shelf $CD$?",
+        "content_markdown": "Keithley is building a wooden bookshelf with two horizontal shelves $AB$ and $CD$ connected by a slanted side frame $AC$. The interior angle at the bottom shelf is $\\widehat{ACD} = 75^\\circ$. What must the consecutive interior angle $\\widehat{BAC}$ (on the same side of frame $AC$) be so that the top shelf $AB$ is perfectly parallel to the bottom shelf $CD$?",
         "diagram_url": "/images/geometry/parallel_practice_shelves.svg",
         "diagram_alt": "Unknown Angle Codes: schematic reference diagram, not to scale. Use the measures stated in the question.",
         "method_markdown": "For corresponding or alternate interior angles, equate the measures. For consecutive interior angles, set their sum to 180°. Solve and check your answer.",
@@ -819,7 +835,7 @@
       },
       "grading_key_payload": {
         "rubric_markdown": "Award up to 0.4 points: 0.2 for correct values/classification and 0.2 for valid reasoning covering every requested part. Accept equivalent correct methods.",
-        "explanation_markdown": "* For the top shelf $AB$ to be parallel to the bottom shelf $CD$ ($AB \\parallel CD$), the consecutive interior angles $\\angle BAC$ and $\\angle ACD$ must add up to $180^\\circ$:\n    $$\\angle BAC + \\angle ACD = 180^\\circ$$\n    $$\\angle BAC = 180^\\circ - 75^\\circ = 105^\\circ$$\n  * Thus, Keithley should set $\\angle BAC = 105^\\circ$."
+        "explanation_markdown": "* For the top shelf $AB$ to be parallel to the bottom shelf $CD$ ($AB \\parallel CD$), the consecutive interior angles $\\widehat{BAC}$ and $\\widehat{ACD}$ must add up to $180^\\circ$:\n    $$\\widehat{BAC} + \\widehat{ACD} = 180^\\circ$$\n    $$\\widehat{BAC} = 180^\\circ - 75^\\circ = 105^\\circ$$\n  * Thus, Keithley should set $\\widehat{BAC} = 105^\\circ$."
       }
     },
     {
@@ -852,7 +868,8 @@
             "id": "D",
             "text": "Rung $a$ and rung $b$ intersect each other."
           }
-        ]
+        ],
+        "correct_option_id": "A"
       },
       "grading_key_payload": {
         "correct_option_id": "A",
@@ -867,7 +884,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "Q5.2",
         "sectionName": "Type 5: Perpendicular Flight Paths",
-        "content_markdown": "In quadrilateral $ABCD$, suppose $AB \\perp BC$ ($\\angle B = 90^\\circ$) and $DC \\perp BC$ ($\\angle C = 90^\\circ$). Which two sides are parallel?",
+        "content_markdown": "In quadrilateral $ABCD$, suppose $AB \\perp BC$ ($\\widehat{B} = 90^\\circ$) and $DC \\perp BC$ ($\\widehat{C} = 90^\\circ$). Which two sides are parallel?",
         "diagram_url": "/images/geometry/parallel_practice_quadrilateral.svg",
         "diagram_alt": "Perpendicular Flight Paths: schematic reference diagram, not to scale. Use the measures stated in the question.",
         "method_markdown": "Two distinct coplanar lines perpendicular to the same line are parallel. For a bisector, halve the full angle first. Always justify the angle positions.",
@@ -889,7 +906,8 @@
             "id": "D",
             "text": "No sides are parallel"
           }
-        ]
+        ],
+        "correct_option_id": "B"
       },
       "grading_key_payload": {
         "correct_option_id": "B",
@@ -904,7 +922,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "Q5.3",
         "sectionName": "Type 5: Perpendicular Flight Paths",
-        "content_markdown": "In $\\triangle ABC$, $\\angle B = 50^\\circ$. A ray $Ax$ is drawn outside the triangle in the alternate interior position to $BC$ such that $\\angle xAB = 50^\\circ$. Which statement is true?",
+        "content_markdown": "In $\\triangle ABC$, $\\widehat{B} = 50^\\circ$. A ray $Ax$ is drawn outside the triangle in the alternate interior position to $BC$ such that $\\widehat{xAB} = 50^\\circ$. Which statement is true?",
         "diagram_url": "/images/geometry/parallel_practice_triangle.svg",
         "diagram_alt": "Perpendicular Flight Paths: schematic reference diagram, not to scale. Use the measures stated in the question.",
         "method_markdown": "Two distinct coplanar lines perpendicular to the same line are parallel. For a bisector, halve the full angle first. Always justify the angle positions.",
@@ -926,11 +944,12 @@
             "id": "D",
             "text": "$AB \\parallel BC$"
           }
-        ]
+        ],
+        "correct_option_id": "B"
       },
       "grading_key_payload": {
         "correct_option_id": "B",
-        "explanation_markdown": "With transversal $AB$, $\\angle xAB$ and $\\angle B$ are alternate interior angles and both equal $50^\\circ$, so $Ax \\parallel BC$."
+        "explanation_markdown": "With transversal $AB$, $\\widehat{xAB}$ and $\\widehat{B}$ are alternate interior angles and both equal $50^\\circ$, so $Ax \\parallel BC$."
       }
     },
     {
@@ -941,7 +960,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "Q5.4",
         "sectionName": "Type 5: Perpendicular Flight Paths",
-        "content_markdown": "Given $\\angle xOy = 60^\\circ$. Point $A$ is on ray $Ox$. Ray $At$ is drawn inside $\\angle xOy$ (pointing in the same direction as $Oy$) such that $\\angle xAt = 60^\\circ$. Why is $At \\parallel Oy$?",
+        "content_markdown": "Given $\\widehat{xOy} = 60^\\circ$. Point $A$ is on ray $Ox$. Ray $At$ is drawn inside $\\widehat{xOy}$ (pointing in the same direction as $Oy$) such that $\\widehat{xAt} = 60^\\circ$. Why is $At \\parallel Oy$?",
         "diagram_url": "/images/geometry/parallel_practice_corresponding_rays.svg",
         "diagram_alt": "Perpendicular Flight Paths: schematic reference diagram, not to scale. Use the measures stated in the question.",
         "method_markdown": "Two distinct coplanar lines perpendicular to the same line are parallel. For a bisector, halve the full angle first. Always justify the angle positions.",
@@ -949,11 +968,11 @@
         "options": [
           {
             "id": "A",
-            "text": "Because $\\angle xAt$ and $\\angle xOy$ are equal corresponding angles ($60^\\circ = 60^\\circ$)."
+            "text": "Because $\\widehat{xAt}$ and $\\widehat{xOy}$ are equal corresponding angles ($60^\\circ = 60^\\circ$)."
           },
           {
             "id": "B",
-            "text": "Because $\\angle xAt$ and $\\angle xOy$ are vertically opposite angles."
+            "text": "Because $\\widehat{xAt}$ and $\\widehat{xOy}$ are vertically opposite angles."
           },
           {
             "id": "C",
@@ -963,11 +982,12 @@
             "id": "D",
             "text": "They are not parallel."
           }
-        ]
+        ],
+        "correct_option_id": "A"
       },
       "grading_key_payload": {
         "correct_option_id": "A",
-        "explanation_markdown": "Along transversal $Ox$, $\\angle xAt$ and $\\angle xOy$ are in corresponding positions (\"F\" shape) and both equal $60^\\circ$, so $At \\parallel Oy$."
+        "explanation_markdown": "Along transversal $Ox$, $\\widehat{xAt}$ and $\\widehat{xOy}$ are in corresponding positions (\"F\" shape) and both equal $60^\\circ$, so $At \\parallel Oy$."
       }
     },
     {
@@ -978,7 +998,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "E5.1",
         "sectionName": "Type 5: Perpendicular Flight Paths",
-        "content_markdown": "Given a vertical line $d$. Line $m$ intersects line $d$ at $P$ with $\\angle P_1 = 90^\\circ$, and line $n$ intersects line $d$ at $Q$ with $\\angle Q_1 = 90^\\circ$ (where $\\angle P_1$ and $\\angle Q_1$ are corresponding angles). Prove that $m \\parallel n$ in two ways:\na) **Way 1:** Using corresponding angles.\nb) **Way 2:** Using the perpendicularity property ($m \\perp d$ and $n \\perp d$).",
+        "content_markdown": "Given a vertical line $d$. Line $m$ intersects line $d$ at $P$ with $\\widehat{P_1} = 90^\\circ$, and line $n$ intersects line $d$ at $Q$ with $\\widehat{Q_1} = 90^\\circ$ (where $\\widehat{P_1}$ and $\\widehat{Q_1}$ are corresponding angles). Prove that $m \\parallel n$ in two ways:\na) **Way 1:** Using corresponding angles.\nb) **Way 2:** Using the perpendicularity property ($m \\perp d$ and $n \\perp d$).",
         "diagram_url": "/images/geometry/parallel_practice_perpendicular.svg",
         "diagram_alt": "Perpendicular Flight Paths: schematic reference diagram, not to scale. Use the measures stated in the question.",
         "method_markdown": "Two distinct coplanar lines perpendicular to the same line are parallel. For a bisector, halve the full angle first. Always justify the angle positions.",
@@ -986,7 +1006,7 @@
       },
       "grading_key_payload": {
         "rubric_markdown": "Award up to 0.4 points: 0.2 for correct values/classification and 0.2 for valid reasoning covering every requested part. Accept equivalent correct methods.",
-        "explanation_markdown": "* **a) Way 1 (Corresponding angles):**\n    * We have $\\angle P_1 = \\angle Q_1 = 90^\\circ$.\n    * $\\angle P_1$ and $\\angle Q_1$ are **corresponding angles** .\n    * Therefore, $m \\parallel n$.\n  * **b) Way 2 (Perpendicularity property):**\n    * Since $\\angle P_1 = 90^\\circ$, we have $m \\perp d$.\n    * Since $\\angle Q_1 = 90^\\circ$, we have $n \\perp d$.\n    * Because both $m$ and $n$ are perpendicular to the same line $d$, we conclude that $m \\parallel n$."
+        "explanation_markdown": "* **a) Way 1 (Corresponding angles):**\n    * We have $\\widehat{P_1} = \\widehat{Q_1} = 90^\\circ$.\n    * $\\widehat{P_1}$ and $\\widehat{Q_1}$ are **corresponding angles** .\n    * Therefore, $m \\parallel n$.\n  * **b) Way 2 (Perpendicularity property):**\n    * Since $\\widehat{P_1} = 90^\\circ$, we have $m \\perp d$.\n    * Since $\\widehat{Q_1} = 90^\\circ$, we have $n \\perp d$.\n    * Because both $m$ and $n$ are perpendicular to the same line $d$, we conclude that $m \\parallel n$."
       }
     },
     {
@@ -997,7 +1017,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "E5.2",
         "sectionName": "Type 5: Perpendicular Flight Paths",
-        "content_markdown": "Draw $\\angle xOy=70^\\circ$. Ray $Oz$ bisects this angle. Point $A$ lies on ray $Ox$, with $O,A,x$ in that order. Draw ray $At$ in the same half-plane as $Oz$, inside $\\angle xOy$, so that $\\angle xAt=35^\\circ$.\n\na) Calculate $\\angle xOz$.\nb) Use the corresponding angles $\\angle xAt$ and $\\angle xOz$ to prove $At\\parallel Oz$.",
+        "content_markdown": "Draw $\\widehat{xOy}=70^\\circ$. Ray $Oz$ bisects this angle. Point $A$ lies on ray $Ox$, with $O,A,x$ in that order. Draw ray $At$ in the same half-plane as $Oz$, inside $\\widehat{xOy}$, so that $\\widehat{xAt}=35^\\circ$.\n\na) Calculate $\\widehat{xOz}$.\nb) Use the corresponding angles $\\widehat{xAt}$ and $\\widehat{xOz}$ to prove $At\\parallel Oz$.",
         "diagram_url": "/images/geometry/parallel_practice_rays.svg",
         "diagram_alt": "Perpendicular Flight Paths: schematic reference diagram, not to scale. Use the measures stated in the question.",
         "method_markdown": "Two distinct coplanar lines perpendicular to the same line are parallel. For a bisector, halve the full angle first. Always justify the angle positions.",
@@ -1005,7 +1025,7 @@
       },
       "grading_key_payload": {
         "rubric_markdown": "Award up to 0.4 points: 0.2 for correct values/classification and 0.2 for valid reasoning covering every requested part. Accept equivalent correct methods.",
-        "explanation_markdown": "The bisector gives $\\angle xOz=70^\\circ/2=35^\\circ$. Since $\\angle xAt=\\angle xOz=35^\\circ$ and these are corresponding angles along transversal $Ox$, $At\\parallel Oz$."
+        "explanation_markdown": "The bisector gives $\\widehat{xOz}=70^\\circ/2=35^\\circ$. Since $\\widehat{xAt}=\\widehat{xOz}=35^\\circ$ and these are corresponding angles along transversal $Ox$, $At\\parallel Oz$."
       }
     },
     {
@@ -1016,7 +1036,7 @@
         "practice_layout": "parallel-workbook",
         "source_ref": "E5.3",
         "sectionName": "Type 5: Perpendicular Flight Paths",
-        "content_markdown": "Look at a triangle $\\triangle ABC$ with $\\angle B = 40^\\circ$ and $\\angle C = 60^\\circ$. Through vertex $A$, draw a straight line $xy$ ($A$ is between $x$ and $y$) such that $\\angle xAB = 40^\\circ$ (in alternate interior position with $\\angle B$).\na) Prove that line $xy$ is parallel to side $BC$ ($xy \\parallel BC$).\nb) Bonus question: What must the measure of $\\angle yAC$ (in alternate interior position with $\\angle C$) be?",
+        "content_markdown": "Look at a triangle $\\triangle ABC$ with $\\widehat{B} = 40^\\circ$ and $\\widehat{C} = 60^\\circ$. Through vertex $A$, draw a straight line $xy$ ($A$ is between $x$ and $y$) such that $\\widehat{xAB} = 40^\\circ$ (in alternate interior position with $\\widehat{B}$).\na) Prove that line $xy$ is parallel to side $BC$ ($xy \\parallel BC$).\nb) Bonus question: What must the measure of $\\widehat{yAC}$ (in alternate interior position with $\\widehat{C}$) be?",
         "diagram_url": "/images/geometry/parallel_practice_triangle.svg",
         "diagram_alt": "Perpendicular Flight Paths: schematic reference diagram, not to scale. Use the measures stated in the question.",
         "method_markdown": "Two distinct coplanar lines perpendicular to the same line are parallel. For a bisector, halve the full angle first. Always justify the angle positions.",
@@ -1024,7 +1044,7 @@
       },
       "grading_key_payload": {
         "rubric_markdown": "Award up to 0.4 points: 0.2 for correct values/classification and 0.2 for valid reasoning covering every requested part. Accept equivalent correct methods.",
-        "explanation_markdown": "* **a)** Consider transversal $AB$ cutting line $xy$ and side $BC$:\n    * We have $\\angle xAB = \\angle B = 40^\\circ$.\n    * $\\angle xAB$ and $\\angle B$ are **alternate interior angles** .\n    * Therefore, $xy \\parallel BC$.\n  * **b)** Since $xy \\parallel BC$, the alternate interior angles along transversal $AC$ are equal, so $\\angle yAC = \\angle C = 60^\\circ$."
+        "explanation_markdown": "* **a)** Consider transversal $AB$ cutting line $xy$ and side $BC$:\n    * We have $\\widehat{xAB} = \\widehat{B} = 40^\\circ$.\n    * $\\widehat{xAB}$ and $\\widehat{B}$ are **alternate interior angles** .\n    * Therefore, $xy \\parallel BC$.\n  * **b)** Since $xy \\parallel BC$, the alternate interior angles along transversal $AC$ are equal, so $\\widehat{yAC} = \\widehat{C} = 60^\\circ$."
       }
     }
   ]
