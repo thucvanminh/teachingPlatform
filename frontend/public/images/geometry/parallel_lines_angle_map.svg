@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="100%" height="280" role="img" aria-labelledby="title desc">
+ <title id="title">Parallel line angle map</title><desc id="desc">Lines a and b crossed by c at A and B. At each intersection, angle 1 is top-right, 2 top-left, 3 bottom-left and 4 bottom-right.</desc>
+ <defs><linearGradient id="bg"><stop stop-color="#080D1A"/><stop offset="1" stop-color="#0B132B"/></linearGradient></defs>
+ <rect width="540" height="320" rx="20" fill="url(#bg)"/><rect x="35" y="100" width="470" height="120" fill="#12303c"/>
+ <path d="M35 100H505 M35 220H505" stroke="#38bdf8" stroke-width="3"/><path d="M201 290L323 30" stroke="#c4b5fd" stroke-width="3"/>
+ <g fill="#fff" font-family="system-ui,sans-serif" font-size="16"><text x="510" y="105">a</text><text x="510" y="225">b</text><text x="330" y="32">c</text><text x="323" y="80">A1</text><text x="240" y="65">A2</text><text x="244" y="135">A3</text><text x="314" y="145">A4</text><text x="268" y="200">B1</text><text x="180" y="185">B2</text><text x="185" y="255">B3</text><text x="260" y="265">B4</text></g>
+ <g fill="#22d3ee"><circle cx="290" cy="100" r="5"/><circle cx="234" cy="220" r="5"/></g><text x="48" y="165" fill="#94a3b8" font-family="system-ui" font-size="12">INTERIOR</text>
+</svg>
