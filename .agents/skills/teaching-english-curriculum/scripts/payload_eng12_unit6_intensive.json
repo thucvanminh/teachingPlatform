@@ -1,0 +1,2083 @@
+{
+  "studentUsername": "nam_viet",
+  "grade": 12,
+  "assignedDate": "2026-11-01T00:00:00.000Z",
+  "unitTitle": "Đề Luyện Tập Chuyên Sâu 120 Phút: Unit 6 - Artificial Intelligence & Thể Sai Khiến (90 câu)",
+  "unitDescription": "Đề tổng hợp 90 câu (120 phút) mục tiêu 7+ THPTQG: Từ vựng cốt lõi, Thể sai khiến (Active & Passive Causatives), Word Formation, Viết lại câu & Đọc hiểu chuyên sâu.",
+  "lectureMarkdown": "# 🌟 Cẩm Nang Tri Thức & Đề Luyện Tập Chuyên Sâu 120 Phút - Unit 6\n**Biên soạn riêng cho Bạn Nam Việt • Hướng dẫn: Thầy Thức**\n\nChuyên đề: **Artificial Intelligence & Thể Sai Khiến (Causative Verbs)**\nMục tiêu: **Chinh phục 7+ Kì thi Tốt nghiệp THPT Quốc Gia**\n\n[🚀 MỞ PHÒNG HỌC TƯƠNG TÁC TOÀN MÀN HÌNH](/lectures/eng12-unit6/index.html)\n\n---\n\n### 📌 Chiến lược làm bài thi 120 phút hôm nay:\n1. **Phần 1: Từ vựng & Thể sai khiến (Câu 1 - 50):** Làm chắc chắn, nhận diện nhanh cụm từ cố định (*interact with, capable of, substitute for*) và công thức Have/Get (*Have sb do, Get sb to do, Have/Get sth done*).\n2. **Phần 2: Viết lại câu (Câu 51 - 62):** Đọc kỹ câu gốc, xác định tân ngữ chỉ người hay vật để chọn đúng dạng phân từ.\n3. **Phần 3: Ngữ âm & Trọng âm (Câu 63 - 72):** Chú ý đuôi -ed (*automated vs upgraded*), quy tắc trọng âm từ 2, 3 âm tiết (*autonomous, algorithm, facilitate*).\n4. **Phần 4: Đọc hiểu chuyên sâu (Câu 73 - 90):** Đọc kỹ câu hỏi, tìm từ khóa then chốt trong đoạn văn y tế & xe tự hành để chọn đáp án chính xác.\n",
+  "teacherNote": "Thầy Thức dặn Nam Việt: Đây là đề luyện tập chuyên sâu 120 phút tổng hợp toàn bộ kiến thức trọng tâm Unit 6. Thầy đã xếp toàn bộ các câu Từ vựng và Ngữ pháp lên đầu để con làm quen phản xạ và tối ưu điểm số phần ăn chắc điểm 7+ nhé!",
+  "assessmentTitle": "Luyện tập tại lớp: Đề Chuyên Sâu Unit 6 - AI & Thể Sai Khiến (90 câu - 120P)",
+  "timeLimitMinutes": 120,
+  "questions": [
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 11: Modern virtual assistants are programmed to ______ users through natural human speech.",
+      "options": [
+        {
+          "id": "A",
+          "text": "interact with"
+        },
+        {
+          "id": "B",
+          "text": "substitute for"
+        },
+        {
+          "id": "C",
+          "text": "facilitate at"
+        },
+        {
+          "id": "D",
+          "text": "explore on"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "interact with: tương tác với."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 12: The tech firm ______ their chief scientist design an autonomous navigation module.",
+      "options": [
+        {
+          "id": "A",
+          "text": "got"
+        },
+        {
+          "id": "B",
+          "text": "had"
+        },
+        {
+          "id": "C",
+          "text": "asked"
+        },
+        {
+          "id": "D",
+          "text": "allowed"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "had + sb + V-bare (design) -> chọn 'had'."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 13: Many factories install robotic arms that are ______ handling toxic chemicals safely.",
+      "options": [
+        {
+          "id": "A",
+          "text": "capable to"
+        },
+        {
+          "id": "B",
+          "text": "capable of"
+        },
+        {
+          "id": "C",
+          "text": "capable with"
+        },
+        {
+          "id": "D",
+          "text": "capable for"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "capable of doing sth: có khả năng làm gì."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 14: You should get an experienced programmer ______ the system before launching it.",
+      "options": [
+        {
+          "id": "A",
+          "text": "check"
+        },
+        {
+          "id": "B",
+          "text": "to check"
+        },
+        {
+          "id": "C",
+          "text": "checked"
+        },
+        {
+          "id": "D",
+          "text": "checking"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "get + sb + to-V -> 'to check'."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 15: Facial ______ algorithms are becoming increasingly sophisticated in modern smartphones.",
+      "options": [
+        {
+          "id": "A",
+          "text": "recognize"
+        },
+        {
+          "id": "B",
+          "text": "recognition"
+        },
+        {
+          "id": "C",
+          "text": "recognizable"
+        },
+        {
+          "id": "D",
+          "text": "recognizably"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Facial recognition: sự nhận diện khuôn mặt (cụm danh từ)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 16: The company had its vulnerable central database ______ by ethical hackers yesterday.",
+      "options": [
+        {
+          "id": "A",
+          "text": "examine"
+        },
+        {
+          "id": "B",
+          "text": "to examine"
+        },
+        {
+          "id": "C",
+          "text": "examined"
+        },
+        {
+          "id": "D",
+          "text": "examining"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "have + sth (central database) + V3/ed (examined) -> thể sai khiến bị động."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 17: Autonomous rover vehicles allow researchers to ______ dangerous environments on distant planets.",
+      "options": [
+        {
+          "id": "A",
+          "text": "explore"
+        },
+        {
+          "id": "B",
+          "text": "substitute"
+        },
+        {
+          "id": "C",
+          "text": "repair"
+        },
+        {
+          "id": "D",
+          "text": "activate"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "explore dangerous environments: khám phá môi trường nguy hiểm."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 18: Can we get our automated customer support system ______ by the end of this week?",
+      "options": [
+        {
+          "id": "A",
+          "text": "update"
+        },
+        {
+          "id": "B",
+          "text": "to update"
+        },
+        {
+          "id": "C",
+          "text": "updated"
+        },
+        {
+          "id": "D",
+          "text": "updating"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "get + sth (system) + V3/ed (updated)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 19: High ______ in prompt engineering can drastically improve your productivity when using AI.",
+      "options": [
+        {
+          "id": "A",
+          "text": "proficiency"
+        },
+        {
+          "id": "B",
+          "text": "danger"
+        },
+        {
+          "id": "C",
+          "text": "application"
+        },
+        {
+          "id": "D",
+          "text": "substitute"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "proficiency: sự thành thạo, tinh thông."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 20: The manager had the technicians ______ the faulty sensors immediately.",
+      "options": [
+        {
+          "id": "A",
+          "text": "replace"
+        },
+        {
+          "id": "B",
+          "text": "to replace"
+        },
+        {
+          "id": "C",
+          "text": "replaced"
+        },
+        {
+          "id": "D",
+          "text": "replacing"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "have + sb (technicians) + V-bare (replace)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 21: Autonomous drones are especially useful for carrying out operations in ______ areas.",
+      "options": [
+        {
+          "id": "A",
+          "text": "danger"
+        },
+        {
+          "id": "B",
+          "text": "dangerous"
+        },
+        {
+          "id": "C",
+          "text": "dangerously"
+        },
+        {
+          "id": "D",
+          "text": "endanger"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Trước danh từ 'areas' cần một tính từ: 'dangerous'."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 22: Instead of coding everything manually, the team ______ a specialized algorithm generate the data tables.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had"
+        },
+        {
+          "id": "B",
+          "text": "made"
+        },
+        {
+          "id": "C",
+          "text": "let"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "Cả 'have', 'make', 'let' đều đi với O + V-bare ('generate'), trong văn cảnh này đều hợp ngữ pháp."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 23: Machine learning software demonstrates the ______ to adapt its predictions over time.",
+      "options": [
+        {
+          "id": "A",
+          "text": "capability"
+        },
+        {
+          "id": "B",
+          "text": "ability"
+        },
+        {
+          "id": "C",
+          "text": "proficiency"
+        },
+        {
+          "id": "D",
+          "text": "Both A and B are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "Cả 'capability' và 'ability' đều đi với 'to do sth' chỉ năng lực."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 24: Yesterday, Mrs. Green had her smart home devices ______ after a major power surge.",
+      "options": [
+        {
+          "id": "A",
+          "text": "reset"
+        },
+        {
+          "id": "B",
+          "text": "to reset"
+        },
+        {
+          "id": "C",
+          "text": "resetting"
+        },
+        {
+          "id": "D",
+          "text": "resetted"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "have + sth (smart home devices) + V3 ('reset' có V1=V2=V3)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 25: We must find an ______ method to protect user privacy against cyber threats.",
+      "options": [
+        {
+          "id": "A",
+          "text": "effect"
+        },
+        {
+          "id": "B",
+          "text": "effective"
+        },
+        {
+          "id": "C",
+          "text": "effectively"
+        },
+        {
+          "id": "D",
+          "text": "effectiveness"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Trước danh từ 'method' cần một tính từ: 'effective'."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 26: The professor got his research assistants ______ the complex datasets using statistical AI tools.",
+      "options": [
+        {
+          "id": "A",
+          "text": "analyse"
+        },
+        {
+          "id": "B",
+          "text": "to analyse"
+        },
+        {
+          "id": "C",
+          "text": "analysed"
+        },
+        {
+          "id": "D",
+          "text": "analysing"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "get + sb (research assistants) + to-V (to analyse)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 27: Recommendation engines use a complex ______ to suggest relevant educational videos.",
+      "options": [
+        {
+          "id": "A",
+          "text": "algorithm"
+        },
+        {
+          "id": "B",
+          "text": "scientist"
+        },
+        {
+          "id": "C",
+          "text": "proficiency"
+        },
+        {
+          "id": "D",
+          "text": "repair"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "algorithm: thuật toán (đề xuất video)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 28: Our office had all confidential transaction logs ______ automatically to prevent data breaches.",
+      "options": [
+        {
+          "id": "A",
+          "text": "encrypt"
+        },
+        {
+          "id": "B",
+          "text": "to encrypt"
+        },
+        {
+          "id": "C",
+          "text": "encrypted"
+        },
+        {
+          "id": "D",
+          "text": "encrypting"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "have + sth (transaction logs) + V3/ed (encrypted)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 29: AI technology does not aim to completely ______ human workers, but rather to support them.",
+      "options": [
+        {
+          "id": "A",
+          "text": "interact with"
+        },
+        {
+          "id": "B",
+          "text": "substitute for"
+        },
+        {
+          "id": "C",
+          "text": "explore into"
+        },
+        {
+          "id": "D",
+          "text": "facilitate with"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "substitute for sb/sth: thay thế cho ai/cái gì."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 30: How often do you ______ your autonomous vehicle serviced at the dealership?",
+      "options": [
+        {
+          "id": "A",
+          "text": "make"
+        },
+        {
+          "id": "B",
+          "text": "get"
+        },
+        {
+          "id": "C",
+          "text": "let"
+        },
+        {
+          "id": "D",
+          "text": "force"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cấu trúc: get + sth + serviced (V3)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 31: Educational AI platforms help ______ personalized learning for remote students.",
+      "options": [
+        {
+          "id": "A",
+          "text": "facilitate"
+        },
+        {
+          "id": "B",
+          "text": "danger"
+        },
+        {
+          "id": "C",
+          "text": "repair"
+        },
+        {
+          "id": "D",
+          "text": "recognize"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "facilitate: tạo điều kiện, hỗ trợ dễ dàng hơn."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 32: The hospital will have a team of AI experts ______ the diagnostic neural network tomorrow.",
+      "options": [
+        {
+          "id": "A",
+          "text": "evaluate"
+        },
+        {
+          "id": "B",
+          "text": "to evaluate"
+        },
+        {
+          "id": "C",
+          "text": "evaluated"
+        },
+        {
+          "id": "D",
+          "text": "evaluating"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "have + sb (team of AI experts) + V-bare (evaluate)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 33: Without solid ______ defenses, corporations remain vulnerable to severe ransomware attacks.",
+      "options": [
+        {
+          "id": "A",
+          "text": "cybersecurity"
+        },
+        {
+          "id": "B",
+          "text": "scientist"
+        },
+        {
+          "id": "C",
+          "text": "capability"
+        },
+        {
+          "id": "D",
+          "text": "proficiency"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "cybersecurity defenses: phòng thủ an ninh mạng."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 34: Dr. Wilson managed to get his students ______ hands-on experience in machine learning.",
+      "options": [
+        {
+          "id": "A",
+          "text": "gain"
+        },
+        {
+          "id": "B",
+          "text": "to gain"
+        },
+        {
+          "id": "C",
+          "text": "gained"
+        },
+        {
+          "id": "D",
+          "text": "gaining"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "get + sb + to-V (to gain)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 35: The self-driving bus is fully ______ and requires no onboard human driver.",
+      "options": [
+        {
+          "id": "A",
+          "text": "autonomous"
+        },
+        {
+          "id": "B",
+          "text": "artificial"
+        },
+        {
+          "id": "C",
+          "text": "capable"
+        },
+        {
+          "id": "D",
+          "text": "effective"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "autonomous: tự hành, tự chủ."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 36: They had their drone camera ______ after it collided with a tree branch.",
+      "options": [
+        {
+          "id": "A",
+          "text": "repair"
+        },
+        {
+          "id": "B",
+          "text": "to repair"
+        },
+        {
+          "id": "C",
+          "text": "repaired"
+        },
+        {
+          "id": "D",
+          "text": "repairing"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "have + sth (drone camera) + V3/ed (repaired)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 37: Voice assistants can be ______ by saying a specific wake word like 'Hey Siri'.",
+      "options": [
+        {
+          "id": "A",
+          "text": "activated"
+        },
+        {
+          "id": "B",
+          "text": "automated"
+        },
+        {
+          "id": "C",
+          "text": "substituted"
+        },
+        {
+          "id": "D",
+          "text": "explored"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "be activated: được kích hoạt (bằng giọng nói)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 38: Did the company get their computer systems ______ against malware?",
+      "options": [
+        {
+          "id": "A",
+          "text": "immunize"
+        },
+        {
+          "id": "B",
+          "text": "to immunize"
+        },
+        {
+          "id": "C",
+          "text": "immunized"
+        },
+        {
+          "id": "D",
+          "text": "immunizing"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "get + sth (systems) + V3/ed (immunized: miễn dịch/bảo vệ)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 39: Practical, ______ workshops enable engineering students to understand hardware architecture.",
+      "options": [
+        {
+          "id": "A",
+          "text": "hands-on"
+        },
+        {
+          "id": "B",
+          "text": "dangerous"
+        },
+        {
+          "id": "C",
+          "text": "artificial"
+        },
+        {
+          "id": "D",
+          "text": "capable"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "hands-on workshops: các buổi hội thảo/thực hành thực tế."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 40: You can ______ the smart vacuum cleaner clean the apartment while you are at work.",
+      "options": [
+        {
+          "id": "A",
+          "text": "get"
+        },
+        {
+          "id": "B",
+          "text": "have"
+        },
+        {
+          "id": "C",
+          "text": "tell"
+        },
+        {
+          "id": "D",
+          "text": "persuade"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "have + O + V-bare (clean). 'get/tell/persuade' đều đòi hỏi 'to clean'."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the word(s) CLOSEST: Highly SOPHISTICATED algorithms allow search engines to deliver accurate results.",
+      "options": [
+        {
+          "id": "A",
+          "text": "primitive"
+        },
+        {
+          "id": "B",
+          "text": "advanced"
+        },
+        {
+          "id": "C",
+          "text": "straightforward"
+        },
+        {
+          "id": "D",
+          "text": "traditional"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "sophisticated (tinh vi, tân tiến) = advanced."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the word(s) CLOSEST: New educational software helps FACILITATE collaborative study groups online.",
+      "options": [
+        {
+          "id": "A",
+          "text": "make easier"
+        },
+        {
+          "id": "B",
+          "text": "complicate"
+        },
+        {
+          "id": "C",
+          "text": "prevent"
+        },
+        {
+          "id": "D",
+          "text": "terminate"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "facilitate (làm cho dễ dàng hơn) = make easier."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the word(s) CLOSEST: Autonomous rovers are designed to EXPLORE extraterrestrial terrain without direct human piloting.",
+      "options": [
+        {
+          "id": "A",
+          "text": "investigate"
+        },
+        {
+          "id": "B",
+          "text": "ignore"
+        },
+        {
+          "id": "C",
+          "text": "abandon"
+        },
+        {
+          "id": "D",
+          "text": "conceal"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "explore (thám hiểm, nghiên cứu) = investigate."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the word(s) CLOSEST: Engineers regularly inspect the mainframe to REPAIR minor technical glitches.",
+      "options": [
+        {
+          "id": "A",
+          "text": "fix"
+        },
+        {
+          "id": "B",
+          "text": "damage"
+        },
+        {
+          "id": "C",
+          "text": "construct"
+        },
+        {
+          "id": "D",
+          "text": "install"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "repair (sửa chữa) = fix."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the word(s) CLOSEST: Speech recognition is an EFFECTIVE tool for hands-free device control.",
+      "options": [
+        {
+          "id": "A",
+          "text": "useless"
+        },
+        {
+          "id": "B",
+          "text": "productive"
+        },
+        {
+          "id": "C",
+          "text": "inefficient"
+        },
+        {
+          "id": "D",
+          "text": "passive"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "effective (hiệu quả) = productive."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the word(s) OPPOSITE: Sending human rescue teams into unstable mines is extremely DANGEROUS.",
+      "options": [
+        {
+          "id": "A",
+          "text": "perilous"
+        },
+        {
+          "id": "B",
+          "text": "hazardous"
+        },
+        {
+          "id": "C",
+          "text": "safe"
+        },
+        {
+          "id": "D",
+          "text": "risky"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "dangerous (nguy hiểm) >< safe (an toàn)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the word(s) OPPOSITE: The new language model showed remarkable PROFICIENCY when drafting professional emails.",
+      "options": [
+        {
+          "id": "A",
+          "text": "incompetence"
+        },
+        {
+          "id": "B",
+          "text": "mastery"
+        },
+        {
+          "id": "C",
+          "text": "expertise"
+        },
+        {
+          "id": "D",
+          "text": "aptitude"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "proficiency (sự thành thạo, tài năng) >< incompetence (sự bất tài, kém cỏi)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the word(s) OPPOSITE: Some critics worry that AI could completely SUBSTITUTE human artists in creative industries.",
+      "options": [
+        {
+          "id": "A",
+          "text": "replace"
+        },
+        {
+          "id": "B",
+          "text": "retain"
+        },
+        {
+          "id": "C",
+          "text": "exchange"
+        },
+        {
+          "id": "D",
+          "text": "displace"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "substitute (thay thế) >< retain (giữ lại, duy trì)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the word(s) OPPOSITE: You must press the power button to ACTIVATE the device's scanning module.",
+      "options": [
+        {
+          "id": "A",
+          "text": "trigger"
+        },
+        {
+          "id": "B",
+          "text": "disable"
+        },
+        {
+          "id": "C",
+          "text": "operate"
+        },
+        {
+          "id": "D",
+          "text": "initiate"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "activate (kích hoạt) >< disable (vô hiệu hóa, tắt)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the word(s) OPPOSITE: In contrast to NATURAL intelligence, machine learning relies strictly on statistical computation.",
+      "options": [
+        {
+          "id": "A",
+          "text": "human"
+        },
+        {
+          "id": "B",
+          "text": "biological"
+        },
+        {
+          "id": "C",
+          "text": "artificial"
+        },
+        {
+          "id": "D",
+          "text": "spontaneous"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "natural (tự nhiên) >< artificial (nhân tạo)."
+    },
+    {
+      "content": "Choose the correct form of the word in brackets to complete the sentence:\n\nQuestion 51: Today's industrial robots operate with remarkable _________ and precision. (AUTONOMOUS)",
+      "options": [
+        {
+          "id": "A",
+          "text": "autonomy"
+        },
+        {
+          "id": "B",
+          "text": "autonomous"
+        },
+        {
+          "id": "C",
+          "text": "autonomously"
+        },
+        {
+          "id": "D",
+          "text": "autonomize"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Sau giới từ 'with' cần danh từ: 'autonomy' (sự tự chủ, độc lập). Cụm: operate with remarkable autonomy and precision."
+    },
+    {
+      "content": "Choose the correct form of the word in brackets to complete the sentence:\n\nQuestion 52: Voice _________ software has dramatically improved telephone banking services. (RECOGNIZE)",
+      "options": [
+        {
+          "id": "A",
+          "text": "recognition"
+        },
+        {
+          "id": "B",
+          "text": "recognizable"
+        },
+        {
+          "id": "C",
+          "text": "recognizably"
+        },
+        {
+          "id": "D",
+          "text": "recognized"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cụm danh từ: 'Voice recognition' (nhận diện giọng nói)."
+    },
+    {
+      "content": "Choose the correct form of the word in brackets to complete the sentence:\n\nQuestion 53: Medical imaging tools have enhanced doctors' diagnostic _________ significantly. (CAPABLE)",
+      "options": [
+        {
+          "id": "A",
+          "text": "capabilities"
+        },
+        {
+          "id": "B",
+          "text": "incapable"
+        },
+        {
+          "id": "C",
+          "text": "capably"
+        },
+        {
+          "id": "D",
+          "text": "incapability"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Sau tính từ 'diagnostic' cần danh từ số nhiều: 'capabilities' (năng lực chẩn đoán)."
+    },
+    {
+      "content": "Choose the correct form of the word in brackets to complete the sentence:\n\nQuestion 54: The _________ team worked around the clock to debug the artificial intelligence software. (PROGRAMME)",
+      "options": [
+        {
+          "id": "A",
+          "text": "programming"
+        },
+        {
+          "id": "B",
+          "text": "programmer"
+        },
+        {
+          "id": "C",
+          "text": "programme"
+        },
+        {
+          "id": "D",
+          "text": "programmable"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cụm danh từ ghép: 'The programming team' (đội ngũ lập trình)."
+    },
+    {
+      "content": "Choose the correct form of the word in brackets to complete the sentence:\n\nQuestion 55: We noticed a dramatic _________ in translation speed after the model was retrained. (IMPROVE)",
+      "options": [
+        {
+          "id": "A",
+          "text": "improvement"
+        },
+        {
+          "id": "B",
+          "text": "improvable"
+        },
+        {
+          "id": "C",
+          "text": "improved"
+        },
+        {
+          "id": "D",
+          "text": "improvingly"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Sau tính từ 'dramatic' cần danh từ: 'improvement' (sự cải thiện rõ rệt)."
+    },
+    {
+      "content": "Choose the correct form of the word in brackets to complete the sentence:\n\nQuestion 56: Modern factories are moving toward full _________ to reduce labor overhead. (AUTOMATE)",
+      "options": [
+        {
+          "id": "A",
+          "text": "automation"
+        },
+        {
+          "id": "B",
+          "text": "automated"
+        },
+        {
+          "id": "C",
+          "text": "automatically"
+        },
+        {
+          "id": "D",
+          "text": "automatism"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Sau tính từ 'full' cần danh từ: 'automation' (sự tự động hóa hoàn toàn)."
+    },
+    {
+      "content": "Choose the correct form of the word in brackets to complete the sentence:\n\nQuestion 57: A thorough _________ of server logs revealed that a suspicious cyber breach had occurred. (ANALYSE)",
+      "options": [
+        {
+          "id": "A",
+          "text": "analysis"
+        },
+        {
+          "id": "B",
+          "text": "analyst"
+        },
+        {
+          "id": "C",
+          "text": "analytical"
+        },
+        {
+          "id": "D",
+          "text": "analytically"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Sau tính từ 'thorough' cần danh từ: 'analysis' (sự phân tích kỹ lưỡng)."
+    },
+    {
+      "content": "Choose the correct form of the word in brackets to complete the sentence:\n\nQuestion 58: Several renowned computer _________ met in Geneva to draft global AI ethical principles. (SCIENCE)",
+      "options": [
+        {
+          "id": "A",
+          "text": "scientists"
+        },
+        {
+          "id": "B",
+          "text": "scientific"
+        },
+        {
+          "id": "C",
+          "text": "scientifically"
+        },
+        {
+          "id": "D",
+          "text": "sciences"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Chủ ngữ chỉ người số nhiều: 'computer scientists' (các nhà khoa học máy tính)."
+    },
+    {
+      "content": "Choose the correct form of the word in brackets to complete the sentence:\n\nQuestion 59: The device was _________ damaged during transit and could not be repaired. (IRREPARABLE)",
+      "options": [
+        {
+          "id": "A",
+          "text": "irreparably"
+        },
+        {
+          "id": "B",
+          "text": "irreparable"
+        },
+        {
+          "id": "C",
+          "text": "repairable"
+        },
+        {
+          "id": "D",
+          "text": "irreparability"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Trạng từ bổ nghĩa cho phân từ 'damaged': 'irreparably' (hư hại không thể sửa chữa)."
+    },
+    {
+      "content": "Choose the correct form of the word in brackets to complete the sentence:\n\nQuestion 60: Developing good prompt engineering skills will greatly increase your work _________. (EFFECTIVE)",
+      "options": [
+        {
+          "id": "A",
+          "text": "effectiveness"
+        },
+        {
+          "id": "B",
+          "text": "effective"
+        },
+        {
+          "id": "C",
+          "text": "effectively"
+        },
+        {
+          "id": "D",
+          "text": "ineffectiveness"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Sau danh từ 'work' cần danh từ ghép: 'work effectiveness' (hiệu quả công việc)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the sentence that is closest in meaning to the sentence below:\n\nQuestion 79: 'A specialized technician installed our facial recognition camera yesterday.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "We had our facial recognition camera installed by a specialized technician yesterday."
+        },
+        {
+          "id": "B",
+          "text": "We had our facial recognition camera to install by a specialized technician yesterday."
+        },
+        {
+          "id": "C",
+          "text": "We had a specialized technician installed our facial recognition camera yesterday."
+        },
+        {
+          "id": "D",
+          "text": "We had our facial recognition camera install by a specialized technician yesterday."
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Thể sai khiến bị động với HAVE: S + had + something + V3/ed + by someone."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the sentence that is closest in meaning to the sentence below:\n\nQuestion 80: 'The professor persuaded the engineering student to recalibrate the robotic arm.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "The professor got the engineering student to recalibrate the robotic arm."
+        },
+        {
+          "id": "B",
+          "text": "The professor got the engineering student recalibrate the robotic arm."
+        },
+        {
+          "id": "C",
+          "text": "The professor got the robotic arm recalibrate by the engineering student."
+        },
+        {
+          "id": "D",
+          "text": "The professor got to recalibrate the robotic arm by the student."
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Persuade sb to do sth = Get sb to do sth (thuyết phục/nhờ ai làm gì)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the sentence that is closest in meaning to the sentence below:\n\nQuestion 81: 'Someone repaired Michael's autonomous lawnmower last week.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Michael had his autonomous lawnmower repaired last week."
+        },
+        {
+          "id": "B",
+          "text": "Michael had his autonomous lawnmower to repair last week."
+        },
+        {
+          "id": "C",
+          "text": "Michael got someone repaired his autonomous lawnmower last week."
+        },
+        {
+          "id": "D",
+          "text": "Michael had someone to repair his autonomous lawnmower last week."
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Thể sai khiến bị động: S + had + sth + V3/ed."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the sentence that is closest in meaning to the sentence below:\n\nQuestion 82: 'The IT manager made the programmer verify the cybersecurity logs.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "The IT manager had the programmer verify the cybersecurity logs."
+        },
+        {
+          "id": "B",
+          "text": "The IT manager had the programmer to verify the cybersecurity logs."
+        },
+        {
+          "id": "C",
+          "text": "The IT manager got the programmer verify the cybersecurity logs."
+        },
+        {
+          "id": "D",
+          "text": "The IT manager had the cybersecurity logs verify by the programmer."
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Thể sai khiến chủ động: S + have + someone + V-bare (verify)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the sentence that is closest in meaning to the sentence below:\n\nQuestion 83: 'Generative AI tools are capable of composing coherent essays in seconds.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Generative AI tools have the ability to compose coherent essays in seconds."
+        },
+        {
+          "id": "B",
+          "text": "Generative AI tools have the ability of composing coherent essays in seconds."
+        },
+        {
+          "id": "C",
+          "text": "Generative AI tools have able to compose coherent essays in seconds."
+        },
+        {
+          "id": "D",
+          "text": "Generative AI tools have ability composing coherent essays in seconds."
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Be capable of V-ing = Have the ability to V (có khả năng làm gì)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the sentence that is closest in meaning to the sentence below:\n\nQuestion 84: 'A certified technician checks our smart home sensors every six months.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "We get our smart home sensors checked by a certified technician every six months."
+        },
+        {
+          "id": "B",
+          "text": "We get our smart home sensors check by a certified technician every six months."
+        },
+        {
+          "id": "C",
+          "text": "We get a certified technician checked our smart home sensors every six months."
+        },
+        {
+          "id": "D",
+          "text": "We get our smart home sensors checking by a certified technician every six months."
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Thể sai khiến bị động với GET: S + get + something + V3/ed (checked)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the sentence that is closest in meaning to the sentence below:\n\nQuestion 85: 'The researcher asked his colleague to test the machine learning algorithm.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "The researcher got his colleague to test the machine learning algorithm."
+        },
+        {
+          "id": "B",
+          "text": "The researcher got his colleague test the machine learning algorithm."
+        },
+        {
+          "id": "C",
+          "text": "The researcher had his colleague to test the machine learning algorithm."
+        },
+        {
+          "id": "D",
+          "text": "The researcher got the machine learning algorithm test by his colleague."
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Ask sb to do sth = Get sb to do sth (nhờ ai làm gì)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the sentence that is closest in meaning to the sentence below:\n\nQuestion 86: 'The hospital will instruct an external agency to audit the patient data system.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "The hospital will have an external agency audit the patient data system."
+        },
+        {
+          "id": "B",
+          "text": "The hospital will have an external agency to audit the patient data system."
+        },
+        {
+          "id": "C",
+          "text": "The hospital will get an external agency audit the patient data system."
+        },
+        {
+          "id": "D",
+          "text": "The hospital will have the patient data system audit by an external agency."
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Thể sai khiến chủ động với HAVE: S + will have + someone + V-bare (audit)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the sentence that is closest in meaning to the sentence below:\n\nQuestion 87: 'Operating heavy machinery without safety gear is very dangerous.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is very dangerous to interact with heavy machinery without safety gear."
+        },
+        {
+          "id": "B",
+          "text": "It is very dangerous to interact at heavy machinery without safety gear."
+        },
+        {
+          "id": "C",
+          "text": "It is very dangerous interacting with heavy machinery without safety gear."
+        },
+        {
+          "id": "D",
+          "text": "To interact to heavy machinery without safety gear is danger."
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cấu trúc: It is + adj + to V: It is very dangerous to interact with heavy machinery without safety gear."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the sentence that is closest in meaning to the sentence below:\n\nQuestion 88: 'We arranged for the software firm to update our translation app.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "We got our translation app updated by the software firm."
+        },
+        {
+          "id": "B",
+          "text": "We got our translation app to update by the software firm."
+        },
+        {
+          "id": "C",
+          "text": "We got the software firm updated our translation app."
+        },
+        {
+          "id": "D",
+          "text": "We had our translation app update by the software firm."
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Arrange for sb to do sth = Get sth done by sb (nhờ/thuê cái gì được làm)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the sentence that is closest in meaning to the sentence below:\n\nQuestion 89: 'AI will not take the place of compassionate healthcare workers.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "AI will not substitute for compassionate healthcare workers."
+        },
+        {
+          "id": "B",
+          "text": "AI will not substitute to compassionate healthcare workers."
+        },
+        {
+          "id": "C",
+          "text": "AI will not substitute with compassionate healthcare workers."
+        },
+        {
+          "id": "D",
+          "text": "AI will not substitute compassionate healthcare workers."
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Take the place of sb = Substitute for sb (thay thế cho ai)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the sentence that is closest in meaning to the sentence below:\n\nQuestion 90: 'Working directly with automated tools provides students with practical knowledge.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hands-on experience with automated tools provides students with practical knowledge."
+        },
+        {
+          "id": "B",
+          "text": "Hands-off experience with automated tools provides students with practical knowledge."
+        },
+        {
+          "id": "C",
+          "text": "Hands-free experience with automated tools provides students with practical knowledge."
+        },
+        {
+          "id": "D",
+          "text": "Hand-made experience with automated tools provides students with practical knowledge."
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Working directly with = Hands-on experience with (kinh nghiệm thực hành, trực tiếp)."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the word whose underlined part differs from the other three in pronunciation:\n\nQuestion 1:\nA. capable\nB. activate\nC. application\nD. analyse",
+      "options": [
+        {
+          "id": "A",
+          "text": "capable"
+        },
+        {
+          "id": "B",
+          "text": "activate"
+        },
+        {
+          "id": "C",
+          "text": "application"
+        },
+        {
+          "id": "D",
+          "text": "analyse"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "capable /ˈkeɪpəbl/ (âm /eɪ/), các từ còn lại là âm /æ/: activate /ˈæktɪveɪt/, application /ˌæplɪˈkeɪʃn/, analyse /ˈænəlaɪz/."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the word whose underlined part differs from the other three in pronunciation:\n\nQuestion 2:\nA. danger\nB. dangerous\nC. intelligent\nD. algorithm",
+      "options": [
+        {
+          "id": "A",
+          "text": "danger"
+        },
+        {
+          "id": "B",
+          "text": "dangerous"
+        },
+        {
+          "id": "C",
+          "text": "intelligent"
+        },
+        {
+          "id": "D",
+          "text": "algorithm"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "algorithm /ˈælɡərɪðəm/ (âm /ɡ/), các từ còn lại là âm /dʒ/: danger /ˈdeɪndʒər/, dangerous /ˈdeɪndʒərəs/, intelligent /ɪnˈtelɪdʒənt/."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the word whose underlined part differs from the other three in pronunciation:\n\nQuestion 3:\nA. explore\nB. effective\nC. recognize\nD. substitute",
+      "options": [
+        {
+          "id": "A",
+          "text": "explore"
+        },
+        {
+          "id": "B",
+          "text": "effective"
+        },
+        {
+          "id": "C",
+          "text": "recognize"
+        },
+        {
+          "id": "D",
+          "text": "substitute"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "effective /ɪˈfektɪv/ (âm /e/), các từ còn lại âm /ɪ/ hoặc /ə/: explore /ɪkˈsplɔːr/, recognize /ˈrekəɡnaɪz/, substitute /ˈsʌbstɪtjuːt/."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the word whose underlined part differs from the other three in pronunciation:\n\nQuestion 4:\nA. automated\nB. upgraded\nC. programmed\nD. repaired",
+      "options": [
+        {
+          "id": "A",
+          "text": "automated"
+        },
+        {
+          "id": "B",
+          "text": "upgraded"
+        },
+        {
+          "id": "C",
+          "text": "programmed"
+        },
+        {
+          "id": "D",
+          "text": "repaired"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "automated /ˈɔːtəmeɪtɪd/ (đuôi -ed phát âm /ɪd/), các từ còn lại tận cùng bằng âm hữu thanh nên phát âm là /d/."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the word whose underlined part differs from the other three in pronunciation:\n\nQuestion 5:\nA. proficiency\nB. efficiency\nC. artificial\nD. scientist",
+      "options": [
+        {
+          "id": "A",
+          "text": "proficiency"
+        },
+        {
+          "id": "B",
+          "text": "efficiency"
+        },
+        {
+          "id": "C",
+          "text": "artificial"
+        },
+        {
+          "id": "D",
+          "text": "scientist"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "scientist /ˈsaɪəntɪst/ (âm /s/), các từ còn lại chứa 'ci' phát âm là /ʃ/: proficiency /prəˈfɪʃnsi/, efficiency /ɪˈfɪʃnsi/, artificial /ˌɑːtɪˈfɪʃl/."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the word that differs from the other three in the position of primary stress:\n\nQuestion 6:\nA. capable\nB. autonomous\nC. dangerous\nD. scientist",
+      "options": [
+        {
+          "id": "A",
+          "text": "capable"
+        },
+        {
+          "id": "B",
+          "text": "autonomous"
+        },
+        {
+          "id": "C",
+          "text": "dangerous"
+        },
+        {
+          "id": "D",
+          "text": "scientist"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "autonomous /ɔːˈtɒnəməs/ (trọng âm 2), các từ còn lại trọng âm 1: capable /ˈkeɪpəbl/, dangerous /ˈdeɪndʒərəs/, scientist /ˈsaɪəntɪst/."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the word that differs from the other three in the position of primary stress:\n\nQuestion 7:\nA. recognition\nB. cybersecurity\nC. application\nD. facilitate",
+      "options": [
+        {
+          "id": "A",
+          "text": "recognition"
+        },
+        {
+          "id": "B",
+          "text": "cybersecurity"
+        },
+        {
+          "id": "C",
+          "text": "application"
+        },
+        {
+          "id": "D",
+          "text": "facilitate"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "facilitate /fəˈsɪlɪteɪt/ (trọng âm 2), các từ còn lại trọng âm 3: recognition /ˌrekəɡˈnɪʃn/, cybersecurity /ˌsaɪbəsɪˈkjʊərəti/, application /ˌæplɪˈkeɪʃn/."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the word that differs from the other three in the position of primary stress:\n\nQuestion 8:\nA. improve\nB. explore\nC. repair\nD. programme",
+      "options": [
+        {
+          "id": "A",
+          "text": "improve"
+        },
+        {
+          "id": "B",
+          "text": "explore"
+        },
+        {
+          "id": "C",
+          "text": "repair"
+        },
+        {
+          "id": "D",
+          "text": "programme"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "programme /ˈprəʊɡræm/ (trọng âm 1), các từ còn lại trọng âm 2: improve /ɪmˈpruːv/, explore /ɪkˈsplɔːr/, repair /rɪˈpeər/."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the word that differs from the other three in the position of primary stress:\n\nQuestion 9:\nA. intelligent\nB. sophisticated\nC. effective\nD. algorithm",
+      "options": [
+        {
+          "id": "A",
+          "text": "intelligent"
+        },
+        {
+          "id": "B",
+          "text": "sophisticated"
+        },
+        {
+          "id": "C",
+          "text": "effective"
+        },
+        {
+          "id": "D",
+          "text": "algorithm"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "algorithm /ˈælɡərɪðəm/ (trọng âm 1), các từ còn lại trọng âm 2: intelligent /ɪnˈtelɪdʒənt/, sophisticated /səˈfɪstɪkeɪtɪd/, effective /ɪˈfektɪv/."
+    },
+    {
+      "content": "Mark the letter A, B, C, or D to indicate the word that differs from the other three in the position of primary stress:\n\nQuestion 10:\nA. proficiency\nB. capability\nC. interactive\nD. artificial",
+      "options": [
+        {
+          "id": "A",
+          "text": "proficiency"
+        },
+        {
+          "id": "B",
+          "text": "capability"
+        },
+        {
+          "id": "C",
+          "text": "interactive"
+        },
+        {
+          "id": "D",
+          "text": "artificial"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "proficiency /prəˈfɪʃnsi/ (trọng âm 2), các từ còn lại trọng âm 3: capability /ˌkeɪpəˈbɪləti/, interactive /ˌɪntərˈæktɪv/, artificial /ˌɑːtɪˈfɪʃl/."
+    },
+    {
+      "content": "READING CLOZE:\n\n\"Artificial intelligence (AI) has rapidly transformed from a speculative concept \ninto an indispensable pillar of modern society. Today, complex machine learning \n(61) ______ are capable of processing billions of data points in mere fractions \nof a second. In heavy industries, corporate executives often (62) ______ specialized \nengineering teams install autonomous robotics to handle repetitive and physically \n(63) ______ tasks. By doing so, companies not only reduce workplace accidents, \nbut also (64) ______ operational efficiency to unprecedented levels.\n\nMoreover, the widespread (65) ______ of biometric technologies—such as facial \nand voice (66) ______—has altered how individuals interact with everyday hardware. \nInstead of memorizing cumbersome passwords, users can instantly (67) ______ their \nmobile devices with a simple glance. To keep these complex systems secure, cybersecurity \nfirms (68) ______ external security auditors verify their digital architecture annually. \nWhile sceptics argue that machines might eventually (69) ______ human employees, \nmost scientists emphasize that AI is designed to augment human potential, providing \nprofessionals with (70) ______ tools to solve humanity’s grandest challenges.\"\n\nQuestion 61: Choose the best answer for blank (61):",
+      "options": [
+        {
+          "id": "A",
+          "text": "algorithms"
+        },
+        {
+          "id": "B",
+          "text": "scientists"
+        },
+        {
+          "id": "C",
+          "text": "substitutions"
+        },
+        {
+          "id": "D",
+          "text": "proficiencies"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "algorithms (thuật toán máy học)."
+    },
+    {
+      "content": "READING CLOZE:\n\n\"Artificial intelligence (AI) has rapidly transformed from a speculative concept \ninto an indispensable pillar of modern society. Today, complex machine learning \n(61) ______ are capable of processing billions of data points in mere fractions \nof a second. In heavy industries, corporate executives often (62) ______ specialized \nengineering teams install autonomous robotics to handle repetitive and physically \n(63) ______ tasks. By doing so, companies not only reduce workplace accidents, \nbut also (64) ______ operational efficiency to unprecedented levels.\n\nMoreover, the widespread (65) ______ of biometric technologies—such as facial \nand voice (66) ______—has altered how individuals interact with everyday hardware. \nInstead of memorizing cumbersome passwords, users can instantly (67) ______ their \nmobile devices with a simple glance. To keep these complex systems secure, cybersecurity \nfirms (68) ______ external security auditors verify their digital architecture annually. \nWhile sceptics argue that machines might eventually (69) ______ human employees, \nmost scientists emphasize that AI is designed to augment human potential, providing \nprofessionals with (70) ______ tools to solve humanity’s grandest challenges.\"\n\nQuestion 62: Choose the best answer for blank (62):",
+      "options": [
+        {
+          "id": "A",
+          "text": "make"
+        },
+        {
+          "id": "B",
+          "text": "have"
+        },
+        {
+          "id": "C",
+          "text": "get"
+        },
+        {
+          "id": "D",
+          "text": "ask"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "have + sb + install (V-bare)."
+    },
+    {
+      "content": "READING CLOZE:\n\n\"Artificial intelligence (AI) has rapidly transformed from a speculative concept \ninto an indispensable pillar of modern society. Today, complex machine learning \n(61) ______ are capable of processing billions of data points in mere fractions \nof a second. In heavy industries, corporate executives often (62) ______ specialized \nengineering teams install autonomous robotics to handle repetitive and physically \n(63) ______ tasks. By doing so, companies not only reduce workplace accidents, \nbut also (64) ______ operational efficiency to unprecedented levels.\n\nMoreover, the widespread (65) ______ of biometric technologies—such as facial \nand voice (66) ______—has altered how individuals interact with everyday hardware. \nInstead of memorizing cumbersome passwords, users can instantly (67) ______ their \nmobile devices with a simple glance. To keep these complex systems secure, cybersecurity \nfirms (68) ______ external security auditors verify their digital architecture annually. \nWhile sceptics argue that machines might eventually (69) ______ human employees, \nmost scientists emphasize that AI is designed to augment human potential, providing \nprofessionals with (70) ______ tools to solve humanity’s grandest challenges.\"\n\nQuestion 63: Choose the best answer for blank (63):",
+      "options": [
+        {
+          "id": "A",
+          "text": "danger"
+        },
+        {
+          "id": "B",
+          "text": "dangerous"
+        },
+        {
+          "id": "C",
+          "text": "dangerously"
+        },
+        {
+          "id": "D",
+          "text": "endanger"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "dangerous tasks (nhiệm vụ nguy hiểm)."
+    },
+    {
+      "content": "READING CLOZE:\n\n\"Artificial intelligence (AI) has rapidly transformed from a speculative concept \ninto an indispensable pillar of modern society. Today, complex machine learning \n(61) ______ are capable of processing billions of data points in mere fractions \nof a second. In heavy industries, corporate executives often (62) ______ specialized \nengineering teams install autonomous robotics to handle repetitive and physically \n(63) ______ tasks. By doing so, companies not only reduce workplace accidents, \nbut also (64) ______ operational efficiency to unprecedented levels.\n\nMoreover, the widespread (65) ______ of biometric technologies—such as facial \nand voice (66) ______—has altered how individuals interact with everyday hardware. \nInstead of memorizing cumbersome passwords, users can instantly (67) ______ their \nmobile devices with a simple glance. To keep these complex systems secure, cybersecurity \nfirms (68) ______ external security auditors verify their digital architecture annually. \nWhile sceptics argue that machines might eventually (69) ______ human employees, \nmost scientists emphasize that AI is designed to augment human potential, providing \nprofessionals with (70) ______ tools to solve humanity’s grandest challenges.\"\n\nQuestion 64: Choose the best answer for blank (64):",
+      "options": [
+        {
+          "id": "A",
+          "text": "explore"
+        },
+        {
+          "id": "B",
+          "text": "improve"
+        },
+        {
+          "id": "C",
+          "text": "substitute"
+        },
+        {
+          "id": "D",
+          "text": "deactivate"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "improve operational efficiency (cải thiện hiệu quả vận hành)."
+    },
+    {
+      "content": "READING CLOZE:\n\n\"Artificial intelligence (AI) has rapidly transformed from a speculative concept \ninto an indispensable pillar of modern society. Today, complex machine learning \n(61) ______ are capable of processing billions of data points in mere fractions \nof a second. In heavy industries, corporate executives often (62) ______ specialized \nengineering teams install autonomous robotics to handle repetitive and physically \n(63) ______ tasks. By doing so, companies not only reduce workplace accidents, \nbut also (64) ______ operational efficiency to unprecedented levels.\n\nMoreover, the widespread (65) ______ of biometric technologies—such as facial \nand voice (66) ______—has altered how individuals interact with everyday hardware. \nInstead of memorizing cumbersome passwords, users can instantly (67) ______ their \nmobile devices with a simple glance. To keep these complex systems secure, cybersecurity \nfirms (68) ______ external security auditors verify their digital architecture annually. \nWhile sceptics argue that machines might eventually (69) ______ human employees, \nmost scientists emphasize that AI is designed to augment human potential, providing \nprofessionals with (70) ______ tools to solve humanity’s grandest challenges.\"\n\nQuestion 65: Choose the best answer for blank (65):",
+      "options": [
+        {
+          "id": "A",
+          "text": "application"
+        },
+        {
+          "id": "B",
+          "text": "applicant"
+        },
+        {
+          "id": "C",
+          "text": "apply"
+        },
+        {
+          "id": "D",
+          "text": "applicable"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "widespread application (ứng dụng rộng rãi)."
+    },
+    {
+      "content": "READING CLOZE:\n\n\"Artificial intelligence (AI) has rapidly transformed from a speculative concept \ninto an indispensable pillar of modern society. Today, complex machine learning \n(61) ______ are capable of processing billions of data points in mere fractions \nof a second. In heavy industries, corporate executives often (62) ______ specialized \nengineering teams install autonomous robotics to handle repetitive and physically \n(63) ______ tasks. By doing so, companies not only reduce workplace accidents, \nbut also (64) ______ operational efficiency to unprecedented levels.\n\nMoreover, the widespread (65) ______ of biometric technologies—such as facial \nand voice (66) ______—has altered how individuals interact with everyday hardware. \nInstead of memorizing cumbersome passwords, users can instantly (67) ______ their \nmobile devices with a simple glance. To keep these complex systems secure, cybersecurity \nfirms (68) ______ external security auditors verify their digital architecture annually. \nWhile sceptics argue that machines might eventually (69) ______ human employees, \nmost scientists emphasize that AI is designed to augment human potential, providing \nprofessionals with (70) ______ tools to solve humanity’s grandest challenges.\"\n\nQuestion 66: Choose the best answer for blank (66):",
+      "options": [
+        {
+          "id": "A",
+          "text": "recognise"
+        },
+        {
+          "id": "B",
+          "text": "recognisably"
+        },
+        {
+          "id": "C",
+          "text": "recognition"
+        },
+        {
+          "id": "D",
+          "text": "recognizable"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "voice recognition (nhận diện giọng nói)."
+    },
+    {
+      "content": "READING CLOZE:\n\n\"Artificial intelligence (AI) has rapidly transformed from a speculative concept \ninto an indispensable pillar of modern society. Today, complex machine learning \n(61) ______ are capable of processing billions of data points in mere fractions \nof a second. In heavy industries, corporate executives often (62) ______ specialized \nengineering teams install autonomous robotics to handle repetitive and physically \n(63) ______ tasks. By doing so, companies not only reduce workplace accidents, \nbut also (64) ______ operational efficiency to unprecedented levels.\n\nMoreover, the widespread (65) ______ of biometric technologies—such as facial \nand voice (66) ______—has altered how individuals interact with everyday hardware. \nInstead of memorizing cumbersome passwords, users can instantly (67) ______ their \nmobile devices with a simple glance. To keep these complex systems secure, cybersecurity \nfirms (68) ______ external security auditors verify their digital architecture annually. \nWhile sceptics argue that machines might eventually (69) ______ human employees, \nmost scientists emphasize that AI is designed to augment human potential, providing \nprofessionals with (70) ______ tools to solve humanity’s grandest challenges.\"\n\nQuestion 67: Choose the best answer for blank (67):",
+      "options": [
+        {
+          "id": "A",
+          "text": "activate"
+        },
+        {
+          "id": "B",
+          "text": "automate"
+        },
+        {
+          "id": "C",
+          "text": "repair"
+        },
+        {
+          "id": "D",
+          "text": "substitute"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "activate their mobile devices (kích hoạt thiết bị)."
+    },
+    {
+      "content": "READING CLOZE:\n\n\"Artificial intelligence (AI) has rapidly transformed from a speculative concept \ninto an indispensable pillar of modern society. Today, complex machine learning \n(61) ______ are capable of processing billions of data points in mere fractions \nof a second. In heavy industries, corporate executives often (62) ______ specialized \nengineering teams install autonomous robotics to handle repetitive and physically \n(63) ______ tasks. By doing so, companies not only reduce workplace accidents, \nbut also (64) ______ operational efficiency to unprecedented levels.\n\nMoreover, the widespread (65) ______ of biometric technologies—such as facial \nand voice (66) ______—has altered how individuals interact with everyday hardware. \nInstead of memorizing cumbersome passwords, users can instantly (67) ______ their \nmobile devices with a simple glance. To keep these complex systems secure, cybersecurity \nfirms (68) ______ external security auditors verify their digital architecture annually. \nWhile sceptics argue that machines might eventually (69) ______ human employees, \nmost scientists emphasize that AI is designed to augment human potential, providing \nprofessionals with (70) ______ tools to solve humanity’s grandest challenges.\"\n\nQuestion 68: Choose the best answer for blank (68):",
+      "options": [
+        {
+          "id": "A",
+          "text": "get"
+        },
+        {
+          "id": "B",
+          "text": "have"
+        },
+        {
+          "id": "C",
+          "text": "let"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "have / let sb verify (V-bare), trong đó 'have' chỉ thuê/nhờ đơn vị kiểm toán an ninh."
+    },
+    {
+      "content": "READING CLOZE:\n\n\"Artificial intelligence (AI) has rapidly transformed from a speculative concept \ninto an indispensable pillar of modern society. Today, complex machine learning \n(61) ______ are capable of processing billions of data points in mere fractions \nof a second. In heavy industries, corporate executives often (62) ______ specialized \nengineering teams install autonomous robotics to handle repetitive and physically \n(63) ______ tasks. By doing so, companies not only reduce workplace accidents, \nbut also (64) ______ operational efficiency to unprecedented levels.\n\nMoreover, the widespread (65) ______ of biometric technologies—such as facial \nand voice (66) ______—has altered how individuals interact with everyday hardware. \nInstead of memorizing cumbersome passwords, users can instantly (67) ______ their \nmobile devices with a simple glance. To keep these complex systems secure, cybersecurity \nfirms (68) ______ external security auditors verify their digital architecture annually. \nWhile sceptics argue that machines might eventually (69) ______ human employees, \nmost scientists emphasize that AI is designed to augment human potential, providing \nprofessionals with (70) ______ tools to solve humanity’s grandest challenges.\"\n\nQuestion 69: Choose the best answer for blank (69):",
+      "options": [
+        {
+          "id": "A",
+          "text": "interact with"
+        },
+        {
+          "id": "B",
+          "text": "substitute for"
+        },
+        {
+          "id": "C",
+          "text": "facilitate with"
+        },
+        {
+          "id": "D",
+          "text": "explore about"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "substitute for (thay thế cho nhân viên con người)."
+    },
+    {
+      "content": "READING CLOZE:\n\n\"Artificial intelligence (AI) has rapidly transformed from a speculative concept \ninto an indispensable pillar of modern society. Today, complex machine learning \n(61) ______ are capable of processing billions of data points in mere fractions \nof a second. In heavy industries, corporate executives often (62) ______ specialized \nengineering teams install autonomous robotics to handle repetitive and physically \n(63) ______ tasks. By doing so, companies not only reduce workplace accidents, \nbut also (64) ______ operational efficiency to unprecedented levels.\n\nMoreover, the widespread (65) ______ of biometric technologies—such as facial \nand voice (66) ______—has altered how individuals interact with everyday hardware. \nInstead of memorizing cumbersome passwords, users can instantly (67) ______ their \nmobile devices with a simple glance. To keep these complex systems secure, cybersecurity \nfirms (68) ______ external security auditors verify their digital architecture annually. \nWhile sceptics argue that machines might eventually (69) ______ human employees, \nmost scientists emphasize that AI is designed to augment human potential, providing \nprofessionals with (70) ______ tools to solve humanity’s grandest challenges.\"\n\nQuestion 70: Choose the best answer for blank (70):",
+      "options": [
+        {
+          "id": "A",
+          "text": "effective"
+        },
+        {
+          "id": "B",
+          "text": "hands-on"
+        },
+        {
+          "id": "C",
+          "text": "autonomous"
+        },
+        {
+          "id": "D",
+          "text": "artificial"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "effective tools (các công cụ hiệu quả)."
+    },
+    {
+      "content": "READING COMPREHENSION:\n\n\"The integration of Artificial Intelligence into medical science represents one of \nthe most consequential technological frontiers of the twenty-first century. For \ndecades, clinical practitioners have relied exclusively on human cognitive ability \nand diagnostic experience. However, the advent of deep-learning neural networks \nhas fundamentally revolutionized clinical workflows. Specialized AI algorithms, \ntrained on millions of annotated radiological scans and histopathological slides, \nare now capable of detecting malignancies with an accuracy that matches or occasionally \nexceeds senior oncologists. \n\nRather than working in isolation, leading healthcare institutions deliberately have \nmedical specialists and computer scientists collaborate in interdisciplinary laboratories. \nThis cooperative framework enables clinicians to get complex imaging datasets \nanalyzed in real time. For instance, in acute stroke triage, where every passing minute \ndetermines irreversible neurological damage, automated software analyzes computerized \ntomography (CT) scans instantly, notifying on-call surgeons within seconds. By \nautomating initial evaluations, hospitals have their administrative backlog reduced, \nallowing frontline physicians to dedicate undivided attention to bedside patient care.\n\nNevertheless, the rapid proliferation of autonomous diagnostic tools introduces serious \nethical and regulatory dilemmas. Chief among these concerns is algorithmic bias. If \na neural network is trained predominantly on diagnostic data derived from specific demographic \ncohorts, its diagnostic proficiency may degrade precipitously when applied to underrepresented \npopulations. Furthermore, the \"black box\" nature of deep learning—whereby the software \nreaches accurate conclusions through internal mathematical layers that cannot be directly \nscrutinized by human physicians—poses accountability issues. If an algorithmic misdiagnosis \nleads to patient harm, determining liability between the attending hospital, the clinician, \nand the software developers remains unresolved.\n\nConsequently, medical regulatory authorities do not permit autonomous systems to substitute \nfor human clinicians. Instead, current guidelines mandate a \"human-in-the-loop\" paradigm. \nPhysicians must maintain hands-on oversight over algorithmic recommendations, ensuring \nthat artificial intelligence acts solely as an augmentative instrument. As healthcare systems \ncontinue to integrate these sophisticated platforms, stringent cybersecurity safeguards \nand continuous clinical validation will remain imperative to guarantee patient safety.\"\n\nQuestion 71: What is the primary focus of the passage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The historical progression of computing hardware in universities."
+        },
+        {
+          "id": "B",
+          "text": "The opportunities and challenges of integrating AI into medical diagnosis."
+        },
+        {
+          "id": "C",
+          "text": "The replacement of surgeons by autonomous robots in operating theatres."
+        },
+        {
+          "id": "D",
+          "text": "The financial expenses associated with purchasing radiological equipment."
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Bài đọc tập trung vào tiềm năng và thách thức đạo đức/pháp lý khi ứng dụng AI trong chẩn đoán y tế."
+    },
+    {
+      "content": "READING COMPREHENSION:\n\n\"The integration of Artificial Intelligence into medical science represents one of \nthe most consequential technological frontiers of the twenty-first century. For \ndecades, clinical practitioners have relied exclusively on human cognitive ability \nand diagnostic experience. However, the advent of deep-learning neural networks \nhas fundamentally revolutionized clinical workflows. Specialized AI algorithms, \ntrained on millions of annotated radiological scans and histopathological slides, \nare now capable of detecting malignancies with an accuracy that matches or occasionally \nexceeds senior oncologists. \n\nRather than working in isolation, leading healthcare institutions deliberately have \nmedical specialists and computer scientists collaborate in interdisciplinary laboratories. \nThis cooperative framework enables clinicians to get complex imaging datasets \nanalyzed in real time. For instance, in acute stroke triage, where every passing minute \ndetermines irreversible neurological damage, automated software analyzes computerized \ntomography (CT) scans instantly, notifying on-call surgeons within seconds. By \nautomating initial evaluations, hospitals have their administrative backlog reduced, \nallowing frontline physicians to dedicate undivided attention to bedside patient care.\n\nNevertheless, the rapid proliferation of autonomous diagnostic tools introduces serious \nethical and regulatory dilemmas. Chief among these concerns is algorithmic bias. If \na neural network is trained predominantly on diagnostic data derived from specific demographic \ncohorts, its diagnostic proficiency may degrade precipitously when applied to underrepresented \npopulations. Furthermore, the \"black box\" nature of deep learning—whereby the software \nreaches accurate conclusions through internal mathematical layers that cannot be directly \nscrutinized by human physicians—poses accountability issues. If an algorithmic misdiagnosis \nleads to patient harm, determining liability between the attending hospital, the clinician, \nand the software developers remains unresolved.\n\nConsequently, medical regulatory authorities do not permit autonomous systems to substitute \nfor human clinicians. Instead, current guidelines mandate a \"human-in-the-loop\" paradigm. \nPhysicians must maintain hands-on oversight over algorithmic recommendations, ensuring \nthat artificial intelligence acts solely as an augmentative instrument. As healthcare systems \ncontinue to integrate these sophisticated platforms, stringent cybersecurity safeguards \nand continuous clinical validation will remain imperative to guarantee patient safety.\"\n\nQuestion 72: The word 'malignancies' in paragraph 1 is closest in meaning to ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "cancerous conditions"
+        },
+        {
+          "id": "B",
+          "text": "algorithmic errors"
+        },
+        {
+          "id": "C",
+          "text": "hardware breakdowns"
+        },
+        {
+          "id": "D",
+          "text": "medical credentials"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "malignancies = cancerous conditions (các khối u/tình trạng ung thư ác tính)."
+    },
+    {
+      "content": "READING COMPREHENSION:\n\n\"The integration of Artificial Intelligence into medical science represents one of \nthe most consequential technological frontiers of the twenty-first century. For \ndecades, clinical practitioners have relied exclusively on human cognitive ability \nand diagnostic experience. However, the advent of deep-learning neural networks \nhas fundamentally revolutionized clinical workflows. Specialized AI algorithms, \ntrained on millions of annotated radiological scans and histopathological slides, \nare now capable of detecting malignancies with an accuracy that matches or occasionally \nexceeds senior oncologists. \n\nRather than working in isolation, leading healthcare institutions deliberately have \nmedical specialists and computer scientists collaborate in interdisciplinary laboratories. \nThis cooperative framework enables clinicians to get complex imaging datasets \nanalyzed in real time. For instance, in acute stroke triage, where every passing minute \ndetermines irreversible neurological damage, automated software analyzes computerized \ntomography (CT) scans instantly, notifying on-call surgeons within seconds. By \nautomating initial evaluations, hospitals have their administrative backlog reduced, \nallowing frontline physicians to dedicate undivided attention to bedside patient care.\n\nNevertheless, the rapid proliferation of autonomous diagnostic tools introduces serious \nethical and regulatory dilemmas. Chief among these concerns is algorithmic bias. If \na neural network is trained predominantly on diagnostic data derived from specific demographic \ncohorts, its diagnostic proficiency may degrade precipitously when applied to underrepresented \npopulations. Furthermore, the \"black box\" nature of deep learning—whereby the software \nreaches accurate conclusions through internal mathematical layers that cannot be directly \nscrutinized by human physicians—poses accountability issues. If an algorithmic misdiagnosis \nleads to patient harm, determining liability between the attending hospital, the clinician, \nand the software developers remains unresolved.\n\nConsequently, medical regulatory authorities do not permit autonomous systems to substitute \nfor human clinicians. Instead, current guidelines mandate a \"human-in-the-loop\" paradigm. \nPhysicians must maintain hands-on oversight over algorithmic recommendations, ensuring \nthat artificial intelligence acts solely as an augmentative instrument. As healthcare systems \ncontinue to integrate these sophisticated platforms, stringent cybersecurity safeguards \nand continuous clinical validation will remain imperative to guarantee patient safety.\"\n\nQuestion 73: According to paragraph 2, how does AI software specifically assist in acute stroke triage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By replacing the need for on-call surgeons."
+        },
+        {
+          "id": "B",
+          "text": "By manufacturing artificial blood vessels immediately."
+        },
+        {
+          "id": "C",
+          "text": "By analyzing CT scans instantaneously to notify surgeons without delay."
+        },
+        {
+          "id": "D",
+          "text": "By drafting insurance claims on behalf of patients."
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "Dẫn chứng đoạn 2: 'analyzes computerized tomography (CT) scans instantly, notifying on-call surgeons within seconds.'"
+    },
+    {
+      "content": "READING COMPREHENSION:\n\n\"The integration of Artificial Intelligence into medical science represents one of \nthe most consequential technological frontiers of the twenty-first century. For \ndecades, clinical practitioners have relied exclusively on human cognitive ability \nand diagnostic experience. However, the advent of deep-learning neural networks \nhas fundamentally revolutionized clinical workflows. Specialized AI algorithms, \ntrained on millions of annotated radiological scans and histopathological slides, \nare now capable of detecting malignancies with an accuracy that matches or occasionally \nexceeds senior oncologists. \n\nRather than working in isolation, leading healthcare institutions deliberately have \nmedical specialists and computer scientists collaborate in interdisciplinary laboratories. \nThis cooperative framework enables clinicians to get complex imaging datasets \nanalyzed in real time. For instance, in acute stroke triage, where every passing minute \ndetermines irreversible neurological damage, automated software analyzes computerized \ntomography (CT) scans instantly, notifying on-call surgeons within seconds. By \nautomating initial evaluations, hospitals have their administrative backlog reduced, \nallowing frontline physicians to dedicate undivided attention to bedside patient care.\n\nNevertheless, the rapid proliferation of autonomous diagnostic tools introduces serious \nethical and regulatory dilemmas. Chief among these concerns is algorithmic bias. If \na neural network is trained predominantly on diagnostic data derived from specific demographic \ncohorts, its diagnostic proficiency may degrade precipitously when applied to underrepresented \npopulations. Furthermore, the \"black box\" nature of deep learning—whereby the software \nreaches accurate conclusions through internal mathematical layers that cannot be directly \nscrutinized by human physicians—poses accountability issues. If an algorithmic misdiagnosis \nleads to patient harm, determining liability between the attending hospital, the clinician, \nand the software developers remains unresolved.\n\nConsequently, medical regulatory authorities do not permit autonomous systems to substitute \nfor human clinicians. Instead, current guidelines mandate a \"human-in-the-loop\" paradigm. \nPhysicians must maintain hands-on oversight over algorithmic recommendations, ensuring \nthat artificial intelligence acts solely as an augmentative instrument. As healthcare systems \ncontinue to integrate these sophisticated platforms, stringent cybersecurity safeguards \nand continuous clinical validation will remain imperative to guarantee patient safety.\"\n\nQuestion 74: The causative sentence in paragraph 2 ('hospitals have their administrative backlog reduced') implies that ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "hospitals reduce their records by deleting all data."
+        },
+        {
+          "id": "B",
+          "text": "the implementation of AI results in the administrative backlog being reduced."
+        },
+        {
+          "id": "C",
+          "text": "medical staff refuse to handle paperwork altogether."
+        },
+        {
+          "id": "D",
+          "text": "patients must file their own medical histories online."
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cấu trúc bị động thể sai khiến: việc ứng dụng AI giúp bệnh viện giải quyết/giảm tải hồ sơ tồn đọng."
+    },
+    {
+      "content": "READING COMPREHENSION:\n\n\"The integration of Artificial Intelligence into medical science represents one of \nthe most consequential technological frontiers of the twenty-first century. For \ndecades, clinical practitioners have relied exclusively on human cognitive ability \nand diagnostic experience. However, the advent of deep-learning neural networks \nhas fundamentally revolutionized clinical workflows. Specialized AI algorithms, \ntrained on millions of annotated radiological scans and histopathological slides, \nare now capable of detecting malignancies with an accuracy that matches or occasionally \nexceeds senior oncologists. \n\nRather than working in isolation, leading healthcare institutions deliberately have \nmedical specialists and computer scientists collaborate in interdisciplinary laboratories. \nThis cooperative framework enables clinicians to get complex imaging datasets \nanalyzed in real time. For instance, in acute stroke triage, where every passing minute \ndetermines irreversible neurological damage, automated software analyzes computerized \ntomography (CT) scans instantly, notifying on-call surgeons within seconds. By \nautomating initial evaluations, hospitals have their administrative backlog reduced, \nallowing frontline physicians to dedicate undivided attention to bedside patient care.\n\nNevertheless, the rapid proliferation of autonomous diagnostic tools introduces serious \nethical and regulatory dilemmas. Chief among these concerns is algorithmic bias. If \na neural network is trained predominantly on diagnostic data derived from specific demographic \ncohorts, its diagnostic proficiency may degrade precipitously when applied to underrepresented \npopulations. Furthermore, the \"black box\" nature of deep learning—whereby the software \nreaches accurate conclusions through internal mathematical layers that cannot be directly \nscrutinized by human physicians—poses accountability issues. If an algorithmic misdiagnosis \nleads to patient harm, determining liability between the attending hospital, the clinician, \nand the software developers remains unresolved.\n\nConsequently, medical regulatory authorities do not permit autonomous systems to substitute \nfor human clinicians. Instead, current guidelines mandate a \"human-in-the-loop\" paradigm. \nPhysicians must maintain hands-on oversight over algorithmic recommendations, ensuring \nthat artificial intelligence acts solely as an augmentative instrument. As healthcare systems \ncontinue to integrate these sophisticated platforms, stringent cybersecurity safeguards \nand continuous clinical validation will remain imperative to guarantee patient safety.\"\n\nQuestion 75: The term 'black box' in paragraph 3 refers to ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "physical flight data recorders fitted inside ambulances."
+        },
+        {
+          "id": "B",
+          "text": "internal algorithmic operations whose exact reasoning cannot be easily examined."
+        },
+        {
+          "id": "C",
+          "text": "dark rooms where radiological equipment must be operated."
+        },
+        {
+          "id": "D",
+          "text": "secure firewalls protecting hospitals against unauthorized access."
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "'Black box' chỉ các tầng xử lý nơ-ron phức tạp bên trong mà bác sĩ không thể nhìn thấy hay diễn giải logic trực tiếp từng bước."
+    },
+    {
+      "content": "READING COMPREHENSION:\n\n\"The integration of Artificial Intelligence into medical science represents one of \nthe most consequential technological frontiers of the twenty-first century. For \ndecades, clinical practitioners have relied exclusively on human cognitive ability \nand diagnostic experience. However, the advent of deep-learning neural networks \nhas fundamentally revolutionized clinical workflows. Specialized AI algorithms, \ntrained on millions of annotated radiological scans and histopathological slides, \nare now capable of detecting malignancies with an accuracy that matches or occasionally \nexceeds senior oncologists. \n\nRather than working in isolation, leading healthcare institutions deliberately have \nmedical specialists and computer scientists collaborate in interdisciplinary laboratories. \nThis cooperative framework enables clinicians to get complex imaging datasets \nanalyzed in real time. For instance, in acute stroke triage, where every passing minute \ndetermines irreversible neurological damage, automated software analyzes computerized \ntomography (CT) scans instantly, notifying on-call surgeons within seconds. By \nautomating initial evaluations, hospitals have their administrative backlog reduced, \nallowing frontline physicians to dedicate undivided attention to bedside patient care.\n\nNevertheless, the rapid proliferation of autonomous diagnostic tools introduces serious \nethical and regulatory dilemmas. Chief among these concerns is algorithmic bias. If \na neural network is trained predominantly on diagnostic data derived from specific demographic \ncohorts, its diagnostic proficiency may degrade precipitously when applied to underrepresented \npopulations. Furthermore, the \"black box\" nature of deep learning—whereby the software \nreaches accurate conclusions through internal mathematical layers that cannot be directly \nscrutinized by human physicians—poses accountability issues. If an algorithmic misdiagnosis \nleads to patient harm, determining liability between the attending hospital, the clinician, \nand the software developers remains unresolved.\n\nConsequently, medical regulatory authorities do not permit autonomous systems to substitute \nfor human clinicians. Instead, current guidelines mandate a \"human-in-the-loop\" paradigm. \nPhysicians must maintain hands-on oversight over algorithmic recommendations, ensuring \nthat artificial intelligence acts solely as an augmentative instrument. As healthcare systems \ncontinue to integrate these sophisticated platforms, stringent cybersecurity safeguards \nand continuous clinical validation will remain imperative to guarantee patient safety.\"\n\nQuestion 76: The word 'proficiency' in paragraph 3 is opposite in meaning to ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "expertise"
+        },
+        {
+          "id": "B",
+          "text": "competence"
+        },
+        {
+          "id": "C",
+          "text": "incompetence"
+        },
+        {
+          "id": "D",
+          "text": "diligence"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "proficiency (sự thành thạo, chuẩn xác) >< incompetence (sự kém cỏi, sai sót)."
+    },
+    {
+      "content": "READING COMPREHENSION:\n\n\"The integration of Artificial Intelligence into medical science represents one of \nthe most consequential technological frontiers of the twenty-first century. For \ndecades, clinical practitioners have relied exclusively on human cognitive ability \nand diagnostic experience. However, the advent of deep-learning neural networks \nhas fundamentally revolutionized clinical workflows. Specialized AI algorithms, \ntrained on millions of annotated radiological scans and histopathological slides, \nare now capable of detecting malignancies with an accuracy that matches or occasionally \nexceeds senior oncologists. \n\nRather than working in isolation, leading healthcare institutions deliberately have \nmedical specialists and computer scientists collaborate in interdisciplinary laboratories. \nThis cooperative framework enables clinicians to get complex imaging datasets \nanalyzed in real time. For instance, in acute stroke triage, where every passing minute \ndetermines irreversible neurological damage, automated software analyzes computerized \ntomography (CT) scans instantly, notifying on-call surgeons within seconds. By \nautomating initial evaluations, hospitals have their administrative backlog reduced, \nallowing frontline physicians to dedicate undivided attention to bedside patient care.\n\nNevertheless, the rapid proliferation of autonomous diagnostic tools introduces serious \nethical and regulatory dilemmas. Chief among these concerns is algorithmic bias. If \na neural network is trained predominantly on diagnostic data derived from specific demographic \ncohorts, its diagnostic proficiency may degrade precipitously when applied to underrepresented \npopulations. Furthermore, the \"black box\" nature of deep learning—whereby the software \nreaches accurate conclusions through internal mathematical layers that cannot be directly \nscrutinized by human physicians—poses accountability issues. If an algorithmic misdiagnosis \nleads to patient harm, determining liability between the attending hospital, the clinician, \nand the software developers remains unresolved.\n\nConsequently, medical regulatory authorities do not permit autonomous systems to substitute \nfor human clinicians. Instead, current guidelines mandate a \"human-in-the-loop\" paradigm. \nPhysicians must maintain hands-on oversight over algorithmic recommendations, ensuring \nthat artificial intelligence acts solely as an augmentative instrument. As healthcare systems \ncontinue to integrate these sophisticated platforms, stringent cybersecurity safeguards \nand continuous clinical validation will remain imperative to guarantee patient safety.\"\n\nQuestion 77: Which of the following is NOT mentioned as a challenge of medical AI?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Algorithmic bias resulting from unrepresentative training datasets."
+        },
+        {
+          "id": "B",
+          "text": "Liability ambiguities when automated misdiagnoses occur."
+        },
+        {
+          "id": "C",
+          "text": "Lack of computational electricity in major modern hospitals."
+        },
+        {
+          "id": "D",
+          "text": "The lack of interpretability in deep learning decision paths."
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "Thiếu hụt điện năng không hề được đề cập trong bài."
+    },
+    {
+      "content": "READING COMPREHENSION:\n\n\"The integration of Artificial Intelligence into medical science represents one of \nthe most consequential technological frontiers of the twenty-first century. For \ndecades, clinical practitioners have relied exclusively on human cognitive ability \nand diagnostic experience. However, the advent of deep-learning neural networks \nhas fundamentally revolutionized clinical workflows. Specialized AI algorithms, \ntrained on millions of annotated radiological scans and histopathological slides, \nare now capable of detecting malignancies with an accuracy that matches or occasionally \nexceeds senior oncologists. \n\nRather than working in isolation, leading healthcare institutions deliberately have \nmedical specialists and computer scientists collaborate in interdisciplinary laboratories. \nThis cooperative framework enables clinicians to get complex imaging datasets \nanalyzed in real time. For instance, in acute stroke triage, where every passing minute \ndetermines irreversible neurological damage, automated software analyzes computerized \ntomography (CT) scans instantly, notifying on-call surgeons within seconds. By \nautomating initial evaluations, hospitals have their administrative backlog reduced, \nallowing frontline physicians to dedicate undivided attention to bedside patient care.\n\nNevertheless, the rapid proliferation of autonomous diagnostic tools introduces serious \nethical and regulatory dilemmas. Chief among these concerns is algorithmic bias. If \na neural network is trained predominantly on diagnostic data derived from specific demographic \ncohorts, its diagnostic proficiency may degrade precipitously when applied to underrepresented \npopulations. Furthermore, the \"black box\" nature of deep learning—whereby the software \nreaches accurate conclusions through internal mathematical layers that cannot be directly \nscrutinized by human physicians—poses accountability issues. If an algorithmic misdiagnosis \nleads to patient harm, determining liability between the attending hospital, the clinician, \nand the software developers remains unresolved.\n\nConsequently, medical regulatory authorities do not permit autonomous systems to substitute \nfor human clinicians. Instead, current guidelines mandate a \"human-in-the-loop\" paradigm. \nPhysicians must maintain hands-on oversight over algorithmic recommendations, ensuring \nthat artificial intelligence acts solely as an augmentative instrument. As healthcare systems \ncontinue to integrate these sophisticated platforms, stringent cybersecurity safeguards \nand continuous clinical validation will remain imperative to guarantee patient safety.\"\n\nQuestion 78: According to the final paragraph, the 'human-in-the-loop' model requires that ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "AI systems make final surgical decisions without human interference."
+        },
+        {
+          "id": "B",
+          "text": "physicians exercise hands-on supervision over AI-driven recommendations."
+        },
+        {
+          "id": "C",
+          "text": "computer scientists replace licensed medical practitioners."
+        },
+        {
+          "id": "D",
+          "text": "patients program their own diagnostic tools at home."
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Dẫn chứng đoạn cuối: 'mandate a \"human-in-the-loop\" paradigm. Physicians must maintain hands-on oversight over algorithmic recommendations...'"
+    }
+  ]
+}

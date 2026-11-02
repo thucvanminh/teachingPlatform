@@ -1,0 +1,1393 @@
+{
+  "studentUsername": "nam_viet",
+  "grade": 12,
+  "assignedDate": "2026-11-02T00:00:00.000Z",
+  "unitTitle": "Unit 6: Artificial Intelligence - Từ Vựng Trọng Tâm & Thể Sai Khiến (Causatives)",
+  "unitDescription": "Phòng học tương tác: 50 từ vựng cốt lõi phát âm bản xứ, Chuyên đề Thể sai khiến (Active & Passive Causatives), Đấu trường Collocation & 60 câu luyện tập tại lớp mục tiêu 7+ THPTQG.",
+  "lectureMarkdown": "# 🌟 Cẩm Nang Tri Thức & Đấu Trường Từ Vựng Unit 6 - Tiếng Anh 12\n**Biên soạn riêng cho Bạn Nam Việt • Hướng dẫn: Thầy Thức**\n\nChuyên đề: **Artificial Intelligence & Thể Sai Khiến (Causative Verbs)**\nMục tiêu: **Chinh phục 7+ Kì thi Tốt nghiệp THPT Quốc Gia**\n\n[🚀 MỞ PHÒNG HỌC TƯƠNG TÁC TOÀN MÀN HÌNH](/lectures/eng12-unit6/index.html)\n\n---\n\n### 📌 Trọng tâm buổi học hôm nay:\n1. **25 Từ vựng cốt lõi Unit 6:** Nắm chắc phiên âm IPA, từ loại, họ từ (Word Family) và cấu trúc giới từ đi kèm (`interact with`, `capable of`, `substitute for`).\n2. **Ngữ pháp Thể sai khiến (Causatives):**\n   - Chủ động: `S + have + someone + V-inf` vs `S + get + someone + TO-V`\n   - Bị động: `S + have / get + something + V3/ed`\n   - Động từ đặc biệt: `make sb do` (bị động: `be made to do`), `let sb do` (viết lại: `be allowed to do`).\n3. **Chiến lược làm bài thi trắc nghiệm:**\n   - Ưu tiên ghi trọn vẹn điểm phần Từ vựng & Collocations ở đầu đề.\n   - Nhận diện đúng tân ngữ chỉ Người hay chỉ Vật sau Have/Get để chia đúng động từ.\n",
+  "teacherNote": "Thầy Thức dặn Nam Việt: Hôm nay con tập trung nắm chắc 25 từ vựng trọng tâm Unit 6 về Trí tuệ nhân tạo và chuyên đề Thể sai khiến (have/get) nhé. Thứ tự bài tập đã được thầy ưu tiên Từ vựng lên đầu để con ghi trọn điểm 7+ THPTQG!",
+  "assessmentTitle": "Luyện tập tại lớp: Unit 6 - Từ vựng AI & Thể sai khiến (60 câu)",
+  "timeLimitMinutes": 90,
+  "questions": [
+    {
+      "content": "Modern virtual assistants are programmed to __________ with human users naturally and fluently.",
+      "options": [
+        {
+          "id": "A",
+          "text": "interact"
+        },
+        {
+          "id": "B",
+          "text": "prevent"
+        },
+        {
+          "id": "C",
+          "text": "oppose"
+        },
+        {
+          "id": "D",
+          "text": "interrupt"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cụm từ: 'interact with sb' (tương tác với ai). Câu mang nghĩa: Trợ lý ảo hiện đại được lập trình để tương tác với người dùng một cách tự nhiên và trôi chảy."
+    },
+    {
+      "content": "Deep learning neural networks are capable __________ processing massive datasets within fractions of a second.",
+      "options": [
+        {
+          "id": "A",
+          "text": "of"
+        },
+        {
+          "id": "B",
+          "text": "at"
+        },
+        {
+          "id": "C",
+          "text": "for"
+        },
+        {
+          "id": "D",
+          "text": "with"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cấu trúc kinh điển trong đề thi: 'capable OF + V-ing' (có khả năng, đủ năng lực làm việc gì). Tránh nhầm với 'able to V'."
+    },
+    {
+      "content": "Facial __________ technology has become an indispensable security feature at international border checkpoints.",
+      "options": [
+        {
+          "id": "A",
+          "text": "recognition"
+        },
+        {
+          "id": "B",
+          "text": "recognize"
+        },
+        {
+          "id": "C",
+          "text": "recognizable"
+        },
+        {
+          "id": "D",
+          "text": "recognizably"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cụm danh từ ghép: 'facial recognition' (sự nhận diện khuôn mặt). Đứng sau tính từ 'facial' cần một danh từ."
+    },
+    {
+      "content": "Scientists routinely deploy autonomous robotic rovers to __________ dangerous deep-sea trenches and distant planets.",
+      "options": [
+        {
+          "id": "A",
+          "text": "explore"
+        },
+        {
+          "id": "B",
+          "text": "explode"
+        },
+        {
+          "id": "C",
+          "text": "exploit"
+        },
+        {
+          "id": "D",
+          "text": "expose"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Explore (v): thám hiểm, khám phá. Các từ khác: explode (phát nổ), exploit (khai thác, bóc lột), expose (phơi bày)."
+    },
+    {
+      "content": "Leading computer __________ around the globe are drafting comprehensive ethical guidelines for AI development.",
+      "options": [
+        {
+          "id": "A",
+          "text": "scientists"
+        },
+        {
+          "id": "B",
+          "text": "scientific"
+        },
+        {
+          "id": "C",
+          "text": "scientifically"
+        },
+        {
+          "id": "D",
+          "text": "sciences"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Vị trí chủ ngữ chỉ người cần danh từ số nhiều: 'computer scientists' (các nhà khoa học máy tính)."
+    },
+    {
+      "content": "Specialized diagnostic software can automatically detect and __________ code errors in complex operating systems.",
+      "options": [
+        {
+          "id": "A",
+          "text": "repair"
+        },
+        {
+          "id": "B",
+          "text": "impair"
+        },
+        {
+          "id": "C",
+          "text": "despair"
+        },
+        {
+          "id": "D",
+          "text": "prepare"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Repair (v): sửa chữa, khắc phục (lỗi code, hỏng hóc). Impair (làm suy giảm), despair (tuyệt vọng), prepare (chuẩn bị)."
+    },
+    {
+      "content": "Predictive AI models can __________ market trends and consumer behaviors far more swiftly than humans.",
+      "options": [
+        {
+          "id": "A",
+          "text": "analyse"
+        },
+        {
+          "id": "B",
+          "text": "analysis"
+        },
+        {
+          "id": "C",
+          "text": "analyst"
+        },
+        {
+          "id": "D",
+          "text": "analytical"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Sau động từ khuyết thiếu 'can' cần một động từ nguyên thể: 'analyse' (phân tích). Analysis (n: sự phân tích), analyst (n: nhà phân tích)."
+    },
+    {
+      "content": "Skilled software engineers __________ autonomous robots to avoid dynamic obstacles in crowded warehouses.",
+      "options": [
+        {
+          "id": "A",
+          "text": "programme"
+        },
+        {
+          "id": "B",
+          "text": "postpone"
+        },
+        {
+          "id": "C",
+          "text": "prohibit"
+        },
+        {
+          "id": "D",
+          "text": "prescribe"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Programme (v): lập trình. Câu mang nghĩa: Các kỹ sư phần mềm lập trình robot tự hành để tránh các chướng ngại vật di động."
+    },
+    {
+      "content": "The candidate demonstrated outstanding __________ in multiple programming languages and neural frameworks.",
+      "options": [
+        {
+          "id": "A",
+          "text": "proficiency"
+        },
+        {
+          "id": "B",
+          "text": "proficient"
+        },
+        {
+          "id": "C",
+          "text": "proficiently"
+        },
+        {
+          "id": "D",
+          "text": "proficientness"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Sau tính từ 'outstanding' cần một danh từ: 'proficiency' (sự thành thạo, tinh thông). Cụm: demonstrate proficiency in sth."
+    },
+    {
+      "content": "Autonomous surveillance drones are safely operated in __________ combat environments to reduce human casualties.",
+      "options": [
+        {
+          "id": "A",
+          "text": "dangerous"
+        },
+        {
+          "id": "B",
+          "text": "danger"
+        },
+        {
+          "id": "C",
+          "text": "dangerously"
+        },
+        {
+          "id": "D",
+          "text": "endanger"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Trước cụm danh từ 'combat environments' cần một tính từ bổ nghĩa: 'dangerous' (nguy hiểm). Dangerous environments (môi trường nguy hiểm)."
+    },
+    {
+      "content": "Advanced generative AI tools now possess the __________ to create lifelike digital artwork from text prompts.",
+      "options": [
+        {
+          "id": "A",
+          "text": "ability"
+        },
+        {
+          "id": "B",
+          "text": "able"
+        },
+        {
+          "id": "C",
+          "text": "ably"
+        },
+        {
+          "id": "D",
+          "text": "inability"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cấu trúc: 'have / possess the ability to do sth' (có khả năng làm việc gì). Sau mạo từ 'the' cần danh từ."
+    },
+    {
+      "content": "Frequent algorithmic updates substantially __________ the diagnostic accuracy of healthcare systems.",
+      "options": [
+        {
+          "id": "A",
+          "text": "improve"
+        },
+        {
+          "id": "B",
+          "text": "worsen"
+        },
+        {
+          "id": "C",
+          "text": "demolish"
+        },
+        {
+          "id": "D",
+          "text": "criticize"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Improve (v): nâng cao, cải thiện. Các cập nhật thuật toán thường xuyên giúp cải thiện đáng kể độ chính xác chẩn đoán."
+    },
+    {
+      "content": "University students need __________ experience with real-world AI applications before entering the job market.",
+      "options": [
+        {
+          "id": "A",
+          "text": "hands-on"
+        },
+        {
+          "id": "B",
+          "text": "hands-down"
+        },
+        {
+          "id": "C",
+          "text": "hands-off"
+        },
+        {
+          "id": "D",
+          "text": "hands-free"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cụm cố định: 'hands-on experience' (kinh nghiệm thực tế, thực hành). Hands-free (rảnh tay), hands-off (không can thiệp)."
+    },
+    {
+      "content": "Automated route optimization has proven to be an extremely __________ method for cutting fuel expenditure.",
+      "options": [
+        {
+          "id": "A",
+          "text": "effective"
+        },
+        {
+          "id": "B",
+          "text": "ineffective"
+        },
+        {
+          "id": "C",
+          "text": "affectionate"
+        },
+        {
+          "id": "D",
+          "text": "affective"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Effective (adj): hiệu quả, mang lại kết quả như ý. Cụm: an effective method (một phương pháp hiệu quả)."
+    },
+    {
+      "content": "The recommendation __________ assesses your browsing history to display personalized video suggestions.",
+      "options": [
+        {
+          "id": "A",
+          "text": "algorithm"
+        },
+        {
+          "id": "B",
+          "text": "allegory"
+        },
+        {
+          "id": "C",
+          "text": "algebra"
+        },
+        {
+          "id": "D",
+          "text": "alphabet"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cụm danh từ: 'recommendation algorithm' (thuật toán gợi ý/đề xuất). Thuật toán phân tích lịch sử duyệt web để hiển thị gợi ý."
+    },
+    {
+      "content": "Scientists warn that rapidly advancing __________ intelligence must be governed by strict international laws.",
+      "options": [
+        {
+          "id": "A",
+          "text": "artificial"
+        },
+        {
+          "id": "B",
+          "text": "natural"
+        },
+        {
+          "id": "C",
+          "text": "biological"
+        },
+        {
+          "id": "D",
+          "text": "genuine"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cụm danh từ cốt lõi của Unit 6: 'artificial intelligence' (trí tuệ nhân tạo - AI)."
+    },
+    {
+      "content": "Many modern car manufacturers choose to __________ assembly tasks to boost productivity and reduce defects.",
+      "options": [
+        {
+          "id": "A",
+          "text": "automate"
+        },
+        {
+          "id": "B",
+          "text": "hesitate"
+        },
+        {
+          "id": "C",
+          "text": "dominate"
+        },
+        {
+          "id": "D",
+          "text": "terminate"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Automate (v): tự động hóa. Cấu trúc 'choose to automate tasks' (lựa chọn tự động hóa các nhiệm vụ)."
+    },
+    {
+      "content": "Smart city grids utilize __________ sensors that regulate streetlights according to real-time traffic density.",
+      "options": [
+        {
+          "id": "A",
+          "text": "intelligent"
+        },
+        {
+          "id": "B",
+          "text": "reckless"
+        },
+        {
+          "id": "C",
+          "text": "hostile"
+        },
+        {
+          "id": "D",
+          "text": "clumsy"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Intelligent (adj): thông minh, có khả năng xử lý dữ liệu. Intelligent sensors (các cảm biến thông minh)."
+    },
+    {
+      "content": "Users can readily __________ the smartphone voice assistant simply by uttering a predetermined phrase.",
+      "options": [
+        {
+          "id": "A",
+          "text": "activate"
+        },
+        {
+          "id": "B",
+          "text": "deactivate"
+        },
+        {
+          "id": "C",
+          "text": "eliminate"
+        },
+        {
+          "id": "D",
+          "text": "devastate"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Activate (v): kích hoạt, khởi động. Người dùng có thể dễ dàng kích hoạt trợ lý giọng nói bằng cách nói cụm từ cài đặt sẵn."
+    },
+    {
+      "content": "Self-driving taxis, also known as __________ vehicles, are currently being road-tested in several smart cities.",
+      "options": [
+        {
+          "id": "A",
+          "text": "autonomous"
+        },
+        {
+          "id": "B",
+          "text": "anomalous"
+        },
+        {
+          "id": "C",
+          "text": "anonymous"
+        },
+        {
+          "id": "D",
+          "text": "autocratic"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Autonomous (adj): tự hành, tự chủ hoạt động không cần con người lái. Cụm: 'autonomous vehicles' (xe tự hành)."
+    },
+    {
+      "content": "Modern cyber-defense systems rely on __________ encryption algorithms to prevent unauthorized database intrusions.",
+      "options": [
+        {
+          "id": "A",
+          "text": "sophisticated"
+        },
+        {
+          "id": "B",
+          "text": "primitive"
+        },
+        {
+          "id": "C",
+          "text": "shallow"
+        },
+        {
+          "id": "D",
+          "text": "childish"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Sophisticated (adj): tinh vi, phức tạp, tinh xảo. Đối nghĩa là primitive (thô sơ, nguyên thủy)."
+    },
+    {
+      "content": "Robots are designed to assist doctors in delicate surgeries rather than completely __________ for them.",
+      "options": [
+        {
+          "id": "A",
+          "text": "substitute"
+        },
+        {
+          "id": "B",
+          "text": "compensate"
+        },
+        {
+          "id": "C",
+          "text": "search"
+        },
+        {
+          "id": "D",
+          "text": "stand"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cấu trúc: 'substitute FOR sb' (thay thế cho ai). Robot được thiết kế để hỗ trợ bác sĩ chứ không phải thay thế hoàn toàn họ."
+    },
+    {
+      "content": "Interactive software tools help __________ personalized self-paced learning for high school students.",
+      "options": [
+        {
+          "id": "A",
+          "text": "facilitate"
+        },
+        {
+          "id": "B",
+          "text": "hamper"
+        },
+        {
+          "id": "C",
+          "text": "obstruct"
+        },
+        {
+          "id": "D",
+          "text": "delay"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Facilitate (v): tạo điều kiện thuận lợi, làm cho dễ dàng hơn. Hamper, obstruct, delay đều mang nghĩa cản trở, làm chậm trễ."
+    },
+    {
+      "content": "Organizations invest millions in __________ protocols to safeguard confidential client information from hackers.",
+      "options": [
+        {
+          "id": "A",
+          "text": "cybersecurity"
+        },
+        {
+          "id": "B",
+          "text": "cyberbully"
+        },
+        {
+          "id": "C",
+          "text": "cybercafé"
+        },
+        {
+          "id": "D",
+          "text": "cyberspace"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cybersecurity (n): an ninh mạng. Cụm: cybersecurity protocols (các quy định/giao thức an ninh mạng)."
+    },
+    {
+      "content": "Computer vision has numerous practical __________ in automated agriculture and disease detection.",
+      "options": [
+        {
+          "id": "A",
+          "text": "applications"
+        },
+        {
+          "id": "B",
+          "text": "applicants"
+        },
+        {
+          "id": "C",
+          "text": "applicators"
+        },
+        {
+          "id": "D",
+          "text": "appliances"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Application (n): ứng dụng thực tiễn (practical applications). Applicant (n: người nộp đơn xin việc), appliance (n: thiết bị gia dụng)."
+    },
+    {
+      "content": "Which of the following is CLOSEST in meaning to the underlined word in: 'The laboratory is testing an <u>autonomous</u> rover'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "self-governing"
+        },
+        {
+          "id": "B",
+          "text": "dependent"
+        },
+        {
+          "id": "C",
+          "text": "manual"
+        },
+        {
+          "id": "D",
+          "text": "subordinate"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Autonomous = self-governing (tự hành, độc lập, tự chủ). Dependent (phụ thuộc), manual (làm bằng tay thủ công)."
+    },
+    {
+      "content": "Which of the following is CLOSEST in meaning to the underlined word in: 'They developed a <u>sophisticated</u> neural network'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "advanced"
+        },
+        {
+          "id": "B",
+          "text": "simple"
+        },
+        {
+          "id": "C",
+          "text": "outdated"
+        },
+        {
+          "id": "D",
+          "text": "rudimentary"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Sophisticated = advanced, complex (tiên tiến, tinh vi, phức tạp). Simple, rudimentary (thô sơ, đơn giản)."
+    },
+    {
+      "content": "Which of the following is OPPOSITE in meaning to the underlined word in: 'AI systems are <u>capable</u> of handling massive volumes of data'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "incapable"
+        },
+        {
+          "id": "B",
+          "text": "competent"
+        },
+        {
+          "id": "C",
+          "text": "skillful"
+        },
+        {
+          "id": "D",
+          "text": "qualified"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Capable (có khả năng, thành thạo) >< Incapable (không có khả năng, bất tài). Tiền tố 'in-' mang nghĩa phủ định."
+    },
+    {
+      "content": "Which of the following is OPPOSITE in meaning to the underlined word in: 'Robots are ideal for performing <u>repetitive</u> assembly line tasks'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "varied"
+        },
+        {
+          "id": "B",
+          "text": "monotonous"
+        },
+        {
+          "id": "C",
+          "text": "tedious"
+        },
+        {
+          "id": "D",
+          "text": "routine"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Repetitive = monotonous (lặp đi lặp lại, đơn điệu) >< Varied (đa dạng, nhiều thay đổi thú vị)."
+    },
+    {
+      "content": "Chatbots must be engineered to interact smoothly __________ diverse user groups across different cultures.",
+      "options": [
+        {
+          "id": "A",
+          "text": "with"
+        },
+        {
+          "id": "B",
+          "text": "to"
+        },
+        {
+          "id": "C",
+          "text": "on"
+        },
+        {
+          "id": "D",
+          "text": "at"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Giới từ đi với interact: 'interact WITH sb' (tương tác với ai)."
+    },
+    {
+      "content": "Automated translation algorithms serve as an efficient substitute __________ human interpreters in routine conversations.",
+      "options": [
+        {
+          "id": "A",
+          "text": "for"
+        },
+        {
+          "id": "B",
+          "text": "in"
+        },
+        {
+          "id": "C",
+          "text": "by"
+        },
+        {
+          "id": "D",
+          "text": "with"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cụm danh từ: 'substitute FOR sb/sth' (vật/người thay thế cho ai/cái gì)."
+    },
+    {
+      "content": "The factory workers were worried that the rapid pace of __________ would soon cost them their jobs.",
+      "options": [
+        {
+          "id": "A",
+          "text": "automation"
+        },
+        {
+          "id": "B",
+          "text": "automate"
+        },
+        {
+          "id": "C",
+          "text": "automatic"
+        },
+        {
+          "id": "D",
+          "text": "automatically"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Sau giới từ 'of' cần một danh từ: 'automation' (sự tự động hóa). Các công nhân lo lắng tốc độ tự động hóa sẽ lấy đi công việc của họ."
+    },
+    {
+      "content": "To secure a position in the tech firm, applicants must show exceptional language __________ in English.",
+      "options": [
+        {
+          "id": "A",
+          "text": "proficiency"
+        },
+        {
+          "id": "B",
+          "text": "proficient"
+        },
+        {
+          "id": "C",
+          "text": "proficiently"
+        },
+        {
+          "id": "D",
+          "text": "proficientness"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cụm: 'language proficiency' (sự thành thạo ngôn ngữ). Sau tính từ 'exceptional' cần danh từ."
+    },
+    {
+      "content": "Voice __________ features on modern smart TVs enable users to change channels without a remote control.",
+      "options": [
+        {
+          "id": "A",
+          "text": "recognition"
+        },
+        {
+          "id": "B",
+          "text": "recognize"
+        },
+        {
+          "id": "C",
+          "text": "recognizing"
+        },
+        {
+          "id": "D",
+          "text": "recognizable"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cụm: 'voice recognition' (nhận diện giọng nói). Tính năng nhận diện giọng nói trên TV thông minh cho phép chuyển kênh không cần điều khiển."
+    },
+    {
+      "content": "High school trainees gained invaluable __________ training during their summer robotic internship.",
+      "options": [
+        {
+          "id": "A",
+          "text": "hands-on"
+        },
+        {
+          "id": "B",
+          "text": "handy"
+        },
+        {
+          "id": "C",
+          "text": "hand-made"
+        },
+        {
+          "id": "D",
+          "text": "handheld"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cụm từ cố định: 'hands-on training' (khóa đào tạo thực hành thực tế)."
+    },
+    {
+      "content": "The company director had his senior programmer __________ the cybersecurity algorithm before the product launch.",
+      "options": [
+        {
+          "id": "A",
+          "text": "update"
+        },
+        {
+          "id": "B",
+          "text": "to update"
+        },
+        {
+          "id": "C",
+          "text": "updated"
+        },
+        {
+          "id": "D",
+          "text": "updating"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Thể sai khiến chủ động với HAVE: 'S + have + NGƯỜI + V-nguyên thể' (have sb DO sth). Do đó chọn 'update' (không có 'to')."
+    },
+    {
+      "content": "Yesterday, the teacher got her students __________ an essay discussing the ethical boundaries of AI.",
+      "options": [
+        {
+          "id": "A",
+          "text": "to write"
+        },
+        {
+          "id": "B",
+          "text": "write"
+        },
+        {
+          "id": "C",
+          "text": "written"
+        },
+        {
+          "id": "D",
+          "text": "writing"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Thể sai khiến chủ động với GET: 'S + get + NGƯỜI + TO-V' (get sb TO DO sth). Do đó bắt buộc phải chọn 'to write'."
+    },
+    {
+      "content": "Nam had his broken laptop __________ by an experienced computer technician yesterday afternoon.",
+      "options": [
+        {
+          "id": "A",
+          "text": "repaired"
+        },
+        {
+          "id": "B",
+          "text": "repair"
+        },
+        {
+          "id": "C",
+          "text": "to repair"
+        },
+        {
+          "id": "D",
+          "text": "repairing"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Thể sai khiến bị động với HAVE: 'S + have + VẬT (laptop) + V3/ed'. Câu mang nghĩa Nam nhờ chiếc laptop được sửa bởi kỹ thuật viên ➔ repaired."
+    },
+    {
+      "content": "The research laboratory is getting a new supercomputer __________ to speed up climate simulation modeling.",
+      "options": [
+        {
+          "id": "A",
+          "text": "installed"
+        },
+        {
+          "id": "B",
+          "text": "install"
+        },
+        {
+          "id": "C",
+          "text": "to install"
+        },
+        {
+          "id": "D",
+          "text": "installing"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Thể sai khiến bị động với GET: 'S + get + VẬT (supercomputer) + V3/ed'. Chọn 'installed'."
+    },
+    {
+      "content": "Instead of washing the autonomous delivery van himself, the manager had it __________ at the automated car wash.",
+      "options": [
+        {
+          "id": "A",
+          "text": "cleaned"
+        },
+        {
+          "id": "B",
+          "text": "clean"
+        },
+        {
+          "id": "C",
+          "text": "to clean"
+        },
+        {
+          "id": "D",
+          "text": "cleaning"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Tân ngữ 'it' thay cho 'autonomous delivery van' (vật) ➔ 'have + something + V3/ed' ➔ chọn 'cleaned'."
+    },
+    {
+      "content": "The chief surgeon had the robotic arm __________ and sterilized before initiating the heart operation.",
+      "options": [
+        {
+          "id": "A",
+          "text": "calibrated"
+        },
+        {
+          "id": "B",
+          "text": "calibrate"
+        },
+        {
+          "id": "C",
+          "text": "to calibrate"
+        },
+        {
+          "id": "D",
+          "text": "calibrating"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Tân ngữ 'the robotic arm' là vật, song song với 'sterilized' (V3/ed) ➔ 'calibrated'."
+    },
+    {
+      "content": "Can you get the IT specialist __________ our office network firewall this morning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "to check"
+        },
+        {
+          "id": "B",
+          "text": "check"
+        },
+        {
+          "id": "C",
+          "text": "checked"
+        },
+        {
+          "id": "D",
+          "text": "checking"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cấu trúc: 'get + someone (the IT specialist) + TO-V' ➔ chọn 'to check'."
+    },
+    {
+      "content": "The strict workshop supervisor made all trainees __________ safety goggles before testing the autonomous laser cutter.",
+      "options": [
+        {
+          "id": "A",
+          "text": "wear"
+        },
+        {
+          "id": "B",
+          "text": "to wear"
+        },
+        {
+          "id": "C",
+          "text": "worn"
+        },
+        {
+          "id": "D",
+          "text": "wearing"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Động từ sai khiến MAKE ở thể chủ động: 'S + make + someone + V-nguyên thể' (make sb DO sth) ➔ chọn 'wear'."
+    },
+    {
+      "content": "During the national exam, students were made __________ all smart watches and mobile phones outside the testing room.",
+      "options": [
+        {
+          "id": "A",
+          "text": "to leave"
+        },
+        {
+          "id": "B",
+          "text": "leave"
+        },
+        {
+          "id": "C",
+          "text": "left"
+        },
+        {
+          "id": "D",
+          "text": "leaving"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "BẪY KINH ĐIỂN THPTQG: Khi chuyển MAKE sang thể bị động, bắt buộc phải có TO: 'S + be made + TO-V' ➔ chọn 'to leave'."
+    },
+    {
+      "content": "Responsible parents never let their toddlers __________ unmonitored AI chat apps on tablet computers.",
+      "options": [
+        {
+          "id": "A",
+          "text": "use"
+        },
+        {
+          "id": "B",
+          "text": "to use"
+        },
+        {
+          "id": "C",
+          "text": "used"
+        },
+        {
+          "id": "D",
+          "text": "using"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Động từ LET: 'S + let + someone + V-nguyên thể' (cho phép ai làm gì) ➔ chọn 'use'."
+    },
+    {
+      "content": "The technician checked the cybersecurity firewall for the company. ➔ The company had __________.",
+      "options": [
+        {
+          "id": "A",
+          "text": "the cybersecurity firewall checked by the technician"
+        },
+        {
+          "id": "B",
+          "text": "the technician to check the cybersecurity firewall"
+        },
+        {
+          "id": "C",
+          "text": "the cybersecurity firewall check by the technician"
+        },
+        {
+          "id": "D",
+          "text": "checked the cybersecurity firewall by the technician"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Viết lại câu sang thể sai khiến bị động: S + had + something + V3/ed + by someone ➔ 'had the cybersecurity firewall checked by the technician'."
+    },
+    {
+      "content": "Mr. Brown persuaded the programmer to optimize the database query. ➔ Mr. Brown got __________.",
+      "options": [
+        {
+          "id": "A",
+          "text": "the programmer to optimize the database query"
+        },
+        {
+          "id": "B",
+          "text": "the programmer optimize the database query"
+        },
+        {
+          "id": "C",
+          "text": "the database query optimize by the programmer"
+        },
+        {
+          "id": "D",
+          "text": "to optimize the database query by the programmer"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Persuade sb to do sth = Get sb to do sth (thuyết phục/nhờ ai làm gì) ➔ 'got the programmer to optimize the database query'."
+    },
+    {
+      "content": "You should have your company system passwords __________ every three months to prevent cyberattacks.",
+      "options": [
+        {
+          "id": "A",
+          "text": "changed"
+        },
+        {
+          "id": "B",
+          "text": "change"
+        },
+        {
+          "id": "C",
+          "text": "to change"
+        },
+        {
+          "id": "D",
+          "text": "changing"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "'have + something (passwords) + V3/ed' ➔ chọn 'changed' (nhờ/cho mật khẩu được đổi định kỳ)."
+    },
+    {
+      "content": "Find the underlined part that needs correction: 'We <u>got</u> (A) the IT consultant <u>configure</u> (B) the server <u>before</u> (C) the system <u>launched</u> (D).'",
+      "options": [
+        {
+          "id": "A",
+          "text": "got"
+        },
+        {
+          "id": "B",
+          "text": "configure"
+        },
+        {
+          "id": "C",
+          "text": "before"
+        },
+        {
+          "id": "D",
+          "text": "launched"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Lỗi sai ở 'configure'. Cấu trúc 'get someone' phải đi với 'to-V' ➔ sửa thành 'to configure'."
+    },
+    {
+      "content": "Find the underlined part that needs correction: 'She <u>had</u> (A) her research paper <u>to translate</u> (B) into English <u>by</u> (C) an AI translation <u>model</u> (D).'",
+      "options": [
+        {
+          "id": "A",
+          "text": "had"
+        },
+        {
+          "id": "B",
+          "text": "to translate"
+        },
+        {
+          "id": "C",
+          "text": "by"
+        },
+        {
+          "id": "D",
+          "text": "model"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Lỗi sai ở 'to translate'. Thể sai khiến bị động với vật: 'have + something + V3/ed' ➔ sửa 'to translate' thành 'translated'."
+    },
+    {
+      "content": "Read the passage and choose the best answer: 'Artificial intelligence is rapidly altering the modern labor landscape. In many industries, routine and repetitive duties are being (51)__________ by intelligent robots...'\n\nChoose the best word for (51):",
+      "options": [
+        {
+          "id": "A",
+          "text": "automated"
+        },
+        {
+          "id": "B",
+          "text": "interrupted"
+        },
+        {
+          "id": "C",
+          "text": "demolished"
+        },
+        {
+          "id": "D",
+          "text": "prohibited"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Automated (được tự động hóa). Trong nhiều ngành công nghiệp, các nhiệm vụ lặp đi lặp lại đang được tự động hóa bởi robot thông minh."
+    },
+    {
+      "content": "Read the passage and choose the best answer: '...Furthermore, machine learning algorithms are now (52)__________ of evaluating medical scans with remarkable accuracy...'\n\nChoose the best word for (52):",
+      "options": [
+        {
+          "id": "A",
+          "text": "capable"
+        },
+        {
+          "id": "B",
+          "text": "able"
+        },
+        {
+          "id": "C",
+          "text": "responsible"
+        },
+        {
+          "id": "D",
+          "text": "reliable"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cấu trúc: 'capable of + V-ing' (có khả năng làm gì). Tránh nhầm với 'able to V'."
+    },
+    {
+      "content": "Read the passage and choose the best answer: '...This breakthrough does not mean machines will completely (53)__________ for human doctors, but rather augment their decision-making...'\n\nChoose the best word for (53):",
+      "options": [
+        {
+          "id": "A",
+          "text": "substitute"
+        },
+        {
+          "id": "B",
+          "text": "interact"
+        },
+        {
+          "id": "C",
+          "text": "explore"
+        },
+        {
+          "id": "D",
+          "text": "activate"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Substitute for sb: thay thế cho ai. Bước đột phá này không có nghĩa là máy móc sẽ thay thế hoàn toàn bác sĩ con người."
+    },
+    {
+      "content": "Read the passage and choose the best answer: '...(54)__________, governments and institutions must devise robust cybersecurity measures to safeguard private databases...'\n\nChoose the best word for (54):",
+      "options": [
+        {
+          "id": "A",
+          "text": "However"
+        },
+        {
+          "id": "B",
+          "text": "Because"
+        },
+        {
+          "id": "C",
+          "text": "Although"
+        },
+        {
+          "id": "D",
+          "text": "Therefore"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "Therefore (Do đó, vì vậy) dùng để liên kết câu chỉ kết quả logic của đoạn văn."
+    },
+    {
+      "content": "Read the passage and choose the best answer: '...Young learners are encouraged to develop strong digital (55)__________ to thrive in this technological era.'\n\nChoose the best word for (55):",
+      "options": [
+        {
+          "id": "A",
+          "text": "proficiency"
+        },
+        {
+          "id": "B",
+          "text": "danger"
+        },
+        {
+          "id": "C",
+          "text": "malfunction"
+        },
+        {
+          "id": "D",
+          "text": "imprecision"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Digital proficiency: sự thành thạo công nghệ số. Người học trẻ được khuyến khích phát triển sự thành thạo kỹ thuật số mạnh mẽ."
+    },
+    {
+      "content": "READING COMPREHENSION: 'Autonomous vehicles (AVs) represent one of the most exciting innovations in modern transportation. Equipped with advanced sensors, cameras, and sophisticated machine learning software, these self-driving cars can navigate busy traffic without direct human intervention. Proponents argue that AVs will dramatically reduce road accidents, the vast majority of which stem from human error such as fatigue and distraction. Furthermore, autonomous fleets could facilitate smoother traffic flow and reduce carbon emissions. Nevertheless, significant hurdles remain. Cybersecurity vulnerabilities pose a threat, as hackers could potentially gain control of vehicular systems. Moreover, ethical questions regarding how an algorithm should react in unavoidable collision scenarios continue to spark intense global debate.'\n\nQuestion 56: What is the primary focus of the passage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The development, benefits, and challenges of autonomous vehicles"
+        },
+        {
+          "id": "B",
+          "text": "The complete replacement of human drivers by 2030"
+        },
+        {
+          "id": "C",
+          "text": "How hackers manipulate satellite navigation systems"
+        },
+        {
+          "id": "D",
+          "text": "The historical invention of the internal combustion engine"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Ý chính của đoạn văn là giới thiệu về xe tự hành (AVs), các lợi ích tiềm năng (giảm tai nạn, tối ưu giao thông) và các thách thức (an ninh mạng, đạo đức)."
+    },
+    {
+      "content": "Question 57: According to paragraph 1, how do autonomous vehicles navigate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By using sensors, cameras, and machine learning software"
+        },
+        {
+          "id": "B",
+          "text": "By relying entirely on human passenger voice instructions"
+        },
+        {
+          "id": "C",
+          "text": "By following underground magnetic rail lines"
+        },
+        {
+          "id": "D",
+          "text": "By transmitting signals exclusively through manual radios"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Thông tin trong đoạn: 'Equipped with advanced sensors, cameras, and sophisticated machine learning software, these self-driving cars can navigate...'"
+    },
+    {
+      "content": "Question 58: The word 'stem from' in the passage is CLOSEST in meaning to __________.",
+      "options": [
+        {
+          "id": "A",
+          "text": "arise from"
+        },
+        {
+          "id": "B",
+          "text": "lead to"
+        },
+        {
+          "id": "C",
+          "text": "prevent"
+        },
+        {
+          "id": "D",
+          "text": "terminate"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Stem from = arise from / result from (bắt nguồn từ, xuất phát từ). '...the vast majority of which stem from human error...' (phần lớn tai nạn bắt nguồn từ lỗi của con người)."
+    },
+    {
+      "content": "Question 59: Which of the following is mentioned as a major concern regarding AVs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cybersecurity risks and ethical decision-making in collisions"
+        },
+        {
+          "id": "B",
+          "text": "Excessive fuel consumption of electric motors"
+        },
+        {
+          "id": "C",
+          "text": "A complete lack of public interest in new technology"
+        },
+        {
+          "id": "D",
+          "text": "The inability of vehicles to operate in clear daylight"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Đoạn văn nêu rõ: 'Cybersecurity vulnerabilities pose a threat... Moreover, ethical questions regarding how an algorithm should react in unavoidable collision scenarios...'"
+    },
+    {
+      "content": "Question 60: What can be inferred about the author's attitude toward autonomous vehicles?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Optimistic about their potential yet realistic about current challenges"
+        },
+        {
+          "id": "B",
+          "text": "Entirely hostile and demanding an immediate ban on AI"
+        },
+        {
+          "id": "C",
+          "text": "Indifferent and uninterested in technological advancements"
+        },
+        {
+          "id": "D",
+          "text": "Overly critical without acknowledging any safety benefits"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Tác giả đánh giá khách quan: vừa thấy được tiềm năng to lớn ('most exciting innovations', 'dramatically reduce accidents') vừa nhận thức rõ thách thức ('significant hurdles remain')."
+    }
+  ]
+}

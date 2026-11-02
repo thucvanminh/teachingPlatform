@@ -21,7 +21,7 @@ Khi người dùng yêu cầu tạo bài, tự động nhận diện đối tư�
 | Học sinh | Cấp độ | Username / ID | Môn học | Mục tiêu | Thư mục dữ liệu gốc |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Thái** | Lớp 11 | `thai` (`9208f557-3288-442e-accf-15fc8c763e68`) | `ENG_11` (`f36e3e6b-46e2-4839-a2e8-8a78ff88a9a0`) | **8.5+ Giữa kì & THPT** | `/home/dantey/Dantey/teaching/lop_11/` |
-| **Nam Việt** | Lớp 12 | `nam_viet` (`c4217be5-4c07-4286-905c-e67d26456fae`) | `ENG_12` (`9b343ae3-1f19-4bbd-986d-069cb158a127`) | **7+ THPT Quốc Gia** | `/home/dantey/Dantey/teaching/lop12NamViet/` |
+| **Nam Việt** | Lớp 12 | `nam_viet` (`d76bd9d6-6cf5-409c-847b-b0e5c07a0876`) | `ENG_12` (`a15d4b19-412a-4bff-acd5-86714381b7af`) | **7+ THPT Quốc Gia** | `/home/dantey/Dantey/teaching/lop12NamViet/` |
 
 - **Giáo viên:** Luôn sử dụng danh xưng **Thầy Thức** (`dc62e5df-2344-4785-b058-b95f5dbe0983`).
 - **Giao diện:** Luôn tuân thủ **Light Theme** (màu sáng, sạch sẽ, hiện đại, không dùng theme tối/đen).
