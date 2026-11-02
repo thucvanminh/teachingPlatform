@@ -507,6 +507,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
     currentQ?.question_payload?.prompt_markdown ||
     '';
   const kidsQuestionVisual = isKids ? splitEmbeddedImage(questionMarkdown) : null;
+  const isParallelWorkbook = isCosmic && currentQ?.question_payload?.practice_layout === 'parallel-workbook';
 
   const stationIndex = Math.min(
     SOLAR_STATIONS.length - 1,
@@ -540,7 +541,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
 
   const content = (
     <div
-      className={`h-[calc(100dvh-4rem)] min-h-[calc(100dvh-4rem)] overflow-hidden flex flex-col ${
+      className={`${isParallelWorkbook ? 'parallel-workspace' : ''} h-[calc(100dvh-4rem)] min-h-[calc(100dvh-4rem)] overflow-hidden flex flex-col ${
         isCosmic
           ? 'text-slate-100'
           : isKids
@@ -596,7 +597,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                   ? 'bg-pink-50 border-pink-300 text-pink-700 shadow-2xs font-sans font-bold'
                   : 'bg-slate-100 border-slate-200 text-slate-800'
               }`}
-              title="Thời gian làm bài"
+              title={isEnglish ? 'Mission time remaining' : 'Thời gian làm bài'}
             >
               <Clock className="w-3.5 h-3.5 text-pink-500" />
               <span>{formatTimer(timeLeft)}</span>
@@ -612,7 +613,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                   ? 'bg-pink-100 border-pink-300 text-pink-800 hover:bg-pink-200 font-bold'
                   : 'bg-slate-100 border-slate-200 text-slate-700 hover:bg-slate-200'
               }`}
-              title="Xem danh sách câu hỏi"
+              title={isEnglish ? 'Open question roster' : 'Xem danh sách câu hỏi'}
             >
               <Grid className="w-3.5 h-3.5" />
               <span>
@@ -684,10 +685,10 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
       </header>
 
       {/* 2. MAIN SINGLE-QUESTION VIEW */}
-      <main className="min-h-0 flex-1 max-w-3xl w-full mx-auto overflow-y-auto px-3.5 sm:px-6 py-4 flex flex-col justify-start lg:justify-center">
+      <main className="mission-main min-h-0 flex-1 max-w-3xl w-full mx-auto overflow-y-auto px-3.5 sm:px-6 py-4 flex flex-col justify-start lg:justify-center">
         {currentQ ? (
           <div
-            className={`rounded-2xl sm:rounded-3xl p-5 sm:p-6 border shadow-sm transition flex flex-col justify-between ${
+            className={`question-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 border shadow-sm transition flex flex-col justify-between ${
               isCosmic
                 ? 'bg-[#0A0E1A]/95 border-cyan-500/40 text-slate-100 shadow-[0_0_30px_rgba(6,182,212,0.15)] backdrop-blur-xl'
                 : isKids
@@ -697,7 +698,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
           >
             {/* A. BANNER THEO CHỦ ĐỀ */}
             {isCosmic && (
-              <div className="flex items-center justify-between pb-3 mb-3 border-b border-cyan-500/20 text-xs">
+              <div className="mission-banner flex items-center justify-between pb-3 mb-3 border-b border-cyan-500/20 text-xs">
                 <div className="flex items-center space-x-2.5">
                   <span className={`w-8 h-8 rounded-xl bg-gradient-to-tr ${currentStation.color} flex items-center justify-center font-bold text-white text-base shadow-[0_0_12px_rgba(6,182,212,0.4)]`}>
                     {currentStation.symbol}
@@ -742,7 +743,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
 
             {/* B. PER-QUESTION CHRONOMETER HUD (Chỉ hiển thị cho học sinh lớn/cosmic) */}
             {!isKids && (
-              <div className={`p-2.5 sm:p-3 rounded-2xl mb-4 border flex flex-wrap items-center justify-between gap-2.5 transition-all ${
+              <div className={`question-timer p-2.5 sm:p-3 rounded-2xl mb-4 border flex flex-wrap items-center justify-between gap-2.5 transition-all ${
                 isCosmic
                   ? questionTimeLeft <= 15
                     ? 'bg-red-950/40 border-red-500/60 shadow-[0_0_20px_rgba(239,68,68,0.3)]'
@@ -839,7 +840,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
             )}
 
             {/* C. QUESTION METADATA HEADER */}
-            <div className="flex items-center justify-between border-b pb-3 mb-3 border-slate-100 dark:border-slate-800">
+            <div className="question-meta flex items-center justify-between border-b pb-3 mb-3 border-slate-100 dark:border-slate-800">
               <div className="flex items-center space-x-2">
                 <span
                   className={`text-xs font-bold px-2.5 py-0.5 rounded-full ${
@@ -899,7 +900,17 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
               </div>
             )}
 
-            <div className={isKids && kidsQuestionVisual?.imageSrc ? 'lg:grid lg:grid-cols-[minmax(17rem,0.85fr)_minmax(0,1.15fr)] lg:items-start lg:gap-6' : ''}>
+            <div className={isParallelWorkbook ? 'parallel-question-body' : isKids && kidsQuestionVisual?.imageSrc ? 'lg:grid lg:grid-cols-[minmax(17rem,0.85fr)_minmax(0,1.15fr)] lg:items-start lg:gap-6' : ''}>
+              {isParallelWorkbook && (
+                <aside className="parallel-reference" aria-label="Geometry reference">
+                  <img src={currentQ.question_payload.diagram_url} alt={currentQ.question_payload.diagram_alt} />
+                  <p className="text-xs text-cyan-200 mt-2">{currentQ.question_payload.reference_note}</p>
+                  <details className="mt-3 text-sm text-slate-200">
+                    <summary className="cursor-pointer text-cyan-300">Flight manual · Type strategy</summary>
+                    <p className="mt-2">{currentQ.question_payload.method_markdown}</p>
+                  </details>
+                </aside>
+              )}
               {isKids && kidsQuestionVisual?.imageSrc && (
                 <figure className="mb-4 overflow-hidden rounded-2xl border-2 border-pink-200 bg-white shadow-md shadow-pink-100 lg:mb-0 lg:sticky lg:top-0">
                   <img
@@ -913,10 +924,11 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                 </figure>
               )}
 
-              <div>
+              <div className="question-response">
                 {/* Question Stem / Content */}
                 <div
-                  className={`text-base sm:text-lg font-semibold leading-relaxed mb-5 lg:max-h-40 lg:overflow-y-auto lg:pr-2 ${
+                  key={currentQ.id}
+                  className={`question-stem text-base sm:text-lg font-semibold leading-relaxed mb-5 lg:max-h-40 lg:overflow-y-auto lg:pr-2 ${
                     isCosmic
                       ? 'text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]'
                       : isKids
@@ -931,7 +943,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                 </div>
 
                 {/* Options Area */}
-                <div className="space-y-2.5">
+                <div className="question-options space-y-2.5">
               {/* MULTIPLE_CHOICE OPTIONS */}
               {currentQ.type === 'MULTIPLE_CHOICE' && currentQ.question_payload?.options && (
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-2.5 lg:gap-3">
@@ -1134,12 +1146,13 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                 <div className="space-y-3">
                   <textarea
                     rows={4}
-                    placeholder={isEnglish ? "Type your step-by-step geometric calculations or mathematical proof here..." : "Gõ lời giải từng bước hoặc lập luận hình học tại đây..."}
+                    aria-label={isEnglish ? 'Written solution' : 'Lời giải'}
+                    placeholder={isEnglish ? "Write each part of your solution. Include angle values, positions, and reasons..." : "Gõ lời giải từng bước hoặc lập luận hình học tại đây..."}
                     value={currentAnswer.text_response || ''}
                     onChange={(e) => handleEssayText(currentQ.id, e.target.value)}
                     className="w-full p-3 bg-slate-900 border border-cyan-500/40 rounded-xl text-white text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 leading-relaxed font-mono"
                   />
-                  <div className="flex items-center justify-between text-xs text-slate-400">
+                  {!isParallelWorkbook && <div className="flex items-center justify-between text-xs text-slate-400">
                     <span>{isEnglish ? "Tip: You can use symbols like 180°, xOy, OM bisector..." : "Gợi ý: Con có thể gõ các góc xOy, 180°, tia OM..."}</span>
                     <button
                       type="button"
@@ -1149,7 +1162,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                       <Upload className="w-3.5 h-3.5" />
                       <span>{isEnglish ? "Attach Diagram Work" : "Đính kèm ảnh bài làm"}</span>
                     </button>
-                  </div>
+                  </div>}
                 </div>
               )}
                 </div>
@@ -1196,7 +1209,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
           <div className="col-span-2 row-start-2 text-center sm:col-auto sm:row-auto">
             <span className="text-[11px] text-slate-500 font-semibold block">
               {isKids ? 'Bé đã làm:' : isEnglish ? 'Completed:' : 'Đã làm:'}{' '}
-              <strong className={isKids ? 'text-pink-600 font-extrabold text-sm' : 'text-cyan-400 font-bold'}>{answeredCount}</strong>/{totalQuestions} câu
+              <strong className={isKids ? 'text-pink-600 font-extrabold text-sm' : 'text-cyan-400 font-bold'}>{answeredCount}</strong>/{totalQuestions} {isEnglish ? 'problems' : 'câu'}
             </span>
           </div>
 
@@ -1394,5 +1407,5 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
     </div>
   );
 
-  return isCosmic ? <SpaceBackground>{content}</SpaceBackground> : content;
+  return isCosmic ? <SpaceBackground fitViewport={isParallelWorkbook}>{content}</SpaceBackground> : content;
 }

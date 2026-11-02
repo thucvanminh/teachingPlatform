@@ -2,9 +2,9 @@
 
 import React from 'react';
 
-export function SpaceBackground({ children }: { children: React.ReactNode }) {
+export function SpaceBackground({ children, fitViewport = false }: { children: React.ReactNode; fitViewport?: boolean }) {
   return (
-    <div className="relative min-h-screen w-full bg-[#05070E] text-slate-100 overflow-x-hidden">
+    <div className={`relative ${fitViewport ? 'min-h-0' : 'min-h-screen'} w-full bg-[#05070E] text-slate-100 overflow-x-hidden`}>
       {/* Background image: Cockpit / Deep Nebula with dark overlay */}
       <div
         className="fixed inset-0 pointer-events-none bg-cover bg-center opacity-30 mix-blend-screen"
