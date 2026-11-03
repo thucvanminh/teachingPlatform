@@ -1,0 +1,1621 @@
+{
+  "title": "Parallel Lines Visual Navigation: 90-Minute Practice Mission",
+  "instructions": "45 visual problems · 40 multiple-choice + 5 workout challenges · 90 minutes. 8 Planetary Sectors: Mercury Orbit (Q1-5) -> Neptune Frontier (Q37-45). High contrast SVG diagrams. Use standard clockwise numbering: 1 top-left, 2 top-right, 3 bottom-right, 4 bottom-left.",
+  "questions": [
+    {
+      "order_index": 1,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q1",
+        "sectionName": "Sector 1: Mercury Orbit • Angle Pair Scanner",
+        "content_markdown": "Look at the diagram. Angles $\\widehat{A_4}$ and $\\widehat{B_2}$ form the corners of a **\"Z\"** shape between lines $a$ and $b$. What type of angle pair are they?",
+        "diagram_url": "/images/geometry/parallel_0311_q1.svg",
+        "diagram_alt": "Visual geometry schematic for Question 1: Sector 1: Mercury Orbit • Angle Pair Scanner",
+        "method_markdown": "Check positions first: F-shape for corresponding, Z-shape for alternate interior, U-shape for consecutive interior.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Corresponding angles"
+          },
+          {
+            "id": "B",
+            "text": "Alternate interior angles"
+          },
+          {
+            "id": "C",
+            "text": "Consecutive interior angles"
+          },
+          {
+            "id": "D",
+            "text": "Vertically opposite angles"
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "Both $\\widehat{A_4}$ and $\\widehat{B_2}$ lie in the interior zone between lines $a$ and $b$ and on opposite sides of transversal $c$, so they are **alternate interior angles** ."
+      }
+    },
+    {
+      "order_index": 2,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q2",
+        "sectionName": "Sector 1: Mercury Orbit • Angle Pair Scanner",
+        "content_markdown": "In the diagram, both $\\widehat{A_2}$ and $\\widehat{B_2}$ sit in the **Top-Right** corner of their intersections (forming an upside-down **\"F\"** shape). What are they called?",
+        "diagram_url": "/images/geometry/parallel_0311_q2.svg",
+        "diagram_alt": "Visual geometry schematic for Question 2: Sector 1: Mercury Orbit • Angle Pair Scanner",
+        "method_markdown": "Check positions first: F-shape for corresponding, Z-shape for alternate interior, U-shape for consecutive interior.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Corresponding angles"
+          },
+          {
+            "id": "B",
+            "text": "Alternate interior angles"
+          },
+          {
+            "id": "C",
+            "text": "Linear pair"
+          },
+          {
+            "id": "D",
+            "text": "Consecutive interior angles"
+          }
+        ],
+        "correct_option_id": "A"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "A",
+        "explanation_markdown": "Angles in the exact same relative position at each intersection are **corresponding angles** ."
+      }
+    },
+    {
+      "order_index": 3,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q3",
+        "sectionName": "Sector 1: Mercury Orbit • Angle Pair Scanner",
+        "content_markdown": "Look at the highlighted angles $\\widehat{A_3}$ (Bottom-Right) and $\\widehat{B_1}$ (Top-Left). Which pair do they form?",
+        "diagram_url": "/images/geometry/parallel_0311_q3.svg",
+        "diagram_alt": "Visual geometry schematic for Question 3: Sector 1: Mercury Orbit • Angle Pair Scanner",
+        "method_markdown": "Check positions first: F-shape for corresponding, Z-shape for alternate interior, U-shape for consecutive interior.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Corresponding angles"
+          },
+          {
+            "id": "B",
+            "text": "Alternate interior angles (*So le trong*)"
+          },
+          {
+            "id": "C",
+            "text": "Vertically opposite angles"
+          },
+          {
+            "id": "D",
+            "text": "Consecutive interior angles"
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "$\\widehat{A_3}$ and $\\widehat{B_1}$ are the second pair of **alternate interior angles** (*so le trong*), forming a backwards **Z** shape."
+      }
+    },
+    {
+      "order_index": 4,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q4",
+        "sectionName": "Sector 1: Mercury Orbit • Angle Pair Scanner",
+        "content_markdown": "Angles $\\widehat{A_4}$ and $\\widehat{B_1}$ are both inside lines $a$ and $b$, and both lie on the **left side** of transversal $c$ (making a **\"C\"** or **\"U\"** shape). They are:",
+        "diagram_url": "/images/geometry/parallel_0311_q4.svg",
+        "diagram_alt": "Visual geometry schematic for Question 4: Sector 1: Mercury Orbit • Angle Pair Scanner",
+        "method_markdown": "Check positions first: F-shape for corresponding, Z-shape for alternate interior, U-shape for consecutive interior.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Alternate interior angles"
+          },
+          {
+            "id": "B",
+            "text": "Corresponding angles"
+          },
+          {
+            "id": "C",
+            "text": "Consecutive interior angles"
+          },
+          {
+            "id": "D",
+            "text": "Vertically opposite angles"
+          }
+        ],
+        "correct_option_id": "C"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "C",
+        "explanation_markdown": "Because they are in the interior region and on the same side of line $c$, they are **consecutive interior angles** ."
+      }
+    },
+    {
+      "order_index": 5,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q5",
+        "sectionName": "Sector 1: Mercury Orbit • Angle Pair Scanner",
+        "content_markdown": "Look at $\\widehat{A_4}$ (Bottom-Left at vertex $A$). Which angle at vertex $B$ is the **corresponding angle** to $\\widehat{A_4}$?",
+        "diagram_url": "/images/geometry/parallel_0311_q5.svg",
+        "diagram_alt": "Visual geometry schematic for Question 5: Sector 1: Mercury Orbit • Angle Pair Scanner",
+        "method_markdown": "Check positions first: F-shape for corresponding, Z-shape for alternate interior, U-shape for consecutive interior.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "$\\widehat{B_1}$"
+          },
+          {
+            "id": "B",
+            "text": "$\\widehat{B_2}$"
+          },
+          {
+            "id": "C",
+            "text": "$\\widehat{B_3}$"
+          },
+          {
+            "id": "D",
+            "text": "$\\widehat{B_4}$"
+          }
+        ],
+        "correct_option_id": "D"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "D",
+        "explanation_markdown": "Both $\\widehat{A_4}$ and $\\widehat{B_4}$ are in the Bottom-Left position of their respective vertices, so $\\widehat{B_4}$ is corresponding to $\\widehat{A_4}$."
+      }
+    },
+    {
+      "order_index": 6,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q6",
+        "sectionName": "Sector 2: Venus Base • Linear Pairs & Opposite Angles",
+        "content_markdown": "Look at $\\widehat{B_3}$ (Bottom-Right at vertex $B$). Which angle at vertex $A$ is the **corresponding angle** to $\\widehat{B_3}$?",
+        "diagram_url": "/images/geometry/parallel_0311_q6.svg",
+        "diagram_alt": "Visual geometry schematic for Question 6: Sector 2: Venus Base • Linear Pairs & Opposite Angles",
+        "method_markdown": "Adjacent angles on a straight line form a linear pair (sum = 180°). Vertically opposite angles across an X-intersection are always equal.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "$\\widehat{A_1}$"
+          },
+          {
+            "id": "B",
+            "text": "$\\widehat{A_2}$"
+          },
+          {
+            "id": "C",
+            "text": "$\\widehat{A_3}$"
+          },
+          {
+            "id": "D",
+            "text": "$\\widehat{A_4}$"
+          }
+        ],
+        "correct_option_id": "C"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "C",
+        "explanation_markdown": "$\\widehat{A_3}$ is in the Bottom-Right position at vertex $A$, matching $\\widehat{B_3}$ at vertex $B$."
+      }
+    },
+    {
+      "order_index": 7,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q7",
+        "sectionName": "Sector 2: Venus Base • Linear Pairs & Opposite Angles",
+        "content_markdown": "At vertex $A$, angles $\\widehat{A_2}$ (Top-Right) and $\\widehat{A_4}$ (Bottom-Left) sit across from each other in an **\"X\"** shape. What is always true about them?",
+        "diagram_url": "/images/geometry/parallel_0311_q7.svg",
+        "diagram_alt": "Visual geometry schematic for Question 7: Sector 2: Venus Base • Linear Pairs & Opposite Angles",
+        "method_markdown": "Adjacent angles on a straight line form a linear pair (sum = 180°). Vertically opposite angles across an X-intersection are always equal.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "They are vertically opposite angles and $\\widehat{A_2} = \\widehat{A_4}$."
+          },
+          {
+            "id": "B",
+            "text": "They are alternate interior angles."
+          },
+          {
+            "id": "C",
+            "text": "They are corresponding angles."
+          },
+          {
+            "id": "D",
+            "text": "Their sum is always $90^\\circ$."
+          }
+        ],
+        "correct_option_id": "A"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "A",
+        "explanation_markdown": "$\\widehat{A_2}$ and $\\widehat{A_4}$ are **vertically opposite angles** , and vertically opposite angles are always equal!"
+      }
+    },
+    {
+      "order_index": 8,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q8",
+        "sectionName": "Sector 2: Venus Base • Linear Pairs & Opposite Angles",
+        "content_markdown": "At vertex $B$, angles $\\widehat{B_1}$ (Top-Left) and $\\widehat{B_2}$ (Top-Right) sit side-by-side on straight line $b$. What is the sum of $\\widehat{B_1} + \\widehat{B_2}$?",
+        "diagram_url": "/images/geometry/parallel_0311_q8.svg",
+        "diagram_alt": "Visual geometry schematic for Question 8: Sector 2: Venus Base • Linear Pairs & Opposite Angles",
+        "method_markdown": "Adjacent angles on a straight line form a linear pair (sum = 180°). Vertically opposite angles across an X-intersection are always equal.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "$90^\\circ$"
+          },
+          {
+            "id": "B",
+            "text": "$180^\\circ$"
+          },
+          {
+            "id": "C",
+            "text": "$360^\\circ$"
+          },
+          {
+            "id": "D",
+            "text": "$100^\\circ$"
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "A straight line measures $180^\\circ$, so any linear pair adds up to $\\widehat{B_1} + \\widehat{B_2} = 180^\\circ$."
+      }
+    },
+    {
+      "order_index": 9,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q9",
+        "sectionName": "Sector 2: Venus Base • Linear Pairs & Opposite Angles",
+        "content_markdown": "When transversal line $c$ intersects two lines $a$ and $b$, how many pairs of **alternate interior angles** and how many pairs of **corresponding angles** are formed in total?",
+        "diagram_url": "/images/geometry/parallel_0311_q9.svg",
+        "diagram_alt": "Visual geometry schematic for Question 9: Sector 2: Venus Base • Linear Pairs & Opposite Angles",
+        "method_markdown": "Adjacent angles on a straight line form a linear pair (sum = 180°). Vertically opposite angles across an X-intersection are always equal.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "$2$ alternate interior pairs and $2$ corresponding pairs"
+          },
+          {
+            "id": "B",
+            "text": "$2$ alternate interior pairs and $4$ corresponding pairs"
+          },
+          {
+            "id": "C",
+            "text": "$4$ alternate interior pairs and $2$ corresponding pairs"
+          },
+          {
+            "id": "D",
+            "text": "$4$ alternate interior pairs and $4$ corresponding pairs"
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "There are **2 pairs** of alternate interior angles ($(\\widehat{A_3}, \\widehat{B_1})$ and $(\\widehat{A_4}, \\widehat{B_2})$) and **4 pairs** of corresponding angles ($(\\widehat{A_1}, \\widehat{B_1})$, $(\\widehat{A_2}, \\widehat{B_2})$, $(\\widehat{A_3}, \\widehat{B_3})$, $(\\widehat{A_4}, \\widehat{B_4})$)."
+      }
+    },
+    {
+      "order_index": 10,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q10",
+        "sectionName": "Sector 2: Venus Base • Linear Pairs & Opposite Angles",
+        "content_markdown": "Look at $\\triangle ABC$ with line $xy$ passing through vertex $A$. Along transversal line $AB$, what kind of angle pair are $\\widehat{xAB}$ and $\\widehat{ABC}$?",
+        "diagram_url": "/images/geometry/parallel_0311_q10.svg",
+        "diagram_alt": "Visual geometry schematic for Question 10: Sector 2: Venus Base • Linear Pairs & Opposite Angles",
+        "method_markdown": "Adjacent angles on a straight line form a linear pair (sum = 180°). Vertically opposite angles across an X-intersection are always equal.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Corresponding angles"
+          },
+          {
+            "id": "B",
+            "text": "Alternate interior angles"
+          },
+          {
+            "id": "C",
+            "text": "Vertically opposite angles"
+          },
+          {
+            "id": "D",
+            "text": "Linear pair"
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "Tracing $x \\rightarrow A \\rightarrow B \\rightarrow C$ forms a **\"Z\"** shape! Thus, $\\widehat{xAB}$ and $\\widehat{ABC}$ are **alternate interior angles** . ## PART 2: DIRECT SIGNS OF PARALLEL LINES (QUESTIONS 11–20) **"
+      }
+    },
+    {
+      "order_index": 11,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q11",
+        "sectionName": "Sector 3: Earth Mission Control • Parallel Recognition Direct Tests",
+        "content_markdown": "Look at the diagram where $\\widehat{A_3} = 60^\\circ$ and $\\widehat{B_1} = 60^\\circ$. Why can we conclude that $a \\parallel b$?",
+        "diagram_url": "/images/geometry/parallel_0311_q11.svg",
+        "diagram_alt": "Visual geometry schematic for Question 11: Sector 3: Earth Mission Control • Parallel Recognition Direct Tests",
+        "method_markdown": "Apply direct parallel tests: equal alternate interior angles or equal corresponding angles prove that the two lines are parallel.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Because they are equal corresponding angles ($60^\\circ = 60^\\circ$)."
+          },
+          {
+            "id": "B",
+            "text": "Because they are equal alternate interior angles ($60^\\circ = 60^\\circ$)."
+          },
+          {
+            "id": "C",
+            "text": "Because they are vertically opposite angles."
+          },
+          {
+            "id": "D",
+            "text": "Because $60^\\circ + 60^\\circ = 120^\\circ$."
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "$\\widehat{A_3}$ and $\\widehat{B_1}$ are **alternate interior angles** and both equal $60^\\circ$, so $a \\parallel b$."
+      }
+    },
+    {
+      "order_index": 12,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q12",
+        "sectionName": "Sector 3: Earth Mission Control • Parallel Recognition Direct Tests",
+        "content_markdown": "In the diagram, $\\widehat{A_1} = 115^\\circ$ and $\\widehat{B_1} = 115^\\circ$. Why is line $a$ parallel to line $b$ ($a \\parallel b$)?",
+        "diagram_url": "/images/geometry/parallel_0311_q12.svg",
+        "diagram_alt": "Visual geometry schematic for Question 12: Sector 3: Earth Mission Control • Parallel Recognition Direct Tests",
+        "method_markdown": "Apply direct parallel tests: equal alternate interior angles or equal corresponding angles prove that the two lines are parallel.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Because a pair of corresponding angles are equal."
+          },
+          {
+            "id": "B",
+            "text": "Because a pair of alternate interior angles are equal."
+          },
+          {
+            "id": "C",
+            "text": "Because a pair of consecutive interior angles are equal."
+          },
+          {
+            "id": "D",
+            "text": "Because $a$ and $b$ are perpendicular to $c$."
+          }
+        ],
+        "correct_option_id": "A"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "A",
+        "explanation_markdown": "$\\widehat{A_1}$ and $\\widehat{B_1}$ are **corresponding angles** and they are equal ($115^\\circ = 115^\\circ$), so $a \\parallel b$."
+      }
+    },
+    {
+      "order_index": 13,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q13",
+        "sectionName": "Sector 3: Earth Mission Control • Parallel Recognition Direct Tests",
+        "content_markdown": "Look at the diagram where alternate interior angles are $\\widehat{A_4} = 70^\\circ$ and $\\widehat{B_2} = 65^\\circ$. Are lines $a$ and $b$ parallel?",
+        "diagram_url": "/images/geometry/parallel_0311_q13.svg",
+        "diagram_alt": "Visual geometry schematic for Question 13: Sector 3: Earth Mission Control • Parallel Recognition Direct Tests",
+        "method_markdown": "Apply direct parallel tests: equal alternate interior angles or equal corresponding angles prove that the two lines are parallel.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Yes, because both angles are acute ($< 90^\\circ$)."
+          },
+          {
+            "id": "B",
+            "text": "No, because the alternate interior angles are not equal ($70^\\circ \\neq 65^\\circ$)."
+          },
+          {
+            "id": "C",
+            "text": "Yes, because they form a Z shape."
+          },
+          {
+            "id": "D",
+            "text": "Only if line $c$ is vertical."
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "For two lines to be parallel, alternate interior angles must be **strictly equal**. Since $70^\\circ \\neq 65^\\circ$, lines $a$ and $b$ are **not parallel** (they will intersect)."
+      }
+    },
+    {
+      "order_index": 14,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q14",
+        "sectionName": "Sector 3: Earth Mission Control • Parallel Recognition Direct Tests",
+        "content_markdown": "In the diagram, what must the measure of $\\widehat{B_2}$ be so that line $a$ is parallel to line $b$ ($a \\parallel b$)?",
+        "diagram_url": "/images/geometry/parallel_0311_q14.svg",
+        "diagram_alt": "Visual geometry schematic for Question 14: Sector 3: Earth Mission Control • Parallel Recognition Direct Tests",
+        "method_markdown": "Apply direct parallel tests: equal alternate interior angles or equal corresponding angles prove that the two lines are parallel.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "$52^\\circ$"
+          },
+          {
+            "id": "B",
+            "text": "$128^\\circ$"
+          },
+          {
+            "id": "C",
+            "text": "$64^\\circ$"
+          },
+          {
+            "id": "D",
+            "text": "$90^\\circ$"
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "To make $a \\parallel b$, the alternate interior angles $\\widehat{A_4}$ and $\\widehat{B_2}$ must be equal, so $\\widehat{B_2} = \\widehat{A_4} = 128^\\circ$."
+      }
+    },
+    {
+      "order_index": 15,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q15",
+        "sectionName": "Sector 3: Earth Mission Control • Parallel Recognition Direct Tests",
+        "content_markdown": "In the diagram, $\\widehat{B_3} = 54^\\circ$. What must the measure of $\\widehat{A_3}$ be to guarantee that $a \\parallel b$?",
+        "diagram_url": "/images/geometry/parallel_0311_q15.svg",
+        "diagram_alt": "Visual geometry schematic for Question 15: Sector 3: Earth Mission Control • Parallel Recognition Direct Tests",
+        "method_markdown": "Apply direct parallel tests: equal alternate interior angles or equal corresponding angles prove that the two lines are parallel.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "$126^\\circ$"
+          },
+          {
+            "id": "B",
+            "text": "$36^\\circ$"
+          },
+          {
+            "id": "C",
+            "text": "$54^\\circ$"
+          },
+          {
+            "id": "D",
+            "text": "$108^\\circ$"
+          }
+        ],
+        "correct_option_id": "C"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "C",
+        "explanation_markdown": "$\\widehat{A_3}$ and $\\widehat{B_3}$ are corresponding angles . For $a \\parallel b$, we need $\\widehat{A_3} = \\widehat{B_3} = 54^\\circ$."
+      }
+    },
+    {
+      "order_index": 16,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q16",
+        "sectionName": "Sector 4: Mars Outpost • Transversals & Non-Parallel Detection",
+        "content_markdown": "Look at the consecutive interior angles $\\widehat{A_3} = 75^\\circ$ and $\\widehat{B_2} = 105^\\circ$. Are lines $a$ and $b$ parallel?",
+        "diagram_url": "/images/geometry/parallel_0311_q16.svg",
+        "diagram_alt": "Visual geometry schematic for Question 16: Sector 4: Mars Outpost • Transversals & Non-Parallel Detection",
+        "method_markdown": "For parallel lines, consecutive interior angles must sum to 180°. If alternate interior or corresponding angles are unequal, the lines are not parallel.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "No, because $75^\\circ \\neq 105^\\circ$."
+          },
+          {
+            "id": "B",
+            "text": "Yes, because $\\widehat{A_3} + \\widehat{B_2} = 75^\\circ + 105^\\circ = 180^\\circ$."
+          },
+          {
+            "id": "C",
+            "text": "No, because their sum is not $90^\\circ$."
+          },
+          {
+            "id": "D",
+            "text": "Cannot be determined."
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "When two consecutive interior angles add up to $180^\\circ$ ($75^\\circ + 105^\\circ = 180^\\circ$), the two lines are parallel ($a \\parallel b$)!"
+      }
+    },
+    {
+      "order_index": 17,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q17",
+        "sectionName": "Sector 4: Mars Outpost • Transversals & Non-Parallel Detection",
+        "content_markdown": "In the diagram, $\\widehat{A_4} = 112^\\circ$. Since $\\widehat{A_4}$ and $\\widehat{B_1}$ are consecutive interior angles (\"U\" shape), what must $\\widehat{B_1}$ equal so that $a \\parallel b$?",
+        "diagram_url": "/images/geometry/parallel_0311_q17.svg",
+        "diagram_alt": "Visual geometry schematic for Question 17: Sector 4: Mars Outpost • Transversals & Non-Parallel Detection",
+        "method_markdown": "For parallel lines, consecutive interior angles must sum to 180°. If alternate interior or corresponding angles are unequal, the lines are not parallel.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "$112^\\circ$"
+          },
+          {
+            "id": "B",
+            "text": "$68^\\circ$"
+          },
+          {
+            "id": "C",
+            "text": "$78^\\circ$"
+          },
+          {
+            "id": "D",
+            "text": "$88^\\circ$"
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "For $a \\parallel b$, consecutive interior angles must sum to $180^\\circ$: $\\widehat{B_1} = 180^\\circ - 112^\\circ = 68^\\circ$."
+      }
+    },
+    {
+      "order_index": 18,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q18",
+        "sectionName": "Sector 4: Mars Outpost • Transversals & Non-Parallel Detection",
+        "content_markdown": "Look at the diagram where transversal $t$ cuts three lines $x, y, z$ at $D, E, F$. The Top-Left corresponding angles are $\\widehat{D_1} = 65^\\circ$, $\\widehat{E_1} = 70^\\circ$, and $\\widehat{F_1} = 65^\\circ$. Which two lines are parallel?",
+        "diagram_url": "/images/geometry/parallel_0311_q18.svg",
+        "diagram_alt": "Visual geometry schematic for Question 18: Sector 4: Mars Outpost • Transversals & Non-Parallel Detection",
+        "method_markdown": "For parallel lines, consecutive interior angles must sum to 180°. If alternate interior or corresponding angles are unequal, the lines are not parallel.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "$x \\parallel y$"
+          },
+          {
+            "id": "B",
+            "text": "$y \\parallel z$"
+          },
+          {
+            "id": "C",
+            "text": "$x \\parallel z$"
+          },
+          {
+            "id": "D",
+            "text": "All three lines are parallel ($x \\parallel y \\parallel z$)"
+          }
+        ],
+        "correct_option_id": "C"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "C",
+        "explanation_markdown": "Since $\\widehat{D_1} = \\widehat{F_1} = 65^\\circ$ and they are corresponding angles, line $x$ is parallel to line $z$ ($x \\parallel z$). Line $y$ ($70^\\circ$) is not parallel to them."
+      }
+    },
+    {
+      "order_index": 19,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q19",
+        "sectionName": "Sector 4: Mars Outpost • Transversals & Non-Parallel Detection",
+        "content_markdown": "Transversal $t$ cuts three lines $x, y, z$ at $D, E, F$. Given that $\\widehat{D_3} = 55^\\circ$ (Bottom-Right at $D$), $\\widehat{E_1} = 55^\\circ$ (Top-Left at $E$), and $\\widehat{F_3} = 55^\\circ$ (Bottom-Right at $F$). Which statement is true?",
+        "diagram_url": "/images/geometry/parallel_0311_q19.svg",
+        "diagram_alt": "Visual geometry schematic for Question 19: Sector 4: Mars Outpost • Transversals & Non-Parallel Detection",
+        "method_markdown": "For parallel lines, consecutive interior angles must sum to 180°. If alternate interior or corresponding angles are unequal, the lines are not parallel.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Only $x \\parallel y$"
+          },
+          {
+            "id": "B",
+            "text": "Only $x \\parallel z$"
+          },
+          {
+            "id": "C",
+            "text": "Only $y \\parallel z$"
+          },
+          {
+            "id": "D",
+            "text": "All three lines are parallel: $x \\parallel y \\parallel z$"
+          }
+        ],
+        "correct_option_id": "D"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "D",
+        "explanation_markdown": "> * $\\widehat{D_3} = \\widehat{E_1} = 55^\\circ$ (alternate interior) $\\implies x \\parallel y$. > * $\\widehat{D_3} = \\widehat{F_3} = 55^\\circ$ (corresponding) $\\implies x \\parallel z$. > * Therefore, all three lines are parallel ($x \\parallel y \\parallel z$)!"
+      }
+    },
+    {
+      "order_index": 20,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q20",
+        "sectionName": "Sector 4: Mars Outpost • Transversals & Non-Parallel Detection",
+        "content_markdown": "In $\\triangle ABC$, line $xy$ passes through vertex $A$. Given that $\\widehat{yAC} = 62^\\circ$ and $\\widehat{C} = 62^\\circ$. Which two lines are parallel?",
+        "diagram_url": "/images/geometry/parallel_0311_q20.svg",
+        "diagram_alt": "Visual geometry schematic for Question 20: Sector 4: Mars Outpost • Transversals & Non-Parallel Detection",
+        "method_markdown": "For parallel lines, consecutive interior angles must sum to 180°. If alternate interior or corresponding angles are unequal, the lines are not parallel.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "$xy \\parallel AB$"
+          },
+          {
+            "id": "B",
+            "text": "$xy \\parallel BC$"
+          },
+          {
+            "id": "C",
+            "text": "$AB \\parallel AC$"
+          },
+          {
+            "id": "D",
+            "text": "$AC \\parallel BC$"
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "With transversal $AC$, $\\widehat{yAC}$ and $\\widehat{C}$ are alternate interior angles and both equal $62^\\circ$, so $xy \\parallel BC$. ## PART 3: TWO-STEP ANGLE DETECTIVE (QUESTIONS 21–30) **"
+      }
+    },
+    {
+      "order_index": 21,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q21",
+        "sectionName": "Sector 5: Jupiter Station • Two-Step Angle Detective & Hidden Bridges",
+        "content_markdown": "Look at the diagram where $\\widehat{A_1} = 120^\\circ$ (Top-Left) and $\\widehat{B_3} = 120^\\circ$ (Bottom-Right). To prove $a \\parallel b$, Keithley first finds $\\widehat{A_3}$ (Bottom-Right) using vertically opposite angles. What is $\\widehat{A_3}$, and what angle pair are $\\widehat{A_3}$ and $\\widehat{B_3}$?",
+        "diagram_url": "/images/geometry/parallel_0311_q21.svg",
+        "diagram_alt": "Visual geometry schematic for Question 21: Sector 5: Jupiter Station • Two-Step Angle Detective & Hidden Bridges",
+        "method_markdown": "Find the bridge angle first using linear pairs (180° - known) or vertical angles, then compare across the transversal to test for parallelism.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "$\\widehat{A_3} = 60^\\circ$, alternate interior angles"
+          },
+          {
+            "id": "B",
+            "text": "$\\widehat{A_3} = 120^\\circ$, corresponding angles"
+          },
+          {
+            "id": "C",
+            "text": "$\\widehat{A_3} = 120^\\circ$, consecutive interior angles"
+          },
+          {
+            "id": "D",
+            "text": "$\\widehat{A_3} = 60^\\circ$, corresponding angles"
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "Since $\\widehat{A_1}$ and $\\widehat{A_3}$ are vertically opposite, $\\widehat{A_3} = 120^\\circ$. Then $\\widehat{A_3} = \\widehat{B_3} = 120^\\circ$ in **corresponding** positions, proving $a \\parallel b$."
+      }
+    },
+    {
+      "order_index": 22,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q22",
+        "sectionName": "Sector 5: Jupiter Station • Two-Step Angle Detective & Hidden Bridges",
+        "content_markdown": "In the diagram, $\\widehat{A_1} = 115^\\circ$ (Top-Left) and $\\widehat{B_2} = 65^\\circ$ (Top-Right). Are lines $a$ and $b$ parallel?",
+        "diagram_url": "/images/geometry/parallel_0311_q22.svg",
+        "diagram_alt": "Visual geometry schematic for Question 22: Sector 5: Jupiter Station • Two-Step Angle Detective & Hidden Bridges",
+        "method_markdown": "Find the bridge angle first using linear pairs (180° - known) or vertical angles, then compare across the transversal to test for parallelism.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "No, because $115^\\circ \\neq 65^\\circ$."
+          },
+          {
+            "id": "B",
+            "text": "Yes, because $\\widehat{A_2} = 180^\\circ - 115^\\circ = 65^\\circ$, which equals the corresponding angle $\\widehat{B_2} = 65^\\circ$."
+          },
+          {
+            "id": "C",
+            "text": "No, because $115^\\circ + 65^\\circ = 180^\\circ$ only works for interior angles."
+          },
+          {
+            "id": "D",
+            "text": "Cannot be determined."
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "Since $\\widehat{A_1}$ and $\\widehat{A_2}$ form a linear pair , $\\widehat{A_2} = 180^\\circ - 115^\\circ = 65^\\circ$. Then $\\widehat{A_2} = \\widehat{B_2} = 65^\\circ$ (equal corresponding angles), so $a \\parallel b$!"
+      }
+    },
+    {
+      "order_index": 23,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q23",
+        "sectionName": "Sector 5: Jupiter Station • Two-Step Angle Detective & Hidden Bridges",
+        "content_markdown": "Given $\\widehat{A_2} = 50^\\circ$ (Top-Right) and $\\widehat{B_1} = 50^\\circ$ (Top-Left). Are lines $a$ and $b$ parallel?",
+        "diagram_url": "/images/geometry/parallel_0311_q23.svg",
+        "diagram_alt": "Visual geometry schematic for Question 23: Sector 5: Jupiter Station • Two-Step Angle Detective & Hidden Bridges",
+        "method_markdown": "Find the bridge angle first using linear pairs (180° - known) or vertical angles, then compare across the transversal to test for parallelism.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Yes, because both equal $50^\\circ$."
+          },
+          {
+            "id": "B",
+            "text": "No! Because $\\widehat{A_1} = 180^\\circ - 50^\\circ = 130^\\circ$, which is not equal to its corresponding angle $\\widehat{B_1} = 50^\\circ$."
+          },
+          {
+            "id": "C",
+            "text": "Yes, because they are alternate interior angles."
+          },
+          {
+            "id": "D",
+            "text": "Yes, because they are corresponding angles."
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "$\\widehat{A_1}$ and $\\widehat{A_2}$ are a linear pair, so $\\widehat{A_1} = 180^\\circ - 50^\\circ = 130^\\circ$. Comparing corresponding angles $\\widehat{A_1}$ ($130^\\circ$) and $\\widehat{B_1}$ ($50^\\circ$), since $130^\\circ \\neq 50^\\circ$, lines $a$ and $b$ are **NOT parallel**!"
+      }
+    },
+    {
+      "order_index": 24,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q24",
+        "sectionName": "Sector 5: Jupiter Station • Two-Step Angle Detective & Hidden Bridges",
+        "content_markdown": "In the diagram, $\\widehat{A_2} = 70^\\circ$ (Top-Right) and $\\widehat{B_3} = 110^\\circ$ (Bottom-Right). Let's check if $a \\parallel b$ by finding $\\widehat{B_2}$ (Top-Right). What is $\\widehat{B_2}$, and are the lines parallel?",
+        "diagram_url": "/images/geometry/parallel_0311_q24.svg",
+        "diagram_alt": "Visual geometry schematic for Question 24: Sector 5: Jupiter Station • Two-Step Angle Detective & Hidden Bridges",
+        "method_markdown": "Find the bridge angle first using linear pairs (180° - known) or vertical angles, then compare across the transversal to test for parallelism.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "$\\widehat{B_2} = 70^\\circ$, so $a \\parallel b$ (equal corresponding angles $\\widehat{A_2} = \\widehat{B_2}$)."
+          },
+          {
+            "id": "B",
+            "text": "$\\widehat{B_2} = 110^\\circ$, so $a$ is not parallel to $b$."
+          },
+          {
+            "id": "C",
+            "text": "$\\widehat{B_2} = 20^\\circ$, so $a$ is not parallel to $b$."
+          },
+          {
+            "id": "D",
+            "text": "$\\widehat{B_2} = 70^\\circ$, but the lines are not parallel."
+          }
+        ],
+        "correct_option_id": "A"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "A",
+        "explanation_markdown": "Since $\\widehat{B_2}$ and $\\widehat{B_3}$ form a linear pair along line $c$, $\\widehat{B_2} = 180^\\circ - 110^\\circ = 70^\\circ$. Then $\\widehat{A_2} = \\widehat{B_2} = 70^\\circ$ (equal corresponding angles), which proves $a \\parallel b$!"
+      }
+    },
+    {
+      "order_index": 25,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q25",
+        "sectionName": "Sector 5: Jupiter Station • Two-Step Angle Detective & Hidden Bridges",
+        "content_markdown": "Suppose we already know that $a \\parallel b$ needs to be true, and $\\widehat{A_1} = 135^\\circ$ (Top-Left). What must the measure of $\\widehat{B_2}$ (Top-Right) be?",
+        "diagram_url": "/images/geometry/parallel_0311_q25.svg",
+        "diagram_alt": "Visual geometry schematic for Question 25: Sector 5: Jupiter Station • Two-Step Angle Detective & Hidden Bridges",
+        "method_markdown": "Find the bridge angle first using linear pairs (180° - known) or vertical angles, then compare across the transversal to test for parallelism.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "$135^\\circ$"
+          },
+          {
+            "id": "B",
+            "text": "$45^\\circ$"
+          },
+          {
+            "id": "C",
+            "text": "$55^\\circ$"
+          },
+          {
+            "id": "D",
+            "text": "$65^\\circ$"
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "At vertex $A$, $\\widehat{A_2} = 180^\\circ - \\widehat{A_1} = 180^\\circ - 135^\\circ = 45^\\circ$. For $a \\parallel b$, the corresponding angle $\\widehat{B_2}$ must equal $\\widehat{A_2} = 45^\\circ$."
+      }
+    },
+    {
+      "order_index": 26,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q26",
+        "sectionName": "Sector 5: Jupiter Station • Two-Step Angle Detective & Hidden Bridges",
+        "content_markdown": "In the diagram, $\\widehat{A_2} = 63^\\circ$ (Top-Right) and $\\widehat{B_4} = 63^\\circ$ (Bottom-Left). Why is $a \\parallel b$?",
+        "diagram_url": "/images/geometry/parallel_0311_q26.svg",
+        "diagram_alt": "Visual geometry schematic for Question 26: Sector 5: Jupiter Station • Two-Step Angle Detective & Hidden Bridges",
+        "method_markdown": "Find the bridge angle first using linear pairs (180° - known) or vertical angles, then compare across the transversal to test for parallelism.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Because $\\widehat{A_4} = \\widehat{A_2} = 63^\\circ$ (vertical angles), and then $\\widehat{A_4} = \\widehat{B_4} = 63^\\circ$ (corresponding angles)."
+          },
+          {
+            "id": "B",
+            "text": "Because $\\widehat{A_2}$ and $\\widehat{B_4}$ are consecutive interior angles."
+          },
+          {
+            "id": "C",
+            "text": "Because $63^\\circ + 63^\\circ = 180^\\circ$."
+          },
+          {
+            "id": "D",
+            "text": "They are not parallel."
+          }
+        ],
+        "correct_option_id": "A"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "A",
+        "explanation_markdown": "Since $\\widehat{A_2}$ and $\\widehat{A_4}$ are vertically opposite, $\\widehat{A_4} = 63^\\circ$. Then $\\widehat{A_4}$ (Bottom-Left) and $\\widehat{B_4}$ (Bottom-Left) are equal corresponding angles, so $a \\parallel b$."
+      }
+    },
+    {
+      "order_index": 27,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q27",
+        "sectionName": "Sector 6: Saturn Rings • Multi-Line Transits & Three-Line Theorems",
+        "content_markdown": "Look at the diagram where exterior angles on the left side of line $c$ are $\\widehat{A_1} = 108^\\circ$ (Top-Left) and $\\widehat{B_4} = 72^\\circ$ (Bottom-Left). Are lines $a$ and $b$ parallel?",
+        "diagram_url": "/images/geometry/parallel_0311_q27.svg",
+        "diagram_alt": "Visual geometry schematic for Question 27: Sector 6: Saturn Rings • Multi-Line Transits & Three-Line Theorems",
+        "method_markdown": "When three lines are intersected by one transversal, compare pairs of lines individually. If a ∥ b and b ∥ c, then a ∥ c.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "No, because $108^\\circ \\neq 72^\\circ$."
+          },
+          {
+            "id": "B",
+            "text": "Yes! Because $\\widehat{A_4} = 180^\\circ - 108^\\circ = 72^\\circ$, which equals its corresponding angle $\\widehat{B_4} = 72^\\circ$."
+          },
+          {
+            "id": "C",
+            "text": "No, because both angles are on the outside."
+          },
+          {
+            "id": "D",
+            "text": "Only if $\\widehat{A_1} = 90^\\circ$."
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "$\\widehat{A_4} = 180^\\circ - 108^\\circ = 72^\\circ$. Since $\\widehat{A_4} = \\widehat{B_4} = 72^\\circ$ and both are in the Bottom-Left corresponding position, $a \\parallel b$!"
+      }
+    },
+    {
+      "order_index": 28,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q28",
+        "sectionName": "Sector 6: Saturn Rings • Multi-Line Transits & Three-Line Theorems",
+        "content_markdown": "In $\\triangle ABC$, line $xy$ passes through $A$. Given $\\widehat{xAB} = 45^\\circ$, $\\widehat{B} = 45^\\circ$, and $\\widehat{C} = 65^\\circ$. Since $\\widehat{xAB} = \\widehat{B} = 45^\\circ$, we know $xy \\parallel BC$. What is the measure of angle $\\widehat{BAC}$ inside the triangle if $\\widehat{yAC} = 65^\\circ$?",
+        "diagram_url": "/images/geometry/parallel_0311_q28.svg",
+        "diagram_alt": "Visual geometry schematic for Question 28: Sector 6: Saturn Rings • Multi-Line Transits & Three-Line Theorems",
+        "method_markdown": "When three lines are intersected by one transversal, compare pairs of lines individually. If a ∥ b and b ∥ c, then a ∥ c.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "$70^\\circ$"
+          },
+          {
+            "id": "B",
+            "text": "$60^\\circ$"
+          },
+          {
+            "id": "C",
+            "text": "$80^\\circ$"
+          },
+          {
+            "id": "D",
+            "text": "$50^\\circ$"
+          }
+        ],
+        "correct_option_id": "A"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "A",
+        "explanation_markdown": "Since line $xy$ is a straight angle ($180^\\circ$), we have: > $$\\widehat{xAB} + \\widehat{BAC} + \\widehat{yAC} = 180^\\circ \\implies \\widehat{BAC} = 180^\\circ - 45^\\circ - 65^\\circ = 70^\\circ$$"
+      }
+    },
+    {
+      "order_index": 29,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q29",
+        "sectionName": "Sector 6: Saturn Rings • Multi-Line Transits & Three-Line Theorems",
+        "content_markdown": "Transversal $t$ intersects three lines $x, y, z$ at $D, E, F$. Given $\\widehat{D_1} = 110^\\circ$ (Top-Left at $D$), $\\widehat{E_4} = 70^\\circ$ (Bottom-Left at $E$), and $\\widehat{F_3} = 110^\\circ$ (Bottom-Right at $F$). Which lines are parallel?",
+        "diagram_url": "/images/geometry/parallel_0311_q29.svg",
+        "diagram_alt": "Visual geometry schematic for Question 29: Sector 6: Saturn Rings • Multi-Line Transits & Three-Line Theorems",
+        "method_markdown": "When three lines are intersected by one transversal, compare pairs of lines individually. If a ∥ b and b ∥ c, then a ∥ c.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Only $x \\parallel y$"
+          },
+          {
+            "id": "B",
+            "text": "Only $x \\parallel z$"
+          },
+          {
+            "id": "C",
+            "text": "All three lines are parallel: $x \\parallel y \\parallel z$"
+          },
+          {
+            "id": "D",
+            "text": "None of the lines are parallel"
+          }
+        ],
+        "correct_option_id": "C"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "C",
+        "explanation_markdown": "> * At $D$: $\\widehat{D_1} = 110^\\circ$. > * At $E$: $\\widehat{E_1}$ and $\\widehat{E_4}$ are a linear pair, so $\\widehat{E_1} = 180^\\circ - 70^\\circ = 110^\\circ$. > * At $F$: $\\widehat{F_1}$ and $\\widehat{F_3}$ are vertically opposite, so $\\widehat{F_1} = \\widehat{F_3} = 110^\\circ$. > * Since $\\widehat{D_1} = \\widehat{E_1} = \\widehat{F_1} = 110^\\circ$ (all corresponding), we have $x \\parallel y \\parallel z$!"
+      }
+    },
+    {
+      "order_index": 30,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q30",
+        "sectionName": "Sector 6: Saturn Rings • Multi-Line Transits & Three-Line Theorems",
+        "content_markdown": "At vertex $A$, the sum of the two vertically opposite angles $\\widehat{A_1} + \\widehat{A_3} = 100^\\circ$. At vertex $B$, $\\widehat{B_1} = 50^\\circ$. Are lines $a$ and $b$ parallel?",
+        "diagram_url": "/images/geometry/parallel_0311_q30.svg",
+        "diagram_alt": "Visual geometry schematic for Question 30: Sector 6: Saturn Rings • Multi-Line Transits & Three-Line Theorems",
+        "method_markdown": "When three lines are intersected by one transversal, compare pairs of lines individually. If a ∥ b and b ∥ c, then a ∥ c.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "No, because $100^\\circ \\neq 50^\\circ$."
+          },
+          {
+            "id": "B",
+            "text": "Yes! Because $\\widehat{A_1} = \\widehat{A_3} = 100^\\circ \\div 2 = 50^\\circ$, which equals $\\widehat{B_1} = 50^\\circ$."
+          },
+          {
+            "id": "C",
+            "text": "No, because $\\widehat{A_1}$ and $\\widehat{A_3}$ must add up to $180^\\circ$."
+          },
+          {
+            "id": "D",
+            "text": "Cannot be determined."
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "Since $\\widehat{A_1} = \\widehat{A_3}$ and $\\widehat{A_1} + \\widehat{A_3} = 100^\\circ$, each angle is $100^\\circ \\div 2 = 50^\\circ$. Then $\\widehat{A_1} = \\widehat{B_1} = 50^\\circ$ (corresponding), so $a \\parallel b$! ## PART 4: ALGEBRAIC EQUATIONS ($x$) & PERPENDICULARITY (QUESTIONS 31–40) **"
+      }
+    },
+    {
+      "order_index": 31,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q31",
+        "sectionName": "Sector 7: Uranus Deep Space • Algebraic Equations & Parallel Solvers",
+        "content_markdown": "In the diagram, $\\widehat{A_4} = 2x^\\circ$ and $\\widehat{B_2} = 76^\\circ$ are alternate interior angles. Find $x$ so that $a \\parallel b$.",
+        "diagram_url": "/images/geometry/parallel_0311_q31.svg",
+        "diagram_alt": "Visual geometry schematic for Question 31: Sector 7: Uranus Deep Space • Algebraic Equations & Parallel Solvers",
+        "method_markdown": "Set up the algebraic equation: equate expressions for equal angle pairs (alternate interior / corresponding), or set sum to 180° for linear pairs / consecutive interior.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "$x = 76$"
+          },
+          {
+            "id": "B",
+            "text": "$x = 38$"
+          },
+          {
+            "id": "C",
+            "text": "$x = 42$"
+          },
+          {
+            "id": "D",
+            "text": "$x = 52$"
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "For $a \\parallel b$, alternate interior angles must be equal: $2x = 76 \\implies x = 76 \\div 2 = 38$."
+      }
+    },
+    {
+      "order_index": 32,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q32",
+        "sectionName": "Sector 7: Uranus Deep Space • Algebraic Equations & Parallel Solvers",
+        "content_markdown": "In the diagram, $\\widehat{A_1} = (x + 25)^\\circ$ and $\\widehat{B_1} = 110^\\circ$ are corresponding angles. Find $x$ so that $a \\parallel b$.",
+        "diagram_url": "/images/geometry/parallel_0311_q32.svg",
+        "diagram_alt": "Visual geometry schematic for Question 32: Sector 7: Uranus Deep Space • Algebraic Equations & Parallel Solvers",
+        "method_markdown": "Set up the algebraic equation: equate expressions for equal angle pairs (alternate interior / corresponding), or set sum to 180° for linear pairs / consecutive interior.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "$x = 85$"
+          },
+          {
+            "id": "B",
+            "text": "$x = 95$"
+          },
+          {
+            "id": "C",
+            "text": "$x = 135$"
+          },
+          {
+            "id": "D",
+            "text": "$x = 75$"
+          }
+        ],
+        "correct_option_id": "A"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "A",
+        "explanation_markdown": "For $a \\parallel b$, corresponding angles must be equal: $x + 25 = 110 \\implies x = 110 - 25 = 85$."
+      }
+    },
+    {
+      "order_index": 33,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q33",
+        "sectionName": "Sector 7: Uranus Deep Space • Algebraic Equations & Parallel Solvers",
+        "content_markdown": "In the diagram, $\\widehat{A_3} = (3x - 15)^\\circ$ and $\\widehat{B_1} = 60^\\circ$. Find $x$ so that $a \\parallel b$.",
+        "diagram_url": "/images/geometry/parallel_0311_q33.svg",
+        "diagram_alt": "Visual geometry schematic for Question 33: Sector 7: Uranus Deep Space • Algebraic Equations & Parallel Solvers",
+        "method_markdown": "Set up the algebraic equation: equate expressions for equal angle pairs (alternate interior / corresponding), or set sum to 180° for linear pairs / consecutive interior.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "$x = 15$"
+          },
+          {
+            "id": "B",
+            "text": "$x = 20$"
+          },
+          {
+            "id": "C",
+            "text": "$x = 25$"
+          },
+          {
+            "id": "D",
+            "text": "$x = 30$"
+          }
+        ],
+        "correct_option_id": "C"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "C",
+        "explanation_markdown": "$3x - 15 = 60 \\implies 3x = 75 \\implies x = 75 \\div 3 = 25$."
+      }
+    },
+    {
+      "order_index": 34,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q34",
+        "sectionName": "Sector 7: Uranus Deep Space • Algebraic Equations & Parallel Solvers",
+        "content_markdown": "In the diagram, $\\widehat{A_4} = (2x + 10)^\\circ$ and $\\widehat{B_1} = 70^\\circ$ are consecutive interior angles . Find $x$ so that $a \\parallel b$.",
+        "diagram_url": "/images/geometry/parallel_0311_q34.svg",
+        "diagram_alt": "Visual geometry schematic for Question 34: Sector 7: Uranus Deep Space • Algebraic Equations & Parallel Solvers",
+        "method_markdown": "Set up the algebraic equation: equate expressions for equal angle pairs (alternate interior / corresponding), or set sum to 180° for linear pairs / consecutive interior.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "$x = 30$"
+          },
+          {
+            "id": "B",
+            "text": "$x = 50$"
+          },
+          {
+            "id": "C",
+            "text": "$x = 45$"
+          },
+          {
+            "id": "D",
+            "text": "$x = 60$"
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "For $a \\parallel b$, consecutive interior angles add up to $180^\\circ$: > $$(2x + 10) + 70 = 180 \\implies 2x + 80 = 180 \\implies 2x = 100 \\implies x = 50$$"
+      }
+    },
+    {
+      "order_index": 35,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q35",
+        "sectionName": "Sector 7: Uranus Deep Space • Algebraic Equations & Parallel Solvers",
+        "content_markdown": "Look at the consecutive interior angles $\\widehat{A_3} = x^\\circ$ and $\\widehat{B_2} = 2x^\\circ$. What must the value of $x$ be so that $a \\parallel b$?",
+        "diagram_url": "/images/geometry/parallel_0311_q35.svg",
+        "diagram_alt": "Visual geometry schematic for Question 35: Sector 7: Uranus Deep Space • Algebraic Equations & Parallel Solvers",
+        "method_markdown": "Set up the algebraic equation: equate expressions for equal angle pairs (alternate interior / corresponding), or set sum to 180° for linear pairs / consecutive interior.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "$x = 45$"
+          },
+          {
+            "id": "B",
+            "text": "$x = 60$"
+          },
+          {
+            "id": "C",
+            "text": "$x = 90$"
+          },
+          {
+            "id": "D",
+            "text": "$x = 30$"
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "$x + 2x = 180 \\implies 3x = 180 \\implies x = 180 \\div 3 = 60$. (Then $\\widehat{A_3} = 60^\\circ$ and $\\widehat{B_2} = 120^\\circ$)."
+      }
+    },
+    {
+      "order_index": 36,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q36",
+        "sectionName": "Sector 7: Uranus Deep Space • Algebraic Equations & Parallel Solvers",
+        "content_markdown": "Look at the diagram where line $a \\perp c$ at $A$ ($90^\\circ$) and line $b \\perp c$ at $B$ ($90^\\circ$). What can we conclude about line $a$ and line $b$?",
+        "diagram_url": "/images/geometry/parallel_0311_q36.svg",
+        "diagram_alt": "Visual geometry schematic for Question 36: Sector 7: Uranus Deep Space • Algebraic Equations & Parallel Solvers",
+        "method_markdown": "Set up the algebraic equation: equate expressions for equal angle pairs (alternate interior / corresponding), or set sum to 180° for linear pairs / consecutive interior.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "$a \\perp b$"
+          },
+          {
+            "id": "B",
+            "text": "$a \\parallel b$"
+          },
+          {
+            "id": "C",
+            "text": "$a$ intersects $b$ at $M$"
+          },
+          {
+            "id": "D",
+            "text": "Cannot conclude anything"
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "Because $a \\perp c$ and $b \\perp c$, both lines make equal $90^\\circ$ corresponding angles with line $c$, so $a \\parallel b$!"
+      }
+    },
+    {
+      "order_index": 37,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q37",
+        "sectionName": "Sector 8: Neptune Frontier • Perpendicular Paths & Proof Challenges",
+        "content_markdown": "Look at the diagram with lines $a, b, c, d$. We know $a \\perp c$ at $A$. At the right transversal $d$, given $\\widehat{M_4} = 115^\\circ$ (Bottom-Left at $M$) and $\\widehat{N_1} = 65^\\circ$ (Top-Left at $N$). Why are lines $a$ and $b$ parallel?",
+        "diagram_url": "/images/geometry/parallel_0311_q37.svg",
+        "diagram_alt": "Visual geometry schematic for Question 37: Sector 8: Neptune Frontier • Perpendicular Paths & Proof Challenges",
+        "method_markdown": "Lines perpendicular to the same transversal are parallel. For triangle extensions, alternate interior angles along transversal sides establish parallelism.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Because the consecutive interior angles at $M$ and $N$ sum to $115^\\circ + 65^\\circ = 180^\\circ$."
+          },
+          {
+            "id": "B",
+            "text": "Because $115^\\circ = 65^\\circ$."
+          },
+          {
+            "id": "C",
+            "text": "Because line $d$ is perpendicular to $a$."
+          },
+          {
+            "id": "D",
+            "text": "They are not parallel."
+          }
+        ],
+        "correct_option_id": "A"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "A",
+        "explanation_markdown": "Along transversal $d$, $\\widehat{M_4}$ and $\\widehat{N_1}$ are consecutive interior angles and $\\widehat{M_4} + \\widehat{N_1} = 115^\\circ + 65^\\circ = 180^\\circ$ (or $\\widehat{M_1} = 180^\\circ - 115^\\circ = 65^\\circ = \\widehat{N_1}$), proving $a \\parallel b$."
+      }
+    },
+    {
+      "order_index": 38,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q38",
+        "sectionName": "Sector 8: Neptune Frontier • Perpendicular Paths & Proof Challenges",
+        "content_markdown": "Suppose angle $\\widehat{A_4}$ is split by an **angle bisector** into two equal parts of $36^\\circ$ each, and the alternate interior angle at $B$ is $\\widehat{B_2} = 72^\\circ$. Are lines $a$ and $b$ parallel?",
+        "diagram_url": "/images/geometry/parallel_0311_q38.svg",
+        "diagram_alt": "Visual geometry schematic for Question 38: Sector 8: Neptune Frontier • Perpendicular Paths & Proof Challenges",
+        "method_markdown": "Lines perpendicular to the same transversal are parallel. For triangle extensions, alternate interior angles along transversal sides establish parallelism.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "No, because $36^\\circ \\neq 72^\\circ$."
+          },
+          {
+            "id": "B",
+            "text": "Yes! Because the whole angle $\\widehat{A_4} = 36^\\circ + 36^\\circ = 72^\\circ$, which equals $\\widehat{B_2} = 72^\\circ$."
+          },
+          {
+            "id": "C",
+            "text": "No, because an angle bisector prevents parallel lines."
+          },
+          {
+            "id": "D",
+            "text": "Only if $\\widehat{B_2} = 36^\\circ$."
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "The total measure of $\\widehat{A_4}$ is $36^\\circ + 36^\\circ = 72^\\circ$. Since $\\widehat{A_4} = \\widehat{B_2} = 72^\\circ$ and they are alternate interior angles, $a \\parallel b$!"
+      }
+    },
+    {
+      "order_index": 39,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q39",
+        "sectionName": "Sector 8: Neptune Frontier • Perpendicular Paths & Proof Challenges",
+        "content_markdown": "Look carefully at $\\triangle ABC$ and line $xy$ through $A$. Given $\\widehat{xAB} = 50^\\circ$, $\\widehat{B} = 50^\\circ$, $\\widehat{yAC} = 70^\\circ$, and $\\widehat{C} = 65^\\circ$. Wait—can this diagram exist as straight lines? Let's check using transversal $AB$ vs. transversal $AC$:",
+        "diagram_url": "/images/geometry/parallel_0311_q39.svg",
+        "diagram_alt": "Visual geometry schematic for Question 39: Sector 8: Neptune Frontier • Perpendicular Paths & Proof Challenges",
+        "method_markdown": "Lines perpendicular to the same transversal are parallel. For triangle extensions, alternate interior angles along transversal sides establish parallelism.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Using transversal $AB$, $\\widehat{xAB} = \\widehat{B} = 50^\\circ \\implies xy \\parallel BC$."
+          },
+          {
+            "id": "B",
+            "text": "Using transversal $AC$, $\\widehat{yAC} = 70^\\circ \\neq \\widehat{C} = 65^\\circ$."
+          },
+          {
+            "id": "C",
+            "text": "Both A and B are true (meaning the student measured $\\widehat{C}$ or $\\widehat{yAC}$ slightly wrong!)."
+          },
+          {
+            "id": "D",
+            "text": "Neither A nor B is true."
+          }
+        ],
+        "correct_option_id": "C"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "C",
+        "explanation_markdown": "Along transversal $AB$, the alternate interior angles are equal ($50^\\circ = 50^\\circ$), which already makes $xy \\parallel BC$. For the drawing to be geometrically consistent, $\\widehat{yAC}$ and $\\widehat{C}$ should also be equal!"
+      }
+    },
+    {
+      "order_index": 40,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.2,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Q40",
+        "sectionName": "Sector 8: Neptune Frontier • Perpendicular Paths & Proof Challenges",
+        "content_markdown": "*(Challenge Boss)* In the diagram, $\\widehat{A_1} = (3x + 10)^\\circ$ (Top-Left) and $\\widehat{B_2} = (x + 10)^\\circ$ (Top-Right). Find $x$ so that $a \\parallel b$.",
+        "diagram_url": "/images/geometry/parallel_0311_q40.svg",
+        "diagram_alt": "Visual geometry schematic for Question 40: Sector 8: Neptune Frontier • Perpendicular Paths & Proof Challenges",
+        "method_markdown": "Lines perpendicular to the same transversal are parallel. For triangle extensions, alternate interior angles along transversal sides establish parallelism.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Schematic diagram; rely on stated values.",
+        "options": [
+          {
+            "id": "A",
+            "text": "$x = 35$"
+          },
+          {
+            "id": "B",
+            "text": "$x = 40$"
+          },
+          {
+            "id": "C",
+            "text": "$x = 45$"
+          },
+          {
+            "id": "D",
+            "text": "$x = 50$"
+          }
+        ],
+        "correct_option_id": "B"
+      },
+      "grading_key_payload": {
+        "correct_option_id": "B",
+        "explanation_markdown": "Since $\\widehat{A_1} + \\widehat{A_2} = 180^\\circ$ (linear pair) and we need $\\widehat{A_2} = \\widehat{B_2}$ (corresponding angles) for $a \\parallel b$, we have: > $$\\widehat{A_1} + \\widehat{B_2} = 180^\\circ \\implies (3x + 10) + (x + 10) = 180 \\implies 4x + 20 = 180 \\implies 4x = 160 \\implies x = 40$$ ## PART 5: INTERACTIVE VISUAL CHALLENGES (QUESTIONS 41–45) **"
+      }
+    },
+    {
+      "order_index": 41,
+      "type": "ESSAY_UPLOAD",
+      "points": 0.4,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Challenge41",
+        "sectionName": "Sector 8: Neptune Frontier • Perpendicular Paths & Proof Challenges",
+        "content_markdown": "Look at the diagram where $\\widehat{A_1} = 125^\\circ$ and $\\widehat{B_1} = 125^\\circ$. Mark each statement below as **True** or **False**: * **a)** $\\widehat{A_1}$ and $\\widehat{B_1}$ are alternate interior angles. * **b)** Line $a$ is parallel to line $b$ ($a \\parallel b$) because $\\widehat{A_1}$ and $\\widehat{B_1}$ are equal corresponding angles. * **c)** The vertically opposite angle $\\widehat{A_3}$ measures $125^\\circ$. * **d)** The linear pair angle $\\widehat{A_4}$ measures $65^\\circ$.",
+        "diagram_url": "/images/geometry/parallel_0311_q41.svg",
+        "diagram_alt": "Visual geometry schematic for Challenge 41: Sector 8: Neptune Frontier • Perpendicular Paths & Proof Challenges",
+        "method_markdown": "Lines perpendicular to the same transversal are parallel. For triangle extensions, alternate interior angles along transversal sides establish parallelism.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Enter answers clearly or upload diagram work."
+      },
+      "grading_key_payload": {
+        "rubric_markdown": "Award up to 0.4 points: 0.2 for correct values and 0.2 for valid reasoning. Accept equivalent correct methods.",
+        "explanation_markdown": "* **a) FALSE** ($\\widehat{A_1}$ and $\\widehat{B_1}$ are corresponding angles, both Top-Left). * **b) TRUE** ($125^\\circ = 125^\\circ$ in corresponding positions $\\implies a \\parallel b$). * **c) TRUE** ($\\widehat{A_3} = \\widehat{A_1} = 125^\\circ$ because they are vertically opposite). * **d) FALSE** ($\\widehat{A_4} = 180^\\circ - 125^\\circ = 55^\\circ$, not $65^\\circ$)."
+      }
+    },
+    {
+      "order_index": 42,
+      "type": "ESSAY_UPLOAD",
+      "points": 0.4,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Challenge42",
+        "sectionName": "Sector 8: Neptune Frontier • Perpendicular Paths & Proof Challenges",
+        "content_markdown": "Look at the diagram where line $c \\perp a$ at $A(90^\\circ)$, and slanted line $d$ cuts $a$ and $b$ at $M$ and $N$ with $\\widehat{M_2} = 70^\\circ$ (Top-Right) and $\\widehat{N_2} = 70^\\circ$ (Top-Right). Mark each statement as **True** or **False**: * **a)** Angles $\\widehat{M_2}$ and $\\widehat{N_2}$ are corresponding angles. * **b)** Because $\\widehat{M_2} = \\widehat{N_2} = 70^\\circ$, we can conclude that $a \\parallel b$. * **c)** At vertex $M$, the alternate interior angle $\\widehat{M_4}$ (Bottom-Left) is also $70^\\circ$. * **d)** At vertex $N$, the linear pair angle $\\widehat{N_1}$ (Top-Left) is $120^\\circ$.",
+        "diagram_url": "/images/geometry/parallel_0311_q42.svg",
+        "diagram_alt": "Visual geometry schematic for Challenge 42: Sector 8: Neptune Frontier • Perpendicular Paths & Proof Challenges",
+        "method_markdown": "Lines perpendicular to the same transversal are parallel. For triangle extensions, alternate interior angles along transversal sides establish parallelism.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Enter answers clearly or upload diagram work."
+      },
+      "grading_key_payload": {
+        "rubric_markdown": "Award up to 0.4 points: 0.2 for correct values and 0.2 for valid reasoning. Accept equivalent correct methods.",
+        "explanation_markdown": "* **a) TRUE** (Both are Top-Right at vertices $M$ and $N$). * **b) TRUE** (Equal corresponding angles prove $a \\parallel b$). * **c) TRUE** ($\\widehat{M_4}$ is vertically opposite to $\\widehat{M_2}$, so $\\widehat{M_4} = 70^\\circ$, which is alternate interior to $\\widehat{N_2}$). * **d) FALSE** ($\\widehat{N_1} = 180^\\circ - 70^\\circ = 110^\\circ$, not $120^\\circ$)."
+      }
+    },
+    {
+      "order_index": 43,
+      "type": "ESSAY_UPLOAD",
+      "points": 0.4,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Challenge43",
+        "sectionName": "Sector 8: Neptune Frontier • Perpendicular Paths & Proof Challenges",
+        "content_markdown": "Suppose $\\widehat{B_2} = 64^\\circ$ (Top-Right at $B$). Fill in the exact measures of all $4$ angles at vertex $A$ so that line $a$ is parallel to line $b$ ($a \\parallel b$): * $\\widehat{A_2}\\text{ (Top-Right)} =$ `[____]`$^\\circ$ * $\\widehat{A_4}\\text{ (Bottom-Left)} =$ `[____]`$^\\circ$ * $\\widehat{A_1}\\text{ (Top-Left)} =$ `[____]`$^\\circ$ * $\\widehat{A_3}\\text{ (Bottom-Right)} =$ `[____]`$^\\circ$",
+        "diagram_url": "/images/geometry/parallel_0311_q43.svg",
+        "diagram_alt": "Visual geometry schematic for Challenge 43: Sector 8: Neptune Frontier • Perpendicular Paths & Proof Challenges",
+        "method_markdown": "Lines perpendicular to the same transversal are parallel. For triangle extensions, alternate interior angles along transversal sides establish parallelism.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Enter answers clearly or upload diagram work."
+      },
+      "grading_key_payload": {
+        "rubric_markdown": "Award up to 0.4 points: 0.2 for correct values and 0.2 for valid reasoning. Accept equivalent correct methods.",
+        "explanation_markdown": "* $\\widehat{A_2} = 64^\\circ$ (Corresponding to $\\widehat{B_2}$) * $\\widehat{A_4} = 64^\\circ$ (Alternate interior to $\\widehat{B_2}$) * $\\widehat{A_1} = 116^\\circ$ (Linear pair: $180^\\circ - 64^\\circ = 116^\\circ$) * $\\widehat{A_3} = 116^\\circ$ (Consecutive interior to $\\widehat{B_2}$: $180^\\circ - 64^\\circ = 116^\\circ$)"
+      }
+    },
+    {
+      "order_index": 44,
+      "type": "ESSAY_UPLOAD",
+      "points": 0.4,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Challenge44",
+        "sectionName": "Sector 8: Neptune Frontier • Perpendicular Paths & Proof Challenges",
+        "content_markdown": "In the diagram, $\\widehat{A_3} = (4x - 8)^\\circ$ and $\\widehat{B_1} = 72^\\circ$. * **Step 1:** To make $a \\parallel b$, what must $\\widehat{A_3}$ equal in degrees? `[____]`$^\\circ$ * **Step 2:** Find the value of $x$: $x =$ `[____]`",
+        "diagram_url": "/images/geometry/parallel_0311_q44.svg",
+        "diagram_alt": "Visual geometry schematic for Challenge 44: Sector 8: Neptune Frontier • Perpendicular Paths & Proof Challenges",
+        "method_markdown": "Lines perpendicular to the same transversal are parallel. For triangle extensions, alternate interior angles along transversal sides establish parallelism.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Enter answers clearly or upload diagram work."
+      },
+      "grading_key_payload": {
+        "rubric_markdown": "Award up to 0.4 points: 0.2 for correct values and 0.2 for valid reasoning. Accept equivalent correct methods.",
+        "explanation_markdown": "* **Step 1:** $72^\\circ$ (because $\\widehat{A_3}$ and $\\widehat{B_1}$ are alternate interior angles). * **Step 2:** $x = 20$ (since $4x - 8 = 72 \\implies 4x = 80 \\implies x = 20$)."
+      }
+    },
+    {
+      "order_index": 45,
+      "type": "ESSAY_UPLOAD",
+      "points": 0.4,
+      "question_payload": {
+        "practice_layout": "parallel-workbook",
+        "source_ref": "Challenge45",
+        "sectionName": "Sector 8: Neptune Frontier • Perpendicular Paths & Proof Challenges",
+        "content_markdown": "Look at $\\triangle ABC$ with line $xy$ passing through $A$. Given $\\widehat{xAB} = 52^\\circ$, $\\widehat{B} = 52^\\circ$, and $\\widehat{C} = 68^\\circ$. * **Step 1:** Along transversal $AB$, $\\widehat{xAB}$ and $\\widehat{B}$ are equal `[alternate interior / corresponding]` angles, so line $xy$ is parallel to `[____]`. * **Step 2:** For line $xy \\parallel BC$ on the right side too, the angle $\\widehat{yAC}$ must equal `[____]`$^\\circ$. * **Step 3:** The third angle of the triangle, $\\widehat{BAC}$, measures $180^\\circ - 52^\\circ - 68^\\circ =$ `[____]`$^\\circ$.",
+        "diagram_url": "/images/geometry/parallel_0311_q45.svg",
+        "diagram_alt": "Visual geometry schematic for Challenge 45: Sector 8: Neptune Frontier • Perpendicular Paths & Proof Challenges",
+        "method_markdown": "Lines perpendicular to the same transversal are parallel. For triangle extensions, alternate interior angles along transversal sides establish parallelism.",
+        "reference_note": "WORKBOOK LABELS: Clockwise from top-left: 1, 2, 3, 4 at each intersection. Enter answers clearly or upload diagram work."
+      },
+      "grading_key_payload": {
+        "rubric_markdown": "Award up to 0.4 points: 0.2 for correct values and 0.2 for valid reasoning. Accept equivalent correct methods.",
+        "explanation_markdown": "* **Step 1:** `alternate interior` | `BC` * **Step 2:** $68^\\circ$ (equal to alternate interior angle $\\widehat{C}$) * **Step 3:** $60^\\circ$"
+      }
+    }
+  ]
+}

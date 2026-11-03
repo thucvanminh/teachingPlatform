@@ -1,0 +1,42 @@
+<svg viewBox="0 0 400 260" width="100%" height="240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Perpendicular lines and transversal diagram">
+  <defs>
+    <linearGradient id="bg_t2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080d1a" />
+      <stop offset="100%" stop-color="#0b132b" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="260" rx="16" fill="url(#bg_t2)" />
+
+  <!-- Base Lines a, b -->
+  <line x1="30" y1="70" x2="370" y2="70" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" />
+  <line x1="30" y1="190" x2="370" y2="190" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Perpendicular Line c -->
+  <line x1="110" y1="20" x2="110" y2="240" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" />
+  <!-- Slanted Line d -->
+  <line x1="235" y1="20" x2="315" y2="240" stroke="#c4b5fd" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Right angle squares -->
+  <rect x="110" y="70" width="12" height="12" fill="none" stroke="#ef4444" stroke-width="1.8" />
+  <rect x="110" y="178" width="12" height="12" fill="none" stroke="#ef4444" stroke-width="1.8" />
+
+  <!-- Line Labels -->
+  <text x="38" y="60" font-family="system-ui, sans-serif" font-size="14" font-style="italic" font-weight="bold" fill="#38bdf8">a</text>
+  <text x="38" y="180" font-family="system-ui, sans-serif" font-size="14" font-style="italic" font-weight="bold" fill="#38bdf8">b</text>
+  <text x="118" y="32" font-family="system-ui, sans-serif" font-size="14" font-style="italic" font-weight="bold" fill="#ef4444">c</text>
+  <text x="242" y="32" font-family="system-ui, sans-serif" font-size="14" font-style="italic" font-weight="bold" fill="#c4b5fd">d</text>
+
+  <!-- Vertices -->
+  <text x="96" y="64" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#94a3b8">A</text>
+  <text x="96" y="184" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#94a3b8">B</text>
+  <text x="250" y="62" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#94a3b8">M</text>
+  <text x="294" y="182" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#94a3b8">N</text>
+
+  <text x="135" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fbbf24">90°</text>
+  <text x="135" y="185" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fbbf24">90°</text>
+
+  <!-- Arcs & Labels -->
+  
+  
+  <text x="15" y="250" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">SCHEMATIC · NOT TO SCALE</text>
+</svg>
