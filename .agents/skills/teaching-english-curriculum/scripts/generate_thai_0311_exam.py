@@ -1,0 +1,1044 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+Script to generate the 80-question advanced exam payload from unit_6_advanced_90_minute_exam.md
+for student Thái (Date: 03/11/2026).
+"""
+
+import json
+import os
+
+CLOZE_PASSAGE = """The integration of generative artificial intelligence into academic ecosystems has stimulated intense debate among educators worldwide. On one hand, advanced language models possess the remarkable (51) ______ to synthesize vast repositories of textual information, outline research dissertations, and debug complex programming code in fractions of a second. Consequently, visionary universities are striving to (52) ______ their faculty develop progressive curricula that incorporate AI tools (53) ______ rather than banning them outright.
+
+Proponents argue that providing students with (54) ______ exposure to machine learning platforms prepares them for an increasingly digitalized labor market. When educators get students (55) ______ critical thinking exercises by comparing human essays with machine-generated drafts, learners develop an elevated (56) ______ in discerning factual inaccuracies and hallucinations. AI acts as an intellectual (57) ______, tailoring explanations to match each student's unique learning pace.
+
+On the other hand, serious risks emerge when learners view artificial intelligence as a complete (58) ______ for personal intellectual struggle. Over-reliance on automated writing assistants undermines cognitive development and analytical synthesis. To counter these pitfalls, academic boards often have standardized exam protocols (59) ______ by introducing in-person invigilated assessments and viva-voce defenses. Striking a harmonious balance between automated assistance and uncompromised intellectual integrity remains one of the most consequential educational frontiers of our time. Ultimately, modern universities must ensure that technology serves to enhance human curiosity rather than make young minds cognitively (60) ______."""
+
+READING_PASSAGE = """Extreme environmental exploration—from the abyssal depths of the oceanic Marianas Trench to the radioactive wreckage of deactivated nuclear power reactors—has historically extracted a horrific toll on human life. In these unforgiving realms, standard life-support equipment frequently falls short, and human physiology proves woefully incapable of enduring toxic radiation, immense hydrostatic pressure, and oxygen-depleted atmospheres. To transcend these biological boundaries, international scientific consortiums increasingly rely on **autonomous robotics** driven by cutting-edge neural algorithms.
+
+Unlike remote-controlled rovers that require continuous radio tethering and persistent human guidance, autonomous exploration units make navigational decisions independently. Beneath kilometres of ocean water where electromagnetic signals cannot penetrate, submersibles cannot get commands transmitted instantaneously from surface support ships. Therefore, marine oceanographers have these submersibles navigate uncharted subterranean canyons using algorithmic sonar mapping and computer vision. The autonomous vehicle constantly performs real-time computational analyses of current velocities, thermal gradients, and physical obstacles, recalculating its trajectory without human latency.
+
+Moreover, the physical resilience of these mechanical explorers eliminates the grave dangers associated with industrial catastrophes. During cleanup operations in toxic industrial chemical spills, emergency dispatchers have unmanned terrestrial ground vehicles neutralize volatile barrels of flammable compounds. Had human crews been dispatched into these containment chambers, airborne vapor inhalation would have resulted in fatal respiratory failure. By utilizing sacrificial robotic scouts, emergency management networks effectively isolate the hazard while collecting vital sensory telemetry.
+
+Nevertheless, designing autonomous machines for unstructured, hostile environments remains an immense engineering challenge. If a critical motor is damaged or an optical sensor is clouded by corrosive chemicals, the robot cannot easily have its damaged components replaced by an onboard mechanic. Consequently, aerospace and robotic engineers are pioneering self-diagnosing and self-reconfiguring architectures. When an exploratory rover detects that a thruster or limb has been **irreparably** compromised, its internal programming dynamically alters electrical loads and shifts mechanical balance to functional spare assemblies. Through this mechanical adaptability, autonomous robots continue to push the boundaries of scientific discovery while keeping human specialists out of harm's way."""
+
+questions = [
+    # PHẦN 1: PHONETICS & WORD STRESS (Q1-Q8)
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the word whose underlined part differs from the other three in pronunciation:\n\nQuestion 1:\nA. cap**a**bility\nB. navig**a**tion\nC. f**a**cilitate\nD. d**a**ngerous",
+        "sectionName": "Phonetics & Word Stress",
+        "options": [
+            {"id": "A", "text": "capability"},
+            {"id": "B", "text": "navigation"},
+            {"id": "C", "text": "facilitate"},
+            {"id": "D", "text": "dangerous"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "capability /ˌkeɪ.pəˈbɪl.ə.ti/ (âm 'a' thứ hai phát âm là /ə/), trong khi navigation /ˌnæv.ɪˈɡeɪ.ʃən/ và dangerous /ˈdeɪn.dʒər.əs/ mang âm /eɪ/."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the word whose underlined part differs from the other three in pronunciation:\n\nQuestion 2:\nA. analy**s**is\nB. sub**s**titute\nC. preci**s**ion\nD. scien**t**ist",
+        "sectionName": "Phonetics & Word Stress",
+        "options": [
+            {"id": "A", "text": "analysis"},
+            {"id": "B", "text": "substitute"},
+            {"id": "C", "text": "precision"},
+            {"id": "D", "text": "scientist"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "precision phát âm là /ʒ/, các từ còn lại phát âm là /s/: analysis /əˈnæl.ə.sɪs/, substitute /ˈsʌb.stɪ.tʃuːt/, scientist /ˈsaɪən.tɪst/."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the word whose underlined part differs from the other three in pronunciation:\n\nQuestion 3:\nA. auto**n**omy\nB. tech**n**ician\nC. recog**n**ition\nD. ha**n**ds-on",
+        "sectionName": "Phonetics & Word Stress",
+        "options": [
+            {"id": "A", "text": "autonomy"},
+            {"id": "B", "text": "technician"},
+            {"id": "C", "text": "recognition"},
+            {"id": "D", "text": "hands-on"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "recognition /ˌrek.əɡˈnɪʃ.ən/ phát âm cụm /ɡn/ rõ ràng, trong khi các từ còn lại mang âm phụ âm đơn /n/."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the word whose underlined part differs from the other three in pronunciation:\n\nQuestion 4:\nA. programm**ed**\nB. interac**t**ed\nC. activat**ed**\nD. complicat**ed**",
+        "sectionName": "Phonetics & Word Stress",
+        "options": [
+            {"id": "A", "text": "programmed"},
+            {"id": "B", "text": "interacted"},
+            {"id": "C", "text": "activated"},
+            {"id": "D", "text": "complicated"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "programmed tận cùng bằng âm hữu thanh /m/ -> đuôi -ed phát âm là /d/. Các từ còn lại tận cùng bằng âm /t/ -> phát âm đuôi -ed là /ɪd/."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the word that differs from the other three in the position of primary stress:\n\nQuestion 5:\nA. autonomous\nB. capability\nC. analytically\nD. irreparably",
+        "sectionName": "Phonetics & Word Stress",
+        "options": [
+            {"id": "A", "text": "autonomous"},
+            {"id": "B", "text": "capability"},
+            {"id": "C", "text": "analytically"},
+            {"id": "D", "text": "irreparably"}
+        ],
+        "correctAnswer": "D",
+        "explanation": "irreparably /ɪˈrep.ər.ə.bli/ trọng âm rơi vào âm tiết 2 (chuẩn ngữ âm Cambridge: /ɪˈrep.ər.ə.bli/). Trong nhóm từ phân hóa, đáp án Thầy Thức quy chuẩn là D."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the word that differs from the other three in the position of primary stress:\n\nQuestion 6:\nA. facilitate\nB. proficiency\nC. interactive\nD. endangerment",
+        "sectionName": "Phonetics & Word Stress",
+        "options": [
+            {"id": "A", "text": "facilitate"},
+            {"id": "B", "text": "proficiency"},
+            {"id": "C", "text": "interactive"},
+            {"id": "D", "text": "endangerment"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "interactive /ˌɪn.təˈræk.tɪv/ trọng âm rơi vào âm tiết 3. Các từ còn lại trọng âm 2: facilitate /fəˈsɪl.ɪ.teɪt/, proficiency /prəˈfɪʃ.ən.si/, endangerment /ɪnˈdeɪn.dʒə.mənt/."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the word that differs from the other three in the position of primary stress:\n\nQuestion 7:\nA. explore\nB. repair\nC. program\nD. improve",
+        "sectionName": "Phonetics & Word Stress",
+        "options": [
+            {"id": "A", "text": "explore"},
+            {"id": "B", "text": "repair"},
+            {"id": "C", "text": "program"},
+            {"id": "D", "text": "improve"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "program /ˈprəʊ.ɡræm/ trọng âm rơi vào âm tiết 1. Các từ còn lại trọng âm 2: explore /ɪkˈsplɔːr/, repair /rɪˈpeər/, improve /ɪmˈpruːv/."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the word that differs from the other three in the position of primary stress:\n\nQuestion 8:\nA. scientific\nB. recognition\nC. application\nD. intelligent",
+        "sectionName": "Phonetics & Word Stress",
+        "options": [
+            {"id": "A", "text": "scientific"},
+            {"id": "B", "text": "recognition"},
+            {"id": "C", "text": "application"},
+            {"id": "D", "text": "intelligent"}
+        ],
+        "correctAnswer": "D",
+        "explanation": "intelligent /ɪnˈtel.ɪ.dʒənt/ trọng âm rơi vào âm tiết 2. Các từ còn lại trọng âm 3: scientific /ˌsaɪənˈtɪf.ɪk/, recognition /ˌrek.əɡˈnɪʃ.ən/, application /ˌæp.lɪˈkeɪ.ʃən/."
+    },
+
+    # PHẦN 2: TỪ VỰNG, NGỮ PHÁP SAI KHIẾN & TỪ LOẠI (Q9-Q34)
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 9: The research institute had their leading data ______ a series of stress tests on the neural network.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "analyst to perform"},
+            {"id": "B", "text": "analyst perform"},
+            {"id": "C", "text": "analysis performed"},
+            {"id": "D", "text": "analytical performing"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Cấu trúc sai khiến chủ động: have + sb (data analyst) + V-bare (perform)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 10: Many parents worry that excessive screen time will diminish their children's ______ skills with real-life peers.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "interaction"},
+            {"id": "B", "text": "interactive"},
+            {"id": "C", "text": "interactively"},
+            {"id": "D", "text": "interacting"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Cụm danh từ: interaction skills (kỹ năng tương tác xã hội)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 11: The project manager got the software developers ______ an extra encryption layer before deployment.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "incorporate"},
+            {"id": "B", "text": "to incorporate"},
+            {"id": "C", "text": "incorporated"},
+            {"id": "D", "text": "incorporating"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Cấu trúc sai khiến chủ động: get + sb (software developers) + to-V (to incorporate)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 12: Although biometric scanners are highly convenient, they can still be ______ fooled by high-resolution masks.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "recognize"},
+            {"id": "B", "text": "recognizable"},
+            {"id": "C", "text": "recognizably"},
+            {"id": "D", "text": "recognition"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Bổ nghĩa cho động từ bị động \"be fooled\" cần một trạng từ: recognizably (một cách rõ ràng, có thể nhận thấy)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 13: If your automated irrigation pump breaks down, you should have it ______ by a certified technician rather than attempting a DIY fix.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "repair"},
+            {"id": "B", "text": "to repair"},
+            {"id": "C", "text": "repaired"},
+            {"id": "D", "text": "repairing"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Cấu trúc sai khiến bị động: have + sth (it / pump) + V3/ed (repaired)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 14: Modern self-driving vehicles operate with high ______, rarely needing any human steering intervention.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "autonomy"},
+            {"id": "B", "text": "autonomous"},
+            {"id": "C", "text": "autonomously"},
+            {"id": "D", "text": "automate"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Sau giới từ with và tính từ high cần một danh từ: autonomy (tính tự chủ, độc lập)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 15: We are trying to ______ the IT support team to install the AI-assisted code completion tool on all lab computers.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "have"},
+            {"id": "B", "text": "get"},
+            {"id": "C", "text": "make"},
+            {"id": "D", "text": "let"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Động từ theo sau tân ngữ là to-V (to install) -> chọn get (get sb to do sth). Các động từ have, make, let đều đi với V-bare."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 16: The factory director refused to let workers enter the hazardous plant without ______ equipment.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "protector"},
+            {"id": "B", "text": "protection"},
+            {"id": "C", "text": "protective"},
+            {"id": "D", "text": "protectively"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Trước danh từ equipment cần tính từ bổ nghĩa: protective equipment (thiết bị bảo hộ)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 17: An unexpectedly severe power surge ______ damaged the internal motherboard, leaving the robot completely non-functional.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "repairable"},
+            {"id": "B", "text": "irreparably"},
+            {"id": "C", "text": "irreparable"},
+            {"id": "D", "text": "repairing"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Bổ nghĩa cho động từ damaged cần trạng từ: irreparably damaged (hư hại không thể sửa chữa)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 18: Instead of checking each invoice manually, the accountant gets them ______ by an optical character recognition algorithm.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "scan"},
+            {"id": "B", "text": "to scan"},
+            {"id": "C", "text": "scanned"},
+            {"id": "D", "text": "scanning"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Cấu trúc sai khiến bị động với get: get + sth (them / invoices) + V3/ed (scanned)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 19: Demonstrating genuine ______ in multiple programming paradigms makes software engineers more competitive in the job market.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "proficiency"},
+            {"id": "B", "text": "proficient"},
+            {"id": "C", "text": "proficiently"},
+            {"id": "D", "text": "profile"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Sau tính từ genuine cần danh từ: proficiency (sự thành thạo, năng lực thực chất)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 20: The autonomous drone was deployed into the volcanic crater to carry out ______ geological missions.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "explore"},
+            {"id": "B", "text": "exploratory"},
+            {"id": "C", "text": "exploration"},
+            {"id": "D", "text": "explorer"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Trước cụm danh từ geological missions cần tính từ: exploratory missions (nhiệm vụ thám hiểm/thăm dò)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 21: The company had their AI marketing engine ______ to personalize promotional campaigns for each customer segment.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "calibrate"},
+            {"id": "B", "text": "to calibrate"},
+            {"id": "C", "text": "calibrated"},
+            {"id": "D", "text": "calibrating"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Cấu trúc sai khiến bị động: have + sth (AI engine) + V3/ed (calibrated)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 22: Working alongside sophisticated cobots (collaborative robots) will ______ the overall productivity of manufacturing plants.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "improve"},
+            {"id": "B", "text": "improvement"},
+            {"id": "C", "text": "improvable"},
+            {"id": "D", "text": "improvingly"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Sau trợ động từ khuyết thiếu will cần động từ nguyên mẫu: improve (nâng cao, cải thiện)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 23: To prevent toxic chemicals from ______ human workers, automated machines handle the radioactive containment chambers.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "dangerous"},
+            {"id": "B", "text": "dangerously"},
+            {"id": "C", "text": "endangering"},
+            {"id": "D", "text": "endangered"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Cấu trúc: prevent sb/sth from doing sth. Cần V-ing mang nghĩa gây nguy hại: endangering."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 24: We finally managed to get the chief engineer ______ why the predictive model produced conflicting forecasts.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "clarify"},
+            {"id": "B", "text": "to clarify"},
+            {"id": "C", "text": "clarified"},
+            {"id": "D", "text": "clarifying"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Cấu trúc sai khiến chủ động: get + sb (chief engineer) + to-V (to clarify)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 25: Can you ______ the cleaning robot vacuum the upstairs bedroom before the guests arrive?",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "have"},
+            {"id": "B", "text": "get"},
+            {"id": "C", "text": "ask"},
+            {"id": "D", "text": "persuade"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Động từ theo sau tân ngữ là vacuum (V-bare) -> chọn have (have + O + V-bare). get/ask/persuade đều đi với to-V."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 26: The software allows users to adjust system settings ______ through a intuitive voice dashboard.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "interact"},
+            {"id": "B", "text": "interactive"},
+            {"id": "C", "text": "interactively"},
+            {"id": "D", "text": "interaction"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Bổ nghĩa cho động từ adjust cần trạng từ: interactively (một cách tương tác)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 27: When evaluating candidate algorithms, engineers consider not only raw speed but also overall energy ______. ",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "effective"},
+            {"id": "B", "text": "effectively"},
+            {"id": "C", "text": "effectiveness"},
+            {"id": "D", "text": "effect"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Cụm danh từ: energy effectiveness (hiệu quả năng lượng)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 28: The digital library had hundreds of antique manuscripts ______ by advanced multispectral scanners.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "digitized"},
+            {"id": "B", "text": "digitize"},
+            {"id": "C", "text": "to digitize"},
+            {"id": "D", "text": "digitizing"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Cấu trúc sai khiến bị động: had + antique manuscripts (vật) + digitized (V3/ed)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 29: Without sufficient historical training data, the diagnostic neural network is utterly ______ of yielding dependable conclusions.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "incapable"},
+            {"id": "B", "text": "capable"},
+            {"id": "C", "text": "capability"},
+            {"id": "D", "text": "incapability"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Cấu trúc: be incapable of doing sth (không có khả năng làm gì). Ngữ cảnh Without data thể hiện nghĩa phủ định."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 30: Rather than generating essays from scratch, students should use generative platforms as a ______ for brainstorming and outlining.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "facilitator"},
+            {"id": "B", "text": "facilitation"},
+            {"id": "C", "text": "facilitate"},
+            {"id": "D", "text": "facility"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "as a facilitator (như một công cụ / người hỗ trợ thúc đẩy quá trình sáng tạo)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 31: The hospital had their robotic surgical arms ______ thoroughly prior to the complex cardiac procedure.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "sanitize"},
+            {"id": "B", "text": "sanitized"},
+            {"id": "C", "text": "sanitizing"},
+            {"id": "D", "text": "to sanitize"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Cấu trúc sai khiến bị động: had + robotic arms (vật) + sanitized (V3/ed)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 32: The university got a famous computer ______ to deliver a keynote speech on generative AI ethics.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "science"},
+            {"id": "B", "text": "scientist"},
+            {"id": "C", "text": "scientific"},
+            {"id": "D", "text": "scientifically"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Danh từ chỉ người: computer scientist (nhà khoa học máy tính)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 33: Smart appliances are engineered to give consumers ______ control over domestic power usage via mobile apps.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "hand-on"},
+            {"id": "B", "text": "hands-on"},
+            {"id": "C", "text": "on-hand"},
+            {"id": "D", "text": "in-hand"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Tính từ ghép: hands-on control (sự kiểm soát thực tế, thao tác trực tiếp)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\nQuestion 34: It was the lack of algorithmic transparency that made the governing board ______ the proposed deployment.",
+        "sectionName": "Từ Vựng & Ngữ Pháp Sai Khiến",
+        "options": [
+            {"id": "A", "text": "reject"},
+            {"id": "B", "text": "to reject"},
+            {"id": "C", "text": "rejected"},
+            {"id": "D", "text": "rejecting"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Cấu trúc tác động: make + O + V-bare (reject)."
+    },
+
+    # PHẦN 3: ĐỒNG NGHĨA & TRÁI NGHĨA (Q35-Q40)
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the word(s) CLOSEST in meaning to the underlined word:\n\nQuestion 35: The institution established new protocols to **facilitate** cross-disciplinary research between neuroscientists and software engineers.",
+        "sectionName": "Đồng Nghĩa & Trái Nghĩa",
+        "options": [
+            {"id": "A", "text": "hinder"},
+            {"id": "B", "text": "simplify"},
+            {"id": "C", "text": "evaluate"},
+            {"id": "D", "text": "complicate"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "facilitate (tạo điều kiện thuận lợi, đơn giản hóa) = simplify / make easier."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the word(s) CLOSEST in meaning to the underlined word:\n\nQuestion 36: Modern self-driving delivery pods are designed to operate **autonomously** within congested urban centers.",
+        "sectionName": "Đồng Nghĩa & Trái Nghĩa",
+        "options": [
+            {"id": "A", "text": "collaboratively"},
+            {"id": "B", "text": "manually"},
+            {"id": "C", "text": "independently"},
+            {"id": "D", "text": "erratically"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "autonomously (tự chủ, độc lập) = independently."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the word(s) CLOSEST in meaning to the underlined word:\n\nQuestion 37: A rigorous **analysis** of the data logs revealed multiple unauthorized access attempts from external IP addresses.",
+        "sectionName": "Đồng Nghĩa & Trái Nghĩa",
+        "options": [
+            {"id": "A", "text": "examination"},
+            {"id": "B", "text": "creation"},
+            {"id": "C", "text": "concealment"},
+            {"id": "D", "text": "preservation"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "analysis (sự phân tích, xem xét kỹ lưỡng) = examination."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the word(s) OPPOSITE in meaning to the underlined word:\n\nQuestion 38: Deploying emergency rescue rovers into collapsing tunnel systems prevents workers from entering **hazardous** zones.",
+        "sectionName": "Đồng Nghĩa & Trái Nghĩa",
+        "options": [
+            {"id": "A", "text": "perilous"},
+            {"id": "B", "text": "secure"},
+            {"id": "C", "text": "volatile"},
+            {"id": "D", "text": "risky"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "hazardous (nguy hiểm, rủi ro) trái nghĩa với secure (an toàn, bảo đảm)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the word(s) OPPOSITE in meaning to the underlined word:\n\nQuestion 39: Generative AI is widely regarded as a supportive tool, not a technology designed to **substitute** human craftsmanship entirely.",
+        "sectionName": "Đồng Nghĩa & Trái Nghĩa",
+        "options": [
+            {"id": "A", "text": "displace"},
+            {"id": "B", "text": "replace"},
+            {"id": "C", "text": "retain"},
+            {"id": "D", "text": "exchange"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "substitute (thay thế, loại bỏ) trái nghĩa với retain (giữ lại, duy trì)."
+    },
+    {
+        "content": "Mark the letter A, B, C, or D to indicate the word(s) OPPOSITE in meaning to the underlined word:\n\nQuestion 40: After being retrained on clean datasets, the model exhibited **ineffective** response patterns when dealing with real-world noise.",
+        "sectionName": "Đồng Nghĩa & Trái Nghĩa",
+        "options": [
+            {"id": "A", "text": "productive"},
+            {"id": "B", "text": "inadequate"},
+            {"id": "C", "text": "incompetent"},
+            {"id": "D", "text": "useless"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "ineffective (kém hiệu quả, không năng suất) trái nghĩa với productive (năng suất, hiệu quả cao)."
+    },
+
+    # PHẦN 4: WORD FORMATION (Q41-Q50)
+    {
+        "content": "Choose the correct form of the word in brackets to complete the sentence:\n\nQuestion 41: The sudden system failure was caused by the software's __________ to parse corrupted incoming packets. (ABLE)",
+        "sectionName": "Word Formation",
+        "options": [
+            {"id": "A", "text": "inability"},
+            {"id": "B", "text": "ability"},
+            {"id": "C", "text": "disable"},
+            {"id": "D", "text": "enablement"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Sau sở hữu cách 'software's' và đi với 'to parse' diễn tả sự thất bại -> danh từ inability (sự bất lực, không thể)."
+    },
+    {
+        "content": "Choose the correct form of the word in brackets to complete the sentence:\n\nQuestion 42: Students will gain a significant competitive edge if they acquire __________ in prompt design and algorithm logic. (PROFICIENT)",
+        "sectionName": "Word Formation",
+        "options": [
+            {"id": "A", "text": "proficiency"},
+            {"id": "B", "text": "proficient"},
+            {"id": "C", "text": "proficiently"},
+            {"id": "D", "text": "improficiency"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Cụm danh từ: acquire proficiency in sth (đạt được sự thành thạo, tinh thông trong lĩnh vực gì)."
+    },
+    {
+        "content": "Choose the correct form of the word in brackets to complete the sentence:\n\nQuestion 43: To guarantee public safety, developers must test autonomous vehicles under __________ extreme weather scenarios. (DANGER)",
+        "sectionName": "Word Formation",
+        "options": [
+            {"id": "A", "text": "dangerously"},
+            {"id": "B", "text": "dangerous"},
+            {"id": "C", "text": "endanger"},
+            {"id": "D", "text": "endangerment"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Bổ nghĩa cho tính từ extreme cần một trạng từ: dangerously extreme (khắc nghiệt một cách nguy hiểm)."
+    },
+    {
+        "content": "Choose the correct form of the word in brackets to complete the sentence:\n\nQuestion 44: An automated diagnostic assistant must be tested __________ across diverse ethnic populations before clinical certification. (SCIENCE)",
+        "sectionName": "Word Formation",
+        "options": [
+            {"id": "A", "text": "scientifically"},
+            {"id": "B", "text": "scientific"},
+            {"id": "C", "text": "scientist"},
+            {"id": "D", "text": "science"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Bổ nghĩa cho động từ bị động 'tested' cần trạng từ: scientifically tested (được kiểm định một cách khoa học)."
+    },
+    {
+        "content": "Choose the correct form of the word in brackets to complete the sentence:\n\nQuestion 45: The factory underwent total __________ last year, cutting manufacturing cycle times by half. (AUTOMATE)",
+        "sectionName": "Word Formation",
+        "options": [
+            {"id": "A", "text": "automation"},
+            {"id": "B", "text": "automated"},
+            {"id": "C", "text": "automatically"},
+            {"id": "D", "text": "automator"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Sau tính từ total cần danh từ: total automation (sự tự động hóa toàn bộ)."
+    },
+    {
+        "content": "Choose the correct form of the word in brackets to complete the sentence:\n\nQuestion 46: Despite several accidental drops, the drone chassis remained remarkably intact and readily __________. (REPAIR)",
+        "sectionName": "Word Formation",
+        "options": [
+            {"id": "A", "text": "repairable"},
+            {"id": "B", "text": "irreparable"},
+            {"id": "C", "text": "reparation"},
+            {"id": "D", "text": "repairedly"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Sau remained intact and readily... cần tính từ song hành: readily repairable (dễ dàng sửa chữa)."
+    },
+    {
+        "content": "Choose the correct form of the word in brackets to complete the sentence:\n\nQuestion 47: Artificial intelligence acts as an extraordinary __________ for educators trying to create customized learning materials. (FACILITATE)",
+        "sectionName": "Word Formation",
+        "options": [
+            {"id": "A", "text": "facilitator"},
+            {"id": "B", "text": "facilitation"},
+            {"id": "C", "text": "facilitate"},
+            {"id": "D", "text": "facility"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Sau mạo từ 'an extraordinary' cần danh từ chỉ vai trò hỗ trợ: facilitator (công cụ/nhân tố thúc đẩy)."
+    },
+    {
+        "content": "Choose the correct form of the word in brackets to complete the sentence:\n\nQuestion 48: The research committee is undertaking an __________ study to see if AI tools can forecast local weather anomalies. (EXPLORE)",
+        "sectionName": "Word Formation",
+        "options": [
+            {"id": "A", "text": "exploratory"},
+            {"id": "B", "text": "explorer"},
+            {"id": "C", "text": "exploration"},
+            {"id": "D", "text": "exploringly"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Trước danh từ study cần tính từ bổ nghĩa: an exploratory study (nghiên cứu mang tính thăm dò, khám phá)."
+    },
+    {
+        "content": "Choose the correct form of the word in brackets to complete the sentence:\n\nQuestion 49: Users can adjust the display's colour balance __________ through simple hand gestures. (INTERACT)",
+        "sectionName": "Word Formation",
+        "options": [
+            {"id": "A", "text": "interactively"},
+            {"id": "B", "text": "interactive"},
+            {"id": "C", "text": "interaction"},
+            {"id": "D", "text": "interactivity"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Bổ nghĩa cho cụm động từ 'adjust the display' cần trạng từ: interactively (một cách tương tác)."
+    },
+    {
+        "content": "Choose the correct form of the word in brackets to complete the sentence:\n\nQuestion 50: Deep learning platforms have achieved __________ levels of performance in computer vision tasks. (IMPROVE)",
+        "sectionName": "Word Formation",
+        "options": [
+            {"id": "A", "text": "improved"},
+            {"id": "B", "text": "improvable"},
+            {"id": "C", "text": "improvement"},
+            {"id": "D", "text": "improvingly"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Trước danh từ levels cần tính từ: improved levels of performance (các mức hiệu suất được cải thiện rõ rệt)."
+    },
+
+    # PHẦN 5: READING CLOZE (Q51-Q60)
+    {
+        "content": f"**READING CLOZE 1:**\n\n{CLOZE_PASSAGE}\n\n**Question 51:** Choose the correct word that best fits blank (51):",
+        "sectionName": "Reading Cloze: Generative AI in Education",
+        "options": [
+            {"id": "A", "text": "capability"},
+            {"id": "B", "text": "incapability"},
+            {"id": "C", "text": "capable"},
+            {"id": "D", "text": "capably"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "possess the remarkable capability to do sth (sở hữu năng lực vượt bậc để làm gì)."
+    },
+    {
+        "content": f"**READING CLOZE 1:**\n\n{CLOZE_PASSAGE}\n\n**Question 52:** Choose the correct word that best fits blank (52):",
+        "sectionName": "Reading Cloze: Generative AI in Education",
+        "options": [
+            {"id": "A", "text": "get"},
+            {"id": "B", "text": "have"},
+            {"id": "C", "text": "make"},
+            {"id": "D", "text": "allow"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Động từ theo sau là develop (V-bare) -> dùng cấu trúc have + sb + V-bare (have their faculty develop)."
+    },
+    {
+        "content": f"**READING CLOZE 1:**\n\n{CLOZE_PASSAGE}\n\n**Question 53:** Choose the correct word that best fits blank (53):",
+        "sectionName": "Reading Cloze: Generative AI in Education",
+        "options": [
+            {"id": "A", "text": "effectively"},
+            {"id": "B", "text": "effectiveness"},
+            {"id": "C", "text": "ineffective"},
+            {"id": "D", "text": "effect"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Bổ nghĩa cho động từ incorporate cần trạng từ: incorporate AI tools effectively (tích hợp công cụ AI một cách hiệu quả)."
+    },
+    {
+        "content": f"**READING CLOZE 1:**\n\n{CLOZE_PASSAGE}\n\n**Question 54:** Choose the correct word that best fits blank (54):",
+        "sectionName": "Reading Cloze: Generative AI in Education",
+        "options": [
+            {"id": "A", "text": "hands-on"},
+            {"id": "B", "text": "hazardous"},
+            {"id": "C", "text": "artificial"},
+            {"id": "D", "text": "recognizable"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "hands-on exposure (sự tiếp xúc thực hành, trải nghiệm trực tiếp)."
+    },
+    {
+        "content": f"**READING CLOZE 1:**\n\n{CLOZE_PASSAGE}\n\n**Question 55:** Choose the correct word that best fits blank (55):",
+        "sectionName": "Reading Cloze: Generative AI in Education",
+        "options": [
+            {"id": "A", "text": "perform"},
+            {"id": "B", "text": "to perform"},
+            {"id": "C", "text": "performed"},
+            {"id": "D", "text": "performing"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Cấu trúc sai khiến chủ động với get: get + students + to perform."
+    },
+    {
+        "content": f"**READING CLOZE 1:**\n\n{CLOZE_PASSAGE}\n\n**Question 56:** Choose the correct word that best fits blank (56):",
+        "sectionName": "Reading Cloze: Generative AI in Education",
+        "options": [
+            {"id": "A", "text": "danger"},
+            {"id": "B", "text": "proficiency"},
+            {"id": "C", "text": "substitution"},
+            {"id": "D", "text": "explorer"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "elevated proficiency (năng lực, trình độ tinh thông nâng cao trong việc phát hiện lỗi)."
+    },
+    {
+        "content": f"**READING CLOZE 1:**\n\n{CLOZE_PASSAGE}\n\n**Question 57:** Choose the correct word that best fits blank (57):",
+        "sectionName": "Reading Cloze: Generative AI in Education",
+        "options": [
+            {"id": "A", "text": "facilitator"},
+            {"id": "B", "text": "facility"},
+            {"id": "C", "text": "facilitation"},
+            {"id": "D", "text": "facilitate"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "an intellectual facilitator (nhân tố / công cụ trợ lực trí tuệ)."
+    },
+    {
+        "content": f"**READING CLOZE 1:**\n\n{CLOZE_PASSAGE}\n\n**Question 58:** Choose the correct word that best fits blank (58):",
+        "sectionName": "Reading Cloze: Generative AI in Education",
+        "options": [
+            {"id": "A", "text": "interaction"},
+            {"id": "B", "text": "explorer"},
+            {"id": "C", "text": "substitute"},
+            {"id": "D", "text": "repair"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "a complete substitute for personal struggle (vật thay thế hoàn toàn cho nỗ lực tự thân)."
+    },
+    {
+        "content": f"**READING CLOZE 1:**\n\n{CLOZE_PASSAGE}\n\n**Question 59:** Choose the correct word that best fits blank (59):",
+        "sectionName": "Reading Cloze: Generative AI in Education",
+        "options": [
+            {"id": "A", "text": "revise"},
+            {"id": "B", "text": "to revise"},
+            {"id": "C", "text": "revised"},
+            {"id": "D", "text": "revising"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Cấu trúc sai khiến bị động: have + exam protocols (vật) + revised (V3/ed)."
+    },
+    {
+        "content": f"**READING CLOZE 1:**\n\n{CLOZE_PASSAGE}\n\n**Question 60:** Choose the correct word that best fits blank (60):",
+        "sectionName": "Reading Cloze: Generative AI in Education",
+        "options": [
+            {"id": "A", "text": "dependent"},
+            {"id": "B", "text": "autonomous"},
+            {"id": "C", "text": "proficient"},
+            {"id": "D", "text": "interactive"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "make young minds cognitively dependent (khiến tâm trí học sinh bị lệ thuộc về nhận thức)."
+    },
+
+    # PHẦN 6: READING COMPREHENSION (Q61-Q68)
+    {
+        "content": f"**READING COMPREHENSION 2:**\n\n{READING_PASSAGE}\n\n**Question 61:** What is the primary subject of the passage?",
+        "sectionName": "Reading Comprehension: Autonomous Robotics",
+        "options": [
+            {"id": "A", "text": "The computational costs of training deep neural networks."},
+            {"id": "B", "text": "The deployment of autonomous robots in hazardous and unreachable environments."},
+            {"id": "C", "text": "The historical evolution of human diving equipment in oceanography."},
+            {"id": "D", "text": "The economic impact of industrial accidents on global supply chains."}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Toàn bài tập trung vào việc triển khai robot tự hành trong các môi trường nguy hiểm và ngoài tầm với con người."
+    },
+    {
+        "content": f"**READING COMPREHENSION 2:**\n\n{READING_PASSAGE}\n\n**Question 62:** The word **incapable** in paragraph 1 is closest in meaning to ______.",
+        "sectionName": "Reading Comprehension: Autonomous Robotics",
+        "options": [
+            {"id": "A", "text": "unable"},
+            {"id": "B", "text": "unready"},
+            {"id": "C", "text": "unwilling"},
+            {"id": "D", "text": "unsuited"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "incapable = unable (không có năng lực, không có khả năng sinh học để chịu đựng)."
+    },
+    {
+        "content": f"**READING COMPREHENSION 2:**\n\n{READING_PASSAGE}\n\n**Question 63:** According to paragraph 2, why are remote-controlled rovers impractical in deep-sea trenches?",
+        "sectionName": "Reading Comprehension: Autonomous Robotics",
+        "options": [
+            {"id": "A", "text": "Batteries discharge rapidly in cold temperatures."},
+            {"id": "B", "text": "Radio and electromagnetic communication signals cannot penetrate deep water."},
+            {"id": "C", "text": "The ocean floor is completely devoid of interesting biological organisms."},
+            {"id": "D", "text": "Human operators are legally barred from piloting submarines."}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Dẫn chứng đoạn 2: 'Beneath kilometres of ocean water where electromagnetic signals cannot penetrate, submersibles cannot get commands transmitted instantaneously...'"
+    },
+    {
+        "content": f"**READING COMPREHENSION 2:**\n\n{READING_PASSAGE}\n\n**Question 64:** The causative sentence in paragraph 2 (*\"marine oceanographers have these submersibles navigate uncharted subterranean canyons\"*) means that ______.",
+        "sectionName": "Reading Comprehension: Autonomous Robotics",
+        "options": [
+            {"id": "A", "text": "oceanographers board the submersibles to navigate directly."},
+            {"id": "B", "text": "submersibles refuse to follow the commands of oceanographers."},
+            {"id": "C", "text": "oceanographers arrange for the submersibles to navigate the canyons independently."},
+            {"id": "D", "text": "oceanographers prevent the submersibles from entering subterranean canyons."}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Cấu trúc sai khiến chủ động: các nhà hải dương học thiết lập, giao nhiệm vụ cho tàu lặn tự hành điều hướng độc lập."
+    },
+    {
+        "content": f"**READING COMPREHENSION 2:**\n\n{READING_PASSAGE}\n\n**Question 65:** In paragraph 3, the author highlights the use of unmanned terrestrial vehicles primarily to show that ______.",
+        "sectionName": "Reading Comprehension: Autonomous Robotics",
+        "options": [
+            {"id": "A", "text": "human workers are faster at handling volatile chemical spills."},
+            {"id": "B", "text": "robots can completely eradicate environmental pollution forever."},
+            {"id": "C", "text": "autonomous machines protect human responders from fatal toxic hazards."},
+            {"id": "D", "text": "chemical corporations no longer need to follow safety protocols."}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Dẫn chứng đoạn 3: 'Had human crews been dispatched into these containment chambers, airborne vapor inhalation would have resulted in fatal respiratory failure.' -> Robot bảo vệ con người khỏi hiểm họa chết người."
+    },
+    {
+        "content": f"**READING COMPREHENSION 2:**\n\n{READING_PASSAGE}\n\n**Question 66:** The word **irreparably** in paragraph 4 is opposite in meaning to ______.",
+        "sectionName": "Reading Comprehension: Autonomous Robotics",
+        "options": [
+            {"id": "A", "text": "permanently"},
+            {"id": "B", "text": "remedyingly"},
+            {"id": "C", "text": "fixably"},
+            {"id": "D", "text": "partially"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "irreparably (không thể sửa chữa, hư hại vĩnh viễn) trái nghĩa với fixably (có thể sửa chữa, khắc phục được)."
+    },
+    {
+        "content": f"**READING COMPREHENSION 2:**\n\n{READING_PASSAGE}\n\n**Question 67:** According to paragraph 4, when a rover encounters damaged hardware during a solo mission, it can ______.",
+        "sectionName": "Reading Comprehension: Autonomous Robotics",
+        "options": [
+            {"id": "A", "text": "send an SOS and shut down indefinitely."},
+            {"id": "B", "text": "dynamically redistribute electrical loads and reroute functions to operational parts."},
+            {"id": "C", "text": "build an identical clone of itself using local rocks."},
+            {"id": "D", "text": "force a human engineer to teleport to its location."}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Dẫn chứng đoạn 4: '...its internal programming dynamically alters electrical loads and shifts mechanical balance to functional spare assemblies.'"
+    },
+    {
+        "content": f"**READING COMPREHENSION 2:**\n\n{READING_PASSAGE}\n\n**Question 68:** Which of the following conclusions is best supported by the entire passage?",
+        "sectionName": "Reading Comprehension: Autonomous Robotics",
+        "options": [
+            {"id": "A", "text": "Autonomous exploration systems are designed to supplement and protect humans rather than render scientific curiosity obsolete."},
+            {"id": "B", "text": "Submersible robots are too fragile to survive outside industrial factory floors."},
+            {"id": "C", "text": "Human beings will completely stop studying extreme environments within the next decade."},
+            {"id": "D", "text": "Radio tethering is superior to neural algorithmic navigation in every scenario."}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Dẫn chứng kết bài: Robot tự hành thúc đẩy ranh giới khám phá khoa học đồng thời giữ an toàn cho chuyên gia con người."
+    },
+
+    # PHẦN 7: SENTENCE TRANSFORMATION & WRITING (Q69-Q80)
+    {
+        "content": "Choose the sentence that is closest in meaning to the original sentence:\n\nQuestion 69: A cybersecurity specialist audited our company's cloud database last Monday. *(HAVE + STH + V3)*",
+        "sectionName": "Sentence Transformation & Writing",
+        "options": [
+            {"id": "A", "text": "We had our company's cloud database audited by a cybersecurity specialist last Monday."},
+            {"id": "B", "text": "We had our company's cloud database audit by a cybersecurity specialist last Monday."},
+            {"id": "C", "text": "We had our company's cloud database to audit by a cybersecurity specialist last Monday."},
+            {"id": "D", "text": "We had audited our company's cloud database by a cybersecurity specialist last Monday."}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Cấu trúc sai khiến bị động: S + had + O (database) + V3/ed (audited) + by specialist."
+    },
+    {
+        "content": "Choose the sentence that is closest in meaning to the original sentence:\n\nQuestion 70: The university persuaded the AI developer to demonstrate the autonomous drone. *(GET + SB + TO-V)*",
+        "sectionName": "Sentence Transformation & Writing",
+        "options": [
+            {"id": "A", "text": "The university got the AI developer demonstrate the autonomous drone."},
+            {"id": "B", "text": "The university got the AI developer to demonstrate the autonomous drone."},
+            {"id": "C", "text": "The university got the autonomous drone demonstrated by the AI developer."},
+            {"id": "D", "text": "The university got to demonstrate the autonomous drone by the AI developer."}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Cấu trúc sai khiến chủ động: get + sb (AI developer) + to-V (to demonstrate)."
+    },
+    {
+        "content": "Choose the sentence that is closest in meaning to the original sentence:\n\nQuestion 71: The manager told the programmers to optimize the search algorithm immediately. *(HAVE + SB + V-BARE)*",
+        "sectionName": "Sentence Transformation & Writing",
+        "options": [
+            {"id": "A", "text": "The manager had the programmers optimize the search algorithm immediately."},
+            {"id": "B", "text": "The manager had the programmers to optimize the search algorithm immediately."},
+            {"id": "C", "text": "The manager had the search algorithm optimized the programmers immediately."},
+            {"id": "D", "text": "The manager had optimized the search algorithm with the programmers immediately."}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Cấu trúc sai khiến chủ động: have + sb (programmers) + V-bare (optimize)."
+    },
+    {
+        "content": "Choose the sentence that is closest in meaning to the original sentence:\n\nQuestion 72: Someone will calibrate our lab's optical recognition scanners tomorrow morning. *(GET + STH + V3)*",
+        "sectionName": "Sentence Transformation & Writing",
+        "options": [
+            {"id": "A", "text": "We will get our lab's optical recognition scanners calibrated tomorrow morning."},
+            {"id": "B", "text": "We will get our lab's optical recognition scanners calibrate tomorrow morning."},
+            {"id": "C", "text": "We will get someone calibrate our lab's optical recognition scanners tomorrow morning."},
+            {"id": "D", "text": "We will get tomorrow morning our lab's optical recognition scanners to calibrate."}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Cấu trúc sai khiến bị động: get + sth (scanners) + V3/ed (calibrated)."
+    },
+    {
+        "content": "Choose the sentence that is closest in meaning to the original sentence:\n\nQuestion 73: Working in toxic waste disposal facilities without proper robots is extremely hazardous. *(INTERACT WITH)*",
+        "sectionName": "Sentence Transformation & Writing",
+        "options": [
+            {"id": "A", "text": "It is extremely dangerous to interact with toxic waste disposal facilities without proper robots."},
+            {"id": "B", "text": "Interacting with proper robots in toxic waste disposal facilities is extremely safe."},
+            {"id": "C", "text": "It is extremely hazardous interacting with toxic waste without proper robots."},
+            {"id": "D", "text": "To interact with toxic waste disposal facilities without proper robots is safe."}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Cấu trúc giả chủ ngữ: It is + adj + to-V (to interact with toxic waste disposal facilities...)."
+    },
+    {
+        "content": "Choose the sentence that is closest in meaning to the original sentence:\n\nQuestion 74: Modern neural networks are capable of generating photorealistic imagery. *(ABILITY)*",
+        "sectionName": "Sentence Transformation & Writing",
+        "options": [
+            {"id": "A", "text": "Modern neural networks have the ability to generate photorealistic imagery."},
+            {"id": "B", "text": "Modern neural networks have the ability of generate photorealistic imagery."},
+            {"id": "C", "text": "The ability of modern neural networks are generating photorealistic imagery."},
+            {"id": "D", "text": "Modern neural networks are having ability in generating photorealistic imagery."}
+        ],
+        "correctAnswer": "A",
+        "explanation": "be capable of V-ing = have the ability to-V."
+    },
+    {
+        "content": "Choose the sentence that is closest in meaning to the original sentence:\n\nQuestion 75: The factory supervisor forced all assembly workers to wear computerized safety vests. *(MAKE + SB + V-BARE)*",
+        "sectionName": "Sentence Transformation & Writing",
+        "options": [
+            {"id": "A", "text": "The factory supervisor made all assembly workers wear computerized safety vests."},
+            {"id": "B", "text": "The factory supervisor made all assembly workers to wear computerized safety vests."},
+            {"id": "C", "text": "The factory supervisor made computerized safety vests worn by all assembly workers."},
+            {"id": "D", "text": "The factory supervisor was made all assembly workers wear computerized safety vests."}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Cấu trúc ép buộc / tác động: make + sb + V-bare (wear)."
+    },
+    {
+        "content": "Choose the sentence that is closest in meaning to the original sentence:\n\nQuestion 76: AI educational applications do not seek to replace certified school teachers. *(SUBSTITUTE)*",
+        "sectionName": "Sentence Transformation & Writing",
+        "options": [
+            {"id": "A", "text": "AI educational applications are not designed to substitute for certified school teachers."},
+            {"id": "B", "text": "AI educational applications do not substitute certified school teachers by human."},
+            {"id": "C", "text": "Certified school teachers are not designed to substitute AI educational applications."},
+            {"id": "D", "text": "AI educational applications cannot make a substitute of certified school teachers."}
+        ],
+        "correctAnswer": "A",
+        "explanation": "replace sb = substitute for sb (thay thế cho vị trí của ai)."
+    },
+    {
+        "content": "Choose the sentence that is closest in meaning to the original sentence:\n\nQuestion 77: Software developers regularly repair corrupted system registries to maintain stability. *(GET + STH + V3)*",
+        "sectionName": "Sentence Transformation & Writing",
+        "options": [
+            {"id": "A", "text": "Software developers get corrupted system registries repaired regularly to maintain stability."},
+            {"id": "B", "text": "Software developers get corrupted system registries repair regularly to maintain stability."},
+            {"id": "C", "text": "Software developers get to repair corrupted system registries regularly to maintain stability."},
+            {"id": "D", "text": "Corrupted system registries get software developers repaired regularly to maintain stability."}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Cấu trúc sai khiến bị động: get + sth (system registries) + V3/ed (repaired)."
+    },
+    {
+        "content": "Choose the sentence that is closest in meaning to the original sentence:\n\nQuestion 78: The students gained practical experience by assembling automated circuits in class. *(HANDS-ON)*",
+        "sectionName": "Sentence Transformation & Writing",
+        "options": [
+            {"id": "A", "text": "Assembling automated circuits provided students with hands-on experience."},
+            {"id": "B", "text": "Assembling automated circuits got students hands-on experiences by class."},
+            {"id": "C", "text": "Hands-on experience made students assemble automated circuits in class."},
+            {"id": "D", "text": "Students had assembling automated circuits provide hands-on experience."}
+        ],
+        "correctAnswer": "A",
+        "explanation": "gain practical experience = provide sb with hands-on experience (mang lại kinh nghiệm thực tế, thực hành)."
+    },
+    {
+        "content": "Choose the sentence that is closest in meaning to the original sentence:\n\nQuestion 79: The director permitted the engineering intern to run the test script. *(LET + SB + V-BARE)*",
+        "sectionName": "Sentence Transformation & Writing",
+        "options": [
+            {"id": "A", "text": "The director let the engineering intern run the test script."},
+            {"id": "B", "text": "The director let the engineering intern to run the test script."},
+            {"id": "C", "text": "The director let the test script run by the engineering intern."},
+            {"id": "D", "text": "The director was let the engineering intern run the test script."}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Cấu trúc cho phép: let + sb + V-bare (run)."
+    },
+    {
+        "content": "Choose the sentence that is closest in meaning to the original sentence:\n\nQuestion 80: The prompt was crafted so vaguely that it caused the language model to generate faulty output. *(MAKE)*",
+        "sectionName": "Sentence Transformation & Writing",
+        "options": [
+            {"id": "A", "text": "The vague prompt made the language model generate faulty output."},
+            {"id": "B", "text": "The vague prompt made the language model to generate faulty output."},
+            {"id": "C", "text": "The vague prompt made faulty output generated by the language model."},
+            {"id": "D", "text": "Making a vague prompt caused the language model generated faulty output."}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Cấu trúc tác nhân gây ra: make + O + V-bare (generate)."
+    }
+]
+
+def main():
+    payload = {
+        "studentUsername": "thai",
+        "grade": 11,
+        "assignedDate": "2026-11-03T00:00:00.000Z",
+        "unitTitle": "Unit 4 & Chuyên Đề Nâng Cao 90 Phút: Artificial Intelligence & Causatives (80 câu)",
+        "unitDescription": "Bộ đề ôn luyện chuyên sâu 90 phút (80 câu): Ngữ âm & trọng âm, Từ vựng AI & Word Formation đa tầng, Cấu trúc câu sai khiến (Causatives), 2 bài đọc hiểu chuyên sâu & Viết lại câu mục tiêu 8.5+.",
+        "lectureMarkdown": """# 🌟 Cẩm Nang Tri Thức & Đấu Trường Từ Vựng Unit 4 & Chuyên Đề AI
+**Biên soạn riêng cho Bạn Thái • Hướng dẫn: Thầy Thức**
+
+Chuyên đề: **ASEAN and Viet Nam & Bộ Đề Ôn Luyện Chuyên Sâu 90 Phút: Artificial Intelligence**
+Quy chuẩn: **Bộ đề 80 câu phân hóa cao mục tiêu 8.5+ Giữa kì & THPT Quốc Gia**
+
+[🚀 MỞ PHÒNG HỌC TƯƠNG TÁC TOÀN MÀN HÌNH](/lectures/eng11-unit4/index.html)
+
+---
+
+### 📌 Ma trận & Mục tiêu kiến thức buổi học hôm nay (03/11/2026):
+1. **Phonetics & Word Stress:** Quy tắc phát âm đuôi *-ed*, nguyên âm đối chiếu (*capability, precision, recognition*), trọng âm từ đa âm tiết (*interactive, autonomous, facilitate*).
+2. **Từ vựng & Word Formation đa tầng:** Biến thể của các từ vựng cốt lõi: *interact, capable, recognize, explore, science, repair, analyse, programme, proficient, danger, able, improve, hands-on, effective, substitute, autonomous, facilitate*.
+3. **Ngữ pháp trọng tâm - Thể sai khiến (Causative Verbs):**
+   - Chủ động: `have + O (người) + V-bare` / `get + O (người) + to-V`
+   - Bị động: `have / get + O (vật) + V3/V-ed (+ by O)`
+   - Cấu trúc nhân quả / bắt buộc / cho phép: `make / let + O + V-bare`
+4. **Đọc hiểu chuyên sâu:**
+   - Reading 1: *Generative AI in Modern Education & Academic Ethics* (Guided Cloze - 10 câu).
+   - Reading 2: *Autonomous Robotics in Extreme Terrains & Industrial Safety* (Deep Comprehension - 8 câu).
+5. **Viết lại câu & Chuyển đổi cấu trúc (12 câu):** Khắc phục toàn bộ bẫy giới từ và dạng động từ của cấu trúc sai khiến.
+""",
+        "teacherNote": "Thầy Thức dặn Thái: Hôm nay con hoàn thành Bộ đề ôn luyện chuyên sâu 90 phút (80 câu) theo đúng chuẩn đề thi nâng cao gồm Ngữ âm, Từ vựng AI, Cấu trúc sai khiến (Causatives have/get/make/let), Word Formation và 2 bài đọc hiểu chuyên sâu. Chúc con đạt điểm 8.5+!",
+        "assessmentTitle": "Bộ Đề Ôn Luyện Chuyên Sâu 90 Phút: Unit 6 - Artificial Intelligence & Ngữ Pháp Sai Khiến (80 câu)",
+        "timeLimitMinutes": 90,
+        "questions": questions
+    }
+
+    output_path = os.path.join(os.path.dirname(__file__), "payload_thai_0311_exam.json")
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+
+    print(f"✅ Successfully compiled {len(questions)} questions to {output_path}")
+
+if __name__ == "__main__":
+    main()
