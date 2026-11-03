@@ -42,27 +42,170 @@
 
     <!-- Navigation Tabs Bar -->
     <nav class="tabs-bar" role="tablist">
-      <button class="tab-btn active" data-tab="tab-vocab" role="tab" aria-selected="true">
-        <span>📚</span> 1. Lý Thuyết & 24 Từ Vựng
+      <button class="tab-btn active" data-tab="tab-flashcards" role="tab" aria-selected="true">
+        <span>🎴</span> 1. Thẻ Flashcard 3D (2 Chiều)
+      </button>
+      <button class="tab-btn" data-tab="tab-vocab" role="tab" aria-selected="false">
+        <span>📚</span> 2. Lý Thuyết & 24 Từ Vựng
       </button>
       <button class="tab-btn" data-tab="tab-collocations" role="tab" aria-selected="false">
-        <span>🧩</span> 2. Cặp Từ Tự Nhiên (Collocations)
+        <span>🧩</span> 3. Cặp Từ Tự Nhiên (Collocations)
       </button>
       <button class="tab-btn" data-tab="tab-wordfamily" role="tab" aria-selected="false">
-        <span>🌳</span> 3. Cây Từ Loại (Word Family)
+        <span>🌳</span> 4. Cây Từ Loại (Word Family)
       </button>
       <button class="tab-btn" data-tab="tab-recall" role="tab" aria-selected="false">
-        <span>⚡</span> 4. Đoán Chữ Siêu Tốc (Active Recall)
+        <span>⚡</span> 5. Đoán Chữ Siêu Tốc (Active Recall)
       </button>
       <button class="tab-btn" data-tab="tab-writing" role="tab" aria-selected="false">
-        <span>✍️</span> 5. Thử Thách Đặt Câu (Writing)
+        <span>✍️</span> 6. Thử Thách Đặt Câu (Writing)
       </button>
     </nav>
 
     <!-- ========================================================
-         TAB 1: VOCABULARY & GRAMMAR HUB
+         TAB 1: INTERACTIVE 3D FLASHCARDS (2 FUNCTIONS)
          ======================================================== -->
-    <section id="tab-vocab" class="tab-content active" role="tabpanel">
+    <section id="tab-flashcards" class="tab-content active" role="tabpanel">
+      <div class="flashcard-panel-wrapper">
+        <!-- Control Header & Mode Switcher -->
+        <div class="fc-control-card">
+          <div class="fc-control-top">
+            <div class="fc-heading-area">
+              <span class="fc-badge-pill">🎴 ACTIVE RECALL FLASHCARDS</span>
+              <h3 class="fc-main-title">Phòng Luyện Flashcards 3D Hai Chiều</h3>
+              <p class="fc-subtitle">Chạm vào thẻ hoặc bấm phím cách (Space) để lật mặt sau. Tùy chọn 2 chức năng theo đúng mục tiêu ôn tập:</p>
+            </div>
+            
+            <!-- View Selector (Deck vs Grid) -->
+            <div class="fc-view-selector" role="group" aria-label="Kiểu hiển thị">
+              <button type="button" class="fc-view-pill active" id="fcViewDeckBtn" data-view="deck">
+                <span>🎴</span> Luyện Từng Thẻ (Deck)
+              </button>
+              <button type="button" class="fc-view-pill" id="fcViewGridBtn" data-view="grid">
+                <span>📋</span> Lưới 24 Thẻ (Grid)
+              </button>
+            </div>
+          </div>
+
+          <!-- 2 Main Direction Functions Requested by User -->
+          <div class="fc-mode-toolbar">
+            <span class="fc-mode-caption">🎯 Chọn chức năng hiển thị mặt thẻ:</span>
+            <div class="fc-mode-switch-group">
+              <button type="button" class="fc-mode-btn active" id="btnModeEnVi" data-mode="en-vi">
+                <span class="fc-mode-icon">🇬🇧 ➔ 🇻🇳</span>
+                <div class="fc-mode-text">
+                  <strong>Chức năng 1: Hiện Tiếng Anh ➔ Giấu Tiếng Việt</strong>
+                  <small>Mặt trước: Từ tiếng Anh, IPA, phát âm • Mặt sau: Nghĩa tiếng Việt, ví dụ</small>
+                </div>
+              </button>
+              <button type="button" class="fc-mode-btn" id="btnModeViEn" data-mode="vi-en">
+                <span class="fc-mode-icon">🇻🇳 ➔ 🇬🇧</span>
+                <div class="fc-mode-text">
+                  <strong>Chức năng 2: Hiện Tiếng Việt ➔ Giấu Tiếng Anh</strong>
+                  <small>Mặt trước: Nghĩa tiếng Việt • Mặt sau: Từ tiếng Anh, IPA, phát âm, ví dụ</small>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Filter Group by Unit -->
+          <div class="fc-filter-row">
+            <span class="fc-filter-caption">Lọc theo nhóm từ:</span>
+            <div class="fc-filter-chips" id="fcFilterChips">
+              <button class="filter-chip active" data-unit="all">Tất cả (24 từ)</button>
+              <button class="filter-chip" data-unit="1">Nhóm 1: Khối ASEAN (8)</button>
+              <button class="filter-chip" data-unit="2">Nhóm 2: Hiến Chương (8)</button>
+              <button class="filter-chip" data-unit="3">Nhóm 3: Giới Trẻ (8)</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1. DECK PLAYER VIEW (Single Card Mode) -->
+        <div class="fc-deck-container" id="fcDeckContainer">
+          <!-- Progress & Shortcuts Header -->
+          <div class="fc-deck-header">
+            <div class="fc-progress-wrap">
+              <div class="fc-progress-bar">
+                <div class="fc-progress-fill" id="fcProgressFill" style="width: 4%;"></div>
+              </div>
+              <span class="fc-progress-counter" id="fcProgressCounter">Thẻ 1 / 24</span>
+            </div>
+            <div class="fc-deck-actions-top">
+              <button type="button" class="fc-btn-sm" id="fcShuffleBtn" title="Xáo trộn thứ tự các thẻ (Phím S)">
+                <span>🔀</span> Xáo trộn
+              </button>
+              <button type="button" class="fc-btn-sm" id="fcResetOrderBtn" title="Đặt lại thứ tự ban đầu">
+                <span>↩️</span> Thứ tự gốc
+              </button>
+            </div>
+          </div>
+
+          <!-- 3D Card Scene -->
+          <div class="fc-scene" id="fcScene">
+            <div class="fc-card" id="fcCard" tabindex="0" role="button" aria-label="Thẻ ghi nhớ flashcard. Bấm hoặc nhấn phím Space để lật.">
+              <!-- Front Face (Dynamic) -->
+              <div class="fc-side fc-side-front" id="fcFront">
+                <!-- Rendered dynamically -->
+              </div>
+              <!-- Back Face (Dynamic) -->
+              <div class="fc-side fc-side-back" id="fcBack">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Deck Navigation Controls -->
+          <div class="fc-deck-controls">
+            <button type="button" class="fc-nav-btn" id="fcPrevBtn" title="Thẻ trước (Phím ←)">
+              <span>⬅️</span> Thẻ Trước
+            </button>
+            <button type="button" class="fc-flip-btn" id="fcFlipBtn" title="Lật thẻ (Phím Space hoặc Click vào thẻ)">
+              <span>🔄</span> Lật Mặt Sau
+            </button>
+            <button type="button" class="fc-audio-btn" id="fcSpeakBtn" title="Nghe phát âm chuẩn (Phím P)">
+              <span>🔊</span> Phát Âm
+            </button>
+            <button type="button" class="fc-nav-btn primary" id="fcNextBtn" title="Thẻ kế tiếp (Phím →)">
+              Thẻ Kế Tiếp <span>➡️</span>
+            </button>
+          </div>
+
+          <!-- Keyboard Guide Tooltip -->
+          <div class="fc-keyboard-guide">
+            <span>⌨️ Phím tắt:</span>
+            <kbd>Space</kbd> Lật thẻ &nbsp;•&nbsp; 
+            <kbd>←</kbd> <kbd>→</kbd> Chuyển thẻ &nbsp;•&nbsp; 
+            <kbd>P</kbd> Phát âm &nbsp;•&nbsp; 
+            <kbd>1</kbd> Anh ➔ Việt &nbsp;•&nbsp; 
+            <kbd>2</kbd> Việt ➔ Anh
+          </div>
+        </div>
+
+        <!-- 2. GRID VIEW (All Cards with 3D Flip) -->
+        <div class="fc-grid-container" id="fcGridContainer" style="display: none;">
+          <div class="fc-grid-toolbar">
+            <span id="fcGridCountText">Hiển thị 24 thẻ flashcard</span>
+            <div class="fc-grid-actions">
+              <button type="button" class="fc-btn-sm" id="fcGridFlipAllBtn">
+                <span>🔄</span> Lật tất cả mặt sau
+              </button>
+              <button type="button" class="fc-btn-sm" id="fcGridResetAllBtn">
+                <span>↩️</span> Úp lại mặt trước
+              </button>
+            </div>
+          </div>
+
+          <div class="fc-grid-cards" id="fcGridCards">
+            <!-- Rendered dynamically by app.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         TAB 2: VOCABULARY & GRAMMAR HUB
+         ======================================================== -->
+    <section id="tab-vocab" class="tab-content" role="tabpanel">
       <!-- Search & Unit Filter -->
       <div class="search-filter-row">
         <div class="search-input-wrap">
