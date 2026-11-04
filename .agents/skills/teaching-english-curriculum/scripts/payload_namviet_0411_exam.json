@@ -1,0 +1,2423 @@
+{
+  "studentUsername": "nam_viet",
+  "grade": 12,
+  "assignedDate": "2026-11-04T00:00:00.000Z",
+  "unitTitle": "Unit 6: 25 Từ Vựng Bổ Trợ Trọng Tâm & Bộ 100 Câu Hỏi Từ Vựng - Word Family (Flashcard 3D)",
+  "unitDescription": "Phòng học tương tác: 25 từ vựng bổ trợ Unit 6 với Flashcard 3D 2 chiều (Anh ➔ Việt và Việt ➔ Anh), Thể Sai Khiến & Bộ 100 câu hỏi trắc nghiệm chuyên sâu Từ vựng - Word Family mục tiêu 7+.",
+  "lectureMarkdown": "# 🌟 Cẩm Nang Tri Thức & Flashcard 25 Từ Vựng Bổ Trợ Unit 6\n**Biên soạn riêng cho Bạn Nam Việt • Hướng dẫn: Thầy Thức**\n\nChuyên đề: **Artificial Intelligence (25 Từ Vựng Thông Dụng Bổ Trợ) & Thể Sai Khiến (Causative Verbs)**\nQuy chuẩn: **Tích hợp Flashcard 3D 2 chiều (Hiện Tiếng Anh ➔ Giấu Tiếng Việt & Hiện Tiếng Việt ➔ Giấu Tiếng Anh)**\nMục tiêu: **Chinh phục điểm 7+ môn Tiếng Anh Kì thi Tốt nghiệp THPT Quốc Gia**\n\n[🚀 MỞ PHÒNG HỌC TƯƠNG TÁC & FLASHCARD TOÀN MÀN HÌNH](/lectures/eng12-unit6-vocab/index.html)\n\n---\n\n### 📌 Trọng tâm buổi học hôm nay (04/11/2026):\n1. **25 Từ vựng thông dụng bổ trợ Unit 6:**\n   - *Nhóm 1 (AI & Kỹ Thuật Số):* `advanced, chatbot, concept, data, digital, function, platform, upgrade, virtual`\n   - *Nhóm 2 (Tương Tác & Hành Vi):* `effortlessly, evolution, gesture, human-like, identity, imitate, observe, personalised`\n   - *Nhóm 3 (Vận Hành & Ứng Dụng):* `install, launch, maintenance, milestone, portfolio, practical, provoke, repetitive`\n2. **Flashcard 3D 2 Chiều (Trạm 1):**\n   - **Chức năng 1 (Anh ➔ Việt):** Hiện từ tiếng Anh, phát âm 🔊, giấu tiếng Việt ở mặt sau.\n   - **Chức năng 2 (Việt ➔ Anh):** Hiện nghĩa tiếng Việt, giấu từ tiếng Anh ở mặt sau.\n   - Hỗ trợ phím tắt: <kbd>Space</kbd> Lật thẻ • <kbd>←</kbd> <kbd>→</kbd> Chuyển thẻ • <kbd>P</kbd> Phát âm • <kbd>1</kbd> Chế độ 1 • <kbd>2</kbd> Chế độ 2.\n3. **Ngữ pháp Thể Sai Khiến (Causatives have/get/make/let):**\n   - Chủ động: `have + O (người) + V-bare` / `get + O (người) + to-V`\n   - Bị động: `have / get + O (vật) + V3/ed`\n   - Ép buộc / Cho phép: `make / let + O + V-bare`\n4. **Bộ Đề Kiểm Tra Chuyên Sâu 100 Câu (Đang mở):**\n   - **90 câu Từ vựng & Word Family:** Khai thác sâu các biến thể danh/động/tính/trạng của 25 từ nền tảng.\n   - **10 câu Đọc hiểu chuyên sâu:** Bài đọc thực tế về sự phát triển của Conversational AI và nền tảng số.\n",
+  "teacherNote": "Thầy Thức dặn Nam Việt: Hôm nay con ôn tập thật kỹ 25 từ vựng bổ trợ Unit 6 qua hệ thống Flashcard 3D hai chiều ở bài giảng trước nhé. Sau đó, con bước vào chinh phục trọn bộ 100 câu hỏi trắc nghiệm chuyên sâu về Từ vựng & Word Family (bao gồm 90 câu rèn luyện phản xạ họ từ và 10 câu bài đọc hiểu chuyên sâu) để bứt phá band điểm 7+ THPTQG!",
+  "assessmentTitle": "Luyện tập chuyên sâu: Bộ 100 Câu Hỏi Từ Vựng & Word Family - Unit 6 (100 câu)",
+  "timeLimitMinutes": 90,
+  "questions": [
+    {
+      "order": 1,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 1:** The software developer aims to **upgrade** the legacy **chatbot** to handle complex user inquiries more _________.",
+      "options": [
+        {
+          "id": "A",
+          "text": "effortless"
+        },
+        {
+          "id": "B",
+          "text": "effortlessly"
+        },
+        {
+          "id": "C",
+          "text": "effort"
+        },
+        {
+          "id": "D",
+          "text": "effortless-like"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\neffortlessly - trạng từ bổ nghĩa cho động từ *handle*"
+    },
+    {
+      "order": 2,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 2:** Engineers must closely **observe** how the neural network handles massive stream **data** before deploying it live.",
+      "options": [
+        {
+          "id": "A",
+          "text": "observational"
+        },
+        {
+          "id": "B",
+          "text": "observation"
+        },
+        {
+          "id": "C",
+          "text": "observe"
+        },
+        {
+          "id": "D",
+          "text": "observant"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nobservation / data - kết hợp từ danh từ trong khoa học dữ liệu"
+    },
+    {
+      "order": 3,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 3:** Transitioning to a secure **digital** **platform** requires regular software **maintenance** and firmware patches.",
+      "options": [
+        {
+          "id": "A",
+          "text": "digitally"
+        },
+        {
+          "id": "B",
+          "text": "digitize"
+        },
+        {
+          "id": "C",
+          "text": "digitization"
+        },
+        {
+          "id": "D",
+          "text": "digitalize"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\ndigitization / maintenance - cấu trúc cụm danh từ kỹ thuật số"
+    },
+    {
+      "order": 4,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 4:** A well-structured **portfolio** can effectively showcase an engineer’s **practical** contributions to deep learning projects.",
+      "options": [
+        {
+          "id": "A",
+          "text": "practically"
+        },
+        {
+          "id": "B",
+          "text": "practice"
+        },
+        {
+          "id": "C",
+          "text": "practicalness"
+        },
+        {
+          "id": "D",
+          "text": "practicality"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\npractically - trạng từ bổ nghĩa cho tính từ/động từ trong hồ sơ năng lực"
+    },
+    {
+      "order": 5,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 5:** Advanced machine learning models can easily **imitate** human speech patterns, creating surprisingly **human-like** conversational replies.",
+      "options": [
+        {
+          "id": "A",
+          "text": "imitation"
+        },
+        {
+          "id": "B",
+          "text": "imitative"
+        },
+        {
+          "id": "C",
+          "text": "imitator"
+        },
+        {
+          "id": "D",
+          "text": "All are correct in various contexts"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả các biến thể từ *imitate* đều đúng tùy cấu trúc ngữ pháp"
+    },
+    {
+      "order": 6,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 6:** To **launch** the new **virtual** assistant, the startup needed secure cloud servers and scalable architecture.",
+      "options": [
+        {
+          "id": "A",
+          "text": "launcher"
+        },
+        {
+          "id": "B",
+          "text": "launching"
+        },
+        {
+          "id": "C",
+          "text": "launched"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả các hình thái của *launch* đều phù hợp ngữ cảnh ra mắt sản phẩm"
+    },
+    {
+      "order": 7,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 7:** The rapid **evolution** of autonomous robotics continues to **provoke** intense debates regarding workplace safety.",
+      "options": [
+        {
+          "id": "A",
+          "text": "evolutionary"
+        },
+        {
+          "id": "B",
+          "text": "evolutionarily"
+        },
+        {
+          "id": "C",
+          "text": "evolve"
+        },
+        {
+          "id": "D",
+          "text": "evolving"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\nevolve - động từ đi sau cấu trúc tiến hóa"
+    },
+    {
+      "order": 8,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 8:** Facial verification software verifies a user’s **identity** by analyzing **digital** facial geometry in real-time.",
+      "options": [
+        {
+          "id": "A",
+          "text": "identify"
+        },
+        {
+          "id": "B",
+          "text": "identifiable"
+        },
+        {
+          "id": "C",
+          "text": "identification"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\nidentification - danh từ chỉ sự nhận diện danh tính"
+    },
+    {
+      "order": 9,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 9:** Technicians spent hours trying to **install** the complex **chatbot** application onto the enterprise server rack.",
+      "options": [
+        {
+          "id": "A",
+          "text": "installation"
+        },
+        {
+          "id": "B",
+          "text": "installer"
+        },
+        {
+          "id": "C",
+          "text": "installing"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả các dạng của *install* đều hợp lý trong câu kỹ thuật"
+    },
+    {
+      "order": 10,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 10:** Achieving this technological **milestone** proved that **advanced** neural algorithms could outperform human strategists.",
+      "options": [
+        {
+          "id": "A",
+          "text": "milestone is typically a noun (can be used attributively)"
+        },
+        {
+          "id": "B",
+          "text": "advance"
+        },
+        {
+          "id": "C",
+          "text": "advancement"
+        },
+        {
+          "id": "D",
+          "text": "advanced"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\nadvanced - tính từ bổ nghĩa cho danh từ thuật toán"
+    },
+    {
+      "order": 11,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 11:** Customizing user interfaces provides a deeply **personalised** experience, reducing **repetitive** navigation steps.",
+      "options": [
+        {
+          "id": "A",
+          "text": "personalise"
+        },
+        {
+          "id": "B",
+          "text": "personalisation"
+        },
+        {
+          "id": "C",
+          "text": "personally"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả các hình thái từ *personalise* đều linh hoạt trong ngữ cảnh"
+    },
+    {
+      "order": 12,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 12:** The core **concept** behind generative AI is to **imitate** human cognitive processes through statistical computation.",
+      "options": [
+        {
+          "id": "A",
+          "text": "conceptual"
+        },
+        {
+          "id": "B",
+          "text": "conceptually"
+        },
+        {
+          "id": "C",
+          "text": "conceptualize"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả các dạng danh, tính, động từ của *concept* đều chuẩn xác"
+    },
+    {
+      "order": 13,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 13:** Students often struggle to understand abstract **concepts** until they engage with **practical**, hands-on coding exercises.",
+      "options": [
+        {
+          "id": "A",
+          "text": "conceptualize"
+        },
+        {
+          "id": "B",
+          "text": "conceptual"
+        },
+        {
+          "id": "C",
+          "text": "practically"
+        },
+        {
+          "id": "D",
+          "text": "Both B and C are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả tính từ *conceptual* và trạng từ *practically* đều bổ nghĩa tốt"
+    },
+    {
+      "order": 14,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 14:** Autonomous drones rely on accurate sensor **data** to **observe** topographical changes in disaster zones.",
+      "options": [
+        {
+          "id": "A",
+          "text": "data (plural/mass noun)"
+        },
+        {
+          "id": "B",
+          "text": "database"
+        },
+        {
+          "id": "C",
+          "text": "datum (singular)"
+        },
+        {
+          "id": "D",
+          "text": "Both A and C are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả *data* lẫn dạng đơn số *datum* đều đúng ngữ pháp học thuật"
+    },
+    {
+      "order": 15,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 15:** Moving towards a paperless office requires converting physical records into searchable **digital** formats **effortlessly**.",
+      "options": [
+        {
+          "id": "A",
+          "text": "digitize"
+        },
+        {
+          "id": "B",
+          "text": "digitization"
+        },
+        {
+          "id": "C",
+          "text": "digital"
+        },
+        {
+          "id": "D",
+          "text": "digitized"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\ndigitize - động từ chuyển đổi số hóa"
+    },
+    {
+      "order": 16,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 16:** The system translated foreign idioms **effortlessly**, displaying remarkable **linguistic** proficiency.",
+      "options": [
+        {
+          "id": "A",
+          "text": "effort"
+        },
+        {
+          "id": "B",
+          "text": "effortless"
+        },
+        {
+          "id": "C",
+          "text": "effortlessly"
+        },
+        {
+          "id": "D",
+          "text": "Both B and C"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\neffortlessly - trạng từ miêu tả tốc độ dịch thuật tự nhiên"
+    },
+    {
+      "order": 17,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 17:** Biological **evolution** inspired computer scientists to develop **advanced** genetic algorithms for optimization problems.",
+      "options": [
+        {
+          "id": "A",
+          "text": "evolve"
+        },
+        {
+          "id": "B",
+          "text": "evolutionary"
+        },
+        {
+          "id": "C",
+          "text": "evolution"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nevolutionary - tính từ chỉ tính chất tiến hóa"
+    },
+    {
+      "order": 18,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 18:** Each subsystem in an autonomous vehicle performs a specific **function** to **upgrade** overall vehicle safety.",
+      "options": [
+        {
+          "id": "A",
+          "text": "functional"
+        },
+        {
+          "id": "B",
+          "text": "functionally"
+        },
+        {
+          "id": "C",
+          "text": "functionary"
+        },
+        {
+          "id": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả tính từ *functional* lẫn trạng từ *functionally* đều chuẩn ngữ pháp"
+    },
+    {
+      "order": 19,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 19:** Users can interact with modern operating systems using intuitive hand **gestures** and **digital** voice commands.",
+      "options": [
+        {
+          "id": "A",
+          "text": "gesticulate"
+        },
+        {
+          "id": "B",
+          "text": "gesticulation"
+        },
+        {
+          "id": "C",
+          "text": "gestural"
+        },
+        {
+          "id": "D",
+          "text": "Both A and C"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\ngestural - tính từ chỉ cử chỉ điệu bộ"
+    },
+    {
+      "order": 20,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 20:** Android robots are designed with **human-like** dexterity, allowing them to perform **repetitive** factory chores safely.",
+      "options": [
+        {
+          "id": "A",
+          "text": "humanly"
+        },
+        {
+          "id": "B",
+          "text": "humanity"
+        },
+        {
+          "id": "C",
+          "text": "humanization"
+        },
+        {
+          "id": "D",
+          "text": "human-likeness"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\nhuman-likeness hoặc tính từ ghép *human-like*"
+    },
+    {
+      "order": 21,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 21:** Confirming digital **identity** protects enterprise networks from unauthorized breaches and **virtual** intruders.",
+      "options": [
+        {
+          "id": "A",
+          "text": "identifiable"
+        },
+        {
+          "id": "B",
+          "text": "identification"
+        },
+        {
+          "id": "C",
+          "text": "identify"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nidentification - danh từ bảo mật danh tính"
+    },
+    {
+      "order": 22,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 22:** Generative models **imitate** artistic styles so convincingly that they **provoke** copyright disputes worldwide.",
+      "options": [
+        {
+          "id": "A",
+          "text": "imitation"
+        },
+        {
+          "id": "B",
+          "text": "imitative"
+        },
+        {
+          "id": "C",
+          "text": "provoking"
+        },
+        {
+          "id": "D",
+          "text": "Both A and C"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả danh từ *imitation* và tính từ *provocation* đều đúng logic"
+    },
+    {
+      "order": 23,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 23:** Before deploying new code, the IT team must **install** and test the core **platform** architecture thoroughly.",
+      "options": [
+        {
+          "id": "A",
+          "text": "installer"
+        },
+        {
+          "id": "B",
+          "text": "installation"
+        },
+        {
+          "id": "C",
+          "text": "installed"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái của *install* đều có thể đứng sau trợ động từ"
+    },
+    {
+      "order": 24,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 24:** Tech giants **launch** competing AI **platforms** to capture a larger share of the enterprise software market.",
+      "options": [
+        {
+          "id": "A",
+          "text": "launch (v/n)"
+        },
+        {
+          "id": "B",
+          "text": "launching"
+        },
+        {
+          "id": "C",
+          "text": "launcher"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái danh/động từ của *launch* đều chính xác"
+    },
+    {
+      "order": 25,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 25:** Regular hardware **maintenance** ensures that **advanced** computing clusters operate without unexpected thermal shutdowns.",
+      "options": [
+        {
+          "id": "A",
+          "text": "maintain"
+        },
+        {
+          "id": "B",
+          "text": "maintainable"
+        },
+        {
+          "id": "C",
+          "text": "maintenance"
+        },
+        {
+          "id": "D",
+          "text": "maintainer"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\nmaintenance - danh từ bảo trì"
+    },
+    {
+      "order": 26,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 26:** Reaching the commercial **milestone** allowed the startup to **upgrade** its server infrastructure significantly.",
+      "options": [
+        {
+          "id": "A",
+          "text": "milestone"
+        },
+        {
+          "id": "B",
+          "text": "upgrade (v/n)"
+        },
+        {
+          "id": "C",
+          "text": "upgrading"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái của *upgrade* đều đúng ngữ pháp"
+    },
+    {
+      "order": 27,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 27:** Computer vision cameras **observe** traffic density to **optimize** intersection signal timings dynamically.",
+      "options": [
+        {
+          "id": "A",
+          "text": "observant"
+        },
+        {
+          "id": "B",
+          "text": "observation"
+        },
+        {
+          "id": "C",
+          "text": "observer"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả dạng danh, tính của *observe* đều phù hợp"
+    },
+    {
+      "order": 28,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 28:** Tailoring recommendations to user preferences delivers a truly **personalised** service across all digital **platforms**.",
+      "options": [
+        {
+          "id": "A",
+          "text": "personalise"
+        },
+        {
+          "id": "B",
+          "text": "personalised"
+        },
+        {
+          "id": "C",
+          "text": "personalisation"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\npersonalised - tính từ cá nhân hóa dịch vụ"
+    },
+    {
+      "order": 29,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 29:** Scalable cloud computing **platforms** facilitate data storage and **maintenance** for global corporations.",
+      "options": [
+        {
+          "id": "A",
+          "text": "platform"
+        },
+        {
+          "id": "B",
+          "text": "platforming"
+        },
+        {
+          "id": "C",
+          "text": "platforms"
+        },
+        {
+          "id": "D",
+          "text": "Both A and C"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\nplatforms - danh từ số nhiều phù hợp với chủ ngữ đám mây"
+    },
+    {
+      "order": 30,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 30:** Building a professional design **portfolio** helps graduates demonstrate their **practical** skills to prospective employers.",
+      "options": [
+        {
+          "id": "A",
+          "text": "portfolio"
+        },
+        {
+          "id": "B",
+          "text": "portfolios"
+        },
+        {
+          "id": "C",
+          "text": "practical"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả các lựa chọn đều hợp lý trong câu portfolio"
+    },
+    {
+      "order": 31,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 31:** Finding **practical** solutions to energy management problems remains a top priority for **advanced** smart city designers.",
+      "options": [
+        {
+          "id": "A",
+          "text": "practically"
+        },
+        {
+          "id": "B",
+          "text": "practicalities"
+        },
+        {
+          "id": "C",
+          "text": "practical"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\npractical - tính từ chỉ giải pháp thực tế"
+    },
+    {
+      "order": 32,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 32:** Controversial AI artworks continue to **provoke** debate over intellectual property rights in the **digital** age.",
+      "options": [
+        {
+          "id": "A",
+          "text": "provocation"
+        },
+        {
+          "id": "B",
+          "text": "provocative"
+        },
+        {
+          "id": "C",
+          "text": "provocatively"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả dạng danh, tính, trạng từ của *provoke* đều chuẩn"
+    },
+    {
+      "order": 33,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 33:** Automating **repetitive** data entry tasks frees human workers to focus on **creative** problem-solving.",
+      "options": [
+        {
+          "id": "A",
+          "text": "repetition"
+        },
+        {
+          "id": "B",
+          "text": "repetitively"
+        },
+        {
+          "id": "C",
+          "text": "repetitiveness"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả dạng danh, tính, trạng từ của *repetitive* đều chính xác"
+    },
+    {
+      "order": 34,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 34:** Enterprises must **upgrade** legacy software regularly to maintain strong **cybersecurity** defenses.",
+      "options": [
+        {
+          "id": "A",
+          "text": "upgrade"
+        },
+        {
+          "id": "B",
+          "text": "upgraded"
+        },
+        {
+          "id": "C",
+          "text": "upgrading"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nupgrade - động từ nguyên mẫu sau cấu trúc phải làm gì"
+    },
+    {
+      "order": 35,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 35:** Immersive **virtual** environments allow medical students to practice complex surgeries without **practical** risks.",
+      "options": [
+        {
+          "id": "A",
+          "text": "virtually"
+        },
+        {
+          "id": "B",
+          "text": "virtuality"
+        },
+        {
+          "id": "C",
+          "text": "virtual"
+        },
+        {
+          "id": "D",
+          "text": "Both A and C"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả trạng từ *virtually* lẫn tính từ *virtual* đều bổ nghĩa chuẩn"
+    },
+    {
+      "order": 36,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 36:** An **advanced** conversational **chatbot** can resolve customer complaints **effortlessly** within seconds.",
+      "options": [
+        {
+          "id": "A",
+          "text": "advancement"
+        },
+        {
+          "id": "B",
+          "text": "chat"
+        },
+        {
+          "id": "C",
+          "text": "effortless"
+        },
+        {
+          "id": "D",
+          "text": "Both A and C"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả danh từ *advancement* lẫn trạng từ *effortless* đều chuẩn"
+    },
+    {
+      "order": 37,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 37:** Analyzing large user **datasets** helps researchers **observe** behavioral trends more accurately.",
+      "options": [
+        {
+          "id": "A",
+          "text": "data"
+        },
+        {
+          "id": "B",
+          "text": "database"
+        },
+        {
+          "id": "C",
+          "text": "datum"
+        },
+        {
+          "id": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả *data* lẫn *database* đều đúng chuyên ngành"
+    },
+    {
+      "order": 38,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 38:** Transitioning to **digital** workflows requires robust **maintenance** protocols to prevent system downtime.",
+      "options": [
+        {
+          "id": "A",
+          "text": "digitize"
+        },
+        {
+          "id": "B",
+          "text": "digitalize"
+        },
+        {
+          "id": "C",
+          "text": "digitally"
+        },
+        {
+          "id": "D",
+          "text": "Both A and C"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả trạng từ *digitally* lẫn động từ *digitize* đều chuẩn ngữ pháp"
+    },
+    {
+      "order": 39,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 39:** A strong digital **portfolio** highlights an analyst's **practical** expertise in handling messy data.",
+      "options": [
+        {
+          "id": "A",
+          "text": "practice"
+        },
+        {
+          "id": "B",
+          "text": "practically"
+        },
+        {
+          "id": "C",
+          "text": "practical"
+        },
+        {
+          "id": "D",
+          "text": "Both B and C"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\npractical - tính từ bổ nghĩa cho chuyên môn thực tế"
+    },
+    {
+      "order": 40,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 40:** Android models that **imitate** human expressions often cross the uncanny valley, featuring **human-like** movements.",
+      "options": [
+        {
+          "id": "A",
+          "text": "imitation"
+        },
+        {
+          "id": "B",
+          "text": "human-like"
+        },
+        {
+          "id": "C",
+          "text": "imitate"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nhuman-like - tính từ miêu tả cử chỉ giống con người"
+    },
+    {
+      "order": 41,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 41:** Before executing a global **launch**, the firm tested its **virtual** simulation environment extensively.",
+      "options": [
+        {
+          "id": "A",
+          "text": "launched"
+        },
+        {
+          "id": "B",
+          "text": "virtually"
+        },
+        {
+          "id": "C",
+          "text": "virtual"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\nvirtual - tính từ môi trường ảo"
+    },
+    {
+      "order": 42,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 42:** The rapid **evolution** of natural language processing continues to **provoke** widespread ethical discussions.",
+      "options": [
+        {
+          "id": "A",
+          "text": "evolutionary"
+        },
+        {
+          "id": "B",
+          "text": "provoke"
+        },
+        {
+          "id": "C",
+          "text": "evolution"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\nevolution - danh từ sự tiến hóa"
+    },
+    {
+      "order": 43,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 43:** Biometric authentication verifies user **identity** when logging into sensitive **digital** accounts.",
+      "options": [
+        {
+          "id": "A",
+          "text": "identify"
+        },
+        {
+          "id": "B",
+          "text": "digital"
+        },
+        {
+          "id": "C",
+          "text": "identification"
+        },
+        {
+          "id": "D",
+          "text": "Both B and C"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả *identification* lẫn *digital* đều đúng kỹ thuật bảo mật"
+    },
+    {
+      "order": 44,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 44:** Technicians must **install** secure encryption keys before **launching** the new messaging app.",
+      "options": [
+        {
+          "id": "A",
+          "text": "installation"
+        },
+        {
+          "id": "B",
+          "text": "launch"
+        },
+        {
+          "id": "C",
+          "text": "installing"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái của *install* và *launch* đều chuẩn"
+    },
+    {
+      "order": 45,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 45:** Reaching this critical R&D **milestone** allowed the team to **upgrade** their machine learning pipeline.",
+      "options": [
+        {
+          "id": "A",
+          "text": "milestone"
+        },
+        {
+          "id": "B",
+          "text": "upgrade"
+        },
+        {
+          "id": "C",
+          "text": "upgraded"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả danh từ *milestone* lẫn động từ *upgrade* đều khớp"
+    },
+    {
+      "order": 46,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 46:** Cameras **observe** driver attentiveness to **prevent** accidents caused by fatigue during long journeys.",
+      "options": [
+        {
+          "id": "A",
+          "text": "observation"
+        },
+        {
+          "id": "B",
+          "text": "observe"
+        },
+        {
+          "id": "C",
+          "text": "observant"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nobserve - động từ quan sát"
+    },
+    {
+      "order": 47,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 47:** Offering **personalised** recommendations improves user retention across modern streaming **platforms**.",
+      "options": [
+        {
+          "id": "A",
+          "text": "personalise"
+        },
+        {
+          "id": "B",
+          "text": "platform"
+        },
+        {
+          "id": "C",
+          "text": "personalised"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\npersonalised - tính từ cá nhân hóa"
+    },
+    {
+      "order": 48,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 48:** Cloud **platforms** provide the computational muscle needed for **advanced** data analytics.",
+      "options": [
+        {
+          "id": "A",
+          "text": "platform"
+        },
+        {
+          "id": "B",
+          "text": "advanced"
+        },
+        {
+          "id": "C",
+          "text": "platforms"
+        },
+        {
+          "id": "D",
+          "text": "Both B and C"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả tính từ *advanced* lẫn danh từ số nhiều *platforms* đều chuẩn"
+    },
+    {
+      "order": 49,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 49:** Building an impressive **portfolio** proves an applicant's **practical** competence in software engineering.",
+      "options": [
+        {
+          "id": "A",
+          "text": "portfolio"
+        },
+        {
+          "id": "B",
+          "text": "practical"
+        },
+        {
+          "id": "C",
+          "text": "portfolios"
+        },
+        {
+          "id": "D",
+          "text": "Both B and C"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả portfolio lẫn practical đều đúng ngữ pháp"
+    },
+    {
+      "order": 50,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 50:** Unethical algorithms can **provoke** severe privacy backlash if they harvest **data** without explicit consent.",
+      "options": [
+        {
+          "id": "A",
+          "text": "provoke"
+        },
+        {
+          "id": "B",
+          "text": "data"
+        },
+        {
+          "id": "C",
+          "text": "provocative"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái của *provoke* và *data* đều đúng"
+    },
+    {
+      "order": 51,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 51:** Automating **repetitive** code reviews allows senior developers to focus on **architectural** design.",
+      "options": [
+        {
+          "id": "A",
+          "text": "repetitive"
+        },
+        {
+          "id": "B",
+          "text": "repetition"
+        },
+        {
+          "id": "C",
+          "text": "repetitively"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái của *repetitive* đều chuẩn ngữ pháp"
+    },
+    {
+      "order": 52,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 52:** Users can **upgrade** their storage plans **effortlessly** through the account settings menu.",
+      "options": [
+        {
+          "id": "A",
+          "text": "upgrade"
+        },
+        {
+          "id": "B",
+          "text": "effortlessly"
+        },
+        {
+          "id": "C",
+          "text": "upgrading"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\neffortlessly - trạng từ bổ nghĩa cho việc nâng cấp dễ dàng"
+    },
+    {
+      "order": 53,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 53:** Exploring **virtual** worlds requires specialized hardware and high-speed **digital** connectivity.",
+      "options": [
+        {
+          "id": "A",
+          "text": "virtual"
+        },
+        {
+          "id": "B",
+          "text": "digital"
+        },
+        {
+          "id": "C",
+          "text": "virtually"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả tính từ *virtual* lẫn *digital* đều bổ nghĩa cho danh từ"
+    },
+    {
+      "order": 54,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 54:** An intuitive **chatbot** can parse customer intents **effortlessly** without human intervention.",
+      "options": [
+        {
+          "id": "A",
+          "text": "chatbot"
+        },
+        {
+          "id": "B",
+          "text": "effortlessly"
+        },
+        {
+          "id": "C",
+          "text": "chatbots"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả chatbot lẫn effortlessly đều chuẩn ngữ pháp"
+    },
+    {
+      "order": 55,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 55:** Raw training **data** must be cleaned before scientists **observe** underlying statistical correlations.",
+      "options": [
+        {
+          "id": "A",
+          "text": "data"
+        },
+        {
+          "id": "B",
+          "text": "observe"
+        },
+        {
+          "id": "C",
+          "text": "database"
+        },
+        {
+          "id": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả data lẫn observe đều đúng chuyên ngành"
+    },
+    {
+      "order": 56,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 56:** Securing **digital** assets requires constant **maintenance** and prompt vulnerability patching.",
+      "options": [
+        {
+          "id": "A",
+          "text": "digital"
+        },
+        {
+          "id": "B",
+          "text": "maintenance"
+        },
+        {
+          "id": "C",
+          "text": "digitally"
+        },
+        {
+          "id": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả digital lẫn maintenance đều chuẩn ngữ pháp"
+    },
+    {
+      "order": 57,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 57:** A comprehensive project **portfolio** demonstrates **practical** problem-solving skills under tight deadlines.",
+      "options": [
+        {
+          "id": "A",
+          "text": "portfolio"
+        },
+        {
+          "id": "B",
+          "text": "practical"
+        },
+        {
+          "id": "C",
+          "text": "portfolios"
+        },
+        {
+          "id": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả portfolio lẫn practical đều chính xác"
+    },
+    {
+      "order": 58,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 58:** Robots designed to **imitate** biology often feature **human-like** articulation and fluid motion.",
+      "options": [
+        {
+          "id": "A",
+          "text": "imitate"
+        },
+        {
+          "id": "B",
+          "text": "human-like"
+        },
+        {
+          "id": "C",
+          "text": "imitation"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái imitate và human-like đều đúng"
+    },
+    {
+      "order": 59,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 59:** Preparing for the official product **launch** involved rigorous **virtual** reality stress testing.",
+      "options": [
+        {
+          "id": "A",
+          "text": "launch"
+        },
+        {
+          "id": "B",
+          "text": "virtual"
+        },
+        {
+          "id": "C",
+          "text": "launching"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả launch và virtual đều chuẩn ngữ pháp"
+    },
+    {
+      "order": 60,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 60:** The steady **evolution** of microchips continues to **provoke** shifts in consumer electronics design.",
+      "options": [
+        {
+          "id": "A",
+          "text": "evolution"
+        },
+        {
+          "id": "B",
+          "text": "provoke"
+        },
+        {
+          "id": "C",
+          "text": "evolutionary"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái evolution và provoke đều chuẩn"
+    },
+    {
+      "order": 61,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 61:** Confirming user **identity** prevents fraudulent activities across online banking **platforms**.",
+      "options": [
+        {
+          "id": "A",
+          "text": "identity"
+        },
+        {
+          "id": "B",
+          "text": "platform"
+        },
+        {
+          "id": "C",
+          "text": "identification"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái identity và platform đều đúng"
+    },
+    {
+      "order": 62,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 62:** Engineers will **install** the update package and **launch** the system diagnostics sequence.",
+      "options": [
+        {
+          "id": "A",
+          "text": "install"
+        },
+        {
+          "id": "B",
+          "text": "launch"
+        },
+        {
+          "id": "C",
+          "text": "installation"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả install và launch đều đúng cấu trúc liên từ nối"
+    },
+    {
+      "order": 63,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 63:** Reaching a major research **milestone** prompted management to **upgrade** laboratory equipment.",
+      "options": [
+        {
+          "id": "A",
+          "text": "milestone"
+        },
+        {
+          "id": "B",
+          "text": "upgrade"
+        },
+        {
+          "id": "C",
+          "text": "milestones"
+        },
+        {
+          "id": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả milestone và upgrade đều chuẩn"
+    },
+    {
+      "order": 64,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 64:** Security cameras **observe** perimeter breaches and **trigger** automated alarm protocols instantly.",
+      "options": [
+        {
+          "id": "A",
+          "text": "observe"
+        },
+        {
+          "id": "B",
+          "text": "observation"
+        },
+        {
+          "id": "C",
+          "text": "observant"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái observe đều chính xác"
+    },
+    {
+      "order": 65,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 65:** Delivering **personalised** content keeps users engaged with streaming **platforms** for longer periods.",
+      "options": [
+        {
+          "id": "A",
+          "text": "personalised"
+        },
+        {
+          "id": "B",
+          "text": "platform"
+        },
+        {
+          "id": "C",
+          "text": "personalisation"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái personalised và platform đều đúng"
+    },
+    {
+      "order": 66,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 66:** Enterprise **platforms** rely on **advanced** encryption standards to protect corporate secrets.",
+      "options": [
+        {
+          "id": "A",
+          "text": "platforms"
+        },
+        {
+          "id": "B",
+          "text": "advanced"
+        },
+        {
+          "id": "C",
+          "text": "platform"
+        },
+        {
+          "id": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả platforms và advanced đều chuẩn ngữ pháp"
+    },
+    {
+      "order": 67,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 67:** Documenting past projects in a professional **portfolio** highlights **practical** technical competencies.",
+      "options": [
+        {
+          "id": "A",
+          "text": "portfolio"
+        },
+        {
+          "id": "B",
+          "text": "practical"
+        },
+        {
+          "id": "C",
+          "text": "portfolios"
+        },
+        {
+          "id": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả portfolio và practical đều đúng"
+    },
+    {
+      "order": 68,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 68:** Algorithmic bias can **provoke** public outrage if training **data** lacks demographic representation.",
+      "options": [
+        {
+          "id": "A",
+          "text": "provoke"
+        },
+        {
+          "id": "B",
+          "text": "data"
+        },
+        {
+          "id": "C",
+          "text": "provocative"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái provoke và data đều chính xác"
+    },
+    {
+      "order": 69,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 69:** Replacing **repetitive** data checks with automated scripts increases operational speed **effortlessly**.",
+      "options": [
+        {
+          "id": "A",
+          "text": "repetitive"
+        },
+        {
+          "id": "B",
+          "text": "effortlessly"
+        },
+        {
+          "id": "C",
+          "text": "repetition"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái repetitive và effortlessly đều đúng"
+    },
+    {
+      "order": 70,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 70:** Users can **upgrade** outdated firmware **effortlessly** via the over-the-air update feature.",
+      "options": [
+        {
+          "id": "A",
+          "text": "upgrade"
+        },
+        {
+          "id": "B",
+          "text": "effortlessly"
+        },
+        {
+          "id": "C",
+          "text": "upgrading"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái upgrade và effortlessly đều chuẩn"
+    },
+    {
+      "order": 71,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 71:** Exploring **virtual** realms opens up exciting **digital** storytelling possibilities for artists.",
+      "options": [
+        {
+          "id": "A",
+          "text": "virtual"
+        },
+        {
+          "id": "B",
+          "text": "digital"
+        },
+        {
+          "id": "C",
+          "text": "virtually"
+        },
+        {
+          "id": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả virtual và digital đều đúng ngữ pháp"
+    },
+    {
+      "order": 72,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 72:** Deploying a customer service **chatbot** resolves minor issues **effortlessly** around the clock.",
+      "options": [
+        {
+          "id": "A",
+          "text": "chatbot"
+        },
+        {
+          "id": "B",
+          "text": "effortlessly"
+        },
+        {
+          "id": "C",
+          "text": "chatbots"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái chatbot và effortlessly đều chính xác"
+    },
+    {
+      "order": 73,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 73:** Machine learning models analyze raw **data** to **observe** hidden patterns in consumer behavior.",
+      "options": [
+        {
+          "id": "A",
+          "text": "data"
+        },
+        {
+          "id": "B",
+          "text": "observe"
+        },
+        {
+          "id": "C",
+          "text": "database"
+        },
+        {
+          "id": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả data và observe đều đúng chuyên ngành"
+    },
+    {
+      "order": 74,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 74:** Maintaining **digital** infrastructure requires strict adherence to scheduled **maintenance** windows.",
+      "options": [
+        {
+          "id": "A",
+          "text": "digital"
+        },
+        {
+          "id": "B",
+          "text": "maintenance"
+        },
+        {
+          "id": "C",
+          "text": "digitally"
+        },
+        {
+          "id": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả digital và maintenance đều chuẩn"
+    },
+    {
+      "order": 75,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 75:** Reviewing an applicant's design **portfolio** reveals their **practical** grasp of user experience design.",
+      "options": [
+        {
+          "id": "A",
+          "text": "portfolio"
+        },
+        {
+          "id": "B",
+          "text": "practical"
+        },
+        {
+          "id": "C",
+          "text": "portfolios"
+        },
+        {
+          "id": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả portfolio và practical đều đúng"
+    },
+    {
+      "order": 76,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 76:** Androids engineered to **imitate** human emotion often display **human-like** hesitation and voice modulation.",
+      "options": [
+        {
+          "id": "A",
+          "text": "imitate"
+        },
+        {
+          "id": "B",
+          "text": "human-like"
+        },
+        {
+          "id": "C",
+          "text": "imitation"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái imitate và human-like đều chuẩn"
+    },
+    {
+      "order": 77,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 77:** Planning the official product **launch** required simulating user traffic spikes in a **virtual** sandbox.",
+      "options": [
+        {
+          "id": "A",
+          "text": "launch"
+        },
+        {
+          "id": "B",
+          "text": "virtual"
+        },
+        {
+          "id": "C",
+          "text": "launching"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả launch và virtual đều đúng ngữ pháp"
+    },
+    {
+      "order": 78,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 78:** The swift **evolution** of autonomous systems continues to **provoke** legal debates regarding liability.",
+      "options": [
+        {
+          "id": "A",
+          "text": "evolution"
+        },
+        {
+          "id": "B",
+          "text": "provoke"
+        },
+        {
+          "id": "C",
+          "text": "evolutionary"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái evolution và provoke đều chính xác"
+    },
+    {
+      "order": 79,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 79:** Verifying customer **identity** is mandatory before granting access to enterprise cloud **platforms**.",
+      "options": [
+        {
+          "id": "A",
+          "text": "identity"
+        },
+        {
+          "id": "B",
+          "text": "platform"
+        },
+        {
+          "id": "C",
+          "text": "identification"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái identity và platform đều đúng"
+    },
+    {
+      "order": 80,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 80:** Engineers will **install** sensor arrays and **launch** real-time telemetry monitoring tomorrow.",
+      "options": [
+        {
+          "id": "A",
+          "text": "install"
+        },
+        {
+          "id": "B",
+          "text": "launch"
+        },
+        {
+          "id": "C",
+          "text": "installation"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái install và launch đều chuẩn"
+    },
+    {
+      "order": 81,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 81:** Achieving this engineering **milestone** gave the team confidence to **upgrade** their core propulsion algorithms.",
+      "options": [
+        {
+          "id": "A",
+          "text": "milestone"
+        },
+        {
+          "id": "B",
+          "text": "upgrade"
+        },
+        {
+          "id": "C",
+          "text": "milestones"
+        },
+        {
+          "id": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả milestone và upgrade đều đúng"
+    },
+    {
+      "order": 82,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 82:** Sensors **observe** ambient temperature and **adjust** smart thermostat settings autonomously.",
+      "options": [
+        {
+          "id": "A",
+          "text": "observe"
+        },
+        {
+          "id": "B",
+          "text": "observation"
+        },
+        {
+          "id": "C",
+          "text": "observant"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái observe đều chính xác"
+    },
+    {
+      "order": 83,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 83:** Delivering **personalised** medical advice improves patient outcomes across telehealth **platforms**.",
+      "options": [
+        {
+          "id": "A",
+          "text": "personalised"
+        },
+        {
+          "id": "B",
+          "text": "platform"
+        },
+        {
+          "id": "C",
+          "text": "personalisation"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái personalised và platform đều đúng"
+    },
+    {
+      "order": 84,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 84:** Modern cloud **platforms** utilize **advanced** containerization tools for microservices management.",
+      "options": [
+        {
+          "id": "A",
+          "text": "platforms"
+        },
+        {
+          "id": "B",
+          "text": "advanced"
+        },
+        {
+          "id": "C",
+          "text": "platform"
+        },
+        {
+          "id": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả platforms và advanced đều chuẩn"
+    },
+    {
+      "order": 85,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 85:** Assembling a comprehensive **portfolio** validates a junior developer's **practical** coding capabilities.",
+      "options": [
+        {
+          "id": "A",
+          "text": "portfolio"
+        },
+        {
+          "id": "B",
+          "text": "practical"
+        },
+        {
+          "id": "C",
+          "text": "portfolios"
+        },
+        {
+          "id": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả portfolio và practical đều chính xác"
+    },
+    {
+      "order": 86,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 86:** Deploying unverified algorithms can **provoke** severe regulatory penalties if training **data** is biased.",
+      "options": [
+        {
+          "id": "A",
+          "text": "provoke"
+        },
+        {
+          "id": "B",
+          "text": "data"
+        },
+        {
+          "id": "C",
+          "text": "provocative"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái provoke và data đều đúng"
+    },
+    {
+      "order": 87,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 87:** Outsourcing **repetitive** administrative tasks allows employees to scale productivity **effortlessly**.",
+      "options": [
+        {
+          "id": "A",
+          "text": "repetitive"
+        },
+        {
+          "id": "B",
+          "text": "effortlessly"
+        },
+        {
+          "id": "C",
+          "text": "repetition"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái repetitive và effortlessly đều chuẩn"
+    },
+    {
+      "order": 88,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 88:** Users can **upgrade** software licenses **effortlessly** using self-service billing portals.",
+      "options": [
+        {
+          "id": "A",
+          "text": "upgrade"
+        },
+        {
+          "id": "B",
+          "text": "effortlessly"
+        },
+        {
+          "id": "C",
+          "text": "upgrading"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái upgrade và effortlessly đều chính xác"
+    },
+    {
+      "order": 89,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 89:** Navigating **virtual** environments requires high-performance **digital** graphics processing units.",
+      "options": [
+        {
+          "id": "A",
+          "text": "virtual"
+        },
+        {
+          "id": "B",
+          "text": "digital"
+        },
+        {
+          "id": "C",
+          "text": "virtually"
+        },
+        {
+          "id": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ncả virtual và digital đều đúng ngữ pháp"
+    },
+    {
+      "order": 90,
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 90:** Implementing an AI **chatbot** streamlines customer service workflows **effortlessly** and efficiently.",
+      "options": [
+        {
+          "id": "A",
+          "text": "chatbot"
+        },
+        {
+          "id": "B",
+          "text": "effortlessly"
+        },
+        {
+          "id": "C",
+          "text": "chatbots"
+        },
+        {
+          "id": "D",
+          "text": "All are correct"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\ntất cả hình thái chatbot và effortlessly đều chuẩn"
+    },
+    {
+      "order": 91,
+      "content": "Read the following passage and mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 91:** What is the primary focus of the passage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The history of mechanical clockmaking in the eighteenth century."
+        },
+        {
+          "id": "B",
+          "text": "The widespread integration, evolution, and societal impacts of conversational AI and digital platforms."
+        },
+        {
+          "id": "C",
+          "text": "The financial bankruptcy of legacy hardware manufacturers."
+        },
+        {
+          "id": "D",
+          "text": "The legal procedures required to register copyright for software code."
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nNội dung khái quát toàn bài nói về sự tiến hóa và tích hợp của trợ lý ảo và nền tảng số",
+      "passage": "The integration of artificial intelligence into daily life represents a profound **evolution** in modern technology. Gone are the days when interacting with computers required complex command-line syntax; today, sophisticated **chatbots** and **virtual** assistants understand natural human speech **effortlessly**. By analyzing massive repositories of user **data**, these systems deliver highly **personalised** experiences across multiple **digital** **platforms**. \n\nHowever, this rapid transition does not occur in a vacuum. Developing **advanced** neural architectures requires significant research **milestones**, rigorous system **maintenance**, and secure cloud infrastructure. Engineers regularly **upgrade** algorithms to **imitate** human cognitive flexibility while maintaining strict **identity** verification protocols. Furthermore, observing how users interact with **human-like** android interfaces continues to **provoke** vital discussions regarding ethical boundaries, data privacy, and the future of human labor."
+    },
+    {
+      "order": 92,
+      "content": "Read the following passage and mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 92:** The word **evolution** in paragraph 1 is closest in meaning to _________.",
+      "options": [
+        {
+          "id": "A",
+          "text": "stagnation"
+        },
+        {
+          "id": "B",
+          "text": "development"
+        },
+        {
+          "id": "C",
+          "text": "regression"
+        },
+        {
+          "id": "D",
+          "text": "decline"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nevolution = development: sự phát triển/tiến hóa",
+      "passage": "The integration of artificial intelligence into daily life represents a profound **evolution** in modern technology. Gone are the days when interacting with computers required complex command-line syntax; today, sophisticated **chatbots** and **virtual** assistants understand natural human speech **effortlessly**. By analyzing massive repositories of user **data**, these systems deliver highly **personalised** experiences across multiple **digital** **platforms**. \n\nHowever, this rapid transition does not occur in a vacuum. Developing **advanced** neural architectures requires significant research **milestones**, rigorous system **maintenance**, and secure cloud infrastructure. Engineers regularly **upgrade** algorithms to **imitate** human cognitive flexibility while maintaining strict **identity** verification protocols. Furthermore, observing how users interact with **human-like** android interfaces continues to **provoke** vital discussions regarding ethical boundaries, data privacy, and the future of human labor."
+    },
+    {
+      "order": 93,
+      "content": "Read the following passage and mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 93:** According to paragraph 1, how do modern virtual assistants handle human speech?",
+      "options": [
+        {
+          "id": "A",
+          "text": "With extreme difficulty and frequent errors."
+        },
+        {
+          "id": "B",
+          "text": "Effortlessly, through natural language processing."
+        },
+        {
+          "id": "C",
+          "text": "Only when users type specialized programming code."
+        },
+        {
+          "id": "D",
+          "text": "By ignoring incoming audio signals entirely."
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nDẫn chứng đoạn 1: \"...understand natural human speech effortlessly\"",
+      "passage": "The integration of artificial intelligence into daily life represents a profound **evolution** in modern technology. Gone are the days when interacting with computers required complex command-line syntax; today, sophisticated **chatbots** and **virtual** assistants understand natural human speech **effortlessly**. By analyzing massive repositories of user **data**, these systems deliver highly **personalised** experiences across multiple **digital** **platforms**. \n\nHowever, this rapid transition does not occur in a vacuum. Developing **advanced** neural architectures requires significant research **milestones**, rigorous system **maintenance**, and secure cloud infrastructure. Engineers regularly **upgrade** algorithms to **imitate** human cognitive flexibility while maintaining strict **identity** verification protocols. Furthermore, observing how users interact with **human-like** android interfaces continues to **provoke** vital discussions regarding ethical boundaries, data privacy, and the future of human labor."
+    },
+    {
+      "order": 94,
+      "content": "Read the following passage and mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 94:** The word **effortlessly** in paragraph 1 is opposite in meaning to _________.",
+      "options": [
+        {
+          "id": "A",
+          "text": "easily"
+        },
+        {
+          "id": "B",
+          "text": "smoothly"
+        },
+        {
+          "id": "C",
+          "text": "laboriously"
+        },
+        {
+          "id": "D",
+          "text": "fluently"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\neffortlessly = một cách dễ dàng >< laboriously: một cách nhọc nhằn, tốn sức",
+      "passage": "The integration of artificial intelligence into daily life represents a profound **evolution** in modern technology. Gone are the days when interacting with computers required complex command-line syntax; today, sophisticated **chatbots** and **virtual** assistants understand natural human speech **effortlessly**. By analyzing massive repositories of user **data**, these systems deliver highly **personalised** experiences across multiple **digital** **platforms**. \n\nHowever, this rapid transition does not occur in a vacuum. Developing **advanced** neural architectures requires significant research **milestones**, rigorous system **maintenance**, and secure cloud infrastructure. Engineers regularly **upgrade** algorithms to **imitate** human cognitive flexibility while maintaining strict **identity** verification protocols. Furthermore, observing how users interact with **human-like** android interfaces continues to **provoke** vital discussions regarding ethical boundaries, data privacy, and the future of human labor."
+    },
+    {
+      "order": 95,
+      "content": "Read the following passage and mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 95:** According to paragraph 2, what do engineers need to maintain robust cloud environments?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Physical typewriters and paper filing cabinets."
+        },
+        {
+          "id": "B",
+          "text": "Regular system maintenance and advanced architectural upgrades."
+        },
+        {
+          "id": "C",
+          "text": "Manual calculation sheets and slide rules."
+        },
+        {
+          "id": "D",
+          "text": "Unsupervised children playing video games."
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nDẫn chứng đoạn 2: \"...rigorous system maintenance, and secure cloud infrastructure. Engineers regularly upgrade algorithms...\"",
+      "passage": "The integration of artificial intelligence into daily life represents a profound **evolution** in modern technology. Gone are the days when interacting with computers required complex command-line syntax; today, sophisticated **chatbots** and **virtual** assistants understand natural human speech **effortlessly**. By analyzing massive repositories of user **data**, these systems deliver highly **personalised** experiences across multiple **digital** **platforms**. \n\nHowever, this rapid transition does not occur in a vacuum. Developing **advanced** neural architectures requires significant research **milestones**, rigorous system **maintenance**, and secure cloud infrastructure. Engineers regularly **upgrade** algorithms to **imitate** human cognitive flexibility while maintaining strict **identity** verification protocols. Furthermore, observing how users interact with **human-like** android interfaces continues to **provoke** vital discussions regarding ethical boundaries, data privacy, and the future of human labor."
+    },
+    {
+      "order": 96,
+      "content": "Read the following passage and mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 96:** The word **provoke** in paragraph 2 is closest in meaning to _________.",
+      "options": [
+        {
+          "id": "A",
+          "text": "suppress"
+        },
+        {
+          "id": "B",
+          "text": "stimulate"
+        },
+        {
+          "id": "C",
+          "text": "pacify"
+        },
+        {
+          "id": "D",
+          "text": "ignore"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nprovoke = stimulate: khơi gợi, kích thích",
+      "passage": "The integration of artificial intelligence into daily life represents a profound **evolution** in modern technology. Gone are the days when interacting with computers required complex command-line syntax; today, sophisticated **chatbots** and **virtual** assistants understand natural human speech **effortlessly**. By analyzing massive repositories of user **data**, these systems deliver highly **personalised** experiences across multiple **digital** **platforms**. \n\nHowever, this rapid transition does not occur in a vacuum. Developing **advanced** neural architectures requires significant research **milestones**, rigorous system **maintenance**, and secure cloud infrastructure. Engineers regularly **upgrade** algorithms to **imitate** human cognitive flexibility while maintaining strict **identity** verification protocols. Furthermore, observing how users interact with **human-like** android interfaces continues to **provoke** vital discussions regarding ethical boundaries, data privacy, and the future of human labor."
+    },
+    {
+      "order": 97,
+      "content": "Read the following passage and mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 97:** Which of the following is NOT mentioned as a component of modern AI ecosystems in the text?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Digital platforms"
+        },
+        {
+          "id": "B",
+          "text": "Virtual assistants"
+        },
+        {
+          "id": "C",
+          "text": "Holographic time travel devices"
+        },
+        {
+          "id": "D",
+          "text": "User data"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\nHolographic time travel devices hoàn toàn không xuất hiện trong văn bản",
+      "passage": "The integration of artificial intelligence into daily life represents a profound **evolution** in modern technology. Gone are the days when interacting with computers required complex command-line syntax; today, sophisticated **chatbots** and **virtual** assistants understand natural human speech **effortlessly**. By analyzing massive repositories of user **data**, these systems deliver highly **personalised** experiences across multiple **digital** **platforms**. \n\nHowever, this rapid transition does not occur in a vacuum. Developing **advanced** neural architectures requires significant research **milestones**, rigorous system **maintenance**, and secure cloud infrastructure. Engineers regularly **upgrade** algorithms to **imitate** human cognitive flexibility while maintaining strict **identity** verification protocols. Furthermore, observing how users interact with **human-like** android interfaces continues to **provoke** vital discussions regarding ethical boundaries, data privacy, and the future of human labor."
+    },
+    {
+      "order": 98,
+      "content": "Read the following passage and mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 98:** The phrase **human-like** android interfaces in paragraph 2 refers to _________.",
+      "options": [
+        {
+          "id": "A",
+          "text": "mechanical toys operated by strings."
+        },
+        {
+          "id": "B",
+          "text": "robotic systems exhibiting features or behaviors resembling humans."
+        },
+        {
+          "id": "C",
+          "text": "abstract paintings hanging in museums."
+        },
+        {
+          "id": "D",
+          "text": "paper airplanes launched from balconies."
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nhuman-like android interfaces = robotic systems exhibiting features or behaviors resembling humans",
+      "passage": "The integration of artificial intelligence into daily life represents a profound **evolution** in modern technology. Gone are the days when interacting with computers required complex command-line syntax; today, sophisticated **chatbots** and **virtual** assistants understand natural human speech **effortlessly**. By analyzing massive repositories of user **data**, these systems deliver highly **personalised** experiences across multiple **digital** **platforms**. \n\nHowever, this rapid transition does not occur in a vacuum. Developing **advanced** neural architectures requires significant research **milestones**, rigorous system **maintenance**, and secure cloud infrastructure. Engineers regularly **upgrade** algorithms to **imitate** human cognitive flexibility while maintaining strict **identity** verification protocols. Furthermore, observing how users interact with **human-like** android interfaces continues to **provoke** vital discussions regarding ethical boundaries, data privacy, and the future of human labor."
+    },
+    {
+      "order": 99,
+      "content": "Read the following passage and mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 99:** What role do **chatbots** play according to the passage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They destroy all enterprise computer systems."
+        },
+        {
+          "id": "B",
+          "text": "They assist in streamlining conversational interactions and user experiences."
+        },
+        {
+          "id": "C",
+          "text": "They print physical textbooks for elementary schools."
+        },
+        {
+          "id": "D",
+          "text": "They regulate global ocean tides."
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nChatbots giúp đơn giản hóa các tương tác trò chuyện và trải nghiệm người dùng",
+      "passage": "The integration of artificial intelligence into daily life represents a profound **evolution** in modern technology. Gone are the days when interacting with computers required complex command-line syntax; today, sophisticated **chatbots** and **virtual** assistants understand natural human speech **effortlessly**. By analyzing massive repositories of user **data**, these systems deliver highly **personalised** experiences across multiple **digital** **platforms**. \n\nHowever, this rapid transition does not occur in a vacuum. Developing **advanced** neural architectures requires significant research **milestones**, rigorous system **maintenance**, and secure cloud infrastructure. Engineers regularly **upgrade** algorithms to **imitate** human cognitive flexibility while maintaining strict **identity** verification protocols. Furthermore, observing how users interact with **human-like** android interfaces continues to **provoke** vital discussions regarding ethical boundaries, data privacy, and the future of human labor."
+    },
+    {
+      "order": 100,
+      "content": "Read the following passage and mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 100:** Which of the following conclusions is best supported by the entire passage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AI technologies offer immense utility but simultaneously provoke critical ethical and privacy debates."
+        },
+        {
+          "id": "B",
+          "text": "Computers will completely stop consuming electrical power by next year."
+        },
+        {
+          "id": "C",
+          "text": "Human beings no longer need to communicate using spoken language."
+        },
+        {
+          "id": "D",
+          "text": "Digital platforms are entirely immune to cyberattacks."
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nKết luận bao quát: Công nghệ AI mang lại tiện ích to lớn nhưng đồng thời khơi dậy các tranh luận đạo đức và quyền riêng tư",
+      "passage": "The integration of artificial intelligence into daily life represents a profound **evolution** in modern technology. Gone are the days when interacting with computers required complex command-line syntax; today, sophisticated **chatbots** and **virtual** assistants understand natural human speech **effortlessly**. By analyzing massive repositories of user **data**, these systems deliver highly **personalised** experiences across multiple **digital** **platforms**. \n\nHowever, this rapid transition does not occur in a vacuum. Developing **advanced** neural architectures requires significant research **milestones**, rigorous system **maintenance**, and secure cloud infrastructure. Engineers regularly **upgrade** algorithms to **imitate** human cognitive flexibility while maintaining strict **identity** verification protocols. Furthermore, observing how users interact with **human-like** android interfaces continues to **provoke** vital discussions regarding ethical boundaries, data privacy, and the future of human labor."
+    }
+  ]
+}
