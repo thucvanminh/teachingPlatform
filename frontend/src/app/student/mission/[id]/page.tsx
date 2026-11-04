@@ -533,6 +533,68 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
   }
 
   const currentAnswer = currentQ ? answers[currentQ.id] || {} : {};
+
+  const getQuestionStatus = (q: any) => {
+    if (!q) return 'UNANSWERED';
+    const ans = answers[q.id];
+    if (!ans) return 'UNANSWERED';
+
+    const correctOpt = (
+      q.grading_key_payload?.correct_option_id ||
+      q.question_payload?.correct_option_id ||
+      ''
+    ).toString().trim().toUpperCase();
+
+    const selectedOpt = (ans.selected_option_id || '').toString().trim().toUpperCase();
+
+    if (selectedOpt && correctOpt) {
+      return selectedOpt === correctOpt ? 'CORRECT' : 'WRONG';
+    }
+
+    if (ans.text && q.grading_key_payload?.acceptable_answers) {
+      const userText = ans.text.toString().trim().toLowerCase();
+      const isOk = q.grading_key_payload.acceptable_answers.some(
+        (a: string) => a.toString().trim().toLowerCase() === userText
+      );
+      return isOk ? 'CORRECT' : 'WRONG';
+    }
+
+    if (
+      ans.selected_option_id ||
+      (ans.text && ans.text.toString().trim() !== '') ||
+      (ans.text_response && ans.text_response.toString().trim() !== '') ||
+      (Array.isArray(ans.image_urls) && ans.image_urls.length > 0)
+    ) {
+      return 'ANSWERED';
+    }
+
+    return 'UNANSWERED';
+  };
+
+  const getQuestionButtonClass = (q: any, i: number) => {
+    const status = getQuestionStatus(q);
+    const isCurrent = i === currentIndex;
+    const ringClass = isCurrent
+      ? 'ring-2 ring-cyan-400 ring-offset-2 ring-offset-slate-950 scale-105 z-10'
+      : '';
+
+    if (status === 'CORRECT') {
+      return `border-2 border-emerald-500 bg-emerald-950/70 text-emerald-300 font-bold shadow-[0_0_10px_rgba(16,185,129,0.35)] ${ringClass}`;
+    }
+    if (status === 'WRONG') {
+      return `border-2 border-rose-500 bg-rose-950/70 text-rose-300 font-bold shadow-[0_0_10px_rgba(244,63,94,0.35)] ${ringClass}`;
+    }
+    if (status === 'ANSWERED') {
+      return `border-2 border-cyan-400 bg-cyan-950/70 text-cyan-200 font-bold ${ringClass}`;
+    }
+    if (isCosmic) {
+      return `border border-slate-700/80 bg-slate-800/80 text-slate-400 hover:bg-slate-700 hover:border-slate-500 hover:text-slate-200 ${ringClass}`;
+    }
+    if (isKids) {
+      return `border border-pink-200 bg-pink-50 text-pink-700 hover:bg-pink-100 ${ringClass}`;
+    }
+    return `border border-slate-200 bg-slate-100 text-slate-700 hover:bg-slate-200 ${ringClass}`;
+  };
   const progressPercent = totalQuestions > 0 ? ((currentIndex + 1) / totalQuestions) * 100 : 0;
   const answeredCount = questions.filter((q: any) => {
     const ans = answers[q.id];
@@ -686,6 +748,44 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
 
       {/* 2. MAIN SINGLE-QUESTION VIEW */}
       <main className="mission-main min-h-0 flex-1 max-w-3xl w-full mx-auto overflow-y-auto px-3.5 sm:px-6 py-4 flex flex-col justify-start lg:justify-center">
+        {/* Horizontal Sector & Question Quick-Jump Track */}
+        <div className="w-full mb-3 pb-1 overflow-x-auto scrollbar-none flex items-center justify-between gap-2">
+          <div className="flex items-center space-x-1.5 min-w-max px-0.5 py-0.5">
+            {questions.map((q: any, i: number) => {
+              const status = getQuestionStatus(q);
+              return (
+                <button
+                  key={q.id || i}
+                  type="button"
+                  onClick={() => setCurrentIndex(i)}
+                  className={`h-8 min-w-[2.1rem] px-2 rounded-lg text-xs font-bold transition flex items-center justify-center relative ${getQuestionButtonClass(
+                    q,
+                    i
+                  )}`}
+                  title={`${isEnglish ? 'Question' : 'Câu'} ${i + 1}${
+                    status === 'CORRECT'
+                      ? isEnglish ? ' (Correct)' : ' (Đúng)'
+                      : status === 'WRONG'
+                      ? isEnglish ? ' (Incorrect - Click to review)' : ' (Sai - Bấm để xem lại)'
+                      : ''
+                  }`}
+                >
+                  {i + 1}
+                </button>
+              );
+            })}
+          </div>
+          <button
+            type="button"
+            onClick={() => setShowGridDrawer(true)}
+            className="shrink-0 p-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-cyan-500/30 text-cyan-300 text-xs flex items-center space-x-1"
+            title={isEnglish ? 'View full roster by sector' : 'Xem toàn bộ theo sector'}
+          >
+            <Grid className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline text-[11px] font-semibold">{isEnglish ? 'Sectors' : 'Sectors'}</span>
+          </button>
+        </div>
+
         {currentQ ? (
           <div
             className={`question-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 border shadow-sm transition flex flex-col justify-between ${
@@ -1316,55 +1416,67 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
               </button>
             </div>
 
-            {/* Grid of numbers */}
-            <div className="grid grid-cols-5 sm:grid-cols-6 gap-2 overflow-y-auto p-1 flex-1">
-              {questions.map((q: any, i: number) => {
-                const ans = answers[q.id];
-                const hasAnswer =
-                  ans &&
-                  (ans.selected_option_id ||
-                    ans.text ||
-                    ans.text_response ||
-                    (ans.image_urls && ans.image_urls.length > 0));
-                const isCurrent = i === currentIndex;
+            {/* Grid of numbers grouped by sector */}
+            <div className="overflow-y-auto p-1 flex-1 space-y-3.5 pr-1.5 scrollbar-thin scrollbar-thumb-cyan-500/20">
+              {(() => {
+                const sections: { title: string; items: { q: any; index: number }[] }[] = [];
+                questions.forEach((q: any, i: number) => {
+                  const sName = q.question_payload?.sectionName || `Sector ${Math.floor(i / 5) + 1}`;
+                  let sec = sections.find((s) => s.title === sName);
+                  if (!sec) {
+                    sec = { title: sName, items: [] };
+                    sections.push(sec);
+                  }
+                  sec.items.push({ q, index: i });
+                });
 
-                return (
-                  <button
-                    key={q.id}
-                    type="button"
-                    onClick={() => {
-                      setCurrentIndex(i);
-                      setShowGridDrawer(false);
-                    }}
-                    className={`h-10 rounded-xl text-xs font-bold transition flex items-center justify-center relative ${
-                      isCurrent
-                        ? 'ring-2 ring-cyan-400 ring-offset-2 ring-offset-slate-950'
-                        : ''
-                    } ${
-                      hasAnswer
-                        ? isCosmic
-                          ? 'bg-cyan-500 text-slate-950 font-black'
-                          : 'bg-blue-600 text-white'
-                        : isCosmic
-                        ? 'bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700'
-                        : 'bg-slate-100 border border-slate-200 text-slate-700 hover:bg-slate-200'
-                    }`}
-                  >
-                    {i + 1}
-                  </button>
-                );
-              })}
+                return sections.map((sec, secIdx) => (
+                  <div key={secIdx} className="space-y-1.5 p-2 rounded-2xl bg-slate-900/40 border border-slate-800/80">
+                    <div className="text-[11px] font-bold text-cyan-300 tracking-wide flex items-center justify-between">
+                      <span className="flex items-center space-x-1.5">
+                        <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(6,182,212,0.8)]" />
+                        <span>{sec.title}</span>
+                      </span>
+                      <span className="text-[10px] text-slate-400">
+                        {sec.items.filter(({ q }) => getQuestionStatus(q) !== 'UNANSWERED').length}/{sec.items.length}
+                      </span>
+                    </div>
+                    <div className="grid grid-cols-5 gap-2">
+                      {sec.items.map(({ q, index }) => (
+                        <button
+                          key={q.id || index}
+                          type="button"
+                          onClick={() => {
+                            setCurrentIndex(index);
+                            setShowGridDrawer(false);
+                          }}
+                          className={`h-10 rounded-xl text-xs font-bold transition flex items-center justify-center relative ${getQuestionButtonClass(
+                            q,
+                            index
+                          )}`}
+                        >
+                          {index + 1}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ));
+              })()}
             </div>
 
-            <div className="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between gap-2 text-xs">
-              <div className="flex items-center space-x-3 text-slate-400">
+            <div className="mt-4 pt-3 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs">
+              <div className="flex flex-wrap items-center gap-3 text-slate-400">
                 <div className="flex items-center space-x-1.5">
-                  <span className="w-2.5 h-2.5 rounded-md bg-cyan-400" />
-                  <span>{isEnglish ? 'Done' : 'Đã làm'}</span>
+                  <span className="w-3.5 h-3.5 rounded-md border-2 border-emerald-500 bg-emerald-950/70" />
+                  <span className="text-emerald-400 font-bold">{isEnglish ? 'Correct' : 'Đúng'}</span>
                 </div>
                 <div className="flex items-center space-x-1.5">
-                  <span className="w-2.5 h-2.5 rounded-md bg-slate-700" />
-                  <span>{isEnglish ? 'Blank' : 'Chưa'}</span>
+                  <span className="w-3.5 h-3.5 rounded-md border-2 border-rose-500 bg-rose-950/70" />
+                  <span className="text-rose-400 font-bold">{isEnglish ? 'Incorrect' : 'Sai'}</span>
+                </div>
+                <div className="flex items-center space-x-1.5">
+                  <span className="w-3.5 h-3.5 rounded-md border border-slate-700 bg-slate-800" />
+                  <span>{isEnglish ? 'Unanswered' : 'Chưa làm'}</span>
                 </div>
               </div>
 

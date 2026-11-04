@@ -4,12 +4,14 @@ const { PrismaClient } = require(path.resolve(__dirname, 'node_modules/@prisma/c
 const prisma = new PrismaClient();
 
 const QUESTIONS_DATA = [
-  // Sector 1: Mercury Orbit • Molecular Blueprint (Q1 - Q4, Q20)
+  // =========================================================================
+  // SECTOR 1: MERCURY ORBIT • MOLECULAR ARCHITECTURE & ISOMERISM (Q1 - Q5)
+  // =========================================================================
   {
     order_index: 1,
     type: 'MULTIPLE_CHOICE',
     points: 0.2,
-    sectionName: 'Sector 1: Mercury Orbit • Molecular Blueprint',
+    sectionName: 'Sector 1: Mercury Orbit • Molecular Formula',
     content_markdown: 'What is the chemical molecular formula of ethylic alcohol (ethanol)?',
     options: [
       { id: 'A', text: '$\\text{CH}_4\\text{O}$' },
@@ -24,7 +26,7 @@ const QUESTIONS_DATA = [
     order_index: 2,
     type: 'MULTIPLE_CHOICE',
     points: 0.2,
-    sectionName: 'Sector 1: Mercury Orbit • Structural Formula',
+    sectionName: 'Sector 1: Mercury Orbit • Condensed Structural Formula',
     content_markdown: 'Which of the following represents the condensed structural formula of ethylic alcohol?',
     options: [
       { id: 'A', text: '$\\text{CH}_3-\\text{O}-\\text{CH}_3$' },
@@ -65,10 +67,27 @@ const QUESTIONS_DATA = [
     correct_option_id: 'C',
     explanation: '$M = (12 \\times 2) + (1 \\times 6) + 16 = 24 + 6 + 16 = 46\\text{ g/mol}$.'
   },
-
-  // Sector 2: Venus Base • Physical Constants & Boiling Point (Q5 - Q7)
   {
     order_index: 5,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.2,
+    sectionName: 'Sector 1: Mercury Orbit • Elemental Mass Percentage',
+    content_markdown: 'What is the mass percentage of Oxygen ($\\%O$) in pure ethylic alcohol ($\\text{C}_2\\text{H}_6\\text{O}$)? Given atomic masses: $H = 1, C = 12, O = 16$.',
+    options: [
+      { id: 'A', text: '$26.09\\%$' },
+      { id: 'B', text: '$34.78\\%$' },
+      { id: 'C', text: '$52.17\\%$' },
+      { id: 'D', text: '$13.04\\%$' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'Molar mass of $\\text{C}_2\\text{H}_6\\text{O} = 46\\text{ g/mol}$. Mass percentage of oxygen: $\\%O = \\frac{16}{46} \\times 100\\% \\approx 34.78\\%$. (For Carbon: $52.17\\%$, for Hydrogen: $13.04\\%$).'
+  },
+
+  // =========================================================================
+  // SECTOR 2: VENUS BASE • PHYSICAL CONSTANTS, HYDROGEN BONDING & VOLATILITY (Q6 - Q10)
+  // =========================================================================
+  {
+    order_index: 6,
     type: 'MULTIPLE_CHOICE',
     points: 0.2,
     sectionName: 'Sector 2: Venus Base • Physical State & Odor',
@@ -83,7 +102,7 @@ const QUESTIONS_DATA = [
     explanation: 'Pure ethylic alcohol is a mobile, colorless liquid possessing a characteristic pleasant aroma and warm, spicy taste.'
   },
   {
-    order_index: 6,
+    order_index: 7,
     type: 'MULTIPLE_CHOICE',
     points: 0.2,
     sectionName: 'Sector 2: Venus Base • Density Relative to Water',
@@ -98,7 +117,7 @@ const QUESTIONS_DATA = [
     explanation: 'Because $0.789\\text{ g/mL} < 1.0\\text{ g/mL}$, ethylic alcohol is lighter (less dense) than water.'
   },
   {
-    order_index: 7,
+    order_index: 8,
     type: 'MULTIPLE_CHOICE',
     points: 0.2,
     sectionName: 'Sector 2: Venus Base • Boiling Point Dynamics',
@@ -112,10 +131,42 @@ const QUESTIONS_DATA = [
     correct_option_id: 'B',
     explanation: 'With a lower boiling point ($78.3^\\circ\\text{C}$ vs $100^\\circ\\text{C}$), ethylic alcohol is more volatile and vaporizes preferentially first.'
   },
-
-  // Sector 3: Earth Mission Control • Alcohol Degree (ABV) & Antiseptics (Q8, Q16 - Q19, Q24)
   {
-    order_index: 8,
+    order_index: 9,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.2,
+    sectionName: 'Sector 2: Venus Base • Structural Isomerism',
+    content_markdown: 'Dimethyl ether ($\\text{CH}_3-\\text{O}-\\text{CH}_3$) and ethylic alcohol ($\\text{CH}_3-\\text{CH}_2-\\text{OH}$) both share the same molecular formula $\\text{C}_2\\text{H}_6\\text{O}$. What chemical term describes their structural relationship?',
+    options: [
+      { id: 'A', text: 'Homologues' },
+      { id: 'B', text: 'Structural Isomers' },
+      { id: 'C', text: 'Isotopes' },
+      { id: 'D', text: 'Polymers' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'Compounds that share the exact same molecular formula but possess different structural connectivity of atoms are called structural isomers.'
+  },
+  {
+    order_index: 10,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.2,
+    sectionName: 'Sector 2: Venus Base • Intermolecular Hydrogen Bonding',
+    content_markdown: 'Why is ethylic alcohol a liquid with a relatively high boiling point ($78.3^\\circ\\text{C}$), whereas its structural isomer dimethyl ether ($\\text{CH}_3-\\text{O}-\\text{CH}_3$) is a gas at room temperature (boiling point $-24^\\circ\\text{C}$)?',
+    options: [
+      { id: 'A', text: 'Because dimethyl ether has a much higher molecular mass.' },
+      { id: 'B', text: 'Because ethylic alcohol molecules form intermolecular hydrogen bonds via the $-\\text{OH}$ group, whereas dimethyl ether cannot.' },
+      { id: 'C', text: 'Because dimethyl ether decomposes rapidly in air.' },
+      { id: 'D', text: 'Because ethylic alcohol forms covalent lattice crystals in liquid state.' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'The polar $-\\text{OH}$ group in ethanol enables extensive intermolecular hydrogen bonding, which requires significant thermal energy to break. Dimethyl ether lacks an $-\\text{OH}$ group and cannot form hydrogen bonds with itself.'
+  },
+
+  // =========================================================================
+  // SECTOR 3: EARTH MISSION CONTROL • ALCOHOL DEGREE (ABV) & DILUTION (Q11 - Q15)
+  // =========================================================================
+  {
+    order_index: 11,
     type: 'MULTIPLE_CHOICE',
     points: 0.2,
     sectionName: 'Sector 3: Earth Mission Control • Alcohol Degree Definition',
@@ -129,125 +180,8 @@ const QUESTIONS_DATA = [
     correct_option_id: 'C',
     explanation: 'Alcohol degree (ABV) is defined as the volume in $\\text{mL}$ of pure ethylic alcohol present in $100\\text{ mL}$ of solution at $20^\\circ\\text{C}$.'
   },
-
-  // Sector 4: Mars Outpost • Combustion & Biofuels (Q9, Q10, Q14, Q21, Q22)
-  {
-    order_index: 9,
-    type: 'MULTIPLE_CHOICE',
-    points: 0.2,
-    sectionName: 'Sector 4: Mars Outpost • Biofuel Combustion Flame',
-    content_markdown: 'When ethylic alcohol undergoes complete combustion in air, what color is the flame and what products are released?',
-    options: [
-      { id: 'A', text: 'Yellow smoky flame; produces toxic $\\text{CO}$ and $\\text{H}_2\\text{O}$.' },
-      { id: 'B', text: 'Pale blue smokeless flame; produces $\\text{CO}_2$ and $\\text{H}_2\\text{O}$ vapor.' },
-      { id: 'C', text: 'Bright purple flame; produces $\\text{CO}_2$ and $\\text{H}_2$ gas.' },
-      { id: 'D', text: 'Green flame; produces elemental carbon soot and $\\text{H}_2\\text{O}$.' }
-    ],
-    correct_option_id: 'B',
-    explanation: 'Clean combustion of ethylic alcohol produces a pale blue, smokeless flame with carbon dioxide and water vapor: $\\text{C}_2\\text{H}_5\\text{OH} + 3\\text{O}_2 \\xrightarrow{t^\\circ} 2\\text{CO}_2 + 3\\text{H}_2\\text{O}$.'
-  },
-  {
-    order_index: 10,
-    type: 'MULTIPLE_CHOICE',
-    points: 0.2,
-    sectionName: 'Sector 4: Mars Outpost • Combustion Stoichiometry',
-    content_markdown: 'In the balanced combustion reaction $\\text{C}_2\\text{H}_5\\text{OH} + x\\text{O}_2 \\xrightarrow{t^\\circ} 2\\text{CO}_2 + 3\\text{H}_2\\text{O}$, what is the stoichiometric coefficient $x$ of oxygen ($\\text{O}_2$)?',
-    options: [
-      { id: 'A', text: '$1$' },
-      { id: 'B', text: '$2$' },
-      { id: 'C', text: '$3$' },
-      { id: 'D', text: '$4$' }
-    ],
-    correct_option_id: 'C',
-    explanation: 'Product oxygen atoms: $(2 \\times 2) + (3 \\times 1) = 7\\text{ O}$. Since ethanol provides $1\\text{ O}$, the remaining $6\\text{ O}$ require $3\\text{ O}_2$ molecules ($x = 3$).'
-  },
-
-  // Sector 5: Jupiter Station • Active Metal Displacement (Q11, Q12, Q15, Q23)
-  {
-    order_index: 11,
-    type: 'MULTIPLE_CHOICE',
-    points: 0.2,
-    sectionName: 'Sector 5: Jupiter Station • Active Metal Displacement',
-    content_markdown: 'Which of the following active metals reacts with pure ethylic alcohol at room temperature to release hydrogen gas ($\\text{H}_2$)?',
-    options: [
-      { id: 'A', text: 'Copper ($\\text{Cu}$)' },
-      { id: 'B', text: 'Silver ($\\text{Ag}$)' },
-      { id: 'C', text: 'Iron ($\\text{Fe}$)' },
-      { id: 'D', text: 'Sodium ($\\text{Na}$)' }
-    ],
-    correct_option_id: 'D',
-    explanation: 'Active alkali metals like Sodium ($\\text{Na}$) and Potassium ($\\text{K}$) displace the active hydrogen atom in the $-\\text{OH}$ group of ethylic alcohol.'
-  },
   {
     order_index: 12,
-    type: 'MULTIPLE_CHOICE',
-    points: 0.2,
-    sectionName: 'Sector 5: Jupiter Station • Sodium Reaction Observations',
-    content_markdown: 'When a small piece of metallic sodium ($\\text{Na}$) is dropped into pure ethylic alcohol, what phenomenon is observed?',
-    options: [
-      { id: 'A', text: 'Sodium floats on the surface, melts into a silvery ball, and ignites immediately.' },
-      { id: 'B', text: 'Sodium sinks to the bottom, gradually dissolves, and effervescent colorless gas bubbles rise.' },
-      { id: 'C', text: 'A heavy white precipitate settles immediately to the bottom of the test tube.' },
-      { id: 'D', text: 'The liquid turns vibrant fuchsia pink without gas generation.' }
-    ],
-    correct_option_id: 'B',
-    explanation: 'Sodium is denser than alcohol ($0.97\\text{ g/cm}^3 > 0.789\\text{ g/mL}$), so it sinks to the bottom, gradually dissolves, and evolves colorless $\\text{H}_2$ gas bubbles: $2\\text{C}_2\\text{H}_5\\text{OH} + 2\\text{Na} \\to 2\\text{C}_2\\text{H}_5\\text{ONa} + \\text{H}_2\\uparrow$.'
-  },
-
-  // Sector 6: Saturn Rings • Industrial & Biochemical Preparation (Q13, Q25)
-  {
-    order_index: 13,
-    type: 'MULTIPLE_CHOICE',
-    points: 0.2,
-    sectionName: 'Sector 6: Saturn Rings • Industrial Ethylene Hydration',
-    content_markdown: 'Which gaseous hydrocarbon is hydrated (reacted with $\\text{H}_2\\text{O}$ with acid catalyst and heat) to produce ethylic alcohol industrially?',
-    options: [
-      { id: 'A', text: 'Methane ($\\text{CH}_4$)' },
-      { id: 'B', text: 'Ethylene ($\\text{CH}_2=\\text{CH}_2$)' },
-      { id: 'C', text: 'Carbon dioxide ($\\text{CO}_2$)' },
-      { id: 'D', text: 'Hydrogen gas ($\\text{H}_2$)' }
-    ],
-    correct_option_id: 'B',
-    explanation: 'Petrochemical hydration of ethylene gas synthesizes ethanol: $\\text{CH}_2=\\text{CH}_2 + \\text{H}_2\\text{O} \\xrightarrow{t^\\circ, \\text{H}^+} \\text{C}_2\\text{H}_5\\text{OH}$.'
-  },
-
-  // Sector 4 (Continued): Mars Outpost • Biofuel
-  {
-    order_index: 14,
-    type: 'MULTIPLE_CHOICE',
-    points: 0.2,
-    sectionName: 'Sector 4: Mars Outpost • E5 Biofuel Blend Specifications',
-    content_markdown: 'What does standard "E5 Biofuel" consist of by volume?',
-    options: [
-      { id: 'A', text: '$5\\%$ distilled water and $95\\%$ ethylic alcohol.' },
-      { id: 'B', text: '$5\\%$ bio-ethanol and $95\\%$ mineral gasoline.' },
-      { id: 'C', text: '$50\\%$ ethylic alcohol and $50\\%$ gasoline.' },
-      { id: 'D', text: '$5\\%$ dissolved ethylene gas in gasoline.' }
-    ],
-    correct_option_id: 'B',
-    explanation: 'E5 biofuel comprises $5\\%$ bio-ethanol blended with $95\\%$ standard petroleum gasoline by volume to burn cleaner and reduce carbon emissions.'
-  },
-
-  // Sector 5 (Continued): Jupiter Station
-  {
-    order_index: 15,
-    type: 'MULTIPLE_CHOICE',
-    points: 0.2,
-    sectionName: 'Sector 5: Jupiter Station • Hydroxyl Group Reactivity Check',
-    content_markdown: 'Among the following organic compounds: (1) $\\text{CH}_3-\\text{CH}_3$, (2) $\\text{CH}_3-\\text{CH}_2-\\text{OH}$, (3) $\\text{CH}_2=\\text{CH}_2$, (4) $\\text{CH}_3-\\text{OH}$, which ones can react with metallic sodium ($\\text{Na}$)?',
-    options: [
-      { id: 'A', text: '(1) and (2)' },
-      { id: 'B', text: '(2) and (3)' },
-      { id: 'C', text: '(2) and (4)' },
-      { id: 'D', text: '(1) and (3)' }
-    ],
-    correct_option_id: 'C',
-    explanation: 'Only compounds containing the active $-\\text{OH}$ group react with sodium to evolve $\\text{H}_2$ gas. Both ethanol (2) and methanol (4) contain $-\\text{OH}$.'
-  },
-
-  // Sector 3 (Continued): Earth Mission Control
-  {
-    order_index: 16,
     type: 'MULTIPLE_CHOICE',
     points: 0.2,
     sectionName: 'Sector 3: Earth Mission Control • Pure Alcohol Volume in ABV Solution',
@@ -262,7 +196,7 @@ const QUESTIONS_DATA = [
     explanation: '$V_{\\text{pure alc}} = \\frac{250 \\times 40}{100} = 100\\text{ mL}$.'
   },
   {
-    order_index: 17,
+    order_index: 13,
     type: 'MULTIPLE_CHOICE',
     points: 0.2,
     sectionName: 'Sector 3: Earth Mission Control • ABV Calculation from Pure Volumes',
@@ -277,7 +211,7 @@ const QUESTIONS_DATA = [
     explanation: '$Đ = \\frac{V_{\\text{pure alc}}}{V_{\\text{solution}}} \\times 100 = \\frac{30}{100} \\times 100 = 30^\\circ$.'
   },
   {
-    order_index: 18,
+    order_index: 14,
     type: 'MULTIPLE_CHOICE',
     points: 0.2,
     sectionName: 'Sector 3: Earth Mission Control • Solution Volume for Target ABV',
@@ -292,41 +226,56 @@ const QUESTIONS_DATA = [
     explanation: '$V_{\\text{solution}} = \\frac{V_{\\text{pure alc}} \\times 100}{Đ} = \\frac{50 \\times 100}{25} = 200\\text{ mL}$.'
   },
   {
-    order_index: 19,
+    order_index: 15,
     type: 'MULTIPLE_CHOICE',
     points: 0.2,
-    sectionName: 'Sector 3: Earth Mission Control • Mass of Ethanol in ABV Solution',
-    content_markdown: 'Given that the density of pure ethylic alcohol is $0.8\\text{ g/mL}$, calculate the mass of pure ethylic alcohol contained in $100\\text{ mL}$ of $90^\\circ$ alcohol.',
+    sectionName: 'Sector 3: Earth Mission Control • Multi-Solution Mixing Calculation',
+    content_markdown: 'If you mix $100\\text{ mL}$ of $60^\\circ$ ethylic alcohol solution with $100\\text{ mL}$ of $40^\\circ$ ethylic alcohol solution, what is the alcohol degree (ABV) of the resulting $200\\text{ mL}$ mixture?',
     options: [
-      { id: 'A', text: '$90\\text{ g}$' },
-      { id: 'B', text: '$72\\text{ g}$' },
-      { id: 'C', text: '$80\\text{ g}$' },
-      { id: 'D', text: '$112.5\\text{ g}$' }
+      { id: 'A', text: '$45^\\circ$' },
+      { id: 'B', text: '$50^\\circ$' },
+      { id: 'C', text: '$55^\\circ$' },
+      { id: 'D', text: '$100^\\circ$' }
     ],
     correct_option_id: 'B',
-    explanation: '$V_{\\text{pure alc}} = \\frac{100 \\times 90}{100} = 90\\text{ mL}$. Mass $m = V \\times D = 90\\text{ mL} \\times 0.8\\text{ g/mL} = 72\\text{ g}$.'
+    explanation: '$V_1 = \\frac{100 \\times 60}{100} = 60\\text{ mL}$. $V_2 = \\frac{100 \\times 40}{100} = 40\\text{ mL}$. Total pure ethanol = $60 + 40 = 100\\text{ mL}$. New ABV = $\\frac{100}{200} \\times 100 = 50^\\circ$.'
   },
 
-  // Sector 1 (Continued): Mercury Orbit
+  // =========================================================================
+  // SECTOR 4: MARS OUTPOST • BIOFUEL COMBUSTION & PROPULSION (Q16 - Q20)
+  // =========================================================================
   {
-    order_index: 20,
+    order_index: 16,
     type: 'MULTIPLE_CHOICE',
     points: 0.2,
-    sectionName: 'Sector 1: Mercury Orbit • Molar Quantity Calculation',
-    content_markdown: 'Calculate the number of moles contained in $23\\text{ g}$ of pure ethylic alcohol ($\\text{C}_2\\text{H}_5\\text{OH}$, $M = 46\\text{ g/mol}$).',
+    sectionName: 'Sector 4: Mars Outpost • Biofuel Combustion Flame',
+    content_markdown: 'When ethylic alcohol undergoes complete combustion in air, what color is the flame and what products are released?',
     options: [
-      { id: 'A', text: '$0.25\\text{ mol}$' },
-      { id: 'B', text: '$0.5\\text{ mol}$' },
-      { id: 'C', text: '$1.0\\text{ mol}$' },
-      { id: 'D', text: '$1.5\\text{ mol}$' }
+      { id: 'A', text: 'Yellow smoky flame; produces toxic $\\text{CO}$ and $\\text{H}_2\\text{O}$.' },
+      { id: 'B', text: 'Pale blue smokeless flame; produces $\\text{CO}_2$ and $\\text{H}_2\\text{O}$ vapor.' },
+      { id: 'C', text: 'Bright purple flame; produces $\\text{CO}_2$ and $\\text{H}_2$ gas.' },
+      { id: 'D', text: 'Green flame; produces elemental carbon soot and $\\text{H}_2\\text{O}$.' }
     ],
     correct_option_id: 'B',
-    explanation: '$n = \\frac{m}{M} = \\frac{23}{46} = 0.5\\text{ mol}$.'
+    explanation: 'Clean combustion of ethylic alcohol produces a pale blue, smokeless flame with carbon dioxide and water vapor: $\\text{C}_2\\text{H}_5\\text{OH} + 3\\text{O}_2 \\xrightarrow{t^\\circ} 2\\text{CO}_2 + 3\\text{H}_2\\text{O}$.'
   },
-
-  // Sector 4 (Continued): Mars Outpost
   {
-    order_index: 21,
+    order_index: 17,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.2,
+    sectionName: 'Sector 4: Mars Outpost • Combustion Stoichiometry',
+    content_markdown: 'In the balanced combustion reaction $\\text{C}_2\\text{H}_5\\text{OH} + x\\text{O}_2 \\xrightarrow{t^\\circ} 2\\text{CO}_2 + 3\\text{H}_2\\text{O}$, what is the stoichiometric coefficient $x$ of oxygen ($\\text{O}_2$)?',
+    options: [
+      { id: 'A', text: '$1$' },
+      { id: 'B', text: '$2$' },
+      { id: 'C', text: '$3$' },
+      { id: 'D', text: '$4$' }
+    ],
+    correct_option_id: 'C',
+    explanation: 'Product oxygen atoms: $(2 \\times 2) + (3 \\times 1) = 7\\text{ O}$. Since ethanol provides $1\\text{ O}$, the remaining $6\\text{ O}$ require $3\\text{ O}_2$ molecules ($x = 3$).'
+  },
+  {
+    order_index: 18,
     type: 'MULTIPLE_CHOICE',
     points: 0.2,
     sectionName: 'Sector 4: Mars Outpost • Complete Combustion Yields',
@@ -341,7 +290,7 @@ const QUESTIONS_DATA = [
     explanation: 'From $\\text{C}_2\\text{H}_5\\text{OH} + 3\\text{O}_2 \\xrightarrow{t^\\circ} 2\\text{CO}_2 + 3\\text{H}_2\\text{O}$:\n$n_{\\text{CO}_2} = 2 \\times 0.1 = 0.2\\text{ mol}$, and $n_{\\text{H}_2\\text{O}} = 3 \\times 0.1 = 0.3\\text{ mol}$.'
   },
   {
-    order_index: 22,
+    order_index: 19,
     type: 'MULTIPLE_CHOICE',
     points: 0.2,
     sectionName: 'Sector 4: Mars Outpost • Oxygen Volume at Standard Conditions',
@@ -355,10 +304,72 @@ const QUESTIONS_DATA = [
     correct_option_id: 'C',
     explanation: '$n_{\\text{O}_2} = 3 \\times n_{\\text{alc}} = 3 \\times 0.2 = 0.6\\text{ mol}$.\n$V_{\\text{O}_2} = 0.6 \\times 24.79 = 14.874\\text{ L}$.'
   },
+  {
+    order_index: 20,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.2,
+    sectionName: 'Sector 4: Mars Outpost • Combustion Stoichiometry Rules',
+    content_markdown: 'Complete combustion of $1\\text{ mol}$ of a saturated monovalent alcohol $\\text{C}_n\\text{H}_{2n+2}\\text{O}$ produces water vapor ($\\text{H}_2\\text{O}$) and carbon dioxide ($\\text{CO}_2$). Which statement about the mole ratio is always correct?',
+    options: [
+      { id: 'A', text: '$n_{\\text{H}_2\\text{O}} < n_{\\text{CO}_2}$' },
+      { id: 'B', text: '$n_{\\text{H}_2\\text{O}} = n_{\\text{CO}_2}$' },
+      { id: 'C', text: '$n_{\\text{H}_2\\text{O}} > n_{\\text{CO}_2}$, and $n_{\\text{H}_2\\text{O}} - n_{\\text{CO}_2} = n_{\\text{alcohol}}$' },
+      { id: 'D', text: '$n_{\\text{CO}_2} - n_{\\text{H}_2\\text{O}} = 1\\text{ mol}$' }
+    ],
+    correct_option_id: 'C',
+    explanation: 'In combustion of $\\text{C}_n\\text{H}_{2n+2}\\text{O}$, $n\\text{ moles of }\\text{CO}_2$ and $(n+1)\\text{ moles of }\\text{H}_2\\text{O}$ are produced. Therefore $n_{\\text{H}_2\\text{O}} > n_{\\text{CO}_2}$ and $n_{\\text{H}_2\\text{O}} - n_{\\text{CO}_2} = n_{\\text{alcohol}}$.'
+  },
 
-  // Sector 5 (Continued): Jupiter Station
+  // =========================================================================
+  // SECTOR 5: JUPITER STATION • ACTIVE ALKALI METALS (Na & K) (Q21 - Q25)
+  // =========================================================================
+  {
+    order_index: 21,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.2,
+    sectionName: 'Sector 5: Jupiter Station • Active Metal Displacement',
+    content_markdown: 'Which of the following active metals reacts with pure ethylic alcohol at room temperature to release hydrogen gas ($\\text{H}_2$)?',
+    options: [
+      { id: 'A', text: 'Copper ($\\text{Cu}$)' },
+      { id: 'B', text: 'Silver ($\\text{Ag}$)' },
+      { id: 'C', text: 'Iron ($\\text{Fe}$)' },
+      { id: 'D', text: 'Sodium ($\\text{Na}$)' }
+    ],
+    correct_option_id: 'D',
+    explanation: 'Active alkali metals like Sodium ($\\text{Na}$) and Potassium ($\\text{K}$) displace the active hydrogen atom in the $-\\text{OH}$ group of ethylic alcohol.'
+  },
+  {
+    order_index: 22,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.2,
+    sectionName: 'Sector 5: Jupiter Station • Sodium Reaction Observations',
+    content_markdown: 'When a small piece of metallic sodium ($\\text{Na}$) is dropped into pure ethylic alcohol, what phenomenon is observed?',
+    options: [
+      { id: 'A', text: 'Sodium floats on the surface, melts into a silvery ball, and ignites immediately.' },
+      { id: 'B', text: 'Sodium sinks to the bottom, gradually dissolves, and effervescent colorless gas bubbles rise.' },
+      { id: 'C', text: 'A heavy white precipitate settles immediately to the bottom of the test tube.' },
+      { id: 'D', text: 'The liquid turns vibrant fuchsia pink without gas generation.' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'Sodium is denser than alcohol ($0.97\\text{ g/cm}^3 > 0.789\\text{ g/mL}$), so it sinks to the bottom, gradually dissolves, and evolves colorless $\\text{H}_2$ gas bubbles: $2\\text{C}_2\\text{H}_5\\text{OH} + 2\\text{Na} \\to 2\\text{C}_2\\text{H}_5\\text{ONa} + \\text{H}_2\\uparrow$.'
+  },
   {
     order_index: 23,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.2,
+    sectionName: 'Sector 5: Jupiter Station • Hydroxyl Group Reactivity Check',
+    content_markdown: 'Among the following organic compounds: (1) $\\text{CH}_3-\\text{CH}_3$, (2) $\\text{CH}_3-\\text{CH}_2-\\text{OH}$, (3) $\\text{CH}_2=\\text{CH}_2$, (4) $\\text{CH}_3-\\text{OH}$, which ones can react with metallic sodium ($\\text{Na}$)?',
+    options: [
+      { id: 'A', text: '(1) and (2)' },
+      { id: 'B', text: '(2) and (3)' },
+      { id: 'C', text: '(2) and (4)' },
+      { id: 'D', text: '(1) and (3)' }
+    ],
+    correct_option_id: 'C',
+    explanation: 'Only compounds containing the active $-\\text{OH}$ group react with sodium to evolve $\\text{H}_2$ gas. Both ethanol (2) and methanol (4) contain $-\\text{OH}$.'
+  },
+  {
+    order_index: 24,
     type: 'MULTIPLE_CHOICE',
     points: 0.2,
     sectionName: 'Sector 5: Jupiter Station • Hydrogen Gas Evolution from Sodium Reaction',
@@ -372,27 +383,42 @@ const QUESTIONS_DATA = [
     correct_option_id: 'B',
     explanation: 'From $2\\text{C}_2\\text{H}_5\\text{OH} + 2\\text{Na} \\to 2\\text{C}_2\\text{H}_5\\text{ONa} + \\text{H}_2\\uparrow$, $n_{\\text{H}_2} = \\frac{1}{2} n_{\\text{alc}} = \\frac{0.4}{2} = 0.2\\text{ mol}$.'
   },
-
-  // Sector 3 (Continued): Earth Mission Control
-  {
-    order_index: 24,
-    type: 'MULTIPLE_CHOICE',
-    points: 0.2,
-    sectionName: 'Sector 3: Earth Mission Control • Antiseptic Concentration Efficacy (70° vs 90°)',
-    content_markdown: 'Why is $70^\\circ$ ethylic alcohol preferred over $90^\\circ$ alcohol for medical wound disinfection and skin sanitization?',
-    options: [
-      { id: 'A', text: 'Because $70^\\circ$ alcohol is much less expensive to synthesize.' },
-      { id: 'B', text: 'Because $90^\\circ$ alcohol evaporates too fast and coagulates bacterial surface proteins too rapidly, blocking penetration into the microbial cell.' },
-      { id: 'C', text: 'Because $90^\\circ$ alcohol contains zero ethylic alcohol molecules.' },
-      { id: 'D', text: 'Because $70^\\circ$ alcohol is non-flammable under all thermal conditions.' }
-    ],
-    correct_option_id: 'B',
-    explanation: 'At $90^\\circ$, rapid protein coagulation forms an impermeable outer crust that protects the pathogen inside. The $30\\%$ water content in $70^\\circ$ alcohol slows evaporation and facilitates deep cellular penetration to denature all internal microbial proteins.'
-  },
-
-  // Sector 6 (Continued): Saturn Rings
   {
     order_index: 25,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.2,
+    sectionName: 'Sector 5: Jupiter Station • Potassium Alkali Metal Reaction',
+    content_markdown: 'Like metallic sodium ($\\text{Na}$), metallic potassium ($\\text{K}$) belongs to Group 1 alkali metals and reacts vigorously with pure ethylic alcohol. What are the reaction products?',
+    options: [
+      { id: 'A', text: 'Potassium ethoxide ($\\text{C}_2\\text{H}_5\\text{OK}$) and hydrogen gas ($\\text{H}_2\\uparrow$).' },
+      { id: 'B', text: 'Potassium oxide ($\\text{K}_2\\text{O}$) and ethane gas ($\\text{C}_2\\text{H}_6\\uparrow$).' },
+      { id: 'C', text: 'Potassium hydroxide ($\\text{KOH}$) and ethylene gas ($\\text{C}_2\\text{H}_4\\uparrow$).' },
+      { id: 'D', text: 'Potassium carbonate ($\\text{K}_2\\text{CO}_3$) and water ($\\text{H}_2\\text{O}$).' }
+    ],
+    correct_option_id: 'A',
+    explanation: '$2\\text{C}_2\\text{H}_5\\text{OH} + 2\\text{K} \\to 2\\text{C}_2\\text{H}_5\\text{OK} + \\text{H}_2\\uparrow$. The potassium atom displaces the hydrogen atom in the $-\\text{OH}$ group, forming potassium ethoxide and hydrogen gas.'
+  },
+
+  // =========================================================================
+  // SECTOR 6: SATURN RINGS • BIOCHEMICAL & INDUSTRIAL PREPARATION (Q26 - Q30)
+  // =========================================================================
+  {
+    order_index: 26,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.2,
+    sectionName: 'Sector 6: Saturn Rings • Industrial Ethylene Hydration',
+    content_markdown: 'Which gaseous hydrocarbon is hydrated (reacted with $\\text{H}_2\\text{O}$ with acid catalyst and heat) to produce ethylic alcohol industrially?',
+    options: [
+      { id: 'A', text: 'Methane ($\\text{CH}_4$)' },
+      { id: 'B', text: 'Ethylene ($\\text{CH}_2=\\text{CH}_2$)' },
+      { id: 'C', text: 'Carbon dioxide ($\\text{CO}_2$)' },
+      { id: 'D', text: 'Hydrogen gas ($\\text{H}_2$)' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'Petrochemical hydration of ethylene gas synthesizes ethanol: $\\text{CH}_2=\\text{CH}_2 + \\text{H}_2\\text{O} \\xrightarrow{t^\\circ, \\text{H}^+} \\text{C}_2\\text{H}_5\\text{OH}$.'
+  },
+  {
+    order_index: 27,
     type: 'MULTIPLE_CHOICE',
     points: 0.2,
     sectionName: 'Sector 6: Saturn Rings • Synthetic Hydration Mass Yield',
@@ -406,28 +432,150 @@ const QUESTIONS_DATA = [
     correct_option_id: 'B',
     explanation: '$n_{\\text{C}_2\\text{H}_5\\text{OH}} = n_{\\text{C}_2\\text{H}_4} = 0.5\\text{ mol}$.\nMass $m = 0.5 \\times 46 = 23\\text{ g}$.'
   },
-
-  // Sector 7: Uranus Deep Space • Constructed-Response Section (Q26 - Q28 / Essay 1 - 3)
   {
-    order_index: 26,
-    type: 'ESSAY_UPLOAD',
-    points: 1.0,
-    sectionName: 'Sector 7: Uranus Deep Space • Structure, Sodium Mechanism & Chemical Identification',
-    content_markdown: `### Orbital Problem 1: Structure, Mechanism & Chemical Identification (1.0 Point)
+    order_index: 28,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.2,
+    sectionName: 'Sector 6: Saturn Rings • Glucose Fermentation Stoichiometry',
+    content_markdown: 'In a fermentation reactor, how many moles of glucose ($\\text{C}_6\\text{H}_{12}\\text{O}_6$) are required to synthesize $1.0\\text{ mol}$ of ethylic alcohol via the equation $\\text{C}_6\\text{H}_{12}\\text{O}_6 \\xrightarrow{\\text{enzyme}} 2\\text{C}_2\\text{H}_5\\text{OH} + 2\\text{CO}_2\\uparrow$? (Assume $100\\%$ yield).',
+    options: [
+      { id: 'A', text: '$0.25\\text{ mol}$' },
+      { id: 'B', text: '$0.5\\text{ mol}$' },
+      { id: 'C', text: '$1.0\\text{ mol}$' },
+      { id: 'D', text: '$2.0\\text{ mol}$' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'The stoichiometric ratio is $1\\text{ mol glucose} : 2\\text{ mol ethanol}$. Therefore, producing $1.0\\text{ mol}$ of ethanol requires $n_{\\text{glucose}} = \\frac{1.0}{2} = 0.5\\text{ mol}$.'
+  },
+  {
+    order_index: 29,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.2,
+    sectionName: 'Sector 6: Saturn Rings • E5 Biofuel Blend Specifications',
+    content_markdown: 'What does standard "E5 Biofuel" consist of by volume?',
+    options: [
+      { id: 'A', text: '$5\\%$ distilled water and $95\\%$ ethylic alcohol.' },
+      { id: 'B', text: '$5\\%$ bio-ethanol and $95\\%$ mineral gasoline.' },
+      { id: 'C', text: '$50\\%$ ethylic alcohol and $50\\%$ gasoline.' },
+      { id: 'D', text: '$5\\%$ dissolved ethylene gas in gasoline.' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'E5 biofuel comprises $5\\%$ bio-ethanol blended with $95\\%$ standard petroleum gasoline by volume to burn cleaner and reduce carbon emissions.'
+  },
+  {
+    order_index: 30,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.2,
+    sectionName: 'Sector 6: Saturn Rings • Esterification Reaction Preview',
+    content_markdown: 'When ethylic alcohol ($\\text{C}_2\\text{H}_5\\text{OH}$) is heated with acetic acid ($\\text{CH}_3\\text{COOH}$) in the presence of concentrated $\\text{H}_2\\text{SO}_4$, an organic compound with a pleasant fruity apple fragrance is formed. What class of compound is produced?',
+    options: [
+      { id: 'A', text: 'Alkane' },
+      { id: 'B', text: 'Ester (Ethyl acetate, $\\text{CH}_3\\text{COOC}_2\\text{H}_5$)' },
+      { id: 'C', text: 'Inorganic mineral salt' },
+      { id: 'D', text: 'Synthetic polymer' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'Reaction between an alcohol and a carboxylic acid produces an **ester** and water (Esterification): $\\text{CH}_3\\text{COOH} + \\text{C}_2\\text{H}_5\\text{OH} \\underset{t^\\circ}{\\overset{\\text{H}_2\\text{SO}_4}{\\rightleftharpoons}} \\text{CH}_3\\text{COOC}_2\\text{H}_5 + \\text{H}_2\\text{O}$. Ethyl acetate has a characteristic pleasant fruity scent.'
+  },
 
-**Part a) (0.5 pts):**
-* Write the condensed structural formula of ethylic alcohol and circle or clearly state its characteristic functional group.
+  // =========================================================================
+  // SECTOR 7: URANUS DEEP SPACE • QUANTITATIVE CALCULATIONS & SOLVENT (Q31 - Q35)
+  // =========================================================================
+  {
+    order_index: 31,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.2,
+    sectionName: 'Sector 7: Uranus Deep Space • Mass of Ethanol in ABV Solution',
+    content_markdown: 'Given that the density of pure ethylic alcohol is $0.8\\text{ g/mL}$, calculate the mass of pure ethylic alcohol contained in $100\\text{ mL}$ of $90^\\circ$ alcohol.',
+    options: [
+      { id: 'A', text: '$90\\text{ g}$' },
+      { id: 'B', text: '$72\\text{ g}$' },
+      { id: 'C', text: '$80\\text{ g}$' },
+      { id: 'D', text: '$112.5\\text{ g}$' }
+    ],
+    correct_option_id: 'B',
+    explanation: '$V_{\\text{pure alc}} = \\frac{100 \\times 90}{100} = 90\\text{ mL}$. Mass $m = V \\times D = 90\\text{ mL} \\times 0.8\\text{ g/mL} = 72\\text{ g}$.'
+  },
+  {
+    order_index: 32,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.2,
+    sectionName: 'Sector 7: Uranus Deep Space • Molar Quantity Calculation',
+    content_markdown: 'Calculate the number of moles contained in $23\\text{ g}$ of pure ethylic alcohol ($\\text{C}_2\\text{H}_5\\text{OH}$, $M = 46\\text{ g/mol}$).',
+    options: [
+      { id: 'A', text: '$0.25\\text{ mol}$' },
+      { id: 'B', text: '$0.5\\text{ mol}$' },
+      { id: 'C', text: '$1.0\\text{ mol}$' },
+      { id: 'D', text: '$1.5\\text{ mol}$' }
+    ],
+    correct_option_id: 'B',
+    explanation: '$n = \\frac{m}{M} = \\frac{23}{46} = 0.5\\text{ mol}$.'
+  },
+  {
+    order_index: 33,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.2,
+    sectionName: 'Sector 7: Uranus Deep Space • Combustion Mass Determination',
+    content_markdown: 'A space cadet burns an unknown quantity of pure ethylic alcohol completely in oxygen, collecting $0.4\\text{ mol}$ of carbon dioxide gas ($\\text{CO}_2$). What was the mass of ethylic alcohol burned? ($M = 46\\text{ g/mol}$)',
+    options: [
+      { id: 'A', text: '$4.6\\text{ g}$' },
+      { id: 'B', text: '$9.2\\text{ g}$' },
+      { id: 'C', text: '$13.8\\text{ g}$' },
+      { id: 'D', text: '$18.4\\text{ g}$' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'From $\\text{C}_2\\text{H}_5\\text{OH} + 3\\text{O}_2 \\xrightarrow{t^\\circ} 2\\text{CO}_2 + 3\\text{H}_2\\text{O}$:\n$n_{\\text{alcohol}} = \\frac{1}{2} n_{\\text{CO}_2} = \\frac{0.4}{2} = 0.2\\text{ mol}$.\nMass $m = 0.2 \\times 46 = 9.2\\text{ g}$.'
+  },
+  {
+    order_index: 34,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.2,
+    sectionName: 'Sector 7: Uranus Deep Space • Versatile Solvent Properties',
+    content_markdown: 'In medical dispensary logistics, "Tincture of Iodine" is prepared by dissolving solid iodine crystals ($\\text{I}_2$) in ethylic alcohol. What physical property of ethylic alcohol does this application demonstrate?',
+    options: [
+      { id: 'A', text: 'Combustibility in oxygen.' },
+      { id: 'B', text: 'Capacity to act as an effective non-aqueous organic solvent.' },
+      { id: 'C', text: 'Displacement reaction with alkali metals.' },
+      { id: 'D', text: 'Lower boiling point than liquid nitrogen.' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'Ethylic alcohol is a versatile solvent capable of dissolving many organic substances and non-polar solutes like iodine ($\\text{I}_2$) that are sparingly soluble in pure water.'
+  },
+  {
+    order_index: 35,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.2,
+    sectionName: 'Sector 7: Uranus Deep Space • Antiseptic Concentration Efficacy',
+    content_markdown: 'Why is $70^\\circ$ ethylic alcohol preferred over $90^\\circ$ alcohol for medical wound disinfection and skin sanitization?',
+    options: [
+      { id: 'A', text: 'Because $70^\\circ$ alcohol is much less expensive to synthesize.' },
+      { id: 'B', text: 'Because $90^\\circ$ alcohol evaporates too fast and coagulates bacterial surface proteins too rapidly, blocking penetration into the microbial cell.' },
+      { id: 'C', text: 'Because $90^\\circ$ alcohol contains zero ethylic alcohol molecules.' },
+      { id: 'D', text: 'Because $70^\\circ$ alcohol is non-flammable under all thermal conditions.' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'At $90^\\circ$, rapid protein coagulation forms an impermeable outer crust that protects the pathogen inside. The $30\\%$ water content in $70^\\circ$ alcohol slows evaporation and facilitates deep cellular penetration to denature all internal microbial proteins.'
+  },
+
+  // =========================================================================
+  // SECTOR 8: NEPTUNE FRONTIER • 5 CONSTRUCTED-RESPONSE PROBLEMS (Q36 - Q40)
+  // =========================================================================
+  {
+    order_index: 36,
+    type: 'ESSAY_UPLOAD',
+    points: 0.6,
+    sectionName: 'Sector 8: Neptune Frontier • Problem 1: Structure, Mechanism & Chemical Identification',
+    content_markdown: `### Orbital Problem 1: Structure, Mechanism & Chemical Identification (0.6 Points)
+
+**Part a):**
+* Write the condensed structural formula of ethylic alcohol and explicitly identify its characteristic functional group.
 * Explain briefly why ethylic alcohol readily reacts with metallic sodium ($\\text{Na}$) while ethane ($\\text{CH}_3-\\text{CH}_3$) does not react.
 
-**Part b) (0.5 pts):**
+**Part b):**
 * You are given two unlabeled test tubes containing two colorless liquids: **pure ethylic alcohol** ($\\text{C}_2\\text{H}_5\\text{OH}$) and **liquid hexane** ($\\text{C}_6\\text{H}_{14}$).
 * Describe a simple chemical experiment to distinguish between them, stating the expected observations and writing the balanced chemical equation.`,
-    rubric: `* Part a (0.5 pts):
-  - Condensed structural formula: CH3-CH2-OH (or C2H5OH), functional group: hydroxyl group (-OH). (0.25 pts)
-  - Mechanism explanation: In ethanol, the hydrogen atom bonded to oxygen in the -OH group is polarized and reactive, allowing displacement by active alkali metals like Na. Ethane contains only non-polar C-H and C-C bonds, which cannot undergo displacement by Na. (0.25 pts)
-* Part b (0.5 pts):
-  - Chemical test: Take a small sample of each liquid into separate labeled test tubes and drop a small piece of metallic sodium (Na) into each. (0.25 pts)
-  - Observations & Equation: The tube releasing effervescent colorless gas bubbles (H2) contains ethylic alcohol: 2C2H5OH + 2Na -> 2C2H5ONa + H2 (up). The tube with no reaction is hexane. (0.25 pts)`,
+    rubric: `* Part a (0.3 pts): Condensed formula CH3-CH2-OH and -OH hydroxyl group; explanation that the hydrogen atom bonded to oxygen in -OH is polarized and reactive, whereas ethane has only non-polar C-H bonds that cannot be displaced by Na.
+* Part b (0.3 pts): Add a piece of sodium metal into samples of each liquid; ethanol dissolves Na and releases effervescent bubbles of H2 (2C2H5OH + 2Na -> 2C2H5ONa + H2 up), whereas hexane shows no reaction.`,
     explanation: `Model Answer:
 a) Condensed formula: CH3-CH2-OH. The functional group is -OH (hydroxyl). Ethylic alcohol reacts with Na because the hydrogen atom in the -OH group is active, whereas ethane has only C-H bonds that cannot be displaced by Na.
 b) Chemical test: Add a pellet of metallic sodium (Na) to samples of both liquids.
@@ -436,29 +584,24 @@ b) Chemical test: Add a pellet of metallic sodium (Na) to samples of both liquid
 - The sample with no reaction is liquid hexane.`
   },
   {
-    order_index: 27,
+    order_index: 37,
     type: 'ESSAY_UPLOAD',
-    points: 1.0,
-    sectionName: 'Sector 7: Uranus Deep Space • ABV, Density & Precision Dilution Workout',
-    content_markdown: `### Orbital Problem 2: Alcohol Degree (ABV) & Precision Dilution Workout (1.0 Point)
+    points: 0.6,
+    sectionName: 'Sector 8: Neptune Frontier • Problem 2: ABV, Density & Precision Dilution Workout',
+    content_markdown: `### Orbital Problem 2: Alcohol Degree (ABV) & Precision Dilution Workout (0.6 Points)
 
 An orbital medical dispensary carries a $500\\text{ mL}$ bottle of concentrated $90^\\circ$ ethylic alcohol.
 Given: Density of pure ethylic alcohol $D = 0.8\\text{ g/mL}$.
 
-**Part a) (0.5 pts):**
+**Part a):**
 * Calculate the volume (in $\\text{mL}$) of pure ethylic alcohol inside this $500\\text{ mL}$ bottle.
 * Calculate the mass (in $\\text{grams}$) of pure ethylic alcohol contained in the bottle.
 
-**Part b) (0.5 pts):**
+**Part b):**
 * A flight surgeon takes $140\\text{ mL}$ of this $90^\\circ$ alcohol stock and needs to prepare standard $70^\\circ$ antiseptic solution for spacecraft decontamination.
 * Calculate the volume of distilled water (in $\\text{mL}$) that must be added to dilute the $140\\text{ mL}$ of $90^\\circ$ stock into a $70^\\circ$ solution. *(Assume volumes are additive).*`,
-    rubric: `* Part a (0.5 pts):
-  - Volume of pure ethanol: V_alc = (500 * 90) / 100 = 450 mL. (0.25 pts)
-  - Mass of pure ethanol: m = V * D = 450 mL * 0.8 g/mL = 360 g. (0.25 pts)
-* Part b (0.5 pts):
-  - Pure alcohol volume in 140 mL of 90 deg stock: V_pure = (140 * 90) / 100 = 126 mL. (0.25 pts)
-  - Total volume of 70 deg solution: V_new = (126 * 100) / 70 = 180 mL.
-  - Distilled water required: V_water = 180 - 140 = 40 mL. (0.25 pts)`,
+    rubric: `* Part a (0.3 pts): Volume of pure ethanol: V = (500 * 90) / 100 = 450 mL. Mass: m = 450 * 0.8 = 360 g.
+* Part b (0.3 pts): In 140 mL of 90 deg stock: V_pure = (140 * 90) / 100 = 126 mL. Total 70 deg solution: V_new = (126 * 100) / 70 = 180 mL. Water to add: 180 - 140 = 40 mL.`,
     explanation: `Model Answer:
 a) Volume of pure ethanol: V = (500 * 90) / 100 = 450 mL.
    Mass of pure ethanol: m = V * D = 450 * 0.8 = 360 g.
@@ -467,30 +610,27 @@ b) Volume of pure ethanol in 140 mL of 90 deg stock: V_pure = (140 * 90) / 100 =
    Volume of distilled water to add: V_water = V_new - V_stock = 180 - 140 = 40 mL.`
   },
   {
-    order_index: 28,
+    order_index: 38,
     type: 'ESSAY_UPLOAD',
-    points: 1.0,
-    sectionName: 'Sector 7: Uranus Deep Space • Stoichiometry of Sodium Displacement Reaction',
-    content_markdown: `### Orbital Problem 3: Stoichiometry of Active Metal Displacement (1.0 Point)
+    points: 0.6,
+    sectionName: 'Sector 8: Neptune Frontier • Problem 3: Stoichiometry of Sodium Displacement Reaction',
+    content_markdown: `### Orbital Problem 3: Stoichiometry of Active Metal Displacement (0.6 Points)
 
 In an orbital laboratory, a space chemist introduces excess metallic sodium ($\\text{Na}$) into a reaction vessel containing $9.2\\text{ g}$ of pure ethylic alcohol ($\\text{C}_2\\text{H}_5\\text{OH}$).
 Given atomic masses: $H = 1$, $C = 12$, $O = 16$, $Na = 23$. Standard gas molar volume: $24.79\\text{ L/mol}$.
 
-**Part a) (0.25 pts):**
+**Part a):**
 * Write the balanced chemical equation for the displacement reaction.
 
-**Part b) (0.5 pts):**
+**Part b):**
 * Calculate the number of moles of ethylic alcohol consumed.
 * Calculate the volume of hydrogen gas ($\\text{H}_2$) released at standard conditions ($25^\\circ\\text{C}, 1\\text{ bar}$).
 
-**Part c) (0.25 pts):**
+**Part c):**
 * Calculate the mass (in $\\text{grams}$) of sodium ethoxide ($\\text{C}_2\\text{H}_5\\text{ONa}$) produced after the reaction reaches completion.`,
-    rubric: `* Part a (0.25 pts): Balanced equation: 2C2H5OH + 2Na -> 2C2H5ONa + H2 (up).
-* Part b (0.5 pts):
-  - Moles of ethanol: n_alc = 9.2 / 46 = 0.2 mol. (0.25 pts)
-  - Moles of H2: n_H2 = 0.2 / 2 = 0.1 mol => V_H2 = 0.1 * 24.79 = 2.479 L. (0.25 pts)
-* Part c (0.25 pts):
-  - Moles of C2H5ONa = 0.2 mol. Molar mass M = 68 g/mol => m = 0.2 * 68 = 13.6 g.`,
+    rubric: `* Part a (0.2 pts): Balanced equation 2C2H5OH + 2Na -> 2C2H5ONa + H2 (up).
+* Part b (0.2 pts): n_alc = 9.2 / 46 = 0.2 mol => n_H2 = 0.1 mol => V_H2 = 0.1 * 24.79 = 2.479 L.
+* Part c (0.2 pts): n_C2H5ONa = 0.2 mol, M = 68 g/mol => m = 0.2 * 68 = 13.6 g.`,
     explanation: `Model Answer:
 a) Balanced equation: 2C2H5OH + 2Na -> 2C2H5ONa + H2 (up).
 b) Moles of ethanol: n_alc = 9.2 / 46 = 0.2 mol.
@@ -500,35 +640,28 @@ c) Moles of C2H5ONa = n_alc = 0.2 mol.
    Molar mass M(C2H5ONa) = (12 * 2) + 5 + 16 + 23 = 68 g/mol.
    Mass: m = 0.2 * 68 = 13.6 g.`
   },
-
-  // Sector 8: Neptune Frontier • Advanced Stoichiometry & Applications (Q29 - Q30 / Essay 4 - 5)
   {
-    order_index: 29,
+    order_index: 39,
     type: 'ESSAY_UPLOAD',
-    points: 1.0,
-    sectionName: 'Sector 8: Neptune Frontier • Clean Combustion Stoichiometry & Air Volume Demand',
-    content_markdown: `### Orbital Problem 4: Bio-Propellant Combustion Stoichiometry (1.0 Point)
+    points: 0.6,
+    sectionName: 'Sector 8: Neptune Frontier • Problem 4: Bio-Propellant Combustion Stoichiometry',
+    content_markdown: `### Orbital Problem 4: Bio-Propellant Combustion Stoichiometry (0.6 Points)
 
 A bio-propellant thruster test cleanly burns $13.8\\text{ g}$ of pure ethylic alcohol ($\\text{C}_2\\text{H}_5\\text{OH}$) in a high-pressure combustion chamber.
 Given atomic masses: $H = 1$, $C = 12$, $O = 16$. Standard gas molar volume: $24.79\\text{ L/mol}$.
 
-**Part a) (0.25 pts):**
+**Part a):**
 * Write the balanced chemical equation for the complete combustion of ethylic alcohol.
 
-**Part b) (0.5 pts):**
+**Part b):**
 * Calculate the volume of oxygen gas ($\\text{O}_2$) required at standard conditions ($25^\\circ\\text{C}, 1\\text{ bar}$).
 * Calculate the total volume of air required for combustion, assuming oxygen makes up $20\\%$ of atmospheric air by volume.
 
-**Part c) (0.25 pts):**
+**Part c):**
 * Calculate the mass (in $\\text{grams}$) of carbon dioxide ($\\text{CO}_2$) and water vapor ($\\text{H}_2\\text{O}$) formed.`,
-    rubric: `* Part a (0.25 pts): Balanced equation: C2H5OH + 3O2 -t°-> 2CO2 + 3H2O.
-* Part b (0.5 pts):
-  - Moles of ethanol: n_alc = 13.8 / 46 = 0.3 mol.
-  - Moles of O2: n_O2 = 3 * 0.3 = 0.9 mol => V_O2 = 0.9 * 24.79 = 22.311 L. (0.25 pts)
-  - Air volume: V_air = 22.311 * (100 / 20) = 22.311 * 5 = 111.555 L. (0.25 pts)
-* Part c (0.25 pts):
-  - Carbon dioxide: n_CO2 = 2 * 0.3 = 0.6 mol => m_CO2 = 0.6 * 44 = 26.4 g.
-  - Water vapor: n_H2O = 3 * 0.3 = 0.9 mol => m_H2O = 0.9 * 18 = 16.2 g.`,
+    rubric: `* Part a (0.2 pts): Balanced equation C2H5OH + 3O2 -t°-> 2CO2 + 3H2O.
+* Part b (0.2 pts): n_alc = 13.8 / 46 = 0.3 mol => n_O2 = 0.9 mol => V_O2 = 0.9 * 24.79 = 22.311 L. V_air = 22.311 * 5 = 111.555 L.
+* Part c (0.2 pts): n_CO2 = 0.6 mol => m_CO2 = 0.6 * 44 = 26.4 g. n_H2O = 0.9 mol => m_H2O = 0.9 * 18 = 16.2 g.`,
     explanation: `Model Answer:
 a) Balanced equation: C2H5OH + 3O2 -t°-> 2CO2 + 3H2O.
 b) n_alc = 13.8 / 46 = 0.3 mol.
@@ -539,26 +672,22 @@ c) n_CO2 = 2 * 0.3 = 0.6 mol => m_CO2 = 0.6 * 44 = 26.4 g.
    n_H2O = 3 * 0.3 = 0.9 mol => m_H2O = 0.9 * 18 = 16.2 g.`
   },
   {
-    order_index: 30,
+    order_index: 40,
     type: 'ESSAY_UPLOAD',
-    points: 1.0,
-    sectionName: 'Sector 8: Neptune Frontier • Synthesis Pathways, Biofuel Logistics & Health Imperatives',
-    content_markdown: `### Orbital Problem 5: Dual Synthesis Pathways, Biofuel Logistics & Space Cadet Health Code (1.0 Point)
+    points: 0.6,
+    sectionName: 'Sector 8: Neptune Frontier • Problem 5: Dual Synthesis Pathways, Biofuel Logistics & Health Code',
+    content_markdown: `### Orbital Problem 5: Dual Synthesis Pathways, Biofuel Logistics & Space Cadet Health Code (0.6 Points)
 
-**Part a) (0.5 pts):**
+**Part a):**
 * Write balanced chemical equations for the two major preparation methods of ethylic alcohol:
   1. Biochemical fermentation from glucose ($\\text{C}_6\\text{H}_{12}\\text{O}_6$) using yeast enzyme.
   2. Industrial petrochemical hydration from ethylene gas ($\\text{CH}_2=\\text{CH}_2$) with acid catalyst and heat.
 
-**Part b) (0.5 pts):**
+**Part b):**
 * State two environmental and logistical advantages of using **E5 Biofuel** over $100\\%$ mineral gasoline.
 * Explain two severe medical hazards of alcohol abuse on human physiological organs, and state the safety law regarding alcohol consumption for students under 18 years old.`,
-    rubric: `* Part a (0.5 pts):
-  - Biochemical fermentation equation: C6H12O6 -enzyme-> 2C2H5OH + 2CO2 (up). (0.25 pts)
-  - Industrial hydration equation: CH2=CH2 + H2O -t°, H+-> C2H5OH. (0.25 pts)
-* Part b (0.5 pts):
-  - Two E5 biofuel benefits: Conserves non-renewable fossil fuel reserves; burns cleaner with lower toxic exhaust emissions. (0.25 pts)
-  - Health hazards & Under-18 law: Alcohol causes liver damage (cirrhosis, hepatitis), stomach ulcers, and impairs the nervous system. By law and safety standards, all students under 18 are strictly prohibited from consuming alcoholic beverages. (0.25 pts)`,
+    rubric: `* Part a (0.3 pts): 1) C6H12O6 -enzyme-> 2C2H5OH + 2CO2 (up). 2) CH2=CH2 + H2O -t°, H+-> C2H5OH.
+* Part b (0.3 pts): Two E5 benefits: saves non-renewable petroleum, reduces carbon emissions; Medical hazards: cirrhosis/liver failure, stomach ulcers, neurological impairment; Law: strictly prohibited for persons under 18.`,
     explanation: `Model Answer:
 a) 1. Biochemical fermentation:
       C6H12O6 -enzyme-> 2C2H5OH + 2CO2 (up)
@@ -579,7 +708,7 @@ async function seed() {
   const ASSIGNMENT_ID = '70542066-5405-4299-9475-fb91a4584b0b';
   const STUDENT_ID = '4745136c-bd25-4f45-a488-9f00f2121b70';
 
-  console.log('🚀 Seeding 30 In-Session Chemistry Exercises for Keithley Lake...');
+  console.log('🚀 Seeding 40 In-Session Chemistry Exercises for Keithley Lake...');
 
   // 1. Check existing assessments under learning unit
   const existingAssessments = await prisma.assessments.findMany({
@@ -602,8 +731,8 @@ async function seed() {
     data: {
       learning_unit_id: LEARNING_UNIT_ID,
       type: 'IN_SESSION_90M',
-      title: 'Orbital Practice Flight: Ethylic Alcohol & Biofuel Stoichiometry (90 mins)',
-      instructions: 'Timed orbital chemistry flight session with per-question chronometer controls. Complete 25 Multiple-Choice problems (5.0 pts) and 5 Constructed-Response problems (5.0 pts). 100% English telemetry.',
+      title: 'Orbital Practice Flight: Ethylic Alcohol & Biofuel Stoichiometry (40 Celestial Problems • 90 mins)',
+      instructions: 'Timed orbital chemistry flight session with per-question chronometer controls. Complete 35 Multiple-Choice problems (7.0 pts) and 5 Constructed-Response problems (3.0 pts). 100% English telemetry.',
       time_limit_minutes: 90,
       max_score: 10.0
     }
@@ -647,7 +776,7 @@ async function seed() {
       }
     });
   }
-  console.log(`✅ Created ${QUESTIONS_DATA.length} questions (25 MCQs + 5 ESSAY_UPLOAD).`);
+  console.log(`✅ Created ${QUESTIONS_DATA.length} questions (35 MCQs + 5 ESSAY_UPLOAD).`);
 
   // 4. Create Assessment Attempt
   const attempt = await prisma.assessment_attempts.create({
@@ -664,7 +793,7 @@ async function seed() {
   await prisma.daily_student_assignments.update({
     where: { id: ASSIGNMENT_ID },
     data: {
-      teacher_daily_note: "Astronaut Keithley, welcome to the Orbital Bio-Propulsion Lab! Study the molecular architecture of ethylic alcohol in the interactive live studio, then engage your 90-minute in-session flight practice mission (30 questions) across all 8 Planetary Sectors!"
+      teacher_daily_note: "Astronaut Keithley, welcome to the Orbital Bio-Propulsion Lab! Study the molecular architecture of ethylic alcohol in the interactive live studio, then engage your 90-minute in-session flight practice mission (40 questions across all 8 Planetary Sectors)!"
     }
   });
   console.log('✅ Updated Daily Student Assignment note.');
@@ -675,7 +804,7 @@ async function seed() {
   fs.writeFileSync(payloadPath, JSON.stringify(QUESTIONS_DATA, null, 2), 'utf8');
   console.log(`✅ Saved questions backup to ${payloadPath}`);
 
-  console.log('\n🎉 ALL DONE! Mission exercises deployed successfully.');
+  console.log('\n🎉 ALL DONE! 40 Mission exercises deployed successfully.');
 }
 
 seed()
