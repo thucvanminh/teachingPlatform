@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cẩm Nang Tri Thức & Flashcard 25 Từ Vựng Bổ Trợ Unit 6: Artificial Intelligence - Tiếng Anh 12</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Top Hero Header -->
+    <header class="hero-header">
+      <div>
+        <div class="hero-badge-wrap">
+          <span class="hero-pill">Tiếng Anh 12 • Global Success</span>
+          <span class="hero-pill" style="background:#fef3c7; color:#b45309; border-color:#fde68a;">Unit 6: Artificial Intelligence</span>
+          <span class="hero-pill" style="background:#ecfdf5; color:#059669; border-color:#a7f3d0;">Mục Tiêu 7+ THPTQG</span>
+        </div>
+        <h1 class="hero-title">Cẩm Nang Tri Thức & Flashcard 25 Từ Vựng Bổ Trợ</h1>
+        <p class="hero-desc">
+          Biên soạn độc quyền cho <strong>Bạn Nam Việt</strong> • Lớp 12 • Hướng dẫn: <strong>Thầy Thức</strong>
+        </p>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-chip">
+          <span class="label">Từ Vựng Bổ Trợ</span>
+          <span class="val" id="statVocabCount">25 Từ</span>
+        </div>
+        <div class="stat-chip">
+          <span class="label">Chuyên Đề Cốt Lõi</span>
+          <span class="val">Causative Verbs</span>
+        </div>
+        <div class="stat-chip">
+          <span class="label">Hình Thức Học</span>
+          <span class="val">Flashcard 3D 2 Chiều</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs Bar -->
+    <nav class="tabs-bar" role="tablist">
+      <button class="tab-btn active" data-tab="tab-flashcards" role="tab" aria-selected="true">
+        <span>🎴</span> 1. Thẻ Flashcard 3D (2 Chiều)
+      </button>
+      <button class="tab-btn" data-tab="tab-vocab" role="tab" aria-selected="false">
+        <span>📚</span> 2. Lý Thuyết & 25 Từ Vựng
+      </button>
+      <button class="tab-btn" data-tab="tab-collocations" role="tab" aria-selected="false">
+        <span>🧩</span> 3. Cặp Từ Tự Nhiên (Collocations)
+      </button>
+      <button class="tab-btn" data-tab="tab-wordfamily" role="tab" aria-selected="false">
+        <span>🌳</span> 4. Cây Từ Loại (Word Family)
+      </button>
+      <button class="tab-btn" data-tab="tab-recall" role="tab" aria-selected="false">
+        <span>⚡</span> 5. Đoán Chữ Siêu Tốc (Active Recall)
+      </button>
+      <button class="tab-btn" data-tab="tab-writing" role="tab" aria-selected="false">
+        <span>✍️</span> 6. Thử Thách Đặt Câu (Writing)
+      </button>
+    </nav>
+
+    <!-- ========================================================
+         TAB 1: INTERACTIVE 3D FLASHCARDS (2 FUNCTIONS)
+         ======================================================== -->
+    <section id="tab-flashcards" class="tab-content active" role="tabpanel">
+      <div class="flashcard-panel-wrapper">
+        <!-- Control Header & Mode Switcher -->
+        <div class="fc-control-card">
+          <div class="fc-control-top">
+            <div class="fc-heading-area">
+              <span class="fc-badge-pill">🎴 ACTIVE RECALL FLASHCARDS</span>
+              <h3 class="fc-main-title">Phòng Luyện Flashcards 3D Hai Chiều</h3>
+              <p class="fc-subtitle">Chạm vào thẻ hoặc bấm phím cách (Space) để lật mặt sau. Tùy chọn 2 chức năng theo đúng mục tiêu ôn tập:</p>
+            </div>
+            
+            <!-- View Selector (Deck vs Grid) -->
+            <div class="fc-view-selector" role="group" aria-label="Kiểu hiển thị">
+              <button type="button" class="fc-view-pill active" id="fcViewDeckBtn" data-view="deck">
+                <span>🎴</span> Luyện Từng Thẻ (Deck)
+              </button>
+              <button type="button" class="fc-view-pill" id="fcViewGridBtn" data-view="grid">
+                <span>📋</span> Lưới 25 Thẻ (Grid)
+              </button>
+            </div>
+          </div>
+
+          <!-- 2 Main Direction Functions Requested by User -->
+          <div class="fc-mode-toolbar">
+            <span class="fc-mode-caption">🎯 Chọn chức năng hiển thị mặt thẻ:</span>
+            <div class="fc-mode-switch-group">
+              <button type="button" class="fc-mode-btn active" id="btnModeEnVi" data-mode="en-vi">
+                <span class="fc-mode-icon">🇬🇧 ➔ 🇻🇳</span>
+                <div class="fc-mode-text">
+                  <strong>Chức năng 1: Hiện Tiếng Anh ➔ Giấu Tiếng Việt</strong>
+                  <small>Mặt trước: Từ tiếng Anh, IPA, phát âm • Mặt sau: Nghĩa tiếng Việt, ví dụ</small>
+                </div>
+              </button>
+              <button type="button" class="fc-mode-btn" id="btnModeViEn" data-mode="vi-en">
+                <span class="fc-mode-icon">🇻🇳 ➔ 🇬🇧</span>
+                <div class="fc-mode-text">
+                  <strong>Chức năng 2: Hiện Tiếng Việt ➔ Giấu Tiếng Anh</strong>
+                  <small>Mặt trước: Nghĩa tiếng Việt • Mặt sau: Từ tiếng Anh, IPA, phát âm, ví dụ</small>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Filter Group by Unit -->
+          <div class="fc-filter-row">
+            <span class="fc-filter-caption">Lọc theo nhóm từ:</span>
+            <div class="fc-filter-chips" id="fcFilterChips">
+              <button class="filter-chip active" data-unit="all">Tất cả (25 từ)</button>
+              <button class="filter-chip" data-unit="1">Nhóm 1: AI & Kỹ Thuật Số (9)</button>
+              <button class="filter-chip" data-unit="2">Nhóm 2: Tương Tác & Hành Vi (8)</button>
+              <button class="filter-chip" data-unit="3">Nhóm 3: Vận Hành Dự Án (8)</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1. DECK PLAYER VIEW (Single Card Mode) -->
+        <div class="fc-deck-container" id="fcDeckContainer">
+          <!-- Progress & Shortcuts Header -->
+          <div class="fc-deck-header">
+            <div class="fc-progress-wrap">
+              <div class="fc-progress-bar">
+                <div class="fc-progress-fill" id="fcProgressFill" style="width: 4%;"></div>
+              </div>
+              <span class="fc-progress-counter" id="fcProgressCounter">Thẻ 1 / 25</span>
+            </div>
+            <div class="fc-deck-actions-top">
+              <button type="button" class="fc-btn-sm" id="fcShuffleBtn" title="Xáo trộn thứ tự các thẻ (Phím S)">
+                <span>🔀</span> Xáo trộn
+              </button>
+              <button type="button" class="fc-btn-sm" id="fcResetOrderBtn" title="Đặt lại thứ tự ban đầu">
+                <span>↩️</span> Thứ tự gốc
+              </button>
+            </div>
+          </div>
+
+          <!-- 3D Card Scene -->
+          <div class="fc-scene" id="fcScene">
+            <div class="fc-card" id="fcCard" tabindex="0" role="button" aria-label="Thẻ ghi nhớ flashcard. Bấm hoặc nhấn phím Space để lật.">
+              <!-- Front Face (Dynamic) -->
+              <div class="fc-side fc-side-front" id="fcFront">
+                <!-- Rendered dynamically -->
+              </div>
+              <!-- Back Face (Dynamic) -->
+              <div class="fc-side fc-side-back" id="fcBack">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Deck Navigation Controls -->
+          <div class="fc-deck-controls">
+            <button type="button" class="fc-nav-btn" id="fcPrevBtn" title="Thẻ trước (Phím ←)">
+              <span>⬅️</span> Thẻ Trước
+            </button>
+            <button type="button" class="fc-flip-btn" id="fcFlipBtn" title="Lật thẻ (Phím Space hoặc Click vào thẻ)">
+              <span>🔄</span> Lật Mặt Sau
+            </button>
+            <button type="button" class="fc-audio-btn" id="fcSpeakBtn" title="Nghe phát âm chuẩn (Phím P)">
+              <span>🔊</span> Phát Âm
+            </button>
+            <button type="button" class="fc-nav-btn primary" id="fcNextBtn" title="Thẻ kế tiếp (Phím →)">
+              Thẻ Kế Tiếp <span>➡️</span>
+            </button>
+          </div>
+
+          <!-- Keyboard Guide Tooltip -->
+          <div class="fc-keyboard-guide">
+            <span>⌨️ Phím tắt:</span>
+            <kbd>Space</kbd> Lật thẻ &nbsp;•&nbsp; 
+            <kbd>←</kbd> <kbd>→</kbd> Chuyển thẻ &nbsp;•&nbsp; 
+            <kbd>P</kbd> Phát âm &nbsp;•&nbsp; 
+            <kbd>1</kbd> Anh ➔ Việt &nbsp;•&nbsp; 
+            <kbd>2</kbd> Việt ➔ Anh
+          </div>
+        </div>
+
+        <!-- 2. GRID VIEW (All Cards with 3D Flip) -->
+        <div class="fc-grid-container" id="fcGridContainer" style="display: none;">
+          <div class="fc-grid-toolbar">
+            <span id="fcGridCountText">Hiển thị 25 thẻ flashcard</span>
+            <div class="fc-grid-actions">
+              <button type="button" class="fc-btn-sm" id="fcGridFlipAllBtn">
+                <span>🔄</span> Lật tất cả mặt sau
+              </button>
+              <button type="button" class="fc-btn-sm" id="fcGridResetAllBtn">
+                <span>↩️</span> Úp lại mặt trước
+              </button>
+            </div>
+          </div>
+
+          <div class="fc-grid-cards" id="fcGridCards">
+            <!-- Rendered dynamically by app.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         TAB 2: VOCABULARY & GRAMMAR HUB
+         ======================================================== -->
+    <section id="tab-vocab" class="tab-content" role="tabpanel">
+      <!-- Search & Unit Filter -->
+      <div class="search-filter-row">
+        <div class="search-input-wrap">
+          <span class="search-icon">🔍</span>
+          <input
+            type="text"
+            id="vocabSearchInput"
+            class="search-input"
+            placeholder="Tìm nhanh từ vựng, phát âm, nghĩa tiếng Việt hoặc cụm từ..."
+          >
+        </div>
+        <div class="filter-btn-group" id="filterButtonGroup">
+          <button class="filter-chip active" data-unit="all">Tất cả (25)</button>
+          <button class="filter-chip" data-unit="1">Nhóm 1: AI & Kỹ Thuật Số (9)</button>
+          <button class="filter-chip" data-unit="2">Nhóm 2: Tương Tác & Hành Vi (8)</button>
+          <button class="filter-chip" data-unit="3">Nhóm 3: Vận Hành Dự Án (8)</button>
+        </div>
+      </div>
+
+      <!-- 25 Vocab Card Grid -->
+      <div class="vocab-grid" id="vocabGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+      <!-- Empty state when searching -->
+      <div id="vocabEmptyState" style="display: none; text-align: center; padding: 40px; background: white; border-radius: var(--radius-xl); border: 1px dashed var(--border-color); color: var(--text-muted);">
+        <p style="font-size: 1.1rem; font-weight: 700; margin-bottom: 6px;">Không tìm thấy từ vựng phù hợp</p>
+        <p style="font-size: 0.85rem;">Hãy thử gõ từ khóa khác hoặc bấm nút "Tất cả".</p>
+      </div>
+
+      <!-- GRAMMAR COMPENDIUM SECTION -->
+      <div class="grammar-section-wrap">
+        <h3 class="section-headline">
+          <span>⚡</span> 3 Chuyên Đề Ngữ Pháp Trọng Tâm Unit 6: Thể Sai Khiến (Causative Verbs)
+        </h3>
+        <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 18px;">
+          Nắm chắc các cấu trúc sai khiến chủ động, bị động kinh điển với <strong>HAVE, GET, MAKE, LET</strong> thường xuyên xuất hiện trong đề thi THPT Quốc Gia môn Tiếng Anh.
+        </p>
+
+        <div id="grammarContainer">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         TAB 3: COLLOCATION & ODD ONE OUT
+         ======================================================== -->
+    <section id="tab-collocations" class="tab-content" role="tabpanel">
+      <!-- Feature 1: Matching Game -->
+      <div class="game-instruction-banner">
+        <div>
+          <strong>🎯 Trò chơi Nối Cụm Từ (Collocation Pairing):</strong>
+          Nhấn 1 Động từ ở cột trái rồi nhấn Cụm Danh từ phù hợp ở cột phải. Tránh lỗi dịch "word-by-word"!
+        </div>
+        <button id="resetCollocGameBtn" class="game-reset-btn">🔄 Bắt đầu lại</button>
+      </div>
+
+      <div class="colloc-game-grid">
+        <div class="colloc-column">
+          <h4 style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px;">
+            Động Từ (Verbs)
+          </h4>
+          <div id="collocVerbsCol" class="colloc-btn-list"></div>
+        </div>
+        <div class="colloc-column">
+          <h4 style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px;">
+            Cụm Danh Từ (Nouns / Objects)
+          </h4>
+          <div id="collocNounsCol" class="colloc-btn-list"></div>
+        </div>
+      </div>
+
+      <div id="collocCompletedCard" class="game-win-card" style="display: none;">
+        <span style="font-size: 2.2rem;">🎉</span>
+        <h3 style="font-size: 1.25rem; font-weight: 800; margin: 6px 0;">Xuất sắc! Bạn đã nối đúng 8/8 cụm từ tự nhiên!</h3>
+        <p style="font-size: 0.875rem; color: #065f46;">Đạt điểm trọn vẹn phần Collocation Unit 6!</p>
+      </div>
+
+      <!-- Feature 2: Odd One Out -->
+      <div style="margin-top: 36px;">
+        <h3 class="section-headline">
+          <span>🧠</span> Đố Vui Tìm Từ Khác Loại (Odd One Out)
+        </h3>
+        <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 16px;">
+          Xác định từ có từ loại hoặc trường nghĩa khác biệt so với 3 từ còn lại.
+        </p>
+
+        <div id="oddOneOutList" class="odd-puzzle-list">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         TAB 4: WORD FAMILY TREES
+         ======================================================== -->
+    <section id="tab-wordfamily" class="tab-content" role="tabpanel">
+      <div style="margin-bottom: 20px;">
+        <h3 class="section-headline">
+          <span>🌳</span> Cây Gia Đình Từ Loại Đa Tầng (Word Formation)
+        </h3>
+        <p style="font-size: 0.875rem; color: var(--text-muted);">
+          Gốc từ (Root) biến đổi qua các dạng Danh từ, Động từ, Tính từ, Trạng từ để xử lý các câu Word Form trong đề thi tốt nghiệp THPT.
+        </p>
+      </div>
+
+      <div id="wordFamilyContainer" class="word-family-grid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- ========================================================
+         TAB 5: ACTIVE RECALL (ĐOÁN CHỮ SIÊU TỐC)
+         ======================================================== -->
+    <section id="tab-recall" class="tab-content" role="tabpanel">
+      <div style="margin-bottom: 20px;">
+        <h3 class="section-headline">
+          <span>⚡</span> Đoán Chữ Siêu Tốc (Active Recall Challenges)
+        </h3>
+        <p style="font-size: 0.875rem; color: var(--text-muted);">
+          Đọc định nghĩa tiếng Anh bản xứ và gõ từ vựng tương ứng vào ô bên dưới.
+        </p>
+      </div>
+
+      <div id="activeRecallList" class="recall-container">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- ========================================================
+         TAB 6: SENTENCE WRITING (THỬ THÁCH ĐẶT CÂU)
+         ======================================================== -->
+    <section id="tab-writing" class="tab-content" role="tabpanel">
+      <div style="margin-bottom: 20px;">
+        <h3 class="section-headline">
+          <span>✍️</span> Thử Thách Đặt Câu & Ứng Dụng Ngữ Pháp
+        </h3>
+        <p style="font-size: 0.875rem; color: var(--text-muted);">
+          Học sinh gõ trực tiếp câu tiếng Anh ứng dụng từ vựng trọng tâm. Hệ thống tự động kiểm tra cú pháp và từ khóa bắt buộc!
+        </p>
+      </div>
+
+      <div id="writingChallengesList" class="writing-list">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="lecture-footer">
+      <p>© 2026 Học Viện Thầy Thức • Nền tảng Phòng Học Tương Tác Tiếng Anh Lớp 12 Global Success</p>
+      <p style="margin-top: 4px; font-size: 0.75rem;">Thiết kế sư phạm chuyên sâu cho bạn Nam Việt • Đạt mục tiêu 7+ THPT Quốc Gia</p>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
