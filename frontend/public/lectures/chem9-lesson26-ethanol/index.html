@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orbital Chemistry Lab: Ethylic Alcohol (Lesson 26)</title>
+  
+  <!-- KaTeX for High-Contrast Chemical Equations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Starfield Canvas Background -->
+  <canvas id="starfieldCanvas"></canvas>
+
+  <div class="app-container">
+    <!-- Sci-Fi Orbital Header -->
+    <header class="station-header">
+      <div class="header-left">
+        <div class="status-badge">
+          <span class="pulse-dot"></span>
+          <span>ORBITAL BIO-PROPULSION LAB • LESSON 26 TELEMETRY ACTIVE</span>
+        </div>
+        <h1 class="header-title">
+          <span class="gradient-text">ETHYLIC ALCOHOL (ETHANOL)</span>
+          <span class="sub-title">DEEP SPACE CHEMICAL EXPLORATION &amp; BIO-PROPELLANT SUITE</span>
+        </h1>
+      </div>
+      <div class="header-right">
+        <div class="cadet-badge">
+          <span class="badge-role">Astronaut Cadet</span>
+          <span class="badge-name">Keithley Lake • Grade 7 &amp; Chem 9</span>
+        </div>
+        <button id="soundToggleBtn" class="control-btn" title="Toggle Sound">
+          <span id="soundIcon">🔊</span> Sound
+        </button>
+      </div>
+    </header>
+
+    <!-- Sector Navigation Bar -->
+    <nav class="sector-nav">
+      <button class="nav-tab active" data-sector="sector1">
+        <span class="tab-icon">🧬</span>
+        <span class="tab-label">Sector 1: Molecular Blueprint &amp; The -OH Key</span>
+      </button>
+      <button class="nav-tab" data-sector="sector2">
+        <span class="tab-icon">🧪</span>
+        <span class="tab-label">Sector 2: Physical Stats &amp; ABV Solution Mixer</span>
+      </button>
+      <button class="nav-tab" data-sector="sector3">
+        <span class="tab-icon">🔥</span>
+        <span class="tab-label">Sector 3: Reaction Bench (Combustion &amp; Sodium)</span>
+      </button>
+      <button class="nav-tab" data-sector="sector4">
+        <span class="tab-icon">🚀</span>
+        <span class="tab-label">Sector 4: Space Bio-Synthesis &amp; Health Matrix</span>
+      </button>
+      <button class="nav-tab" data-sector="sector5">
+        <span class="tab-icon">⚡</span>
+        <span class="tab-label">Sector 5: Flight Readiness Check (Quiz)</span>
+      </button>
+    </nav>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="main-content">
+      
+      <!-- ============================================== -->
+      <!-- SECTOR 1: MOLECULAR BLUEPRINT & THE -OH KEY -->
+      <!-- ============================================== -->
+      <section id="sector1" class="sector-pane active">
+        <div class="pane-grid">
+          <!-- Left: Interactive Ball-and-Stick Structural Model -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag cyan">Molecular Architecture</span>
+              <h3>Ethanol Molecule: The Reactive -OH Functional Group</h3>
+            </div>
+            <p class="card-desc">
+              Ethylic alcohol (Ethanol) has the molecular formula <strong>$\text{C}_2\text{H}_6\text{O}$</strong> and condensed structural formula <strong>$\text{CH}_3-\text{CH}_2-\text{OH}$</strong> (or $\text{C}_2\text{H}_5\text{OH}$).
+            </p>
+
+            <div class="molecule-display-box">
+              <svg id="moleculeSvg" viewBox="0 0 460 220" class="molecule-svg">
+                <!-- Bonds -->
+                <line x1="80" y1="110" x2="180" y2="110" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" />
+                <line x1="180" y1="110" x2="280" y2="110" stroke="#f43f5e" stroke-width="4" stroke-linecap="round" />
+                <line x1="280" y1="110" x2="380" y2="110" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" />
+                
+                <!-- Vertical C-H bonds -->
+                <line x1="80" y1="110" x2="80" y2="35" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+                <line x1="80" y1="110" x2="80" y2="185" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+                <line x1="80" y1="110" x2="20" y2="110" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+
+                <line x1="180" y1="110" x2="180" y2="35" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+                <line x1="180" y1="110" x2="180" y2="185" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+
+                <!-- Hydroxyl Halo Effect -->
+                <ellipse cx="330" cy="110" rx="90" ry="60" fill="rgba(244, 63, 94, 0.15)" stroke="#f43f5e" stroke-dasharray="6,4" stroke-width="2" class="halo-pulse" />
+                <text x="330" y="35" fill="#f43f5e" font-size="12" font-weight="bold" text-anchor="middle" letter-spacing="1">HYDROXYL GROUP (-OH)</text>
+
+                <!-- Atoms -->
+                <!-- C1 -->
+                <circle cx="80" cy="110" r="22" fill="#0f172a" stroke="#38bdf8" stroke-width="3" />
+                <text x="80" y="116" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">C₁</text>
+
+                <!-- C2 -->
+                <circle cx="180" cy="110" r="22" fill="#0f172a" stroke="#38bdf8" stroke-width="3" />
+                <text x="180" y="116" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">C₂</text>
+
+                <!-- Oxygen Atom -->
+                <circle cx="280" cy="110" r="24" fill="#881337" stroke="#f43f5e" stroke-width="3.5" class="atom-glow" />
+                <text x="280" y="117" fill="#fff" font-size="18" font-weight="bold" text-anchor="middle">O</text>
+
+                <!-- Active Hydrogen -->
+                <circle cx="380" cy="110" r="18" fill="#0369a1" stroke="#38bdf8" stroke-width="3" class="active-h-glow" />
+                <text x="380" y="116" fill="#fff" font-size="14" font-weight="bold" text-anchor="middle">H*</text>
+
+                <!-- C1 Hydrogens -->
+                <circle cx="80" cy="35" r="14" fill="#0f172a" stroke="#94a3b8" stroke-width="2" /><text x="80" y="40" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">H</text>
+                <circle cx="80" cy="185" r="14" fill="#0f172a" stroke="#94a3b8" stroke-width="2" /><text x="80" y="190" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">H</text>
+                <circle cx="20" cy="110" r="14" fill="#0f172a" stroke="#94a3b8" stroke-width="2" /><text x="20" y="115" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">H</text>
+
+                <!-- C2 Hydrogens -->
+                <circle cx="180" cy="35" r="14" fill="#0f172a" stroke="#94a3b8" stroke-width="2" /><text x="180" y="40" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">H</text>
+                <circle cx="180" cy="185" r="14" fill="#0f172a" stroke="#94a3b8" stroke-width="2" /><text x="180" y="190" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">H</text>
+              </svg>
+            </div>
+
+            <div class="callout-box">
+              <span class="callout-icon">💡</span>
+              <div>
+                <strong>Critical Structural Insight:</strong> Out of the 6 Hydrogen atoms in $\text{C}_2\text{H}_6\text{O}$, exactly <strong>ONE</strong> hydrogen atom is bonded to oxygen inside the $\mathbf{-OH}$ group. This hydrogen ($\text{H}^*$) is chemically active and replaceable by alkali metals like Sodium ($\text{Na}$). The other 5 hydrogens bonded to Carbon are inert to $\text{Na}$.
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Comparative Matrix: Ethanol vs. Ethane -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag emerald">Comparative Analysis</span>
+              <h3>Hydrocarbon vs. Alcohol: Why Structure Dictates Behavior</h3>
+            </div>
+            
+            <div class="compare-table-wrapper">
+              <table class="cosmic-table">
+                <thead>
+                  <tr>
+                    <th>Characteristic</th>
+                    <th>Ethane ($\text{CH}_3-\text{CH}_3$)</th>
+                    <th>Ethylic Alcohol ($\text{C}_2\text{H}_5\text{OH}$)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Classification</strong></td>
+                    <td>Saturated Hydrocarbon (Alkane)</td>
+                    <td>Hydrocarbon Derivative (Alcohol)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Functional Group</strong></td>
+                    <td>None (only $\text{C}-\text{C}$ &amp; $\text{C}-\text{H}$)</td>
+                    <td><strong class="rose-text">Hydroxyl group ($-\text{OH}$)</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Physical State ($25^\circ\text{C}$)</strong></td>
+                    <td>Colorless gas</td>
+                    <td>Colorless liquid ($T_{\text{boil}} = 78.3^\circ\text{C}$)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Water Solubility</strong></td>
+                    <td>Practically insoluble in water</td>
+                    <td><span class="cyan-badge">Infinitely miscible</span> in water</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Reaction with Sodium ($\text{Na}$)</strong></td>
+                    <td><span class="red-badge">No reaction</span></td>
+                    <td><span class="green-badge">Releases $\text{H}_2\uparrow$ gas</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="insight-card">
+              <div class="insight-title">🔬 The Hydrogen Bonding Secret</div>
+              <p>
+                The oxygen atom in the $-\text{OH}$ group is strongly electronegative, creating polar hydrogen bonds with neighboring water molecules ($\text{H}_2\text{O}$). This explains why ethanol is a liquid at room temperature and dissolves in water in <strong>all proportions</strong>, whereas ethane with the same number of carbons is a gas!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 2: PHYSICAL STATS & ABV SOLUTION MIXER -->
+      <!-- ============================================== -->
+      <section id="sector2" class="sector-pane">
+        <div class="pane-grid">
+          <!-- Left: Bento Physical Stats -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag amber">Physical Telemetry</span>
+              <h3>Fundamental Physical Constants of Pure Ethanol</h3>
+            </div>
+            
+            <div class="bento-grid">
+              <div class="bento-item">
+                <span class="bento-icon">🌡️</span>
+                <span class="bento-val">78.3 °C</span>
+                <span class="bento-lbl">Boiling Point</span>
+                <span class="bento-sub">Lower than water (100 °C)</span>
+              </div>
+              <div class="bento-item">
+                <span class="bento-icon">⚖️</span>
+                <span class="bento-val">0.789 g/mL</span>
+                <span class="bento-lbl">Density ($D$) at 20 °C</span>
+                <span class="bento-sub">Lighter than water (1.0 g/mL)</span>
+              </div>
+              <div class="bento-item">
+                <span class="bento-icon">💧</span>
+                <span class="bento-val">∞ Miscible</span>
+                <span class="bento-lbl">Water Solubility</span>
+                <span class="bento-sub">Mixes in all volume ratios</span>
+              </div>
+              <div class="bento-item">
+                <span class="bento-icon">🧪</span>
+                <span class="bento-val">Organic Solvent</span>
+                <span class="bento-lbl">Solvent Power</span>
+                <span class="bento-sub">Dissolves iodine, fats, oils</span>
+              </div>
+            </div>
+
+            <div class="formula-box mt-4">
+              <div class="formula-title">📐 Alcohol by Volume (ABV / Độ Cồn) Formula</div>
+              <div class="katex-display">
+                $$\text{ABV } (Đ) = \frac{V_{\text{pure ethanol}}}{V_{\text{total solution}}} \times 100^\circ$$
+              </div>
+              <div class="katex-display">
+                $$m_{\text{pure ethanol}} = V_{\text{pure ethanol}} \times D_{\text{ethanol}} = V \times 0.789\text{ g}$$
+              </div>
+              <p class="formula-caption">
+                *Definition:* The volume (in $\text{mL}$) of pure ethylic alcohol present in $100\text{ mL}$ of aqueous solution at $20^\circ\text{C}$.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Alcohol Degree Simulator -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag cyan">Orbital Solution Mixer</span>
+              <h3>Interactive Alcohol Degree (ABV) Simulator</h3>
+            </div>
+            <p class="card-desc">
+              Adjust the pure ethanol volume and total solution volume to observe real-time ABV and mass calculations.
+            </p>
+
+            <div class="mixer-workspace">
+              <!-- Animated Beaker -->
+              <div class="beaker-container">
+                <div class="beaker-glass">
+                  <div class="beaker-fluid" id="beakerFluid" style="height: 70%;">
+                    <div class="beaker-foam"></div>
+                    <span class="beaker-level-label" id="beakerPctLabel">70.0° ABV</span>
+                  </div>
+                  <!-- Tick marks -->
+                  <div class="beaker-tick" style="bottom: 25%;"><span>100 mL</span></div>
+                  <div class="beaker-tick" style="bottom: 50%;"><span>250 mL</span></div>
+                  <div class="beaker-tick" style="bottom: 75%;"><span>400 mL</span></div>
+                </div>
+              </div>
+
+              <!-- Controls & Live Readouts -->
+              <div class="mixer-controls">
+                <!-- Preset buttons -->
+                <div class="preset-group">
+                  <span class="preset-title">Standard Calibration Presets:</span>
+                  <div class="preset-buttons">
+                    <button class="preset-btn" data-alc="4.5" data-sol="100">Beer (4.5°)</button>
+                    <button class="preset-btn" data-alc="12" data-sol="100">Wine (12°)</button>
+                    <button class="preset-btn" data-alc="40" data-sol="100">Vodka (40°)</button>
+                    <button class="preset-btn active" data-alc="70" data-sol="100">Medical (70°)</button>
+                    <button class="preset-btn" data-alc="90" data-sol="100">Lab Fuel (90°)</button>
+                    <button class="preset-btn" data-alc="25" data-sol="500">E5 Biofuel (5°)</button>
+                  </div>
+                </div>
+
+                <!-- Sliders -->
+                <div class="slider-control">
+                  <label for="alcVolSlider">Pure Ethanol Volume ($V_{\text{alcohol}}$): <strong id="alcVolText" class="cyan-text">70 mL</strong></label>
+                  <input type="range" id="alcVolSlider" min="1" max="200" step="1" value="70">
+                </div>
+
+                <div class="slider-control">
+                  <label for="totalVolSlider">Total Solution Volume ($V_{\text{solution}}$): <strong id="totalVolText" class="amber-text">100 mL</strong></label>
+                  <input type="range" id="totalVolSlider" min="50" max="500" step="5" value="100">
+                </div>
+
+                <!-- Calculated Output Card -->
+                <div class="telemetry-readout">
+                  <div class="readout-col">
+                    <span class="readout-label">Computed Alcohol Degree</span>
+                    <span class="readout-value cyan-glow" id="calcAbv">70.0°</span>
+                  </div>
+                  <div class="readout-col">
+                    <span class="readout-label">Pure Ethanol Mass</span>
+                    <span class="readout-value amber-glow" id="calcMass">55.23 g</span>
+                  </div>
+                  <div class="readout-col">
+                    <span class="readout-label">Water Content</span>
+                    <span class="readout-value" id="calcWater">30.0 mL</span>
+                  </div>
+                </div>
+
+                <!-- 70 vs 90 Degree Medical Secret -->
+                <div class="med-secret-card">
+                  <span class="secret-badge">⭐ Medical Science Insight</span>
+                  <p>
+                    <strong>Why is 70° alcohol more effective than 90° for sanitization?</strong><br>
+                    At $90^\circ$, alcohol coagulates the outer bacterial protein shell too rapidly, forming a protective barrier that prevents alcohol from penetrating the bacterial core. At $70^\circ$, the presence of water slows down coagulation, allowing ethanol to thoroughly penetrate the cell membrane and destroy the microorganisms from within.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 3: REACTION BENCH (COMBUSTION & SODIUM) -->
+      <!-- ============================================== -->
+      <section id="sector3" class="sector-pane">
+        <div class="pane-grid">
+          <!-- Station A: Combustion in Oxygen -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag rose">Station A • Exothermic Propulsion</span>
+              <h3>Combustion of Ethanol: Clean Blue Flame</h3>
+            </div>
+            <p class="card-desc">
+              Ethylic alcohol burns completely in oxygen with an iconic, smoke-free pale blue flame, releasing extensive thermal energy used for rocket thrusters and engine fuel.
+            </p>
+
+            <div class="experiment-bench">
+              <!-- Visual Burner Canvas -->
+              <div class="burner-stage">
+                <div class="burner-base"></div>
+                <div class="dish-vessel"></div>
+                <div class="flame-element" id="blueFlame">
+                  <div class="flame-core"></div>
+                  <div class="flame-outer"></div>
+                </div>
+                <div class="heat-particles" id="heatShimmer"></div>
+              </div>
+
+              <div class="experiment-controls">
+                <button id="igniteBtn" class="action-btn flame-btn">🔥 Ignite Ethanol Fuel</button>
+                <div class="status-indicator" id="burnStatus">Vessel cold • Fuel loaded</div>
+              </div>
+            </div>
+
+            <div class="formula-box">
+              <div class="formula-title">⚡ Balanced Thermochemical Equation</div>
+              <div class="katex-display">
+                $$\text{C}_2\text{H}_5\text{OH} + 3\text{O}_2 \xrightarrow{t^\circ} 2\text{CO}_2\uparrow + 3\text{H}_2\text{O} \quad (\Delta H < 0)$$
+              </div>
+              <div class="calc-widget">
+                <label>Stoichiometry Calculator: Enter mass of $\text{C}_2\text{H}_5\text{OH}$ (g):</label>
+                <div class="calc-input-row">
+                  <input type="number" id="burnMassInput" value="9.2" step="0.1" min="0.1" max="100">
+                  <button id="calcBurnBtn" class="btn-small">Compute Telemetry</button>
+                </div>
+                <div class="calc-results" id="burnResults">
+                  • Moles of Ethanol: <strong>0.20 mol</strong><br>
+                  • Oxygen Required at standard conditions ($25^\circ\text{C}, 1\text{ bar}$): <strong>14.87 L</strong> ($0.60\text{ mol}$)<br>
+                  • Carbon Dioxide Produced: <strong>9.92 L</strong> ($0.40\text{ mol}$)
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Station B: Active Metal Displacement (Sodium) -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag cyan">Station B • Functional Group Displacement</span>
+              <h3>Active Metal Test: Sodium ($\text{Na}$) Reaction</h3>
+            </div>
+            <p class="card-desc">
+              When metallic sodium is introduced to absolute ethylic alcohol, the sodium sinks and steadily dissolves, producing hydrogen gas ($\text{H}_2$).
+            </p>
+
+            <div class="experiment-bench">
+              <!-- Test tube simulation -->
+              <div class="tube-stage">
+                <div class="test-tube">
+                  <div class="tube-liquid"></div>
+                  <div class="na-pellet" id="naPellet">Na</div>
+                  <div class="bubbles-stream" id="bubbleContainer"></div>
+                </div>
+              </div>
+
+              <div class="experiment-controls">
+                <button id="dropNaBtn" class="action-btn drop-btn">🧪 Drop Sodium (Na) Pellet</button>
+                <div class="status-indicator" id="naStatus">Ready: Pure $\text{C}_2\text{H}_5\text{OH}$ loaded</div>
+              </div>
+            </div>
+
+            <div class="formula-box">
+              <div class="formula-title">⚡ Single Displacement Equation</div>
+              <div class="katex-display">
+                $$2\text{C}_2\text{H}_5\text{OH} + 2\text{Na} \to 2\text{C}_2\text{H}_5\text{ONa} + \text{H}_2\uparrow$$
+              </div>
+              <p class="formula-caption">
+                <strong>Product:</strong> $\text{C}_2\text{H}_5\text{ONa}$ is named <strong>Sodium ethoxide</strong>.<br>
+                <strong>Scientific Law:</strong> The sodium atom displaces <em>only</em> the hydrogen atom in the $-\text{OH}$ group, demonstrating the chemical difference between hydroxyl hydrogen and hydrocarbon hydrogens.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 4: BIO-SYNTHESIS & HEALTH MATRIX -->
+      <!-- ============================================== -->
+      <section id="sector4" class="sector-pane">
+        <div class="pane-grid">
+          <!-- Left: Dual-Path Synthesis Flowchart -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag emerald">Production Telemetry</span>
+              <h3>Dual-Path Industrial &amp; Biochemical Synthesis</h3>
+            </div>
+            
+            <div class="path-toggle-row">
+              <button class="path-btn active" id="pathBioBtn">🌾 Biochemical Fermentation</button>
+              <button class="path-btn" id="pathIndBtn">🏭 Industrial Petroleum Hydration</button>
+            </div>
+
+            <div class="path-content-box" id="pathContent">
+              <!-- Rendered dynamically by app.js -->
+            </div>
+
+            <div class="application-grid mt-4">
+              <div class="app-card">
+                <span class="app-icon">⛽</span>
+                <span class="app-title">Clean Biofuel</span>
+                <p>E5 fuel ($5\%$ bio-ethanol + $95\%$ gasoline) reduces carbon monoxide emissions.</p>
+              </div>
+              <div class="app-card">
+                <span class="app-icon">🩺</span>
+                <span class="app-title">Medical Antiseptic</span>
+                <p>$70^\circ$ alcohol sanitizes surgical instruments, skin surfaces, and medical facilities.</p>
+              </div>
+              <div class="app-card">
+                <span class="app-icon">🎨</span>
+                <span class="app-title">Industrial Solvent</span>
+                <p>Dissolves perfumes, varnishes, dyes, and pharmaceutical compounds effortlessly.</p>
+              </div>
+              <div class="app-card">
+                <span class="app-icon">🧪</span>
+                <span class="app-title">Organic Feedstock</span>
+                <p>Raw material for producing acetic acid (vinegar), synthetic rubber, and esters.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Health Hazards & Space Cadet Code -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag rose">Biohazard Protocol</span>
+              <h3>Harmful Effects of Alcohol Abuse &amp; Space Cadet Law</h3>
+            </div>
+            <p class="card-desc">
+              Ethanol is a central nervous system depressant. Abusing alcoholic beverages leads to severe physiological and societal damage.
+            </p>
+
+            <div class="body-hazard-map">
+              <div class="hazard-node">
+                <div class="node-icon">🧠</div>
+                <div class="node-text">
+                  <strong>Brain &amp; Central Nervous System</strong>
+                  <p>Slows reaction times, impairs motor coordination, causes cognitive decline and loss of emotional control.</p>
+                </div>
+              </div>
+              <div class="hazard-node">
+                <div class="node-icon">🫀</div>
+                <div class="node-text">
+                  <strong>Cardiovascular Health</strong>
+                  <p>Elevates blood pressure, causes irregular cardiac rhythms, and increases risk of stroke.</p>
+                </div>
+              </div>
+              <div class="hazard-node">
+                <div class="node-icon">🫁</div>
+                <div class="node-text">
+                  <strong>Liver Pathology</strong>
+                  <p>Excessive ethanol processing produces toxic acetaldehyde, leading to fatty liver, hepatitis, and cirrhosis.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="cadet-law-card">
+              <div class="law-header">
+                <span class="law-badge">STRICT LAW FOR STUDENTS</span>
+                <h4>Zero-Alcohol Mandate for Youths Under 18</h4>
+              </div>
+              <p>
+                Under Vietnamese and international law, students under 18 years old are <strong>strictly prohibited</strong> from purchasing, consuming, or possessing beer, wine, or any alcoholic beverages. Growing brains and organs are exceptionally vulnerable to permanent alcohol toxicity.
+              </p>
+              <div class="law-motto">"If you drink alcohol, never operate spacecraft, vehicles, or machinery!"</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 5: FLIGHT READINESS QUIZ -->
+      <!-- ============================================== -->
+      <section id="sector5" class="sector-pane">
+        <div class="quiz-container card glass-card">
+          <div class="quiz-header">
+            <div>
+              <span class="tag cyan">Checkpoint Evaluation</span>
+              <h2>Orbital Flight Readiness Check: 5 Quick Challenges</h2>
+            </div>
+            <div class="quiz-score-badge">
+              Score: <span id="quizScore">0</span> / 5
+            </div>
+          </div>
+          
+          <div id="quizQuestionsContainer" class="quiz-stack">
+            <!-- Questions rendered by app.js -->
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
