@@ -279,298 +279,363 @@ export default function StudentDashboard() {
                       </button>
 
                       {/* NỘI DUNG CHI TIẾT KHI NHẤN VÀO CARD */}
-                      {isExpanded && (
-                        <div className="p-6 pt-2 border-t border-slate-800/80 bg-slate-950/40">
-                          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-4">
-                            {/* 1. KHỐI BÀI GIẢNG */}
-                            <div className="rounded-2xl p-6 bg-slate-900/90 border border-cyan-500/30 flex flex-col justify-between shadow-lg">
-                              <div>
-                                <div className="flex items-center justify-between mb-3">
-                                  <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-cyan-950 border border-cyan-500/40 text-cyan-400 flex items-center space-x-1.5">
-                                    <BookOpen className="w-3.5 h-3.5" />
-                                    <span>Station 1: Flight Briefing</span>
-                                  </span>
-                                  <span
-                                    className={`text-[11px] font-semibold px-2 py-0.5 rounded-full ${
-                                      assignment.lecture_viewed_at
-                                        ? 'bg-emerald-950 text-emerald-400 border border-emerald-500/30'
-                                        : 'bg-amber-950 text-amber-400 border border-amber-500/30'
+                      {isExpanded && (() => {
+                        const appMatch = assignment.learning_units?.lecture_content_markdown?.match(/\/lectures\/[a-zA-Z0-9_\-\/]+\.html/);
+                        const interactiveUrl = appMatch ? appMatch[0] : null;
+                        const hasInteractive = !!interactiveUrl;
+                        const hasExercises = !!inSessionAttempt || !!homeworkAttempt;
+
+                        return (
+                          <div className="p-6 pt-2 border-t border-slate-800/80 bg-slate-950/40">
+                            {/* Thông báo nếu buổi học là thuần lý thuyết (Lecture Only) */}
+                            {!hasExercises && (
+                              <div className="mt-4 px-4 py-3 rounded-2xl bg-cyan-950/60 border border-cyan-500/40 text-cyan-200 text-xs flex flex-wrap items-center justify-between gap-2 shadow-[0_0_15px_rgba(6,182,212,0.15)]">
+                                <span className="font-semibold flex items-center space-x-2">
+                                  <span>🚀</span>
+                                  <span>Orbital Telemetry Briefing: Today is dedicated to mastering theory &amp; virtual laboratory simulation (No graded quiz pressure today).</span>
+                                </span>
+                                <span className="text-[11px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-cyan-900 text-cyan-300 border border-cyan-500/50">
+                                  Theory &amp; Lab Simulation
+                                </span>
+                              </div>
+                            )}
+
+                            <div className={`grid grid-cols-1 ${hasExercises ? 'lg:grid-cols-3' : 'lg:grid-cols-1'} gap-6 mt-4`}>
+                              {/* 1. KHỐI BÀI GIẢNG */}
+                              <div className={`rounded-2xl p-6 bg-slate-900/90 border border-cyan-500/30 flex flex-col justify-between shadow-lg ${
+                                !hasExercises ? 'lg:col-span-1 ring-1 ring-cyan-500/20' : ''
+                              }`}>
+                                <div>
+                                  <div className="flex items-center justify-between mb-3">
+                                    <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-cyan-950 border border-cyan-500/40 text-cyan-400 flex items-center space-x-1.5">
+                                      <BookOpen className="w-3.5 h-3.5" />
+                                      <span>{hasInteractive ? 'Station 1: Orbital Live Studio & Telemetry' : 'Station 1: Flight Briefing'}</span>
+                                    </span>
+                                    <div className="flex items-center space-x-2">
+                                      {hasInteractive && interactiveUrl && (
+                                        <a
+                                          href={interactiveUrl}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          className="text-xs text-cyan-400 hover:text-cyan-200 font-semibold flex items-center space-x-1 px-2 py-0.5 rounded-md bg-cyan-950/80 border border-cyan-500/30 transition"
+                                          title="Open Full Screen in New Tab"
+                                        >
+                                          <span>Full Screen</span>
+                                          <ExternalLink className="w-3 h-3" />
+                                        </a>
+                                      )}
+                                      <span
+                                        className={`text-[11px] font-semibold px-2 py-0.5 rounded-full ${
+                                          assignment.lecture_viewed_at
+                                            ? 'bg-emerald-950 text-emerald-400 border border-emerald-500/30'
+                                            : 'bg-amber-950 text-amber-400 border border-amber-500/30'
+                                        }`}
+                                      >
+                                        {assignment.lecture_viewed_at ? '✓ Briefing Reviewed' : 'Pending Review'}
+                                      </span>
+                                    </div>
+                                  </div>
+
+                                  <h4 className="text-base font-bold text-white mt-2 leading-snug">
+                                    {assignment.learning_units?.title}
+                                  </h4>
+                                  <p className="text-xs text-slate-400 mt-2 line-clamp-3 leading-relaxed">
+                                    {assignment.learning_units?.description ||
+                                      'Review geometric properties and computational formulas.'}
+                                  </p>
+                                </div>
+
+                                <div className="mt-6 pt-4 border-t border-slate-800 flex flex-wrap gap-3">
+                                  {hasInteractive ? (
+                                    <>
+                                      <button
+                                        onClick={() => {
+                                          setLectureViewMode('interactive');
+                                          handleOpenLecture(assignment);
+                                        }}
+                                        className="flex-1 min-w-[200px] py-2.5 px-4 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white text-sm font-semibold flex items-center justify-center space-x-2 transition shadow-[0_0_15px_rgba(6,182,212,0.3)]"
+                                      >
+                                        <Sparkles className="w-4 h-4 text-cyan-200" />
+                                        <span>Launch Interactive Live Studio</span>
+                                      </button>
+                                      <button
+                                        onClick={() => {
+                                          setLectureViewMode('briefing');
+                                          handleOpenLecture(assignment);
+                                        }}
+                                        className="py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 border border-cyan-500/40 text-cyan-300 text-sm font-semibold flex items-center justify-center space-x-2 transition shadow"
+                                      >
+                                        <BookOpen className="w-4 h-4 text-cyan-400" />
+                                        <span>Read Briefing Doc</span>
+                                      </button>
+                                    </>
+                                  ) : (
+                                    <button
+                                      onClick={() => handleOpenLecture(assignment)}
+                                      className="w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 border border-cyan-500/40 text-cyan-300 text-sm font-semibold flex items-center justify-center space-x-2 transition shadow"
+                                    >
+                                      <BookOpen className="w-4 h-4 text-cyan-400" />
+                                      <span>
+                                        {assignment.lecture_viewed_at
+                                          ? 'Re-open Flight Briefing & KaTeX'
+                                          : 'Read Flight Briefing & KaTeX Rules'}
+                                      </span>
+                                    </button>
+                                  )}
+                                </div>
+                              </div>
+
+                              {/* 2. KHỐI BÀI TẬP TẠI LỚP (90 PHÚT) */}
+                              {hasExercises && (
+                                inSessionAttempt ? (
+                                  <div
+                                    className={`rounded-2xl p-6 flex flex-col justify-between border backdrop-blur-xl transition duration-300 ${
+                                      inSessionAttempt.status === 'GRADED'
+                                        ? 'bg-slate-900/90 border-emerald-500/40 shadow-[0_0_20px_rgba(168,85,247,0.15)]'
+                                        : inSessionAttempt.status === 'SUBMITTED'
+                                        ? 'bg-slate-900/90 border-amber-500/40 shadow-[0_0_20px_rgba(245,158,11,0.15)]'
+                                        : 'bg-slate-900/90 border-cyan-500/40 hover:border-cyan-300 shadow-[0_0_20px_rgba(6,182,212,0.1)]'
                                     }`}
                                   >
-                                    {assignment.lecture_viewed_at ? '✓ Briefing Reviewed' : 'Pending Review'}
-                                  </span>
-                                </div>
-
-                                <h4 className="text-base font-bold text-white mt-2 leading-snug">
-                                  {assignment.learning_units?.title}
-                                </h4>
-                                <p className="text-xs text-slate-400 mt-2 line-clamp-3 leading-relaxed">
-                                  {assignment.learning_units?.description ||
-                                    'Review geometric properties and computational formulas.'}
-                                </p>
-                              </div>
-
-                              <div className="mt-6 pt-4 border-t border-slate-800">
-                                <button
-                                  onClick={() => handleOpenLecture(assignment)}
-                                  className="w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 border border-cyan-500/40 text-cyan-300 text-sm font-semibold flex items-center justify-center space-x-2 transition shadow"
-                                >
-                                  <BookOpen className="w-4 h-4 text-cyan-400" />
-                                  <span>
-                                    {assignment.lecture_viewed_at
-                                      ? 'Re-open Flight Briefing & KaTeX'
-                                      : 'Read Flight Briefing & KaTeX Rules'}
-                                  </span>
-                                </button>
-                              </div>
-                            </div>
-
-                            {/* 2. KHỐI BÀI TẬP TẠI LỚP (90 PHÚT) */}
-                            {inSessionAttempt ? (
-                              <div
-                                className={`rounded-2xl p-6 flex flex-col justify-between border backdrop-blur-xl transition duration-300 ${
-                                  inSessionAttempt.status === 'GRADED'
-                                    ? 'bg-slate-900/90 border-emerald-500/40 shadow-[0_0_20px_rgba(168,85,247,0.15)]'
-                                    : inSessionAttempt.status === 'SUBMITTED'
-                                    ? 'bg-slate-900/90 border-amber-500/40 shadow-[0_0_20px_rgba(245,158,11,0.15)]'
-                                    : 'bg-slate-900/90 border-cyan-500/40 hover:border-cyan-300 shadow-[0_0_20px_rgba(6,182,212,0.1)]'
-                                }`}
-                              >
-                                <div>
-                                  <div className="flex items-center justify-between mb-3">
-                                    <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-cyan-950 text-cyan-400 border border-cyan-500/30 flex items-center space-x-1.5">
-                                      <Clock className="w-3.5 h-3.5" />
-                                      <span>Station 2: In-Session Practice</span>
-                                    </span>
-                                    <span
-                                      className={`text-[11px] font-semibold ${
-                                        inSessionAttempt.status === 'GRADED'
-                                          ? 'text-emerald-400'
-                                          : inSessionAttempt.status === 'SUBMITTED'
-                                          ? 'text-amber-400'
-                                          : inSessionAttempt.status === 'IN_PROGRESS'
-                                          ? 'text-cyan-400'
-                                          : 'text-slate-400'
-                                      }`}
-                                    >
-                                      {inSessionAttempt.status === 'GRADED'
-                                        ? 'Graded & Reviewed'
-                                        : inSessionAttempt.status === 'SUBMITTED'
-                                        ? 'Submitted (Pending Review)'
-                                        : inSessionAttempt.status === 'IN_PROGRESS'
-                                        ? 'In Progress'
-                                        : 'Not Started'}
-                                    </span>
-                                  </div>
-
-                                  <h4 className="text-base font-bold text-white leading-tight">
-                                    {inSessionAttempt.assessments?.title || 'In-Session Assessment'}
-                                  </h4>
-
-                                  <div className="mt-4 flex items-center space-x-4 text-xs text-slate-400">
-                                    <div className="flex items-center space-x-1">
-                                      <Clock className="w-3.5 h-3.5 text-cyan-400" />
-                                      <span>
-                                        {inSessionAttempt.assessments?.time_limit_minutes || 90} mins
-                                      </span>
-                                    </div>
-                                    <div className="flex items-center space-x-1">
-                                      <Star className="w-3.5 h-3.5 text-amber-400" />
-                                      <span>Max Score: {inSessionAttempt.assessments?.max_score || 10}</span>
-                                    </div>
-                                  </div>
-
-                                  {inSessionAttempt.status === 'SUBMITTED' && (
-                                    <div className="mt-4 p-3 rounded-xl bg-amber-950/40 border border-amber-500/30 text-amber-300 text-xs">
-                                      <p className="font-bold text-sm">
-                                        Completed: {inSessionAttempt._count?.student_answers ?? inSessionAttempt.student_answers?.length ?? 0} / {inSessionAttempt.assessments?._count?.questions ?? inSessionAttempt.assessments?.questions?.length ?? 0} problems
-                                      </p>
-                                      <p className="mt-1 text-[11px] text-amber-200/80">
-                                        Telemetry transmitted • Pending flight review from Command
-                                      </p>
-                                    </div>
-                                  )}
-
-                                  {inSessionAttempt.status === 'GRADED' && (
-                                    <div className="mt-4 p-3 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 text-xs">
-                                      <div className="flex items-center justify-between">
-                                        <p className="font-bold text-sm">
-                                          Score: {inSessionAttempt.total_score} / {inSessionAttempt.assessments?.max_score}
-                                        </p>
-                                        <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-emerald-900/60 text-emerald-300">
-                                          {inSessionAttempt._count?.student_answers ?? inSessionAttempt.student_answers?.length ?? 0} / {inSessionAttempt.assessments?._count?.questions ?? inSessionAttempt.assessments?.questions?.length ?? 0} completed
+                                    <div>
+                                      <div className="flex items-center justify-between mb-3">
+                                        <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-cyan-950 text-cyan-400 border border-cyan-500/30 flex items-center space-x-1.5">
+                                          <Clock className="w-3.5 h-3.5" />
+                                          <span>Station 2: In-Session Practice</span>
+                                        </span>
+                                        <span
+                                          className={`text-[11px] font-semibold ${
+                                            inSessionAttempt.status === 'GRADED'
+                                              ? 'text-emerald-400'
+                                              : inSessionAttempt.status === 'SUBMITTED'
+                                              ? 'text-amber-400'
+                                              : inSessionAttempt.status === 'IN_PROGRESS'
+                                              ? 'text-cyan-400'
+                                              : 'text-slate-400'
+                                          }`}
+                                        >
+                                          {inSessionAttempt.status === 'GRADED'
+                                            ? 'Graded & Reviewed'
+                                            : inSessionAttempt.status === 'SUBMITTED'
+                                            ? 'Submitted (Pending Review)'
+                                            : inSessionAttempt.status === 'IN_PROGRESS'
+                                            ? 'In Progress'
+                                            : 'Not Started'}
                                         </span>
                                       </div>
-                                      {inSessionAttempt.overall_feedback && (
-                                        <p className="mt-1.5 italic opacity-90">
-                                          Tutor Flight Log: "{inSessionAttempt.overall_feedback}"
-                                        </p>
+
+                                      <h4 className="text-base font-bold text-white leading-tight">
+                                        {inSessionAttempt.assessments?.title || 'In-Session Assessment'}
+                                      </h4>
+
+                                      <div className="mt-4 flex items-center space-x-4 text-xs text-slate-400">
+                                        <div className="flex items-center space-x-1">
+                                          <Clock className="w-3.5 h-3.5 text-cyan-400" />
+                                          <span>
+                                            {inSessionAttempt.assessments?.time_limit_minutes || 90} mins
+                                          </span>
+                                        </div>
+                                        <div className="flex items-center space-x-1">
+                                          <Star className="w-3.5 h-3.5 text-amber-400" />
+                                          <span>Max Score: {inSessionAttempt.assessments?.max_score || 10}</span>
+                                        </div>
+                                      </div>
+
+                                      {inSessionAttempt.status === 'SUBMITTED' && (
+                                        <div className="mt-4 p-3 rounded-xl bg-amber-950/40 border border-amber-500/30 text-amber-300 text-xs">
+                                          <p className="font-bold text-sm">
+                                            Completed: {inSessionAttempt._count?.student_answers ?? inSessionAttempt.student_answers?.length ?? 0} / {inSessionAttempt.assessments?._count?.questions ?? inSessionAttempt.assessments?.questions?.length ?? 0} problems
+                                          </p>
+                                          <p className="mt-1 text-[11px] text-amber-200/80">
+                                            Telemetry transmitted • Pending flight review from Command
+                                          </p>
+                                        </div>
+                                      )}
+
+                                      {inSessionAttempt.status === 'GRADED' && (
+                                        <div className="mt-4 p-3 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 text-xs">
+                                          <div className="flex items-center justify-between">
+                                            <p className="font-bold text-sm">
+                                              Score: {inSessionAttempt.total_score} / {inSessionAttempt.assessments?.max_score}
+                                            </p>
+                                            <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-emerald-900/60 text-emerald-300">
+                                              {inSessionAttempt._count?.student_answers ?? inSessionAttempt.student_answers?.length ?? 0} / {inSessionAttempt.assessments?._count?.questions ?? inSessionAttempt.assessments?.questions?.length ?? 0} completed
+                                            </span>
+                                          </div>
+                                          {inSessionAttempt.overall_feedback && (
+                                            <p className="mt-1.5 italic opacity-90">
+                                              Tutor Flight Log: "{inSessionAttempt.overall_feedback}"
+                                            </p>
+                                          )}
+                                        </div>
                                       )}
                                     </div>
-                                  )}
-                                </div>
 
-                                <div className="mt-6 pt-4 border-t border-slate-800">
-                                  {inSessionAttempt.status === 'GRADED' ? (
-                                    <Link
-                                      href={`/student/results/${inSessionAttempt.id}`}
-                                      className="w-full py-2.5 px-4 rounded-xl bg-emerald-600/30 hover:bg-emerald-600/40 border border-emerald-500/50 text-emerald-300 text-sm font-semibold flex items-center justify-center space-x-2 transition"
-                                    >
-                                      <span>View Detailed Graded Review</span>
-                                      <ExternalLink className="w-4 h-4" />
-                                    </Link>
-                                  ) : inSessionAttempt.status === 'SUBMITTED' ? (
-                                    <Link
-                                      href={`/student/results/${inSessionAttempt.id}`}
-                                      className="w-full py-2.5 px-4 rounded-xl bg-amber-600/20 hover:bg-amber-600/30 border border-amber-500/40 text-amber-300 text-sm font-semibold flex items-center justify-center space-x-2 transition"
-                                    >
-                                      <span>View Submission Debrief ({inSessionAttempt._count?.student_answers ?? inSessionAttempt.student_answers?.length ?? 0}/{inSessionAttempt.assessments?._count?.questions ?? 0} solved)</span>
-                                      <ExternalLink className="w-4 h-4" />
-                                    </Link>
-                                  ) : (
-                                    <Link
-                                      href={`/student/mission/${inSessionAttempt.id}`}
-                                      className="w-full py-2.5 px-4 rounded-xl text-white text-sm font-semibold flex items-center justify-center space-x-2 transition shadow-lg bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 shadow-[0_0_15px_rgba(6,182,212,0.4)]"
-                                    >
-                                      <span>
-                                        {inSessionAttempt.status === 'IN_PROGRESS'
-                                          ? 'Resume In-Session Flight'
-                                          : 'Launch In-Session Mission (90-120m)'}
-                                      </span>
-                                      <ArrowRight className="w-4 h-4" />
-                                    </Link>
-                                  )}
-                                </div>
-                              </div>
-                            ) : (
-                              <div className="rounded-2xl p-6 bg-slate-900/60 border border-slate-800 flex items-center justify-center text-center text-xs text-slate-500">
-                                No in-session mission for this date
-                              </div>
-                            )}
+                                    <div className="mt-6 pt-4 border-t border-slate-800">
+                                      {inSessionAttempt.status === 'GRADED' ? (
+                                        <Link
+                                          href={`/student/results/${inSessionAttempt.id}`}
+                                          className="w-full py-2.5 px-4 rounded-xl bg-emerald-600/30 hover:bg-emerald-600/40 border border-emerald-500/50 text-emerald-300 text-sm font-semibold flex items-center justify-center space-x-2 transition"
+                                        >
+                                          <span>View Detailed Graded Review</span>
+                                          <ExternalLink className="w-4 h-4" />
+                                        </Link>
+                                      ) : inSessionAttempt.status === 'SUBMITTED' ? (
+                                        <Link
+                                          href={`/student/results/${inSessionAttempt.id}`}
+                                          className="w-full py-2.5 px-4 rounded-xl bg-amber-600/20 hover:bg-amber-600/30 border border-amber-500/40 text-amber-300 text-sm font-semibold flex items-center justify-center space-x-2 transition"
+                                        >
+                                          <span>View Submission Debrief ({inSessionAttempt._count?.student_answers ?? inSessionAttempt.student_answers?.length ?? 0}/{inSessionAttempt.assessments?._count?.questions ?? 0} solved)</span>
+                                          <ExternalLink className="w-4 h-4" />
+                                        </Link>
+                                      ) : (
+                                        <Link
+                                          href={`/student/mission/${inSessionAttempt.id}`}
+                                          className="w-full py-2.5 px-4 rounded-xl text-white text-sm font-semibold flex items-center justify-center space-x-2 transition shadow-lg bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 shadow-[0_0_15px_rgba(6,182,212,0.4)]"
+                                        >
+                                          <span>
+                                            {inSessionAttempt.status === 'IN_PROGRESS'
+                                              ? 'Resume In-Session Flight'
+                                              : 'Launch In-Session Mission (90-120m)'}
+                                          </span>
+                                          <ArrowRight className="w-4 h-4" />
+                                        </Link>
+                                      )}
+                                    </div>
+                                  </div>
+                                ) : (
+                                  <div className="rounded-2xl p-6 bg-slate-900/60 border border-slate-800 flex items-center justify-center text-center text-xs text-slate-500">
+                                    No in-session mission for this date
+                                  </div>
+                                )
+                              )}
 
-                            {/* 3. KHỐI BÀI TẬP VỀ NHÀ */}
-                            {homeworkAttempt ? (
-                              <div
-                                className={`rounded-2xl p-6 flex flex-col justify-between border backdrop-blur-xl transition duration-300 ${
-                                  homeworkAttempt.status === 'GRADED'
-                                    ? 'bg-slate-900/90 border-emerald-500/40 shadow-[0_0_20px_rgba(168,85,247,0.15)]'
-                                    : homeworkAttempt.status === 'SUBMITTED'
-                                    ? 'bg-slate-900/90 border-amber-500/40 shadow-[0_0_20px_rgba(245,158,11,0.15)]'
-                                    : 'bg-slate-900/90 border-purple-500/40 hover:border-purple-300 shadow-[0_0_20px_rgba(168,85,247,0.1)]'
-                                }`}
-                              >
-                                <div>
-                                  <div className="flex items-center justify-between mb-3">
-                                    <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-purple-950 text-purple-400 border border-purple-500/30 flex items-center space-x-1.5">
-                                      <FileText className="w-3.5 h-3.5" />
-                                      <span>Station 3: Orbital Homework</span>
-                                    </span>
-                                    <span
-                                      className={`text-[11px] font-semibold ${
-                                        homeworkAttempt.status === 'GRADED'
-                                          ? 'text-emerald-400'
-                                          : homeworkAttempt.status === 'SUBMITTED'
-                                          ? 'text-amber-400'
-                                          : homeworkAttempt.status === 'IN_PROGRESS'
-                                          ? 'text-purple-400'
-                                          : 'text-slate-400'
-                                      }`}
-                                    >
-                                      {homeworkAttempt.status === 'GRADED'
-                                        ? 'Graded & Reviewed'
+                              {/* 3. KHỐI BÀI TẬP VỀ NHÀ */}
+                              {hasExercises && (
+                                homeworkAttempt ? (
+                                  <div
+                                    className={`rounded-2xl p-6 flex flex-col justify-between border backdrop-blur-xl transition duration-300 ${
+                                      homeworkAttempt.status === 'GRADED'
+                                        ? 'bg-slate-900/90 border-emerald-500/40 shadow-[0_0_20px_rgba(168,85,247,0.15)]'
                                         : homeworkAttempt.status === 'SUBMITTED'
-                                        ? 'Submitted (Pending Review)'
-                                        : homeworkAttempt.status === 'IN_PROGRESS'
-                                        ? 'In Progress'
-                                        : 'Not Started'}
-                                    </span>
-                                  </div>
-
-                                  <h4 className="text-base font-bold text-white leading-tight">
-                                    {homeworkAttempt.assessments?.title || 'Orbital Homework'}
-                                  </h4>
-
-                                  <div className="mt-4 flex items-center space-x-4 text-xs text-slate-400">
-                                    <div className="flex items-center space-x-1">
-                                      <Sparkles className="w-3.5 h-3.5 text-purple-400" />
-                                      <span>Self-paced orbital consolidation</span>
-                                    </div>
-                                    <div className="flex items-center space-x-1">
-                                      <Star className="w-3.5 h-3.5 text-amber-400" />
-                                      <span>Max Score: {homeworkAttempt.assessments?.max_score || 10}</span>
-                                    </div>
-                                  </div>
-
-                                  {homeworkAttempt.status === 'SUBMITTED' && (
-                                    <div className="mt-4 p-3 rounded-xl bg-amber-950/40 border border-amber-500/30 text-amber-300 text-xs">
-                                      <p className="font-bold text-sm">
-                                        Completed: {homeworkAttempt._count?.student_answers ?? homeworkAttempt.student_answers?.length ?? 0} / {homeworkAttempt.assessments?._count?.questions ?? homeworkAttempt.assessments?.questions?.length ?? 0} problems
-                                      </p>
-                                      <p className="mt-1 text-[11px] text-amber-200/80">
-                                        Telemetry transmitted • Pending flight review from Command
-                                      </p>
-                                    </div>
-                                  )}
-
-                                  {homeworkAttempt.status === 'GRADED' && (
-                                    <div className="mt-4 p-3 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 text-xs">
-                                      <div className="flex items-center justify-between">
-                                        <p className="font-bold text-sm">
-                                          Score: {homeworkAttempt.total_score} / {homeworkAttempt.assessments?.max_score}
-                                        </p>
-                                        <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-emerald-900/60 text-emerald-300">
-                                          {homeworkAttempt._count?.student_answers ?? homeworkAttempt.student_answers?.length ?? 0} / {homeworkAttempt.assessments?._count?.questions ?? homeworkAttempt.assessments?.questions?.length ?? 0} completed
+                                        ? 'bg-slate-900/90 border-amber-500/40 shadow-[0_0_20px_rgba(245,158,11,0.15)]'
+                                        : 'bg-slate-900/90 border-purple-500/40 hover:border-purple-300 shadow-[0_0_20px_rgba(168,85,247,0.1)]'
+                                    }`}
+                                  >
+                                    <div>
+                                      <div className="flex items-center justify-between mb-3">
+                                        <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-purple-950 text-purple-400 border border-purple-500/30 flex items-center space-x-1.5">
+                                          <FileText className="w-3.5 h-3.5" />
+                                          <span>Station 3: Orbital Homework</span>
+                                        </span>
+                                        <span
+                                          className={`text-[11px] font-semibold ${
+                                            homeworkAttempt.status === 'GRADED'
+                                              ? 'text-emerald-400'
+                                              : homeworkAttempt.status === 'SUBMITTED'
+                                              ? 'text-amber-400'
+                                              : homeworkAttempt.status === 'IN_PROGRESS'
+                                              ? 'text-purple-400'
+                                              : 'text-slate-400'
+                                          }`}
+                                        >
+                                          {homeworkAttempt.status === 'GRADED'
+                                            ? 'Graded & Reviewed'
+                                            : homeworkAttempt.status === 'SUBMITTED'
+                                            ? 'Submitted (Pending Review)'
+                                            : homeworkAttempt.status === 'IN_PROGRESS'
+                                            ? 'In Progress'
+                                            : 'Not Started'}
                                         </span>
                                       </div>
-                                      {homeworkAttempt.overall_feedback && (
-                                        <p className="mt-1.5 italic opacity-90">
-                                          Tutor Flight Log: "{homeworkAttempt.overall_feedback}"
-                                        </p>
+
+                                      <h4 className="text-base font-bold text-white leading-tight">
+                                        {homeworkAttempt.assessments?.title || 'Orbital Homework'}
+                                      </h4>
+
+                                      <div className="mt-4 flex items-center space-x-4 text-xs text-slate-400">
+                                        <div className="flex items-center space-x-1">
+                                          <Sparkles className="w-3.5 h-3.5 text-purple-400" />
+                                          <span>Self-paced orbital consolidation</span>
+                                        </div>
+                                        <div className="flex items-center space-x-1">
+                                          <Star className="w-3.5 h-3.5 text-amber-400" />
+                                          <span>Max Score: {homeworkAttempt.assessments?.max_score || 10}</span>
+                                        </div>
+                                      </div>
+
+                                      {homeworkAttempt.status === 'SUBMITTED' && (
+                                        <div className="mt-4 p-3 rounded-xl bg-amber-950/40 border border-amber-500/30 text-amber-300 text-xs">
+                                          <p className="font-bold text-sm">
+                                            Completed: {homeworkAttempt._count?.student_answers ?? homeworkAttempt.student_answers?.length ?? 0} / {homeworkAttempt.assessments?._count?.questions ?? homeworkAttempt.assessments?.questions?.length ?? 0} problems
+                                          </p>
+                                          <p className="mt-1 text-[11px] text-amber-200/80">
+                                            Telemetry transmitted • Pending flight review from Command
+                                          </p>
+                                        </div>
+                                      )}
+
+                                      {homeworkAttempt.status === 'GRADED' && (
+                                        <div className="mt-4 p-3 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 text-xs">
+                                          <div className="flex items-center justify-between">
+                                            <p className="font-bold text-sm">
+                                              Score: {homeworkAttempt.total_score} / {homeworkAttempt.assessments?.max_score}
+                                            </p>
+                                            <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-emerald-900/60 text-emerald-300">
+                                              {homeworkAttempt._count?.student_answers ?? homeworkAttempt.student_answers?.length ?? 0} / {homeworkAttempt.assessments?._count?.questions ?? homeworkAttempt.assessments?.questions?.length ?? 0} completed
+                                            </span>
+                                          </div>
+                                          {homeworkAttempt.overall_feedback && (
+                                            <p className="mt-1.5 italic opacity-90">
+                                              Tutor Flight Log: "{homeworkAttempt.overall_feedback}"
+                                            </p>
+                                          )}
+                                        </div>
                                       )}
                                     </div>
-                                  )}
-                                </div>
 
-                                <div className="mt-6 pt-4 border-t border-slate-800">
-                                  {homeworkAttempt.status === 'GRADED' ? (
-                                    <Link
-                                      href={`/student/results/${homeworkAttempt.id}`}
-                                      className="w-full py-2.5 px-4 rounded-xl bg-emerald-600/30 hover:bg-emerald-600/40 border border-emerald-500/50 text-emerald-300 text-sm font-semibold flex items-center justify-center space-x-2 transition"
-                                    >
-                                      <span>View Graded Homework</span>
-                                      <ExternalLink className="w-4 h-4" />
-                                    </Link>
-                                  ) : homeworkAttempt.status === 'SUBMITTED' ? (
-                                    <Link
-                                      href={`/student/results/${homeworkAttempt.id}`}
-                                      className="w-full py-2.5 px-4 rounded-xl bg-amber-600/20 hover:bg-amber-600/30 border border-amber-500/40 text-amber-300 text-sm font-semibold flex items-center justify-center space-x-2 transition"
-                                    >
-                                      <span>View Homework Debrief ({homeworkAttempt._count?.student_answers ?? homeworkAttempt.student_answers?.length ?? 0}/{homeworkAttempt.assessments?._count?.questions ?? 0} solved)</span>
-                                      <ExternalLink className="w-4 h-4" />
-                                    </Link>
-                                  ) : (
-                                    <Link
-                                      href={`/student/mission/${homeworkAttempt.id}`}
-                                      className="w-full py-2.5 px-4 rounded-xl text-white text-sm font-semibold flex items-center justify-center space-x-2 transition shadow-lg bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 shadow-[0_0_15px_rgba(168,85,247,0.4)]"
-                                    >
-                                      <span>
-                                        {homeworkAttempt.status === 'IN_PROGRESS'
-                                          ? 'Resume Homework'
-                                          : 'Launch Orbital Homework'}
-                                      </span>
-                                      <ArrowRight className="w-4 h-4" />
-                                    </Link>
-                                  )}
-                                </div>
-                              </div>
-                            ) : (
-                              <div className="rounded-2xl p-6 bg-slate-900/60 border border-slate-800 flex items-center justify-center text-center text-xs text-slate-500">
-                                No orbital homework assigned for this date
-                              </div>
-                            )}
+                                    <div className="mt-6 pt-4 border-t border-slate-800">
+                                      {homeworkAttempt.status === 'GRADED' ? (
+                                        <Link
+                                          href={`/student/results/${homeworkAttempt.id}`}
+                                          className="w-full py-2.5 px-4 rounded-xl bg-emerald-600/30 hover:bg-emerald-600/40 border border-emerald-500/50 text-emerald-300 text-sm font-semibold flex items-center justify-center space-x-2 transition"
+                                        >
+                                          <span>View Graded Homework</span>
+                                          <ExternalLink className="w-4 h-4" />
+                                        </Link>
+                                      ) : homeworkAttempt.status === 'SUBMITTED' ? (
+                                        <Link
+                                          href={`/student/results/${homeworkAttempt.id}`}
+                                          className="w-full py-2.5 px-4 rounded-xl bg-amber-600/20 hover:bg-amber-600/30 border border-amber-500/40 text-amber-300 text-sm font-semibold flex items-center justify-center space-x-2 transition"
+                                        >
+                                          <span>View Homework Debrief ({homeworkAttempt._count?.student_answers ?? homeworkAttempt.student_answers?.length ?? 0}/{homeworkAttempt.assessments?._count?.questions ?? 0} solved)</span>
+                                          <ExternalLink className="w-4 h-4" />
+                                        </Link>
+                                      ) : (
+                                        <Link
+                                          href={`/student/mission/${homeworkAttempt.id}`}
+                                          className="w-full py-2.5 px-4 rounded-xl text-white text-sm font-semibold flex items-center justify-center space-x-2 transition shadow-lg bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 shadow-[0_0_15px_rgba(168,85,247,0.4)]"
+                                        >
+                                          <span>
+                                            {homeworkAttempt.status === 'IN_PROGRESS'
+                                              ? 'Resume Homework'
+                                              : 'Launch Orbital Homework'}
+                                          </span>
+                                          <ArrowRight className="w-4 h-4" />
+                                        </Link>
+                                      )}
+                                    </div>
+                                  </div>
+                                ) : (
+                                  <div className="rounded-2xl p-6 bg-slate-900/60 border border-slate-800 flex items-center justify-center text-center text-xs text-slate-500">
+                                    No orbital homework assigned for this date
+                                  </div>
+                                )
+                              )}
+                            </div>
                           </div>
-                        </div>
-                      )}
+                        );
+                      })()}
                     </div>
                   );
                 })}

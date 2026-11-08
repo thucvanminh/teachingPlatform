@@ -4,7 +4,7 @@ import React from 'react';
 
 export function SpaceBackground({ children, fitViewport = false }: { children: React.ReactNode; fitViewport?: boolean }) {
   return (
-    <div className={`relative ${fitViewport ? 'min-h-0' : 'min-h-screen'} w-full bg-[#05070E] text-slate-100 overflow-x-hidden`}>
+    <div className={`relative ${fitViewport ? 'h-screen max-h-screen min-h-0 overflow-hidden' : 'min-h-screen overflow-x-hidden'} w-full bg-[#05070E] text-slate-100`}>
       {/* Background image: Cockpit / Deep Nebula with dark overlay */}
       <div
         className="fixed inset-0 pointer-events-none bg-cover bg-center opacity-30 mix-blend-screen"
@@ -18,7 +18,7 @@ export function SpaceBackground({ children, fitViewport = false }: { children: R
       <div className="fixed inset-0 pointer-events-none bg-[linear-gradient(to_right,#06b6d40a_1px,transparent_1px),linear-gradient(to_bottom,#06b6d40a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] -z-10" />
 
       {/* Content wrapper */}
-      <div className="relative z-10">{children}</div>
+      <div className={`relative z-10 ${fitViewport ? 'h-full min-h-0 flex flex-col overflow-hidden' : ''}`}>{children}</div>
     </div>
   );
 }

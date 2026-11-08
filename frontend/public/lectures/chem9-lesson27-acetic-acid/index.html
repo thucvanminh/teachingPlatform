@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orbital Chemistry Lab: Acetic Acid (Lesson 27)</title>
+  
+  <!-- KaTeX for High-Contrast Chemical Equations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Starfield Canvas Background -->
+  <canvas id="starfieldCanvas"></canvas>
+  <canvas id="confettiCanvas" class="canvas-confetti"></canvas>
+
+  <div class="app-container">
+    <!-- Sci-Fi Orbital Header -->
+    <header class="station-header">
+      <div class="header-left">
+        <div class="status-badge">
+          <span class="pulse-dot"></span>
+          <span>ORBITAL ORGANIC LAB • LESSON 27 TELEMETRY ACTIVE</span>
+        </div>
+        <h1 class="header-title">
+          <span class="gradient-text">ACETIC ACID (CH₃COOH)</span>
+          <span class="sub-title">DEEP SPACE CHEMICAL EXPLORATION &amp; CARBOXYLIC ACID VIRTUAL LAB</span>
+        </h1>
+      </div>
+      <div class="header-right">
+        <div class="cadet-badge">
+          <span class="badge-role">Astronaut Cadet</span>
+          <span class="badge-name">Keithley Lake • Grade 7 &amp; Chem 9</span>
+        </div>
+        <button id="soundToggleBtn" class="control-btn" title="Toggle Sound">
+          <span id="soundIcon">🔊</span> Sound
+        </button>
+      </div>
+    </header>
+
+    <!-- Sector Navigation Bar -->
+    <nav class="sector-nav">
+      <button class="nav-tab active" data-sector="sector1">
+        <span class="tab-icon">🧬</span>
+        <span class="tab-label">Sector 1: Molecular Architecture</span>
+      </button>
+      <button class="nav-tab" data-sector="sector2">
+        <span class="tab-icon">🧪</span>
+        <span class="tab-label">Sector 2: Vinegar Dilution Station</span>
+      </button>
+      <button class="nav-tab" data-sector="sector3">
+        <span class="tab-icon">⚗️</span>
+        <span class="tab-label">Sector 3: 6-Reaction Lab Bench</span>
+      </button>
+      <button class="nav-tab" data-sector="sector4">
+        <span class="tab-icon">🚀</span>
+        <span class="tab-label">Sector 4: Synthesis &amp; Space Industry</span>
+      </button>
+      <button class="nav-tab" data-sector="sector5">
+        <span class="tab-icon">⚡</span>
+        <span class="tab-label">Sector 5: Flight Readiness Quiz</span>
+      </button>
+    </nav>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="main-content">
+      
+      <!-- ============================================== -->
+      <!-- SECTOR 1: MOLECULAR BLUEPRINT & THE -COOH GROUP -->
+      <!-- ============================================== -->
+      <section id="sector1" class="sector-pane active">
+        <div class="pane-grid">
+          <!-- Left: Interactive Ball-and-Stick Structural Model -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag cyan">Molecular Blueprint</span>
+              <h3>Acetic Acid Molecule: The Carboxyl Functional Group (-COOH)</h3>
+            </div>
+            <p class="card-desc">
+              Acetic acid has the molecular formula <strong>$\text{C}_2\text{H}_4\text{O}_2$</strong> (Molar Mass: $60\text{ g/mol}$) and condensed structural formula <strong>$\text{CH}_3-\text{COOH}$</strong> (or $\text{CH}_3\text{COOH}$).
+            </p>
+
+            <div class="molecule-display-box">
+              <svg id="moleculeSvg" viewBox="0 0 480 240" class="molecule-svg">
+                <!-- Bonds -->
+                <!-- C1 to C2 -->
+                <line x1="100" y1="120" x2="220" y2="120" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" />
+                
+                <!-- C2 to Carbonyl Oxygen (Double bond) -->
+                <line x1="216" y1="112" x2="286" y2="52" stroke="#f43f5e" stroke-width="3" stroke-linecap="round" />
+                <line x1="226" y1="124" x2="296" y2="64" stroke="#f43f5e" stroke-width="3" stroke-linecap="round" />
+                
+                <!-- C2 to Hydroxyl Oxygen (Single bond) -->
+                <line x1="220" y1="120" x2="310" y2="180" stroke="#f43f5e" stroke-width="4" stroke-linecap="round" />
+                
+                <!-- Hydroxyl O to Acidic H (Single bond) -->
+                <line x1="310" y1="180" x2="400" y2="180" stroke="#f43f5e" stroke-width="3.5" stroke-linecap="round" />
+
+                <!-- Vertical C1-H bonds -->
+                <line x1="100" y1="120" x2="100" y2="40" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+                <line x1="100" y1="120" x2="100" y2="200" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+                <line x1="100" y1="120" x2="35" y2="120" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+
+                <!-- Carboxyl Group Pulsing Halo -->
+                <ellipse cx="320" cy="125" rx="130" ry="85" fill="rgba(244, 63, 94, 0.12)" stroke="#f43f5e" stroke-dasharray="6,4" stroke-width="2" class="halo-pulse" />
+                <text x="320" y="25" fill="#f43f5e" font-size="12" font-weight="bold" text-anchor="middle" letter-spacing="1">CARBOXYL FUNCTIONAL GROUP (-COOH)</text>
+
+                <!-- Atoms -->
+                <!-- C1 (Methyl) -->
+                <circle cx="100" cy="120" r="22" fill="#0f172a" stroke="#38bdf8" stroke-width="3" />
+                <text x="100" y="126" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">C₁</text>
+
+                <!-- C2 (Carboxyl Carbon) -->
+                <circle cx="220" cy="120" r="22" fill="#0f172a" stroke="#f43f5e" stroke-width="3.5" />
+                <text x="220" y="126" fill="#f43f5e" font-size="16" font-weight="bold" text-anchor="middle">C₂</text>
+
+                <!-- Carbonyl Oxygen (=O) -->
+                <circle cx="295" cy="55" r="22" fill="#881337" stroke="#f43f5e" stroke-width="3" />
+                <text x="295" y="62" fill="#fff" font-size="17" font-weight="bold" text-anchor="middle">=O</text>
+
+                <!-- Hydroxyl Oxygen (-O-) -->
+                <circle cx="310" cy="180" r="22" fill="#881337" stroke="#f43f5e" stroke-width="3" />
+                <text x="310" y="187" fill="#fff" font-size="17" font-weight="bold" text-anchor="middle">-O-</text>
+
+                <!-- Ionizable Acidic Hydrogen (H+) -->
+                <circle cx="400" cy="180" r="18" fill="#be123c" stroke="#f43f5e" stroke-width="3" class="active-h-glow" />
+                <text x="400" y="186" fill="#fff" font-size="14" font-weight="bold" text-anchor="middle">H⁺</text>
+
+                <!-- C1 Hydrogens -->
+                <circle cx="100" cy="40" r="14" fill="#0f172a" stroke="#94a3b8" stroke-width="2" /><text x="100" y="45" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">H</text>
+                <circle cx="100" cy="200" r="14" fill="#0f172a" stroke="#94a3b8" stroke-width="2" /><text x="100" y="205" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">H</text>
+                <circle cx="35" cy="120" r="14" fill="#0f172a" stroke="#94a3b8" stroke-width="2" /><text x="35" y="125" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">H</text>
+              </svg>
+            </div>
+
+            <div class="callout-box">
+              <span class="callout-icon">💡</span>
+              <div>
+                <strong>The Secret of the Carboxyl Group ($-COOH$):</strong> The carboxyl group is a hybrid of a carbonyl group ($C=O$) and a hydroxyl group ($-OH$). The strongly electronegative oxygen atom in $C=O$ pulls electron density away from the $O-H$ bond, making the hydrogen atom ($\text{H}^+$) extremely mobile and easily ionizable in water!
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Comparative Analysis: Alkane vs Alcohol vs Carboxylic Acid -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag emerald">Comparative Blueprint</span>
+              <h3>Comparative Matrix: Ethane vs. Ethanol vs. Acetic Acid</h3>
+            </div>
+            
+            <div class="compare-table-wrapper">
+              <table class="cosmic-table">
+                <thead>
+                  <tr>
+                    <th>Substance</th>
+                    <th>Formula</th>
+                    <th>Functional Group</th>
+                    <th>Litmus Test</th>
+                    <th>Reaction with Na</th>
+                    <th>Reaction with Na₂CO₃</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Ethane</strong></td>
+                    <td>$\text{C}_2\text{H}_6$</td>
+                    <td>None (Alkane)</td>
+                    <td>No change</td>
+                    <td>No reaction</td>
+                    <td>No reaction</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Ethanol</strong></td>
+                    <td>$\text{C}_2\text{H}_5\text{OH}$</td>
+                    <td>$-\text{OH}$ (Hydroxyl)</td>
+                    <td>No change (Neutral)</td>
+                    <td>Releases $\text{H}_2\uparrow$</td>
+                    <td>No reaction</td>
+                  </tr>
+                  <tr>
+                    <td class="highlight-col"><strong>Acetic Acid</strong></td>
+                    <td class="highlight-col">$\text{CH}_3\text{COOH}$</td>
+                    <td class="highlight-col">$-\text{COOH}$ (Carboxyl)</td>
+                    <td class="highlight-col">Turns Red/Pink</td>
+                    <td class="highlight-col">Releases $\text{H}_2\uparrow$</td>
+                    <td class="highlight-col">Releases $\text{CO}_2\uparrow$</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="callout-box cyan" style="margin-top: 1rem;">
+              <span class="callout-icon">🔭</span>
+              <div>
+                <strong>Distinguishing Key:</strong> Ethanol and Acetic acid both react with active Sodium metal ($\text{Na}$) to release $\text{H}_2$ gas. However, <strong>ONLY Acetic acid reacts with carbonate salts ($\text{Na}_2\text{CO}_3$ or $\text{CaCO}_3$)</strong> to liberate carbon dioxide gas ($\text{CO}_2$). This is the golden laboratory test used to tell them apart!
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 2: PHYSICAL STATS & VINEGAR DILUTION LAB -->
+      <!-- ============================================== -->
+      <section id="sector2" class="sector-pane">
+        <div class="pane-grid">
+          <!-- Left: Physical Constants -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag amber">Physical Constants</span>
+              <h3>Fundamental Physical Properties of Acetic Acid</h3>
+            </div>
+            
+            <div class="stats-grid">
+              <div class="stat-item">
+                <div class="stat-label">Physical State</div>
+                <div class="stat-val cyan">Colorless Liquid</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Odor &amp; Taste</div>
+                <div class="stat-val rose">Pungent &amp; Sour</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Boiling Point</div>
+                <div class="stat-val amber">118.2 °C</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Density (D)</div>
+                <div class="stat-val emerald">1.05 g/mL</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Melting (Glacial)</div>
+                <div class="stat-val cyan">16.6 °C</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Water Solubility</div>
+                <div class="stat-val emerald">Infinitely Miscible</div>
+              </div>
+            </div>
+
+            <div class="callout-box amber">
+              <span class="callout-icon">❄️</span>
+              <div>
+                <strong>What is "Glacial Acetic Acid"?</strong> Pure acetic acid ($>99.5\%$) solidifies into transparent, icicle-like crystals at $16.6^\circ\text{C}$ (just below typical room temperature). For this reason, water-free pure acetic acid is traditionally called <em>glacial acetic acid</em> (axit axetic băng).
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Vinegar Dilution Bench -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag emerald">Interactive Lab Bench</span>
+              <h3>Table Vinegar Solution Dilution &amp; Mass Telemetry</h3>
+            </div>
+            <p class="card-desc">
+              Adjust the sliders below to simulate preparing table vinegar solutions ($2\% - 5\%$ concentration) from pure acetic acid and water:
+            </p>
+
+            <div class="slider-group">
+              <div class="slider-header">
+                <span>Acetic Acid Concentration (% by mass):</span>
+                <span id="vinegarConcVal" class="slider-value">5.0%</span>
+              </div>
+              <input type="range" id="vinegarConcSlider" class="cosmic-range" min="1" max="15" step="0.5" value="5">
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-header">
+                <span>Total Vinegar Volume (mL):</span>
+                <span id="vinegarVolVal" class="slider-value">500 mL</span>
+              </div>
+              <input type="range" id="vinegarVolSlider" class="cosmic-range" min="50" max="2000" step="50" value="500">
+            </div>
+
+            <div class="telemetry-results">
+              <div class="result-row">
+                <span>Pure Acetic Acid Volume ($V_{\text{pure}}$):</span>
+                <span id="calcPureVol" class="cyan">25.00 mL</span>
+              </div>
+              <div class="result-row">
+                <span>Pure Acetic Acid Mass ($m = V \times 1.05\text{ g/mL}$):</span>
+                <span id="calcPureMass" class="emerald">26.25 g</span>
+              </div>
+              <div class="result-row">
+                <span>Moles of Acetic Acid ($n = m / 60$):</span>
+                <span id="calcMoles" class="amber">0.4375 mol</span>
+              </div>
+              <div class="result-row">
+                <span>Estimated Solution Acidity ($pH$):</span>
+                <span id="calcPH" class="rose">~2.41</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 3: 6-REACTION VIRTUAL LAB BENCH -->
+      <!-- ============================================== -->
+      <section id="sector3" class="sector-pane">
+        <div class="lab-container">
+          <!-- Left: Apparatus Graphic Workbench -->
+          <div class="lab-apparatus-card">
+            <div class="card-header" style="width: 100%;">
+              <span class="tag cyan">Orbital Reaction Bench</span>
+              <h3 style="font-size: 1rem;">Virtual Test Tube Apparatus</h3>
+            </div>
+
+            <div class="apparatus-view">
+              <!-- Test tube assembly -->
+              <div class="test-tube-wrapper">
+                <div class="test-tube-rim"></div>
+                <div class="test-tube-glass">
+                  <!-- Litmus Paper Strip -->
+                  <div id="tubeLitmus" class="litmus-strip"></div>
+                  
+                  <!-- Bubbles Effervescence -->
+                  <div id="bubbleContainer" class="bubble-container"></div>
+
+                  <!-- Liquid Body -->
+                  <div id="tubeLiquid" class="liquid-layer"></div>
+
+                  <!-- Upper Immiscible Layer (for Ester) -->
+                  <div id="tubeUpperLayer" class="liquid-upper-layer"></div>
+
+                  <!-- Solid Pellet (Zn / CuO) -->
+                  <div id="tubePellet" class="solid-pellet"></div>
+                </div>
+
+                <!-- Spirit Flame underneath -->
+                <div class="spirit-lamp">
+                  <div class="spirit-wick"></div>
+                  <div id="spiritFlame" class="spirit-flame"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Controls row -->
+            <div class="lab-action-row">
+              <button id="heatToggleBtn" class="btn-secondary">🔥 Heat Solution</button>
+              <button id="rinseTubeBtn" class="btn-secondary">🔄 Rinse Tube</button>
+            </div>
+
+            <!-- Reagent Shelf -->
+            <div class="reagent-shelf">
+              <div class="shelf-title">Select Reagent to Mix with CH₃COOH:</div>
+              <div class="reagents-grid">
+                <button class="reagent-btn selected" data-reagent="litmus">
+                  <span class="btn-icon">📜</span>
+                  <span>Blue Litmus</span>
+                </button>
+                <button class="reagent-btn" data-reagent="zinc">
+                  <span class="btn-icon">🔩</span>
+                  <span>Zinc (Zn)</span>
+                </button>
+                <button class="reagent-btn" data-reagent="cuo">
+                  <span class="btn-icon">⚫</span>
+                  <span>CuO Powder</span>
+                </button>
+                <button class="reagent-btn" data-reagent="naoh">
+                  <span class="btn-icon">🧪</span>
+                  <span>NaOH + Phenol</span>
+                </button>
+                <button class="reagent-btn" data-reagent="carbonate">
+                  <span class="btn-icon">⚪</span>
+                  <span>Na₂CO₃ Salt</span>
+                </button>
+                <button class="reagent-btn" data-reagent="ester">
+                  <span class="btn-icon">🍓</span>
+                  <span>C₂H₅OH + Heat</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Live Reaction Insight Panel -->
+          <div class="reaction-insight-card">
+            <div>
+              <div class="reaction-title-box">
+                <h3 id="reactionTitle" style="color: #fff; font-size: 1.2rem; font-weight: 800;">1. Blue Litmus Indicator Test</h3>
+                <span id="reactionTag" class="tag rose">Acidic Nature</span>
+              </div>
+
+              <!-- KaTeX Equation Box -->
+              <div class="shelf-title">Balanced Chemical Equation:</div>
+              <div id="reactionEquation" class="equation-box">
+                $$CH_3COOH \rightleftharpoons CH_3COO^- + H^+$$
+              </div>
+
+              <!-- Observable Phenomena -->
+              <div class="shelf-title">Observable Macroscopic Phenomena:</div>
+              <div class="phenomena-box">
+                <ul id="phenomenaList" class="phenomena-list">
+                  <li><span class="bullet">✦</span> The blue litmus strip dipped into the liquid shifts immediately to reddish-pink.</li>
+                  <li><span class="bullet">✦</span> Demonstrates weak ionization and the liberation of mobile $H^+$ ions in aqueous solution.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Microscopic Concept -->
+            <div>
+              <div class="shelf-title">Microscopic Concept &amp; Why It Happens:</div>
+              <div id="microConceptText" class="micro-concept-box">
+                The polar carboxyl group ($-COOH$) releases a proton ($H^+$) into water. Although acetic acid is a weak organic acid that ionizes only partially, the $H^+$ ion concentration is sufficient to turn litmus red.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 4: SYNTHESIS & SPACE INDUSTRY -->
+      <!-- ============================================== -->
+      <section id="sector4" class="sector-pane">
+        <div class="pane-grid">
+          <!-- Left: Dual Synthesis Pathways -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag cyan">Production Telemetry</span>
+              <h3>Dual Synthesis Pathways: Fermentation vs. Petrochemical</h3>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+              <div style="background: rgba(8, 13, 26, 0.85); padding: 1.1rem; border-radius: 0.9rem; border: 1px solid rgba(56, 189, 248, 0.2);">
+                <span class="tag emerald" style="margin-bottom: 0.5rem;">Path 1: Biological Vinegar Fermentation</span>
+                <p style="font-size: 0.82rem; color: #cbd5e1; margin-bottom: 0.5rem;">
+                  In traditional crafting and life support systems, dilute ethylic alcohol ($C_2H_5OH$) is fermented aerobically in the presence of <em>Acetobacter</em> bacteria:
+                </p>
+                <div style="text-align: center; font-size: 0.95rem; color: #fff; padding: 0.5rem; background: rgba(15, 23, 42, 0.9); border-radius: 0.6rem;">
+                  $$C_2H_5OH + O_2 \xrightarrow{\text{acetic enzymes / Acetobacter}} CH_3COOH + H_2O$$
+                </div>
+              </div>
+
+              <div style="background: rgba(8, 13, 26, 0.85); padding: 1.1rem; border-radius: 0.9rem; border: 1px solid rgba(56, 189, 248, 0.2);">
+                <span class="tag purple" style="margin-bottom: 0.5rem;">Path 2: Industrial Petrochemical Oxidation</span>
+                <p style="font-size: 0.82rem; color: #cbd5e1; margin-bottom: 0.5rem;">
+                  In orbital industrial production, butane ($C_4H_{10}$) or acetaldehyde ($CH_3CHO$) is oxidized catalytically:
+                </p>
+                <div style="text-align: center; font-size: 0.95rem; color: #fff; padding: 0.5rem; background: rgba(15, 23, 42, 0.9); border-radius: 0.6rem;">
+                  $$2C_4H_{10} + 5O_2 \xrightarrow{t^\circ, \text{catalyst}} 4CH_3COOH + 2H_2O$$
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Spacecraft & Modern Applications -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag rose">Applications Matrix</span>
+              <h3>Spacecraft Engineering &amp; Terrestrial Applications</h3>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 0.9rem;">
+              <div style="display: flex; align-items: flex-start; gap: 0.75rem; background: rgba(15, 23, 42, 0.7); padding: 0.85rem; border-radius: 0.75rem;">
+                <span style="font-size: 1.5rem;">🥗</span>
+                <div>
+                  <strong style="font-size: 0.85rem; color: #fff;">Food Industry &amp; Life Support:</strong>
+                  <p style="font-size: 0.8rem; color: #94a3b8;">Manufacture of table vinegar ($2\% - 5\%$) for preservation, seasoning, and microbial sterilization on long-duration space missions.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: flex-start; gap: 0.75rem; background: rgba(15, 23, 42, 0.7); padding: 0.85rem; border-radius: 0.75rem;">
+                <span style="font-size: 1.5rem;">🧵</span>
+                <div>
+                  <strong style="font-size: 0.85rem; color: #fff;">Cellulose Acetate &amp; Polymers:</strong>
+                  <p style="font-size: 0.8rem; color: #94a3b8;">Precursor for manufacturing non-flammable cellulose acetate photographic films, synthetic rayon textiles, and polyvinyl acetate (PVA) industrial adhesives.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: flex-start; gap: 0.75rem; background: rgba(15, 23, 42, 0.7); padding: 0.85rem; border-radius: 0.75rem;">
+                <span style="font-size: 1.5rem;">💊</span>
+                <div>
+                  <strong style="font-size: 0.85rem; color: #fff;">Pharmaceuticals (Aspirin Synthesis):</strong>
+                  <p style="font-size: 0.8rem; color: #94a3b8;">Key starting material for the synthesis of acetylsalicylic acid (Aspirin), pain-relief medications, and chemical dye pigments.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: flex-start; gap: 0.75rem; background: rgba(15, 23, 42, 0.7); padding: 0.85rem; border-radius: 0.75rem;">
+                <span style="font-size: 1.5rem;">🍓</span>
+                <div>
+                  <strong style="font-size: 0.85rem; color: #fff;">Fragrant Esters &amp; Solvents:</strong>
+                  <p style="font-size: 0.8rem; color: #94a3b8;">Converted into ethyl acetate ($CH_3COOC_2H_5$) and isoamyl acetate for artificial fruit flavorings, perfumes, and non-polar industrial cleaning solvents.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 5: CADET FLIGHT READINESS QUIZ -->
+      <!-- ============================================== -->
+      <section id="sector5" class="sector-pane">
+        <div class="quiz-container">
+          <div class="quiz-progress-bar">
+            <div id="quizProgressFill" class="quiz-progress-fill"></div>
+          </div>
+
+          <div class="quiz-card">
+            <h4 id="quizQuestionText" class="quiz-question">Loading flight check question...</h4>
+            <div id="quizOptionsContainer" class="quiz-options-list"></div>
+            <div id="quizFeedback" class="quiz-feedback"></div>
+            <div class="quiz-nav-btns">
+              <button id="quizNextBtn" class="btn-primary" style="display: none;">Next Question ➔</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

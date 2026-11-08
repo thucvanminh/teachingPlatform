@@ -27,6 +27,11 @@ export function Navbar() {
     };
   }, [pathname]);
 
+  // Hide global navbar when student is in timed mission cockpit
+  if (pathname?.startsWith('/student/mission/')) {
+    return null;
+  }
+
   const handleLogout = () => {
     clearToken();
     setUserState(null);

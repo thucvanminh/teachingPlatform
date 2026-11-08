@@ -603,54 +603,73 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
 
   const content = (
     <div
-      className={`${isParallelWorkbook ? 'parallel-workspace' : ''} h-[calc(100dvh-4rem)] min-h-[calc(100dvh-4rem)] overflow-hidden flex flex-col ${
+      className={`h-screen max-h-screen min-h-0 w-full overflow-hidden flex flex-col ${
         isCosmic
-          ? 'text-slate-100'
+          ? 'text-slate-100 bg-[#05070E]'
           : isKids
           ? 'bg-gradient-to-b from-amber-50/80 via-pink-50/60 to-purple-50/60 text-slate-900'
           : 'bg-slate-50 text-slate-900'
       }`}
     >
-      {/* 1. TOP HEADER (Fixed / Sticky on Mobile) */}
+      {/* 1. TOP COCKPIT HEADER */}
       <header
-        className={`z-30 shrink-0 px-3 sm:px-6 py-2.5 sm:py-3 border-b backdrop-blur-md transition-colors ${
+        className={`z-30 shrink-0 px-3 sm:px-6 py-2 sm:py-2.5 border-b backdrop-blur-md transition-colors ${
           isCosmic
-            ? 'bg-[#05070E]/90 border-cyan-500/30 text-white'
+            ? 'bg-[#05070E]/95 border-cyan-500/30 text-white'
             : isKids
             ? 'bg-white/95 border-pink-200 text-pink-900 shadow-sm'
             : 'bg-white/95 border-slate-200 text-slate-900 shadow-xs'
         }`}
       >
-        <div className="max-w-4xl mx-auto grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 sm:flex sm:justify-between">
-          {/* Back button */}
-          <button
-            onClick={() => {
-              const msg = isKids
-                ? 'Bé có chắc muốn rời phòng làm bài không? Kết quả chưa nộp sẽ cần làm lại nhé!'
-                : isEnglish
-                ? 'Are you sure you want to exit the cockpit? Unsaved telemetry will need to be re-entered.'
-                : 'Con có chắc muốn rời phòng làm bài không? Bài làm chưa nộp sẽ cần làm lại.';
-              if (window.confirm(msg)) {
-                router.push('/student');
-              }
-            }}
-            className={`flex shrink-0 items-center space-x-1.5 text-xs font-semibold px-2.5 py-1.5 rounded-xl transition ${
-              isCosmic
-                ? 'text-slate-300 hover:bg-slate-800 border border-transparent hover:border-slate-700'
-                : isKids
-                ? 'text-pink-700 hover:bg-pink-100 border border-pink-200 font-bold'
-                : 'text-slate-600 hover:bg-slate-100'
-            }`}
-          >
-            <ArrowLeft className="w-4 h-4" />
-            <span className="hidden sm:inline">{isKids ? 'Về trang chủ' : isEnglish ? 'Exit Cockpit' : 'Rời phòng'}</span>
-          </button>
+        <div className="max-w-[1600px] w-full mx-auto flex items-center justify-between gap-2 sm:gap-4">
+          {/* Left: Exit Cockpit + Current Station Badge */}
+          <div className="flex items-center space-x-2 sm:space-x-3 min-w-0">
+            <button
+              onClick={() => {
+                const msg = isKids
+                  ? 'Bé có chắc muốn rời phòng làm bài không? Kết quả chưa nộp sẽ cần làm lại nhé!'
+                  : isEnglish
+                  ? 'Are you sure you want to exit the cockpit? Unsaved telemetry will need to be re-entered.'
+                  : 'Con có chắc muốn rời phòng làm bài không? Bài làm chưa nộp sẽ cần làm lại.';
+                if (window.confirm(msg)) {
+                  router.push('/student');
+                }
+              }}
+              className={`flex shrink-0 items-center space-x-1.5 text-xs font-semibold px-2.5 py-1.5 rounded-xl transition ${
+                isCosmic
+                  ? 'text-slate-300 hover:bg-slate-800/90 border border-slate-700/60 hover:border-cyan-500/50'
+                  : isKids
+                  ? 'text-pink-700 hover:bg-pink-100 border border-pink-200 font-bold'
+                  : 'text-slate-600 hover:bg-slate-100 border border-slate-200'
+              }`}
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span className="hidden sm:inline">{isKids ? 'Về trang chủ' : isEnglish ? 'Exit Cockpit' : 'Rời phòng'}</span>
+            </button>
 
-          {/* Center Timer & Drawer Button */}
-          <div className="flex min-w-0 items-center justify-center space-x-2 sm:justify-start sm:space-x-3">
+            {/* Station indicator (Cosmic) */}
+            {isCosmic && (
+              <div className="hidden md:flex items-center space-x-2 px-2.5 py-1 rounded-xl bg-slate-900/90 border border-cyan-500/30">
+                <span className={`w-6 h-6 rounded-lg bg-gradient-to-tr ${currentStation.color} flex items-center justify-center font-bold text-white text-xs shadow-xs`}>
+                  {currentStation.symbol}
+                </span>
+                <div className="leading-tight">
+                  <span className="font-bold text-cyan-300 text-xs block truncate max-w-[180px] xl:max-w-[240px]">
+                    {currentStation.name}
+                  </span>
+                  <span className="text-[10px] text-slate-400 block truncate max-w-[180px] xl:max-w-[240px]">
+                    {currentStation.desc}
+                  </span>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Center: Mission Timer & SFX & Quick Jump */}
+          <div className="flex items-center space-x-2 sm:space-x-3 shrink-0">
             {/* Total Timer Badge */}
             <div
-              className={`flex shrink-0 items-center space-x-1.5 px-2 sm:px-3 py-1 rounded-xl font-mono text-xs sm:text-sm font-bold border ${
+              className={`flex items-center space-x-1.5 px-2.5 sm:px-3 py-1 rounded-xl font-mono text-xs sm:text-sm font-bold border ${
                 timeLeft < 600
                   ? 'bg-red-500/20 border-red-400 text-red-500 animate-pulse'
                   : isCosmic
@@ -661,14 +680,14 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
               }`}
               title={isEnglish ? 'Mission time remaining' : 'Thời gian làm bài'}
             >
-              <Clock className="w-3.5 h-3.5 text-pink-500" />
+              <Clock className="w-3.5 h-3.5 text-cyan-400" />
               <span>{formatTimer(timeLeft)}</span>
             </div>
 
             {/* Question count toggle drawer */}
             <button
               onClick={() => setShowGridDrawer(true)}
-              className={`flex shrink-0 items-center space-x-1 px-2 sm:px-3 py-1 rounded-xl text-xs font-semibold border transition ${
+              className={`flex items-center space-x-1 px-2.5 sm:px-3 py-1 rounded-xl text-xs font-semibold border transition ${
                 isCosmic
                   ? 'bg-slate-900 border-cyan-500/40 text-cyan-300 hover:bg-slate-800 shadow-[0_0_10px_rgba(6,182,212,0.15)]'
                   : isKids
@@ -699,40 +718,49 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
               title={soundMuted ? (isEnglish ? 'Unmute Sound FX' : 'Bật âm thanh') : (isEnglish ? 'Mute Sound FX' : 'Tắt âm thanh')}
             >
               {soundMuted ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5" />}
-              <span className="hidden sm:inline text-[11px] font-bold">
+              <span className="hidden md:inline text-[11px] font-bold">
                 {soundMuted ? (isEnglish ? 'Muted' : 'Tắt tiếng') : (isEnglish ? 'SFX ON' : 'Âm thanh')}
               </span>
             </button>
           </div>
 
-          {/* Quick Submit Button */}
-          <button
-            onClick={handleSubmit}
-            disabled={submitting}
-            title={isEnglish ? 'Submit your telemetry anytime' : 'Nộp bài bất cứ khi nào bạn muốn'}
-            className={`shrink-0 p-2 sm:px-3.5 sm:py-1.5 rounded-xl text-xs font-bold flex items-center space-x-1.5 transition shadow-xs disabled:opacity-40 ${
-              isCosmic
-                ? 'bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-500 text-white shadow-[0_0_15px_rgba(6,182,212,0.3)]'
-                : isKids
-                ? 'bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 text-white shadow-sm font-bold'
-                : 'bg-emerald-600 hover:bg-emerald-700 text-white'
-            }`}
-          >
-            <Send className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">
-              {submitting
-                ? '...'
-                : isKids
-                ? `Nộp bài 🌟 (${answeredCount}/${totalQuestions})`
-                : isEnglish
-                ? `Submit (${answeredCount}/${totalQuestions})`
-                : `Nộp bài (${answeredCount}/${totalQuestions})`}
-            </span>
-          </button>
+          {/* Right: Cadet info & Quick Submit */}
+          <div className="flex items-center space-x-2 sm:space-x-3 shrink-0">
+            {isCosmic && (
+              <div className="hidden lg:flex items-center space-x-1.5 text-slate-300 text-[11px] font-mono bg-slate-900/90 px-2.5 py-1.5 rounded-xl border border-cyan-500/30">
+                <Rocket className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
+                <span className="truncate">{isEnglish ? 'Cadet Keithley Lake' : 'Keithley Lake'}</span>
+              </div>
+            )}
+
+            <button
+              onClick={handleSubmit}
+              disabled={submitting}
+              title={isEnglish ? 'Submit your telemetry anytime' : 'Nộp bài bất cứ khi nào bạn muốn'}
+              className={`p-2 sm:px-3.5 sm:py-1.5 rounded-xl text-xs font-bold flex items-center space-x-1.5 transition shadow-xs disabled:opacity-40 active:scale-95 ${
+                isCosmic
+                  ? 'bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-500 text-white shadow-[0_0_15px_rgba(6,182,212,0.3)]'
+                  : isKids
+                  ? 'bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 text-white shadow-sm font-bold'
+                  : 'bg-emerald-600 hover:bg-emerald-700 text-white'
+              }`}
+            >
+              <Send className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">
+                {submitting
+                  ? '...'
+                  : isKids
+                  ? `Nộp bài (${answeredCount}/${totalQuestions})`
+                  : isEnglish
+                  ? `Submit (${answeredCount}/${totalQuestions})`
+                  : `Nộp bài (${answeredCount}/${totalQuestions})`}
+              </span>
+            </button>
+          </div>
         </div>
 
         {/* Progress Bar Line */}
-        <div className="w-full bg-slate-200 dark:bg-slate-800/80 h-2 mt-2.5 rounded-full overflow-hidden relative">
+        <div className="w-full bg-slate-200 dark:bg-slate-800/80 h-1 sm:h-1.5 mt-2 rounded-full overflow-hidden relative">
           <div
             className={`h-full transition-all duration-300 ${
               isCosmic
@@ -746,10 +774,17 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
         </div>
       </header>
 
-      {/* 2. MAIN SINGLE-QUESTION VIEW */}
-      <main className="mission-main min-h-0 flex-1 max-w-3xl w-full mx-auto overflow-y-auto px-3.5 sm:px-6 py-4 flex flex-col justify-start lg:justify-center">
-        {/* Horizontal Sector & Question Quick-Jump Track */}
-        <div className="w-full mb-3 pb-1 overflow-x-auto scrollbar-none flex items-center justify-between gap-2">
+      {/* 2. QUESTION QUICK-JUMP TRACK (Fixed Sub-Bar) */}
+      <div
+        className={`z-20 shrink-0 px-3 sm:px-6 py-1.5 border-b backdrop-blur-md flex items-center justify-between gap-2 overflow-x-auto scrollbar-none ${
+          isCosmic
+            ? 'bg-[#070B16]/90 border-cyan-500/20'
+            : isKids
+            ? 'bg-pink-50/90 border-pink-200'
+            : 'bg-slate-100/90 border-slate-200'
+        }`}
+      >
+        <div className="max-w-[1600px] w-full mx-auto flex items-center justify-between gap-2">
           <div className="flex items-center space-x-1.5 min-w-max px-0.5 py-0.5">
             {questions.map((q: any, i: number) => {
               const status = getQuestionStatus(q);
@@ -758,7 +793,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                   key={q.id || i}
                   type="button"
                   onClick={() => setCurrentIndex(i)}
-                  className={`h-8 min-w-[2.1rem] px-2 rounded-lg text-xs font-bold transition flex items-center justify-center relative ${getQuestionButtonClass(
+                  className={`h-7 sm:h-8 min-w-[2rem] px-2 rounded-lg text-xs font-bold transition flex items-center justify-center relative ${getQuestionButtonClass(
                     q,
                     i
                   )}`}
@@ -778,494 +813,413 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
           <button
             type="button"
             onClick={() => setShowGridDrawer(true)}
-            className="shrink-0 p-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-cyan-500/30 text-cyan-300 text-xs flex items-center space-x-1"
+            className={`shrink-0 p-1.5 rounded-lg border text-xs flex items-center space-x-1 transition active:scale-95 ${
+              isCosmic
+                ? 'bg-slate-900 border-cyan-500/30 text-cyan-300 hover:bg-slate-800'
+                : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'
+            }`}
             title={isEnglish ? 'View full roster by sector' : 'Xem toàn bộ theo sector'}
           >
             <Grid className="w-3.5 h-3.5" />
             <span className="hidden sm:inline text-[11px] font-semibold">{isEnglish ? 'Sectors' : 'Sectors'}</span>
           </button>
         </div>
+      </div>
 
+      {/* 3. MAIN COCKPIT VIEW */}
+      <main className="mission-main flex-1 min-h-0 w-full max-w-[1600px] mx-auto p-3 sm:p-4 lg:p-5 overflow-hidden flex flex-col">
         {currentQ ? (
-          <div
-            className={`question-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 border shadow-sm transition flex flex-col justify-between ${
-              isCosmic
-                ? 'bg-[#0A0E1A]/95 border-cyan-500/40 text-slate-100 shadow-[0_0_30px_rgba(6,182,212,0.15)] backdrop-blur-xl'
-                : isKids
-                ? 'bg-white border-2 border-pink-200 text-slate-800 shadow-xl ring-2 ring-pink-100/60'
-                : 'bg-white border-slate-200 text-slate-900'
-            }`}
-          >
-            {/* A. BANNER THEO CHỦ ĐỀ */}
-            {isCosmic && (
-              <div className="mission-banner flex items-center justify-between pb-3 mb-3 border-b border-cyan-500/20 text-xs">
-                <div className="flex items-center space-x-2.5">
-                  <span className={`w-8 h-8 rounded-xl bg-gradient-to-tr ${currentStation.color} flex items-center justify-center font-bold text-white text-base shadow-[0_0_12px_rgba(6,182,212,0.4)]`}>
-                    {currentStation.symbol}
-                  </span>
-                  <div>
-                    <span className="font-bold text-cyan-300 block leading-tight text-xs sm:text-sm tracking-wide">
-                      {currentStation.name}
-                    </span>
-                    <span className="text-[10px] text-slate-400">
-                      {currentStation.desc}
-                    </span>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-1.5 text-slate-300 text-[11px] font-mono bg-slate-900/90 px-2.5 py-1 rounded-xl border border-cyan-500/30 shadow-xs">
-                  <Rocket className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
-                  <span>{isEnglish ? 'Astronaut Keithley Lake' : 'Phi hành gia Keithley'}</span>
-                </div>
-              </div>
-            )}
-
-            {isKids && (
-              <div className="flex items-center justify-between pb-3 mb-4 border-b-2 border-pink-100 text-xs">
-                <div className="flex items-center space-x-3">
-                  <span className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-pink-400 to-rose-400 flex items-center justify-center font-bold text-white text-xl shadow-md">
-                    👑
-                  </span>
-                  <div>
-                    <span className="font-extrabold text-pink-700 block leading-tight text-sm sm:text-base">
-                      Bé An Khám Phá Bảng Cửu Chương 8
-                    </span>
-                    <span className="text-[11px] text-pink-500 font-semibold">
-                      Cùng Công chúa và Chú Rồng Xanh giải mã câu đố phép nhân 8
-                    </span>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-1 text-pink-700 text-xs font-bold bg-pink-100 px-3 py-1.5 rounded-2xl border border-pink-200">
-                  <span>Toán Lớp 1</span>
-                  <span>✨</span>
-                </div>
-              </div>
-            )}
-
-            {/* B. PER-QUESTION CHRONOMETER HUD (Chỉ hiển thị cho học sinh lớn/cosmic) */}
-            {!isKids && (
-              <div className={`question-timer p-2.5 sm:p-3 rounded-2xl mb-4 border flex flex-wrap items-center justify-between gap-2.5 transition-all ${
+          <div className="w-full h-full min-h-0 lg:grid lg:grid-cols-12 lg:gap-5 xl:gap-6 flex flex-col overflow-y-auto lg:overflow-hidden mission-scroll">
+            {/* LEFT COLUMN: Question & Reference Deck */}
+            <div
+              className={`lg:col-span-7 xl:col-span-7 rounded-2xl sm:rounded-3xl p-4 sm:p-5 xl:p-6 border shadow-sm transition flex flex-col min-h-0 lg:h-full shrink-0 lg:shrink ${
                 isCosmic
-                  ? questionTimeLeft <= 15
-                    ? 'bg-red-950/40 border-red-500/60 shadow-[0_0_20px_rgba(239,68,68,0.3)]'
-                    : 'bg-slate-900/90 border-cyan-500/40 shadow-[0_0_15px_rgba(6,182,212,0.15)]'
-                  : 'bg-slate-50 border-slate-200'
-              }`}>
-                <div className="flex items-center space-x-2.5">
-                  <div className={`w-8 h-8 rounded-xl flex items-center justify-center font-bold text-xs transition-colors ${
-                    questionTimeLeft <= 15
-                      ? 'bg-red-500/20 text-red-400 border border-red-500/50 animate-pulse'
-                      : isCosmic
-                      ? 'bg-cyan-950 text-cyan-400 border border-cyan-500/40'
-                      : 'bg-blue-100 text-blue-700'
-                  }`}>
-                    <Clock className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400 flex items-center space-x-1.5">
-                      <span>{isEnglish ? 'Question Chronometer' : 'Đồng hồ câu hỏi'}</span>
-                      <span className="text-cyan-400 font-normal">({isEnglish ? '2m default' : 'chuẩn 2 phút'})</span>
-                    </div>
-                    <div className={`text-base sm:text-lg font-mono font-extrabold flex items-center space-x-2 ${
-                      questionTimeLeft <= 15
-                        ? 'text-red-400 animate-pulse'
-                        : isCosmic
-                        ? 'text-cyan-300'
-                        : 'text-slate-800'
-                    }`}>
-                      <span>{formatTimer(questionTimeLeft)}</span>
-                      {questionTimeLeft === 0 && (
-                        <span className="text-[11px] font-sans text-red-400 font-semibold">
-                          {isEnglish ? 'Target time reached!' : 'Hết 2 phút mục tiêu!'}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Chronometer User Adjust Controls (+ / - / Pause / Reset) */}
-                <div className="flex items-center space-x-1 sm:space-x-1.5">
-                  <button
-                    type="button"
-                    onClick={() => adjustQuestionTimer(-30)}
-                    className="px-2 py-1 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition flex items-center space-x-0.5 active:scale-95"
-                    title={isEnglish ? "Subtract 30 seconds" : "Bớt 30 giây"}
-                  >
-                    <Minus className="w-3 h-3" />
-                    <span>30s</span>
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => adjustQuestionTimer(30)}
-                    className="px-2 py-1 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/30 transition flex items-center space-x-0.5 active:scale-95"
-                    title={isEnglish ? "Add 30 seconds" : "Thêm 30 giây"}
-                  >
-                    <Plus className="w-3 h-3" />
-                    <span>30s</span>
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => adjustQuestionTimer(60)}
-                    className="px-2 py-1 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/30 transition flex items-center space-x-0.5 active:scale-95"
-                    title={isEnglish ? "Add 1 minute" : "Thêm 1 phút"}
-                  >
-                    <Plus className="w-3 h-3" />
-                    <span>1m</span>
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={toggleQuestionTimer}
-                    className={`p-1.5 rounded-lg border text-xs transition active:scale-95 ${
-                      isQuestionTimerRunning
-                        ? 'bg-amber-500/20 text-amber-300 border-amber-500/40 hover:bg-amber-500/30'
-                        : 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40 hover:bg-emerald-500/30'
-                    }`}
-                    title={isQuestionTimerRunning ? (isEnglish ? "Pause timer" : "Tạm dừng") : (isEnglish ? "Resume timer" : "Tiếp tục")}
-                  >
-                    {isQuestionTimerRunning ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={resetQuestionTimer}
-                    className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-slate-200 border border-slate-700 transition active:scale-95"
-                    title={isEnglish ? "Reset to 2:00" : "Đặt lại 2 phút"}
-                  >
-                    <RotateCcw className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-              </div>
-            )}
-
-            {/* C. QUESTION METADATA HEADER */}
-            <div className="question-meta flex items-center justify-between border-b pb-3 mb-3 border-slate-100 dark:border-slate-800">
-              <div className="flex items-center space-x-2">
-                <span
-                  className={`text-xs font-bold px-2.5 py-0.5 rounded-full ${
-                    isCosmic
-                      ? 'bg-cyan-950 text-cyan-300 border border-cyan-500/30'
-                      : 'bg-blue-50 text-blue-700 border border-blue-200'
-                  }`}
-                >
-                  {currentQ.question_payload?.sectionName ||
-                    (currentQ.type === 'MULTIPLE_CHOICE'
-                      ? (isEnglish ? 'Multiple Choice' : 'Trắc nghiệm')
-                      : currentQ.type === 'FILL_IN_BLANK'
-                      ? (isEnglish ? 'Numerical Fill-in' : 'Điền số')
-                      : (isEnglish ? 'Geometric Proof / Essay' : 'Tự luận'))}
-                </span>
-                <span className="text-xs text-slate-400 font-medium">
-                  {isEnglish ? 'Question' : 'Câu'} {currentIndex + 1} / {totalQuestions}
-                </span>
-              </div>
-              <span className="text-xs font-bold text-amber-300 bg-amber-950/60 px-2.5 py-0.5 rounded-full border border-amber-500/40">
-                {currentQ.points} {isEnglish ? 'pts' : 'điểm'}
-              </span>
-            </div>
-
-            {/* Optional Collapsible Passage */}
-            {currentQ.question_payload?.passage && (
-              <div className="mb-3">
-                <button
-                  type="button"
-                  onClick={() => setPassageExpanded(!passageExpanded)}
-                  className={`w-full py-1.5 px-3 rounded-xl border text-xs font-semibold flex items-center justify-between transition ${
-                    isCosmic
-                      ? 'bg-slate-800/80 border-cyan-500/30 text-cyan-300'
-                      : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
-                  }`}
-                >
-                  <span className="flex items-center space-x-1.5">
-                    <BookOpen className="w-3.5 h-3.5 text-blue-400" />
-                    <span>{isEnglish ? 'Mission Briefing / Reference Diagram' : 'Tài liệu / Bài đọc hiểu'}</span>
-                  </span>
-                  <span className="text-cyan-400 font-bold">
-                    {passageExpanded ? (isEnglish ? '▲ Collapse' : '▲ Thu gọn') : (isEnglish ? '▼ Expand Briefing' : '▼ Bấm để đọc')}
-                  </span>
-                </button>
-
-                {passageExpanded && (
-                  <div
-                    className={`mt-2 p-3.5 rounded-xl border max-h-48 overflow-y-auto text-xs leading-relaxed font-sans ${
+                  ? 'bg-[#0A0E1A]/95 border-cyan-500/40 text-slate-100 shadow-[0_0_25px_rgba(6,182,212,0.12)] backdrop-blur-xl'
+                  : isKids
+                  ? 'bg-white border-2 border-pink-200 text-slate-800 shadow-lg'
+                  : 'bg-white border-slate-200 text-slate-900'
+              }`}
+            >
+              {/* Question Metadata Header */}
+              <div className="flex items-center justify-between border-b pb-2.5 mb-3 border-cyan-500/20 shrink-0">
+                <div className="flex items-center space-x-2">
+                  <span
+                    className={`text-xs font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider ${
                       isCosmic
-                        ? 'bg-slate-900 border-slate-800 text-slate-200'
-                        : 'bg-slate-50 border-slate-200 text-slate-800'
+                        ? 'bg-cyan-950/80 text-cyan-300 border border-cyan-500/30 text-[11px]'
+                        : 'bg-blue-50 text-blue-700 border border-blue-200'
                     }`}
                   >
-                    <FormattedContent text={currentQ.question_payload.passage} />
-                  </div>
-                )}
+                    {currentQ.question_payload?.sectionName ||
+                      (currentQ.type === 'MULTIPLE_CHOICE'
+                        ? (isEnglish ? 'Multiple Choice' : 'Trắc nghiệm')
+                        : currentQ.type === 'FILL_IN_BLANK'
+                        ? (isEnglish ? 'Numerical Fill-in' : 'Điền số')
+                        : (isEnglish ? 'Geometric Proof / Essay' : 'Tự luận'))}
+                  </span>
+                  <span className="text-xs text-slate-400 font-medium">
+                    {isEnglish ? 'Question' : 'Câu'} {currentIndex + 1} / {totalQuestions}
+                  </span>
+                </div>
+                <span className="text-xs font-bold text-amber-300 bg-amber-950/70 px-2.5 py-1 rounded-lg border border-amber-500/40 font-mono">
+                  {currentQ.points} {isEnglish ? 'pts' : 'điểm'}
+                </span>
               </div>
-            )}
 
-            <div className={isParallelWorkbook ? 'parallel-question-body' : isKids && kidsQuestionVisual?.imageSrc ? 'lg:grid lg:grid-cols-[minmax(17rem,0.85fr)_minmax(0,1.15fr)] lg:items-start lg:gap-6' : ''}>
-              {isParallelWorkbook && (
-                <aside className="parallel-reference" aria-label="Geometry reference">
-                  <img src={currentQ.question_payload.diagram_url} alt={currentQ.question_payload.diagram_alt} />
-                  <p className="text-xs text-cyan-200 mt-2">{currentQ.question_payload.reference_note}</p>
-                  <details className="mt-3 text-sm text-slate-200">
-                    <summary className="cursor-pointer text-cyan-300">Flight manual · Type strategy</summary>
-                    <p className="mt-2">{currentQ.question_payload.method_markdown}</p>
-                  </details>
-                </aside>
+              {/* Reference Diagram / Illustration (if present) */}
+              {currentQ.question_payload?.diagram_url && (
+                <div className="shrink-0 mb-3 p-2.5 rounded-xl border border-cyan-500/30 bg-[#080d1a] flex flex-col items-center">
+                  <img
+                    src={currentQ.question_payload.diagram_url}
+                    alt={currentQ.question_payload.diagram_alt || 'Geometry reference'}
+                    className="max-h-[160px] xl:max-h-[220px] w-auto object-contain"
+                  />
+                  {currentQ.question_payload.reference_note && (
+                    <p className="text-[11px] text-cyan-200/80 mt-1.5 text-center">{currentQ.question_payload.reference_note}</p>
+                  )}
+                  {currentQ.question_payload.method_markdown && (
+                    <details className="mt-1 text-xs text-slate-300 w-full">
+                      <summary className="cursor-pointer text-cyan-300 font-semibold hover:text-cyan-200">Flight manual · Type strategy</summary>
+                      <p className="mt-1 p-2 rounded bg-slate-900/80 border border-slate-800 leading-relaxed">{currentQ.question_payload.method_markdown}</p>
+                    </details>
+                  )}
+                </div>
               )}
+
+              {/* Kids visual */}
               {isKids && kidsQuestionVisual?.imageSrc && (
-                <figure className="mb-4 overflow-hidden rounded-2xl border-2 border-pink-200 bg-white shadow-md shadow-pink-100 lg:mb-0 lg:sticky lg:top-0">
+                <figure className="mb-3 shrink-0 overflow-hidden rounded-2xl border-2 border-pink-200 bg-white shadow-md">
                   <img
                     src={kidsQuestionVisual.imageSrc}
-                    alt={kidsQuestionVisual.imageAlt || 'Hình minh họa câu hỏi'}
-                    className="h-52 w-full bg-pink-50 object-contain sm:h-64 lg:h-72"
+                    alt={kidsQuestionVisual.imageAlt || 'Hình minh họa'}
+                    className="h-44 sm:h-52 w-full bg-pink-50 object-contain"
                   />
-                  <figcaption className="px-3 py-2 text-center text-xs font-bold text-pink-700">
-                    {kidsQuestionVisual.imageAlt}
-                  </figcaption>
                 </figure>
               )}
 
-              <div className="question-response">
-                {/* Question Stem / Content */}
+              {/* Optional Collapsible Passage */}
+              {currentQ.question_payload?.passage && (
+                <div className="mb-3 shrink-0">
+                  <button
+                    type="button"
+                    onClick={() => setPassageExpanded(!passageExpanded)}
+                    className="w-full py-1.5 px-3 rounded-xl border text-xs font-semibold flex items-center justify-between transition bg-slate-800/80 border-cyan-500/30 text-cyan-300"
+                  >
+                    <span className="flex items-center space-x-1.5">
+                      <BookOpen className="w-3.5 h-3.5 text-cyan-400" />
+                      <span>{isEnglish ? 'Mission Briefing / Reference Diagram' : 'Tài liệu / Bài đọc hiểu'}</span>
+                    </span>
+                    <span className="text-cyan-400 font-bold">
+                      {passageExpanded ? (isEnglish ? '▲ Collapse' : '▲ Thu gọn') : (isEnglish ? '▼ Expand Briefing' : '▼ Bấm để đọc')}
+                    </span>
+                  </button>
+
+                  {passageExpanded && (
+                    <div className="mt-2 p-3 rounded-xl border border-slate-800 bg-slate-900 text-slate-200 text-xs leading-relaxed max-h-36 overflow-y-auto mission-scroll">
+                      <FormattedContent text={currentQ.question_payload.passage} />
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Question Stem / Content */}
+              <div className="flex-1 min-h-0 overflow-y-auto mission-scroll pr-1.5 text-base sm:text-lg xl:text-xl font-medium leading-relaxed text-white">
+                <FormattedContent
+                  className="text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
+                  text={isKids ? kidsQuestionVisual?.text || questionMarkdown : questionMarkdown}
+                />
+              </div>
+            </div>
+
+            {/* RIGHT COLUMN: Telemetry Input & Controls Deck */}
+            <div
+              className={`lg:col-span-5 xl:col-span-5 rounded-2xl sm:rounded-3xl p-4 sm:p-5 xl:p-6 border shadow-sm transition flex flex-col justify-between min-h-0 lg:h-full shrink-0 lg:shrink ${
+                isCosmic
+                  ? 'bg-[#0A0E1A]/95 border-cyan-500/40 text-slate-100 shadow-[0_0_25px_rgba(6,182,212,0.12)] backdrop-blur-xl'
+                  : isKids
+                  ? 'bg-white border-2 border-pink-200 text-slate-800 shadow-lg'
+                  : 'bg-white border-slate-200 text-slate-900'
+              }`}
+            >
+              {/* Question Chronometer HUD */}
+              {!isKids && (
                 <div
-                  key={currentQ.id}
-                  className={`question-stem text-base sm:text-lg font-semibold leading-relaxed mb-5 lg:max-h-40 lg:overflow-y-auto lg:pr-2 ${
+                  className={`shrink-0 p-2 sm:p-2.5 rounded-xl border mb-3 flex items-center justify-between gap-2 transition-all ${
                     isCosmic
-                      ? 'text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]'
-                      : isKids
-                      ? 'text-slate-800 text-lg sm:text-xl font-bold'
-                      : 'text-slate-900'
+                      ? questionTimeLeft <= 15
+                        ? 'bg-red-950/40 border-red-500/60 shadow-[0_0_15px_rgba(239,68,68,0.3)]'
+                        : 'bg-slate-900/90 border-cyan-500/40 shadow-[0_0_10px_rgba(6,182,212,0.15)]'
+                      : 'bg-slate-50 border-slate-200'
                   }`}
                 >
-                  <FormattedContent
-                    className={isCosmic ? 'text-white' : ''}
-                    text={isKids ? kidsQuestionVisual?.text || questionMarkdown : questionMarkdown}
-                  />
-                </div>
-
-                {/* Options Area */}
-                <div className="question-options space-y-2.5">
-              {/* MULTIPLE_CHOICE OPTIONS */}
-              {currentQ.type === 'MULTIPLE_CHOICE' && currentQ.question_payload?.options && (
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-2.5 lg:gap-3">
-                  {currentQ.question_payload.options.map((opt: any) => {
-                    const isSelected = currentAnswer.selected_option_id === opt.id;
-                    const correctOptionId = (
-                      currentQ.grading_key_payload?.correct_option_id ||
-                      currentQ.question_payload?.correct_option_id ||
-                      ''
-                    ).toString().trim().toUpperCase();
-
-                    const isWrong = isSelected && Boolean(correctOptionId) && opt.id.toString().trim().toUpperCase() !== correctOptionId;
-                    const isCorrect = isSelected && Boolean(correctOptionId) && opt.id.toString().trim().toUpperCase() === correctOptionId;
-                    const isShaking = shakingOption === opt.id;
-
-                    return (
-                      <button
-                        key={opt.id}
-                        type="button"
-                        onClick={() => handleSelectOption(currentQ.id, opt.id)}
-                        className={`w-full p-3.5 sm:p-4 rounded-2xl text-left border text-sm sm:text-base font-medium transition-all flex items-center justify-between active:scale-[0.99] ${
-                          isShaking ? 'animate-shake' : ''
-                        } ${
-                          isSelected
-                            ? isWrong
-                              ? isCosmic
-                                ? 'bg-rose-950/90 border-rose-500 text-rose-100 shadow-[0_0_25px_rgba(244,63,94,0.5)] ring-2 ring-rose-500/80 scale-[1.01]'
-                                : isKids
-                                ? 'bg-rose-100/90 border-2 border-rose-500 text-rose-950 shadow-md ring-2 ring-rose-300 font-bold scale-[1.01]'
-                                : 'bg-red-50 border-2 border-red-500 text-red-950 ring-2 ring-red-200 shadow-sm'
-                              : isCorrect
-                              ? isCosmic
-                                ? 'bg-emerald-950/90 border-emerald-400 text-white shadow-[0_0_25px_rgba(16,185,129,0.5)] ring-2 ring-emerald-400/80 scale-[1.01]'
-                                : isKids
-                                ? 'bg-emerald-100/90 border-2 border-emerald-500 text-emerald-950 shadow-md ring-2 ring-emerald-300 font-bold scale-[1.01]'
-                                : 'bg-emerald-50 border-2 border-emerald-600 text-emerald-950 ring-2 ring-emerald-200 shadow-xs'
-                              : isCosmic
-                              ? 'bg-cyan-950/90 border-cyan-400 text-white shadow-[0_0_20px_rgba(6,182,212,0.4)] ring-1 ring-cyan-400'
-                              : isKids
-                              ? 'bg-pink-100/90 border-2 border-pink-500 text-pink-950 shadow-md ring-2 ring-pink-300 font-bold scale-[1.01]'
-                              : 'bg-blue-50 border-blue-600 text-blue-950 ring-1 ring-blue-600 shadow-xs'
-                            : isCosmic
-                            ? 'bg-slate-900/80 border-slate-700/80 text-white hover:bg-slate-800 hover:border-cyan-500/50'
-                            : isKids
-                            ? 'bg-white border-2 border-pink-100 text-slate-800 hover:border-pink-300 hover:bg-pink-50/60 shadow-xs'
-                            : 'bg-white border-slate-200 text-slate-800 hover:bg-slate-50 hover:border-slate-300 shadow-2xs'
+                  <div className="flex items-center space-x-2">
+                    <div
+                      className={`w-7 h-7 rounded-lg flex items-center justify-center font-bold text-xs ${
+                        questionTimeLeft <= 15
+                          ? 'bg-red-500/20 text-red-400 border border-red-500/50 animate-pulse'
+                          : 'bg-cyan-950 text-cyan-400 border border-cyan-500/40'
+                      }`}
+                    >
+                      <Clock className="w-3.5 h-3.5" />
+                    </div>
+                    <div>
+                      <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400 leading-tight">
+                        {isEnglish ? 'Question Timer' : 'Đồng hồ câu hỏi'}
+                      </div>
+                      <div
+                        className={`text-base font-mono font-extrabold leading-tight ${
+                          questionTimeLeft <= 15 ? 'text-red-400 animate-pulse' : 'text-cyan-300'
                         }`}
                       >
-                        <div className="flex items-center space-x-3.5 pr-2 min-w-0">
-                          <span
-                            className={`w-8 h-8 sm:w-9 sm:h-9 flex-shrink-0 rounded-xl flex items-center justify-center font-bold text-sm sm:text-base transition-colors ${
-                              isSelected
-                                ? isWrong
-                                  ? isCosmic
-                                    ? 'bg-rose-500 text-white font-black shadow-sm'
-                                    : isKids
-                                    ? 'bg-rose-500 text-white shadow-sm font-extrabold'
-                                    : 'bg-red-600 text-white font-bold'
-                                  : isCorrect
-                                  ? isCosmic
-                                    ? 'bg-emerald-500 text-slate-950 font-black shadow-sm'
-                                    : isKids
-                                    ? 'bg-emerald-500 text-white shadow-sm font-extrabold'
-                                    : 'bg-emerald-600 text-white font-bold'
-                                  : isCosmic
-                                  ? 'bg-cyan-500 text-slate-950 font-black shadow-sm'
-                                  : isKids
-                                  ? 'bg-pink-500 text-white shadow-sm font-extrabold'
-                                  : 'bg-blue-600 text-white font-bold'
-                                : isCosmic
-                                ? 'bg-slate-800 text-cyan-300 border border-cyan-500/30'
-                                : isKids
-                                ? 'bg-pink-100 text-pink-700 border border-pink-200 font-bold'
-                                : 'bg-slate-100 text-slate-700 border border-slate-200'
-                            }`}
-                          >
-                            {opt.id}
-                          </span>
-                          <span
-                            className={`leading-snug break-words ${
-                              isCosmic
-                                ? isWrong ? 'text-rose-100 font-semibold' : isCorrect ? 'text-emerald-100 font-semibold' : 'text-white font-medium'
-                                : isKids
-                                ? 'text-slate-800 font-bold text-base sm:text-lg'
-                                : 'text-slate-800'
-                            }`}
-                          >
-                            <FormattedContent
-                              text={opt.text}
-                              className={isCosmic ? (isWrong ? 'text-rose-100' : isCorrect ? 'text-emerald-100' : 'text-white') : ''}
-                            />
-                          </span>
-                        </div>
-                        {isSelected && (
-                          isWrong ? (
-                            <X
-                              className={`w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0 animate-in zoom-in-75 ${
-                                isCosmic
-                                  ? 'text-rose-400 stroke-[2.5]'
-                                  : isKids
-                                  ? 'text-rose-600 stroke-[3]'
-                                  : 'text-red-600 stroke-[2.5]'
-                              }`}
-                            />
-                          ) : isCorrect ? (
-                            <Check
-                              className={`w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0 animate-in zoom-in-75 ${
-                                isCosmic
-                                  ? 'text-emerald-400 stroke-[2.5]'
-                                  : isKids
-                                  ? 'text-emerald-600 stroke-[3]'
-                                  : 'text-emerald-600 stroke-[2.5]'
-                              }`}
-                            />
-                          ) : (
-                            <Check
-                              className={`w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0 ${
-                                isCosmic
-                                  ? 'text-cyan-400'
-                                  : isKids
-                                  ? 'text-pink-600 stroke-[3]'
-                                  : 'text-blue-600'
-                              }`}
-                            />
-                          )
-                        )}
-                      </button>
-                    );
-                  })}
-                </div>
-              )}
-
-              {/* Feedback Banner for Multiple Choice */}
-              {currentQ.type === 'MULTIPLE_CHOICE' && currentAnswer.selected_option_id && Boolean(
-                (currentQ.grading_key_payload?.correct_option_id || currentQ.question_payload?.correct_option_id || '')
-              ) && (() => {
-                const correctOpt = (
-                  currentQ.grading_key_payload?.correct_option_id ||
-                  currentQ.question_payload?.correct_option_id ||
-                  ''
-                ).toString().trim().toUpperCase();
-                const isWrong = currentAnswer.selected_option_id.toString().trim().toUpperCase() !== correctOpt;
-
-                return isWrong ? (
-                  <div
-                    className={`mt-3 p-3 sm:p-3.5 rounded-2xl border text-xs sm:text-sm font-bold flex items-center space-x-2.5 animate-in fade-in slide-in-from-top-1 ${
-                      isCosmic
-                        ? 'bg-rose-950/60 border-rose-500/50 text-rose-200 shadow-[0_0_15px_rgba(244,63,94,0.25)]'
-                        : isKids
-                        ? 'bg-rose-50 border-2 border-rose-300 text-rose-900'
-                        : 'bg-red-50 border border-red-300 text-red-900'
-                    }`}
-                  >
-                    <X className="w-4 h-4 text-rose-500 flex-shrink-0 stroke-[2.5]" />
-                    <span>
-                      {isKids
-                        ? 'Ôi chưa đúng rồi! Bé An chọn thử lại đáp án khác nhé 🌸'
-                        : isEnglish
-                        ? 'Incorrect telemetry! Re-evaluate and select another option.'
-                        : 'Chưa chính xác! Con hãy suy nghĩ kỹ và chọn lại đáp án khác nhé.'}
-                    </span>
+                        {formatTimer(questionTimeLeft)}
+                      </div>
+                    </div>
                   </div>
-                ) : (
-                  <div
-                    className={`mt-3 p-3 sm:p-3.5 rounded-2xl border text-xs sm:text-sm font-bold flex items-center space-x-2.5 animate-in fade-in slide-in-from-top-1 ${
-                      isCosmic
-                        ? 'bg-emerald-950/60 border-emerald-500/50 text-emerald-200 shadow-[0_0_15px_rgba(16,185,129,0.25)]'
-                        : isKids
-                        ? 'bg-emerald-50 border-2 border-emerald-300 text-emerald-900'
-                        : 'bg-emerald-50 border border-emerald-300 text-emerald-900'
-                    }`}
-                  >
-                    <Check className="w-4 h-4 text-emerald-500 flex-shrink-0 stroke-[2.5]" />
-                    <span>
-                      {isKids
-                        ? 'Chính xác rồi! Bé An thông minh quá! ⭐ Bấm "Next" để qua câu tiếp theo nha!'
-                        : isEnglish
-                        ? 'Correct telemetry locked on target! 🎯 Proceed to next sector.'
-                        : 'Chính xác! Con làm rất tốt! 🎯 Bấm "Câu tiếp theo" để tiếp tục.'}
-                    </span>
-                  </div>
-                );
-              })()}
 
-              {/* FILL_IN_BLANK INPUT */}
-              {currentQ.type === 'FILL_IN_BLANK' && (
-                <div>
-                  <input
-                    type="text"
-                    placeholder={isEnglish ? "Enter numerical value or angle degree (e.g. 132 or 72°)..." : "Gõ đáp số của con vào đây..."}
-                    value={currentAnswer.text || ''}
-                    onChange={(e) => handleFillText(currentQ.id, e.target.value)}
-                    className="w-full p-3 bg-slate-900 border border-cyan-500/40 rounded-xl text-white text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
-                  />
-                </div>
-              )}
-
-              {/* ESSAY_UPLOAD INPUT */}
-              {currentQ.type === 'ESSAY_UPLOAD' && (
-                <div className="space-y-3">
-                  <textarea
-                    rows={4}
-                    aria-label={isEnglish ? 'Written solution' : 'Lời giải'}
-                    placeholder={isEnglish ? "Write each part of your solution. Include angle values, positions, and reasons..." : "Gõ lời giải từng bước hoặc lập luận hình học tại đây..."}
-                    value={currentAnswer.text_response || ''}
-                    onChange={(e) => handleEssayText(currentQ.id, e.target.value)}
-                    className="w-full p-3 bg-slate-900 border border-cyan-500/40 rounded-xl text-white text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 leading-relaxed font-mono"
-                  />
-                  {!isParallelWorkbook && <div className="flex items-center justify-between text-xs text-slate-400">
-                    <span>{isEnglish ? "Tip: You can use symbols like 180°, xOy, OM bisector..." : "Gợi ý: Con có thể gõ các góc xOy, 180°, tia OM..."}</span>
+                  {/* Adjust Controls */}
+                  <div className="flex items-center space-x-1">
                     <button
                       type="button"
-                      onClick={() => handleAddSampleImage(currentQ.id, '/images/kids/princess_math.png')}
-                      className="px-3 py-1.5 rounded-lg bg-cyan-950 text-cyan-300 text-xs font-semibold flex items-center space-x-1.5 border border-cyan-500/40 hover:bg-cyan-900 transition"
+                      onClick={() => adjustQuestionTimer(-30)}
+                      className="px-1.5 py-0.5 rounded text-[11px] font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition"
+                      title={isEnglish ? "Subtract 30s" : "Bớt 30 giây"}
                     >
-                      <Upload className="w-3.5 h-3.5" />
-                      <span>{isEnglish ? "Attach Diagram Work" : "Đính kèm ảnh bài làm"}</span>
+                      -30s
                     </button>
-                  </div>}
+                    <button
+                      type="button"
+                      onClick={() => adjustQuestionTimer(30)}
+                      className="px-1.5 py-0.5 rounded text-[11px] font-semibold bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/30 transition"
+                      title={isEnglish ? "Add 30s" : "Thêm 30 giây"}
+                    >
+                      +30s
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => adjustQuestionTimer(60)}
+                      className="px-1.5 py-0.5 rounded text-[11px] font-semibold bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/30 transition"
+                      title={isEnglish ? "Add 1m" : "Thêm 1 phút"}
+                    >
+                      +1m
+                    </button>
+                    <button
+                      type="button"
+                      onClick={toggleQuestionTimer}
+                      className={`p-1 rounded border text-xs transition ${
+                        isQuestionTimerRunning
+                          ? 'bg-amber-500/20 text-amber-300 border-amber-500/40 hover:bg-amber-500/30'
+                          : 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40 hover:bg-emerald-500/30'
+                      }`}
+                      title={isQuestionTimerRunning ? (isEnglish ? "Pause" : "Tạm dừng") : (isEnglish ? "Play" : "Tiếp tục")}
+                    >
+                      {isQuestionTimerRunning ? <Pause className="w-3 h-3" /> : <Play className="w-3 h-3" />}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={resetQuestionTimer}
+                      className="p-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-slate-200 border border-slate-700 transition"
+                      title={isEnglish ? "Reset" : "Đặt lại"}
+                    >
+                      <RotateCcw className="w-3 h-3" />
+                    </button>
+                  </div>
                 </div>
               )}
+
+              {/* Options & Input Area */}
+              <div className="flex-1 min-h-0 overflow-y-auto mission-scroll py-1 space-y-2 pr-1 flex flex-col justify-center">
+                {/* MULTIPLE_CHOICE OPTIONS */}
+                {currentQ.type === 'MULTIPLE_CHOICE' && currentQ.question_payload?.options && (
+                  <div className="space-y-2">
+                    {currentQ.question_payload.options.map((opt: any) => {
+                      const isSelected = currentAnswer.selected_option_id === opt.id;
+                      const correctOptionId = (
+                        currentQ.grading_key_payload?.correct_option_id ||
+                        currentQ.question_payload?.correct_option_id ||
+                        ''
+                      ).toString().trim().toUpperCase();
+
+                      const isWrong = isSelected && Boolean(correctOptionId) && opt.id.toString().trim().toUpperCase() !== correctOptionId;
+                      const isCorrect = isSelected && Boolean(correctOptionId) && opt.id.toString().trim().toUpperCase() === correctOptionId;
+                      const isShaking = shakingOption === opt.id;
+
+                      return (
+                        <button
+                          key={opt.id}
+                          type="button"
+                          onClick={() => handleSelectOption(currentQ.id, opt.id)}
+                          className={`w-full py-2.5 px-3 sm:py-3 sm:px-3.5 rounded-xl text-left border text-sm sm:text-base font-medium transition-all flex items-center justify-between active:scale-[0.99] ${
+                            isShaking ? 'animate-shake' : ''
+                          } ${
+                            isSelected
+                              ? isWrong
+                                ? isCosmic
+                                  ? 'bg-rose-950/90 border-rose-500 text-rose-100 shadow-[0_0_20px_rgba(244,63,94,0.45)] ring-2 ring-rose-500/80 scale-[1.01]'
+                                  : 'bg-rose-100/90 border-2 border-rose-500 text-rose-950'
+                                : isCorrect
+                                ? isCosmic
+                                  ? 'bg-emerald-950/90 border-emerald-400 text-white shadow-[0_0_20px_rgba(16,185,129,0.45)] ring-2 ring-emerald-400/80 scale-[1.01]'
+                                  : 'bg-emerald-100/90 border-2 border-emerald-500 text-emerald-950'
+                                : isCosmic
+                                ? 'bg-cyan-950/90 border-cyan-400 text-white shadow-[0_0_15px_rgba(6,182,212,0.35)] ring-1 ring-cyan-400'
+                                : 'bg-blue-50 border-blue-600 text-blue-950'
+                              : isCosmic
+                              ? 'bg-slate-900/80 border-slate-700/80 text-white hover:bg-slate-800 hover:border-cyan-500/50'
+                              : isKids
+                              ? 'bg-white border-2 border-pink-100 text-slate-800 hover:border-pink-300 hover:bg-pink-50/60 shadow-xs'
+                              : 'bg-white border-slate-200 text-slate-800 hover:bg-slate-50'
+                          }`}
+                        >
+                          <div className="flex items-center space-x-3 pr-2 min-w-0">
+                            <span
+                              className={`w-7 h-7 sm:w-8 sm:h-8 flex-shrink-0 rounded-lg flex items-center justify-center font-bold text-xs sm:text-sm transition-colors ${
+                                isSelected
+                                  ? isWrong
+                                    ? 'bg-rose-500 text-white font-black shadow-sm'
+                                    : isCorrect
+                                    ? 'bg-emerald-500 text-slate-950 font-black shadow-sm'
+                                    : 'bg-cyan-500 text-slate-950 font-black shadow-sm'
+                                  : isCosmic
+                                  ? 'bg-slate-800 text-cyan-300 border border-cyan-500/30'
+                                  : 'bg-slate-100 text-slate-700 border border-slate-200'
+                              }`}
+                            >
+                              {opt.id}
+                            </span>
+                            <span className={`leading-snug break-words ${isWrong ? 'text-rose-100 font-semibold' : isCorrect ? 'text-emerald-100 font-semibold' : 'text-white font-medium'}`}>
+                              <FormattedContent
+                                text={opt.text}
+                                className={isWrong ? 'text-rose-100' : isCorrect ? 'text-emerald-100' : 'text-white'}
+                              />
+                            </span>
+                          </div>
+                          {isSelected && (
+                            isWrong ? (
+                              <X className="w-5 h-5 flex-shrink-0 text-rose-400 stroke-[2.5] animate-in zoom-in-75" />
+                            ) : isCorrect ? (
+                              <Check className="w-5 h-5 flex-shrink-0 text-emerald-400 stroke-[2.5] animate-in zoom-in-75" />
+                            ) : (
+                              <Check className="w-5 h-5 flex-shrink-0 text-cyan-400" />
+                            )
+                          )}
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+
+                {/* Feedback Banner for Multiple Choice */}
+                {currentQ.type === 'MULTIPLE_CHOICE' && currentAnswer.selected_option_id && Boolean(
+                  (currentQ.grading_key_payload?.correct_option_id || currentQ.question_payload?.correct_option_id || '')
+                ) && (() => {
+                  const correctOpt = (
+                    currentQ.grading_key_payload?.correct_option_id ||
+                    currentQ.question_payload?.correct_option_id ||
+                    ''
+                  ).toString().trim().toUpperCase();
+                  const isWrong = currentAnswer.selected_option_id.toString().trim().toUpperCase() !== correctOpt;
+
+                  return isWrong ? (
+                    <div className="mt-2 p-2.5 rounded-xl border text-xs font-bold flex items-center space-x-2 bg-rose-950/60 border-rose-500/50 text-rose-200 shadow-[0_0_12px_rgba(244,63,94,0.25)] animate-in fade-in slide-in-from-top-1">
+                      <X className="w-4 h-4 text-rose-400 flex-shrink-0 stroke-[2.5]" />
+                      <span>
+                        {isKids
+                          ? 'Chưa đúng rồi! Bé chọn lại đáp án khác nhé 🌸'
+                          : isEnglish
+                          ? 'Incorrect telemetry! Re-evaluate and select another option.'
+                          : 'Chưa chính xác! Con hãy suy nghĩ kỹ và chọn lại đáp án khác nhé.'}
+                      </span>
+                    </div>
+                  ) : (
+                    <div className="mt-2 p-2.5 rounded-xl border text-xs font-bold flex items-center space-x-2 bg-emerald-950/60 border-emerald-500/50 text-emerald-200 shadow-[0_0_12px_rgba(16,185,129,0.25)] animate-in fade-in slide-in-from-top-1">
+                      <Check className="w-4 h-4 text-emerald-400 flex-shrink-0 stroke-[2.5]" />
+                      <span>
+                        {isKids
+                          ? 'Chính xác rồi! Bé thông minh quá! ⭐'
+                          : isEnglish
+                          ? 'Correct telemetry locked on target! 🎯 Proceed to next sector.'
+                          : 'Chính xác! Con làm rất tốt! 🎯 Bấm "Câu tiếp theo" để tiếp tục.'}
+                      </span>
+                    </div>
+                  );
+                })()}
+
+                {/* FILL_IN_BLANK INPUT */}
+                {currentQ.type === 'FILL_IN_BLANK' && (
+                  <div>
+                    <input
+                      type="text"
+                      placeholder={isEnglish ? "Enter numerical value (e.g. 2.0 or 43.125)..." : "Gõ đáp số của con vào đây..."}
+                      value={currentAnswer.text || ''}
+                      onChange={(e) => handleFillText(currentQ.id, e.target.value)}
+                      className="w-full p-3 bg-slate-900 border border-cyan-500/40 rounded-xl text-white text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
+                    />
+                  </div>
+                )}
+
+                {/* ESSAY_UPLOAD INPUT */}
+                {currentQ.type === 'ESSAY_UPLOAD' && (
+                  <div className="space-y-2">
+                    <textarea
+                      rows={3}
+                      aria-label={isEnglish ? 'Written solution' : 'Lời giải'}
+                      placeholder={isEnglish ? "Write your solution and steps here..." : "Gõ lời giải từng bước tại đây..."}
+                      value={currentAnswer.text_response || ''}
+                      onChange={(e) => handleEssayText(currentQ.id, e.target.value)}
+                      className="w-full p-2.5 bg-slate-900 border border-cyan-500/40 rounded-xl text-white text-xs sm:text-sm focus:outline-none focus:border-cyan-400 leading-relaxed font-mono resize-none"
+                    />
+                    <div className="flex items-center justify-between text-xs text-slate-400">
+                      <span>{isEnglish ? "Tip: Include units and steps" : "Gợi ý: Gõ đơn vị và các bước"}</span>
+                      <button
+                        type="button"
+                        onClick={() => handleAddSampleImage(currentQ.id, '/images/kids/princess_math.png')}
+                        className="px-2.5 py-1 rounded-lg bg-cyan-950 text-cyan-300 text-xs font-semibold flex items-center space-x-1 border border-cyan-500/40 hover:bg-cyan-900 transition"
+                      >
+                        <Upload className="w-3.5 h-3.5" />
+                        <span>{isEnglish ? "Attach Work" : "Đính kèm ảnh"}</span>
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Navigation Controls Deck */}
+              <div className="shrink-0 pt-3 mt-2 border-t border-cyan-500/20 flex items-center justify-between gap-2">
+                <button
+                  type="button"
+                  onClick={() => setCurrentIndex((prev) => Math.max(0, prev - 1))}
+                  disabled={currentIndex === 0}
+                  className="px-3 py-2 rounded-xl border text-xs font-semibold flex items-center space-x-1 transition disabled:opacity-30 disabled:cursor-not-allowed bg-slate-900 border-slate-800 text-slate-300 hover:bg-slate-800"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                  <span className="hidden sm:inline">{isEnglish ? 'Previous' : 'Câu trước'}</span>
+                </button>
+
+                <div className="text-center text-[11px] text-slate-400">
+                  <span>{isEnglish ? 'Solved: ' : 'Đã làm: '}</span>
+                  <strong className="text-cyan-300 font-bold">{answeredCount}</strong>/{totalQuestions}
                 </div>
+
+                {currentIndex < totalQuestions - 1 ? (
+                  <button
+                    type="button"
+                    onClick={() => setCurrentIndex((prev) => Math.min(totalQuestions - 1, prev + 1))}
+                    className="px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold flex items-center space-x-1.5 transition shadow-sm active:scale-95 bg-cyan-500 hover:bg-cyan-400 text-slate-950 shadow-[0_0_12px_rgba(6,182,212,0.4)]"
+                  >
+                    <span>{isEnglish ? 'Next Sector' : 'Tiếp theo'}</span>
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={handleSubmit}
+                    disabled={submitting}
+                    className="px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold flex items-center space-x-1.5 transition shadow-sm active:scale-95 disabled:opacity-50 bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-[0_0_15px_rgba(16,185,129,0.5)]"
+                  >
+                    <span>{submitting ? (isEnglish ? 'Transmitting...' : 'Đang nộp...') : (isEnglish ? 'Submit Telemetry' : 'Nộp bài')}</span>
+                    <Send className="w-4 h-4" />
+                  </button>
+                )}
               </div>
             </div>
           </div>
@@ -1275,117 +1229,6 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
           </div>
         )}
       </main>
-
-      {/* 3. BOTTOM CONTROL BAR */}
-      <footer
-        className={`z-30 shrink-0 px-3.5 sm:px-6 py-2.5 sm:py-3 border-t backdrop-blur-md ${
-          isCosmic
-            ? 'bg-[#05070E]/95 border-cyan-500/20'
-            : isKids
-            ? 'bg-white/95 border-pink-200 shadow-md'
-            : 'bg-white/95 border-slate-200/90 shadow-sm'
-        }`}
-      >
-        <div className="max-w-3xl mx-auto grid grid-cols-2 items-center gap-2 sm:flex sm:justify-between">
-          {/* Previous Button */}
-          <button
-            type="button"
-            onClick={() => setCurrentIndex((prev) => Math.max(0, prev - 1))}
-            disabled={currentIndex === 0}
-            className={`w-full justify-center px-3.5 sm:w-auto sm:px-4 py-2.5 rounded-xl border text-xs sm:text-sm font-semibold flex items-center space-x-1.5 transition disabled:opacity-40 disabled:cursor-not-allowed ${
-              isCosmic
-                ? 'bg-slate-900 border-slate-800 text-slate-300 hover:bg-slate-800'
-                : isKids
-                ? 'bg-white border-2 border-pink-200 text-pink-700 hover:bg-pink-50 font-bold'
-                : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'
-            }`}
-          >
-            <ChevronLeft className="w-4 h-4" />
-            <span className="sm:hidden">{isEnglish ? 'Previous' : 'Câu trước'}</span>
-            <span className="hidden sm:inline">{isKids ? 'Câu trước' : isEnglish ? 'Previous Question' : 'Câu trước'}</span>
-          </button>
-
-          {/* Quick status pill */}
-          <div className="col-span-2 row-start-2 text-center sm:col-auto sm:row-auto">
-            <span className="text-[11px] text-slate-500 font-semibold block">
-              {isKids ? 'Bé đã làm:' : isEnglish ? 'Completed:' : 'Đã làm:'}{' '}
-              <strong className={isKids ? 'text-pink-600 font-extrabold text-sm' : 'text-cyan-400 font-bold'}>{answeredCount}</strong>/{totalQuestions} {isEnglish ? 'problems' : 'câu'}
-            </span>
-          </div>
-
-          {/* Next or Finish Button */}
-          <div className="flex items-center justify-end space-x-2">
-            {currentIndex < totalQuestions - 1 ? (
-              <>
-                <button
-                  type="button"
-                  onClick={handleSubmit}
-                  disabled={submitting}
-                  title={isEnglish ? 'Submit your telemetry anytime' : 'Nộp bài bất cứ khi nào bạn muốn'}
-                  className={`p-2 sm:px-4 sm:py-2.5 rounded-xl sm:rounded-2xl text-xs sm:text-sm font-bold flex items-center space-x-1.5 transition border active:scale-95 disabled:opacity-40 ${
-                    isCosmic
-                      ? 'bg-slate-900/90 border-cyan-500/40 text-cyan-300 hover:bg-cyan-950/60 shadow-[0_0_10px_rgba(6,182,212,0.2)]'
-                      : isKids
-                      ? 'bg-emerald-50 border-emerald-300 text-emerald-700 hover:bg-emerald-100'
-                      : 'bg-emerald-50 border-emerald-300 text-emerald-700 hover:bg-emerald-100'
-                  }`}
-                >
-                  <Send className="w-3.5 h-3.5 text-emerald-500 dark:text-cyan-400" />
-                  <span className="hidden sm:inline">
-                    {isKids
-                      ? `Nộp bài ngay (${answeredCount}/${totalQuestions})`
-                      : isEnglish
-                      ? `Submit (${answeredCount}/${totalQuestions})`
-                      : `Nộp bài ngay (${answeredCount}/${totalQuestions})`}
-                  </span>
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => setCurrentIndex((prev) => Math.min(totalQuestions - 1, prev + 1))}
-                  className={`px-3 sm:px-6 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-base font-extrabold flex items-center space-x-2 transition shadow-sm active:scale-95 ${
-                    isCosmic
-                      ? 'bg-cyan-500 hover:bg-cyan-400 text-slate-950 shadow-[0_0_15px_rgba(6,182,212,0.5)]'
-                      : isKids
-                      ? 'bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 hover:from-pink-600 hover:to-rose-600 text-white shadow-[0_4px_0_#be185d] active:translate-y-1'
-                      : 'bg-blue-600 hover:bg-blue-700 text-white'
-                  }`}
-                >
-                  <span className="sm:hidden">{isEnglish ? 'Next' : 'Tiếp'}</span>
-                  <span className="hidden sm:inline">{isKids ? 'Next: Câu tiếp theo ➡️' : isEnglish ? 'Next Question' : 'Câu tiếp theo'}</span>
-                  <ChevronRight className="w-4 h-4" />
-                </button>
-              </>
-            ) : (
-              <button
-                type="button"
-                onClick={handleSubmit}
-                disabled={submitting}
-                className={`p-2.5 sm:px-6 sm:py-3 rounded-2xl text-xs sm:text-base font-extrabold flex items-center space-x-2 transition shadow-sm active:scale-95 disabled:opacity-50 ${
-                  isKids
-                    ? 'bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 text-white shadow-[0_4px_0_#0f766e] active:translate-y-1'
-                    : 'bg-emerald-600 hover:bg-emerald-500 text-white'
-                }`}
-              >
-                <span className="hidden sm:inline">
-                  {submitting
-                    ? isKids
-                      ? 'Đang nộp bài...'
-                      : isEnglish
-                      ? 'Transmitting...'
-                      : 'Đang nộp...'
-                    : isKids
-                    ? `Bé Nộp Bài! (${answeredCount}/${totalQuestions}) 🌟`
-                    : isEnglish
-                    ? `Submit Telemetry (${answeredCount}/${totalQuestions})`
-                    : `Hoàn tất & Nộp bài (${answeredCount}/${totalQuestions})`}
-                </span>
-                <Send className="w-4 h-4" />
-              </button>
-            )}
-          </div>
-        </div>
-      </footer>
 
       {/* 4. QUESTION DRAWER MODAL */}
       {showGridDrawer && (
@@ -1519,5 +1362,5 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
     </div>
   );
 
-  return isCosmic ? <SpaceBackground fitViewport={isParallelWorkbook}>{content}</SpaceBackground> : content;
+  return isCosmic ? <SpaceBackground fitViewport={true}>{content}</SpaceBackground> : content;
 }
