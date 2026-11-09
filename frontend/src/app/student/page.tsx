@@ -3,9 +3,15 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import dynamic from 'next/dynamic';
 import { api, getUser } from '@/lib/api';
 import { SpaceBackground } from '@/components/SpaceBackground';
 import { FormattedContent } from '@/components/KatexMath';
+
+const Wonderland3D = dynamic(
+  () => import('@/components/3d/Wonderland3D').then((mod) => mod.Wonderland3D),
+  { ssr: false }
+);
 import {
   Rocket,
   Clock,
@@ -818,8 +824,11 @@ export default function StudentDashboard() {
   // ==========================================
   if (isKids) {
     return (
-      <div className="min-h-screen bg-amber-50 text-slate-900 py-10 px-4">
-        <div className="max-w-4xl mx-auto">
+      <div className="min-h-screen bg-amber-50 text-slate-900 py-10 px-4 relative overflow-hidden">
+        {/* Three.js Wonderland 3D Interactive Mascot & Magical Sparkles */}
+        <Wonderland3D />
+
+        <div className="max-w-4xl mx-auto relative z-10">
           {/* Banner Công Chúa & Rồng Xanh */}
           <div className="rounded-3xl p-6 bg-pink-100 border-2 border-pink-300 shadow-xl flex flex-col sm:flex-row items-center gap-6 mb-8">
             <img
