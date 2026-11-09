@@ -31,18 +31,25 @@ export function KatexMath({ math, block = false, className = '' }: KatexMathProp
   );
 }
 
-// Helper to render markdown bold (**text**) and italic (*text*)
+// Helper to render markdown bold (**text**), inline code (`code`), and clean up stray tokens
 function renderMarkdownTokens(rawText: string): React.ReactNode {
   if (!rawText) return null;
-  // Match **bold** first
-  const parts = rawText.split(/(\*\*[^*]+\*\*)/g);
+  const parts = rawText.split(/(\*\*[^*]+\*\*|`[^`]+`)/g);
   return parts.map((part, i) => {
-    if (part.startsWith('**') && part.endsWith('**')) {
+    if (part.startsWith('**') && part.endsWith('**') && part.length > 4) {
       const inner = part.slice(2, -2);
       return (
         <strong key={i} className="font-bold text-cyan-200 drop-shadow-[0_0_8px_rgba(6,182,212,0.4)]">
           {inner}
         </strong>
+      );
+    }
+    if (part.startsWith('`') && part.endsWith('`') && part.length > 2) {
+      const inner = part.slice(1, -1);
+      return (
+        <code key={i} className="px-1.5 py-0.5 rounded bg-slate-800 text-cyan-300 font-mono text-xs">
+          {inner}
+        </code>
       );
     }
     return part;

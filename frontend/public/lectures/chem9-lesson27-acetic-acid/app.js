@@ -186,6 +186,25 @@ function initStarfield() {
   render();
 }
 
+// Global KaTeX renderer helper for chemical formulas & math
+function renderAllKaTeX(root = document.body) {
+  if (typeof renderMathInElement === 'function') {
+    try {
+      renderMathInElement(root, {
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '$', right: '$', display: false }
+        ],
+        throwOnError: false
+      });
+    } catch (err) {
+      console.warn('KaTeX render warning:', err);
+    }
+  } else {
+    setTimeout(() => renderAllKaTeX(root), 120);
+  }
+}
+
 // ==========================================
 // 3. REACTION BENCH SIMULATION DATA
 // ==========================================
@@ -331,14 +350,7 @@ function updateReactionView(key) {
   const eqEl = document.getElementById('reactionEquation');
   if (eqEl) {
     eqEl.innerHTML = `$$${r.equation}$$`;
-    if (window.renderMathInElement) {
-      window.renderMathInElement(eqEl, {
-        delimiters: [
-          { left: '$$', right: '$$', display: true },
-          { left: '$', right: '$', display: false }
-        ]
-      });
-    }
+    renderAllKaTeX(eqEl);
   }
 
   // Update phenomena list
@@ -350,28 +362,14 @@ function updateReactionView(key) {
         <span>${item}</span>
       </li>
     `).join('');
-    if (window.renderMathInElement) {
-      window.renderMathInElement(listEl, {
-        delimiters: [
-          { left: '$$', right: '$$', display: true },
-          { left: '$', right: '$', display: false }
-        ]
-      });
-    }
+    renderAllKaTeX(listEl);
   }
 
   // Update microscopic concept
   const microEl = document.getElementById('microConceptText');
   if (microEl) {
     microEl.innerHTML = r.microConcept;
-    if (window.renderMathInElement) {
-      window.renderMathInElement(microEl, {
-        delimiters: [
-          { left: '$$', right: '$$', display: true },
-          { left: '$', right: '$', display: false }
-        ]
-      });
-    }
+    renderAllKaTeX(microEl);
   }
 
   // Visual apparatus updates
@@ -610,7 +608,10 @@ function loadQuizQuestion(index) {
   const progressFill = document.getElementById('quizProgressFill');
   const nextBtn = document.getElementById('quizNextBtn');
 
-  if (qText) qText.textContent = `Question ${index + 1} of ${QUIZ_QUESTIONS.length}: ${qData.q}`;
+  if (qText) {
+    qText.innerHTML = `Question ${index + 1} of ${QUIZ_QUESTIONS.length}: ${qData.q}`;
+    renderAllKaTeX(qText);
+  }
   if (feedbackEl) {
     feedbackEl.className = 'quiz-feedback';
     feedbackEl.innerHTML = '';
@@ -632,6 +633,7 @@ function loadQuizQuestion(index) {
       btn.onclick = () => handleQuizAnswer(optIdx, btn);
       optContainer.appendChild(btn);
     });
+    renderAllKaTeX(optContainer);
   }
 }
 
@@ -656,6 +658,7 @@ function handleQuizAnswer(selectedIdx, btnElement) {
     if (feedbackEl) {
       feedbackEl.className = 'quiz-feedback show correct';
       feedbackEl.innerHTML = `<strong>✓ Correct!</strong> ${qData.exp}`;
+      renderAllKaTeX(feedbackEl);
     }
   } else {
     btnElement.classList.add('wrong');
@@ -663,6 +666,7 @@ function handleQuizAnswer(selectedIdx, btnElement) {
     if (feedbackEl) {
       feedbackEl.className = 'quiz-feedback show wrong';
       feedbackEl.innerHTML = `<strong>✗ Incorrect.</strong> The correct answer was <strong>${String.fromCharCode(65 + qData.correct)}</strong>. ${qData.exp}`;
+      renderAllKaTeX(feedbackEl);
     }
   }
 
@@ -729,7 +733,10 @@ document.addEventListener('DOMContentLoaded', () => {
       tab.classList.add('active');
       const targetSector = tab.dataset.sector;
       const pane = document.getElementById(targetSector);
-      if (pane) pane.classList.add('active');
+      if (pane) {
+        pane.classList.add('active');
+        renderAllKaTeX(pane);
+      }
       soundFX.playChime();
     });
   });
@@ -820,7 +827,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Initialize initial reaction view
+  // Initialize initial reaction view & KaTeX math rendering
   updateReactionView('litmus');
   loadQuizQuestion(0);
+  renderAllKaTeX();
+  window.addEventListener('load', () => renderAllKaTeX());
 });

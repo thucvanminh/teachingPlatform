@@ -92,7 +92,7 @@ export default function StudentDashboard() {
     setExpandedAssignmentId((prev) => (prev === assignmentId ? null : assignmentId));
   };
 
-  const handleOpenLecture = async (assignment: any) => {
+  const handleOpenLecture = async (assignment: any, mode: 'interactive' | 'briefing' = 'interactive') => {
     if (assignment && !assignment.lecture_viewed_at) {
       await api.markLectureViewed(assignment.id).catch(() => {});
       setAllAssignments((prev) =>
@@ -103,6 +103,8 @@ export default function StudentDashboard() {
       }
     }
 
+    setLectureViewMode(mode);
+
     const appMatch = assignment?.learning_units?.lecture_content_markdown?.match(/\/lectures\/[a-zA-Z0-9_\-\/]+\.html/);
     const interactiveUrl = appMatch ? appMatch[0] : (
       assignment?.learning_units?.title?.toLowerCase().includes('ôn tập thi giữa kì') ||
@@ -111,7 +113,7 @@ export default function StudentDashboard() {
         : null
     );
 
-    if (interactiveUrl) {
+    if (mode === 'interactive' && interactiveUrl) {
       window.open(interactiveUrl, '_blank');
       return;
     }
@@ -264,21 +266,25 @@ export default function StudentDashboard() {
                                   Flight Date: {dateLabel}
                                 </span>
                               )}
-                              <span className="text-xs text-slate-400">
-                                Progress: {gradedCount}/{totalAttempts} completed
-                              </span>
+                              {totalAttempts > 0 ? (
+                                <span className="text-xs text-slate-400">
+                                  Progress: {gradedCount}/{totalAttempts} completed
+                                </span>
+                              ) : (
+                                <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300">
+                                  Virtual Lab & Theory
+                                </span>
+                              )}
                             </div>
 
                             {/* Format rõ ràng */}
                             <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight break-words">
-                              <span>
-                                {dateLabel} : {title}
-                              </span>
+                              <span>{title}</span>
                             </h3>
 
                             {assignment.teacher_daily_note && (
                               <p className="text-xs text-amber-300/90 mt-1.5 italic line-clamp-1">
-                                💬 Tutor Note: "{assignment.teacher_daily_note}"
+                                💬 Note: "{assignment.teacher_daily_note}"
                               </p>
                             )}
                           </div>
@@ -293,7 +299,7 @@ export default function StudentDashboard() {
                                 : 'bg-slate-800 text-slate-300 hover:text-white border border-slate-700'
                             }`}
                           >
-                            <span>{isExpanded ? 'Active Sector (Collapse)' : 'Click to Open Mission & Practice'}</span>
+                            <span>{isExpanded ? 'Active Sector' : 'Open Mission'}</span>
                             {isExpanded ? (
                               <ChevronUp className="w-4 h-4 text-cyan-400" />
                             ) : (
@@ -317,10 +323,10 @@ export default function StudentDashboard() {
                               <div className="mt-4 px-4 py-3 rounded-2xl bg-cyan-950/60 border border-cyan-500/40 text-cyan-200 text-xs flex flex-wrap items-center justify-between gap-2 shadow-[0_0_15px_rgba(6,182,212,0.15)]">
                                 <span className="font-semibold flex items-center space-x-2">
                                   <span>🚀</span>
-                                  <span>Orbital Telemetry Briefing: Today is dedicated to mastering theory &amp; virtual laboratory simulation (No graded quiz pressure today).</span>
+                                  <span>Core Theory &amp; Virtual Lab Simulation</span>
                                 </span>
                                 <span className="text-[11px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-cyan-900 text-cyan-300 border border-cyan-500/50">
-                                  Theory &amp; Lab Simulation
+                                  Lab &amp; Theory
                                 </span>
                               </div>
                             )}
@@ -334,7 +340,7 @@ export default function StudentDashboard() {
                                   <div className="flex items-center justify-between mb-3">
                                     <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-cyan-950 border border-cyan-500/40 text-cyan-400 flex items-center space-x-1.5">
                                       <BookOpen className="w-3.5 h-3.5" />
-                                      <span>{hasInteractive ? 'Station 1: Orbital Live Studio & Telemetry' : 'Station 1: Flight Briefing'}</span>
+                                      <span>{hasInteractive ? 'Station 1: Virtual Lab' : 'Station 1: Core Briefing'}</span>
                                     </span>
                                     <div className="flex items-center space-x-2">
                                       {hasInteractive && interactiveUrl && (
@@ -356,7 +362,7 @@ export default function StudentDashboard() {
                                             : 'bg-amber-950 text-amber-400 border border-amber-500/30'
                                         }`}
                                       >
-                                        {assignment.lecture_viewed_at ? '✓ Briefing Reviewed' : 'Pending Review'}
+                                        {assignment.lecture_viewed_at ? '✓ Reviewed' : 'Pending'}
                                       </span>
                                     </div>
                                   </div>
@@ -375,35 +381,33 @@ export default function StudentDashboard() {
                                     <>
                                       <button
                                         onClick={() => {
-                                          setLectureViewMode('interactive');
-                                          handleOpenLecture(assignment);
+                                          handleOpenLecture(assignment, 'interactive');
                                         }}
-                                        className="flex-1 min-w-[200px] py-2.5 px-4 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white text-sm font-semibold flex items-center justify-center space-x-2 transition shadow-[0_0_15px_rgba(6,182,212,0.3)]"
+                                        className="flex-1 min-w-[180px] py-2.5 px-4 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white text-sm font-semibold flex items-center justify-center space-x-2 transition shadow-[0_0_15px_rgba(6,182,212,0.3)]"
                                       >
                                         <Sparkles className="w-4 h-4 text-cyan-200" />
-                                        <span>Launch Interactive Live Studio</span>
+                                        <span>Launch Virtual Lab</span>
                                       </button>
                                       <button
                                         onClick={() => {
-                                          setLectureViewMode('briefing');
-                                          handleOpenLecture(assignment);
+                                          handleOpenLecture(assignment, 'briefing');
                                         }}
                                         className="py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 border border-cyan-500/40 text-cyan-300 text-sm font-semibold flex items-center justify-center space-x-2 transition shadow"
                                       >
                                         <BookOpen className="w-4 h-4 text-cyan-400" />
-                                        <span>Read Briefing Doc</span>
+                                        <span>Core Briefing</span>
                                       </button>
                                     </>
                                   ) : (
                                     <button
-                                      onClick={() => handleOpenLecture(assignment)}
+                                      onClick={() => handleOpenLecture(assignment, 'briefing')}
                                       className="w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 border border-cyan-500/40 text-cyan-300 text-sm font-semibold flex items-center justify-center space-x-2 transition shadow"
                                     >
                                       <BookOpen className="w-4 h-4 text-cyan-400" />
                                       <span>
                                         {assignment.lecture_viewed_at
-                                          ? 'Re-open Flight Briefing & KaTeX'
-                                          : 'Read Flight Briefing & KaTeX Rules'}
+                                          ? 'Core Briefing'
+                                          : 'Read Core Briefing'}
                                       </span>
                                     </button>
                                   )}
