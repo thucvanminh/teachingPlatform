@@ -88,7 +88,7 @@ async function main() {
       prompt: 'Chú Rồng Xanh ngoan ngoãn mang về tặng Bé An **1** giỏ táo thần kỳ. Trong giỏ có đúng **8** quả táo đỏ mọng phát sáng. Hỏi Bé An có tất cả bao nhiêu quả táo thần?\n\n*Phép tính: $8 \\times 1 = ?$*',
       options: [
         { id: 'A', text: '6 quả táo' },
-        { id: 'B', text: '8 quả táo 🍎' },
+        { id: 'B', text: '8 quả táo' },
         { id: 'C', text: '10 quả táo' },
         { id: 'D', text: '16 quả táo' },
       ],
@@ -103,7 +103,7 @@ async function main() {
       prompt: 'Ở Xứ Sở Kẹo Ngọt, Công chúa nướng bánh quy gừng thơm phức xếp vào **2** chiếc đĩa thần kỳ. Mỗi chiếc đĩa có đúng **8** chiếc bánh quy. Hỏi Công chúa đã nướng tất cả bao nhiêu chiếc bánh quy gừng?\n\n*Phép tính: $8 \\times 2 = 8 + 8 = ?$*',
       options: [
         { id: 'A', text: '14 chiếc bánh' },
-        { id: 'B', text: '16 chiếc bánh 🍪' },
+        { id: 'B', text: '16 chiếc bánh' },
         { id: 'C', text: '18 chiếc bánh' },
         { id: 'D', text: '20 chiếc bánh' },
       ],
@@ -117,7 +117,7 @@ async function main() {
       imageAlt: 'Khu rừng nấm thần tiên lấp lánh',
       prompt: 'Chú Rồng Xanh bay vào Khu Rừng Thần Tiên và phát hiện **3** khóm nấm phát sáng bảy màu. Mỗi khóm nấm có đúng **8** cây nấm lung linh. Hỏi có tất cả bao nhiêu cây nấm phát sáng trong khu rừng?\n\n*Phép tính: $8 \\times 3 = ?$*',
       options: [
-        { id: 'A', text: '24 cây nấm 🍄' },
+        { id: 'A', text: '24 cây nấm' },
         { id: 'B', text: '21 cây nấm' },
         { id: 'C', text: '26 cây nấm' },
         { id: 'D', text: '18 cây nấm' },
@@ -133,7 +133,7 @@ async function main() {
       prompt: 'Bé An hái kẹo mút cầu vồng và bó thành **4** bó kẹo thật xinh xắn. Mỗi bó kẹo có đúng **8** chiếc kẹo ngọt ngào. Hỏi Bé An có tất cả bao nhiêu chiếc kẹo mút cầu vồng?\n\n*Phép tính: $8 \\times 4 = ?$*',
       options: [
         { id: 'A', text: '30 chiếc kẹo' },
-        { id: 'B', text: '32 chiếc kẹo 🍭' },
+        { id: 'B', text: '32 chiếc kẹo' },
         { id: 'C', text: '34 chiếc kẹo' },
         { id: 'D', text: '36 chiếc kẹo' },
       ],
@@ -148,7 +148,7 @@ async function main() {
       prompt: 'Chú Rồng Xanh tìm thấy **5** chiếc rương kho báu vàng lấp lánh. Trong mỗi chiếc rương có đúng **8** viên ngọc rồng tỏa sáng. Hỏi Chú Rồng Xanh có tất cả bao nhiêu viên ngọc rồng?\n\n*Phép tính: $8 \\times 5 = ?$*',
       options: [
         { id: 'A', text: '35 viên ngọc' },
-        { id: 'B', text: '40 viên ngọc 💎' },
+        { id: 'B', text: '40 viên ngọc' },
         { id: 'C', text: '45 viên ngọc' },
         { id: 'D', text: '48 viên ngọc' },
       ],
@@ -164,7 +164,7 @@ async function main() {
       options: [
         { id: 'A', text: '20 viên' },
         { id: 'B', text: '22 viên' },
-        { id: 'C', text: '24 viên ngọc trai 🐚' },
+        { id: 'C', text: '24 viên ngọc trai' },
         { id: 'D', text: '26 viên' },
       ],
       correct_option_id: 'C',
@@ -181,7 +181,7 @@ async function main() {
       options: [
         { id: 'A', text: '42 chú ong' },
         { id: 'B', text: '46 chú ong' },
-        { id: 'C', text: '48 chú ong 🐝' },
+        { id: 'C', text: '48 chú ong' },
         { id: 'D', text: '54 chú ong' },
       ],
       correct_option_id: 'C',
@@ -195,7 +195,7 @@ async function main() {
       prompt: 'Để mở cánh cổng đá bước vào lâu đài pha lê, Chú Rồng Xanh cần nhập mật mã là kết quả của phép tính $8 \\times 7$. Bé An hãy giúp Rồng Xanh chọn mật mã chính xác nhé!\n\n*Phép tính: $8 \\times 7 = ?$*',
       options: [
         { id: 'A', text: '54' },
-        { id: 'B', text: '56 ✨' },
+        { id: 'B', text: '56' },
         { id: 'C', text: '58' },
         { id: 'D', text: '64' },
       ],
@@ -211,7 +211,7 @@ async function main() {
       options: [
         { id: 'A', text: '60 thành viên' },
         { id: 'B', text: '62 thành viên' },
-        { id: 'C', text: '64 thành viên 🐬' },
+        { id: 'C', text: '64 thành viên' },
         { id: 'D', text: '72 thành viên' },
       ],
       correct_option_id: 'C',
@@ -225,7 +225,7 @@ async function main() {
       prompt: 'Chú đại bàng dũng cảm bay qua **9** ngọn núi tuyết hùng vĩ. Ở mỗi ngọn núi, đại bàng tìm thấy **8** viên đá pha lê băng giá lấp lánh. Hỏi đại bàng đã thu thập được tất cả bao nhiêu viên đá pha lê?\n\n*Phép tính: $8 \\times 9 = ?$*',
       options: [
         { id: 'A', text: '70 viên pha lê' },
-        { id: 'B', text: '72 viên pha lê ❄️' },
+        { id: 'B', text: '72 viên pha lê' },
         { id: 'C', text: '74 viên pha lê' },
         { id: 'D', text: '81 viên pha lê' },
       ],
@@ -239,7 +239,7 @@ async function main() {
       imageAlt: 'Vương miện vàng hoàng gia và tiệc mừng',
       prompt: 'Để chúc mừng Bé An học giỏi, Công chúa chuẩn bị **10** bàn tiệc hoàng gia. Mỗi bàn tiệc có **8** ly kem dâu mát lạnh. Hỏi có tất cả bao nhiêu ly kem dâu trên các bàn tiệc?\n\n*Phép tính: $8 \\times 10 = ?$*',
       options: [
-        { id: 'A', text: '80 ly kem 🍨' },
+        { id: 'A', text: '80 ly kem' },
         { id: 'B', text: '88 ly kem' },
         { id: 'C', text: '90 ly kem' },
         { id: 'D', text: '100 ly kem' },
@@ -255,7 +255,7 @@ async function main() {
       prompt: 'Tại Đồi Kem 7 Màu, Công chúa đố Bé An so sánh hai đĩa kem thần kỳ:\n\nĐĩa A có: $8 \\times 7$ viên kem.\nĐĩa B có: $8 \\times 8$ viên kem.\n\nBé An hãy chọn dấu thích hợp điền vào ô trống: $8 \\times 7 \\quad [\\;?\\;] \\quad 8 \\times 8$',
       options: [
         { id: 'A', text: '>' },
-        { id: 'B', text: '< 🍦' },
+        { id: 'B', text: '<' },
         { id: 'C', text: '=' },
         { id: 'D', text: 'Không so sánh được' },
       ],
@@ -272,7 +272,7 @@ async function main() {
       prompt: '📖 **Bí kíp toán học:** Cuốn sách phép thuật mở ra câu đố: Phép cộng các số giống nhau dưới đây:\n\n$$8 + 8 + 8 + 8$$\n\nĐược viết gọn lại thành phép nhân nào dưới đây nhỉ?',
       options: [
         { id: 'A', text: '8 × 3' },
-        { id: 'B', text: '8 × 4 🌟' },
+        { id: 'B', text: '8 × 4' },
         { id: 'C', text: '8 × 5' },
         { id: 'D', text: '4 × 4' },
       ],
@@ -287,7 +287,7 @@ async function main() {
       prompt: 'Bác thỏ lái xe kéo chở **6** khay bánh quy, mỗi khay có đúng **8** chiếc bánh thơm ngon:\n\n$$8 + 8 + 8 + 8 + 8 + 8$$\n\nPhép cộng 6 số 8 này tương ứng với phép nhân nào và có kết quả bằng bao nhiêu?',
       options: [
         { id: 'A', text: '8 × 5 = 40' },
-        { id: 'B', text: '8 × 6 = 48 🍪' },
+        { id: 'B', text: '8 × 6 = 48' },
         { id: 'C', text: '8 × 7 = 56' },
         { id: 'D', text: '6 × 6 = 36' },
       ],
@@ -303,7 +303,7 @@ async function main() {
       options: [
         { id: 'A', text: '36' },
         { id: 'B', text: '38' },
-        { id: 'C', text: '40 ⭐' },
+        { id: 'C', text: '40' },
         { id: 'D', text: '44' },
       ],
       correct_option_id: 'C',
@@ -317,7 +317,7 @@ async function main() {
       prompt: '🍭 **Con đường kẹo ngọt:** Bé An đi qua các cột mốc số may mắn trên con đường kẹo:\n\n$$48, \\quad 56, \\quad 64, \\quad [\\;?\\;], \\quad 80$$\n\nSố còn thiếu trong ô trống là số nào để hoàn thành con đường phép thuật?',
       options: [
         { id: 'A', text: '70' },
-        { id: 'B', text: '72 🍬' },
+        { id: 'B', text: '72' },
         { id: 'C', text: '74' },
         { id: 'D', text: '76' },
       ],
@@ -333,7 +333,7 @@ async function main() {
       options: [
         { id: 'A', text: '8 × 5 lớn hơn' },
         { id: 'B', text: '5 × 8 lớn hơn' },
-        { id: 'C', text: 'Bằng nhau và đều bằng 40 🎯' },
+        { id: 'C', text: 'Bằng nhau và đều bằng 40' },
         { id: 'D', text: 'Khác nhau hoàn toàn' },
       ],
       correct_option_id: 'C',
@@ -346,7 +346,7 @@ async function main() {
       imageAlt: 'Rồng Xanh bay lượn trên bầu trời',
       prompt: '🐉 Khi Chú Rồng Xanh bay lượn trên trời mây, chú đố Bé An: "Phép nhân $8 \\times 3$ có kết quả giống hệt phép tính nào sau đây?"',
       options: [
-        { id: 'A', text: '3 × 8 🌈' },
+        { id: 'A', text: '3 × 8' },
         { id: 'B', text: '8 + 3' },
         { id: 'C', text: '8 - 3' },
         { id: 'D', text: '3 + 3 + 3' },
@@ -364,7 +364,7 @@ async function main() {
       prompt: 'Trên Dòng Sông Sô-Cô-La, có **8** chiếc thuyền lá trôi lững lờ. Trên mỗi chiếc thuyền có **7** bạn sóc nhỏ đang chèo thuyền ngắm cảnh. Hỏi có tất cả bao nhiêu bạn sóc nhỏ trên dòng sông?\n\n*Phép tính: $8 \\times 7 = ?$*',
       options: [
         { id: 'A', text: '54 bạn sóc' },
-        { id: 'B', text: '56 bạn sóc 🐿️' },
+        { id: 'B', text: '56 bạn sóc' },
         { id: 'C', text: '58 bạn sóc' },
         { id: 'D', text: '60 bạn sóc' },
       ],
@@ -380,7 +380,7 @@ async function main() {
       options: [
         { id: 'A', text: '68 cành' },
         { id: 'B', text: '70 cành' },
-        { id: 'C', text: '72 cành củi 🔥' },
+        { id: 'C', text: '72 cành củi' },
         { id: 'D', text: '76 cành' },
       ],
       correct_option_id: 'C',
@@ -394,7 +394,7 @@ async function main() {
       prompt: '🚪 Trên Cánh Cửa Vàng dẫn vào kho báu có khắc câu đố mở khóa:\n\n$$8 \\times x = 48$$\n\nBé An hãy tìm xem số $x$ là số mấy để chiếc khóa vàng mở ra nhé!',
       options: [
         { id: 'A', text: 'x = 5' },
-        { id: 'B', text: 'x = 6 🗝️' },
+        { id: 'B', text: 'x = 6' },
         { id: 'C', text: 'x = 7' },
         { id: 'D', text: 'x = 8' },
       ],
@@ -409,7 +409,7 @@ async function main() {
       prompt: '💧 Dưới mặt Hồ Nước Pha Lê hiện lên dòng mật mã kỳ diệu:\n\n$$8 \\times y = 32$$\n\nBé An hãy chọn giá trị đúng của $y$ để hồ nước tỏa sáng lấp lánh nhé!',
       options: [
         { id: 'A', text: 'y = 3' },
-        { id: 'B', text: 'y = 4 💎' },
+        { id: 'B', text: 'y = 4' },
         { id: 'C', text: 'y = 5' },
         { id: 'D', text: 'y = 6' },
       ],
@@ -425,7 +425,7 @@ async function main() {
       options: [
         { id: 'A', text: '60 kg' },
         { id: 'B', text: '62 kg' },
-        { id: 'C', text: '64 kg 🐉' },
+        { id: 'C', text: '64 kg' },
         { id: 'D', text: '70 kg' },
       ],
       correct_option_id: 'C',
@@ -439,7 +439,7 @@ async function main() {
       prompt: '🏆 **Thử thách trùm cuối về đích:** Bé An đã hoàn thành xuất sắc chuyến phiêu lưu! Nàng tiên cá tặng Bé An **8** hộp ngọc bích, mỗi hộp chứa đúng **10** viên ngọc lấp lánh. Hỏi Bé An nhận được tất cả bao nhiêu viên ngọc bích?\n\n*Phép tính: $8 \\times 10 = ?$*',
       options: [
         { id: 'A', text: '70 viên' },
-        { id: 'B', text: '80 viên ngọc bích 🌟' },
+        { id: 'B', text: '80 viên ngọc bích' },
         { id: 'C', text: '88 viên' },
         { id: 'D', text: '90 viên' },
       ],
