@@ -138,6 +138,15 @@
               <span class="fc-progress-counter" id="fcProgressCounter">Thẻ 1 / 24</span>
             </div>
             <div class="fc-deck-actions-top">
+              <button type="button" class="fc-btn-sm fc-btn-fullscreen" id="fcFullscreenBtn" title="Bật/Tắt chế độ Toàn màn hình tập trung (Phím F)">
+                <span>⛶</span> Toàn màn hình
+              </button>
+              <button type="button" class="fc-btn-sm fc-btn-newtab" id="fcNewTabBtn" title="Mở phòng flashcard trong tab riêng">
+                <span>↗</span> Mở tab riêng
+              </button>
+              <button type="button" class="fc-exit-fullscreen-btn" id="fcExitFullscreenBtn" title="Thoát chế độ toàn màn hình (Phím Esc)">
+                <span>✕</span> Thoát toàn màn hình
+              </button>
               <button type="button" class="fc-btn-sm" id="fcShuffleBtn" title="Xáo trộn thứ tự các thẻ (Phím S)">
                 <span>🔀</span> Xáo trộn
               </button>
@@ -180,11 +189,26 @@
           <!-- Keyboard Guide Tooltip -->
           <div class="fc-keyboard-guide">
             <span>⌨️ Phím tắt:</span>
-            <kbd>Space</kbd> Lật thẻ &nbsp;•&nbsp; 
-            <kbd>←</kbd> <kbd>→</kbd> Chuyển thẻ &nbsp;•&nbsp; 
-            <kbd>P</kbd> Phát âm &nbsp;•&nbsp; 
-            <kbd>1</kbd> Anh ➔ Việt &nbsp;•&nbsp; 
+            <kbd>Space</kbd> Lật thẻ &nbsp;•&nbsp;
+            <kbd>←</kbd> <kbd>→</kbd> Chuyển thẻ &nbsp;•&nbsp;
+            <kbd>P</kbd> Phát âm &nbsp;•&nbsp;
+            <kbd>F</kbd> Toàn màn hình &nbsp;•&nbsp;
+            <kbd>Esc</kbd> Thoát &nbsp;•&nbsp;
+            <kbd>1</kbd> Anh ➔ Việt &nbsp;•&nbsp;
             <kbd>2</kbd> Việt ➔ Anh
+          </div>
+        </div>
+
+        <!-- Floating quick helper when scrolled into flashcard view -->
+        <div class="fc-floating-bar" id="fcFloatingBar">
+          <div class="fc-floating-inner">
+            <span class="fc-floating-label">⚡ Flashcards 3D:</span>
+            <button type="button" class="fc-floating-btn primary" id="fcFloatFullscreenBtn" title="Xem chế độ toàn màn hình không phân tâm">
+              <span>⛶</span> Toàn màn hình
+            </button>
+            <button type="button" class="fc-floating-btn" id="fcFloatNewTabBtn" title="Mở flashcard sang tab riêng biệt">
+              <span>↗</span> Mở tab riêng
+            </button>
           </div>
         </div>
 
