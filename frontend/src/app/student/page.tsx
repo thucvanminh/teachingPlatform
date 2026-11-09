@@ -272,7 +272,7 @@ export default function StudentDashboard() {
                                 </span>
                               ) : (
                                 <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300">
-                                  Virtual Lab & Theory
+                                  3D Virtual Lab & Theory
                                 </span>
                               )}
                             </div>
@@ -340,7 +340,7 @@ export default function StudentDashboard() {
                                   <div className="flex items-center justify-between mb-3">
                                     <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-cyan-950 border border-cyan-500/40 text-cyan-400 flex items-center space-x-1.5">
                                       <BookOpen className="w-3.5 h-3.5" />
-                                      <span>{hasInteractive ? 'Station 1: Virtual Lab' : 'Station 1: Core Briefing'}</span>
+                                      <span>{hasInteractive ? 'Station 1: 3D Virtual Lab' : 'Station 1: Core Briefing'}</span>
                                     </span>
                                     <div className="flex items-center space-x-2">
                                       {hasInteractive && interactiveUrl && (
