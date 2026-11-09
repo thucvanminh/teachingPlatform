@@ -1084,14 +1084,108 @@
       gridCards?.querySelectorAll('.fc-item-card').forEach(c => c.classList.remove('flipped'));
     });
 
+    // Fullscreen and Standalone Tab Controls
+    const fullscreenBtn = document.getElementById('fcFullscreenBtn');
+    const newTabBtn = document.getElementById('fcNewTabBtn');
+    const exitFullscreenBtn = document.getElementById('fcExitFullscreenBtn');
+    const floatFullscreenBtn = document.getElementById('fcFloatFullscreenBtn');
+    const floatNewTabBtn = document.getElementById('fcFloatNewTabBtn');
+    const floatingBar = document.getElementById('fcFloatingBar');
+
+    function toggleFullscreen(forceState) {
+      const isCurrentlyFullscreen = deckContainer.classList.contains('is-fullscreen');
+      const targetState = typeof forceState === 'boolean' ? forceState : !isCurrentlyFullscreen;
+
+      if (targetState) {
+        deckContainer.classList.add('is-fullscreen');
+        document.body.classList.add('fc-body-locked');
+        if (fullscreenBtn) {
+          fullscreenBtn.innerHTML = '<span>✕</span> Thoát toàn màn hình';
+          fullscreenBtn.classList.add('active');
+        }
+        if (floatFullscreenBtn) {
+          floatFullscreenBtn.innerHTML = '<span>✕</span> Thoát F';
+        }
+        // Try HTML5 Fullscreen API if available
+        if (!document.fullscreenElement && deckContainer.requestFullscreen) {
+          deckContainer.requestFullscreen().catch(() => {});
+        }
+      } else {
+        deckContainer.classList.remove('is-fullscreen');
+        document.body.classList.remove('fc-body-locked');
+        if (fullscreenBtn) {
+          fullscreenBtn.innerHTML = '<span>⛶</span> Toàn màn hình';
+          fullscreenBtn.classList.remove('active');
+        }
+        if (floatFullscreenBtn) {
+          floatFullscreenBtn.innerHTML = '<span>⛶</span> Toàn màn hình';
+        }
+        if (document.fullscreenElement && document.exitFullscreen) {
+          document.exitFullscreen().catch(() => {});
+        }
+      }
+    }
+
+    function openFlashcardTab() {
+      const currentUrl = new URL(window.location.href);
+      currentUrl.searchParams.set('fullscreen', '1');
+      currentUrl.hash = '#tab-flashcards';
+      window.open(currentUrl.toString(), '_blank');
+    }
+
+    fullscreenBtn?.addEventListener('click', () => toggleFullscreen());
+    exitFullscreenBtn?.addEventListener('click', () => toggleFullscreen(false));
+    newTabBtn?.addEventListener('click', openFlashcardTab);
+    floatFullscreenBtn?.addEventListener('click', () => toggleFullscreen());
+    floatNewTabBtn?.addEventListener('click', openFlashcardTab);
+
+    // Sync when user exits browser native fullscreen (e.g. via ESC)
+    document.addEventListener('fullscreenchange', () => {
+      if (!document.fullscreenElement && deckContainer.classList.contains('is-fullscreen')) {
+        toggleFullscreen(false);
+      }
+    });
+
+    // Auto-enter fullscreen if URL parameter has ?fullscreen=1
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('fullscreen') === '1') {
+      const fcTabBtn = document.querySelector('[data-tab="tab-flashcards"]');
+      if (fcTabBtn) fcTabBtn.click();
+      setTimeout(() => {
+        toggleFullscreen(true);
+      }, 350);
+    }
+
+    // Scroll Detection via IntersectionObserver for Floating Bar
+    if (floatingBar && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !deckContainer.classList.contains('is-fullscreen')) {
+            floatingBar.classList.add('visible');
+          } else {
+            floatingBar.classList.remove('visible');
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -10% 0px'
+      });
+
+      const targetSection = document.getElementById('tab-flashcards') || deckContainer;
+      if (targetSection) observer.observe(targetSection);
+    }
+
     // Keyboard Shortcuts
     window.addEventListener('keydown', (e) => {
       // Don't trigger if user is typing in an input or textarea
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
 
-      // Only handle if Flashcards tab is visible
+      // Only handle if Flashcards tab is visible or in fullscreen
       const flashcardTab = document.getElementById('tab-flashcards');
-      if (!flashcardTab || !flashcardTab.classList.contains('active')) return;
+      const isFcTabActive = flashcardTab && flashcardTab.classList.contains('active');
+      const isFcFullscreen = deckContainer.classList.contains('is-fullscreen');
+
+      if (!isFcTabActive && !isFcFullscreen) return;
 
       if (e.code === 'Space') {
         e.preventDefault();
@@ -1105,6 +1199,12 @@
       } else if (e.code === 'KeyP' || e.code === 'KeyA') {
         e.preventDefault();
         speakCurrentCard();
+      } else if (e.code === 'KeyF') {
+        e.preventDefault();
+        toggleFullscreen();
+      } else if (e.code === 'Escape' && isFcFullscreen) {
+        e.preventDefault();
+        toggleFullscreen(false);
       } else if (e.code === 'Digit1') {
         btnModeEnVi?.click();
       } else if (e.code === 'Digit2') {

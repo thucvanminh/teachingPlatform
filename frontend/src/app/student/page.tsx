@@ -1479,16 +1479,28 @@ export default function StudentDashboard() {
 
                   <div className="flex items-center gap-2 flex-shrink-0">
                     {hasInteractive && interactiveUrl && (
-                      <a
-                        href={interactiveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white text-slate-700 hover:text-blue-600 hover:border-blue-300 text-xs font-semibold border border-slate-200 shadow-2xs transition"
-                        title="Mở toàn màn hình trong tab mới"
-                      >
-                        <span>Mở toàn màn hình</span>
-                        <ExternalLink className="w-3.5 h-3.5" />
-                      </a>
+                      <>
+                        <a
+                          href={`${interactiveUrl}?fullscreen=1#tab-flashcards`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-800 text-xs font-bold border border-blue-200 shadow-2xs transition"
+                          title="Mở riêng phòng Flashcards toàn màn hình"
+                        >
+                          <span>⚡ Flashcard Toàn màn hình</span>
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                        <a
+                          href={interactiveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white text-slate-700 hover:text-blue-600 hover:border-blue-300 text-xs font-semibold border border-slate-200 shadow-2xs transition"
+                          title="Mở toàn bộ phòng học trong tab mới"
+                        >
+                          <span>Mở tab mới</span>
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                      </>
                     )}
                     <button
                       onClick={() => setActiveLectureAssignment(null)}
@@ -1525,11 +1537,12 @@ export default function StudentDashboard() {
                   <div className="text-xs text-slate-500 flex items-center gap-3">
                     {hasInteractive ? (
                       <div className="flex flex-wrap items-center gap-2 text-slate-500 text-[11px]">
-                        <span className="font-semibold text-slate-600">Phím tắt nhanh:</span>
+                        <span className="font-semibold text-slate-600">Phím tắt:</span>
                         <span className="font-mono bg-slate-100 px-1.5 py-0.5 rounded border border-slate-200 text-slate-700">Space: Lật thẻ</span>
-                        <span className="font-mono bg-slate-100 px-1.5 py-0.5 rounded border border-slate-200 text-slate-700">← / →: Chuyển từ</span>
+                        <span className="font-mono bg-slate-100 px-1.5 py-0.5 rounded border border-slate-200 text-slate-700">← / →: Chuyển</span>
                         <span className="font-mono bg-slate-100 px-1.5 py-0.5 rounded border border-slate-200 text-slate-700">P: Phát âm</span>
-                        <span className="font-mono bg-slate-100 px-1.5 py-0.5 rounded border border-slate-200 text-slate-700">1 / 2: Đổi chiều</span>
+                        <span className="font-mono bg-slate-100 px-1.5 py-0.5 rounded border border-slate-200 text-slate-700">F: Toàn màn hình</span>
+                        <span className="font-mono bg-slate-100 px-1.5 py-0.5 rounded border border-slate-200 text-slate-700">Esc: Thoát</span>
                       </div>
                     ) : (
                       <span className="font-medium text-slate-600">Thầy Thức chúc bạn học tốt! Nắm chắc từ vựng & cấu trúc ngữ pháp.</span>
