@@ -282,6 +282,149 @@ body {
 .tag.rose { background: rgba(136, 19, 55, 0.8); color: var(--rose-glow); border: 1px solid rgba(244, 63, 94, 0.4); }
 .tag.purple { background: rgba(88, 28, 135, 0.8); color: var(--purple-glow); border: 1px solid rgba(168, 85, 247, 0.4); }
 
+/* ================= THREE.JS 3D MOLECULE VIEWER ================= */
+.molecule-3d-wrapper {
+  background: radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.95) 0%, rgba(8, 13, 26, 0.98) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 1.25rem;
+  padding: 0.85rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.molecule-3d-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.model-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--cyan-glow);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.model-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.tool-btn {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 0.5rem;
+  color: #cbd5e1;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.35rem 0.65rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.tool-btn:hover {
+  background: rgba(56, 189, 248, 0.2);
+  color: #fff;
+  border-color: var(--cyan-glow);
+}
+
+.tool-btn.active {
+  background: rgba(8, 47, 73, 0.9);
+  color: var(--cyan-glow);
+  border-color: var(--cyan-glow);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+.molecule-3d-container {
+  width: 100%;
+  height: 320px;
+  position: relative;
+  border-radius: 0.85rem;
+  cursor: grab;
+  overflow: hidden;
+}
+
+.molecule-3d-container:active {
+  cursor: grabbing;
+}
+
+.molecule-3d-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  outline: none;
+}
+
+.atom-3d-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid var(--cyan-glow);
+  border-radius: 0.6rem;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.75rem;
+  color: #fff;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 0 0 10px rgba(56, 189, 248, 0.3);
+  transform: translate(-50%, -125%);
+  transition: opacity 0.15s ease;
+  opacity: 0;
+  z-index: 20;
+  white-space: nowrap;
+}
+
+.atom-3d-tooltip.show {
+  opacity: 1;
+}
+
+.canvas-hint {
+  position: absolute;
+  bottom: 0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  padding: 0.25rem 0.85rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #94a3b8;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.header-badge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.molar-mass-badge {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--cyan-glow);
+  background: rgba(8, 47, 73, 0.6);
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.4rem;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
 /* ================= SVG MOLECULE DISPLAY ================= */
 .molecule-display-box {
   background: rgba(8, 13, 26, 0.85);

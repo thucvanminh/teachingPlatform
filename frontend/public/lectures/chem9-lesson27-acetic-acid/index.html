@@ -9,7 +9,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
-  
+
+  <!-- Three.js & OrbitControls for Interactive 3D Molecular Simulation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -73,129 +77,134 @@
       <!-- ============================================== -->
       <section id="sector1" class="sector-pane active">
         <div class="pane-grid">
-          <!-- Left: Interactive Ball-and-Stick Structural Model -->
+          <!-- Left: 3D WebGL Three.js Molecule Viewer -->
           <div class="card glass-card">
             <div class="card-header">
-              <span class="tag cyan">Molecular Blueprint</span>
-              <h3>Acetic Acid Molecule: The Carboxyl Functional Group (-COOH)</h3>
+              <div class="header-badge-row">
+                <span class="tag cyan">Three.js 3D Blueprint</span>
+                <span class="molar-mass-badge">$M = 60\text{ g/mol}$</span>
+              </div>
+              <h3>Acetic Acid ($\text{CH}_3\text{COOH}$) • 3D Carboxyl Structure</h3>
             </div>
             <p class="card-desc">
-              Acetic acid has the molecular formula <strong>$\text{C}_2\text{H}_4\text{O}_2$</strong> (Molar Mass: $60\text{ g/mol}$) and condensed structural formula <strong>$\text{CH}_3-\text{COOH}$</strong> (or $\text{CH}_3\text{COOH}$).
+              Formula: <strong>$\text{C}_2\text{H}_4\text{O}_2$</strong> • Structural: <strong>$\text{CH}_3-\text{COOH}$</strong> • Active: <strong>$-\text{COOH}$</strong>
             </p>
 
-            <div class="molecule-display-box">
-              <svg id="moleculeSvg" viewBox="0 0 480 240" class="molecule-svg">
-                <!-- Bonds -->
-                <!-- C1 to C2 -->
-                <line x1="100" y1="120" x2="220" y2="120" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" />
-                
-                <!-- C2 to Carbonyl Oxygen (Double bond) -->
-                <line x1="216" y1="112" x2="286" y2="52" stroke="#f43f5e" stroke-width="3" stroke-linecap="round" />
-                <line x1="226" y1="124" x2="296" y2="64" stroke="#f43f5e" stroke-width="3" stroke-linecap="round" />
-                
-                <!-- C2 to Hydroxyl Oxygen (Single bond) -->
-                <line x1="220" y1="120" x2="310" y2="180" stroke="#f43f5e" stroke-width="4" stroke-linecap="round" />
-                
-                <!-- Hydroxyl O to Acidic H (Single bond) -->
-                <line x1="310" y1="180" x2="400" y2="180" stroke="#f43f5e" stroke-width="3.5" stroke-linecap="round" />
+            <div class="molecule-3d-wrapper">
+              <div class="molecule-3d-toolbar">
+                <div class="model-badge">
+                  <span class="pulse-dot"></span>
+                  <span>WebGL 3D Ball &amp; Stick</span>
+                </div>
+                <div class="model-actions">
+                  <button id="toggle3dRotateBtn" class="tool-btn active" title="Toggle Auto-Rotation">🔄 Rotate</button>
+                  <button id="reset3dViewBtn" class="tool-btn" title="Reset Camera View">🎯 Reset</button>
+                  <button id="toggle2d3dBtn" class="tool-btn" title="Toggle 2D/3D Mode">📐 2D / 3D</button>
+                </div>
+              </div>
 
-                <!-- Vertical C1-H bonds -->
-                <line x1="100" y1="120" x2="100" y2="40" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
-                <line x1="100" y1="120" x2="100" y2="200" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
-                <line x1="100" y1="120" x2="35" y2="120" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+              <!-- 3D Canvas Container -->
+              <div id="molecule3dCanvasContainer" class="molecule-3d-container">
+                <div id="atomTooltip" class="atom-3d-tooltip"></div>
+                <div class="canvas-hint">Drag to rotate 360° • Scroll to zoom • Hover atom</div>
+              </div>
 
-                <!-- Carboxyl Group Pulsing Halo -->
-                <ellipse cx="320" cy="125" rx="130" ry="85" fill="rgba(244, 63, 94, 0.12)" stroke="#f43f5e" stroke-dasharray="6,4" stroke-width="2" class="halo-pulse" />
-                <text x="320" y="25" fill="#f43f5e" font-size="12" font-weight="bold" text-anchor="middle" letter-spacing="1">CARBOXYL FUNCTIONAL GROUP (-COOH)</text>
+              <!-- 2D SVG Fallback/Toggle Container -->
+              <div id="moleculeSvgContainer" class="molecule-display-box" style="display: none; margin-bottom: 0;">
+                <svg id="moleculeSvg" viewBox="0 0 480 240" class="molecule-svg">
+                  <!-- Bonds -->
+                  <line x1="100" y1="120" x2="220" y2="120" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" />
+                  <line x1="216" y1="112" x2="286" y2="52" stroke="#f43f5e" stroke-width="3" stroke-linecap="round" />
+                  <line x1="226" y1="124" x2="296" y2="64" stroke="#f43f5e" stroke-width="3" stroke-linecap="round" />
+                  <line x1="220" y1="120" x2="310" y2="180" stroke="#f43f5e" stroke-width="4" stroke-linecap="round" />
+                  <line x1="310" y1="180" x2="400" y2="180" stroke="#f43f5e" stroke-width="3.5" stroke-linecap="round" />
+                  <line x1="100" y1="120" x2="100" y2="40" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+                  <line x1="100" y1="120" x2="100" y2="200" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+                  <line x1="100" y1="120" x2="35" y2="120" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
 
-                <!-- Atoms -->
-                <!-- C1 (Methyl) -->
-                <circle cx="100" cy="120" r="22" fill="#0f172a" stroke="#38bdf8" stroke-width="3" />
-                <text x="100" y="126" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">C₁</text>
+                  <!-- Carboxyl Halo -->
+                  <ellipse cx="320" cy="125" rx="130" ry="85" fill="rgba(244, 63, 94, 0.12)" stroke="#f43f5e" stroke-dasharray="6,4" stroke-width="2" class="halo-pulse" />
+                  <text x="320" y="25" fill="#f43f5e" font-size="12" font-weight="bold" text-anchor="middle" letter-spacing="1">CARBOXYL GROUP (-COOH)</text>
 
-                <!-- C2 (Carboxyl Carbon) -->
-                <circle cx="220" cy="120" r="22" fill="#0f172a" stroke="#f43f5e" stroke-width="3.5" />
-                <text x="220" y="126" fill="#f43f5e" font-size="16" font-weight="bold" text-anchor="middle">C₂</text>
-
-                <!-- Carbonyl Oxygen (=O) -->
-                <circle cx="295" cy="55" r="22" fill="#881337" stroke="#f43f5e" stroke-width="3" />
-                <text x="295" y="62" fill="#fff" font-size="17" font-weight="bold" text-anchor="middle">=O</text>
-
-                <!-- Hydroxyl Oxygen (-O-) -->
-                <circle cx="310" cy="180" r="22" fill="#881337" stroke="#f43f5e" stroke-width="3" />
-                <text x="310" y="187" fill="#fff" font-size="17" font-weight="bold" text-anchor="middle">-O-</text>
-
-                <!-- Ionizable Acidic Hydrogen (H+) -->
-                <circle cx="400" cy="180" r="18" fill="#be123c" stroke="#f43f5e" stroke-width="3" class="active-h-glow" />
-                <text x="400" y="186" fill="#fff" font-size="14" font-weight="bold" text-anchor="middle">H⁺</text>
-
-                <!-- C1 Hydrogens -->
-                <circle cx="100" cy="40" r="14" fill="#0f172a" stroke="#94a3b8" stroke-width="2" /><text x="100" y="45" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">H</text>
-                <circle cx="100" cy="200" r="14" fill="#0f172a" stroke="#94a3b8" stroke-width="2" /><text x="100" y="205" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">H</text>
-                <circle cx="35" cy="120" r="14" fill="#0f172a" stroke="#94a3b8" stroke-width="2" /><text x="35" y="125" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">H</text>
-              </svg>
+                  <!-- Atoms -->
+                  <circle cx="100" cy="120" r="22" fill="#0f172a" stroke="#38bdf8" stroke-width="3" />
+                  <text x="100" y="126" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">C₁</text>
+                  <circle cx="220" cy="120" r="22" fill="#0f172a" stroke="#f43f5e" stroke-width="3.5" />
+                  <text x="220" y="126" fill="#f43f5e" font-size="16" font-weight="bold" text-anchor="middle">C₂</text>
+                  <circle cx="295" cy="55" r="22" fill="#881337" stroke="#f43f5e" stroke-width="3" />
+                  <text x="295" y="62" fill="#fff" font-size="17" font-weight="bold" text-anchor="middle">=O</text>
+                  <circle cx="310" cy="180" r="22" fill="#881337" stroke="#f43f5e" stroke-width="3" />
+                  <text x="310" y="187" fill="#fff" font-size="17" font-weight="bold" text-anchor="middle">-O-</text>
+                  <circle cx="400" cy="180" r="18" fill="#be123c" stroke="#f43f5e" stroke-width="3" class="active-h-glow" />
+                  <text x="400" y="186" fill="#fff" font-size="14" font-weight="bold" text-anchor="middle">H⁺</text>
+                  <circle cx="100" cy="40" r="14" fill="#0f172a" stroke="#94a3b8" stroke-width="2" /><text x="100" y="45" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">H</text>
+                  <circle cx="100" cy="200" r="14" fill="#0f172a" stroke="#94a3b8" stroke-width="2" /><text x="100" y="205" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">H</text>
+                  <circle cx="35" cy="120" r="14" fill="#0f172a" stroke="#94a3b8" stroke-width="2" /><text x="35" y="125" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">H</text>
+                </svg>
+              </div>
             </div>
 
             <div class="callout-box">
               <span class="callout-icon">💡</span>
               <div>
-                <strong>The Secret of the Carboxyl Group ($-COOH$):</strong> The carboxyl group is a hybrid of a carbonyl group ($C=O$) and a hydroxyl group ($-OH$). The strongly electronegative oxygen atom in $C=O$ pulls electron density away from the $O-H$ bond, making the hydrogen atom ($\text{H}^+$) extremely mobile and easily ionizable in water!
+                <strong>Carboxyl ($-COOH$):</strong> Hybrid of carbonyl ($C=O$) & hydroxyl ($-OH$). Oxygen shifts electron density, releasing acidic $\text{H}^+$:
+                $$\text{CH}_3\text{COOH} \rightleftharpoons \text{CH}_3\text{COO}^- + \text{H}^+$$
               </div>
             </div>
           </div>
 
-          <!-- Right: Comparative Analysis: Alkane vs Alcohol vs Carboxylic Acid -->
+          <!-- Right: Comparative Analysis -->
           <div class="card glass-card">
             <div class="card-header">
-              <span class="tag emerald">Comparative Blueprint</span>
+              <span class="tag emerald">Key Distinctions</span>
               <h3>Comparative Matrix: Ethane vs. Ethanol vs. Acetic Acid</h3>
             </div>
-            
+
             <div class="compare-table-wrapper">
               <table class="cosmic-table">
                 <thead>
                   <tr>
                     <th>Substance</th>
                     <th>Formula</th>
-                    <th>Functional Group</th>
-                    <th>Litmus Test</th>
-                    <th>Reaction with Na</th>
-                    <th>Reaction with Na₂CO₃</th>
+                    <th>Group</th>
+                    <th>Litmus</th>
+                    <th>+ Na</th>
+                    <th>+ Na₂CO₃</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td><strong>Ethane</strong></td>
                     <td>$\text{C}_2\text{H}_6$</td>
-                    <td>None (Alkane)</td>
-                    <td>No change</td>
-                    <td>No reaction</td>
-                    <td>No reaction</td>
+                    <td>Alkane</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
                   </tr>
                   <tr>
                     <td><strong>Ethanol</strong></td>
                     <td>$\text{C}_2\text{H}_5\text{OH}$</td>
-                    <td>$-\text{OH}$ (Hydroxyl)</td>
-                    <td>No change (Neutral)</td>
-                    <td>Releases $\text{H}_2\uparrow$</td>
+                    <td>$-\text{OH}$</td>
+                    <td>Neutral</td>
+                    <td>$\text{H}_2\uparrow$</td>
                     <td>No reaction</td>
                   </tr>
                   <tr>
                     <td class="highlight-col"><strong>Acetic Acid</strong></td>
                     <td class="highlight-col">$\text{CH}_3\text{COOH}$</td>
-                    <td class="highlight-col">$-\text{COOH}$ (Carboxyl)</td>
-                    <td class="highlight-col">Turns Red/Pink</td>
-                    <td class="highlight-col">Releases $\text{H}_2\uparrow$</td>
-                    <td class="highlight-col">Releases $\text{CO}_2\uparrow$</td>
+                    <td class="highlight-col"><strong>$-\text{COOH}$</strong></td>
+                    <td class="highlight-col"><strong style="color: #f43f5e;">Red</strong></td>
+                    <td class="highlight-col">$\text{H}_2\uparrow$</td>
+                    <td class="highlight-col"><strong style="color: #38bdf8;">$\text{CO}_2\uparrow$</strong></td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
             <div class="callout-box cyan" style="margin-top: 1rem;">
-              <span class="callout-icon">🔭</span>
+              <span class="callout-icon">⚡</span>
               <div>
-                <strong>Distinguishing Key:</strong> Ethanol and Acetic acid both react with active Sodium metal ($\text{Na}$) to release $\text{H}_2$ gas. However, <strong>ONLY Acetic acid reacts with carbonate salts ($\text{Na}_2\text{CO}_3$ or $\text{CaCO}_3$)</strong> to liberate carbon dioxide gas ($\text{CO}_2$). This is the golden laboratory test used to tell them apart!
+                <strong>Distinguishing Key:</strong> Both Ethanol & Acetic Acid react with $\text{Na}$ ($\text{H}_2\uparrow$). But <strong>ONLY Acetic Acid reacts with carbonate salts ($\text{Na}_2\text{CO}_3$)</strong> to release $\text{CO}_2\uparrow$ gas.
               </div>
             </div>
           </div>

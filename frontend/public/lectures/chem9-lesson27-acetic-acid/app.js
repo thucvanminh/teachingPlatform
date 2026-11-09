@@ -206,6 +206,423 @@ function renderAllKaTeX(root = document.body) {
 }
 
 // ==========================================
+// 2B. THREE.JS 3D MOLECULAR SIMULATION ENGINE
+// ==========================================
+let molecule3DViewer = null;
+
+function initMolecule3DViewer() {
+  const container = document.getElementById('molecule3dCanvasContainer');
+  if (!container) return null;
+  if (typeof THREE === 'undefined') {
+    console.warn('Three.js CDN not ready yet. Retrying...');
+    setTimeout(initMolecule3DViewer, 200);
+    return null;
+  }
+
+  // Clear any previous canvas
+  const existingCanvas = container.querySelector('canvas');
+  if (existingCanvas) {
+    existingCanvas.remove();
+  }
+
+  const tooltipEl = document.getElementById('atomTooltip');
+  const rotateBtn = document.getElementById('toggle3dRotateBtn');
+  const resetBtn = document.getElementById('reset3dViewBtn');
+  const toggle2d3dBtn = document.getElementById('toggle2d3dBtn');
+  const svgContainer = document.getElementById('moleculeSvgContainer');
+
+  const width = container.clientWidth || 400;
+  const height = container.clientHeight || 320;
+
+  // 1. Scene, Camera, Renderer
+  const scene = new THREE.Scene();
+
+  const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
+  camera.position.set(0, 0.6, 5.2);
+
+  const renderer = new THREE.WebGLRenderer({
+    antialias: true,
+    alpha: true,
+    powerPreference: 'high-performance'
+  });
+  renderer.setSize(width, height);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.1;
+  container.appendChild(renderer.domElement);
+
+  // 2. OrbitControls
+  let controls = null;
+  if (typeof THREE.OrbitControls === 'function') {
+    controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.06;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = 2.0;
+    controls.minDistance = 2.5;
+    controls.maxDistance = 10.0;
+    controls.target.set(0, 0, 0);
+  }
+
+  // 3. Lighting
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+  scene.add(ambientLight);
+
+  const dirLight1 = new THREE.DirectionalLight(0x38bdf8, 1.4);
+  dirLight1.position.set(4, 5, 4);
+  scene.add(dirLight1);
+
+  const dirLight2 = new THREE.DirectionalLight(0xf43f5e, 0.9);
+  dirLight2.position.set(-4, -3, -3);
+  scene.add(dirLight2);
+
+  const pointLight = new THREE.PointLight(0x38bdf8, 1.2, 8);
+  pointLight.position.set(1.5, -0.5, 1.2);
+  scene.add(pointLight);
+
+  // 4. Molecule Group
+  const moleculeGroup = new THREE.Group();
+  scene.add(moleculeGroup);
+
+  // Atom Definitions (CPK standards + Sci-Fi accents)
+  const ATOM_SPECS = [
+    {
+      id: 'C1',
+      name: 'Methyl Carbon (C₁)',
+      symbol: 'C',
+      element: 'Carbon',
+      pos: [-1.2, 0, 0],
+      color: 0x1e293b,
+      emissive: 0x0f172a,
+      radius: 0.44,
+      role: 'Forms tetrahedral methyl group (-CH₃). Insoluble non-polar tail.'
+    },
+    {
+      id: 'H1',
+      name: 'Hydrogen (H)',
+      symbol: 'H',
+      element: 'Hydrogen',
+      pos: [-1.65, 0.95, 0],
+      color: 0xf8fafc,
+      emissive: 0x94a3b8,
+      radius: 0.24,
+      role: 'Strong non-polar C-H covalent bond. Does NOT ionize in water.'
+    },
+    {
+      id: 'H2',
+      name: 'Hydrogen (H)',
+      symbol: 'H',
+      element: 'Hydrogen',
+      pos: [-1.65, -0.48, 0.82],
+      color: 0xf8fafc,
+      emissive: 0x94a3b8,
+      radius: 0.24,
+      role: 'Strong non-polar C-H covalent bond. Does NOT ionize in water.'
+    },
+    {
+      id: 'H3',
+      name: 'Hydrogen (H)',
+      symbol: 'H',
+      element: 'Hydrogen',
+      pos: [-1.65, -0.48, -0.82],
+      color: 0xf8fafc,
+      emissive: 0x94a3b8,
+      radius: 0.24,
+      role: 'Strong non-polar C-H covalent bond. Does NOT ionize in water.'
+    },
+    {
+      id: 'C2',
+      name: 'Carboxyl Carbon (C₂)',
+      symbol: 'C',
+      element: 'Carbon',
+      pos: [0.35, 0, 0],
+      color: 0x334155,
+      emissive: 0x1e293b,
+      radius: 0.44,
+      role: 'Center of -COOH carboxyl functional group. Highly reactive.'
+    },
+    {
+      id: 'O1',
+      name: 'Carbonyl Oxygen (=O)',
+      symbol: 'O',
+      element: 'Oxygen',
+      pos: [1.05, 1.15, 0],
+      color: 0xf43f5e,
+      emissive: 0x881337,
+      radius: 0.42,
+      role: 'C=O double bond. Strong electronegativity draws electron cloud away.'
+    },
+    {
+      id: 'O2',
+      name: 'Hydroxyl Oxygen (-O-)',
+      symbol: 'O',
+      element: 'Oxygen',
+      pos: [1.05, -1.05, 0],
+      color: 0xf43f5e,
+      emissive: 0x881337,
+      radius: 0.42,
+      role: 'C-O single bond linking to the acidic proton.'
+    },
+    {
+      id: 'H4',
+      name: 'Acidic Mobile Proton (H⁺)',
+      symbol: 'H⁺',
+      element: 'Hydrogen (Ionizable)',
+      pos: [1.95, -1.25, 0],
+      color: 0x38bdf8,
+      emissive: 0x0284c7,
+      radius: 0.28,
+      role: '★ ACTIVE PROTON: Ionizes in water (CH₃COO⁻ + H⁺), causing acidic properties!'
+    }
+  ];
+
+  const atomMap = {};
+  const atomMeshes = [];
+  const sphereGeom = new THREE.SphereGeometry(1, 32, 32);
+
+  ATOM_SPECS.forEach(spec => {
+    atomMap[spec.id] = spec;
+    const isAcidicH = spec.id === 'H4';
+    const mat = new THREE.MeshStandardMaterial({
+      color: spec.color,
+      emissive: spec.emissive || 0x000000,
+      emissiveIntensity: isAcidicH ? 0.7 : 0.2,
+      roughness: isAcidicH ? 0.15 : 0.25,
+      metalness: isAcidicH ? 0.35 : 0.2
+    });
+
+    const mesh = new THREE.Mesh(sphereGeom, mat);
+    mesh.scale.setScalar(spec.radius);
+    mesh.position.set(...spec.pos);
+    mesh.userData = spec;
+    moleculeGroup.add(mesh);
+    atomMeshes.push(mesh);
+
+    // Glowing wireframe aura for the acidic proton
+    if (isAcidicH) {
+      const glowGeom = new THREE.SphereGeometry(spec.radius * 1.45, 16, 16);
+      const glowMat = new THREE.MeshBasicMaterial({
+        color: 0x38bdf8,
+        transparent: true,
+        opacity: 0.4,
+        wireframe: true
+      });
+      const glowMesh = new THREE.Mesh(glowGeom, glowMat);
+      mesh.add(glowMesh);
+    }
+  });
+
+  // Bonds
+  const BOND_SPECS = [
+    { from: 'C1', to: 'H1', double: false },
+    { from: 'C1', to: 'H2', double: false },
+    { from: 'C1', to: 'H3', double: false },
+    { from: 'C1', to: 'C2', double: false },
+    { from: 'C2', to: 'O1', double: true },
+    { from: 'C2', to: 'O2', double: false },
+    { from: 'O2', to: 'H4', double: false, acidic: true }
+  ];
+
+  function addBond(fromId, toId, isDouble = false, isAcidic = false) {
+    const a1 = atomMap[fromId];
+    const a2 = atomMap[toId];
+    if (!a1 || !a2) return;
+
+    const v1 = new THREE.Vector3(...a1.pos);
+    const v2 = new THREE.Vector3(...a2.pos);
+    const distance = v1.distanceTo(v2);
+    const midPoint = new THREE.Vector3().addVectors(v1, v2).multiplyScalar(0.5);
+
+    const dir = new THREE.Vector3().subVectors(v2, v1).normalize();
+    const up = new THREE.Vector3(0, 1, 0);
+    const quaternion = new THREE.Quaternion().setFromUnitVectors(up, dir);
+
+    const bondColor = isAcidic ? 0x38bdf8 : 0x94a3b8;
+    const bondMat = new THREE.MeshStandardMaterial({
+      color: bondColor,
+      roughness: 0.3,
+      metalness: 0.3,
+      emissive: isAcidic ? 0x0284c7 : 0x000000,
+      emissiveIntensity: isAcidic ? 0.3 : 0
+    });
+
+    if (!isDouble) {
+      const geom = new THREE.CylinderGeometry(0.065, 0.065, distance, 16);
+      const cyl = new THREE.Mesh(geom, bondMat);
+      cyl.position.copy(midPoint);
+      cyl.setRotationFromQuaternion(quaternion);
+      moleculeGroup.add(cyl);
+    } else {
+      // Double bond: 2 offset parallel cylinders
+      const geom = new THREE.CylinderGeometry(0.045, 0.045, distance, 14);
+      const normal = new THREE.Vector3(0, 0, 1);
+      const offset = new THREE.Vector3().crossVectors(dir, normal).normalize().multiplyScalar(0.08);
+
+      const cyl1 = new THREE.Mesh(geom, bondMat);
+      cyl1.position.copy(midPoint).add(offset);
+      cyl1.setRotationFromQuaternion(quaternion);
+      moleculeGroup.add(cyl1);
+
+      const cyl2 = new THREE.Mesh(geom, bondMat);
+      cyl2.position.copy(midPoint).sub(offset);
+      cyl2.setRotationFromQuaternion(quaternion);
+      moleculeGroup.add(cyl2);
+    }
+  }
+
+  BOND_SPECS.forEach(b => addBond(b.from, b.to, b.double, b.acidic));
+
+  // Carboxyl group highlight torus ring
+  const ringGeom = new THREE.TorusGeometry(1.65, 0.02, 16, 64);
+  const ringMat = new THREE.MeshBasicMaterial({
+    color: 0xf43f5e,
+    transparent: true,
+    opacity: 0.4
+  });
+  const ringMesh = new THREE.Mesh(ringGeom, ringMat);
+  ringMesh.position.set(1.1, 0, 0);
+  ringMesh.rotation.x = Math.PI / 4;
+  moleculeGroup.add(ringMesh);
+
+  // 5. Raycaster for Atom Hover Tooltip
+  const raycaster = new THREE.Raycaster();
+  const mouse = new THREE.Vector2();
+  let hoveredMesh = null;
+
+  function onPointerMove(event) {
+    const rect = renderer.domElement.getBoundingClientRect();
+    mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+    mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObjects(atomMeshes, false);
+
+    if (intersects.length > 0) {
+      const target = intersects[0].object;
+      if (hoveredMesh !== target) {
+        if (hoveredMesh) hoveredMesh.scale.setScalar(hoveredMesh.userData.radius);
+        hoveredMesh = target;
+        hoveredMesh.scale.setScalar(hoveredMesh.userData.radius * 1.3);
+        renderer.domElement.style.cursor = 'pointer';
+        soundFX.playPop();
+      }
+
+      if (tooltipEl) {
+        const u = target.userData;
+        tooltipEl.innerHTML = `
+          <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 3px;">
+            <span style="display: inline-block; padding: 1px 6px; border-radius: 4px; background: rgba(56,189,248,0.2); color: #38bdf8; font-weight: 800; font-size: 0.72rem;">${u.symbol}</span>
+            <strong style="color: #fff; font-size: 0.8rem;">${u.name}</strong>
+          </div>
+          <div style="font-size: 0.7rem; color: #94a3b8; line-height: 1.35;">${u.role}</div>
+        `;
+        const tipX = event.clientX - rect.left;
+        const tipY = event.clientY - rect.top - 12;
+        tooltipEl.style.left = `${tipX}px`;
+        tooltipEl.style.top = `${tipY}px`;
+        tooltipEl.classList.add('show');
+      }
+    } else {
+      if (hoveredMesh) {
+        hoveredMesh.scale.setScalar(hoveredMesh.userData.radius);
+        hoveredMesh = null;
+        renderer.domElement.style.cursor = 'grab';
+      }
+      if (tooltipEl) {
+        tooltipEl.classList.remove('show');
+      }
+    }
+  }
+
+  function onPointerLeave() {
+    if (hoveredMesh) {
+      hoveredMesh.scale.setScalar(hoveredMesh.userData.radius);
+      hoveredMesh = null;
+    }
+    if (tooltipEl) tooltipEl.classList.remove('show');
+  }
+
+  renderer.domElement.addEventListener('pointermove', onPointerMove);
+  renderer.domElement.addEventListener('pointerleave', onPointerLeave);
+
+  // 6. Toolbar Buttons
+  if (rotateBtn) {
+    rotateBtn.addEventListener('click', () => {
+      if (!controls) return;
+      controls.autoRotate = !controls.autoRotate;
+      rotateBtn.classList.toggle('active', controls.autoRotate);
+      soundFX.playChime();
+    });
+  }
+
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      camera.position.set(0, 0.6, 5.2);
+      if (controls) {
+        controls.target.set(0, 0, 0);
+        controls.update();
+      }
+      soundFX.playChime();
+    });
+  }
+
+  if (toggle2d3dBtn && svgContainer) {
+    toggle2d3dBtn.addEventListener('click', () => {
+      const is3DHidden = container.style.display === 'none';
+      if (is3DHidden) {
+        container.style.display = 'block';
+        svgContainer.style.display = 'none';
+        toggle2d3dBtn.classList.remove('active');
+        resize();
+      } else {
+        container.style.display = 'none';
+        svgContainer.style.display = 'block';
+        toggle2d3dBtn.classList.add('active');
+      }
+      soundFX.playChime();
+    });
+  }
+
+  // 7. Resize Handler
+  function resize() {
+    if (!container || container.style.display === 'none') return;
+    const w = container.clientWidth;
+    const h = container.clientHeight;
+    if (w > 0 && h > 0) {
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+      renderer.setSize(w, h);
+    }
+  }
+
+  window.addEventListener('resize', resize);
+
+  // 8. Animation Loop
+  let animationFrameId = null;
+  function animate() {
+    animationFrameId = requestAnimationFrame(animate);
+    if (controls) controls.update();
+
+    // Subtle pulsating effect for the carboxyl highlight ring
+    const t = performance.now() * 0.002;
+    ringMesh.rotation.z += 0.005;
+    ringMesh.scale.setScalar(1 + Math.sin(t) * 0.03);
+
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  return {
+    resize,
+    destroy: () => {
+      cancelAnimationFrame(animationFrameId);
+      window.removeEventListener('resize', resize);
+      renderer.dispose();
+    }
+  };
+}
+
+// ==========================================
 // 3. REACTION BENCH SIMULATION DATA
 // ==========================================
 const REACTIONS = {
@@ -736,6 +1153,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (pane) {
         pane.classList.add('active');
         renderAllKaTeX(pane);
+        if (targetSector === 'sector1' && molecule3DViewer && typeof molecule3DViewer.resize === 'function') {
+          setTimeout(() => molecule3DViewer.resize(), 50);
+        }
       }
       soundFX.playChime();
     });
@@ -827,9 +1247,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Initialize 3D WebGL Molecular Viewer
+  molecule3DViewer = initMolecule3DViewer();
+
   // Initialize initial reaction view & KaTeX math rendering
   updateReactionView('litmus');
   loadQuizQuestion(0);
   renderAllKaTeX();
-  window.addEventListener('load', () => renderAllKaTeX());
+  window.addEventListener('load', () => {
+    renderAllKaTeX();
+    if (!molecule3DViewer) {
+      molecule3DViewer = initMolecule3DViewer();
+    }
+  });
 });
