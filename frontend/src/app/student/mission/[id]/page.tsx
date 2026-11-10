@@ -477,20 +477,30 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
     return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   };
 
-  const isCosmic =
-    user?.username === 'keithley' ||
-    user?.full_name?.includes('Keithley') ||
-    user?.fullName?.includes('Keithley') ||
-    user?.studentProfile?.grade_level === 7 ||
-    user?.studentProfile?.grade_level === 9 ||
-    attempt?.assessments?.learning_units?.subjects?.code === 'MATH_7' ||
-    attempt?.assessments?.learning_units?.subjects?.code === 'CHEM_9';
-
   const isKids =
     user?.username === 'an_lake' ||
     user?.studentProfile?.grade_level === 1 ||
     user?.student_profiles?.grade_level === 1 ||
     attempt?.assessments?.learning_units?.subjects?.code === 'MATH_1';
+
+  // Cosmic theme for Keithley and Secondary (Grades 7, 8, 9)
+  const isCosmic =
+    !isKids &&
+    (user?.username?.toLowerCase() === 'keithley' ||
+      user?.full_name?.toLowerCase().includes('keithley') ||
+      user?.fullName?.toLowerCase().includes('keithley') ||
+      user?.studentProfile?.grade_level === 7 ||
+      user?.studentProfile?.grade_level === 9 ||
+      user?.student_profiles?.grade_level === 7 ||
+      user?.student_profiles?.grade_level === 9 ||
+      user?.studentProfile?.ui_theme === 'STANDARD_SECONDARY' ||
+      user?.student_profiles?.ui_theme === 'STANDARD_SECONDARY' ||
+      attempt?.assessments?.learning_units?.subjects?.code === 'MATH_7' ||
+      attempt?.assessments?.learning_units?.subjects?.code === 'CHEM_9' ||
+      attempt?.assessments?.title?.toLowerCase().includes('cosmic') ||
+      attempt?.assessments?.title?.toLowerCase().includes('acid') ||
+      attempt?.assessments?.title?.toLowerCase().includes('angle') ||
+      attempt?.assessments?.title?.toLowerCase().includes('geometry'));
 
   const isEnglish =
     user?.username === 'keithley' ||
