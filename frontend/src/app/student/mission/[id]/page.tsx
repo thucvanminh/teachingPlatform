@@ -861,7 +861,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                     className={`text-xs font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider ${
                       isCosmic
                         ? 'bg-cyan-950/80 text-cyan-300 border border-cyan-500/30 text-[11px]'
-                        : 'bg-blue-50 text-blue-700 border border-blue-200'
+                        : 'bg-rose-50 text-[#881337] border border-rose-200/80'
                     }`}
                   >
                     {currentQ.question_payload?.sectionName ||
@@ -871,7 +871,7 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                         ? (isEnglish ? 'Numerical Fill-in' : 'Điền số')
                         : (isEnglish ? 'Geometric Proof / Essay' : 'Tự luận'))}
                   </span>
-                  <span className={`text-xs font-medium ${isCosmic ? 'text-slate-400' : 'text-slate-600'}`}>
+                  <span className={`text-xs font-semibold ${isCosmic ? 'text-slate-400' : 'text-[#881337]'}`}>
                     {isEnglish ? 'Question' : 'Câu'} {currentIndex + 1} / {totalQuestions}
                   </span>
                 </div>

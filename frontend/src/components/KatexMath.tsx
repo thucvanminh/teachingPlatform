@@ -32,14 +32,39 @@ export function KatexMath({ math, block = false, className = '' }: KatexMathProp
 }
 
 // Helper to render markdown bold (**text**), inline code (`code`), and clean up stray tokens
-function renderMarkdownTokens(rawText: string): React.ReactNode {
+function renderMarkdownTokens(rawText: string, customStrongClass?: string): React.ReactNode {
   if (!rawText) return null;
   const parts = rawText.split(/(\*\*[^*]+\*\*|`[^`]+`)/g);
   return parts.map((part, i) => {
     if (part.startsWith('**') && part.endsWith('**') && part.length > 4) {
       const inner = part.slice(2, -2);
+      const isQuestionHeading = /^question\s*\d+/i.test(inner.trim()) || /^câu\s*\d+/i.test(inner.trim());
+
+      if (customStrongClass) {
+        return (
+          <strong key={i} className={customStrongClass}>
+            {inner}
+          </strong>
+        );
+      }
+
+      // Màu đỏ đô (Crimson / Deep Burgundy #881337) tạo độ tương phản cao, chuyên nghiệp, không lóe mắt
+      if (isQuestionHeading) {
+        return (
+          <strong
+            key={i}
+            className="font-black text-[#881337] dark:text-[#fb7185] bg-rose-50 dark:bg-rose-950/60 px-2 py-0.5 rounded-md border border-rose-200 dark:border-rose-800/60 mr-1.5 inline-block tracking-tight shadow-2xs"
+          >
+            {inner}
+          </strong>
+        );
+      }
+
       return (
-        <strong key={i} className="font-bold text-cyan-200 drop-shadow-[0_0_8px_rgba(6,182,212,0.4)]">
+        <strong
+          key={i}
+          className="font-bold text-[#881337] dark:text-rose-300 tracking-tight"
+        >
           {inner}
         </strong>
       );
@@ -47,7 +72,10 @@ function renderMarkdownTokens(rawText: string): React.ReactNode {
     if (part.startsWith('`') && part.endsWith('`') && part.length > 2) {
       const inner = part.slice(1, -1);
       return (
-        <code key={i} className="px-1.5 py-0.5 rounded bg-slate-800 text-cyan-300 font-mono text-xs">
+        <code
+          key={i}
+          className="px-1.5 py-0.5 rounded bg-rose-50/80 text-[#881337] border border-rose-200/70 dark:bg-slate-800 dark:text-rose-300 dark:border-rose-500/30 font-mono text-xs font-semibold"
+        >
           {inner}
         </code>
       );
@@ -57,7 +85,15 @@ function renderMarkdownTokens(rawText: string): React.ReactNode {
 }
 
 // Hàm phân giải chuỗi text chứa hỗn hợp Markdown (ảnh ![alt](url), in đậm **text**) và LaTeX $...$ hoặc $$...$$
-export function FormattedContent({ text, className = '' }: { text: string; className?: string }) {
+export function FormattedContent({
+  text,
+  className = '',
+  strongClassName,
+}: {
+  text: string;
+  className?: string;
+  strongClassName?: string;
+}) {
   if (!text) return null;
 
   // Tách các đoạn ảnh ![](), $$...$$ và $...$
@@ -163,7 +199,7 @@ export function FormattedContent({ text, className = '' }: { text: string; class
         if (p.type === 'inline-math') {
           return <KatexMath key={idx} math={p.content} block={false} />;
         }
-        return <span key={idx} className="text-inherit">{renderMarkdownTokens(p.content)}</span>;
+        return <span key={idx} className="text-inherit">{renderMarkdownTokens(p.content, strongClassName)}</span>;
       })}
     </div>
   );
