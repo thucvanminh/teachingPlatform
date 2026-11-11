@@ -1,0 +1,2509 @@
+{
+  "studentUsername": "nam_viet",
+  "grade": 12,
+  "assignedDate": "2026-11-11T00:00:00.000Z",
+  "assessmentTitle": "Đấu trường 100 câu: 12 Từ Vựng Cốt Lõi & Mệnh Đề Trạng Ngữ Unit 7 (100 câu)",
+  "timeLimitMinutes": 90,
+  "questions": [
+    {
+      "order": 1,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 1:** Television, newspapers, radio, and the Internet are common forms of _______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "mass media"
+        },
+        {
+          "id": "B",
+          "text": "social platform"
+        },
+        {
+          "id": "C",
+          "text": "grammar rules"
+        },
+        {
+          "id": "D",
+          "text": "school lessons"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nMass media (phương tiện truyền thông đại chúng) bao gồm truyền hình, báo chí, radio và internet. 'Social platform' là nền tảng mạng xã hội (chỉ là một nhánh nhỏ)."
+    },
+    {
+      "order": 2,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 2:** The primary role of the _______ is to provide citizens with factual news and educational information.",
+      "options": [
+        {
+          "id": "A",
+          "text": "commercial"
+        },
+        {
+          "id": "B",
+          "text": "mass media"
+        },
+        {
+          "id": "C",
+          "text": "circulation"
+        },
+        {
+          "id": "D",
+          "text": "personal diary"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nCụm danh từ: 'role of the mass media' (vai trò của các phương tiện truyền thông đại chúng). 'Commercial' là mẩu quảng cáo, 'circulation' là lượng phát hành."
+    },
+    {
+      "order": 3,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 3:** Traditional _______ such as printed newspapers and AM radio still retain loyal older audiences.",
+      "options": [
+        {
+          "id": "A",
+          "text": "digital media"
+        },
+        {
+          "id": "B",
+          "text": "traffic lights"
+        },
+        {
+          "id": "C",
+          "text": "mass media"
+        },
+        {
+          "id": "D",
+          "text": "commercials"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\n'Traditional mass media' (truyền thông đại chúng truyền thống) như báo in và radio đối lập với 'digital media' (truyền thông số)."
+    },
+    {
+      "order": 4,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 4:** Unlike modern online channels, traditional _______ cannot provide instant interactive feedback from viewers.",
+      "options": [
+        {
+          "id": "A",
+          "text": "social platforms"
+        },
+        {
+          "id": "B",
+          "text": "mass media"
+        },
+        {
+          "id": "C",
+          "text": "publicity"
+        },
+        {
+          "id": "D",
+          "text": "biases"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nTraditional mass media (truyền thông đại chúng truyền thống một chiều) không có tính năng tương tác hai chiều như social platforms."
+    },
+    {
+      "order": 5,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 5:** The police department held an urgent _______ conference to clarify the recent incident.",
+      "options": [
+        {
+          "id": "A",
+          "text": "press"
+        },
+        {
+          "id": "B",
+          "text": "broadcast"
+        },
+        {
+          "id": "C",
+          "text": "circulation"
+        },
+        {
+          "id": "D",
+          "text": "game"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nCollocation quen thuộc: 'press conference' có nghĩa là cuộc họp báo."
+    },
+    {
+      "order": 6,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 6:** Freedom of the _______ is considered an essential pillar of a democratic society.",
+      "options": [
+        {
+          "id": "A",
+          "text": "commercial"
+        },
+        {
+          "id": "B",
+          "text": "press"
+        },
+        {
+          "id": "C",
+          "text": "bias"
+        },
+        {
+          "id": "D",
+          "text": "street"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nCollocation cố định: 'freedom of the press' mang nghĩa tự do báo chí."
+    },
+    {
+      "order": 7,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 7:** Local journalists representing the _______ attended the opening ceremony of the new high school.",
+      "options": [
+        {
+          "id": "A",
+          "text": "circulation"
+        },
+        {
+          "id": "B",
+          "text": "publicity"
+        },
+        {
+          "id": "C",
+          "text": "press"
+        },
+        {
+          "id": "D",
+          "text": "viral"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\n'The press' (danh từ tập hợp) = giới báo chí, các nhà báo."
+    },
+    {
+      "order": 8,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 8:** The famous actor refused to answer any personal questions from the _______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "press"
+        },
+        {
+          "id": "B",
+          "text": "mass media"
+        },
+        {
+          "id": "C",
+          "text": "broadcast"
+        },
+        {
+          "id": "D",
+          "text": "commercial"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\n'Questions from the press' = các câu hỏi phỏng vấn từ giới báo chí."
+    },
+    {
+      "order": 9,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 9:** The final football match of the championship will be _______ live on national television tonight.",
+      "options": [
+        {
+          "id": "A",
+          "text": "promoted"
+        },
+        {
+          "id": "B",
+          "text": "broadcast"
+        },
+        {
+          "id": "C",
+          "text": "biased"
+        },
+        {
+          "id": "D",
+          "text": "circulated"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\n'Broadcast live' = phát sóng trực tiếp trên truyền hình hoặc đài phát thanh."
+    },
+    {
+      "order": 10,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 10:** My grandparents always listen to the evening news _______ at seven o'clock.",
+      "options": [
+        {
+          "id": "A",
+          "text": "broadcast"
+        },
+        {
+          "id": "B",
+          "text": "commercial"
+        },
+        {
+          "id": "C",
+          "text": "publicity"
+        },
+        {
+          "id": "D",
+          "text": "bias"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\n'News broadcast' (danh từ) = buổi phát sóng bản tin thời sự."
+    },
+    {
+      "order": 11,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 11:** The major television network plans to _______ an exclusive documentary about wild animals next Sunday.",
+      "options": [
+        {
+          "id": "A",
+          "text": "circulate"
+        },
+        {
+          "id": "B",
+          "text": "promote"
+        },
+        {
+          "id": "C",
+          "text": "broadcast"
+        },
+        {
+          "id": "D",
+          "text": "bias"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\n'Broadcast a documentary' = phát sóng một bộ phim tài liệu."
+    },
+    {
+      "order": 12,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 12:** Because of severe stormy weather, the radio station temporarily stopped its daily _______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "broadcast"
+        },
+        {
+          "id": "B",
+          "text": "circulation"
+        },
+        {
+          "id": "C",
+          "text": "viral"
+        },
+        {
+          "id": "D",
+          "text": "reliable"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\n'Radio broadcast' = tín hiệu / chương trình phát sóng của đài phát thanh."
+    },
+    {
+      "order": 13,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 13:** Young generations prefer reading breaking news via _______ rather than buying printed newspapers.",
+      "options": [
+        {
+          "id": "A",
+          "text": "circulation"
+        },
+        {
+          "id": "B",
+          "text": "digital media"
+        },
+        {
+          "id": "C",
+          "text": "commercials"
+        },
+        {
+          "id": "D",
+          "text": "mass media"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\n'Digital media' (truyền thông số / truyền thông kỹ thuật số) đọc qua smartphone và máy tính."
+    },
+    {
+      "order": 14,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 14:** The rapid development of _______ has transformed how companies advertise their new products.",
+      "options": [
+        {
+          "id": "A",
+          "text": "digital media"
+        },
+        {
+          "id": "B",
+          "text": "press conferences"
+        },
+        {
+          "id": "C",
+          "text": "broadcasts"
+        },
+        {
+          "id": "D",
+          "text": "publicity"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\n'The development of digital media' = sự phát triển của truyền thông số."
+    },
+    {
+      "order": 15,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 15:** Students can now study online and access educational videos through various _______ formats.",
+      "options": [
+        {
+          "id": "A",
+          "text": "commercial"
+        },
+        {
+          "id": "B",
+          "text": "bias"
+        },
+        {
+          "id": "C",
+          "text": "digital media"
+        },
+        {
+          "id": "D",
+          "text": "circulation"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\n'Digital media formats' = các định dạng truyền thông số trực tuyến."
+    },
+    {
+      "order": 16,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 16:** Traditional print magazines are losing advertising revenue to interactive _______ channels.",
+      "options": [
+        {
+          "id": "A",
+          "text": "the press"
+        },
+        {
+          "id": "B",
+          "text": "broadcasts"
+        },
+        {
+          "id": "C",
+          "text": "digital media"
+        },
+        {
+          "id": "D",
+          "text": "circulations"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\n'Digital media channels' = các kênh truyền thông kỹ thuật số."
+    },
+    {
+      "order": 17,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 17:** TikTok, Instagram, and Facebook are currently the most popular _______ among youth.",
+      "options": [
+        {
+          "id": "A",
+          "text": "social platforms"
+        },
+        {
+          "id": "B",
+          "text": "commercials"
+        },
+        {
+          "id": "C",
+          "text": "press conferences"
+        },
+        {
+          "id": "D",
+          "text": "mass media"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\n'Social platforms' = các nền tảng mạng xã hội."
+    },
+    {
+      "order": 18,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 18:** You should set strong privacy passwords when creating an account on any _______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "broadcast"
+        },
+        {
+          "id": "B",
+          "text": "social platform"
+        },
+        {
+          "id": "C",
+          "text": "circulation"
+        },
+        {
+          "id": "D",
+          "text": "publicity"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\n'On any social platform' = trên bất kỳ nền tảng mạng xã hội nào."
+    },
+    {
+      "order": 19,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 19:** Many online businesses use a popular _______ to interact directly with their customers.",
+      "options": [
+        {
+          "id": "A",
+          "text": "bias"
+        },
+        {
+          "id": "B",
+          "text": "reliable"
+        },
+        {
+          "id": "C",
+          "text": "social platform"
+        },
+        {
+          "id": "D",
+          "text": "commercial"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\n'Use a social platform' = sử dụng một nền tảng mạng xã hội để tương tác với khách hàng."
+    },
+    {
+      "order": 20,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 20:** Sharing unverified personal information on a public _______ can be extremely risky.",
+      "options": [
+        {
+          "id": "A",
+          "text": "social platform"
+        },
+        {
+          "id": "B",
+          "text": "press"
+        },
+        {
+          "id": "C",
+          "text": "circulation"
+        },
+        {
+          "id": "D",
+          "text": "broadcast"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\n'On a public social platform' = trên một nền tảng mạng xã hội công khai."
+    },
+    {
+      "order": 21,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 21:** The daily _______ of printed daily newspapers has dropped dramatically in recent years.",
+      "options": [
+        {
+          "id": "A",
+          "text": "circulation"
+        },
+        {
+          "id": "B",
+          "text": "publicity"
+        },
+        {
+          "id": "C",
+          "text": "commercial"
+        },
+        {
+          "id": "D",
+          "text": "bias"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\n'Circulation' (trong ngành xuất bản báo chí) = lượng phát hành của tờ báo."
+    },
+    {
+      "order": 22,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 22:** With an impressive _______ of over 700,000 copies per issue, this fashion magazine tops the market.",
+      "options": [
+        {
+          "id": "A",
+          "text": "commercial"
+        },
+        {
+          "id": "B",
+          "text": "circulation"
+        },
+        {
+          "id": "C",
+          "text": "broadcast"
+        },
+        {
+          "id": "D",
+          "text": "viral"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\n'Circulation of 700,000 copies' = lượng phát hành 700.000 bản."
+    },
+    {
+      "order": 23,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 23:** Due to falling _______, the local newspaper was forced to reduce its staff members.",
+      "options": [
+        {
+          "id": "A",
+          "text": "social platform"
+        },
+        {
+          "id": "B",
+          "text": "bias"
+        },
+        {
+          "id": "C",
+          "text": "circulation"
+        },
+        {
+          "id": "D",
+          "text": "publicity"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\n'Falling circulation' = lượng phát hành giảm sút."
+    },
+    {
+      "order": 24,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 24:** Publishers audit their print _______ figures strictly to attract commercial advertisers.",
+      "options": [
+        {
+          "id": "A",
+          "text": "circulation"
+        },
+        {
+          "id": "B",
+          "text": "broadcast"
+        },
+        {
+          "id": "C",
+          "text": "digital media"
+        },
+        {
+          "id": "D",
+          "text": "press"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\n'Print circulation figures' = số liệu lượng phát hành báo in."
+    },
+    {
+      "order": 25,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 25:** My father usually changes the TV channel when a five-minute _______ break begins.",
+      "options": [
+        {
+          "id": "A",
+          "text": "commercial"
+        },
+        {
+          "id": "B",
+          "text": "broadcast"
+        },
+        {
+          "id": "C",
+          "text": "publicity"
+        },
+        {
+          "id": "D",
+          "text": "press"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\n'Commercial break' = đoạn ngắt quãng để phát quảng cáo trên TV/đài."
+    },
+    {
+      "order": 26,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 26:** A 30-second TV _______ shown during the World Cup final costs millions of dollars.",
+      "options": [
+        {
+          "id": "A",
+          "text": "circulation"
+        },
+        {
+          "id": "B",
+          "text": "commercial"
+        },
+        {
+          "id": "C",
+          "text": "bias"
+        },
+        {
+          "id": "D",
+          "text": "platform"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\n'TV commercial' (danh từ) = mẩu phim quảng cáo truyền hình."
+    },
+    {
+      "order": 27,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 27:** Companies produce funny and memorable _______ to make viewers remember their brand name.",
+      "options": [
+        {
+          "id": "A",
+          "text": "circulations"
+        },
+        {
+          "id": "B",
+          "text": "biases"
+        },
+        {
+          "id": "C",
+          "text": "commercials"
+        },
+        {
+          "id": "D",
+          "text": "broadcasts"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\n'Produce commercials' = sản xuất các đoạn phim quảng cáo."
+    },
+    {
+      "order": 28,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 28:** The main source of income for private television channels comes from _______ advertising.",
+      "options": [
+        {
+          "id": "A",
+          "text": "commercial"
+        },
+        {
+          "id": "B",
+          "text": "viral"
+        },
+        {
+          "id": "C",
+          "text": "reliable"
+        },
+        {
+          "id": "D",
+          "text": "press"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\n'Commercial advertising' (tính từ) = quảng cáo thương mại."
+    },
+    {
+      "order": 29,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 29:** The new film received enormous _______ after winning top prizes at international film festivals.",
+      "options": [
+        {
+          "id": "A",
+          "text": "publicity"
+        },
+        {
+          "id": "B",
+          "text": "circulation"
+        },
+        {
+          "id": "C",
+          "text": "bias"
+        },
+        {
+          "id": "D",
+          "text": "commercial"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\n'Receive enormous publicity' = nhận được sự quan tâm/chú ý rầm rộ của công chúng và truyền thông."
+    },
+    {
+      "order": 30,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 30:** Negative _______ regarding dangerous food safety can immediately ruin a restaurant's business.",
+      "options": [
+        {
+          "id": "A",
+          "text": "broadcast"
+        },
+        {
+          "id": "B",
+          "text": "publicity"
+        },
+        {
+          "id": "C",
+          "text": "platform"
+        },
+        {
+          "id": "D",
+          "text": "media"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\n'Negative publicity' = sự chú ý/tai tiếng tiêu cực từ dư luận."
+    },
+    {
+      "order": 31,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 31:** The pop star hired a professional PR agency to generate positive _______ for her new music album.",
+      "options": [
+        {
+          "id": "A",
+          "text": "circulation"
+        },
+        {
+          "id": "B",
+          "text": "bias"
+        },
+        {
+          "id": "C",
+          "text": "publicity"
+        },
+        {
+          "id": "D",
+          "text": "commercial"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\n'Generate positive publicity' = tạo dựng sự chú ý tích cực từ công chúng."
+    },
+    {
+      "order": 32,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 32:** The charity organization organized a marathon race to gain widespread _______ for disabled children.",
+      "options": [
+        {
+          "id": "A",
+          "text": "publicity"
+        },
+        {
+          "id": "B",
+          "text": "broadcast"
+        },
+        {
+          "id": "C",
+          "text": "commercial"
+        },
+        {
+          "id": "D",
+          "text": "viral"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\n'Gain widespread publicity' = thu hút sự chú ý rộng rãi của công chúng."
+    },
+    {
+      "order": 33,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 33:** Celebrities are often invited to _______ eco-friendly lifestyle products to young consumers.",
+      "options": [
+        {
+          "id": "A",
+          "text": "promote"
+        },
+        {
+          "id": "B",
+          "text": "broadcast"
+        },
+        {
+          "id": "C",
+          "text": "bias"
+        },
+        {
+          "id": "D",
+          "text": "circulate"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\n'Promote' (động từ) = quảng bá, thúc đẩy tiêu thụ sản phẩm."
+    },
+    {
+      "order": 34,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 34:** The ministry of education launched a nationwide project to _______ reading habits among students.",
+      "options": [
+        {
+          "id": "A",
+          "text": "broadcast"
+        },
+        {
+          "id": "B",
+          "text": "promote"
+        },
+        {
+          "id": "C",
+          "text": "commercialize"
+        },
+        {
+          "id": "D",
+          "text": "circulate"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\n'Promote reading habits' = thúc đẩy, khuyến khích thói quen đọc sách."
+    },
+    {
+      "order": 35,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 35:** The tech firm used short humorous videos on social platforms to _______ its latest smartphone.",
+      "options": [
+        {
+          "id": "A",
+          "text": "circulate"
+        },
+        {
+          "id": "B",
+          "text": "bias"
+        },
+        {
+          "id": "C",
+          "text": "promote"
+        },
+        {
+          "id": "D",
+          "text": "publicize"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\n'Promote its latest smartphone' = quảng bá chiếc điện thoại thông minh mới nhất."
+    },
+    {
+      "order": 36,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 36:** Schools should organize sports tournaments to _______ teamwork and physical fitness.",
+      "options": [
+        {
+          "id": "A",
+          "text": "promote"
+        },
+        {
+          "id": "B",
+          "text": "broadcast"
+        },
+        {
+          "id": "C",
+          "text": "commercial"
+        },
+        {
+          "id": "D",
+          "text": "bias"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\n'Promote teamwork' = thúc đẩy tinh thần làm việc nhóm."
+    },
+    {
+      "order": 37,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 37:** Students must evaluate news carefully and only use _______ sources when writing academic essays.",
+      "options": [
+        {
+          "id": "A",
+          "text": "viral"
+        },
+        {
+          "id": "B",
+          "text": "reliable"
+        },
+        {
+          "id": "C",
+          "text": "biased"
+        },
+        {
+          "id": "D",
+          "text": "commercial"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\n'Reliable sources' = các nguồn tin đáng tin cậy, chính xác."
+    },
+    {
+      "order": 38,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 38:** Because of unverified online rumors, people desperately need _______ information from medical experts.",
+      "options": [
+        {
+          "id": "A",
+          "text": "commercial"
+        },
+        {
+          "id": "B",
+          "text": "biased"
+        },
+        {
+          "id": "C",
+          "text": "reliable"
+        },
+        {
+          "id": "D",
+          "text": "viral"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\n'Reliable information' = thông tin đáng tin cậy, có cơ sở xác thực."
+    },
+    {
+      "order": 39,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 39:** The scientific journal is widely known for publishing highly _______ research data.",
+      "options": [
+        {
+          "id": "A",
+          "text": "reliable"
+        },
+        {
+          "id": "B",
+          "text": "viral"
+        },
+        {
+          "id": "C",
+          "text": "biased"
+        },
+        {
+          "id": "D",
+          "text": "publicized"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\n'Highly reliable research data' = dữ liệu nghiên cứu khoa học có độ tin cậy rất cao."
+    },
+    {
+      "order": 40,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 40:** In an era of fake news, building a reputation as a _______ journalist takes years of hard work.",
+      "options": [
+        {
+          "id": "A",
+          "text": "commercial"
+        },
+        {
+          "id": "B",
+          "text": "reliable"
+        },
+        {
+          "id": "C",
+          "text": "viral"
+        },
+        {
+          "id": "D",
+          "text": "biased"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\n'A reliable journalist' = một nhà báo đáng tin cậy, trung thực."
+    },
+    {
+      "order": 41,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 41:** A professional and ethical journalist must report news objectively without any personal _______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "bias"
+        },
+        {
+          "id": "B",
+          "text": "publicity"
+        },
+        {
+          "id": "C",
+          "text": "circulation"
+        },
+        {
+          "id": "D",
+          "text": "commercial"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\n'Personal bias' (danh từ) = định kiến / sự thiên vị cá nhân."
+    },
+    {
+      "order": 42,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 42:** The television report was criticized by viewers for showing noticeable political _______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "publicity"
+        },
+        {
+          "id": "B",
+          "text": "bias"
+        },
+        {
+          "id": "C",
+          "text": "circulation"
+        },
+        {
+          "id": "D",
+          "text": "broadcast"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\n'Political bias' = sự thiên kiến chính trị (thiên vị một bên)."
+    },
+    {
+      "order": 43,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 43:** Readers should consult multiple news outlets to avoid being influenced by media _______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "broadcast"
+        },
+        {
+          "id": "B",
+          "text": "circulation"
+        },
+        {
+          "id": "C",
+          "text": "bias"
+        },
+        {
+          "id": "D",
+          "text": "publicity"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\n'Media bias' = sự thiên vị / thiên kiến của các kênh truyền thông."
+    },
+    {
+      "order": 44,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 44:** The article appeared unfair because it was clearly _______ towards the wealthy corporation.",
+      "options": [
+        {
+          "id": "A",
+          "text": "biased"
+        },
+        {
+          "id": "B",
+          "text": "reliable"
+        },
+        {
+          "id": "C",
+          "text": "viral"
+        },
+        {
+          "id": "D",
+          "text": "commercial"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\n'Biased towards' (tính từ) = thiên vị, nghiêng về phía ai đó một cách không công bằng."
+    },
+    {
+      "order": 45,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 45:** The humorous video clip of the baby panda went _______ and gained millions of views in one day.",
+      "options": [
+        {
+          "id": "A",
+          "text": "reliable"
+        },
+        {
+          "id": "B",
+          "text": "viral"
+        },
+        {
+          "id": "C",
+          "text": "commercial"
+        },
+        {
+          "id": "D",
+          "text": "biased"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nThành ngữ thông dụng trong thời đại số: 'go viral' = lan truyền nhanh chóng mặt trên mạng Internet."
+    },
+    {
+      "order": 46,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 46:** The marketing team created an interactive challenge that quickly went _______ on social platforms.",
+      "options": [
+        {
+          "id": "A",
+          "text": "biased"
+        },
+        {
+          "id": "B",
+          "text": "commercial"
+        },
+        {
+          "id": "C",
+          "text": "viral"
+        },
+        {
+          "id": "D",
+          "text": "reliable"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\n'Go viral on social platforms' = trở nên cực kỳ phổ biến và lan truyền trên mạng xã hội."
+    },
+    {
+      "order": 47,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 47:** A successful _______ campaign can spread brand awareness worldwide without spending much on TV ads.",
+      "options": [
+        {
+          "id": "A",
+          "text": "viral"
+        },
+        {
+          "id": "B",
+          "text": "biased"
+        },
+        {
+          "id": "C",
+          "text": "circulated"
+        },
+        {
+          "id": "D",
+          "text": "broadcast"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\n'Viral campaign' = chiến dịch lan truyền tạo hiệu ứng trên mạng."
+    },
+    {
+      "order": 48,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 48:** The warning message about the computer virus went _______ across chat groups within minutes.",
+      "options": [
+        {
+          "id": "A",
+          "text": "reliable"
+        },
+        {
+          "id": "B",
+          "text": "viral"
+        },
+        {
+          "id": "C",
+          "text": "commercial"
+        },
+        {
+          "id": "D",
+          "text": "biased"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\n'Went viral' = lan truyền nhanh chóng."
+    },
+    {
+      "order": 49,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 49:** Which of the following refers to the total number of newspaper copies distributed each day?",
+      "options": [
+        {
+          "id": "A",
+          "text": "broadcast"
+        },
+        {
+          "id": "B",
+          "text": "circulation"
+        },
+        {
+          "id": "C",
+          "text": "publicity"
+        },
+        {
+          "id": "D",
+          "text": "bias"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\n'Circulation' là lượng phát hành ấn bản báo in. 'Broadcast' là phát sóng, 'publicity' là sự chú ý của công chúng, 'bias' là sự thiên vị."
+    },
+    {
+      "order": 50,
+      "sectionName": "Từ vựng cốt lõi Unit 7",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 50:** To build customer trust, businesses must provide _______ information and avoid misleading _______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "reliable - commercials"
+        },
+        {
+          "id": "B",
+          "text": "biased - broadcasts"
+        },
+        {
+          "id": "C",
+          "text": "viral - circulations"
+        },
+        {
+          "id": "D",
+          "text": "public - platforms"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\n'Reliable information' (thông tin đáng tin cậy) và 'misleading commercials' (các mẩu quảng cáo gây hiểu lầm)."
+    },
+    {
+      "order": 51,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 51:** The breaking news was _______ shocking that everyone in the office stopped working.",
+      "options": [
+        {
+          "id": "A",
+          "text": "such"
+        },
+        {
+          "id": "B",
+          "text": "so"
+        },
+        {
+          "id": "C",
+          "text": "too"
+        },
+        {
+          "id": "D",
+          "text": "very"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nCấu trúc Mệnh đề kết quả: 'S + be + so + adj (shocking) + that + Clause' (quá gây sốc đến nỗi mà)."
+    },
+    {
+      "order": 52,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 52:** He is only a beginner, but he speaks as if he _______ an experienced journalist.",
+      "options": [
+        {
+          "id": "A",
+          "text": "were"
+        },
+        {
+          "id": "B",
+          "text": "is"
+        },
+        {
+          "id": "C",
+          "text": "has been"
+        },
+        {
+          "id": "D",
+          "text": "will be"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nMệnh đề cách thức giả định trái ngược hiện tại: sau 'as if', to-be chia 'WERE' cho mọi ngôi!"
+    },
+    {
+      "order": 53,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 53:** It was _______ an exciting documentary that our whole family watched it until midnight.",
+      "options": [
+        {
+          "id": "A",
+          "text": "so"
+        },
+        {
+          "id": "B",
+          "text": "such"
+        },
+        {
+          "id": "C",
+          "text": "too"
+        },
+        {
+          "id": "D",
+          "text": "very"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nCấu trúc Mệnh đề kết quả: 'such + a/an + adj + N số ít (an exciting documentary) + that'."
+    },
+    {
+      "order": 54,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 54:** The students conducted the chemistry experiment _______ their teacher had guided them.",
+      "options": [
+        {
+          "id": "A",
+          "text": "just as"
+        },
+        {
+          "id": "B",
+          "text": "so that"
+        },
+        {
+          "id": "C",
+          "text": "such that"
+        },
+        {
+          "id": "D",
+          "text": "due to"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nMệnh đề cách thức: 'just as' = đúng như là (làm thí nghiệm đúng như thầy giáo đã hướng dẫn)."
+    },
+    {
+      "order": 55,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 55:** There were _______ many commercial banners on the website that I couldn't find the article.",
+      "options": [
+        {
+          "id": "A",
+          "text": "such"
+        },
+        {
+          "id": "B",
+          "text": "so"
+        },
+        {
+          "id": "C",
+          "text": "too"
+        },
+        {
+          "id": "D",
+          "text": "much"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nQuy tắc định lượng: đi với 'many / few' luôn dùng 'SO' -> 'so many commercial banners that...'."
+    },
+    {
+      "order": 56,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 56:** She described the traffic accident vividly as though she _______ it with her own eyes yesterday.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had seen"
+        },
+        {
+          "id": "B",
+          "text": "sees"
+        },
+        {
+          "id": "C",
+          "text": "has seen"
+        },
+        {
+          "id": "D",
+          "text": "is seeing"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nGiả định trái ngược quá khứ (hôm qua thực tế không chứng kiến) -> sau 'as though' lùi về Quá khứ hoàn thành 'had seen'."
+    },
+    {
+      "order": 57,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 57:** They are _______ reliable news outlets that millions of readers trust them daily.",
+      "options": [
+        {
+          "id": "A",
+          "text": "so"
+        },
+        {
+          "id": "B",
+          "text": "such a"
+        },
+        {
+          "id": "C",
+          "text": "such"
+        },
+        {
+          "id": "D",
+          "text": "too"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\nDanh từ số nhiều 'news outlets' (không có a/an) -> dùng 'such + adj + N số nhiều + that'."
+    },
+    {
+      "order": 58,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 58:** Please fill in your application form _______ instructed in the official guideline.",
+      "options": [
+        {
+          "id": "A",
+          "text": "so"
+        },
+        {
+          "id": "B",
+          "text": "as"
+        },
+        {
+          "id": "C",
+          "text": "such"
+        },
+        {
+          "id": "D",
+          "text": "like as"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nMệnh đề cách thức: 'as instructed' = theo như / đúng như đã được hướng dẫn."
+    },
+    {
+      "order": 59,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 59:** The speaker spoke _______ quickly that the foreign reporters could not take down notes.",
+      "options": [
+        {
+          "id": "A",
+          "text": "such"
+        },
+        {
+          "id": "B",
+          "text": "so"
+        },
+        {
+          "id": "C",
+          "text": "very"
+        },
+        {
+          "id": "D",
+          "text": "too"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nCấu trúc: 'S + V + so + adv (quickly) + that + Clause' (nói nhanh đến nỗi mà không ghi kịp)."
+    },
+    {
+      "order": 60,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 60:** Look at those dark storm clouds! It looks as if it _______ to rain heavily.",
+      "options": [
+        {
+          "id": "A",
+          "text": "is going"
+        },
+        {
+          "id": "B",
+          "text": "were"
+        },
+        {
+          "id": "C",
+          "text": "had been"
+        },
+        {
+          "id": "D",
+          "text": "would have been"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nCó dấu hiệu thực tế trời sắp mưa (nhìn mây đen kìa) -> không dùng giả định lùi thì, chia hiện tại 'is going to rain'."
+    },
+    {
+      "order": 61,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 61:** The company spent _______ much money on TV commercials that they had no budget left for research.",
+      "options": [
+        {
+          "id": "A",
+          "text": "such"
+        },
+        {
+          "id": "B",
+          "text": "too"
+        },
+        {
+          "id": "C",
+          "text": "so"
+        },
+        {
+          "id": "D",
+          "text": "such a"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\nQuy tắc lượng từ: đi với danh từ không đếm được 'money' dùng 'so much money that...'."
+    },
+    {
+      "order": 62,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 62:** He orders everyone around in the newsroom as if he _______ the chief editor.",
+      "options": [
+        {
+          "id": "A",
+          "text": "is"
+        },
+        {
+          "id": "B",
+          "text": "were"
+        },
+        {
+          "id": "C",
+          "text": "will be"
+        },
+        {
+          "id": "D",
+          "text": "are"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nThực tế cậu ấy không phải tổng biên tập -> giả định hiện tại dùng 'were' cho mọi ngôi sau 'as if'."
+    },
+    {
+      "order": 63,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 63:** It was _______ bad weather that the outdoor broadcasting event had to be postponed.",
+      "options": [
+        {
+          "id": "A",
+          "text": "such a"
+        },
+        {
+          "id": "B",
+          "text": "so"
+        },
+        {
+          "id": "C",
+          "text": "such"
+        },
+        {
+          "id": "D",
+          "text": "too"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\n'Weather' là danh từ không đếm được, tuyệt đối không dùng a/an -> 'such + adj + N không đếm được + that'."
+    },
+    {
+      "order": 64,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 64:** In informal daily conversation, people often say: 'He talks _______ a radio presenter.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "like"
+        },
+        {
+          "id": "B",
+          "text": "as if like"
+        },
+        {
+          "id": "C",
+          "text": "such"
+        },
+        {
+          "id": "D",
+          "text": "so that"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nTrong văn phong nói thân mật, giới từ 'like' thường đi với danh từ để so sánh cách thức ('talks like a presenter')."
+    },
+    {
+      "order": 65,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 65:** There were _______ few copies of the morning paper left that many customers went home empty-handed.",
+      "options": [
+        {
+          "id": "A",
+          "text": "such"
+        },
+        {
+          "id": "B",
+          "text": "so"
+        },
+        {
+          "id": "C",
+          "text": "too"
+        },
+        {
+          "id": "D",
+          "text": "very"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nĐi với lượng từ 'few' luôn dùng 'SO' -> 'so few copies that...'."
+    },
+    {
+      "order": 66,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 66:** The injured reporter stood up and smiled as though nothing bad _______ to him.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had happened"
+        },
+        {
+          "id": "B",
+          "text": "happens"
+        },
+        {
+          "id": "C",
+          "text": "is happening"
+        },
+        {
+          "id": "D",
+          "text": "will happen"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nSự việc chấn thương đã xảy ra rồi, nhưng cười như thể chưa có chuyện gì xảy ra -> dùng 'had happened'."
+    },
+    {
+      "order": 67,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 67:** It was _______ popular a video that it attracted ten million views within forty-eight hours.",
+      "options": [
+        {
+          "id": "A",
+          "text": "such"
+        },
+        {
+          "id": "B",
+          "text": "too"
+        },
+        {
+          "id": "C",
+          "text": "so"
+        },
+        {
+          "id": "D",
+          "text": "very"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\nCấu trúc đảo ngữ tính từ với SO: 'so + adj (popular) + a/an + Noun (video) + that' tương đương 'such a popular video that'."
+    },
+    {
+      "order": 68,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 68:** That young blogger spends money lavishly as if he _______ a multimillionaire.",
+      "options": [
+        {
+          "id": "A",
+          "text": "were"
+        },
+        {
+          "id": "B",
+          "text": "is"
+        },
+        {
+          "id": "C",
+          "text": "has been"
+        },
+        {
+          "id": "D",
+          "text": "can be"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nThực tế anh ta không phải triệu phú -> giả định hiện tại dùng 'as if he were'."
+    },
+    {
+      "order": 69,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 69:** The drama had _______ a dramatic ending that many viewers burst into tears.",
+      "options": [
+        {
+          "id": "A",
+          "text": "so"
+        },
+        {
+          "id": "B",
+          "text": "such"
+        },
+        {
+          "id": "C",
+          "text": "too"
+        },
+        {
+          "id": "D",
+          "text": "very"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\n'Ending' là danh từ đếm được số ít -> 'such + a + adj + Noun + that'."
+    },
+    {
+      "order": 70,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 70:** Everything happened during the live broadcast _______ we had carefully planned.",
+      "options": [
+        {
+          "id": "A",
+          "text": "just as"
+        },
+        {
+          "id": "B",
+          "text": "such as"
+        },
+        {
+          "id": "C",
+          "text": "so that"
+        },
+        {
+          "id": "D",
+          "text": "because"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\n'Just as we had carefully planned' = đúng như những gì chúng tôi đã lên kế hoạch tỉ mỉ."
+    },
+    {
+      "order": 71,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 71:** The news anchor had _______ little time to prepare that she felt quite nervous before going on air.",
+      "options": [
+        {
+          "id": "A",
+          "text": "such"
+        },
+        {
+          "id": "B",
+          "text": "too"
+        },
+        {
+          "id": "C",
+          "text": "so"
+        },
+        {
+          "id": "D",
+          "text": "such a"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\nĐi với lượng từ 'little' dùng 'so little time that...'."
+    },
+    {
+      "order": 72,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 72:** She talks as though she _______ everything about digital marketing, but actually she knows very little.",
+      "options": [
+        {
+          "id": "A",
+          "text": "knew"
+        },
+        {
+          "id": "B",
+          "text": "knows"
+        },
+        {
+          "id": "C",
+          "text": "has known"
+        },
+        {
+          "id": "D",
+          "text": "will know"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nThực tế cô ấy biết rất ít (she knows very little) -> giả định hiện tại lùi thì về quá khứ đơn 'knew'."
+    },
+    {
+      "order": 73,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 73:** The smartphone screen was _______ small that my grandfather had trouble reading the text.",
+      "options": [
+        {
+          "id": "A",
+          "text": "such"
+        },
+        {
+          "id": "B",
+          "text": "so"
+        },
+        {
+          "id": "C",
+          "text": "such a"
+        },
+        {
+          "id": "D",
+          "text": "as"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nCấu trúc: 'so + adj (small) + that + Clause'."
+    },
+    {
+      "order": 74,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 74:** Listen to his rough voice! It sounds as if he _______ a bad cold.",
+      "options": [
+        {
+          "id": "A",
+          "text": "has"
+        },
+        {
+          "id": "B",
+          "text": "had had"
+        },
+        {
+          "id": "C",
+          "text": "were having"
+        },
+        {
+          "id": "D",
+          "text": "would have"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nCó bằng chứng thực tế từ giọng nói khàn đặc -> dùng thì hiện tại đơn 'has a cold', không lùi thì giả định."
+    },
+    {
+      "order": 75,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 75:** The journalist presented _______ compelling evidence that the judge immediately agreed.",
+      "options": [
+        {
+          "id": "A",
+          "text": "so"
+        },
+        {
+          "id": "B",
+          "text": "such"
+        },
+        {
+          "id": "C",
+          "text": "such an"
+        },
+        {
+          "id": "D",
+          "text": "too"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\n'Evidence' là danh từ không đếm được -> 'such + adj + N không đếm được + that'."
+    },
+    {
+      "order": 76,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 76:** Don't treat me as if I _______ a child; I am an eighteen-year-old student now!",
+      "options": [
+        {
+          "id": "A",
+          "text": "am"
+        },
+        {
+          "id": "B",
+          "text": "were"
+        },
+        {
+          "id": "C",
+          "text": "will be"
+        },
+        {
+          "id": "D",
+          "text": "have been"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nThực tế tôi 18 tuổi, không phải trẻ em -> sau 'as if' chia 'were' cho ngôi 'I'."
+    },
+    {
+      "order": 77,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 77:** It rained _______ heavily that all camera crew had to pack up their equipment.",
+      "options": [
+        {
+          "id": "A",
+          "text": "such"
+        },
+        {
+          "id": "B",
+          "text": "so"
+        },
+        {
+          "id": "C",
+          "text": "too"
+        },
+        {
+          "id": "D",
+          "text": "very"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\n'Rain so heavily that' (mưa to đến nỗi mà camera phải thu dọn máy móc)."
+    },
+    {
+      "order": 78,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 78:** They greeted the foreign reporter warmly as if they _______ him for a very long time.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had known"
+        },
+        {
+          "id": "B",
+          "text": "know"
+        },
+        {
+          "id": "C",
+          "text": "are knowing"
+        },
+        {
+          "id": "D",
+          "text": "will know"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nTrước đó chưa từng quen biết -> giả định trải nghiệm quá khứ dùng 'had known'."
+    },
+    {
+      "order": 79,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 79:** The Internet is _______ a powerful medium that it connects people across all continents.",
+      "options": [
+        {
+          "id": "A",
+          "text": "so"
+        },
+        {
+          "id": "B",
+          "text": "such"
+        },
+        {
+          "id": "C",
+          "text": "too"
+        },
+        {
+          "id": "D",
+          "text": "as"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\n'Medium' là danh từ số ít -> 'such + a + adj + N + that'."
+    },
+    {
+      "order": 80,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 80:** Please sit quietly and do _______ you are told while the red recording light is on.",
+      "options": [
+        {
+          "id": "A",
+          "text": "so"
+        },
+        {
+          "id": "B",
+          "text": "such"
+        },
+        {
+          "id": "C",
+          "text": "as"
+        },
+        {
+          "id": "D",
+          "text": "like as"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\nMệnh đề chỉ cách thức: 'Do as you are told' = Làm theo như những gì con được dặn."
+    },
+    {
+      "order": 81,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 81:** The article about digital media was _______ interesting that I shared it with all my friends.",
+      "options": [
+        {
+          "id": "A",
+          "text": "so"
+        },
+        {
+          "id": "B",
+          "text": "such"
+        },
+        {
+          "id": "C",
+          "text": "such an"
+        },
+        {
+          "id": "D",
+          "text": "very"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\n'So + adj (interesting) + that + Clause'."
+    },
+    {
+      "order": 82,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 82:** He walked into the TV studio as though he _______ the owner of the network.",
+      "options": [
+        {
+          "id": "A",
+          "text": "were"
+        },
+        {
+          "id": "B",
+          "text": "is"
+        },
+        {
+          "id": "C",
+          "text": "are"
+        },
+        {
+          "id": "D",
+          "text": "has been"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nGiả định trái thực tế ở hiện tại: 'as though he were the owner'."
+    },
+    {
+      "order": 83,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 83:** Social media has _______ great influence that it can change public opinion quickly.",
+      "options": [
+        {
+          "id": "A",
+          "text": "so"
+        },
+        {
+          "id": "B",
+          "text": "such"
+        },
+        {
+          "id": "C",
+          "text": "such a"
+        },
+        {
+          "id": "D",
+          "text": "too"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\n'Influence' trong trường hợp này là danh từ không đếm được -> dùng 'such + adj + N + that'."
+    },
+    {
+      "order": 84,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 84:** The politician answered questions smoothly as if he _______ the interview sheet in advance.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had received"
+        },
+        {
+          "id": "B",
+          "text": "receives"
+        },
+        {
+          "id": "C",
+          "text": "is receiving"
+        },
+        {
+          "id": "D",
+          "text": "has received"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nGiả định việc đã xảy ra trước cuộc phỏng vấn trong quá khứ -> dùng 'had received'."
+    },
+    {
+      "order": 85,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 85:** Our Internet connection was _______ slow that the live broadcast kept buffering.",
+      "options": [
+        {
+          "id": "A",
+          "text": "such"
+        },
+        {
+          "id": "B",
+          "text": "so"
+        },
+        {
+          "id": "C",
+          "text": "such a"
+        },
+        {
+          "id": "D",
+          "text": "very"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\n'So + adj (slow) + that'."
+    },
+    {
+      "order": 86,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 86:** She pronounced each English word clearly _______ her teacher had demonstrated.",
+      "options": [
+        {
+          "id": "A",
+          "text": "as"
+        },
+        {
+          "id": "B",
+          "text": "so"
+        },
+        {
+          "id": "C",
+          "text": "such"
+        },
+        {
+          "id": "D",
+          "text": "despite"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nMệnh đề cách thức: 'as her teacher had demonstrated' (như cô giáo đã làm mẫu)."
+    },
+    {
+      "order": 87,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 87:** They created _______ memorable commercials that everybody was humming the theme song.",
+      "options": [
+        {
+          "id": "A",
+          "text": "so"
+        },
+        {
+          "id": "B",
+          "text": "such a"
+        },
+        {
+          "id": "C",
+          "text": "such"
+        },
+        {
+          "id": "D",
+          "text": "too"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\n'Commercials' là danh từ số nhiều -> dùng 'such + adj + N số nhiều + that'."
+    },
+    {
+      "order": 88,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 88:** The teacher explained the complex theory as if it _______ the simplest thing in the world.",
+      "options": [
+        {
+          "id": "A",
+          "text": "were"
+        },
+        {
+          "id": "B",
+          "text": "is"
+        },
+        {
+          "id": "C",
+          "text": "are"
+        },
+        {
+          "id": "D",
+          "text": "will be"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nGiả định hiện tại với as if: to-be dùng 'were' cho mọi ngôi."
+    },
+    {
+      "order": 89,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 89:** The stadium crowd cheered _______ loudly that the sports commentator could hardly be heard.",
+      "options": [
+        {
+          "id": "A",
+          "text": "such"
+        },
+        {
+          "id": "B",
+          "text": "so"
+        },
+        {
+          "id": "C",
+          "text": "very"
+        },
+        {
+          "id": "D",
+          "text": "too"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\n'So + adv (loudly) + that'."
+    },
+    {
+      "order": 90,
+      "sectionName": "Ngữ pháp: Mệnh đề Cách thức & Kết quả (Trộn đều)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 90:** Water drops are falling on the window. It looks as if it _______ to rain harder.",
+      "options": [
+        {
+          "id": "A",
+          "text": "is starting"
+        },
+        {
+          "id": "B",
+          "text": "were starting"
+        },
+        {
+          "id": "C",
+          "text": "had started"
+        },
+        {
+          "id": "D",
+          "text": "would start"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nCó giọt nước rơi trên cửa sổ (thực tế đang diễn ra) -> chia thì hiện tại tiếp diễn 'is starting'."
+    },
+    {
+      "order": 91,
+      "sectionName": "Đảo ngữ & Viết lại câu chuẩn thi THPTQG",
+      "content": "Mark the letter A, B, C, or D to indicate the sentence that has the closest meaning to the original sentence:\n\n**Question 91:** The headline was so sensational that everyone clicked on it.\nWhich sentence has the closest meaning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "So sensational was the headline that everyone clicked on it."
+        },
+        {
+          "id": "B",
+          "text": "So sensational the headline was that everyone clicked on it."
+        },
+        {
+          "id": "C",
+          "text": "Such sensational was the headline that everyone clicked on it."
+        },
+        {
+          "id": "D",
+          "text": "The headline was such sensational that everyone clicked on it."
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nĐảo ngữ với SO đứng đầu câu: 'So + adj + be + S + that...' -> 'So sensational was the headline that everyone clicked on it.'"
+    },
+    {
+      "order": 92,
+      "sectionName": "Đảo ngữ & Viết lại câu chuẩn thi THPTQG",
+      "content": "Mark the letter A, B, C, or D to indicate the sentence that has the closest meaning to the original sentence:\n\n**Question 92:** The media coverage was so extensive that everyone in the country knew about the scandal.\nWhich sentence has the closest meaning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Such extensive was the media coverage that everyone knew it."
+        },
+        {
+          "id": "B",
+          "text": "Such was the extensive media coverage that everyone in the country knew about the scandal."
+        },
+        {
+          "id": "C",
+          "text": "So was the media coverage extensive that everyone knew it."
+        },
+        {
+          "id": "D",
+          "text": "Extensive was such media coverage that everyone knew it."
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nĐảo ngữ với SUCH đứng đầu câu: 'Such + be + (adj) + Noun + that...' -> 'Such was the extensive media coverage that...'"
+    },
+    {
+      "order": 93,
+      "sectionName": "Đảo ngữ & Viết lại câu chuẩn thi THPTQG",
+      "content": "Mark the letter A, B, C, or D to indicate the sentence that has the closest meaning to the original sentence:\n\n**Question 93:** The documentary was so boring that I fell asleep halfway through.\nWhich sentence has the closest meaning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It was so boring documentary that I fell asleep halfway through."
+        },
+        {
+          "id": "B",
+          "text": "The documentary was such boring that I fell asleep halfway through."
+        },
+        {
+          "id": "C",
+          "text": "It was such a boring documentary that I fell asleep halfway through."
+        },
+        {
+          "id": "D",
+          "text": "It was too a boring documentary for me to fall asleep."
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\nChuyển đổi kinh điển từ 'so...that' sang 'such...that': 'The documentary was so boring that...' = 'It was such a boring documentary that...'"
+    },
+    {
+      "order": 94,
+      "sectionName": "Đảo ngữ & Viết lại câu chuẩn thi THPTQG",
+      "content": "Mark the letter A, B, C, or D to indicate the sentence that has the closest meaning to the original sentence:\n\n**Question 94:** Prime-time TV advertising is too expensive for small businesses to afford.\nWhich sentence has the closest meaning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Prime-time TV advertising is such expensive that small businesses cannot afford it."
+        },
+        {
+          "id": "B",
+          "text": "Prime-time TV advertising is so expensive that small businesses cannot afford it."
+        },
+        {
+          "id": "C",
+          "text": "Prime-time TV advertising is not expensive enough for small businesses to afford it."
+        },
+        {
+          "id": "D",
+          "text": "Prime-time TV advertising is cheap enough for small businesses to afford."
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B**\n\nCông thức chuyển đổi: 'S + be + too + adj + to V' = 'S + be + so + adj + that + S + cannot + V'."
+    },
+    {
+      "order": 95,
+      "sectionName": "Đảo ngữ & Viết lại câu chuẩn thi THPTQG",
+      "content": "Mark the letter A, B, C, or D to indicate the sentence that has the closest meaning to the original sentence:\n\n**Question 95:** The audio quality was not clear enough for us to understand the reporter's words.\nWhich sentence has the closest meaning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The audio quality was so poor that we could not understand the reporter's words."
+        },
+        {
+          "id": "B",
+          "text": "The audio quality was such poor that we could understand the words."
+        },
+        {
+          "id": "C",
+          "text": "The audio quality was too clear for us to understand the words."
+        },
+        {
+          "id": "D",
+          "text": "The audio quality was so clear that we could not understand the words."
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nCông thức chuyển từ 'not adj enough to V' sang 'so...that': âm thanh không đủ rõ = âm thanh quá tệ/rè đến nỗi không hiểu được."
+    },
+    {
+      "order": 96,
+      "sectionName": "Đảo ngữ & Viết lại câu chuẩn thi THPTQG",
+      "content": "Mark the letter A, B, C, or D to indicate the sentence that has the closest meaning to the original sentence:\n\n**Question 96:** In fact, Nam is not an experienced journalist, but he acts like one.\nWhich sentence has the closest meaning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nam acts as if he is an experienced journalist."
+        },
+        {
+          "id": "B",
+          "text": "Nam acts as though he has been an experienced journalist."
+        },
+        {
+          "id": "C",
+          "text": "Nam acts as if he were an experienced journalist."
+        },
+        {
+          "id": "D",
+          "text": "Nam acted as if he would be an experienced journalist."
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\nChuyển thực tế trái ngược hiện tại sang 'as if': Nam không phải nhà báo kỳ cựu nhưng cư xử như thể là -> dùng thức giả định 'as if he were'."
+    },
+    {
+      "order": 97,
+      "sectionName": "Đảo ngữ & Viết lại câu chuẩn thi THPTQG",
+      "content": "Mark the letter A, B, C, or D to indicate the sentence that has the closest meaning to the original sentence:\n\n**Question 97:** He doesn't have a lot of money, but he spends money like a millionaire.\nWhich sentence has the closest meaning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "He spends money as if he were a millionaire."
+        },
+        {
+          "id": "B",
+          "text": "He spends money as if he is a millionaire."
+        },
+        {
+          "id": "C",
+          "text": "He spent money as if he had been a millionaire."
+        },
+        {
+          "id": "D",
+          "text": "He spends money as though he has a millionaire."
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nGiả định trái ngược thực tế ở hiện tại: 'He spends money as if he were a millionaire'."
+    },
+    {
+      "order": 98,
+      "sectionName": "Đảo ngữ & Viết lại câu chuẩn thi THPTQG",
+      "content": "Mark the letter A, B, C, or D to indicate the sentence that has the closest meaning to the original sentence:\n\n**Question 98:** The fake news spread so rapidly that the police could hardly control the public panic.\nWhich sentence has the closest meaning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "So rapidly the fake news spread that the police could hardly control it."
+        },
+        {
+          "id": "B",
+          "text": "Such rapidly did the fake news spread that the police could hardly control it."
+        },
+        {
+          "id": "C",
+          "text": "So rapidly did the fake news spread that the police could hardly control it."
+        },
+        {
+          "id": "D",
+          "text": "Rapidly so did the fake news spread that the police could hardly control it."
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C**\n\nĐảo ngữ với trạng từ đứng đầu câu: 'So + adv + trợ động từ (did) + S + V + that...' -> 'So rapidly did the fake news spread that...'"
+    },
+    {
+      "order": 99,
+      "sectionName": "Đảo ngữ & Viết lại câu chuẩn thi THPTQG",
+      "content": "Mark the letter A, B, C, or D to indicate the sentence that has the closest meaning to the original sentence:\n\n**Question 99:** The music was so loud that we couldn't hear each other speak.\nWhich sentence has the closest meaning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It was such loud music that we couldn't hear each other speak."
+        },
+        {
+          "id": "B",
+          "text": "It was such a loud music that we couldn't hear each other speak."
+        },
+        {
+          "id": "C",
+          "text": "The music was too loud for us to hear each other speak."
+        },
+        {
+          "id": "D",
+          "text": "Both A and C are correct."
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D**\n\n'Music' là danh từ không đếm được nên dùng 'such loud music that' (A đúng). Ngoài ra 'The music was too loud for us to hear' cũng đúng (C đúng). Do đó đáp án là D!"
+    },
+    {
+      "order": 100,
+      "sectionName": "Đảo ngữ & Viết lại câu chuẩn thi THPTQG",
+      "content": "Mark the letter A, B, C, or D to indicate the sentence that has the closest meaning to the original sentence:\n\n**Question 100:** The news anchor reported the natural disaster accurately, exactly according to eyewitness accounts.\nWhich sentence has the closest meaning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The news anchor reported the natural disaster just as eyewitnesses had described it."
+        },
+        {
+          "id": "B",
+          "text": "The news anchor reported the natural disaster so that eyewitnesses described it."
+        },
+        {
+          "id": "C",
+          "text": "The news anchor reported the natural disaster such as eyewitnesses described it."
+        },
+        {
+          "id": "D",
+          "text": "The news anchor reported the natural disaster as if eyewitnesses had not seen it."
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A**\n\nDùng 'just as' (đúng như) để nối mệnh đề trạng ngữ chỉ cách thức diễn đạt sự việc đúng theo lời nhân chứng kể lại."
+    }
+  ]
+}
