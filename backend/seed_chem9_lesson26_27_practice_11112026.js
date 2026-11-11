@@ -1,0 +1,648 @@
+const fs = require('fs');
+const path = require('path');
+const { PrismaClient } = require(path.resolve(__dirname, 'node_modules/@prisma/client'));
+const prisma = new PrismaClient();
+
+const CONSTANTS = {
+  TEACHER_ID: 'dc62e5df-2344-4785-b058-b95f5dbe0983', // Thầy Thức
+  STUDENT_ID: '4745136c-bd25-4f45-a488-9f00f2121b70', // Keithley Lake
+  SUBJECT_ID: '6fc7387b-13b8-4e27-8240-a60c03dc1d51', // CHEM_9
+  ASSIGNED_DATE: '2026-11-11'
+};
+
+const QUESTIONS_DATA = [
+  // =========================================================================
+  // SECTOR 1: MERCURY ORBIT • MOLECULAR BLUEPRINTS & FUNCTIONAL GROUPS (Q1 – Q4)
+  // =========================================================================
+  {
+    order_index: 1,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: 'Sector 1: Mercury Orbit • Characteristic Group of Ethylic Alcohol',
+    content_markdown: 'Astronaut Cadet Keithley analyzes a fuel canister of pure ethylic alcohol ($\\text{C}_2\\text{H}_5\\text{OH}$). Which group of atoms is responsible for the characteristic chemical properties of ethylic alcohol?',
+    options: [
+      { id: 'A', text: 'Methyl group ($-\\text{CH}_3$)' },
+      { id: 'B', text: 'Ethyl group ($-\\text{CH}_2-\\text{CH}_3$)' },
+      { id: 'C', text: 'Hydroxyl group ($-\\text{OH}$)' },
+      { id: 'D', text: 'The entire saturated hydrocarbon skeleton' }
+    ],
+    correct_option_id: 'C',
+    explanation: 'The hydroxyl group ($-\\text{OH}$) bonded directly to the ethyl radical is the characteristic functional group of alcohols, determining signature chemical properties such as active metal displacement and esterification.'
+  },
+  {
+    order_index: 2,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: 'Sector 1: Mercury Orbit • Acidic Functional Group of Acetic Acid',
+    content_markdown: 'In the chemical telemetry module, Keithley tests a sample of acetic acid ($\\text{CH}_3\\text{COOH}$). Which functional group imparts the characteristic acidic properties to acetic acid?',
+    options: [
+      { id: 'A', text: 'Methyl group ($-\\text{CH}_3$)' },
+      { id: 'B', text: 'Carbonyl group ($-\\text{CO}-$)' },
+      { id: 'C', text: 'Carboxyl group ($-\\text{COOH}$)' },
+      { id: 'D', text: 'Isolated hydroxyl group ($-\\text{OH}$)' }
+    ],
+    correct_option_id: 'C',
+    explanation: 'The carboxyl group ($-\\text{COOH}$) combines a carbonyl group ($>\\text{C}=\\text{O}$) and a hydroxyl group ($-\\text{OH}$). The polar carbonyl group draws electron density away from the $\\text{O}-\\text{H}$ bond, enabling the release of $\\text{H}^+$ ions in water to display acidic properties.'
+  },
+  {
+    order_index: 3,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: 'Sector 1: Mercury Orbit • Physical Properties of Ethylic Alcohol',
+    content_markdown: 'At standard ambient temperature and pressure on the orbital station, which set of physical properties correctly describes pure ethylic alcohol?',
+    options: [
+      { id: 'A', text: 'Colorless liquid, characteristic pleasant aroma, infinitely miscible in water' },
+      { id: 'B', text: 'Colorless liquid, odorless, completely insoluble in water' },
+      { id: 'C', text: 'White liquid, fragrant scent, partially soluble in water' },
+      { id: 'D', text: 'Pale yellow liquid, lighter than water and completely insoluble' }
+    ],
+    correct_option_id: 'A',
+    explanation: 'Pure ethylic alcohol ($\\text{C}_2\\text{H}_5\\text{OH}$) is a clear, colorless liquid with a characteristic pleasant aroma, boiling at $78.3^\\circ\\text{C}$, lighter than water ($D = 0.789\\text{ g/mL}$), and infinitely miscible with water in all proportions.'
+  },
+  {
+    order_index: 4,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: 'Sector 1: Mercury Orbit • Physical Properties of Acetic Acid',
+    content_markdown: 'Which statement accurately describes the macroscopic physical properties of acetic acid ($\\text{CH}_3\\text{COOH}$)?',
+    options: [
+      { id: 'A', text: 'Milky white liquid with a spicy taste, insoluble in water' },
+      { id: 'B', text: 'Colorless liquid with a distinct sour taste, infinitely miscible in water' },
+      { id: 'C', text: 'Pungent choking gas, slightly soluble in water' },
+      { id: 'D', text: 'Colorless liquid with a sweet taste, highly volatile and non-polar' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'Acetic acid ($\\text{CH}_3\\text{COOH}$) is a colorless liquid with a pungent sour odor, distinct sour taste of vinegar, and infinite solubility in water in all proportions.'
+  },
+
+  // =========================================================================
+  // SECTOR 2: VENUS BASE • PHYSICAL TELEMETRY, ABV & SYNTHESIS (Q5 – Q8)
+  // =========================================================================
+  {
+    order_index: 5,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: 'Sector 2: Venus Base • Definition of Alcohol by Volume (ABV)',
+    content_markdown: 'In spacecraft fluid management, Alcohol by Volume (ABV / Alcohol Degree) is scientifically defined as:',
+    options: [
+      { id: 'A', text: 'The number of moles of ethylic alcohol present in $100\\text{ mL}$ of an alcohol-water mixture' },
+      { id: 'B', text: 'The number of grams of ethylic alcohol present in $100\\text{ mL}$ of alcohol solution' },
+      { id: 'C', text: 'The number of milliliters of pure ethylic alcohol present in $100\\text{ mL}$ of alcohol-water solution at $20^\\circ\\text{C}$' },
+      { id: 'D', text: 'The volume of distilled water required to mix with $100\\text{ mL}$ of pure ethylic alcohol' }
+    ],
+    correct_option_id: 'C',
+    explanation: 'Alcohol degree (ABV) is the number of milliliters of pure ethylic alcohol contained in $100\\text{ mL}$ of an alcohol-water solution measured at $20^\\circ\\text{C}$.'
+  },
+  {
+    order_index: 6,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: 'Sector 2: Venus Base • Sodium Reaction with Pure Ethanol',
+    content_markdown: 'An astronaut drops a small pellet of metallic sodium ($\\text{Na}$) into a test tube containing pure ethylic alcohol. What macroscopic phenomenon is observed?',
+    options: [
+      { id: 'A', text: 'The sodium pellet does not dissolve and remains stationary at the bottom without reaction' },
+      { id: 'B', text: 'The sodium pellet floats on the surface, catching fire with a bright yellow flame' },
+      { id: 'C', text: 'The sodium pellet sinks to the bottom, gradually dissolves, and effervescent colorless gas bubbles evolve' },
+      { id: 'D', text: 'A dense white precipitate immediately forms at the bottom of the tube' }
+    ],
+    correct_option_id: 'C',
+    explanation: 'Sodium is denser ($D \\approx 0.97\\text{ g/cm}^3$) than ethanol ($D \\approx 0.789\\text{ g/mL}$), so it sinks to the bottom. It reacts steadily without exploding: $2\\text{C}_2\\text{H}_5\\text{OH} + 2\\text{Na} \\to 2\\text{C}_2\\text{H}_5\\text{ONa} + \\text{H}_2\\uparrow$.'
+  },
+  {
+    order_index: 7,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: 'Sector 2: Venus Base • Biological Fermentation Precursor',
+    content_markdown: 'In the life support food synthesis unit, table vinegar is manufactured by biological aerobic fermentation from a dilute solution of which organic precursor?',
+    options: [
+      { id: 'A', text: '$\\text{CH}_3\\text{OH}$ (Methanol)' },
+      { id: 'B', text: '$\\text{C}_2\\text{H}_5\\text{OH}$ (Ethylic alcohol)' },
+      { id: 'C', text: '$\\text{CH}_4$ (Methane)' },
+      { id: 'D', text: '$\\text{HCOOH}$ (Formic acid)' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'Vinegar is produced by oxidizing dilute ethylic alcohol ($\\text{C}_2\\text{H}_5\\text{OH}$) with atmospheric oxygen catalyzed by acetic acid bacteria (*Acetobacter*): $\\text{C}_2\\text{H}_5\\text{OH} + \\text{O}_2 \\xrightarrow{\\text{Acetobacter}} \\text{CH}_3\\text{COOH} + \\text{H}_2\\text{O}$.'
+  },
+  {
+    order_index: 8,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: 'Sector 2: Venus Base • Industrial Petrochemical Hydration',
+    content_markdown: 'Which industrial gaseous hydrocarbon undergoes an electrophilic addition reaction with water (acid catalyst, heat) to synthesize ethylic alcohol?',
+    options: [
+      { id: 'A', text: 'Methane ($\\text{CH}_4$)' },
+      { id: 'B', text: 'Ethylene ($\\text{CH}_2=\\text{CH}_2$)' },
+      { id: 'C', text: 'Acetylene ($\\text{CH}\\equiv\\text{CH}$)' },
+      { id: 'D', text: 'Carbon dioxide ($\\text{CO}_2$)' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'In petrochemical synthesis, ethylene gas reacts with steam in the presence of an acid catalyst to produce ethanol: $\\text{CH}_2=\\text{CH}_2 + \\text{H}_2\\text{O} \\xrightarrow{t^\\circ, \\text{H}^+} \\text{C}_2\\text{H}_5\\text{OH}$.'
+  },
+
+  // =========================================================================
+  // SECTOR 3: EARTH MISSION CONTROL • REACTIVITY SCOPE & DISPOSAL (Q9 – Q12)
+  // =========================================================================
+  {
+    order_index: 9,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: 'Sector 3: Earth Control • Reactivity Limitations of Acetic Acid',
+    content_markdown: 'Cadet Keithley conducts reactivity compatibility tests. An aqueous solution of acetic acid ($\\text{CH}_3\\text{COOH}$) does NOT react with which of the following substances?',
+    options: [
+      { id: 'A', text: 'Magnesium metal ribbon ($\\text{Mg}$)' },
+      { id: 'B', text: 'Sodium hydroxide solution ($\\text{NaOH}$)' },
+      { id: 'C', text: 'Limestone rock ($\\text{CaCO}_3$)' },
+      { id: 'D', text: 'Table salt ($\\text{NaCl}$)' }
+    ],
+    correct_option_id: 'D',
+    explanation: 'Acetic acid is a weaker acid than hydrochloric acid ($\\text{HCl}$), so it cannot displace chloride ions from sodium chloride ($\\text{NaCl}$). It reacts readily with active metals ($\\text{Mg}$), bases ($\\text{NaOH}$), and carbonates ($\\text{CaCO}_3$).'
+  },
+  {
+    order_index: 10,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: 'Sector 3: Earth Control • Esterification Product Nomenclature',
+    content_markdown: 'Consider the organic equilibrium reaction: $$\\text{CH}_3\\text{COOH} + \\text{C}_2\\text{H}_5\\text{OH} \\underset{t^\\circ}{\\overset{\\text{conc. } \\text{H}_2\\text{SO}_4}{\\rightleftharpoons}} X + \\text{H}_2\\text{O}$$ Organic compound $X$ is an ester with a pleasant, sweet fruity scent. What is the systematic name of $X$?',
+    options: [
+      { id: 'A', text: 'Methyl acetate' },
+      { id: 'B', text: 'Ethyl acetate' },
+      { id: 'C', text: 'Ethyl formate' },
+      { id: 'D', text: 'Acetic ester' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'The condensation of acetic acid and ethylic alcohol forms ethyl acetate ($\\text{CH}_3\\text{COOC}_2\\text{H}_5$), a volatile ester with a pleasant fruity fragrance.'
+  },
+  {
+    order_index: 11,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: 'Sector 3: Earth Control • Safe Limescale Descaling',
+    content_markdown: 'To remove an insoluble white limescale deposit (chiefly composed of $\\text{CaCO}_3$) coating a spacecraft water boiler, which household liquid provides a safe, non-toxic, and effective cleaning solution?',
+    options: [
+      { id: 'A', text: 'Boiling distilled water' },
+      { id: 'B', text: 'Table vinegar ($\\text{CH}_3\\text{COOH}$)' },
+      { id: 'C', text: 'Dilute saline water ($\\text{NaCl}$)' },
+      { id: 'D', text: 'Medical rubbing alcohol ($70^\\circ$)' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'Vinegar contains acetic acid, which dissolves insoluble calcium carbonate into soluble calcium acetate, water, and carbon dioxide gas: $2\\text{CH}_3\\text{COOH} + \\text{CaCO}_3 \\to (\\text{CH}_3\\text{COO})_2\\text{Ca} + \\text{CO}_2\\uparrow + \\text{H}_2\\text{O}$.'
+  },
+  {
+    order_index: 12,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: 'Sector 3: Earth Control • Safe Sodium Disposal Protocol',
+    content_markdown: 'After completing a laboratory demonstration, an unreacted scrap of metallic sodium ($\\text{Na}$) remains. To dispose of this sodium scrap safely without risk of explosive splatter, into which container should it be placed?',
+    options: [
+      { id: 'A', text: 'A sink basin filled with pure water' },
+      { id: 'B', text: 'A municipal trash bin' },
+      { id: 'C', text: 'A test tube filled with concentrated $96^\\circ$ ethylic alcohol' },
+      { id: 'D', text: 'A beaker containing dilute hydrochloric acid ($\\text{HCl}$)' }
+    ],
+    correct_option_id: 'C',
+    explanation: 'Sodium reacts steadily and mildly with $96^\\circ$ ethanol without violent spattering or detonation (unlike with water or acid), converting the sodium into harmless sodium ethoxide and hydrogen gas safely.'
+  },
+
+  // =========================================================================
+  // SECTOR 4: MARS OUTPOST • REACTION DYNAMICS & COMPARATIVE MATRIX (Q13 – Q15)
+  // =========================================================================
+  {
+    order_index: 13,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: 'Sector 4: Mars Outpost • Medical Disinfection Mechanism',
+    content_markdown: 'In medical disinfection and sanitization protocols, $70^\\circ$ rubbing alcohol is preferred over $90^\\circ$ alcohol because:',
+    options: [
+      { id: 'A', text: '$90^\\circ$ alcohol lacks any bactericidal mechanism' },
+      { id: 'B', text: '$90^\\circ$ alcohol evaporates too rapidly and instantaneously coagulates surface proteins, forming a hard crust that prevents penetration into the pathogen interior' },
+      { id: 'C', text: '$70^\\circ$ alcohol is completely non-flammable at room temperature' },
+      { id: 'D', text: '$70^\\circ$ alcohol is fortified with biological antibiotics' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'At $90^\\circ$, ethanol rapidly dehydrates and denatures the outer bacterial envelope, creating an impermeable shell that shields internal pathogens. At $70^\\circ$, the $30\\%$ water content slows coagulation, allowing ethanol to penetrate through the cell wall and destroy core microbial proteins.'
+  },
+  {
+    order_index: 14,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: 'Sector 4: Mars Outpost • Comparative Reaction Rates with Acids',
+    content_markdown: 'Two identical calcium carbonate pellets ($\\text{CaCO}_3$) are placed in two test tubes: Tube 1 holds $5\\text{ mL}$ of $1\\text{ M } \\text{HCl}$, and Tube 2 holds $5\\text{ mL}$ of $1\\text{ M } \\text{CH}_3\\text{COOH}$. Gas released from each tube is bubbled into separate tubes of excess limewater $\\text{Ca(OH)}_2$. Which observation is correct?',
+    options: [
+      { id: 'A', text: 'Limewater from Tube 1 turns cloudy faster because $\\text{HCl}$ is a strong inorganic acid that ionizes completely, yielding a much higher initial reaction rate' },
+      { id: 'B', text: 'Limewater from Tube 2 turns cloudy faster because $\\text{CH}_3\\text{COOH}$ is an organic acid that reacts more vigorously' },
+      { id: 'C', text: 'Both limewater tubes turn cloudy at exactly identical rates because both acids share the same concentration ($1\\text{ M}$)' },
+      { id: 'D', text: 'Neither tube turns cloudy because no $\\text{CO}_2$ gas is produced' }
+    ],
+    correct_option_id: 'A',
+    explanation: '$\\text{HCl}$ is a strong acid that ionizes $100\\%$ ($\\text{HCl} \\to \\text{H}^+ + \\text{Cl}^-$), producing a very high $[\\text{H}^+]$ and an intense reaction rate. $\\text{CH}_3\\text{COOH}$ is a weak acid that ionizes only partially, generating a lower $[\\text{H}^+]$ and a slower rate of $\\text{CO}_2$ gas evolution.'
+  },
+  {
+    order_index: 15,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: 'Sector 4: Mars Outpost • Comparative Chemical Statement Audit',
+    content_markdown: 'Consider the following five chemistry statements evaluated by Cadet Keithley:\n(1) Both ethylic alcohol and acetic acid are infinitely miscible in water.\n(2) Acetic acid turns blue litmus paper red, while ethylic alcohol does not change its color.\n(3) The esterification between acetic acid and ethylic alcohol is an irreversible reaction with $100\\%$ yield.\n(4) Both ethylic alcohol and acetic acid react with metallic sodium ($\\text{Na}$) to liberate hydrogen gas ($\\text{H}_2$).\n(5) E5 biofuel contains $5\\%$ water by volume and $95\\%$ mineral gasoline.\nHow many of these statements are TRUE?',
+    options: [
+      { id: 'A', text: '2' },
+      { id: 'B', text: '3' },
+      { id: 'C', text: '4' },
+      { id: 'D', text: '5' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'Statements (1), (2), and (4) are TRUE. Statement (3) is FALSE because esterification is a reversible equilibrium reaction ($H < 100\\%$). Statement (5) is FALSE because E5 contains $5\\%$ pure bio-ethanol by volume, not water.'
+  },
+
+  // =========================================================================
+  // SECTOR 5: JUPITER STATION • ABV CONVERSIONS & COMBUSTION (Q16 – Q19)
+  // =========================================================================
+  {
+    order_index: 16,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: 'Sector 5: Jupiter Station • Wine ABV Volume Calculation',
+    content_markdown: 'A wine bottle stored in an orbital cellar has a volume of $750\\text{ mL}$ with an alcohol degree of $12^\\circ\\text{ ABV}$. What is the volume of pure ethylic alcohol present in this bottle?',
+    options: [
+      { id: 'A', text: '$90\\text{ mL}$' },
+      { id: 'B', text: '$12\\text{ mL}$' },
+      { id: 'C', text: '$62.5\\text{ mL}$' },
+      { id: 'D', text: '$75\\text{ mL}$' }
+    ],
+    correct_option_id: 'A',
+    explanation: '$V_{\\text{pure ethanol}} = \\frac{V_{\\text{solution}} \\times \\text{ABV}}{100} = \\frac{750 \\times 12}{100} = 90\\text{ mL}$.'
+  },
+  {
+    order_index: 17,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: 'Sector 5: Jupiter Station • E5 Biofuel Ethanol Content',
+    content_markdown: 'E5 bio-fuel contains $5\\%$ pure ethylic alcohol by volume. A planetary rover takes on $4.0\\text{ liters}$ of E5 fuel. What volume of pure ethylic alcohol is contained in this fuel load?',
+    options: [
+      { id: 'A', text: '$50\\text{ mL}$' },
+      { id: 'B', text: '$100\\text{ mL}$' },
+      { id: 'C', text: '$200\\text{ mL}$' },
+      { id: 'D', text: '$400\\text{ mL}$' }
+    ],
+    correct_option_id: 'C',
+    explanation: '$4.0\\text{ liters} = 4000\\text{ mL}$. $V_{\\text{pure ethanol}} = 4000 \\times 5\\% = 200\\text{ mL}$.'
+  },
+  {
+    order_index: 18,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: 'Sector 5: Jupiter Station • Rubbing Alcohol Degree Determination',
+    content_markdown: 'A flight medic mixes $350\\text{ mL}$ of pure ethylic alcohol with distilled water to formulate exactly $500\\text{ mL}$ of antiseptic rubbing alcohol. What is the alcohol degree (ABV) of this antiseptic solution?',
+    options: [
+      { id: 'A', text: '$35^\\circ$' },
+      { id: 'B', text: '$70^\\circ$' },
+      { id: 'C', text: '$50^\\circ$' },
+      { id: 'D', text: '$85^\\circ$' }
+    ],
+    correct_option_id: 'B',
+    explanation: '$\\text{ABV} = \\frac{V_{\\text{pure ethanol}}}{V_{\\text{solution}}} \\times 100 = \\frac{350}{500} \\times 100 = 70^\\circ$.'
+  },
+  {
+    order_index: 19,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: 'Sector 5: Jupiter Station • Ethanol Combustion Carbon Dioxide Yield',
+    content_markdown: 'Complete combustion of $0.10\\text{ mol}$ of ethylic alcohol ($\\text{C}_2\\text{H}_5\\text{OH}$) is conducted in an excess oxygen environment: $$\\text{C}_2\\text{H}_5\\text{OH} + 3\\text{O}_2 \\xrightarrow{t^\\circ} 2\\text{CO}_2 + 3\\text{H}_2\\text{O}$$ How many moles of carbon dioxide gas ($\\text{CO}_2$) are formed?',
+    options: [
+      { id: 'A', text: '$0.10\\text{ mol}$' },
+      { id: 'B', text: '$0.20\\text{ mol}$' },
+      { id: 'C', text: '$0.30\\text{ mol}$' },
+      { id: 'D', text: '$0.40\\text{ mol}$' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'From the stoichiometric ratio ($1\\text{ mol ethanol} : 2\\text{ mol }\\text{CO}_2$): $n_{\\text{CO}_2} = 2 \\times 0.10 = 0.20\\text{ mol}$.'
+  },
+
+  // =========================================================================
+  // SECTOR 6: SATURN RINGS • VINEGAR DENSITY & TITRATION QUANTITATIVE (Q20 – Q23)
+  // =========================================================================
+  {
+    order_index: 20,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: 'Sector 6: Saturn Rings • Vinegar Mass Calculation from Density',
+    content_markdown: 'A bottle of culinary vinegar has a volume of $500\\text{ mL}$ (solution density $D = 1.045\\text{ g/mL}$) and an acetic acid concentration of $4.0\\%$ by mass. What is the mass of pure acetic acid present in this bottle?',
+    options: [
+      { id: 'A', text: '$41.8\\text{ g}$' },
+      { id: 'B', text: '$20.9\\text{ g}$' },
+      { id: 'C', text: '$4.18\\text{ g}$' },
+      { id: 'D', text: '$209\\text{ g}$' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'Mass of solution: $m_{\\text{solution}} = V \\times D = 500 \\times 1.045 = 522.5\\text{ g}$. Mass of pure acetic acid: $m = 522.5 \\times 4\\% = 20.9\\text{ g}$.'
+  },
+  {
+    order_index: 21,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.34,
+    sectionName: 'Sector 6: Saturn Rings • Ingested Ethanol Mass Computation',
+    content_markdown: 'A crewmember consumes a $330\\text{ mL}$ canned beverage with an alcohol degree of $5.0^\\circ\\text{ ABV}$. Given that the density of pure ethylic alcohol is $0.789\\text{ g/mL}$, what is the mass of pure ethanol ingested?',
+    options: [
+      { id: 'A', text: '$13.02\\text{ g}$' },
+      { id: 'B', text: '$16.50\\text{ g}$' },
+      { id: 'C', text: '$20.91\\text{ g}$' },
+      { id: 'D', text: '$26.04\\text{ g}$' }
+    ],
+    correct_option_id: 'A',
+    explanation: 'Volume of pure ethanol: $V = \\frac{330 \\times 5.0}{100} = 16.5\\text{ mL}$. Mass of pure ethanol: $m = 16.5 \\times 0.789 = 13.0185\\text{ g} \\approx 13.02\\text{ g}$.'
+  },
+  {
+    order_index: 22,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.34,
+    sectionName: 'Sector 6: Saturn Rings • Acetic Acid Neutralization Volume',
+    content_markdown: 'To completely neutralize $150\\text{ mL}$ of an acetic acid solution ($\\text{CH}_3\\text{COOH}$) at $0.20\\text{ M}$, what volume ($V$) of $0.50\\text{ M } \\text{NaOH}$ solution is required? $$\\text{CH}_3\\text{COOH} + \\text{NaOH} \\to \\text{CH}_3\\text{COONa} + \\text{H}_2\\text{O}$$',
+    options: [
+      { id: 'A', text: '$60\\text{ mL}$' },
+      { id: 'B', text: '$75\\text{ mL}$' },
+      { id: 'C', text: '$100\\text{ mL}$' },
+      { id: 'D', text: '$150\\text{ mL}$' }
+    ],
+    correct_option_id: 'A',
+    explanation: '$n_{\\text{acid}} = 0.150\\text{ L} \\times 0.20\\text{ M} = 0.030\\text{ mol}$. Since $1\\text{ mol acid} : 1\\text{ mol base}$, $n_{\\text{NaOH}} = 0.030\\text{ mol}$. Volume: $V = \\frac{0.030}{0.50} = 0.060\\text{ L} = 60\\text{ mL}$.'
+  },
+  {
+    order_index: 23,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.34,
+    sectionName: 'Sector 6: Saturn Rings • Oxygen Demand for Ethanol Combustion',
+    content_markdown: 'Complete combustion of $4.6\\text{ g}$ of pure ethylic alcohol ($\\text{C}_2\\text{H}_5\\text{OH}$, $M = 46\\text{ g/mol}$) is performed in a rocket thruster chamber: $$\\text{C}_2\\text{H}_5\\text{OH} + 3\\text{O}_2 \\xrightarrow{t^\\circ} 2\\text{CO}_2 + 3\\text{H}_2\\text{O}$$ What volume of oxygen gas ($\\text{O}_2$) is consumed at standard conditions ($25^\\circ\\text{C}, 1\\text{ bar}$, molar volume $24.79\\text{ L/mol}$)?',
+    options: [
+      { id: 'A', text: '$2.479\\text{ L}$' },
+      { id: 'B', text: '$4.958\\text{ L}$' },
+      { id: 'C', text: '$7.437\\text{ L}$' },
+      { id: 'D', text: '$9.916\\text{ L}$' }
+    ],
+    correct_option_id: 'C',
+    explanation: '$n_{\\text{ethanol}} = \\frac{4.6}{46} = 0.10\\text{ mol}$. From the equation, $n_{\\text{O}_2} = 3 \\times n_{\\text{ethanol}} = 3 \\times 0.10 = 0.30\\text{ mol}$. Volume of $\\text{O}_2$: $V = 0.30 \\times 24.79 = 7.437\\text{ L}$.'
+  },
+
+  // =========================================================================
+  // SECTOR 7: URANUS DEEP SPACE • DISPLACEMENT, PRECIPITATION & CALORIMETRY (Q24 – Q27)
+  // =========================================================================
+  {
+    order_index: 24,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.34,
+    sectionName: 'Sector 7: Uranus Space • Sodium Reaction Hydrogen Volume',
+    content_markdown: 'An excess piece of metallic sodium ($\\text{Na}$) is reacted completely with $9.2\\text{ g}$ of pure ethylic alcohol ($M = 46\\text{ g/mol}$): $$2\\text{C}_2\\text{H}_5\\text{OH} + 2\\text{Na} \\to 2\\text{C}_2\\text{H}_5\\text{ONa} + \\text{H}_2\\uparrow$$ What volume of hydrogen gas ($\\text{H}_2$) is released at standard conditions ($25^\\circ\\text{C}, 1\\text{ bar}$, $V_m = 24.79\\text{ L/mol}$)?',
+    options: [
+      { id: 'A', text: '$1.2395\\text{ L}$' },
+      { id: 'B', text: '$2.479\\text{ L}$' },
+      { id: 'C', text: '$4.958\\text{ L}$' },
+      { id: 'D', text: '$3.7185\\text{ L}$' }
+    ],
+    correct_option_id: 'B',
+    explanation: '$n_{\\text{ethanol}} = \\frac{9.2}{46} = 0.20\\text{ mol}$. $n_{\\text{H}_2} = \\frac{1}{2} n_{\\text{ethanol}} = 0.10\\text{ mol}$. Volume: $V = 0.10 \\times 24.79 = 2.479\\text{ L}$.'
+  },
+  {
+    order_index: 25,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.34,
+    sectionName: 'Sector 7: Uranus Space • Magnesium Reaction Hydrogen Volume',
+    content_markdown: 'Excess magnesium ribbon ($\\text{Mg}$) is added to a beaker containing $100\\text{ g}$ of a $6.0\\%$ acetic acid solution ($\\text{CH}_3\\text{COOH}$, $M = 60\\text{ g/mol}$): $$2\\text{CH}_3\\text{COOH} + \\text{Mg} \\to (\\text{CH}_3\\text{COO})_2\\text{Mg} + \\text{H}_2\\uparrow$$ After the reaction ceases completely, what volume of hydrogen gas is evolved at standard conditions ($25^\\circ\\text{C}, 1\\text{ bar}$, $V_m = 24.79\\text{ L/mol}$)?',
+    options: [
+      { id: 'A', text: '$1.2395\\text{ L}$' },
+      { id: 'B', text: '$2.479\\text{ L}$' },
+      { id: 'C', text: '$0.61975\\text{ L}$' },
+      { id: 'D', text: '$3.7185\\text{ L}$' }
+    ],
+    correct_option_id: 'A',
+    explanation: 'Mass of pure acid: $m = 100 \\times 6\\% = 6.0\\text{ g} \\implies n_{\\text{acid}} = \\frac{6.0}{60} = 0.10\\text{ mol}$. $n_{\\text{H}_2} = \\frac{1}{2} n_{\\text{acid}} = 0.050\\text{ mol}$. Volume: $V = 0.050 \\times 24.79 = 1.2395\\text{ L}$.'
+  },
+  {
+    order_index: 26,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.34,
+    sectionName: 'Sector 7: Uranus Space • Limestone Dissolution & Limewater Precipitation',
+    content_markdown: 'Excess calcium carbonate ($\\text{CaCO}_3$) reacts completely with $200\\text{ mL}$ of $0.50\\text{ M}$ acetic acid solution: $$2\\text{CH}_3\\text{COOH} + \\text{CaCO}_3 \\to (\\text{CH}_3\\text{COO})_2\\text{Ca} + \\text{CO}_2\\uparrow + \\text{H}_2\\text{O}$$ All evolved $\\text{CO}_2$ gas is bubbled into a vessel containing excess limewater $\\text{Ca(OH)}_2$. What mass ($m$) of white $\\text{CaCO}_3$ precipitate ($M = 100\\text{ g/mol}$) is recovered?',
+    options: [
+      { id: 'A', text: '$10.0\\text{ g}$' },
+      { id: 'B', text: '$5.0\\text{ g}$' },
+      { id: 'C', text: '$2.5\\text{ g}$' },
+      { id: 'D', text: '$20.0\\text{ g}$' }
+    ],
+    correct_option_id: 'B',
+    explanation: '$n_{\\text{acid}} = 0.200\\text{ L} \\times 0.50\\text{ M} = 0.10\\text{ mol}$. $n_{\\text{CO}_2} = \\frac{1}{2} n_{\\text{acid}} = 0.050\\text{ mol}$. In excess limewater: $\\text{CO}_2 + \\text{Ca(OH)}_2 \\to \\text{CaCO}_3\\downarrow + \\text{H}_2\\text{O} \\implies n_{\\text{precipitate}} = 0.050\\text{ mol} \\implies m = 0.050 \\times 100 = 5.0\\text{ g}$.'
+  },
+  {
+    order_index: 27,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.34,
+    sectionName: 'Sector 7: Uranus Space • Combustion Calorimetry Thermal Energy',
+    content_markdown: 'The density of pure ethylic alcohol is $0.789\\text{ g/mL}$ and its molar enthalpy of combustion is $\\Delta H = -1360\\text{ kJ/mol}$. How much thermal energy is released upon the complete combustion of $200\\text{ mL}$ of $90^\\circ\\text{ ABV}$ rubbing alcohol?',
+    options: [
+      { id: 'A', text: '$2331\\text{ kJ}$' },
+      { id: 'B', text: '$4195\\text{ kJ}$' },
+      { id: 'C', text: '$4661\\text{ kJ}$' },
+      { id: 'D', text: '$5210\\text{ kJ}$' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'Volume of pure ethanol: $V = \\frac{200 \\times 90}{100} = 180\\text{ mL}$. Mass of pure ethanol: $m = 180 \\times 0.789 = 142.02\\text{ g}$. Moles of ethanol: $n = \\frac{142.02}{46} \\approx 3.0874\\text{ mol}$. Thermal energy released: $Q = 3.0874 \\times 1360 \\approx 4198.86\\text{ kJ} \\approx 4195\\text{ kJ}$.'
+  },
+
+  // =========================================================================
+  // SECTOR 8: NEPTUNE FRONTIER • INDUSTRIAL SYNTHESIS, DILUTION & BIOFUEL (Q28 – Q30)
+  // =========================================================================
+  {
+    order_index: 28,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.34,
+    sectionName: 'Sector 8: Neptune Frontier • Esterification Reaction Efficiency',
+    content_markdown: 'A synthesis reactor charges $12.0\\text{ g}$ of acetic acid ($\\text{CH}_3\\text{COOH}$, $M = 60\\text{ g/mol}$) with excess ethylic alcohol under concentrated $\\text{H}_2\\text{SO}_4$ catalysis. If $10.56\\text{ g}$ of ethyl acetate ($\\text{CH}_3\\text{COOC}_2\\text{H}_5$, $M = 88\\text{ g/mol}$) is recovered, what is the reaction efficiency ($H$) of the esterification?',
+    options: [
+      { id: 'A', text: '$50\\%$' },
+      { id: 'B', text: '$60\\%$' },
+      { id: 'C', text: '$75\\%$' },
+      { id: 'D', text: '$80\\%$' }
+    ],
+    correct_option_id: 'B',
+    explanation: '$n_{\\text{acid}} = \\frac{12.0}{60} = 0.20\\text{ mol}$. Theoretical yield of ethyl acetate: $n_{\\text{theo}} = 0.20\\text{ mol} \\implies m_{\\text{theo}} = 0.20 \\times 88 = 17.6\\text{ g}$. Actual reaction efficiency: $H = \\frac{10.56}{17.6} \\times 100\\% = 60\\%$.'
+  },
+  {
+    order_index: 29,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.34,
+    sectionName: 'Sector 8: Neptune Frontier • Antiseptic Dilution Water Volume',
+    content_markdown: 'A medical dispensary holds a $500\\text{ mL}$ stock bottle of $90^\\circ\\text{ ABV}$ ethanol. To dilute it into $70^\\circ\\text{ ABV}$ antiseptic rubbing alcohol for skin disinfection, what volume of distilled water must be added? (Assume solution volumes are strictly additive).',
+    options: [
+      { id: 'A', text: '$142.86\\text{ mL}$' },
+      { id: 'B', text: '$100.00\\text{ mL}$' },
+      { id: 'C', text: '$125.50\\text{ mL}$' },
+      { id: 'D', text: '$200.00\\text{ mL}$' }
+    ],
+    correct_option_id: 'A',
+    explanation: 'Volume of pure ethanol in stock: $V_{\\text{pure}} = \\frac{500 \\times 90}{100} = 450\\text{ mL}$. Target total volume of $70^\\circ$ solution: $V_{\\text{total}} = \\frac{450 \\times 100}{70} \\approx 642.86\\text{ mL}$. Volume of distilled water to add: $\\Delta V = 642.86 - 500 = 142.86\\text{ mL}$.'
+  },
+  {
+    order_index: 30,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.34,
+    sectionName: 'Sector 8: Neptune Frontier • Starch Biomass Fermentation to E5 Fuel',
+    content_markdown: 'Bio-ethanol is synthesized from agricultural corn biomass according to: $$(-\\text{C}_6\\text{H}_{10}\\text{O}_5-)_n \\xrightarrow{+\\text{H}_2\\text{O}, \\text{ enzyme}} n\\text{C}_6\\text{H}_{12}\\text{O}_6 \\xrightarrow{\\text{yeast}} 2n\\text{C}_2\\text{H}_5\\text{OH} + 2n\\text{CO}_2$$ Exactly $1.0\\text{ metric ton}$ ($1000\\text{ kg}$) of corn containing $81\\%$ starch by mass undergoes fermentation with an overall process efficiency of $70\\%$. Given $D_{\\text{ethanol}} = 0.789\\text{ g/mL}$, and that all bio-ethanol is blended into E5 fuel ($5\\%$ ethanol by volume), what is the total volume of E5 fuel produced?',
+    options: [
+      { id: 'A', text: '$2833\\text{ L}$' },
+      { id: 'B', text: '$8162\\text{ L}$' },
+      { id: 'C', text: '$5666\\text{ L}$' },
+      { id: 'D', text: '$6420\\text{ L}$' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'Mass of pure starch: $m_{\\text{starch}} = 1000 \\times 81\\% = 810\\text{ kg} = 810,000\\text{ g}$. Theoretical ethanol yield ($162\\text{ g starch} \\to 92\\text{ g ethanol}$): $m_{\\text{theo}} = \\frac{810,000 \\times 92}{162} = 460,000\\text{ g}$. Actual ethanol yield ($H = 70\\%$): $m_{\\text{actual}} = 460,000 \\times 0.70 = 322,000\\text{ g}$. Volume of ethanol: $V_{\\text{ethanol}} = \\frac{322,000}{0.789} \\approx 408,111.5\\text{ mL} \\approx 408.11\\text{ L}$. Total volume of E5 fuel: $V_{\\text{E5}} = \\frac{408.11}{0.05} \\approx 8162.2\\text{ L} \\approx 8162\\text{ L}$.'
+  }
+];
+
+async function seed() {
+  console.log('🚀 Seeding 30 Problems (15 Theory + 15 Calculation) for Keithley Lake...');
+  console.log('Target Date:', CONSTANTS.ASSIGNED_DATE);
+
+  const targetDate = new Date(`${CONSTANTS.ASSIGNED_DATE}T00:00:00.000Z`);
+
+  // 1. Clean up any existing assignments for Keithley on 2026-11-11 for CHEM_9
+  const existingAsgns = await prisma.daily_student_assignments.findMany({
+    where: {
+      student_id: CONSTANTS.STUDENT_ID,
+      assigned_date: targetDate,
+      learning_units: {
+        subject_id: CONSTANTS.SUBJECT_ID
+      }
+    },
+    include: {
+      assessment_attempts: true
+    }
+  });
+
+  if (existingAsgns.length > 0) {
+    console.log(`Cleaning ${existingAsgns.length} previous assignment(s)...`);
+    for (const a of existingAsgns) {
+      for (const att of a.assessment_attempts) {
+        await prisma.student_answers.deleteMany({ where: { attempt_id: att.id } });
+        await prisma.assessment_attempts.delete({ where: { id: att.id } });
+      }
+      await prisma.daily_student_assignments.delete({ where: { id: a.id } });
+    }
+  }
+
+  // 2. Create Learning Unit (Flight Briefing)
+  const unit = await prisma.learning_units.create({
+    data: {
+      subject_id: CONSTANTS.SUBJECT_ID,
+      created_by: CONSTANTS.TEACHER_ID,
+      title: 'Lessons 26 & 27 Comprehensive Mastery: Ethylic Alcohol & Acetic Acid (30 Problems)',
+      description: 'Orbital practice mission featuring 30 dual-topic problems (15 conceptual theory + 15 stoichiometry & ABV calculations) across 8 Planetary Sectors.',
+      lecture_content_markdown: `# 🚀 ORBITAL FLIGHT BRIEFING: LESSONS 26 & 27 COMPREHENSIVE MASTERY
+**Keithley Lake (Astronaut Cadet) • Grade 9 Chemistry • 11 November 2026**
+
+Interactive Simulation Studios:
+* Lesson 26 (Ethanol): \`/lectures/chem9-lesson26-ethanol/index.html\`
+* Lesson 27 (Acetic Acid): \`/lectures/chem9-lesson27-acetic-acid/index.html\`
+
+---
+
+## 🎯 Flight Objectives
+Today\'s comprehensive orbital workout bridges the organic chemistry of both **Ethylic Alcohol** ($\\text{C}_2\\text{H}_5\\text{OH}$) and **Acetic Acid** ($\\text{CH}_3\\text{COOH}$):
+* **Part I: Core Theory (Q1 – Q15):** Functional groups ($-\\text{OH}$ vs. $-\\text{COOH}$), physical constants, ABV definitions, active metal reactivity, industrial synthesis, medical sanitization mechanisms, and reaction kinetics.
+* **Part II: Stoichiometric Calculations (Q16 – Q30):** ABV volumetric calculations, E5 biofuel blending, density conversions, combustion stoichiometry & calorimetry, active metal gas evolution, neutralization titrations, esterification yields, and multi-step fermentation dilution.
+
+*Engage the flight console below and verify all molar quantities carefully!*`,
+      lecture_attachments: [],
+      is_template: true
+    }
+  });
+  console.log('✅ Created Learning Unit:', unit.id);
+
+  // 3. Create Daily Student Assignment Card
+  const assignment = await prisma.daily_student_assignments.create({
+    data: {
+      student_id: CONSTANTS.STUDENT_ID,
+      learning_unit_id: unit.id,
+      assigned_by: CONSTANTS.TEACHER_ID,
+      assigned_date: targetDate,
+      custom_session_minutes: 90,
+      teacher_daily_note: 'Cadet Keithley: Today is our grand synthesis flight across both Lesson 26 (Ethanol) and Lesson 27 (Acetic Acid)! Complete all 30 problems (15 theory + 15 calculations) across 8 Planetary Sectors. Use your scratchpad for balanced equations and give it 100% focus!',
+      is_published: true
+    }
+  });
+  console.log('✅ Created Daily Assignment Card:', assignment.id);
+
+  // 4. Create In-Session Assessment (90 minutes, 30 problems, 10.0 points max score)
+  const assessment = await prisma.assessments.create({
+    data: {
+      learning_unit_id: unit.id,
+      type: 'IN_SESSION_90M',
+      title: 'Orbital Comprehensive Flight: Ethanol & Acetic Acid (30 Problems • 90 mins)',
+      instructions: '30 multiple-choice problems (10.0 pts max score). Standard conditions $25^\\circ\\text{C}, 1\\text{ bar}$ ($V_m = 24.79\\text{ L/mol}$). Real-time telemetry, audio feedback, and sector jumping active.',
+      time_limit_minutes: 90,
+      max_score: 10.00
+    }
+  });
+  console.log('✅ Created Assessment:', assessment.id);
+
+  // 5. Create Questions
+  for (const q of QUESTIONS_DATA) {
+    await prisma.questions.create({
+      data: {
+        assessment_id: assessment.id,
+        order_index: q.order_index,
+        type: q.type,
+        points: q.points,
+        question_payload: {
+          content_markdown: q.content_markdown,
+          sectionName: q.sectionName,
+          options: q.options,
+          correct_option_id: q.correct_option_id,
+          explanation: q.explanation
+        },
+        grading_key_payload: {
+          correct_option_id: q.correct_option_id,
+          explanation: q.explanation
+        }
+      }
+    });
+  }
+  console.log(`✅ Created ${QUESTIONS_DATA.length} questions.`);
+
+  // 6. Create Initial Assessment Attempt (Status: NOT_STARTED)
+  const attempt = await prisma.assessment_attempts.create({
+    data: {
+      daily_assignment_id: assignment.id,
+      assessment_id: assessment.id,
+      student_id: CONSTANTS.STUDENT_ID,
+      status: 'NOT_STARTED',
+      auto_score: 0,
+      manual_score: 0,
+      total_score: 0
+    }
+  });
+  console.log('✅ Created Assessment Attempt:', attempt.id);
+
+  // 7. Save backup JSON file
+  const backupPath = path.resolve(__dirname, 'content/chemistry_practice_2026_11_11.json');
+  fs.mkdirSync(path.dirname(backupPath), { recursive: true });
+  fs.writeFileSync(backupPath, JSON.stringify({
+    assignedDate: CONSTANTS.ASSIGNED_DATE,
+    studentId: CONSTANTS.STUDENT_ID,
+    unitId: unit.id,
+    assignmentId: assignment.id,
+    assessmentId: assessment.id,
+    attemptId: attempt.id,
+    mode: 'EXERCISE_ONLY',
+    questionsCount: QUESTIONS_DATA.length,
+    totalPoints: QUESTIONS_DATA.reduce((acc, q) => acc + q.points, 0),
+    questions: QUESTIONS_DATA
+  }, null, 2));
+  console.log('✅ Saved questions backup to:', backupPath);
+
+  console.log('🎉 ALL DONE! 11/11/2026 Keithley Chemistry practice mission deployed successfully.');
+}
+
+seed()
+  .catch(e => {
+    console.error('❌ Error seeding exercises:', e);
+    process.exit(1);
+  })
+  .finally(async () => {
+    await prisma.$disconnect();
+  });

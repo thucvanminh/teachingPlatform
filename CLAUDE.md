@@ -65,3 +65,39 @@ Defined in `student_profiles.ui_theme`:
 ### 5. Math & LaTeX Rendering
 - Handled by `KatexMath` and `FormattedContent` in `frontend/src/components/KatexMath.tsx`.
 - KaTeX is strictly configured with `output: 'html'` to prevent MathML raw text duplication issues.
+
+---
+
+## Custom Slash Commands for Claude Code
+
+Claude Code commands are configured in `.claude/commands/` and can be invoked directly:
+
+### 1. `/soanbai [tên học sinh: thai | nam_viet] [ngày] [chủ đề / tài liệu]`
+- **Mục đích:** Tạo trọn gói bài giảng tương tác và bài tập tiếng Anh từ A-Z theo quy chuẩn Thầy Thức.
+- **Học sinh:**
+  - `thai` (Lớp 11, ID `9208f557-3288-442e-accf-15fc8c763e68`, môn `ENG_11` `f36e3e6b-46e2-4839-a2e8-8a78ff88a9a0`, mục tiêu 8.5+, tài liệu `/home/dantey/Dantey/teaching/lop_11/`).
+  - `nam_viet` (Lớp 12, ID `d76bd9d6-6cf5-409c-847b-b0e5c07a0876`, môn `ENG_12` `a15d4b19-412a-4bff-acd5-86714381b7af`, mục tiêu 7+, xếp câu hỏi Từ vựng lên trước, tài liệu `/home/dantey/Dantey/teaching/lop12NamViet/`).
+- **Thực thi:**
+  1. Tạo web studio tại `frontend/public/lectures/<slug>/index.html` (50 từ vựng Web Speech API, 3 ngữ pháp, Flashcard 3D, Collocation Game, Word Tree, Light Theme).
+  2. Soạn 60-100 câu trắc nghiệm (đáp án, giải thích chi tiết).
+  3. Chạy script seed nạp DB (`seed_english_lesson.js`).
+  4. Test build `npm --prefix frontend run build`, commit & push `main`.
+
+### 2. `/soanhoakeithley` hoặc `/soanhoa [đường dẫn file] [mode: EXERCISE_ONLY | BOTH | LECTURE_ONLY]`
+- **Mục đích:** Tạo bài giảng và bài tập Hóa học lớp 9 cho Keithley Lake (`4745136c-bd25-4f45-a488-9f00f2121b70`), môn `CHEM_9` (`6fc7387b-13b8-4e27-8240-a60c03dc1d51`).
+- **Tài liệu gốc:** `/home/dantey/Dantey/teaching/lop6/Chemistry/`.
+- **Thực thi:**
+  1. Nhận diện mode (`EXERCISE_ONLY`, `BOTH`, `LECTURE_ONLY`).
+  2. Soạn 100% tiếng Anh, theme Vũ Trụ 8 Trạm Hành Tinh (Mercury $\to$ Neptune), thời lượng 90 phút.
+  3. **BẮT BUỘC:** Thêm `"correct_option_id"` vào `question_payload` để kích hoạt còi lỗi (Buzzer), chuông (Chime), và animation rung lắc.
+  4. Seed DB (`seed_keithley_chemistry.js`), test build và push `main`.
+
+### 3. `/soantoankeithley` hoặc `/soantoan [ngày] [chủ đề / bài học]`
+- **Mục đích:** Tạo bài giảng và bài tập Toán lớp 7 cho Keithley Lake, môn `MATH_7` (`b1cfb82f-fa75-47eb-ba05-7281f6d3fdf2`).
+- **Tài liệu gốc:** `/home/dantey/Dantey/teaching/lop6/Math/`.
+- **Thực thi:**
+  1. 100% Pure English (không kẹp chữ tiếng Việt trong ngoặc).
+  2. Vẽ hình học Vector SVG chuẩn tại `frontend/public/images/geometry/` (tuyệt đối không dùng ASCII art).
+  3. 25-30 câu hỏi theo 8 Trạm Hành Tinh, 90-120 phút.
+  4. Seed DB (`seed_keithley_math.js`), test build và push `main`.
+
