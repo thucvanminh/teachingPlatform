@@ -1088,7 +1088,7 @@ export default function StudentDashboard() {
     ? 'Khai phá từ vựng học thuật B2/C1, Collocations, Cây từ loại (Word Family) và tư duy làm chủ đề thi 8.5+.'
     : isNamViet
     ? (todayAssignment?.learning_units?.title?.includes('Unit 7')
-        ? 'Luyện phản xạ 50 từ vựng Unit 7 (Mass Media) bằng Flashcard 3D hai chiều, làm chủ Mệnh đề cách thức (As if/were) & Mệnh đề kết quả, khóa chắc 7+ THPTQG.'
+        ? 'Luyện phản xạ 12 từ vựng cốt lõi Unit 7 (Mass Media) bằng Flashcard 3D hai chiều, làm chủ Mệnh đề cách thức (As if/were) & Mệnh đề kết quả, khóa chắc 7+ THPTQG.'
         : 'Luyện phản xạ từ vựng trọng tâm bằng Flashcard 3D hai chiều, khóa chắc điểm ngữ pháp & Chắc suất 7+ THPTQG.')
     : 'Tập trung rèn luyện tư duy, chiến thuật làm bài và tăng tốc độ giải đề.';
 

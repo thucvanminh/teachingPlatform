@@ -6,7 +6,7 @@
  */
 
 const path = require('path');
-const { PrismaClient } = require(path.resolve(__dirname, './backend/node_modules/@prisma/client'));
+const { PrismaClient } = require(path.resolve(__dirname, '../../../../backend/node_modules/@prisma/client'));
 const prisma = new PrismaClient();
 
 const CONSTANTS = {
@@ -124,7 +124,7 @@ $$\\mathbf{S + V + such + (a/an) + adj + Noun + that + S + V}$$
 
 ### 💡 Hướng dẫn học tập từ Thầy Thức:
 1. Bấm vào nút **[Vào phòng học tương tác](/lectures/eng12-unit7/index.html)** ở trên hoặc trong thẻ bài giảng.
-2. Hoàn thành 1 lượt **50 Thẻ Flashcard 3D** (bật chế độ lật 2 chiều: Anh $\\to$ Việt và Việt $\\to$ Anh).
+2. Hoàn thành 1 lượt **12 Thẻ Flashcard 3D Cốt Lõi** (bật chế độ lật 2 chiều: Anh $\\to$ Việt và Việt $\\to$ Anh).
 3. Thử sức với **Trò chơi Nối Cụm từ (Collocations)**, **Cây Từ Loại (Word Family)** và **Active Recall** để ghi nhớ từ vựng sâu sắc.
 4. Đọc kỹ 4 dạng viết lại câu ở trên trước khi bước vào các bài luyện đề nâng cao!
 `;
@@ -152,7 +152,7 @@ async function main() {
       where: { id: existingAssignment.learning_unit_id },
       data: {
         title: 'Unit 7: The World of Mass Media - Cẩm Nang Từ Vựng Cốt Lõi & Mệnh Đề Trạng Ngữ (Flashcard 3D)',
-        description: 'Chuyên đề Unit 7 Tiếng Anh 12: Khám phá 50 từ vựng thế giới truyền thông đại chúng, làm chủ 3 chuyên đề ngữ pháp Mệnh đề chỉ cách thức (as if/were), Mệnh đề chỉ kết quả (so/such...that) và 4 dạng bài biến đổi câu kinh điển thi THPTQG.',
+        description: 'Chuyên đề Unit 7 Tiếng Anh 12: Khám phá 12 từ vựng cốt lõi thế giới truyền thông đại chúng, làm chủ 3 chuyên đề ngữ pháp Mệnh đề chỉ cách thức (as if/were), Mệnh đề chỉ kết quả (so/such...that) và 4 dạng bài biến đổi câu kinh điển thi THPTQG.',
         lecture_content_markdown: LECTURE_CONTENT_MARKDOWN
       }
     });
@@ -161,7 +161,7 @@ async function main() {
     await prisma.daily_student_assignments.update({
       where: { id: existingAssignment.id },
       data: {
-        teacher_daily_note: 'Thầy Thức dặn Nam Việt: Hôm nay con bước vào Unit 7: The World of Mass Media. Hãy bấm vào nút "Vào phòng học tương tác" để luyện 50 từ vựng bằng Flashcard 3D hai chiều và nắm chắc 3 chuyên đề ngữ pháp trọng tâm: Mệnh đề cách thức (As if/were), Mệnh đề kết quả (So/Such...that) cùng dạng Đảo ngữ kinh điển trong đề thi THPTQG nhé!',
+        teacher_daily_note: 'Thầy Thức dặn Nam Việt: Hôm nay con bước vào Unit 7: The World of Mass Media. Hãy bấm vào nút "Vào phòng học tương tác" để luyện 12 từ vựng cốt lõi bằng Flashcard 3D hai chiều và nắm chắc 3 chuyên đề ngữ pháp trọng tâm: Mệnh đề cách thức (As if/were), Mệnh đề kết quả (So/Such...that) cùng dạng Đảo ngữ kinh điển trong đề thi THPTQG nhé!',
         is_published: true
       }
     });
@@ -176,7 +176,7 @@ async function main() {
       subject_id: CONSTANTS.SUBJECT_ID,
       created_by: CONSTANTS.TEACHER_ID,
       title: 'Unit 7: The World of Mass Media - Cẩm Nang Từ Vựng Cốt Lõi & Mệnh Đề Trạng Ngữ (Flashcard 3D)',
-      description: 'Chuyên đề Unit 7 Tiếng Anh 12: Khám phá 50 từ vựng thế giới truyền thông đại chúng, làm chủ 3 chuyên đề ngữ pháp Mệnh đề chỉ cách thức (as if/were), Mệnh đề chỉ kết quả (so/such...that) và 4 dạng bài biến đổi câu kinh điển thi THPTQG.',
+      description: 'Chuyên đề Unit 7 Tiếng Anh 12: Khám phá 12 từ vựng cốt lõi thế giới truyền thông đại chúng, làm chủ 3 chuyên đề ngữ pháp Mệnh đề chỉ cách thức (as if/were), Mệnh đề chỉ kết quả (so/such...that) và 4 dạng bài biến đổi câu kinh điển thi THPTQG.',
       lecture_content_markdown: LECTURE_CONTENT_MARKDOWN,
       is_template: true
     }
@@ -191,7 +191,7 @@ async function main() {
       assigned_by: CONSTANTS.TEACHER_ID,
       assigned_date: CONSTANTS.ASSIGNED_DATE,
       custom_session_minutes: 90,
-      teacher_daily_note: 'Thầy Thức dặn Nam Việt: Hôm nay con bước vào Unit 7: The World of Mass Media. Hãy bấm vào nút "Vào phòng học tương tác" để luyện 50 từ vựng bằng Flashcard 3D hai chiều và nắm chắc 3 chuyên đề ngữ pháp trọng tâm: Mệnh đề cách thức (As if/were), Mệnh đề kết quả (So/Such...that) cùng dạng Đảo ngữ kinh điển trong đề thi THPTQG nhé!',
+      teacher_daily_note: 'Thầy Thức dặn Nam Việt: Hôm nay con bước vào Unit 7: The World of Mass Media. Hãy bấm vào nút "Vào phòng học tương tác" để luyện 12 từ vựng cốt lõi bằng Flashcard 3D hai chiều và nắm chắc 3 chuyên đề ngữ pháp trọng tâm: Mệnh đề cách thức (As if/were), Mệnh đề kết quả (So/Such...that) cùng dạng Đảo ngữ kinh điển trong đề thi THPTQG nhé!',
       is_published: true
     }
   });

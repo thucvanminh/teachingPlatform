@@ -56,7 +56,7 @@
         1. Flashcard 3D (2 Chiều)
       </button>
       <button class="tab-btn" data-tab="tab-vocab" role="tab" aria-selected="false">
-        2. Lý Thuyết &amp; 50 Từ Vựng
+        2. Lý Thuyết &amp; 12 Từ Cốt Lõi
       </button>
       <button class="tab-btn" data-tab="tab-collocations" role="tab" aria-selected="false">
         3. Cụm Từ Tự Nhiên (Collocations)
@@ -92,7 +92,7 @@
                 Luyện Từng Thẻ (Deck)
               </button>
               <button type="button" class="fc-view-pill" id="fcViewGridBtn" data-view="grid">
-                Lưới 50 Thẻ (Grid)
+                Lưới 12 Thẻ (Grid)
               </button>
             </div>
           </div>
@@ -122,10 +122,10 @@
           <div class="fc-filter-row">
             <span class="fc-filter-caption">Lọc theo nhóm từ:</span>
             <div class="fc-filter-chips" id="fcFilterChips">
-              <button class="filter-chip active" data-unit="all">Tất cả (50 từ)</button>
-              <button class="filter-chip" data-unit="1">Nhóm 1: Mass Media & Báo Chí (18)</button>
-              <button class="filter-chip" data-unit="2">Nhóm 2: Quảng Cáo & Thương Mại (16)</button>
-              <button class="filter-chip" data-unit="3">Nhóm 3: Tính Xác Thực & Kỷ Nguyên Số (16)</button>
+              <button class="filter-chip active" data-unit="all">Tất cả (12 từ cốt lõi)</button>
+              <button class="filter-chip" data-unit="1">Nhóm 1: Mass Media & Báo Chí (6)</button>
+              <button class="filter-chip" data-unit="2">Nhóm 2: Quảng Cáo & Thương Mại (3)</button>
+              <button class="filter-chip" data-unit="3">Nhóm 3: Tính Xác Thực & Kỷ Nguyên Số (3)</button>
             </div>
           </div>
         </div>
@@ -138,7 +138,7 @@
               <div class="fc-progress-bar">
                 <div class="fc-progress-fill" id="fcProgressFill" style="width: 2%;"></div>
               </div>
-              <span class="fc-progress-counter" id="fcProgressCounter">Thẻ 1 / 50</span>
+              <span class="fc-progress-counter" id="fcProgressCounter">Thẻ 1 / 12</span>
             </div>
             <div class="fc-deck-actions-top">
               <button type="button" class="fc-btn-sm fc-btn-fullscreen" id="fcFullscreenBtn" title="Bật/Tắt chế độ Toàn màn hình tập trung (Phím F)">
@@ -218,7 +218,7 @@
         <!-- 2. GRID VIEW (All Cards with 3D Flip) -->
         <div class="fc-grid-container" id="fcGridContainer" style="display: none;">
           <div class="fc-grid-toolbar">
-            <span id="fcGridCountText">Hiển thị 50 thẻ flashcard</span>
+            <span id="fcGridCountText">Hiển thị 12 thẻ flashcard</span>
             <div class="fc-grid-actions">
               <button type="button" class="fc-btn-sm" id="fcGridFlipAllBtn">
                 <span>🔄</span> Lật tất cả mặt sau
@@ -252,14 +252,14 @@
           >
         </div>
         <div class="filter-btn-group" id="filterButtonGroup">
-          <button class="filter-chip active" data-unit="all">Tất cả (50)</button>
-          <button class="filter-chip" data-unit="1">Nhóm 1: Mass Media & Báo Chí (18)</button>
-          <button class="filter-chip" data-unit="2">Nhóm 2: Quảng Cáo & Thương Mại (16)</button>
-          <button class="filter-chip" data-unit="3">Nhóm 3: Tính Xác Thực & Kỷ Nguyên Số (16)</button>
+          <button class="filter-chip active" data-unit="all">Tất cả (12)</button>
+          <button class="filter-chip" data-unit="1">Nhóm 1: Mass Media & Báo Chí (6)</button>
+          <button class="filter-chip" data-unit="2">Nhóm 2: Quảng Cáo & Thương Mại (3)</button>
+          <button class="filter-chip" data-unit="3">Nhóm 3: Tính Xác Thực & Kỷ Nguyên Số (3)</button>
         </div>
       </div>
 
-      <!-- 50 Vocab Card Grid -->
+      <!-- 12 Vocab Card Grid -->
       <div class="vocab-grid" id="vocabGrid">
         <!-- Rendered dynamically by app.js -->
       </div>
