@@ -422,64 +422,165 @@ const LECTURE_DATA = {
     },
     {
       id: "gram3",
-      title: "3. Phân Biệt V-ing vs To-V (Đổi Nghĩa) & 4 Công Thức Viết Lại Câu Kinh Điển",
-      focus: "Mục tiêu 8.5+ - Remember, Forget, Stop, Regret, Try & Biến Đổi Tương Đương",
+      title: "3. 6 Cặp Động Từ Thay Đổi Ý Nghĩa (V-ing vs To-V) & Phân Hóa Điểm 8.5+",
+      focus: "Mục tiêu 8.5+ - Remember, Forget, Stop, Regret, Try, Need & Bẫy Đề Thi",
       theoryHtml: `
         <div class="grammar-rule-card">
           <h4 style="font-size:1.05rem; font-weight:800; color:var(--text-main); margin-bottom:12px;">
-            📌 5 CẶP ĐỘNG TỪ THAY ĐỔI Ý NGHĨA KHI ĐI VỚI V-ING VS TO-V
+            📌 6 CẶP ĐỘNG TỪ THAY ĐỔI Ý NGHĨA KHI ĐI VỚI V-ING VS TO-V
           </h4>
 
-          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:14px; margin-bottom:20px;">
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:14px; margin-bottom:20px;">
             <div style="background:#fff1f2; border:1px solid #fecdd3; border-radius:10px; padding:14px;">
-              <strong style="color:#be123c;">1. REMEMBER / FORGET</strong><br>
-              • <code>+ V-ing</code>: Nhớ / Quên việc <strong>đã làm</strong> trong quá khứ.<br>
-              • <code>+ To-V</code>: Nhớ / Quên <strong>phải làm</strong> nhiệm vụ trong tương lai.<br>
-              <em>Ví dụ:</em> "I remember <strong>meeting</strong> the Thai delegate last year."
+              <strong style="color:#be123c;">1. REMEMBER</strong><br>
+              • <code>+ To-V</code>: Nhớ <strong>phải làm</strong> nhiệm vụ trong tương lai.<br>
+              • <code>+ V-ing</code>: Nhớ ký ức <strong>đã làm</strong> việc gì trong quá khứ.<br>
+              <em>Ví dụ:</em> "Please remember <strong>to submit</strong> your visa application."<br>
+              <em>Ví dụ:</em> "I distinctly remember <strong>meeting</strong> the Thai delegate last year."
+            </div>
+
+            <div style="background:#fef2f2; border:1px solid #fee2e2; border-radius:10px; padding:14px;">
+              <strong style="color:#991b1b;">2. FORGET</strong><br>
+              • <code>+ To-V</code>: Quên <strong>phải làm</strong> điều gì (không hoàn thành).<br>
+              • <code>+ V-ing</code>: Quên ký ức <strong>đã từng làm</strong> (thường dùng: <em>will never forget</em>).<br>
+              <em>Ví dụ:</em> "Don't forget <strong>to bring</strong> your official credentials."<br>
+              <em>Ví dụ:</em> "He will never forget <strong>giving</strong> his speech at the ASEAN youth forum."
             </div>
 
             <div style="background:#f5f3ff; border:1px solid #ddd6fe; border-radius:10px; padding:14px;">
-              <strong style="color:#6d28d9;">2. STOP</strong><br>
-              • <code>+ V-ing</code>: <strong>Dừng hẳn</strong> một thói quen hoặc hành động đang làm.<br>
-              • <code>+ To-V</code>: <strong>Dừng lại để làm</strong> việc khác.<br>
-              <em>Ví dụ:</em> "Leaders stopped <strong>quarrelling</strong> and started cooperating."
+              <strong style="color:#6d28d9;">3. STOP</strong><br>
+              • <code>+ To-V</code>: <strong>Dừng lại để làm</strong> việc khác (chỉ mục đích).<br>
+              • <code>+ V-ing</code>: <strong>Dừng hẳn, từ bỏ</strong> một hành động/thói quen.<br>
+              <em>Ví dụ:</em> "Ministers stopped <strong>to take</strong> a commemorative photo."<br>
+              <em>Ví dụ:</em> "Member nations stopped <strong>imposing</strong> unilateral trade tariffs."
             </div>
 
             <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px; padding:14px;">
-              <strong style="color:#15803d;">3. REGRET</strong><br>
-              • <code>+ V-ing</code>: Hối tiếc vì <strong>đã trót làm</strong> điều gì.<br>
-              • <code>+ To-V</code>: Lấy làm tiếc <strong>phải thông báo</strong> tin buồn.<br>
-              <em>Ví dụ:</em> "We regret <strong>to inform</strong> you that your application was rejected."
+              <strong style="color:#15803d;">4. REGRET</strong><br>
+              • <code>+ To-V</code>: Lấy làm tiếc <strong>phải thông báo</strong> tin buồn (thường đi với <em>inform, announce, say</em>).<br>
+              • <code>+ V-ing</code>: Hối tiếc vì <strong>đã trót làm</strong> việc gì.<br>
+              <em>Ví dụ:</em> "We regret <strong>to inform</strong> you that the summit was postponed."<br>
+              <em>Ví dụ:</em> "She regretted <strong>not taking</strong> part in the cultural exchange."
             </div>
 
             <div style="background:#fefce8; border:1px solid #fef08a; border-radius:10px; padding:14px;">
-              <strong style="color:#854d0e;">4. TRY</strong><br>
-              • <code>+ V-ing</code>: <strong>Thử làm</strong> xem kết quả ra sao.<br>
-              • <code>+ To-V</code>: <strong>Cố gắng nỗ lực</strong> vượt qua khó khăn để làm.<br>
-              <em>Ví dụ:</em> "Thai tried <strong>to apply</strong> for the ASEAN youth scholarship."
+              <strong style="color:#854d0e;">5. TRY</strong><br>
+              • <code>+ To-V</code>: <strong>Cố gắng, nỗ lực hết mình</strong> vượt qua khó khăn để làm.<br>
+              • <code>+ V-ing</code>: <strong>Thử nghiệm</strong> một phương pháp/giải pháp xem kết quả.<br>
+              <em>Ví dụ:</em> "Viet Nam tried <strong>to achieve</strong> economic stabilization."<br>
+              <em>Ví dụ:</em> "If traditional channels fail, try <strong>reaching out</strong> via digital diplomacy."
+            </div>
+
+            <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:10px; padding:14px;">
+              <strong style="color:#1e40af;">6. NEED</strong><br>
+              • <code>+ To-V</code>: Ai đó cần phải làm gì (chủ động).<br>
+              • <code>+ V-ing (= need to be V3/ed)</code>: Cái gì đó <strong>cần được sửa chữa, bảo dưỡng</strong> (bị động).<br>
+              <em>Ví dụ:</em> "We need <strong>to foster</strong> mutual trust and solidarity."<br>
+              <em>Ví dụ:</em> "The ASEAN community website needs <strong>redesigning</strong> (= needs to be redesigned)."
+            </div>
+          </div>
+        </div>
+      `
+    },
+    {
+      id: "gram4",
+      title: "4. Danh Động Từ Hoàn Thành (Perfect Gerunds: Having + V3/ed)",
+      focus: "Phân hóa 8.5+ - Nhấn mạnh hành động xảy ra trước & Dạng bị động",
+      theoryHtml: `
+        <div class="grammar-rule-card">
+          <h4 style="font-size:1.05rem; font-weight:800; color:var(--text-main); margin-bottom:12px;">
+            📌 BẢN CHẤT: PERFECT GERUNDS (HAVING + V3/ed)
+          </h4>
+          <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:16px;">
+            Được dùng khi ta muốn <strong>nhấn mạnh rõ ràng</strong> một hành động đã hoàn tất và kết thúc <strong>TRƯỚC</strong> thời điểm của động từ chính trong câu.
+          </p>
+
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:16px; margin-bottom:20px;">
+            <div style="background:#eff6ff; border:2px solid #93c5fd; border-radius:12px; padding:16px;">
+              <div style="font-size:0.8rem; font-weight:800; color:#1e40af; text-transform:uppercase; margin-bottom:8px;">
+                DẠNG CHỦ ĐỘNG (ACTIVE PERFECT GERUND)
+              </div>
+              <div style="font-family:'JetBrains Mono', monospace; font-size:1.05rem; font-weight:700; color:#1d4ed8; background:white; padding:10px 14px; border-radius:8px; border:1px solid #93c5fd; margin-bottom:10px;">
+                Having + V(3/ed)
+              </div>
+              <p style="font-size:0.85rem; color:#1e3a8a;">
+                • Dùng sau các động từ: <em>admit, deny, regret, apologize for, congratulate on, remember...</em><br>
+                • <em>Ví dụ:</em> The diplomat admitted <strong>having made</strong> an inaccurate statement during the press conference.<br>
+                <em>(Vị nhà ngoại giao thừa nhận trước đó đã đưa ra phát biểu thiếu chính xác.)</em>
+              </p>
+            </div>
+
+            <div style="background:#faf5ff; border:2px solid #d8b4fe; border-radius:12px; padding:16px;">
+              <div style="font-size:0.8rem; font-weight:800; color:#6b21a8; text-transform:uppercase; margin-bottom:8px;">
+                DẠNG BỊ ĐỘNG (PASSIVE PERFECT GERUND)
+              </div>
+              <div style="font-family:'JetBrains Mono', monospace; font-size:1.05rem; font-weight:700; color:#7e22ce; background:white; padding:10px 14px; border-radius:8px; border:1px solid #c084fc; margin-bottom:10px;">
+                Having been + V(3/ed)
+              </div>
+              <p style="font-size:0.85rem; color:#581c87;">
+                • Nhấn mạnh chủ thể <strong>được / bị tác động</strong> bởi hành động đã hoàn thành trước đó.<br>
+                • <em>Ví dụ:</em> She felt immensely proud of <strong>having been selected</strong> as the ASEAN youth ambassador.<br>
+                <em>(Cô ấy cảm thấy vô cùng tự hào vì trước đó đã được chọn làm đại sứ thanh niên ASEAN.)</em>
+              </p>
             </div>
           </div>
 
+          <div class="pitfall-box">
+            <strong>⚠️ BẪY THI THPT QUỐC GIA:</strong>
+            <p style="margin-top:6px; font-size:0.9rem;">
+              Khi hai hành động có khoảng cách thời gian rõ rệt, đề thi thường bắt buộc dùng <strong>Having + V3/ed</strong> thay vì V-ing đơn thuần để nhấn mạnh tính trước - sau!<br>
+              <em>"He was accused of <strong>having leaked</strong> confidential documents."</em> (Hành động làm rò rỉ diễn ra trước khi bị cáo buộc).
+            </p>
+          </div>
+        </div>
+      `
+    },
+    {
+      id: "gram5",
+      title: "5. 6 Cấu Trúc Viết Lại Câu Kinh Điển Với Danh Động Từ Trong Đề Thi",
+      focus: "Mục tiêu 8.5+ - Rèn luyện kỹ năng biến đổi câu tương đương chuẩn đề thi THPT",
+      theoryHtml: `
+        <div class="grammar-rule-card">
+          <h4 style="font-size:1.05rem; font-weight:800; color:var(--text-main); margin-bottom:12px;">
+            📌 6 DẠNG BIẾN ĐỔI CÂU BẤT HỦ VỚI GERUNDS
+          </h4>
+
           <div class="transform-formula-box">
-            <h5 style="color:#1e3a8a; font-weight:800; margin-bottom:8px;">
-              ★ 4 CÔNG THỨC VIẾT LẠI CÂU BẤT HỦ VỚI DANH ĐỘNG TỪ TRONG ĐỀ THI:
-            </h5>
-            <ul style="font-size:0.9rem; line-height:1.7;">
-              <li>
-                <strong>Công thức 1:</strong> It is pointless / meaningless + to-V <br>
-                ➔ <code>There is no point in + V-ing</code> = <code>It is no use / no good + V-ing</code>
+            <ul style="font-size:0.9rem; line-height:1.8;">
+              <li style="margin-bottom:12px;">
+                <strong>1. Dạng Đề xuất (Suggestion):</strong><br>
+                <code>Let's / Why don't we / Shall we + V?</code> ➔ <code>S + suggested + V-ing</code><br>
+                <em>Ví dụ:</em> "Why don't we set up a regional youth council?" the president said.<br>
+                ➔ <em>The president suggested <strong>setting up</strong> a regional youth council.</em>
+              </li>
+              <li style="margin-bottom:12px;">
+                <strong>2. Dạng Vô ích khi làm gì (Pointless / No use):</strong><br>
+                <code>It is pointless / meaningless + to-V</code> ➔ <code>There is no point in + V-ing</code> = <code>It is no use / no good + V-ing</code><br>
+                <em>Ví dụ:</em> It is pointless to argue about border regulations without diplomatic consultation.<br>
+                ➔ <em>There is no point in <strong>arguing</strong> about border regulations without diplomatic consultation.</em>
+              </li>
+              <li style="margin-bottom:12px;">
+                <strong>3. Dạng Tiêu tốn thời gian (Spends vs Takes):</strong><br>
+                <code>It takes/took + sb + [time] + to-V</code> ➔ <code>S + spend/spent + [time] + (on) + V-ing</code><br>
+                <em>Ví dụ:</em> It took the delegate two days to review the draft charter.<br>
+                ➔ <em>The delegate spent two days <strong>reviewing</strong> the draft charter.</em>
+              </li>
+              <li style="margin-bottom:12px;">
+                <strong>4. Dạng Thừa nhận / Phủ nhận với Perfect Gerund:</strong><br>
+                <code>S + admitted / denied that S had done sth</code> ➔ <code>S + admitted / denied + (having) + V3/ed</code><br>
+                <em>Ví dụ:</em> The witness admitted that he had seen the unauthorized transaction.<br>
+                ➔ <em>The witness admitted <strong>having seen</strong> the unauthorized transaction.</em>
+              </li>
+              <li style="margin-bottom:12px;">
+                <strong>5. Dạng Gặp khó khăn (Difficulty):</strong><br>
+                <code>It was difficult for sb to-V</code> ➔ <code>S + had difficulty / trouble (in) + V-ing</code><br>
+                <em>Ví dụ:</em> It was difficult for students to adapt to the international conference pace.<br>
+                ➔ <em>Students had difficulty (in) <strong>adapting</strong> to the international conference pace.</em>
               </li>
               <li>
-                <strong>Công thức 2:</strong> S + suggested that + S + (should) + V <br>
-                ➔ <code>S + suggested + V-ing</code>
-              </li>
-              <li>
-                <strong>Công thức 3:</strong> S + spends + [time/money] + (on) + V-ing <br>
-                ➔ <code>It takes + S + [time] + to-V</code>
-              </li>
-              <li>
-                <strong>Công thức 4:</strong> S + confessed / admitted that S had done sth <br>
-                ➔ <code>S + admitted + (having) + V3/ed</code>
+                <strong>6. Dạng Cụm giới từ "TO" bẫy:</strong><br>
+                <code>S + look forward to / object to / contribute to + V-ing</code> (Tuyệt đối không dùng to-V!)<br>
+                <em>Ví dụ:</em> She looks forward to <strong>receiving</strong> the ASEAN scholarship letter.
               </li>
             </ul>
           </div>
