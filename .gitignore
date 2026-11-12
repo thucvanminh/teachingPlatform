@@ -32,3 +32,4 @@ Thumbs.db
 *.swo
 *.tsbuildinfo
 .taste-skill/
+.claude/

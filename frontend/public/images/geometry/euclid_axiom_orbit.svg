@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="100%" height="280" role="img" aria-labelledby="title desc">
+  <title id="title">Euclid's Parallel Axiom - Space Corridor</title>
+  <desc id="desc">Through point M outside line a, there exists one and only one parallel line b. Any other line c intersects line a.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0E1626"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Deep Space Backdrop -->
+  <rect width="540" height="320" rx="18" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.3"/>
+
+  <!-- Subtle Guidance Grid -->
+  <g stroke="#06B6D4" stroke-width="0.5" stroke-opacity="0.1" stroke-dasharray="4 4">
+    <line x1="30" y1="100" x2="510" y2="100"/>
+    <line x1="30" y1="220" x2="510" y2="220"/>
+    <line x1="270" y1="30" x2="270" y2="290"/>
+  </g>
+
+  <!-- Zone Indicator -->
+  <rect x="35" y="100" width="470" height="120" fill="#0c1e2e" fill-opacity="0.5" rx="8"/>
+  <text x="50" y="165" fill="#64748b" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" letter-spacing="1">INTERIOR SECTOR</text>
+
+  <!-- Line a: Base Orbital Line -->
+  <line x1="40" y1="220" x2="500" y2="220" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Chevron arrows on line a to denote parallel orientation -->
+  <path d="M 230 215 L 238 220 L 230 225 M 240 215 L 248 220 L 240 225" fill="none" stroke="#38BDF8" stroke-width="2"/>
+  <text x="508" y="225" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">a</text>
+  <text x="50" y="242" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Base Flight Path (Line a)</text>
+
+  <!-- Line b: The UNIQUE Parallel Line through M -->
+  <line x1="40" y1="100" x2="500" y2="100" stroke="#34D399" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Chevron arrows on line b -->
+  <path d="M 330 95 L 338 100 L 330 105 M 340 95 L 348 100 L 340 105" fill="none" stroke="#34D399" stroke-width="2"/>
+  <text x="508" y="105" fill="#34D399" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">b</text>
+  <text x="50" y="85" fill="#34D399" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Unique Parallel Line (b ∥ a)</text>
+
+  <!-- Line c: Intersecting Line through M (Non-parallel) -->
+  <line x1="120" y1="40" x2="440" y2="260" stroke="#F59E0B" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
+  <text x="448" y="275" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="15" font-weight="bold">c</text>
+
+  <!-- Intersection Point K on line a -->
+  <circle cx="382" cy="220" r="5" fill="#F59E0B"/>
+  <text x="390" y="240" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">K (c ∩ a)</text>
+
+  <!-- Point M: Beacon Waypoint -->
+  <circle cx="207" cy="100" r="7" fill="#22D3EE" filter="url(#neonGlow)"/>
+  <circle cx="207" cy="100" r="3.5" fill="#FFFFFF"/>
+  <text x="198" y="75" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">M</text>
+  <text x="215" y="75" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">(M ∉ a)</text>
+
+  <!-- Top Axiom Badge -->
+  <rect x="135" y="15" width="270" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
+  <text x="270" y="34" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">EUCLID'S AXIOM: EXACTLY 1 PARALLEL</text>
+</svg>

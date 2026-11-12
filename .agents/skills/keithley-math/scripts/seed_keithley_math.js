@@ -13,7 +13,7 @@ const prisma = new PrismaClient();
 const CONSTANTS = {
   TEACHER_ID: 'dc62e5df-2344-4785-b058-b95f5dbe0983', // Thầy Thức
   STUDENT_ID: '4745136c-bd25-4f45-a488-9f00f2121b70', // Keithley Lake (keithley)
-  SUBJECT_ID: 'b1cfb82f-fa75-47eb-ba05-7281f6d3fdf2', // MATH_7
+  SUBJECT_ID: 'e89cc834-99d0-40b7-ab5e-0a0838d273c4', // MATH_7
   STUDENT_USERNAME: 'keithley'
 };
 
