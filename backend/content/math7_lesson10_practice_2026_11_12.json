@@ -1,0 +1,821 @@
+{
+  "assignedDate": "2026-11-12",
+  "studentId": "4745136c-bd25-4f45-a488-9f00f2121b70",
+  "subjectId": "e89cc834-99d0-40b7-ab5e-0a0838d273c4",
+  "assignmentId": "f4bdd2c1-dfaf-4a4d-85bd-7e063f40f799",
+  "assessmentId": "9f7318f6-2e52-45db-9bcc-4b345d93d2c4",
+  "attemptId": "c3babca0-ec06-4747-9424-3bce210655e8",
+  "totalQuestions": 30,
+  "questions": [
+    {
+      "order_index": 1,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.33,
+      "sectionName": "Sector 1: Mercury Orbit • Foundations of Euclid's Axiom",
+      "content_markdown": "According to **Euclid's Axiom of Parallel Lines**, through a point $M$ located outside a given line $a$, how many straight lines can be drawn parallel to line $a$?\n\n![Euclid's Parallel Axiom](/images/geometry/euclid_axiom_orbit.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Zero lines"
+        },
+        {
+          "id": "B",
+          "text": "Exactly one line"
+        },
+        {
+          "id": "C",
+          "text": "Exactly two lines"
+        },
+        {
+          "id": "D",
+          "text": "Infinitely many lines"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Euclid's Axiom states: Through a point outside a line, there is one and only one line parallel to the given line."
+    },
+    {
+      "order_index": 2,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.33,
+      "sectionName": "Sector 1: Mercury Orbit • Foundations of Euclid's Axiom",
+      "content_markdown": "Let point $P$ be a navigation beacon not lying on corridor line $m$. If cadet Alex plots line $x$ through $P$ with $x \\parallel m$, and cadet Keithley plots line $y$ through $P$ with $y \\parallel m$, what conclusion must be drawn?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lines $x$ and $y$ are perpendicular ($x \\perp y$)"
+        },
+        {
+          "id": "B",
+          "text": "Lines $x$ and $y$ intersect at an acute angle"
+        },
+        {
+          "id": "C",
+          "text": "Lines $x$ and $y$ must coincide ($x \\equiv y$)"
+        },
+        {
+          "id": "D",
+          "text": "Such lines cannot exist in the plane"
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "By the corollary of Euclid's Axiom, through an external point $P$, there is only one line parallel to $m$. Therefore, line $x$ and line $y$ must be the exact same line ($x \\equiv y$)."
+    },
+    {
+      "order_index": 3,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.33,
+      "sectionName": "Sector 1: Mercury Orbit • Foundations of Euclid's Axiom",
+      "content_markdown": "Can two distinct straight lines that intersect each other at point $O$ both be parallel to a third line $d$ in the same plane?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes, if they intersect at a $90^\\circ$ right angle"
+        },
+        {
+          "id": "B",
+          "text": "Yes, if point $O$ is located on line $d$"
+        },
+        {
+          "id": "C",
+          "text": "Yes, whenever line $d$ is horizontal"
+        },
+        {
+          "id": "D",
+          "text": "No, because that would violate Euclid's Axiom"
+        }
+      ],
+      "correct_option_id": "D",
+      "explanation": "If two intersecting lines at point $O$ were both parallel to line $d$, there would be two distinct parallel lines through point $O$. This directly contradicts Euclid's Axiom."
+    },
+    {
+      "order_index": 4,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.33,
+      "sectionName": "Sector 1: Mercury Orbit • Foundations of Euclid's Axiom",
+      "content_markdown": "In planar geometry, why is Euclid's parallel postulate classified as an **axiom** (postulate) rather than a theorem?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because it is an accepted fundamental truth that is assumed without proof"
+        },
+        {
+          "id": "B",
+          "text": "Because it can be proven easily using simple arithmetic"
+        },
+        {
+          "id": "C",
+          "text": "Because it only applies to equilateral triangles"
+        },
+        {
+          "id": "D",
+          "text": "Because modern satellites proved it is occasionally false"
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "An axiom (or postulate) is a foundational proposition accepted without formal proof, upon which subsequent theorems are logically constructed."
+    },
+    {
+      "order_index": 5,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.33,
+      "sectionName": "Sector 2: Venus Base • Logic of Signs vs. Properties",
+      "content_markdown": "What is the key logical distinction between Lesson 9 (**Signs of Recognition**) and Lesson 10 (**Properties of Parallel Lines**)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lesson 9 assumes $a \\parallel b$ to calculate angles; Lesson 10 proves $a \\parallel b$"
+        },
+        {
+          "id": "B",
+          "text": "Lesson 9 uses angle relationships to PROVE $a \\parallel b$; Lesson 10 uses known $a \\parallel b$ to DEDUCE angle equalities"
+        },
+        {
+          "id": "C",
+          "text": "Lesson 9 applies to triangles; Lesson 10 applies only to circles"
+        },
+        {
+          "id": "D",
+          "text": "There is no difference; both chapters state the identical theorem"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Lesson 9 establishes tests to prove two lines are parallel. Lesson 10 begins with the fact that lines are parallel and deduces that alternate interior and corresponding angles are equal."
+    },
+    {
+      "order_index": 6,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.33,
+      "sectionName": "Sector 2: Venus Base • Logic of Signs vs. Properties",
+      "content_markdown": "Given two parallel orbital corridors $a \\parallel b$ cut by transversal flight vector $c$. Which of the following statements is **ALWAYS TRUE**?\n\n![Properties of Parallel Lines](/images/geometry/parallel_transversal_properties.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Alternate interior angles are supplementary ($180^\\circ$)"
+        },
+        {
+          "id": "B",
+          "text": "Consecutive interior angles are equal in measure"
+        },
+        {
+          "id": "C",
+          "text": "Alternate interior angles are strictly equal in measure"
+        },
+        {
+          "id": "D",
+          "text": "Corresponding angles sum to $90^\\circ$"
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "Property of Parallel Lines: If a transversal intersects two parallel lines, alternate interior angles are equal in measure."
+    },
+    {
+      "order_index": 7,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.33,
+      "sectionName": "Sector 2: Venus Base • Logic of Signs vs. Properties",
+      "content_markdown": "When transversal line $c$ intersects two parallel lines $a$ and $b$ ($a \\parallel b$), what is the relationship between any pair of **consecutive interior angles** (same-side interior)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are complementary (their sum equals $90^\\circ$)"
+        },
+        {
+          "id": "B",
+          "text": "They are strictly equal in measure"
+        },
+        {
+          "id": "C",
+          "text": "Their difference is always $90^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "They are supplementary (their sum equals $180^\\circ$)"
+        }
+      ],
+      "correct_option_id": "D",
+      "explanation": "Property of Parallel Lines: Consecutive interior angles are supplementary, meaning their degree measures add up to $180^\\circ$."
+    },
+    {
+      "order_index": 8,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.33,
+      "sectionName": "Sector 2: Venus Base • Logic of Signs vs. Properties",
+      "content_markdown": "In geometric pattern decoding, which letter shape helps Cadet Keithley quickly identify a pair of **corresponding angles** at two intersections?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The \"F\" shape"
+        },
+        {
+          "id": "B",
+          "text": "The \"Z\" shape"
+        },
+        {
+          "id": "C",
+          "text": "The \"X\" shape"
+        },
+        {
+          "id": "D",
+          "text": "The \"U\" shape"
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "The \"F\" shape represents corresponding angles (same relative position at each intersection). The \"Z\" shape represents alternate interior angles, and the \"U\" shape represents consecutive interior angles."
+    },
+    {
+      "order_index": 9,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.33,
+      "sectionName": "Sector 3: Earth Mission Control • Perpendicular & Parallel Theorems",
+      "content_markdown": "In space station construction, struts $a$ and $b$ are distinct lines. Both struts are perpendicular to sensor mast $c$ ($a \\perp c$ and $b \\perp c$). What is the relationship between strut $a$ and strut $b$?\n\n![Relations Between Perpendicularity and Parallelism](/images/geometry/perpendicular_parallel_theorems.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$a \\perp b$"
+        },
+        {
+          "id": "B",
+          "text": "$a \\parallel b$"
+        },
+        {
+          "id": "C",
+          "text": "$a$ intersects $b$ at $45^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "No definitive relationship exists"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Theorem 1 (Double Perpendicular Test): Two distinct lines in a plane that are both perpendicular to a common line are mutually parallel ($a \\perp c, b \\perp c \\implies a \\parallel b$)."
+    },
+    {
+      "order_index": 10,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.33,
+      "sectionName": "Sector 3: Earth Mission Control • Perpendicular & Parallel Theorems",
+      "content_markdown": "If orbital corridor $a$ is parallel to corridor $b$ ($a \\parallel b$) and a laser beam $c$ is perpendicular to corridor $a$ ($c \\perp a$), what is the relationship between laser beam $c$ and corridor $b$?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$c \\parallel b$"
+        },
+        {
+          "id": "B",
+          "text": "$c$ and $b$ are skew lines"
+        },
+        {
+          "id": "C",
+          "text": "$c \\perp b$"
+        },
+        {
+          "id": "D",
+          "text": "$c$ meets $b$ at an angle of $60^\\circ$"
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "Theorem 2: A line perpendicular to one of two parallel lines is also perpendicular to the other line ($a \\parallel b, c \\perp a \\implies c \\perp b$)."
+    },
+    {
+      "order_index": 11,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.33,
+      "sectionName": "Sector 3: Earth Mission Control • Perpendicular & Parallel Theorems",
+      "content_markdown": "Three distinct communication paths satisfy $p \\parallel r$ and $q \\parallel r$. Which theorem guarantees that path $p$ is parallel to path $q$ ($p \\parallel q$)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Transitivity of Parallel Lines"
+        },
+        {
+          "id": "B",
+          "text": "Pythagorean Theorem"
+        },
+        {
+          "id": "C",
+          "text": "Vertical Angles Theorem"
+        },
+        {
+          "id": "D",
+          "text": "Linear Pair Postulate"
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Theorem 3 (Transitivity of Parallels): Two distinct lines parallel to a third line are mutually parallel ($p \\parallel r, q \\parallel r \\implies p \\parallel q$). All three lines are parallel: $p \\parallel q \\parallel r$."
+    },
+    {
+      "order_index": 12,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.33,
+      "sectionName": "Sector 3: Earth Mission Control • Perpendicular & Parallel Theorems",
+      "content_markdown": "Which of the following geometric statements is **FALSE**?",
+      "options": [
+        {
+          "id": "A",
+          "text": "If $a \\parallel b$ and $b \\parallel c$, then $a \\parallel c$ (assuming distinct lines)"
+        },
+        {
+          "id": "B",
+          "text": "If $a \\perp c$ and $b \\perp c$, then $a \\parallel b$ in the plane"
+        },
+        {
+          "id": "C",
+          "text": "If $a \\parallel b$ and $c \\perp a$, then $c \\perp b$"
+        },
+        {
+          "id": "D",
+          "text": "If line $d$ intersects line $a$ and $a \\parallel b$, then line $d$ cannot intersect line $b$"
+        }
+      ],
+      "correct_option_id": "D",
+      "explanation": "Statement D is FALSE. If line $d$ intersects line $a$ and $a \\parallel b$, line $d$ MUST also intersect line $b$. If it did not intersect line $b$, it would be parallel to $b$, which would mean two lines through the intersection point are parallel to $b$, violating Euclid's Axiom."
+    },
+    {
+      "order_index": 13,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.33,
+      "sectionName": "Sector 4: Mars Outpost • Construction & Auxiliary Lines Theory",
+      "content_markdown": "When solving a zig-zag trajectory problem with ray $Ax \\parallel \\text{Ray } By$ and intermediate vertex $O$, what geometric foundation justifies drawing an auxiliary ray $Ot \\parallel Ax$ through point $O$?\n\n![Auxiliary Parallel Line Application](/images/geometry/classic_auxiliary_parallel_line.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Angle Bisector Theorem"
+        },
+        {
+          "id": "B",
+          "text": "Euclid's Axiom of Parallel Lines"
+        },
+        {
+          "id": "C",
+          "text": "The Triangle Inequality"
+        },
+        {
+          "id": "D",
+          "text": "The Complementary Angle Theorem"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Euclid's Axiom guarantees that through point $O$ outside line $Ax$, there exists a unique line parallel to $Ax$. This provides the mathematical justification for drawing auxiliary ray $Ot$."
+    },
+    {
+      "order_index": 14,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.33,
+      "sectionName": "Sector 4: Mars Outpost • Construction & Auxiliary Lines Theory",
+      "content_markdown": "Transversal line $c$ intersects parallel lines $a \\parallel b$. Rays $At$ and $Bt'$ are the angle bisectors of a pair of alternate interior angles. What is the geometric relationship between ray $At$ and ray $Bt'$?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$At \\perp Bt'$"
+        },
+        {
+          "id": "B",
+          "text": "$At$ and $Bt'$ intersect at $60^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$At \\parallel Bt'$"
+        },
+        {
+          "id": "D",
+          "text": "$At$ and $Bt'$ are perpendicular to transversal $c$"
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "Because the alternate interior angles are equal, their halves are also equal. These half-angles form alternate interior angles between rays $At$ and $Bt'$ cut by transversal $c$, proving that $At \\parallel Bt'$."
+    },
+    {
+      "order_index": 15,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.33,
+      "sectionName": "Sector 4: Mars Outpost • Construction & Auxiliary Lines Theory",
+      "content_markdown": "Suppose line $a \\parallel b$. If line $d$ passes through point $A$ on line $a$ and is distinct from line $a$, can line $d$ be parallel to line $b$?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes, if line $d$ is perpendicular to line $a$"
+        },
+        {
+          "id": "B",
+          "text": "Yes, in three-dimensional space only"
+        },
+        {
+          "id": "C",
+          "text": "Yes, if the angle of intersection is acute"
+        },
+        {
+          "id": "D",
+          "text": "No, because by Euclid's Axiom there is only ONE line through $A$ parallel to $b$"
+        }
+      ],
+      "correct_option_id": "D",
+      "explanation": "Through point $A$ outside line $b$, Euclid's Axiom allows only one line parallel to $b$. Since line $a$ already occupies this unique parallel trajectory, no other line through $A$ can be parallel to $b$."
+    },
+    {
+      "order_index": 16,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.34,
+      "sectionName": "Sector 4: Mars Outpost • Direct Angle Calculations",
+      "content_markdown": "Refer to the standard orbital angle map below ($a \\parallel b$). If alternate interior angle $\\widehat{A_3} = 58^\\circ$, what is the degree measure of alternate interior angle $\\widehat{B_1}$?\n\n![Parallel Line Angle Map](/images/geometry/parallel_lines_angle_map.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$58^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$122^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$32^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$180^\\circ$"
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Since $a \\parallel b$, alternate interior angles are equal: $\\widehat{B_1} = \\widehat{A_3} = 58^\\circ$."
+    },
+    {
+      "order_index": 17,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.34,
+      "sectionName": "Sector 4: Mars Outpost • Direct Angle Calculations",
+      "content_markdown": "Parallel trajectories $m \\parallel n$ are intersected by navigation vector $p$. If corresponding angle $\\widehat{M_1} = 115^\\circ$ (top-right), what is the measure of corresponding angle $\\widehat{N_1}$ (top-right)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$65^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$115^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$90^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$180^\\circ$"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Since $m \\parallel n$, corresponding angles occupying the same relative position are equal: $\\widehat{N_1} = \\widehat{M_1} = 115^\\circ$."
+    },
+    {
+      "order_index": 18,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.34,
+      "sectionName": "Sector 4: Mars Outpost • Direct Angle Calculations",
+      "content_markdown": "Communication corridors $a \\parallel b$ are cut by transversal $c$ (see standard angle map). Given that consecutive interior angle $\\widehat{A_4} = 65^\\circ$, calculate the measure of consecutive interior angle $\\widehat{B_1}$.\n\n![Parallel Line Angle Map](/images/geometry/parallel_lines_angle_map.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$65^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$25^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$115^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$125^\\circ$"
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "Consecutive interior angles along parallel lines are supplementary: $\\widehat{B_1} = 180^\\circ - \\widehat{A_4} = 180^\\circ - 65^\\circ = 115^\\circ$."
+    },
+    {
+      "order_index": 19,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.34,
+      "sectionName": "Sector 5: Jupiter Station • Multi-Angle & Linear Pair Combinations",
+      "content_markdown": "Corridors $a \\parallel b$ are cut by transversal $c$ at nodes $A$ and $B$ (see standard map). If angle $\\widehat{A_1} = 132^\\circ$ (top-right), what is the degree measure of angle $\\widehat{B_2}$ (top-left)?\n\n![Parallel Line Angle Map](/images/geometry/parallel_lines_angle_map.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$132^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$58^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$90^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$48^\\circ$"
+        }
+      ],
+      "correct_option_id": "D",
+      "explanation": "Corresponding angle $\\widehat{B_1} = \\widehat{A_1} = 132^\\circ$. Since $\\widehat{B_1}$ and $\\widehat{B_2}$ form a linear pair along line $b$: $\\widehat{B_2} = 180^\\circ - 132^\\circ = 48^\\circ$."
+    },
+    {
+      "order_index": 20,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.34,
+      "sectionName": "Sector 5: Jupiter Station • Multi-Angle & Linear Pair Combinations",
+      "content_markdown": "Along parallel orbital tracks $a \\parallel b$, transversal line $c$ creates corresponding angles $\\widehat{A_2} = 4x$ and $\\widehat{B_2} = 84^\\circ$. Find the value of flight parameter $x$.",
+      "options": [
+        {
+          "id": "A",
+          "text": "$x = 21$"
+        },
+        {
+          "id": "B",
+          "text": "$x = 20$"
+        },
+        {
+          "id": "C",
+          "text": "$x = 24$"
+        },
+        {
+          "id": "D",
+          "text": "$x = 42$"
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Because $a \\parallel b$, corresponding angles are equal: $4x = 84^\\circ \\implies x = 84 \\div 4 = 21$."
+    },
+    {
+      "order_index": 21,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.34,
+      "sectionName": "Sector 5: Jupiter Station • Multi-Angle & Linear Pair Combinations",
+      "content_markdown": "Given $a \\parallel b$ cut by transversal $c$ (see standard angle map). Alternate interior angles are $\\widehat{A_3} = (3x + 12)^\\circ$ and $\\widehat{B_1} = 75^\\circ$. Solve for $x$.\n\n![Parallel Line Angle Map](/images/geometry/parallel_lines_angle_map.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$x = 18$"
+        },
+        {
+          "id": "B",
+          "text": "$x = 21$"
+        },
+        {
+          "id": "C",
+          "text": "$x = 25$"
+        },
+        {
+          "id": "D",
+          "text": "$x = 29$"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Alternate interior angles are equal when lines are parallel: $3x + 12 = 75 \\implies 3x = 63 \\implies x = 21$."
+    },
+    {
+      "order_index": 22,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.34,
+      "sectionName": "Sector 5: Jupiter Station • Multi-Angle & Linear Pair Combinations",
+      "content_markdown": "In the algebraic diagram below, corridors $a \\parallel b$ have consecutive interior angles measuring $\\widehat{A_4} = (2x + 10)^\\circ$ and $\\widehat{B_1} = (3x + 20)^\\circ$. Calculate the value of variable $x$.\n\n![Algebraic Angle Equation on Parallel Lines](/images/geometry/math7_transversal_algebra.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$x = 26$"
+        },
+        {
+          "id": "B",
+          "text": "$x = 32$"
+        },
+        {
+          "id": "C",
+          "text": "$x = 30$"
+        },
+        {
+          "id": "D",
+          "text": "$x = 35$"
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "Consecutive interior angles are supplementary: $(2x + 10) + (3x + 20) = 180 \\implies 5x + 30 = 180 \\implies 5x = 150 \\implies x = 30$."
+    },
+    {
+      "order_index": 23,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.34,
+      "sectionName": "Sector 6: Saturn Rings • Perpendicularity & Angle Deductions",
+      "content_markdown": "Corridors $a$ and $b$ are parallel ($a \\parallel b$). Sensor line $c \\perp a$ at waypoint $A$. Another flight line $d$ cuts lines $a$ and $b$ through $A$, forming an acute angle of $42^\\circ$ with line $a$. What is the measure of the complementary angle between line $c$ and line $d$ at waypoint $A$?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$42^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$138^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$90^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$48^\\circ$"
+        }
+      ],
+      "correct_option_id": "D",
+      "explanation": "Since $c \\perp a$, the angle between line $c$ and line $a$ is $90^\\circ$. The angle between line $c$ and line $d$ is $90^\\circ - 42^\\circ = 48^\\circ$."
+    },
+    {
+      "order_index": 24,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.34,
+      "sectionName": "Sector 6: Saturn Rings • Perpendicularity & Angle Deductions",
+      "content_markdown": "Docking struts $m \\perp t$ and $n \\perp t$. Telemetry beam $k$ cuts strut $m$ at an angle of $124^\\circ$. What is the measure of the alternate interior angle formed by beam $k$ with strut $n$?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$124^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$56^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$90^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$66^\\circ$"
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Because $m \\perp t$ and $n \\perp t$, struts $m$ and $n$ are parallel ($m \\parallel n$ by Theorem 1). Therefore, alternate interior angles formed by transversal $k$ are equal, measuring $124^\\circ$."
+    },
+    {
+      "order_index": 25,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.34,
+      "sectionName": "Sector 6: Saturn Rings • Perpendicularity & Angle Deductions",
+      "content_markdown": "Corridors $a \\parallel b$ are cut by transversal $c$ at $A$ and $B$, with interior angle $\\widehat{A_3} = 76^\\circ$. Ray $At$ is the angle bisector of $\\widehat{A_3}$, intersecting line $b$ at point $T$. What is the measure of angle $\\widehat{ATB}$?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$76^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$38^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$104^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$142^\\circ$"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Ray $At$ bisects $\\widehat{A_3}$, so $\\widehat{tAa} = 76^\\circ \\div 2 = 38^\\circ$. Between parallel lines $a \\parallel b$ cut by transversal $AT$, alternate interior angle $\\widehat{ATB} = \\widehat{tAa} = 38^\\circ$."
+    },
+    {
+      "order_index": 26,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.34,
+      "sectionName": "Sector 7: Uranus Deep Space • Auxiliary Ray Technique",
+      "content_markdown": "In orbital navigation, ray $Ax \\parallel \\text{Ray } By$. Waypoint $O$ is located between the rays. Given that acute angles $\\widehat{xAO} = 40^\\circ$ and $\\widehat{yBO} = 50^\\circ$, calculate corner angle $\\widehat{AOB}$.\n\n![Auxiliary Parallel Ray Exercise](/images/geometry/math7_zigzag_acute.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$80^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$100^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$90^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$110^\\circ$"
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "Construct auxiliary ray $Ot \\parallel Ax$ through $O$. Then $\\widehat{AOt} = \\widehat{xAO} = 40^\\circ$ and $\\widehat{tOB} = \\widehat{yBO} = 50^\\circ$ (alternate interior). Therefore, $\\widehat{AOB} = 40^\\circ + 50^\\circ = 90^\\circ$."
+    },
+    {
+      "order_index": 27,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.34,
+      "sectionName": "Sector 7: Uranus Deep Space • Auxiliary Ray Technique",
+      "content_markdown": "Given ray $Ax \\parallel \\text{Ray } By$ with intermediate vertex $O$. It is known that total corner angle $\\widehat{AOB} = 112^\\circ$ and $\\widehat{xAO} = 48^\\circ$. Calculate the measure of angle $\\widehat{yBO}$.",
+      "options": [
+        {
+          "id": "A",
+          "text": "$54^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$68^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$74^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$64^\\circ$"
+        }
+      ],
+      "correct_option_id": "D",
+      "explanation": "Draw auxiliary ray $Ot \\parallel Ax \\parallel By$. Alternate interior angle $\\widehat{AOt} = \\widehat{xAO} = 48^\\circ$. Since $\\widehat{AOB} = \\widehat{AOt} + \\widehat{tOB} = 112^\\circ$, we have $\\widehat{tOB} = 112^\\circ - 48^\\circ = 64^\\circ$. Since $Ot \\parallel By$, alternate interior angle $\\widehat{yBO} = \\widehat{tOB} = 64^\\circ$."
+    },
+    {
+      "order_index": 28,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.34,
+      "sectionName": "Sector 7: Uranus Deep Space • Auxiliary Ray Technique",
+      "content_markdown": "Look at the diagram below. Ray $Ax \\parallel \\text{Ray } By$. The obtuse angles inside the corridor measure $\\widehat{xAO} = 140^\\circ$ and $\\widehat{yBO} = 130^\\circ$. Calculate the interior angle $\\widehat{AOB}$.\n\n![Zig-Zag Path with Obtuse Angles](/images/geometry/math7_zigzag_obtuse.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$90^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$70^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$80^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$100^\\circ$"
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Draw auxiliary ray $Ot \\parallel Ax \\parallel By$ pointing right. Consecutive interior angles on the same side sum to $180^\\circ$: $\\widehat{AOt} = 180^\\circ - 140^\\circ = 40^\\circ$ and $\\widehat{tOB} = 180^\\circ - 130^\\circ = 50^\\circ$. Therefore, $\\widehat{AOB} = \\widehat{AOt} + \\widehat{tOB} = 40^\\circ + 50^\\circ = 90^\\circ$."
+    },
+    {
+      "order_index": 29,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.34,
+      "sectionName": "Sector 8: Neptune Frontier • Advanced Geometric Synthesis",
+      "content_markdown": "Refer to the three parallel lines diagram ($a \\parallel b \\parallel c$). Transversal line $d$ intersects the lines at $A, B, C$. Given that $\\widehat{A_1} = 72^\\circ$, what is the measure of consecutive interior angle $\\widehat{C_2}$ formed with line $c$?\n\n![Three Parallel Lines Cut by Transversal](/images/geometry/math7_three_parallel_lines.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$72^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$108^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$144^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$18^\\circ$"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Since $a \\parallel c$, corresponding angle at $C$ equals $72^\\circ$. The adjacent consecutive interior angle $\\widehat{C_2}$ forms a linear pair: $\\widehat{C_2} = 180^\\circ - 72^\\circ = 108^\\circ$."
+    },
+    {
+      "order_index": 30,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.34,
+      "sectionName": "Sector 8: Neptune Frontier • Advanced Geometric Synthesis",
+      "content_markdown": "Two parallel navigation reflectors $p \\parallel q$ guide an optical probe. A light ray strikes reflector $p$ at point $A$ with an angle of $38^\\circ$, reflects off $p$ at the same angle ($38^\\circ$), and travels to strike reflector $q$ at point $B$. What is the measure of the alternate interior angle at point $B$ where the reflected beam meets reflector $q$?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$38^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$76^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$142^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$52^\\circ$"
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "The reflected ray serves as a transversal cutting parallel lines $p \\parallel q$. By the alternate interior angles property, the angle formed at reflector $q$ equals the alternate interior angle at reflector $p$, which is $38^\\circ$."
+    }
+  ]
+}
