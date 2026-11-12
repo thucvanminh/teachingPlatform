@@ -91,6 +91,23 @@
         window.scrollTo({ top: 120, behavior: 'smooth' });
       });
     });
+
+    // Quick jump from header grammar box to grammar section
+    const grammarBox = document.querySelector('.lecture-grammar-box');
+    if (grammarBox) {
+      grammarBox.style.cursor = 'pointer';
+      grammarBox.setAttribute('title', 'Bấm để xem chi tiết 5 Chuyên đề Ngữ pháp Danh Động Từ');
+      grammarBox.addEventListener('click', () => {
+        const vocabTabBtn = document.querySelector('.tabs-bar .tab-btn[data-tab="tab-vocab"]');
+        if (vocabTabBtn) {
+          vocabTabBtn.click();
+          setTimeout(() => {
+            const section = document.getElementById('grammarSection');
+            if (section) section.scrollIntoView({ behavior: 'smooth' });
+          }, 150);
+        }
+      });
+    }
   }
 
   // --- SECTION 1: VOCABULARY & GRAMMAR COMPENDIUM ---
