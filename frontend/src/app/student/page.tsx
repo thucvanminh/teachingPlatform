@@ -31,6 +31,14 @@ import {
   Quote,
   Award,
   CheckCircle2,
+  Trophy,
+  Zap,
+  CheckCircle,
+  GraduationCap,
+  Timer,
+  ArrowUpRight,
+  Check,
+  Compass,
 } from 'lucide-react';
 
 function formatAssignmentDate(dateStr: string): string {
@@ -1059,6 +1067,7 @@ export default function StudentDashboard() {
 
   // ==========================================
   // 3. GIAO DIỆN TRUNG HỌC & LUYỆN THI (THÁI LỚP 11 & NAM VIỆT LỚP 12)
+  // TASTE SKILL HIGH-SCHOOL EXAM SUITE
   // ==========================================
   const studentName = user?.fullName || user?.full_name || user?.username || 'Học Sinh';
   const gradeLabel = user?.studentProfile?.grade_level || user?.student_profiles?.grade_level || 11;
@@ -1075,7 +1084,7 @@ export default function StudentDashboard() {
   const studentTarget = isThai
     ? '8.5+ Giữa Kì & THPT Chuyên Sâu'
     : isNamViet
-    ? '7+ THPT Quốc Gia'
+    ? '7+ THPT Quốc Gia (Bứt phá 8.0+)'
     : `${gradeLabel === 12 ? '7+ THPTQG' : '8.0+ Giữa Kì'}`;
 
   const studentSubject = isThai
@@ -1085,50 +1094,84 @@ export default function StudentDashboard() {
     : `Tiếng Anh ${gradeLabel} • Global Success`;
 
   const studentFocus = isThai
-    ? 'Khai phá từ vựng học thuật B2/C1, Collocations, Cây từ loại (Word Family) và tư duy làm chủ đề thi 8.5+.'
+    ? 'Khai phá từ vựng học thuật B2/C1, Collocations nâng cao, Cây từ loại (Word Family) và phương pháp giải đề đạt mốc 8.5+.'
     : isNamViet
     ? (todayAssignment?.learning_units?.title?.includes('Unit 7')
-        ? 'Luyện phản xạ 12 từ vựng cốt lõi Unit 7 (Mass Media) bằng Flashcard 3D hai chiều, làm chủ Mệnh đề cách thức (As if/were) & Mệnh đề kết quả, khóa chắc 7+ THPTQG.'
+        ? 'Luyện phản xạ 50 từ vựng Unit 7 (Mass Media) bằng Flashcard 3D hai chiều, làm chủ Mệnh đề cách thức (As if/were) & Mệnh đề kết quả, khóa chắc 7+ THPTQG.'
         : 'Luyện phản xạ từ vựng trọng tâm bằng Flashcard 3D hai chiều, khóa chắc điểm ngữ pháp & Chắc suất 7+ THPTQG.')
     : 'Tập trung rèn luyện tư duy, chiến thuật làm bài và tăng tốc độ giải đề.';
 
+  // Đếm ngược ngày thi THPT Quốc Gia 2027 (dành riêng cho học sinh cuối cấp như Nam Việt)
+  const thptqgTargetDate = new Date('2027-06-25T00:00:00');
+  const now = new Date();
+  const daysUntilTHPTQG = Math.max(0, Math.ceil((thptqgTargetDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)));
+
+  // Tìm studio bài giảng tương tác mới nhất để tạo Spotlight Quick Action
+  const featuredAssignment = todayAssignment || allAssignments[0] || null;
+  const featuredMatch = featuredAssignment?.learning_units?.lecture_content_markdown?.match(/\/lectures\/[a-zA-Z0-9_\-\/]+\.html/);
+  const featuredStudioUrl = featuredMatch ? featuredMatch[0] : (
+    isNamViet
+      ? '/lectures/eng12-unit7/index.html'
+      : isThai
+      ? '/lectures/eng11-unit4/index.html'
+      : null
+  );
+
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 py-10 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-slate-50 text-slate-800 py-8 sm:py-10 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-6xl mx-auto space-y-8">
-        {/* Header Luyện Thi - Taste Skill Edition */}
-        <div className="rounded-3xl p-6 sm:p-8 bg-white border border-slate-200/90 shadow-sm relative overflow-hidden flex flex-col lg:flex-row lg:items-center justify-between gap-6 transition-all">
-          <div className="h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-500 absolute top-0 left-0 right-0" />
+        {/* =========================================================
+            HERO COMMAND HUB: PERSONALIZED FOR THÁI & NAM VIỆT
+            ========================================================= */}
+        <div className="rounded-3xl p-6 sm:p-8 bg-white border border-slate-200/90 shadow-sm relative overflow-hidden flex flex-col lg:flex-row lg:items-center justify-between gap-6 transition-all hover:shadow-md">
+          {/* Top subtle accent gradient bar */}
+          <div
+            className={`h-1.5 absolute top-0 left-0 right-0 ${
+              isNamViet
+                ? 'bg-gradient-to-r from-blue-600 via-indigo-600 to-amber-500'
+                : 'bg-gradient-to-r from-indigo-700 via-blue-600 to-emerald-500'
+            }`}
+          />
 
           <div className="max-w-2xl">
-            <div className="flex flex-wrap items-center gap-2 mb-2">
-              <span className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-700 bg-blue-50 border border-blue-200/80 px-2.5 py-0.5 rounded-full tracking-wide">
-                <BookOpen className="w-3.5 h-3.5" />
+            {/* Tag Pills Header */}
+            <div className="flex flex-wrap items-center gap-2 mb-3">
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-700 bg-blue-50 border border-blue-200/80 px-3 py-1 rounded-full tracking-wide shadow-xs">
+                <BookOpen className="w-3.5 h-3.5 text-blue-600" />
                 <span>{studentSubject}</span>
               </span>
-              <span className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-full">
-                <Target className="w-3.5 h-3.5 text-emerald-600" />
+              <span
+                className={`inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-full shadow-xs ${
+                  isNamViet
+                    ? 'text-amber-800 bg-amber-50 border border-amber-200/80'
+                    : 'text-emerald-800 bg-emerald-50 border border-emerald-200/80'
+                }`}
+              >
+                <Target className={`w-3.5 h-3.5 ${isNamViet ? 'text-amber-600' : 'text-emerald-600'}`} />
                 <span>{studentTarget}</span>
               </span>
-              <span className="text-xs text-slate-500 font-medium px-2 py-0.5 bg-slate-100 rounded-full border border-slate-200">
+              <span className="text-xs text-slate-600 font-bold px-3 py-1 bg-slate-100 rounded-full border border-slate-200/80">
                 Lớp {gradeLabel}
               </span>
             </div>
 
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-              Chào mừng, {studentName}!
+            {/* Main Greeting & Mission Statement */}
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
+              Xin chào, <span className={isNamViet ? 'text-blue-700' : 'text-indigo-700'}>{studentName}</span>! 👋
             </h1>
-            <p className="text-sm text-slate-600 mt-2 leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-600 mt-2.5 leading-relaxed font-normal">
               {studentFocus}
             </p>
 
+            {/* Lời dặn từ Thầy Thức */}
             {todayAssignment?.teacher_daily_note && (
-              <div className="mt-4 p-3.5 sm:p-4 rounded-2xl bg-amber-50/80 border border-amber-200/80 text-amber-950 text-sm flex items-start gap-3">
+              <div className="mt-4 p-4 rounded-2xl bg-amber-50/70 border border-amber-200/90 text-amber-950 text-sm flex items-start gap-3.5 shadow-xs">
                 <Quote className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
                 <div>
-                  <span className="font-bold text-amber-900 block text-xs uppercase tracking-wider mb-0.5">
-                    Lời dặn hôm nay từ Thầy Thức:
+                  <span className="font-extrabold text-amber-900 block text-xs uppercase tracking-wider mb-1">
+                    Chiến lược học tập hôm nay từ Thầy Thức:
                   </span>
-                  <p className="italic font-medium leading-relaxed">
+                  <p className="italic font-medium leading-relaxed text-slate-800">
                     "{todayAssignment.teacher_daily_note}"
                   </p>
                 </div>
@@ -1136,47 +1179,114 @@ export default function StudentDashboard() {
             )}
           </div>
 
-          <div className="flex flex-wrap sm:flex-nowrap items-center gap-3 self-stretch lg:self-center">
-            <div className="flex-1 sm:flex-initial px-5 py-3.5 rounded-2xl bg-slate-50/90 border border-slate-200 text-center shadow-xs transition hover:translate-y-[-2px] hover:shadow-sm">
+          {/* Quick Metrics & Target Counters */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-1 gap-3 shrink-0 min-w-[240px]">
+            {/* Metric 1: Mục tiêu điểm số */}
+            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-center shadow-xs transition hover:translate-y-[-2px] hover:shadow-sm">
               <div className="flex items-center justify-center gap-1.5 text-slate-500 text-xs font-semibold mb-1">
-                <Target className="w-3.5 h-3.5 text-emerald-600" />
-                <span>Mục Tiêu</span>
+                <Trophy className={`w-4 h-4 ${isNamViet ? 'text-amber-600' : 'text-emerald-600'}`} />
+                <span>Mục Tiêu Điểm</span>
               </div>
-              <span className="text-base font-extrabold text-slate-900 block">
+              <span className="text-lg sm:text-xl font-extrabold text-slate-900 block font-mono">
                 {isThai ? '8.5+ THPT' : isNamViet ? '7+ THPTQG' : `${gradeLabel === 12 ? '7+' : '8.0+'}`}
               </span>
             </div>
 
-            <div className="flex-1 sm:flex-initial px-5 py-3.5 rounded-2xl bg-slate-50/90 border border-slate-200 text-center shadow-xs transition hover:translate-y-[-2px] hover:shadow-sm">
-              <div className="flex items-center justify-center gap-1.5 text-slate-500 text-xs font-semibold mb-1">
-                <Flame className="w-3.5 h-3.5 text-amber-500" />
-                <span>Chuỗi Học</span>
+            {/* Metric 2: Đếm ngược THPTQG hoặc Chuỗi học */}
+            {isNamViet ? (
+              <div className="p-4 rounded-2xl bg-amber-50/70 border border-amber-200/90 text-center shadow-xs transition hover:translate-y-[-2px] hover:shadow-sm">
+                <div className="flex items-center justify-center gap-1.5 text-amber-800 text-xs font-bold mb-1">
+                  <Timer className="w-4 h-4 text-amber-600 animate-pulse" />
+                  <span>Đếm Ngược Thi</span>
+                </div>
+                <span className="text-lg sm:text-xl font-extrabold text-amber-900 block font-mono">
+                  {daysUntilTHPTQG} Ngày
+                </span>
               </div>
-              <span className="text-base font-extrabold text-blue-600 block">
-                7 Ngày
-              </span>
-            </div>
+            ) : (
+              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-center shadow-xs transition hover:translate-y-[-2px] hover:shadow-sm">
+                <div className="flex items-center justify-center gap-1.5 text-slate-500 text-xs font-semibold mb-1">
+                  <Flame className="w-4 h-4 text-orange-500" />
+                  <span>Chuỗi Luyện Tập</span>
+                </div>
+                <span className="text-lg sm:text-xl font-extrabold text-blue-600 block font-mono">
+                  7 Ngày
+                </span>
+              </div>
+            )}
 
-            <div className="flex-1 sm:flex-initial px-5 py-3.5 rounded-2xl bg-blue-50/60 border border-blue-200/80 text-center shadow-xs transition hover:translate-y-[-2px] hover:shadow-sm">
-              <div className="flex items-center justify-center gap-1.5 text-blue-700 text-xs font-semibold mb-1">
-                <Layers className="w-3.5 h-3.5 text-blue-600" />
-                <span>Đặc Quyền</span>
+            {/* Metric 3: Nền tảng học tập */}
+            <div className="col-span-2 sm:col-span-1 p-4 rounded-2xl bg-blue-50/60 border border-blue-200/80 text-center shadow-xs transition hover:translate-y-[-2px] hover:shadow-sm">
+              <div className="flex items-center justify-center gap-1.5 text-blue-800 text-xs font-bold mb-1">
+                <Sparkles className="w-4 h-4 text-blue-600" />
+                <span>Không Gian Học</span>
               </div>
-              <span className="text-xs font-extrabold text-blue-800 block">
+              <span className="text-xs sm:text-sm font-extrabold text-blue-900 block">
                 Live Studio 3D
               </span>
             </div>
           </div>
         </div>
 
-        {/* Lịch Học Theo Ngày */}
+        {/* =========================================================
+            SPOTLIGHT QUICK LAUNCHER: PHÒNG HỌC TƯƠNG TÁC
+            ========================================================= */}
+        {featuredStudioUrl && (
+          <div className="rounded-3xl p-6 sm:p-7 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white shadow-lg border border-slate-800 relative overflow-hidden">
+            <div className="absolute top-0 right-0 -mt-10 -mr-10 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-5 relative z-10">
+              <div className="space-y-2 max-w-2xl">
+                <div className="flex items-center gap-2">
+                  <span className="px-2.5 py-0.5 rounded-full text-[11px] font-extrabold tracking-wider uppercase bg-blue-500/20 text-blue-300 border border-blue-400/30 flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-blue-400" />
+                    <span>Live Interactive Lab • 3D Flashcard</span>
+                  </span>
+                  <span className="text-xs text-slate-400 font-mono">
+                    {isNamViet ? 'Unit 7: Mass Media' : 'Unit 4: ASEAN & Viet Nam'}
+                  </span>
+                </div>
+
+                <h3 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
+                  {isNamViet
+                    ? 'Phòng Luyện Phản Xạ 50 Từ Vựng & Mệnh Đề Unit 7'
+                    : 'Phòng Luyện Từ Vựng Học Thuật & Ngữ Pháp Chuyên Sâu'}
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  {isNamViet
+                    ? 'Lật thẻ 3D 2 chiều theo phím cách (Space), phát âm Web Speech API, mini-game Collocation và câu hỏi ngữ pháp cách thức (As if/were).'
+                    : 'Nắm chắc hệ thống Collocations B2/C1, cây từ loại (Word Family), đảo ngữ ngữ pháp và kỹ năng nhận diện bẫy đề thi 8.5+.'}
+                </p>
+              </div>
+
+              <a
+                href={featuredStudioUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => {
+                  if (featuredAssignment && !featuredAssignment.lecture_viewed_at) {
+                    api.markLectureViewed(featuredAssignment.id).catch(() => {});
+                  }
+                }}
+                className="w-full md:w-auto px-6 py-3.5 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-extrabold text-sm flex items-center justify-center gap-2.5 shadow-md shadow-blue-600/30 active:scale-[0.98] transition-all shrink-0"
+              >
+                <BookOpen className="w-4 h-4 text-blue-200" />
+                <span>Vào Studio Học Ngay</span>
+                <ArrowUpRight className="w-4 h-4 text-blue-200" />
+              </a>
+            </div>
+          </div>
+        )}
+
+        {/* =========================================================
+            LỊCH BÀI HỌC VÀ BÀI TẬP THEO NGÀY (TIMELINE BENTO)
+            ========================================================= */}
         <div>
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xl font-bold text-slate-900 flex items-center space-x-2">
+          <div className="flex items-center justify-between mb-5">
+            <h2 className="text-xl font-extrabold text-slate-900 flex items-center space-x-2.5">
               <Calendar className="w-5 h-5 text-blue-600" />
               <span>Lịch Bài Học & Bài Tập Theo Ngày:</span>
             </h2>
-            <span className="text-xs text-slate-500">Nhấn vào ngày để mở rộng bài học</span>
+            <span className="text-xs text-slate-500 font-medium">Bấm vào ngày để mở trạm bài tập</span>
           </div>
 
           {allAssignments.length > 0 ? (
@@ -1186,36 +1296,69 @@ export default function StudentDashboard() {
                 const dateLabel = formatAssignmentDate(assignment.assigned_date);
                 const title = assignment.learning_units?.title || 'Bài học';
 
+                // Tính tổng quan trạng thái của buổi học
+                const attempts = assignment.assessment_attempts || [];
+                const allGraded = attempts.length > 0 && attempts.every((a: any) => a.status === 'GRADED');
+                const anySubmitted = attempts.some((a: any) => a.status === 'SUBMITTED' || a.status === 'GRADED');
+                const totalQuestionsCount = attempts.reduce(
+                  (sum: number, att: any) => sum + (att.assessments?._count?.questions ?? att.assessments?.questions?.length ?? 0),
+                  0
+                );
+
                 return (
                   <div
                     key={assignment.id}
                     className={`rounded-3xl border transition duration-300 overflow-hidden bg-white ${
-                      isExpanded ? 'border-blue-500 shadow-md ring-1 ring-blue-500/30' : 'border-slate-200 hover:border-slate-300 shadow-sm'
+                      isExpanded
+                        ? 'border-blue-500 shadow-lg ring-1 ring-blue-500/20'
+                        : 'border-slate-200 hover:border-slate-300 shadow-xs hover:shadow-sm'
                     }`}
                   >
                     <button
                       onClick={() => toggleExpand(assignment.id)}
-                      className="w-full p-6 text-left flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-slate-50/70 transition"
+                      className="w-full p-5 sm:p-6 text-left flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-slate-50/70 transition"
                     >
                       <div className="flex items-start space-x-4">
-                        <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center font-bold">
+                        <div
+                          className={`w-12 h-12 rounded-2xl flex items-center justify-center font-bold shrink-0 ${
+                            allGraded
+                              ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                              : 'bg-blue-50 text-blue-600 border border-blue-200'
+                          }`}
+                        >
                           <Calendar className="w-6 h-6" />
                         </div>
                         <div>
-                          <div className="flex items-center space-x-2 mb-1">
-                            <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
+                          <div className="flex flex-wrap items-center gap-2 mb-1">
+                            <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200/80">
                               Ngày {dateLabel}
                             </span>
-                            <span className="text-xs text-slate-500">Lớp {gradeLabel}</span>
+                            <span className="text-xs text-slate-500 font-semibold">Lớp {gradeLabel}</span>
+                            {totalQuestionsCount > 0 && (
+                              <span className="text-xs font-mono font-bold text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded-md border border-slate-200">
+                                {totalQuestionsCount} câu trắc nghiệm
+                              </span>
+                            )}
+                            {allGraded ? (
+                              <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1">
+                                <CheckCircle className="w-3.5 h-3.5 text-emerald-600" />
+                                <span>Đã hoàn thành</span>
+                              </span>
+                            ) : anySubmitted ? (
+                              <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200 flex items-center gap-1">
+                                <Clock className="w-3.5 h-3.5 text-amber-600" />
+                                <span>Đã nộp bài</span>
+                              </span>
+                            ) : null}
                           </div>
-                          <h3 className="text-lg sm:text-xl font-bold text-slate-900">
+                          <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight">
                             {dateLabel} : {title}
                           </h3>
                         </div>
                       </div>
 
-                      <div className="flex items-center space-x-2 self-end sm:self-center">
-                        <span className="text-xs font-semibold text-blue-600 bg-blue-50 border border-blue-200 px-3.5 py-1.5 rounded-xl flex items-center space-x-1">
+                      <div className="flex items-center space-x-2 self-end sm:self-center shrink-0">
+                        <span className="text-xs font-bold text-blue-700 bg-blue-50 border border-blue-200 px-3.5 py-1.5 rounded-xl flex items-center space-x-1.5 hover:bg-blue-100 transition shadow-2xs">
                           <span>{isExpanded ? 'Thu gọn' : 'Xem chi tiết bài học'}</span>
                           {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                         </span>
@@ -1223,22 +1366,26 @@ export default function StudentDashboard() {
                     </button>
 
                     {isExpanded && (
-                      <div className="p-6 pt-2 border-t border-slate-100 bg-slate-50/50">
-                        {/* Thông báo nếu buổi học không có BTVN */}
+                      <div className="p-5 sm:p-6 pt-2 border-t border-slate-100 bg-slate-50/50">
+                        {/* Thông báo nếu buổi học không có BTVN (toàn bộ dồn làm tại lớp) */}
                         {assignment.assessment_attempts?.every((a: any) => a.assessments?.type !== 'HOMEWORK') && (
-                          <div className="mt-4 px-4 py-2.5 rounded-2xl bg-blue-50/80 border border-blue-200/80 text-blue-900 text-xs flex flex-wrap items-center justify-between gap-2">
+                          <div className="mt-4 px-4 py-3 rounded-2xl bg-blue-50/90 border border-blue-200 text-blue-900 text-xs sm:text-sm flex flex-wrap items-center justify-between gap-2 shadow-2xs">
                             <span className="font-semibold flex items-center space-x-2">
-                              <span>🎉</span>
-                              <span>Hôm nay toàn bộ bài tập được dồn làm trực tiếp tại lớp (không có BTVN).</span>
+                              <span className="text-base">🎯</span>
+                              <span>Toàn bộ câu hỏi được hoàn thành trực tiếp tại lớp (không có BTVN).</span>
                             </span>
-                            <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 border border-blue-200">
-                              {assignment.assessment_attempts?.[0]?.assessments?.title?.match(/\d+\s*câu/)?.[0] ? `${assignment.assessment_attempts[0].assessments.title.match(/\d+\s*câu/)[0]} luyện tập tại lớp` : 'Luyện tập tại lớp'}
+                            <span className="text-xs font-bold px-3 py-1 rounded-full bg-blue-100 text-blue-800 border border-blue-200">
+                              {assignment.assessment_attempts?.[0]?.assessments?.title?.match(/\d+\s*câu/)?.[0]
+                                ? `${assignment.assessment_attempts[0].assessments.title.match(/\d+\s*câu/)[0]} tại lớp`
+                                : 'Luyện tập tại lớp'}
                             </span>
                           </div>
                         )}
 
-                        <div className={`grid grid-cols-1 ${assignment.assessment_attempts?.length === 1 ? 'md:grid-cols-2' : 'md:grid-cols-3'} gap-4 mt-5`}>
-                          {/* Station 1: Giảng Đường Tương Tác & Flashcard 3D */}
+                        <div className={`grid grid-cols-1 ${assignment.assessment_attempts?.length === 1 ? 'md:grid-cols-2' : 'md:grid-cols-3'} gap-5 mt-5`}>
+                          {/* ========================================================
+                              TRẠM 1: GIẢNG ĐƯỜNG TƯƠNG TÁC & FLASHCARD 3D
+                              ======================================================== */}
                           {(() => {
                             const appMatch = assignment.learning_units?.lecture_content_markdown?.match(/\/lectures\/[a-zA-Z0-9_\-\/]+\.html/);
                             const interactiveUrl = appMatch ? appMatch[0] : (
@@ -1253,24 +1400,22 @@ export default function StudentDashboard() {
                               <div
                                 className={`group p-5 rounded-2xl bg-white border flex flex-col justify-between shadow-xs transition duration-200 hover:-translate-y-0.5 hover:shadow-md ${
                                   hasInteractive
-                                    ? 'border-blue-300/80 bg-gradient-to-b from-blue-50/40 via-white to-white ring-1 ring-blue-100'
+                                    ? 'border-blue-300/90 bg-gradient-to-b from-blue-50/50 via-white to-white ring-1 ring-blue-100'
                                     : 'border-slate-200 hover:border-slate-300'
                                 }`}
                               >
                                 <div>
                                   <div className="flex items-center justify-between gap-2">
-                                    <div className="flex items-center gap-1.5">
-                                      <span
-                                        className={`inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-lg border ${
-                                          hasInteractive
-                                            ? 'bg-blue-600 text-white border-blue-600 shadow-xs'
-                                            : 'bg-slate-50 text-slate-700 border-slate-200'
-                                        }`}
-                                      >
-                                        <Layers className="w-3.5 h-3.5" />
-                                        <span>{hasInteractive ? 'Trạm 1: Phòng Học Tương Tác' : 'Trạm 1: Lý Thuyết & Từ Vựng'}</span>
-                                      </span>
-                                    </div>
+                                    <span
+                                      className={`inline-flex items-center gap-1.5 text-xs font-bold px-2.5 py-1 rounded-lg border ${
+                                        hasInteractive
+                                          ? 'bg-blue-600 text-white border-blue-600 shadow-xs'
+                                          : 'bg-slate-50 text-slate-700 border-slate-200'
+                                      }`}
+                                    >
+                                      <Layers className="w-3.5 h-3.5" />
+                                      <span>{hasInteractive ? 'Trạm 1: Phòng Học Tương Tác' : 'Trạm 1: Lý Thuyết & Từ Vựng'}</span>
+                                    </span>
                                     {hasInteractive && interactiveUrl && (
                                       <a
                                         href={interactiveUrl}
@@ -1285,49 +1430,60 @@ export default function StudentDashboard() {
                                     )}
                                   </div>
 
-                                  <h4 className="text-base font-bold text-slate-900 mt-3.5 leading-snug tracking-tight group-hover:text-blue-900 transition-colors">
+                                  <h4 className="text-base font-extrabold text-slate-900 mt-3.5 leading-snug tracking-tight group-hover:text-blue-900 transition-colors">
                                     {assignment.learning_units?.title}
                                   </h4>
-                                  <p className="text-xs text-slate-500 mt-1.5 line-clamp-3 leading-relaxed">
+                                  <p className="text-xs text-slate-600 mt-1.5 line-clamp-3 leading-relaxed">
                                     {assignment.learning_units?.description || 'Nắm vững hệ thống từ vựng, ngữ pháp và bài tập phản xạ.'}
                                   </p>
 
                                   {hasInteractive && (
-                                    <div className="mt-3 flex flex-wrap gap-1.5">
-                                      <span className="text-[11px] font-medium px-2 py-0.5 rounded-md bg-blue-50 text-blue-700 border border-blue-100 inline-flex items-center gap-1">
+                                    <div className="mt-3.5 flex flex-wrap gap-1.5">
+                                      <span className="text-[11px] font-semibold px-2 py-0.5 rounded-md bg-blue-50 text-blue-700 border border-blue-200/80 inline-flex items-center gap-1">
                                         <Volume2 className="w-3 h-3 text-blue-500" /> Phát âm AI
                                       </span>
-                                      <span className="text-[11px] font-medium px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-100 inline-flex items-center gap-1">
+                                      <span className="text-[11px] font-semibold px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200/80 inline-flex items-center gap-1">
                                         <Sparkles className="w-3 h-3 text-emerald-500" /> Flashcard 2 chiều
+                                      </span>
+                                      <span className="text-[11px] font-semibold px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-200/80 inline-flex items-center gap-1">
+                                        <Zap className="w-3 h-3 text-purple-500" /> Collocation
                                       </span>
                                     </div>
                                   )}
                                 </div>
 
-                                <div className="mt-5 pt-3 border-t border-slate-100">
+                                <div className="mt-5 pt-3 border-t border-slate-100 flex flex-col gap-2">
                                   {hasInteractive && interactiveUrl ? (
-                                    <a
-                                      href={interactiveUrl}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      onClick={() => {
-                                        if (!assignment.lecture_viewed_at) {
-                                          api.markLectureViewed(assignment.id).catch(() => {});
-                                          setAllAssignments((prev) =>
-                                            prev.map((a) => (a.id === assignment.id ? { ...a, lecture_viewed_at: new Date() } : a)),
-                                          );
-                                        }
-                                      }}
-                                      className="w-full py-2.5 px-4 font-semibold text-xs sm:text-sm rounded-xl border transition-all duration-150 active:scale-[0.98] inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white border-blue-600 shadow-xs hover:shadow-blue-500/20"
-                                    >
-                                      <BookOpen className="w-4 h-4" />
-                                      <span>Vào phòng học tương tác</span>
-                                      <ExternalLink className="w-3.5 h-3.5 opacity-80" />
-                                    </a>
+                                    <>
+                                      <a
+                                        href={interactiveUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={() => {
+                                          if (!assignment.lecture_viewed_at) {
+                                            api.markLectureViewed(assignment.id).catch(() => {});
+                                            setAllAssignments((prev) =>
+                                              prev.map((a) => (a.id === assignment.id ? { ...a, lecture_viewed_at: new Date() } : a)),
+                                            );
+                                          }
+                                        }}
+                                        className="w-full py-2.5 px-4 font-bold text-xs sm:text-sm rounded-xl border transition-all duration-150 active:scale-[0.98] inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white border-blue-600 shadow-sm hover:shadow-blue-500/20"
+                                      >
+                                        <BookOpen className="w-4 h-4" />
+                                        <span>Vào phòng học tương tác</span>
+                                        <ExternalLink className="w-3.5 h-3.5 opacity-80" />
+                                      </a>
+                                      <button
+                                        onClick={() => handleOpenLecture(assignment, 'briefing')}
+                                        className="w-full py-2 px-3 text-xs font-semibold text-slate-600 hover:text-slate-900 bg-slate-50 hover:bg-slate-100 rounded-lg border border-slate-200 transition"
+                                      >
+                                        Đọc tóm tắt lý thuyết (KaTeX)
+                                      </button>
+                                    </>
                                   ) : (
                                     <button
-                                      onClick={() => handleOpenLecture(assignment)}
-                                      className="w-full py-2.5 px-4 font-semibold text-xs sm:text-sm rounded-xl border transition-all duration-150 active:scale-[0.98] inline-flex items-center justify-center gap-2 bg-slate-50 hover:bg-slate-100 text-slate-700 border-slate-200"
+                                      onClick={() => handleOpenLecture(assignment, 'briefing')}
+                                      className="w-full py-2.5 px-4 font-bold text-xs sm:text-sm rounded-xl border transition-all duration-150 active:scale-[0.98] inline-flex items-center justify-center gap-2 bg-slate-50 hover:bg-slate-100 text-slate-700 border-slate-200"
                                     >
                                       <BookOpen className="w-4 h-4" />
                                       <span>Xem Lý Thuyết</span>
@@ -1338,7 +1494,9 @@ export default function StudentDashboard() {
                             );
                           })()}
 
-                          {/* Station 2 & 3: Luyện tập tại lớp & Bài tập về nhà */}
+                          {/* ========================================================
+                              TRẠM 2 & TRẠM 3: LUYỆN TẬP TẠI LỚP & BÀI TẬP VỀ NHÀ
+                              ======================================================== */}
                           {assignment.assessment_attempts?.map((att: any) => {
                             const isHw = att.assessments?.type === 'HOMEWORK';
                             const isGraded = att.status === 'GRADED';
@@ -1354,7 +1512,7 @@ export default function StudentDashboard() {
                                 <div>
                                   <div className="flex items-center justify-between gap-2">
                                     <span
-                                      className={`inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-lg border ${
+                                      className={`inline-flex items-center gap-1.5 text-xs font-bold px-2.5 py-1 rounded-lg border ${
                                         isHw
                                           ? 'bg-amber-50 text-amber-800 border-amber-200/80'
                                           : 'bg-indigo-50 text-indigo-800 border-indigo-200/80'
@@ -1364,13 +1522,13 @@ export default function StudentDashboard() {
                                       <span>{isHw ? 'Trạm 3: Bài Tập Về Nhà' : 'Trạm 2: Luyện Tập Tại Lớp'}</span>
                                     </span>
                                     {totalQuestions > 0 && (
-                                      <span className="text-xs font-medium text-slate-600 bg-slate-50 px-2.5 py-0.5 rounded-md border border-slate-200 font-mono">
+                                      <span className="text-xs font-bold text-slate-700 bg-slate-50 px-2.5 py-0.5 rounded-md border border-slate-200 font-mono">
                                         {totalQuestions} câu
                                       </span>
                                     )}
                                   </div>
 
-                                  <h4 className="text-base font-bold text-slate-900 mt-3.5 leading-snug tracking-tight group-hover:text-blue-900 transition-colors">
+                                  <h4 className="text-base font-extrabold text-slate-900 mt-3.5 leading-snug tracking-tight group-hover:text-blue-900 transition-colors">
                                     {att.assessments?.title}
                                   </h4>
                                   <p className="text-xs text-slate-500 mt-1.5">
@@ -1378,8 +1536,8 @@ export default function StudentDashboard() {
                                   </p>
 
                                   {(isSubmitted || isGraded) && (
-                                    <div className="mt-3 p-2.5 bg-slate-50 border border-slate-200/80 rounded-xl flex items-center justify-between text-xs">
-                                      <span className="text-slate-600 font-medium">Tiến độ bài nộp:</span>
+                                    <div className="mt-3.5 p-2.5 bg-slate-50 border border-slate-200/80 rounded-xl flex items-center justify-between text-xs">
+                                      <span className="text-slate-600 font-medium">Tiến độ bài làm:</span>
                                       <span className="font-bold text-slate-900 bg-white px-2 py-0.5 rounded-md border border-slate-200 font-mono">
                                         {answeredCount}/{totalQuestions} câu
                                       </span>
@@ -1391,21 +1549,21 @@ export default function StudentDashboard() {
                                   {isGraded ? (
                                     <Link
                                       href={`/student/results/${att.id}`}
-                                      className="block w-full py-2.5 px-4 text-center bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-semibold text-xs sm:text-sm rounded-xl transition-all duration-150 active:scale-[0.98]"
+                                      className="block w-full py-2.5 px-4 text-center bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs sm:text-sm rounded-xl transition-all duration-150 active:scale-[0.98]"
                                     >
                                       Xem Kết Quả: {att.total_score}đ ({answeredCount}/{totalQuestions} câu)
                                     </Link>
                                   ) : isSubmitted ? (
                                     <Link
                                       href={`/student/results/${att.id}`}
-                                      className="block w-full py-2.5 px-4 text-center bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 font-semibold text-xs sm:text-sm rounded-xl transition-all duration-150 active:scale-[0.98]"
+                                      className="block w-full py-2.5 px-4 text-center bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 font-bold text-xs sm:text-sm rounded-xl transition-all duration-150 active:scale-[0.98]"
                                     >
                                       Đã nộp bài ({answeredCount}/{totalQuestions} câu) • Xem lại
                                     </Link>
                                   ) : (
                                     <Link
                                       href={`/student/mission/${att.id}`}
-                                      className={`block w-full py-2.5 px-4 text-center text-white font-semibold text-xs sm:text-sm rounded-xl transition-all duration-150 active:scale-[0.98] shadow-xs ${
+                                      className={`block w-full py-2.5 px-4 text-center text-white font-bold text-xs sm:text-sm rounded-xl transition-all duration-150 active:scale-[0.98] shadow-sm ${
                                         isHw
                                           ? 'bg-amber-600 hover:bg-amber-700 shadow-amber-600/20'
                                           : 'bg-blue-600 hover:bg-blue-700 shadow-blue-600/20'
@@ -1432,8 +1590,8 @@ export default function StudentDashboard() {
               })}
             </div>
           ) : (
-            <div className="p-8 bg-white rounded-3xl text-center border border-slate-200 shadow-sm">
-              <p className="text-slate-500">Chưa có bài học mới được giao.</p>
+            <div className="p-8 bg-white rounded-3xl text-center border border-slate-200 shadow-xs">
+              <p className="text-slate-500 font-medium">Chưa có bài học mới được giao.</p>
             </div>
           )}
         </div>
