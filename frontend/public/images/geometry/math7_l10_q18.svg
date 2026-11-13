@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="100%" height="280" role="img" aria-labelledby="title desc">
+  <title id="title">Q18: Perpendicular Bisector Intersection</title>
+  <desc id="desc">Bisectors of consecutive interior angles meet at P, angle APB = 90 deg</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0E1626"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="540" height="320" rx="18" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.3"/>
+  <rect x="135" y="15" width="270" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
+  <text x="270" y="34" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">CONSECUTIVE BISECTORS · ∠APB = ?</text>
+  <line x1="35" y1="80" x2="505" y2="80" stroke="#38BDF8" stroke-width="3"/>
+  <text x="512" y="85" fill="#38BDF8" font-size="16" font-weight="bold">a</text>
+  <line x1="35" y1="240" x2="505" y2="240" stroke="#38BDF8" stroke-width="3"/>
+  <text x="512" y="245" fill="#38BDF8" font-size="16" font-weight="bold">b</text>
+  <line x1="140" y1="60" x2="140" y2="260" stroke="#C4B5FD" stroke-width="3"/>
+  <circle cx="140" cy="80" r="5" fill="#22D3EE"/>
+  <text x="120" y="85" fill="#FFF" font-size="14" font-weight="bold">A</text>
+  <circle cx="140" cy="240" r="5" fill="#22D3EE"/>
+  <text x="120" y="245" fill="#FFF" font-size="14" font-weight="bold">B</text>
+  <!-- Bisectors meeting at P(260, 160) -->
+  <line x1="140" y1="80" x2="260" y2="160" stroke="#F59E0B" stroke-width="2.5"/>
+  <line x1="140" y1="240" x2="260" y2="160" stroke="#F59E0B" stroke-width="2.5"/>
+  <circle cx="260" cy="160" r="6" fill="#F59E0B" filter="url(#neonGlow)"/>
+  <text x="275" y="165" fill="#FFF" font-size="16" font-weight="bold">P</text>
+  <text x="195" y="165" fill="#FBBF24" font-family="monospace" font-size="14" font-weight="bold">∠APB = 90°</text>
+</svg>

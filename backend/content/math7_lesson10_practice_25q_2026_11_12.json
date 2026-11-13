@@ -1,0 +1,686 @@
+{
+  "assignedDate": "2026-11-12",
+  "studentId": "4745136c-bd25-4f45-a488-9f00f2121b70",
+  "subjectId": "e89cc834-99d0-40b7-ab5e-0a0838d273c4",
+  "assignmentId": "f4bdd2c1-dfaf-4a4d-85bd-7e063f40f799",
+  "assessmentId": "e86f3d5f-beac-4890-abeb-abe264bd2111",
+  "attemptId": "293ce590-708a-4e8c-81da-4341596db9fc",
+  "totalQuestions": 25,
+  "questions": [
+    {
+      "order_index": 1,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 1: Mercury Orbit • Angle Pairs Along Corridors",
+      "content_markdown": "In the telemetry diagram below, orbital lines $a$ and $b$ are parallel ($a \\parallel b$). Transversal $c$ forms alternate interior angle $\\widehat{A_3} = 62^\\circ$. What is the degree measure of alternate interior angle $\\widehat{B_1}$?\n\n![Figure: Alternate Interior Angles](/images/geometry/math7_l10_q1.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$62^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$118^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$28^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$180^\\circ$"
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Since line $a \\parallel b$, alternate interior angles are equal in measure: $\\widehat{B_1} = \\widehat{A_3} = 62^\\circ$."
+    },
+    {
+      "order_index": 2,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 1: Mercury Orbit • Angle Pairs Along Corridors",
+      "content_markdown": "Parallel flight corridors $m \\parallel n$ are intersected by navigation vector $t$. If corresponding angle $\\widehat{M_1} = 118^\\circ$ (top-right), what is the measure of corresponding angle $\\widehat{N_1}$ (top-right)?\n\n![Figure: Corresponding Angles](/images/geometry/math7_l10_q2.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$62^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$128^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$90^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$118^\\circ$"
+        }
+      ],
+      "correct_option_id": "D",
+      "explanation": "Because lines $m \\parallel n$, corresponding angles occupying the same relative position are equal: $\\widehat{N_1} = \\widehat{M_1} = 118^\\circ$."
+    },
+    {
+      "order_index": 3,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 1: Mercury Orbit • Angle Pairs Along Corridors",
+      "content_markdown": "Communication lines $p \\parallel q$ are cut by transversal $k$. Given that consecutive interior angle $\\widehat{P_4} = 74^\\circ$, calculate the degree measure of consecutive interior angle $\\widehat{Q_1}$.\n\n![Figure: Consecutive Interior Angles](/images/geometry/math7_l10_q3.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$74^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$16^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$106^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$116^\\circ$"
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "Consecutive interior angles along parallel lines are supplementary: $\\widehat{Q_1} = 180^\\circ - \\widehat{P_4} = 180^\\circ - 74^\\circ = 106^\\circ$."
+    },
+    {
+      "order_index": 4,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 2: Venus Base • Varied Orientations & Transversals",
+      "content_markdown": "Two vertical sensor towers represented by parallel lines $x \\parallel y$ are crossed by scanning beam $d$. If angle $\\widehat{X_1} = 55^\\circ$, what is the measure of alternate interior angle $\\widehat{Y_2}$?\n\n![Figure: Vertical Parallel Lines](/images/geometry/math7_l10_q4.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$125^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$35^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$90^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$55^\\circ$"
+        }
+      ],
+      "correct_option_id": "D",
+      "explanation": "Even when parallel lines are oriented vertically, the alternate interior angle theorem holds: $\\widehat{Y_2} = \\widehat{X_1} = 55^\\circ$."
+    },
+    {
+      "order_index": 5,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 2: Venus Base • Varied Orientations & Transversals",
+      "content_markdown": "Tilted solar panel rails $r \\parallel s$ are crossed by horizontal support beam $h$. If corresponding angle $\\alpha = 135^\\circ$, what is the measure of corresponding angle $\\beta$ on rail $s$?\n\n![Figure: Tilted Parallel Lines](/images/geometry/math7_l10_q5.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$45^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$90^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$135^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$180^\\circ$"
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "Parallel lines $r \\parallel s$ cut by horizontal transversal $h$ have equal corresponding angles: $\\beta = \\alpha = 135^\\circ$."
+    },
+    {
+      "order_index": 6,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 2: Venus Base • Varied Orientations & Transversals",
+      "content_markdown": "Look at the diagram below. Lines $a$ and $b$ are parallel ($a \\parallel b$). If the acute angle at node $A$ is $70^\\circ$, find the measure of consecutive interior angle $\\theta$.\n\n![Figure: Steep Transversal Angle](/images/geometry/math7_l10_q6.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$70^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$130^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$20^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$110^\\circ$"
+        }
+      ],
+      "correct_option_id": "D",
+      "explanation": "Consecutive interior angles are supplementary: $\\theta = 180^\\circ - 70^\\circ = 110^\\circ$."
+    },
+    {
+      "order_index": 7,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 3: Earth Mission Control • Finding Unknown Angles & Linear Pairs",
+      "content_markdown": "Corridors $a \\parallel b$ are cut by transversal $c$. Given exterior angle $\\widehat{A_1} = 125^\\circ$, calculate acute interior angle $\\widehat{B_2}$.\n\n![Figure: Exterior to Interior Conversion](/images/geometry/math7_l10_q7.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$125^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$55^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$65^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$35^\\circ$"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Corresponding angle $\\widehat{B_1} = \\widehat{A_1} = 125^\\circ$. Since $\\widehat{B_1}$ and $\\widehat{B_2}$ form a linear pair along line $b$: $\\widehat{B_2} = 180^\\circ - 125^\\circ = 55^\\circ$."
+    },
+    {
+      "order_index": 8,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 3: Earth Mission Control • Finding Unknown Angles & Linear Pairs",
+      "content_markdown": "In the orbital grid, $m \\parallel n$. Given that angle $\\widehat{M_4} = 48^\\circ$, determine the degree measure of angle $\\widehat{N_2}$.\n\n![Figure: Vertical and Corresponding](/images/geometry/math7_l10_q8.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$48^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$132^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$42^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$90^\\circ$"
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "At node $M$, vertically opposite angle $\\widehat{M_2} = \\widehat{M_4} = 48^\\circ$. Since $m \\parallel n$, corresponding angle $\\widehat{N_2} = \\widehat{M_2} = 48^circ$."
+    },
+    {
+      "order_index": 9,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 3: Earth Mission Control • Finding Unknown Angles & Linear Pairs",
+      "content_markdown": "Trajectories $p \\parallel q$ are intersected by flight path $s$. If $\\widehat{P_2} = 142^\\circ$, what is the measure of angle $\\widehat{Q_3}$?\n\n![Figure: Two Intersection Transfer](/images/geometry/math7_l10_q9.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$38^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$142^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$52^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$180^\\circ$"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Corresponding angle $\\widehat{Q_2} = \\widehat{P_2} = 142^\\circ$. Angle $\\widehat{Q_3}$ and $\\widehat{Q_2}$ are vertically opposite, so $\\widehat{Q_3} = 142^\\circ$."
+    },
+    {
+      "order_index": 10,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 3: Earth Mission Control • Finding Unknown Angles & Linear Pairs",
+      "content_markdown": "Given $a \\parallel b$ cut by transversal $c$. If angle $\\widehat{A_2} = 135^\\circ$ (top-left), what is the degree measure of angle $\\widehat{B_4}$ (bottom-right)?\n\n![Figure: Diagonal Corner Angle](/images/geometry/math7_l10_q10.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$45^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$135^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$90^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$125^\\circ$"
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Consecutive interior angle to $\\widehat{A_2}$ is $180^\\circ - 135^\\circ = 45^\\circ$. The vertically opposite angle $\\widehat{B_4} = 45^\\circ$."
+    },
+    {
+      "order_index": 11,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 4: Mars Outpost • Algebraic Expressions with x",
+      "content_markdown": "In the diagram, corridors $a$ and $b$ are parallel ($a \\parallel b$). Alternate interior angles measure $(2x + 15)^\\circ$ and $65^\\circ$. Find the value of $x$.\n\n![Figure: Algebraic Alternate Interior](/images/geometry/math7_l10_q11.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$x = 20$"
+        },
+        {
+          "id": "B",
+          "text": "$x = 25$"
+        },
+        {
+          "id": "C",
+          "text": "$x = 30$"
+        },
+        {
+          "id": "D",
+          "text": "$x = 40$"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Since $a \\parallel b$, alternate interior angles are equal: $2x + 15 = 65 \\implies 2x = 50 \\implies x = 25$."
+    },
+    {
+      "order_index": 12,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 4: Mars Outpost • Algebraic Expressions with x",
+      "content_markdown": "Given parallel lines $m \\parallel n$. Two corresponding angles are given as $(3x - 10)^\\circ$ and $80^\\circ$. Calculate $x$.\n\n![Figure: Algebraic Corresponding Angles](/images/geometry/math7_l10_q12.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$x = 25$"
+        },
+        {
+          "id": "B",
+          "text": "$x = 35$"
+        },
+        {
+          "id": "C",
+          "text": "$x = 30$"
+        },
+        {
+          "id": "D",
+          "text": "$x = 20$"
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "Corresponding angles are equal: $3x - 10 = 80 \\implies 3x = 90 \\implies x = 30$."
+    },
+    {
+      "order_index": 13,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 4: Mars Outpost • Algebraic Expressions with x",
+      "content_markdown": "Along parallel flight corridors $p \\parallel q$, consecutive interior angles measure $(2x + 20)^\\circ$ and $(x + 40)^\\circ$. Find the value of $x$.\n\n![Figure: Supplementary Algebraic Equation](/images/geometry/math7_l10_q13.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$x = 30$"
+        },
+        {
+          "id": "B",
+          "text": "$x = 35$"
+        },
+        {
+          "id": "C",
+          "text": "$x = 45$"
+        },
+        {
+          "id": "D",
+          "text": "$x = 40$"
+        }
+      ],
+      "correct_option_id": "D",
+      "explanation": "Consecutive interior angles are supplementary: $(2x + 20) + (x + 40) = 180 \\implies 3x + 60 = 180 \\implies 3x = 120 \\implies x = 40$."
+    },
+    {
+      "order_index": 14,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 5: Jupiter Station • Perpendicular to Parallel & Right Angles",
+      "content_markdown": "Docking struts $a$ and $b$ are both perpendicular to base mast $c$ ($a \\perp c$ and $b \\perp c$). Diagonal sensor beam $d$ crosses strut $a$ at an acute angle of $52^\\circ$. What is the measure of the alternate interior angle on strut $b$?\n\n![Figure: Double Perpendicular and Transversal](/images/geometry/math7_l10_q14.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$38^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$128^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$90^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$52^\\circ$"
+        }
+      ],
+      "correct_option_id": "D",
+      "explanation": "Since $a \\perp c$ and $b \\perp c$, struts $a$ and $b$ are parallel ($a \\parallel b$ by Theorem 1). Therefore, alternate interior angles formed by diagonal beam $d$ are equal: $52^\\circ$."
+    },
+    {
+      "order_index": 15,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 5: Jupiter Station • Perpendicular to Parallel & Right Angles",
+      "content_markdown": "Corridors $a$ and $b$ are parallel ($a \\parallel b$). Laser line $c$ is perpendicular to corridor $a$ ($c \\perp a$). A probe trajectory $d$ passes through point $A$ making an angle of $34^\\circ$ with line $c$. Find the complementary angle between probe trajectory $d$ and corridor $a$.\n\n![Figure: Perpendicular with Trajectory](/images/geometry/math7_l10_q15.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$56^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$34^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$90^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$146^\\circ$"
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Since $c \\perp a$, the total angle is $90^\\circ$. The complementary angle is $90^\\circ - 34^\\circ = 56^\\circ$."
+    },
+    {
+      "order_index": 16,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 5: Jupiter Station • Perpendicular to Parallel & Right Angles",
+      "content_markdown": "Parallel corridors $a \\parallel b$ are connected by perpendicular strut $AB$ ($AB \\perp b$ at $B$). Diagonal brace $AC$ connects node $A$ on line $a$ to node $C$ on line $b$. If $\\widehat{BAC} = 32^\\circ$, what is the measure of angle $\\widehat{ACB}$ in triangle $ABC$?\n\n![Figure: Right Triangle Between Parallels](/images/geometry/math7_l10_q16.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$32^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$68^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$58^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$48^\\circ$"
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "In right triangle $ABC$ with $\\widehat{B} = 90^\\circ$, the two acute angles are complementary: $\\widehat{ACB} = 90^\\circ - 32^\\circ = 58^\\circ$."
+    },
+    {
+      "order_index": 17,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 6: Saturn Rings • Angle Bisectors on Parallel Lines",
+      "content_markdown": "Corridors $a \\parallel b$ are intersected by transversal line $AB$. Angle $\\widehat{A_3} = 70^\\circ$. Ray $AT$ bisects angle $\\widehat{A_3}$ and meets line $b$ at point $T$. What is the measure of angle $\\widehat{ATB}$?\n\n![Figure: Angle Bisector Transversal](/images/geometry/math7_l10_q17.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$70^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$40^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$55^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$35^\\circ$"
+        }
+      ],
+      "correct_option_id": "D",
+      "explanation": "The bisector divides $70^\\circ$ into two $35^\\circ$ angles. Between parallel lines $a \\parallel b$ cut by transversal $AT$, alternate interior angle $\\widehat{ATB}$ equals the upper half-angle: $\\widehat{ATB} = 35^\\circ$."
+    },
+    {
+      "order_index": 18,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 6: Saturn Rings • Angle Bisectors on Parallel Lines",
+      "content_markdown": "Parallel corridors $a \\parallel b$ have consecutive interior angles at nodes $A$ and $B$. The angle bisectors of these two consecutive interior angles intersect at point $P$. What is ALWAYS the measure of angle $\\widehat{APB}$?\n\n![Figure: Perpendicular Bisector Intersection](/images/geometry/math7_l10_q18.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$90^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$60^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$120^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$45^\\circ$"
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Consecutive interior angles sum to $180^\\circ$. Their bisectors take half of each, so $\\widehat{PAB} + \\widehat{PBA} = 180^\\circ \\div 2 = 90^\\circ$. In triangle $APB$, the third angle is $\\widehat{APB} = 180^\\circ - 90^\\circ = 90^\\circ$."
+    },
+    {
+      "order_index": 19,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 6: Saturn Rings • Angle Bisectors on Parallel Lines",
+      "content_markdown": "Transversal $AB$ cuts parallel lines $a \\parallel b$. Ray $Ax$ bisects alternate interior angle $\\widehat{A_3} = 80^\\circ$, and ray $By$ bisects alternate interior angle $\\widehat{B_1} = 80^\\circ$. What is the geometric relationship between ray $Ax$ and ray $By$?\n\n![Figure: Alternate Interior Bisectors](/images/geometry/math7_l10_q19.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$Ax \\perp By$"
+        },
+        {
+          "id": "B",
+          "text": "$Ax \\parallel By$"
+        },
+        {
+          "id": "C",
+          "text": "$Ax$ and $By$ intersect at $40^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$Ax$ and $By$ are collinear"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "The half-angles each measure $40^\\circ$. Because these equal half-angles are alternate interior angles for rays $Ax$ and $By$ cut by transversal $AB$, ray $Ax$ is parallel to ray $By$ ($Ax \\parallel By$)."
+    },
+    {
+      "order_index": 20,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 7: Uranus Deep Space • The Zig-Zag / Auxiliary Ray Problems",
+      "content_markdown": "In deep space navigation, ray $Ax \\parallel \\text{Ray } By$. Waypoint $O$ lies between the rays such that acute angles $\\widehat{xAO} = 35^\\circ$ and $\\widehat{yBO} = 45^\\circ$. Calculate corner deflection angle $\\widehat{AOB}$.\n\n![Figure: Acute Zig-Zag Ray](/images/geometry/math7_l10_q20.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$70^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$80^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$90^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$100^\\circ$"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Draw auxiliary ray $Ot \\parallel Ax \\parallel By$. Alternate interior angles give $\\widehat{AOt} = 35^\\circ$ and $\\widehat{tOB} = 45^\\circ$. Thus $\\widehat{AOB} = 35^\\circ + 45^\\circ = 80^\\circ$."
+    },
+    {
+      "order_index": 21,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 7: Uranus Deep Space • The Zig-Zag / Auxiliary Ray Problems",
+      "content_markdown": "Look at the orbital trajectory diagram below. Ray $Ax \\parallel \\text{Ray } By$. Given that $\\widehat{OAx} = 50^\\circ$ and $\\widehat{OBy} = 60^\\circ$, find the measure of angle $\\widehat{AOB}$.\n\n![Figure: Reflex Zig-Zag Corridor](/images/geometry/math7_l10_q21.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$100^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$120^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$110^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$90^\\circ$"
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "By drawing auxiliary line $Ot \\parallel Ax \\parallel By$, angle $\\widehat{AOB}$ is the sum of the two alternate interior angles: $50^\\circ + 60^circ = 110^\\circ$."
+    },
+    {
+      "order_index": 22,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 7: Uranus Deep Space • The Zig-Zag / Auxiliary Ray Problems",
+      "content_markdown": "Refer to the diagram below. Ray $Ax \\parallel \\text{Ray } By$. Inside the corridor, obtuse angles measure $\\widehat{xAO} = 130^\\circ$ and $\\widehat{yBO} = 150^\\circ$. Calculate the interior angle $\\widehat{AOB}$.\n\n![Figure: Obtuse Zig-Zag Angles](/images/geometry/math7_l10_q22.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$80^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$70^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$90^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$100^\\circ$"
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Draw auxiliary ray $Ot \\parallel Ax \\parallel By$ directed right. Consecutive interior angles on the same side sum to $180^\\circ$: $\\widehat{AOt} = 180^\\circ - 130^\\circ = 50^\\circ$ and $\\widehat{tOB} = 180^\\circ - 150^\\circ = 30^\\circ$. Therefore, $\\widehat{AOB} = 50^\\circ + 30^\\circ = 80^\\circ$."
+    },
+    {
+      "order_index": 23,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 8: Neptune Frontier • Multi-Line Systems & Complex Synthesis",
+      "content_markdown": "Three orbital corridors are parallel: $a \\parallel b \\parallel c$. Transversal line $d$ crosses line $a$ at an acute angle of $68^\\circ$. What is the measure of the corresponding angle formed by line $d$ with line $c$?\n\n![Figure: Three Parallel Lines Transversal](/images/geometry/math7_l10_q23.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$112^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$22^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$68^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$136^\\circ$"
+        }
+      ],
+      "correct_option_id": "C",
+      "explanation": "By transitivity, $a \\parallel c$. Therefore, transversal $d$ forms equal corresponding angles on lines $a$ and $c$, so the angle is $68^\\circ$."
+    },
+    {
+      "order_index": 24,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 8: Neptune Frontier • Multi-Line Systems & Complex Synthesis",
+      "content_markdown": "Parallel flight tracks $a \\parallel b$ are crossed by two flight paths that intersect at point $K$ between the tracks. If $\\widehat{KAB} = 45^\\circ$ and $\\widehat{KBA} = 65^\\circ$, what is the measure of alternate interior angle $\\widehat{KDC}$ on line $b$?\n\n![Figure: Intersecting Transversals in Parallel Tracks](/images/geometry/math7_l10_q24.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$45^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$65^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$70^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$110^\\circ$"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Segment $BD$ is a transversal crossing parallel lines $a \\parallel b$. Angle $\\widehat{KBA}$ and angle $\\widehat{KDC}$ are alternate interior angles, so $\\widehat{KDC} = \\widehat{KBA} = 65^\\circ$."
+    },
+    {
+      "order_index": 25,
+      "type": "MULTIPLE_CHOICE",
+      "points": 0.4,
+      "sectionName": "Sector 8: Neptune Frontier • Multi-Line Systems & Complex Synthesis",
+      "content_markdown": "In a multi-leg space corridor, ray $Ax \\parallel \\text{Ray } Cy$. The flight path bends at waypoints $O$ and $P$. Given that $\\widehat{xAO} = 30^\\circ$, $\\widehat{AOP} = 80^\\circ$, and $\\widehat{OPC} = 70^\\circ$, determine the measure of navigation angle $\\widehat{PCy}$.\n\n![Figure: Stepped Double Zig-Zag Corridor](/images/geometry/math7_l10_q25.svg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "$50^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$30^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$40^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$20^\\circ$"
+        }
+      ],
+      "correct_option_id": "D",
+      "explanation": "Draw auxiliary ray $Ot \\parallel Ax$: alternate interior angle gives $\\widehat{AOt} = 30^\\circ \\implies \\widehat{tOP} = 80^\\circ - 30^\\circ = 50^\\circ$. Draw auxiliary ray $Pu \\parallel Ot \\parallel Ax$: alternate interior angle gives $\\widehat{OPu} = 50^\\circ \\implies \\widehat{uPC} = 70^\\circ - 50^\\circ = 20^\\circ$. Since $Pu \\parallel Cy$, alternate interior angle $\\widehat{PCy} = 20^\\circ$."
+    }
+  ]
+}

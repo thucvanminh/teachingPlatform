@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="100%" height="280" role="img" aria-labelledby="title desc">
+  <title id="title">Q11: Algebraic Alternate Interior</title>
+  <desc id="desc">Lines a and b parallel, alternate interior angles (2x + 15) and 65 deg</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0E1626"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="540" height="320" rx="18" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.3"/>
+  <rect x="135" y="15" width="270" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
+  <text x="270" y="34" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">a ∥ b · SOLVE FOR PARAMETER x</text>
+  <rect x="35" y="100" width="470" height="120" fill="#0C2135" fill-opacity="0.45" rx="6"/>
+  <line x1="35" y1="100" x2="505" y2="100" stroke="#38BDF8" stroke-width="3"/>
+  <text x="512" y="105" fill="#38BDF8" font-size="16" font-weight="bold">a</text>
+  <line x1="35" y1="220" x2="505" y2="220" stroke="#38BDF8" stroke-width="3"/>
+  <text x="512" y="225" fill="#38BDF8" font-size="16" font-weight="bold">b</text>
+  <line x1="195" y1="285" x2="335" y2="35" stroke="#C4B5FD" stroke-width="3"/>
+  <circle cx="288" cy="100" r="5" fill="#22D3EE"/>
+  <circle cx="232" cy="220" r="5" fill="#22D3EE"/>
+  <path d="M 288 100 L 258 100 A 30 30 0 0 1 274 126 Z" fill="rgba(6,182,212,0.3)" stroke="#06B6D4" stroke-width="2"/>
+  <text x="175" y="125" fill="#06B6D4" font-family="monospace" font-size="13" font-weight="bold">(2x + 15)°</text>
+  <path d="M 232 220 L 262 220 A 30 30 0 0 0 246 194 Z" fill="rgba(245,158,11,0.3)" stroke="#F59E0B" stroke-width="2"/>
+  <text x="270" y="205" fill="#F59E0B" font-family="monospace" font-size="13" font-weight="bold">65°</text>
+</svg>
