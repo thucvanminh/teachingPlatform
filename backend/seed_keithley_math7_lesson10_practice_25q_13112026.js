@@ -1075,6 +1075,9 @@ async function seed() {
     }
   });
 
+  const lectureMdPath = path.resolve(__dirname, 'content/math7_lesson10_visual_lecture_2026_11_13.md');
+  const lectureMd = fs.readFileSync(lectureMdPath, 'utf8');
+
   if (!assignment) {
     console.log('No assignment found for 2026-11-13. Creating learning unit and assignment card...');
     const unit = await prisma.learning_units.create({
@@ -1082,7 +1085,8 @@ async function seed() {
         subject_id: CONSTANTS.SUBJECT_ID,
         created_by: CONSTANTS.TEACHER_ID,
         title: "Lesson 10 Advanced Practice: 25 Visual Geometry Challenges",
-        description: "Master 25 visual geometry challenges featuring unique vector diagrams across 8 Planetary Sectors (Euclid's Axiom & Parallel Lines).",
+        description: "Visual Geometry Guide (4 Core Theorems) & 25 visual challenges featuring unique vector diagrams across 8 Planetary Sectors.",
+        lecture_content_markdown: lectureMd,
         lecture_attachments: [],
         is_template: true
       }
@@ -1095,7 +1099,7 @@ async function seed() {
         assigned_by: CONSTANTS.TEACHER_ID,
         assigned_date: targetDate,
         custom_session_minutes: 120,
-        teacher_daily_note: "Cadet Keithley: Complete your 25 distinct visual challenges with custom telemetry diagrams on Lesson 10!",
+        teacher_daily_note: "Cadet Keithley: Review the 4 Visual Postulates in your briefing studio, then tackle your 25 distinct visual challenges!",
         is_published: true
       },
       include: {
@@ -1103,6 +1107,16 @@ async function seed() {
       }
     });
     console.log(`✅ Created Learning Unit: ${unit.id} and Assignment: ${assignment.id}`);
+  } else {
+    // Ensure learning unit has the latest visual lecture
+    await prisma.learning_units.update({
+      where: { id: assignment.learning_unit_id },
+      data: {
+        lecture_content_markdown: lectureMd,
+        description: "Visual Geometry Guide (4 Core Theorems) & 25 visual challenges featuring unique vector diagrams across 8 Planetary Sectors."
+      }
+    });
+    console.log(`✅ Updated Learning Unit ${assignment.learning_unit_id} with 4-page visual lecture.`);
   }
 
   // Clean old assessments

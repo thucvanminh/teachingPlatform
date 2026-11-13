@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="100%" height="100%" role="img" aria-label="Alternate Interior Angles">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0E172A"/>
+    </linearGradient>
+    <filter id="glowGold" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="720" height="440" rx="20" fill="url(#bgGrad2)" stroke="#F59E0B" stroke-width="1.5" stroke-opacity="0.4"/>
+
+  <!-- Top Title Banner -->
+  <rect x="140" y="18" width="440" height="36" rx="18" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="360" y="42" fill="#F59E0B" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="800" text-anchor="middle" letter-spacing="1.5">ALTERNATE INTERIOR ANGLES · Z-SHAPE</text>
+
+  <!-- Interior Zone Shading -->
+  <rect x="60" y="140" width="600" height="140" fill="#F59E0B" fill-opacity="0.05" stroke="#F59E0B" stroke-dasharray="6 6" stroke-opacity="0.2"/>
+  <text x="90" y="215" fill="#F59E0B" fill-opacity="0.3" font-family="system-ui" font-size="12" font-weight="bold" letter-spacing="2">INTERIOR ZONE</text>
+
+  <!-- Z-Shape Neon Glow Path -->
+  <path d="M 180 140 L 382 140 L 293 280 L 520 280" fill="none" stroke="#F59E0B" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.2"/>
+
+  <!-- Parallel Lines a and b -->
+  <line x1="60" y1="140" x2="660" y2="140" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="675" y="146" fill="#38BDF8" font-family="system-ui" font-size="20" font-weight="bold">a</text>
+
+  <line x1="60" y1="280" x2="660" y2="280" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="675" y="286" fill="#38BDF8" font-family="system-ui" font-size="20" font-weight="bold">b</text>
+
+  <!-- Parallel Arrows -->
+  <path d="M 140 133 L 150 140 L 140 147 M 150 133 L 160 140 L 150 147" fill="none" stroke="#22D3EE" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 140 273 L 150 280 L 140 287 M 150 273 L 160 280 L 150 287" fill="none" stroke="#22D3EE" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Transversal line c -->
+  <line x1="220" y1="390" x2="440" y2="50" stroke="#C084FC" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="450" y="58" fill="#C084FC" font-family="system-ui" font-size="20" font-weight="bold">c</text>
+
+  <!-- Intersection Nodes -->
+  <circle cx="382" cy="140" r="5.5" fill="#FFF"/>
+  <text x="395" y="130" fill="#E2E8F0" font-family="system-ui" font-size="16" font-weight="bold">A</text>
+
+  <circle cx="293" cy="280" r="5.5" fill="#FFF"/>
+  <text x="265" y="295" fill="#E2E8F0" font-family="system-ui" font-size="16" font-weight="bold">B</text>
+
+  <!-- Angle A3 (Bottom-Left of Node A) -->
+  <path d="M 332 140 A 50 50 0 0 0 355 182 L 382 140 Z" fill="#F59E0B" fill-opacity="0.4" stroke="#F59E0B" stroke-width="2.5"/>
+  <path d="M 339 140 A 43 43 0 0 0 359 176" fill="none" stroke="#FEF3C7" stroke-width="1.5"/>
+  <text x="310" y="180" fill="#F59E0B" font-family="system-ui" font-size="18" font-weight="800" filter="url(#glowGold)">∠A₃</text>
+
+  <!-- Angle B1 (Top-Right of Node B) -->
+  <path d="M 343 280 A 50 50 0 0 0 320 238 L 293 280 Z" fill="#F59E0B" fill-opacity="0.4" stroke="#F59E0B" stroke-width="2.5"/>
+  <path d="M 336 280 A 43 43 0 0 0 316 244" fill="none" stroke="#FEF3C7" stroke-width="1.5"/>
+  <text x="348" y="252" fill="#F59E0B" font-family="system-ui" font-size="18" font-weight="800" filter="url(#glowGold)">∠B₁</text>
+
+  <!-- Bottom Core Property Box -->
+  <rect x="140" y="365" width="440" height="48" rx="14" fill="#382405" fill-opacity="0.85" stroke="#F59E0B" stroke-width="2"/>
+  <text x="360" y="396" fill="#FEF3C7" font-family="monospace, system-ui" font-size="19" font-weight="bold" text-anchor="middle">a ∥ b  ⟹  ∠A₃ = ∠B₁</text>
+</svg>
