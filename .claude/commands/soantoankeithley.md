@@ -19,7 +19,7 @@ $ARGUMENTS
 1. **100% Pure English Immersion:** Tuyệt đối không có bất kỳ từ tiếng Việt nào trong ngoặc đơn (VD: dùng `adjacent angles`, `linear pair`, `vertical opposite angles`, `angle bisector` thay vì kẹp chữ tiếng Việt).
 2. **Cosmic Space Mission:** Đề bài gồm 25-30 câu hỏi trải dài qua 8 Trạm Hành Tinh trong Hệ Mặt Trời (Mercury $\to$ Neptune), thời lượng 90-120 phút.
 3. **KaTeX Toán học chuẩn:** Không dùng ký tự lạ hay MathML thô, cấu hình chuẩn KaTeX cho công thức toán, số đo góc $\widehat{xOy}$, số hữu tỉ, phương trình.
-4. **Đồ họa Vector SVG sắc nét:** Nếu bài học liên quan đến Hình học, **BẮT BUỘC vẽ file SVG chuẩn** và lưu vào `frontend/public/images/geometry/` (tuyệt đối không dùng ASCII art thô sơ).
+4. **Đồ họa Vector SVG sắc nét:** Nếu bài học liên quan đến Hình học, **BẮT BUỘC vẽ file SVG chuẩn** bằng công cụ `node .agents/skills/keithley-math/scripts/geometry_engine.js` và lưu vào `frontend/public/images/geometry/` (tuyệt đối không dùng ASCII art thô sơ).
 5. **Đầy đủ đáp án & giải thích:** Mỗi câu trắc nghiệm có 4 lựa chọn, đáp án đúng và lời giải thích song ngữ khoa học/truyền cảm hứng từ Flight Commander Thầy Thức.
 
 ### Bước 3: Nạp dữ liệu vào Database (Prisma Seed)

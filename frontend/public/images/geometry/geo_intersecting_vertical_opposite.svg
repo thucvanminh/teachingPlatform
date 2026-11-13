@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 540 320" width="100%" height="280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Geometric Diagram">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="cosmicBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A" />
+      <stop offset="100%" stop-color="#0B132B" />
+    </linearGradient>
+
+    <!-- Neon Glow Filter -->
+    <filter id="nodeGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="radarGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#06B6D4" stroke-width="0.8" stroke-opacity="0.05" />
+    </pattern>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="540" height="320" rx="18" fill="url(#cosmicBg)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.35" />
+  <rect width="540" height="320" rx="18" fill="url(#radarGrid)" />
+
+  <!-- Geometric Elements -->
+  <line x1="121.37" y1="26.17" x2="418.63" y2="293.83" stroke="#38BDF8" stroke-width="2.8" stroke-linecap="round" />
+  <line x1="418.63" y1="26.17" x2="121.37" y2="293.83" stroke="#C4B5FD" stroke-width="2.8" stroke-linecap="round" />
+  <text x="109.37" y="18.17" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle">x'</text>
+  <text x="432.63" y="301.83" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle">x</text>
+  <text x="430.63" y="16.17" fill="#C4B5FD" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle">y</text>
+  <text x="109.37" y="305.83" fill="#C4B5FD" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle">y'</text>
+  <circle cx="270.00" cy="160.00" r="8.10" fill="#22D3EE" opacity="0.35" filter="url(#nodeGlow)" />
+  <circle cx="270.00" cy="160.00" r="4.5" fill="#FFFFFF" stroke="#22D3EE" stroke-width="1.5" />
+  <text x="270.00" y="146.00" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">O</text>
+  <path d="M 270.00 160.00 L 296.75 184.09 A 36.00 36.00 0 0 1 243.25 184.09 Z" fill="rgba(6, 182, 212, 0.20)" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" />
+  <line x1="270.00" y1="192.50" x2="270.00" y2="199.50" stroke="#FBBF24" stroke-width="1.8" stroke-linecap="round" />
+  <text x="270.00" y="212.00" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle">138°</text>
+  <path d="M 270.00 160.00 L 243.25 135.91 A 36.00 36.00 0 0 1 296.75 135.91 Z" fill="rgba(6, 182, 212, 0.20)" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" />
+  <line x1="270.00" y1="127.50" x2="270.00" y2="120.50" stroke="#FBBF24" stroke-width="1.8" stroke-linecap="round" />
+  <text x="270.00" y="108.00" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle">138°</text>
+  <path d="M 270.00 160.00 L 247.71 180.07 A 30.00 30.00 0 0 1 247.71 139.93 Z" fill="rgba(245, 158, 11, 0.22)" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" />
+  <line x1="243.52" y1="161.06" x2="236.53" y2="161.34" stroke="#FBBF24" stroke-width="1.8" stroke-linecap="round" />
+  <line x1="243.52" y1="158.94" x2="236.53" y2="158.66" stroke="#FBBF24" stroke-width="1.8" stroke-linecap="round" />
+  <text x="224.00" y="160.00" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle">42°</text>
+  <path d="M 270.00 160.00 L 292.29 139.93 A 30.00 30.00 0 0 1 292.29 180.07 Z" fill="rgba(245, 158, 11, 0.22)" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" />
+  <line x1="296.48" y1="158.94" x2="303.47" y2="158.66" stroke="#FBBF24" stroke-width="1.8" stroke-linecap="round" />
+  <line x1="296.48" y1="161.06" x2="303.47" y2="161.34" stroke="#FBBF24" stroke-width="1.8" stroke-linecap="round" />
+  <text x="316.00" y="160.00" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" font-style="normal" text-anchor="middle" dominant-baseline="middle">42°</text>
+
+  <!-- Schematic Watermark -->
+  <text x="18" y="306" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" letter-spacing="1">SCHEMATIC · NOT TO SCALE</text>
+</svg>
