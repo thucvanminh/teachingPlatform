@@ -7,7 +7,7 @@ const CONSTANTS = {
   STUDENT_ID: '4745136c-bd25-4f45-a488-9f00f2121b70', // keithley
   TEACHER_ID: 'dc62e5df-2344-4785-b058-b95f5dbe0983', // Thầy Thức
   SUBJECT_ID: 'e89cc834-99d0-40b7-ab5e-0a0838d273c4', // Grade 7 Math
-  ASSIGNED_DATE: '2026-11-12'
+  ASSIGNED_DATE: '2026-11-13'
 };
 
 const SVG_DIR = path.resolve(__dirname, '../frontend/public/images/geometry');
@@ -1061,7 +1061,7 @@ async function seed() {
   console.log('🚀 Seeding 25 Distinct-SVG Practice Problems for Keithley Lake...');
   const targetDate = new Date(`${CONSTANTS.ASSIGNED_DATE}T00:00:00.000Z`);
 
-  // Find assignment
+  // Find or create assignment
   let assignment = await prisma.daily_student_assignments.findFirst({
     where: {
       student_id: CONSTANTS.STUDENT_ID,
@@ -1076,7 +1076,33 @@ async function seed() {
   });
 
   if (!assignment) {
-    throw new Error('No assignment found for 2026-11-12');
+    console.log('No assignment found for 2026-11-13. Creating learning unit and assignment card...');
+    const unit = await prisma.learning_units.create({
+      data: {
+        subject_id: CONSTANTS.SUBJECT_ID,
+        created_by: CONSTANTS.TEACHER_ID,
+        title: "Lesson 10 Advanced Practice: 25 Visual Geometry Challenges",
+        description: "Master 25 visual geometry challenges featuring unique vector diagrams across 8 Planetary Sectors (Euclid's Axiom & Parallel Lines).",
+        lecture_attachments: [],
+        is_template: true
+      }
+    });
+
+    assignment = await prisma.daily_student_assignments.create({
+      data: {
+        student_id: CONSTANTS.STUDENT_ID,
+        learning_unit_id: unit.id,
+        assigned_by: CONSTANTS.TEACHER_ID,
+        assigned_date: targetDate,
+        custom_session_minutes: 120,
+        teacher_daily_note: "Cadet Keithley: Complete your 25 distinct visual challenges with custom telemetry diagrams on Lesson 10!",
+        is_published: true
+      },
+      include: {
+        learning_units: true
+      }
+    });
+    console.log(`✅ Created Learning Unit: ${unit.id} and Assignment: ${assignment.id}`);
   }
 
   // Clean old assessments
@@ -1160,7 +1186,7 @@ async function seed() {
   });
 
   // Save JSON backup
-  const backupPath = path.resolve(__dirname, 'content/math7_lesson10_practice_25q_2026_11_12.json');
+  const backupPath = path.resolve(__dirname, 'content/math7_lesson10_practice_25q_2026_11_13.json');
   fs.mkdirSync(path.dirname(backupPath), { recursive: true });
   fs.writeFileSync(backupPath, JSON.stringify({
     assignedDate: CONSTANTS.ASSIGNED_DATE,
