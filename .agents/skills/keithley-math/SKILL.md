@@ -96,8 +96,12 @@ Kỹ năng này hướng dẫn thực hiện trọn gói quy trình tạo bài g
 
 ### Bước 2: Thiết Kế File Vector SVG Hình Học
 Đối với các câu hỏi cần hình vẽ trực quan:
-1. Tạo file `.svg` trong thư mục `frontend/public/images/geometry/`.
-2. Áp dụng chuẩn thiết kế: kích thước `viewBox="0 0 540 320"`, nền gradient tối `#080D1A`, đường nét phát sáng neon, điểm nút $O$ phát quang, nhãn góc rõ ràng.
+1. **Sử dụng Bộ sinh hình học chuẩn toán học (Geometry Vector Engine)** tại `.agents/skills/keithley-math/scripts/geometry_engine.js`:
+   ```bash
+   node .agents/skills/keithley-math/scripts/geometry_engine.js --preset <preset_name> [options] --out frontend/public/images/geometry/<slug_ten_hinh>.svg
+   ```
+   *(Xem tài liệu chi tiết tại [geometry_engine_guide.md](./references/geometry_engine_guide.md))*.
+2. Bộ sinh tự động áp dụng chuẩn thiết kế: kích thước `viewBox="0 0 540 320"`, nền gradient tối `#080D1A`, toạ độ lượng giác chính xác, đường nét phát sáng neon, điểm nút phát quang, nhãn góc rõ ràng.
 3. Kiểm tra bằng lệnh:
    ```bash
    curl -s http://localhost:3000/images/geometry/<ten_file>.svg | head -n 5
