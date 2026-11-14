@@ -1,0 +1,19 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "AGENTS.md",
+    "CLAUDE.md"
+  ],
+  "skills": [
+    ".agents/skills",
+    ".opencode/skills"
+  ],
+  "mcp": {
+    "servers": {
+      "firecrawl": {
+        "type": "remote",
+        "url": "https://mcp.firecrawl.dev/fc-45d958a838514a739d23e451446e7098/v2/mcp"
+      }
+    }
+  }
+}

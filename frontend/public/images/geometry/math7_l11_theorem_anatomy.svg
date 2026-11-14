@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="100%" height="280" role="img" aria-labelledby="title desc">
+  <title id="title">Theorem Architecture &amp; Deductive Proof Engine</title>
+  <desc id="desc">Visual blueprint of a mathematical theorem: Hypothesis, Conclusion, and the 3-step proof deduction chain.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0E1626"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Deep Space Backdrop -->
+  <rect width="540" height="320" rx="16" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.3"/>
+
+  <!-- Header Badge -->
+  <rect x="25" y="16" width="490" height="34" rx="8" fill="#0C1B2E" stroke="#38BDF8" stroke-width="1"/>
+  <text x="270" y="38" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" letter-spacing="1.5">CORE THEOREM BLUEPRINT • IF-THEN ARCHITECTURE</text>
+
+  <!-- Card 1: Anatomical Split (Left: Hypothesis, Right: Conclusion) -->
+  <g transform="translate(25, 62)">
+    <!-- Hypothesis Box -->
+    <rect x="0" y="0" width="230" height="100" rx="10" fill="#0A2540" stroke="#06B6D4" stroke-width="1.5"/>
+    <rect x="12" y="10" width="100" height="20" rx="4" fill="#0E4369"/>
+    <text x="62" y="24" fill="#67E8F9" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">IF • GIVEN (GT)</text>
+    <text x="115" y="52" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">HYPOTHESIS</text>
+    <text x="115" y="74" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Initial Known Conditions</text>
+
+    <!-- Connector Arrow -->
+    <path d="M 235 50 L 255 50" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="255,45 265,50 255,55" fill="#F59E0B"/>
+
+    <!-- Conclusion Box -->
+    <rect x="270" y="0" width="220" height="100" rx="10" fill="#142B24" stroke="#10B981" stroke-width="1.5"/>
+    <rect x="282" y="10" width="115" height="20" rx="4" fill="#064E3B"/>
+    <text x="339" y="24" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">THEN • TO PROVE (KL)</text>
+    <text x="380" y="52" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">CONCLUSION</text>
+    <text x="380" y="74" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Target Statement Derived</text>
+  </g>
+
+  <!-- Card 2: 3-Step Proof Engine Chain -->
+  <g transform="translate(25, 175)">
+    <rect x="0" y="0" width="490" height="125" rx="12" fill="#0C1B2E" fill-opacity="0.9" stroke="#818CF8" stroke-width="1.2"/>
+    <text x="20" y="24" fill="#A5B4FC" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" letter-spacing="1">DEDUCTIVE PROOF ENGINE (CHỨNG MINH)</text>
+
+    <!-- Step 1 -->
+    <rect x="15" y="38" width="138" height="72" rx="8" fill="#1E1B4B" stroke="#6366F1" stroke-width="1"/>
+    <text x="84" y="58" fill="#C7D2FE" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">STEP 1: STATE</text>
+    <text x="84" y="78" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">GIVEN FACTS</text>
+    <text x="84" y="96" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9.5" text-anchor="middle">Start from Hypothesis</text>
+
+    <!-- Arrow 1 -> 2 -->
+    <path d="M 158 74 L 174 74" stroke="#818CF8" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="174,70 180,74 174,78" fill="#818CF8"/>
+
+    <!-- Step 2 -->
+    <rect x="185" y="38" width="145" height="72" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1"/>
+    <text x="257" y="58" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">STEP 2: BRIDGE</text>
+    <text x="257" y="78" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">AXIOMS &amp; THEOREMS</text>
+    <text x="257" y="96" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9.5" text-anchor="middle">Logical Substitution</text>
+
+    <!-- Arrow 2 -> 3 -->
+    <path d="M 335 74 L 351 74" stroke="#818CF8" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="351,70 357,74 351,78" fill="#818CF8"/>
+
+    <!-- Step 3 -->
+    <rect x="362" y="38" width="113" height="72" rx="8" fill="#064E3B" stroke="#34D399" stroke-width="1"/>
+    <text x="418" y="58" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">STEP 3: TARGET</text>
+    <text x="418" y="78" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">CONCLUSION</text>
+    <text x="418" y="96" fill="#A7F3D0" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">&#8756; Q.E.D.</text>
+  </g>
+</svg>

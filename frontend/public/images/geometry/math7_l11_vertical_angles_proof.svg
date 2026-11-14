@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="100%" height="280" role="img" aria-labelledby="title desc">
+  <title id="title">Vertical Angles Theorem Proof</title>
+  <desc id="desc">Geometric diagram and formal proof that vertically opposite angles are equal.</desc>
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Space Backdrop -->
+  <rect width="540" height="320" rx="16" fill="url(#bgGrad2)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.3"/>
+
+  <!-- Left Column: Geometric Diagram (Intersecting Lines xy & x'y') -->
+  <g transform="translate(20, 20)">
+    <rect width="230" height="280" rx="12" fill="#0C1B2E" fill-opacity="0.8" stroke="#38BDF8" stroke-width="1.2"/>
+    <text x="115" y="28" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" letter-spacing="1">GEOMETRIC RADAR</text>
+
+    <!-- Line xy (rotated ~30 deg) -->
+    <line x1="30" y1="200" x2="200" y2="90" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+    <text x="20" y="215" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">x</text>
+    <text x="205" y="90" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">y</text>
+
+    <!-- Line x'y' (rotated ~-40 deg) -->
+    <line x1="35" y1="85" x2="195" y2="215" stroke="#F43F5E" stroke-width="3" stroke-linecap="round"/>
+    <text x="25" y="80" fill="#F43F5E" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">x'</text>
+    <text x="202" y="230" fill="#F43F5E" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">y'</text>
+
+    <!-- Intersection Vertex O -->
+    <circle cx="115" cy="148" r="5" fill="#FACC15"/>
+    <text x="115" y="170" fill="#FACC15" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">O</text>
+
+    <!-- Angle Arc 1 (xOy) -->
+    <path d="M 138 133 A 30 30 0 0 0 133 162" fill="none" stroke="#22D3EE" stroke-width="2.5"/>
+    <text x="156" y="152" fill="#22D3EE" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">∠xOy</text>
+
+    <!-- Angle Arc 2 (x'Oy') -->
+    <path d="M 92 163 A 30 30 0 0 0 97 134" fill="none" stroke="#22D3EE" stroke-width="2.5"/>
+    <text x="56" y="152" fill="#22D3EE" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">∠x'Oy'</text>
+
+    <!-- Intermediate Angle Arc (xOy') -->
+    <path d="M 133 162 A 25 25 0 0 1 92 163" fill="none" stroke="#F59E0B" stroke-width="2" stroke-dasharray="2,2"/>
+    <text x="115" y="195" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">∠xOy' (Bridge)</text>
+
+    <text x="115" y="262" fill="#A5F3FC" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Theorem: ∠xOy = ∠x'Oy'</text>
+  </g>
+
+  <!-- Right Column: Formal Proof Suite -->
+  <g transform="translate(265, 20)">
+    <rect width="255" height="280" rx="12" fill="#0C1B2E" fill-opacity="0.8" stroke="#10B981" stroke-width="1.2"/>
+    <text x="127" y="28" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" letter-spacing="1">FORMAL PROOF MATRIX</text>
+
+    <!-- Table: Given & Prove -->
+    <rect x="15" y="42" width="225" height="64" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+    <line x1="75" y1="42" x2="75" y2="106" stroke="#475569" stroke-width="1"/>
+    <line x1="15" y1="74" x2="240" y2="74" stroke="#475569" stroke-width="1"/>
+
+    <text x="45" y="62" fill="#67E8F9" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">GIVEN</text>
+    <text x="155" y="62" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="10">∠xOy &amp; ∠x'Oy' vertical</text>
+
+    <text x="45" y="94" fill="#34D399" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">PROVE</text>
+    <text x="155" y="94" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">∠xOy = ∠x'Oy'</text>
+
+    <!-- Proof Steps Box -->
+    <rect x="15" y="118" width="225" height="142" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+    <text x="25" y="138" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">PROOF EXECUTION (2 STEPS):</text>
+
+    <text x="25" y="160" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="10.5">1. Linear pair on ray Ox:</text>
+    <text x="35" y="178" fill="#38BDF8" font-family="monospace" font-size="10.5" font-weight="bold">∠xOy = 180° − ∠xOy'</text>
+
+    <text x="25" y="202" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="10.5">2. Linear pair on ray Oy':</text>
+    <text x="35" y="220" fill="#38BDF8" font-family="monospace" font-size="10.5" font-weight="bold">∠x'Oy' = 180° − ∠xOy'</text>
+
+    <line x1="25" y1="230" x2="230" y2="230" stroke="#334155" stroke-width="1"/>
+    <text x="127" y="248" fill="#34D399" font-family="monospace" font-size="11.5" font-weight="bold" text-anchor="middle">∴ ∠xOy = ∠x'Oy' (Q.E.D.)</text>
+  </g>
+</svg>
