@@ -4,7 +4,6 @@
   "subjectId": "e89cc834-99d0-40b7-ab5e-0a0838d273c4",
   "assignmentId": "f8c8e06f-1d69-4efd-a27b-43bf20b9df8d",
   "assessmentId": "d2868ab2-df18-48b3-ad23-854db2fd42eb",
-  "attemptId": "e170ccfa-b4fe-4999-8d3b-0272f599119f",
   "totalQuestions": 30,
   "answerDistribution": {
     "A": 8,
@@ -22,19 +21,19 @@
       "options": [
         {
           "id": "A",
-          "text": "A mathematical statement established as true through logical deduction from accepted facts"
+          "text": "A mathematical statement established as true through rigorous logical deduction from accepted axioms"
         },
         {
           "id": "B",
-          "text": "An unverified assumption accepted without any proof"
+          "text": "An intuitive self-evident assumption accepted universally across mathematics without requiring any formal proof"
         },
         {
           "id": "C",
-          "text": "A physical measurement obtained exclusively by experimental testing"
+          "text": "An empirical physical measurement obtained exclusively through precision lab experiments and instrument trials"
         },
         {
           "id": "D",
-          "text": "A coordinate rule that holds true only in three-dimensional space"
+          "text": "A provisional computational formula that holds true strictly under three-dimensional non-Euclidean coordinates"
         }
       ],
       "correct_option_id": "A",
@@ -49,19 +48,19 @@
       "options": [
         {
           "id": "A",
-          "text": "Constant and Variable"
+          "text": "Algebraic Constant terms and unknown Variable magnitudes defining the problem system"
         },
         {
           "id": "B",
-          "text": "Hypothesis (Given) and Conclusion (Prove)"
+          "text": "Hypothesis (Given premises / GT) and Conclusion (Target statements to Prove / KL)"
         },
         {
           "id": "C",
-          "text": "Equation and Coordinate"
+          "text": "Cartesian Coordinate axes and Linear Equation slope-intercept relationships"
         },
         {
           "id": "D",
-          "text": "Perimeter and Area"
+          "text": "Geometric Perimeter boundary lengths and Total Enclosed Surface Area measurements"
         }
       ],
       "correct_option_id": "B",
@@ -76,19 +75,19 @@
       "options": [
         {
           "id": "A",
-          "text": "The two lines are parallel to each other"
+          "text": "The two lines never meet and remain strictly parallel to each other throughout the infinite plane"
         },
         {
           "id": "B",
-          "text": "All lines meet at a single waypoint"
+          "text": "All three straight lines converge and meet at a single common coordinate intersection waypoint"
         },
         {
           "id": "C",
-          "text": "Two straight lines are both perpendicular to a third line"
+          "text": "Two distinct straight lines are both perpendicular to a third transversal line in the plane"
         },
         {
           "id": "D",
-          "text": "The third line is horizontal"
+          "text": "The third reference line is positioned horizontally and bisects the distance between both lines"
         }
       ],
       "correct_option_id": "C",
@@ -103,19 +102,19 @@
       "options": [
         {
           "id": "A",
-          "text": "A transversal intersects two parallel lines"
+          "text": "A single transversal straight line intersects two pre-existing parallel lines across two distinct points"
         },
         {
           "id": "B",
-          "text": "The transversal is perpendicular to both lines"
+          "text": "The transversal line is oriented strictly perpendicular to both target lines forming right angles"
         },
         {
           "id": "C",
-          "text": "The lines are skew in space"
+          "text": "The two coplanar straight lines are skew and never maintain a constant perpendicular separation"
         },
         {
           "id": "D",
-          "text": "Alternate interior angles are equal"
+          "text": "The pairs of alternate interior angles formed at both intersection nodes have equal degree measures"
         }
       ],
       "correct_option_id": "D",
@@ -130,19 +129,19 @@
       "options": [
         {
           "id": "A",
-          "text": "If two angles are vertically opposite, then they are equal in measure"
+          "text": "If two angles are vertically opposite, then they have equal angle measures"
         },
         {
           "id": "B",
-          "text": "If two angles are equal, then they must be vertically opposite"
+          "text": "If two angles have equal degree measures, then they must always be vertically opposite across a vertex"
         },
         {
           "id": "C",
-          "text": "If two angles form a linear pair, then they are equal"
+          "text": "If two angles form a collinear linear pair on a line, then their degree measures are strictly equal"
         },
         {
           "id": "D",
-          "text": "If two angles are adjacent, then their sum is $180^\\circ$"
+          "text": "If two angles are adjacent and share a common ray, then their combined total measure is always $180^\\circ$"
         }
       ],
       "correct_option_id": "A",
@@ -157,7 +156,7 @@
       "options": [
         {
           "id": "A",
-          "text": "If $m \\parallel n$, then $m \\perp d$ and $n \\perp d$"
+          "text": "If line $m$ is parallel to line $n$, then both lines must be strictly perpendicular to transversal line $d$"
         },
         {
           "id": "B",
@@ -165,11 +164,11 @@
         },
         {
           "id": "C",
-          "text": "If line $m$ is perpendicular to line $n$, then line $d$ bisects both"
+          "text": "If line $m$ is perpendicular to line $n$ at point $d$, then line $d$ bisects both lines at right angles"
         },
         {
           "id": "D",
-          "text": "If lines $m$ and $n$ intersect at $d$, then they are perpendicular"
+          "text": "If lines $m$ and $n$ intersect transversal line $d$ at acute angles, then line $m$ is perpendicular to line $n$"
         }
       ],
       "correct_option_id": "B",
@@ -184,19 +183,19 @@
       "options": [
         {
           "id": "A",
-          "text": "The Hypothesis states what is assumed to be true at departure"
+          "text": "The Hypothesis (Given / GT) explicitly outlines all assumed premises and starting geometric facts"
         },
         {
           "id": "B",
-          "text": "The Conclusion states what must be established through deductive logic"
+          "text": "The Conclusion (Prove / KL) specifies the ultimate target assertion to be validated via deductive reasoning"
         },
         {
           "id": "C",
-          "text": "Swapping the Hypothesis and Conclusion always produces another true theorem"
+          "text": "Swapping the Hypothesis and Conclusion (the converse statement) always guarantees another true theorem"
         },
         {
           "id": "D",
-          "text": "A valid geometric proof must start strictly from the Hypothesis"
+          "text": "A rigorous geometric proof must proceed logically from the Given premises using justified deduction steps"
         }
       ],
       "correct_option_id": "C",
@@ -211,19 +210,19 @@
       "options": [
         {
           "id": "A",
-          "text": "If a ray is drawn in a plane, then all angles become equal"
+          "text": "If any arbitrary ray is drawn originating from an angle vertex in a plane, then all adjacent sub-angles become equal"
         },
         {
           "id": "B",
-          "text": "If two angles are supplementary, then their bisector is a straight line"
+          "text": "If two arbitrary angles are supplementary summing to $180^\\circ$, then their shared interior ray forms a perpendicular line"
         },
         {
           "id": "C",
-          "text": "If an angle has a measure of $90^\\circ$, then its bisector is vertical"
+          "text": "If an angle has an interior opening of exactly $90^\\circ$, then every interior ray drawn through it forms an angle bisector"
         },
         {
           "id": "D",
-          "text": "If a ray lies between two sides of an angle and divides it into two equal angles, then it is the angle bisector"
+          "text": "If a ray lies between two sides of an angle and divides it into two equal sub-angles, then it is the angle bisector"
         }
       ],
       "correct_option_id": "D",
@@ -238,19 +237,19 @@
       "options": [
         {
           "id": "A",
-          "text": "1. State the Given $\\to$ 2. Build the Bridge with Justifications $\\to$ 3. Conclude the Target Truth"
+          "text": "1. State the Given premises $\\to$ 2. Build deductive bridge steps citing reasons $\\to$ 3. State target Conclusion"
         },
         {
           "id": "B",
-          "text": "1. State the Conclusion $\\to$ 2. Check with a protractor $\\to$ 3. Guess the Given"
+          "text": "1. State the target Conclusion $\\to$ 2. Measure angles with an optical protractor $\\to$ 3. Infer the Given premises"
         },
         {
           "id": "C",
-          "text": "1. Calculate numerical values $\\to$ 2. Draw a diagram $\\to$ 3. Assume the theorem"
+          "text": "1. Calculate arbitrary coordinates $\\to$ 2. Sketch an informal schematic diagram $\\to$ 3. Declare the theorem proven"
         },
         {
           "id": "D",
-          "text": "1. Write Q.E.D. $\\to$ 2. List all axioms $\\to$ 3. Write the Hypothesis"
+          "text": "1. Conclude Q.E.D. at origin $\\to$ 2. Enumerate all geometric postulates $\\to$ 3. Formulate the initial Given premises"
         }
       ],
       "correct_option_id": "A",
@@ -265,19 +264,19 @@
       "options": [
         {
           "id": "A",
-          "text": "Quantum Equivalence Demonstration"
+          "text": "*Quantum Equitatis Determinatio* (\"quantum equivalence has been numerically determined\")"
         },
         {
           "id": "B",
-          "text": "*Quod erat demonstrandum* (\"which was to be demonstrated\")"
+          "text": "*Quod erat demonstrandum* (\"which was required to be demonstrated through formal proof\")"
         },
         {
           "id": "C",
-          "text": "Quick Experimental Deduction"
+          "text": "*Quaestio experimentalis deducta* (\"the experimental question has been empirically verified\")"
         },
         {
           "id": "D",
-          "text": "Question Entirely Determined"
+          "text": "*Quasi evidens definitio* (\"the statement is intuitively accepted as self-evident\")"
         }
       ],
       "correct_option_id": "B",
@@ -292,19 +291,19 @@
       "options": [
         {
           "id": "A",
-          "text": "It is merely an optional aesthetic rule for typesetting"
+          "text": "It is purely a historical typesetting convention preserved for visual symmetry without affecting proof validity"
         },
         {
           "id": "B",
-          "text": "To make the proof look like an algebraic equation"
+          "text": "To allow symbolic automated solvers to format geometric statements as standard algebraic polynomial equations"
         },
         {
           "id": "C",
-          "text": "Because ungrounded assertions lack logical validity in Euclidean deduction"
+          "text": "Because every logical step must link directly to an established axiom, definition, or proven theorem for validity"
         },
         {
           "id": "D",
-          "text": "Only steps involving right angles require justification"
+          "text": "Justifications are required exclusively when dealing with right angles and are omitted for all other angle measures"
         }
       ],
       "correct_option_id": "C",
@@ -319,19 +318,19 @@
       "options": [
         {
           "id": "A",
-          "text": "*(Two angles forming a linear pair are supplementary)*"
+          "text": "*(Two angles forming a linear pair on a straight line are supplementary, summing to $180^\\circ$)*"
         },
         {
           "id": "B",
-          "text": "*(Alternate interior angles of parallel lines are equal)*"
+          "text": "*(Alternate interior angles formed by a transversal intersecting parallel lines are equal)*"
         },
         {
           "id": "C",
-          "text": "*(Definition of perpendicular lines)*"
+          "text": "*(Two lines intersecting at right angles are perpendicular by standard geometric definition)*"
         },
         {
           "id": "D",
-          "text": "*(It looks visually equal on the computer screen)*"
+          "text": "*(The two angles look visually identical and overlap when inspected on the computer screen)*"
         }
       ],
       "correct_option_id": "D",
@@ -346,19 +345,19 @@
       "options": [
         {
           "id": "A",
-          "text": "Adjacent angle $\\widehat{xOy'}$ (or $\\widehat{x'Oy}$)"
+          "text": "Adjacent angle $\\widehat{xOy'}$ (or $\\widehat{x'Oy}$), which forms a linear pair with both angles"
         },
         {
           "id": "B",
-          "text": "The angle $\\widehat{xOy}$ itself"
+          "text": "The target angle $\\widehat{xOy}$ itself, by assuming it equals its own reflection without deduction"
         },
         {
           "id": "C",
-          "text": "A full circle angle of $360^\\circ$"
+          "text": "The complete circular perigon angle of $360^\\circ$ surrounding vertex $O$ across all four quadrants"
         },
         {
           "id": "D",
-          "text": "A right angle of $90^\\circ$"
+          "text": "A reference right angle of $90^\\circ$ constructed perpendicular to the bisector of $\\widehat{xOy}$"
         }
       ],
       "correct_option_id": "A",
@@ -373,19 +372,19 @@
       "options": [
         {
           "id": "A",
-          "text": "$x = 20$, $\\widehat{xOy} = 50^\\circ$"
+          "text": "$x = 20$, yielding angle measure $\\widehat{xOy} = 50^\\circ$"
         },
         {
           "id": "B",
-          "text": "$x = 25$, $\\widehat{xOy} = 65^\\circ$"
+          "text": "$x = 25$, yielding angle measure $\\widehat{xOy} = 65^\\circ$"
         },
         {
           "id": "C",
-          "text": "$x = 30$, $\\widehat{xOy} = 80^\\circ$"
+          "text": "$x = 30$, yielding angle measure $\\widehat{xOy} = 80^\\circ$"
         },
         {
           "id": "D",
-          "text": "$x = 15$, $\\widehat{xOy} = 35^\\circ$"
+          "text": "$x = 15$, yielding angle measure $\\widehat{xOy} = 35^\\circ$"
         }
       ],
       "correct_option_id": "B",
@@ -400,19 +399,19 @@
       "options": [
         {
           "id": "A",
-          "text": "$52^\\circ$"
+          "text": "$52^\\circ$ (Equal to the given acute angle because vertically opposite angles are equal)"
         },
         {
           "id": "B",
-          "text": "$38^\\circ$"
+          "text": "$38^\\circ$ (Complementary angle subtracted from a right angle: $90^\\circ - 52^\\circ$)"
         },
         {
           "id": "C",
-          "text": "$128^\\circ$"
+          "text": "$128^\\circ$ (Supplementary angle forming a linear pair on line $AC$: $180^\\circ - 52^\\circ$)"
         },
         {
           "id": "D",
-          "text": "$142^\\circ$"
+          "text": "$142^\\circ$ (Calculated by mistakenly subtracting the given acute angle from an arbitrary $194^\\circ$ sum)"
         }
       ],
       "correct_option_id": "C",
@@ -427,19 +426,19 @@
       "options": [
         {
           "id": "A",
-          "text": "$90^\\circ$"
+          "text": "$90^\\circ$ (The measure of a single standard right angle formed by perpendicular rays)"
         },
         {
           "id": "B",
-          "text": "$180^\\circ$"
+          "text": "$180^\\circ$ (The exact supplementary sum of two adjacent linear pair angles along an unbroken straight line)"
         },
         {
           "id": "C",
-          "text": "$270^\\circ$"
+          "text": "$270^\\circ$ (The combined sum of three consecutive right angles in a coordinate plane)"
         },
         {
           "id": "D",
-          "text": "$360^\\circ$"
+          "text": "$360^\\circ$ (The combined sum of two supplementary linear pairs around the common vertex)"
         }
       ],
       "correct_option_id": "D",
@@ -458,15 +457,15 @@
         },
         {
           "id": "B",
-          "text": "The Vertical Angles Theorem"
+          "text": "The Vertical Angles Theorem (Two straight lines intersecting at a point form equal pairs of opposite angles)"
         },
         {
           "id": "C",
-          "text": "The Complementary Angles Property"
+          "text": "The Complementary Angles Theorem (Two acute angles that compose a right angle always sum to exactly $90^\\circ$)"
         },
         {
           "id": "D",
-          "text": "Euclid's Uniqueness Axiom"
+          "text": "The Parallel Line Uniqueness Axiom (Through any point external to a line, exactly one coplanar parallel line can ever be drawn)"
         }
       ],
       "correct_option_id": "A",
@@ -481,19 +480,19 @@
       "options": [
         {
           "id": "A",
-          "text": "$m \\perp n$"
+          "text": "$m \\perp n$ (Struts $m$ and $n$ are mutually perpendicular and meet at a right angle)"
         },
         {
           "id": "B",
-          "text": "$m \\parallel n$"
+          "text": "$m \\parallel n$ (Struts $m$ and $n$ are parallel because both are perpendicular to line $d$)"
         },
         {
           "id": "C",
-          "text": "$m$ and $n$ intersect at a $45^\\circ$ angle"
+          "text": "$m \\not\\parallel n$ (Struts $m$ and $n$ intersect diagonally at an acute angle of $45^\\circ$)"
         },
         {
           "id": "D",
-          "text": "$m$ and $n$ must be the exact same line"
+          "text": "$m \\equiv n$ (Struts $m$ and $n$ must be coincident and represent the exact same line)"
         }
       ],
       "correct_option_id": "B",
@@ -508,19 +507,19 @@
       "options": [
         {
           "id": "A",
-          "text": "*(Linear pair)*"
+          "text": "*(Two angles forming a linear pair on a straight line are supplementary summing to $180^\\circ$)*"
         },
         {
           "id": "B",
-          "text": "*(Definition of perpendicular lines)*"
+          "text": "*(Definition of perpendicular lines intersecting to form four consecutive right angles of $90^\\circ$)*"
         },
         {
           "id": "C",
-          "text": "*(Alternate interior angles of parallel lines)*"
+          "text": "*(Alternate interior angles formed by a transversal cutting two parallel lines are equal)*"
         },
         {
           "id": "D",
-          "text": "*(Sum of angles in a triangle)*"
+          "text": "*(The total sum of three interior angles in any Euclidean triangle is constantly equal to $180^\\circ$)*"
         }
       ],
       "correct_option_id": "C",
@@ -535,19 +534,19 @@
       "options": [
         {
           "id": "A",
-          "text": "$38^\\circ$"
+          "text": "$\\widehat{ACB} = 38^\\circ$ (Alternate interior angle to $\\widehat{BAC}$ along transversal $AC$)"
         },
         {
           "id": "B",
-          "text": "$90^\\circ$"
+          "text": "$\\widehat{ACB} = 90^\\circ$ (Perpendicular connection angle at vertex $C$ along corridor $b$)"
         },
         {
           "id": "C",
-          "text": "$42^\\circ$"
+          "text": "$\\widehat{ACB} = 42^\\circ$ (Calculated by assuming an incorrect vertex angle of $48^\\circ$)"
         },
         {
           "id": "D",
-          "text": "$52^\\circ$"
+          "text": "$\\widehat{ACB} = 52^\\circ$ (Acute angle complementary to $38^\\circ$ in right triangle $ABC$)"
         }
       ],
       "correct_option_id": "D",
@@ -562,19 +561,19 @@
       "options": [
         {
           "id": "A",
-          "text": "$34^\\circ$"
+          "text": "$\\widehat{ATB} = 34^\\circ$ (Alternate interior angle equal to half of $\\widehat{A_3}$ via bisector $AT$)"
         },
         {
           "id": "B",
-          "text": "$68^\\circ$"
+          "text": "$\\widehat{ATB} = 68^\\circ$ (Alternate interior angle equal to the entire unsplit angle $\\widehat{A_3}$)"
         },
         {
           "id": "C",
-          "text": "$112^\\circ$"
+          "text": "$\\widehat{ATB} = 112^\\circ$ (Consecutive interior angle that is supplementary to the original unbisected $68^\\circ$ angle)"
         },
         {
           "id": "D",
-          "text": "$56^\\circ$"
+          "text": "$\\widehat{ATB} = 56^\\circ$ (Complementary angle subtracted from a standard right angle of $90^\\circ$)"
         }
       ],
       "correct_option_id": "A",
@@ -589,19 +588,19 @@
       "options": [
         {
           "id": "A",
-          "text": "$60^\\circ$"
+          "text": "$\\widehat{P} = 60^\\circ$ (The interior angle characteristic of an equilateral triangle formed by the intersecting rays)"
         },
         {
           "id": "B",
-          "text": "$90^\\circ$"
+          "text": "$\\widehat{P} = 90^\\circ$ (Because the two half-angles sum to $90^\\circ$, making the third angle $90^\\circ$)"
         },
         {
           "id": "C",
-          "text": "$45^\\circ$"
+          "text": "$\\widehat{P} = 45^\\circ$ (Half of the standard perpendicular orientation between the parallel rails)"
         },
         {
           "id": "D",
-          "text": "$120^\\circ$"
+          "text": "$\\widehat{P} = 120^\\circ$ (Obtuse angle formed when consecutive interior angles are unequal)"
         }
       ],
       "correct_option_id": "B",
@@ -616,19 +615,19 @@
       "options": [
         {
           "id": "A",
-          "text": "$u \\perp v$"
+          "text": "$u \\perp v$ (The bisecting rays are mutually perpendicular and meet at a right angle)"
         },
         {
           "id": "B",
-          "text": "$u$ and $v$ intersect at $45^\\circ$"
+          "text": "$u \\not\\parallel v$ (The bisecting rays converge and intersect at an acute angle of $45^\\circ$)"
         },
         {
           "id": "C",
-          "text": "$u \\parallel v$"
+          "text": "$u \\parallel v$ (The rays are parallel because they form equal alternate interior angles)"
         },
         {
           "id": "D",
-          "text": "$u$ and $v$ coincide"
+          "text": "$u \\equiv v$ (The two bisecting rays coincide along the same collinear line trajectory)"
         }
       ],
       "correct_option_id": "C",
@@ -643,19 +642,19 @@
       "options": [
         {
           "id": "A",
-          "text": "$29^\\circ$"
+          "text": "$\\widehat{xOt} = 29^\\circ$ (The measure of half of the remaining angle $\\widehat{zOy}$ alone)"
         },
         {
           "id": "B",
-          "text": "$58^\\circ$"
+          "text": "$\\widehat{xOt} = 58^\\circ$ (The measure of the entire unbisected remaining angle $\\widehat{zOy}$ without bisector partitioning)"
         },
         {
           "id": "C",
-          "text": "$32^\\circ$"
+          "text": "$\\widehat{xOt} = 32^\\circ$ (Equal to the initial given angle $\\widehat{xOz}$ without bisector addition)"
         },
         {
           "id": "D",
-          "text": "$61^\\circ$"
+          "text": "$\\widehat{xOt} = 61^\\circ$ (Sum of initial angle $32^\\circ$ and half-angle $29^\\circ$: $32^\\circ + 29^\\circ$)"
         }
       ],
       "correct_option_id": "D",
@@ -670,19 +669,19 @@
       "options": [
         {
           "id": "A",
-          "text": "$a \\parallel b$"
+          "text": "$a \\parallel b$ (Lines $a$ and $b$ are parallel because both are perpendicular to transversal $c$)"
         },
         {
           "id": "B",
-          "text": "$a \\perp b$"
+          "text": "$a \\perp b$ (Lines $a$ and $b$ are perpendicular and form a right angle intersection in space)"
         },
         {
           "id": "C",
-          "text": "$\\widehat{A_1} + \\widehat{B_1} = 90^\\circ$"
+          "text": "$\\widehat{A_1} + \\widehat{B_1} = 90^\\circ$ (The interior angles are complementary summing to a right angle)"
         },
         {
           "id": "D",
-          "text": "$c$ is parallel to $a$"
+          "text": "$c \\parallel a$ (Transversal line $c$ is parallel to rail $a$ and never intersects it in the plane)"
         }
       ],
       "correct_option_id": "A",
@@ -697,19 +696,19 @@
       "options": [
         {
           "id": "A",
-          "text": "Leo should have chosen $90^\\circ$ instead of $60^\\circ$"
+          "text": "Leo should have arbitrarily chosen $90^\\circ$ instead of $60^\\circ$ to force lines to be perpendicular"
         },
         {
           "id": "B",
-          "text": "Leo assumed the conclusion's angle property without deriving it from the Given (Circular Reasoning)"
+          "text": "Leo assumed the conclusion's angle equality without deriving it from the Given (Circular Reasoning)"
         },
         {
           "id": "C",
-          "text": "Parallel lines can never have equal angles"
+          "text": "Parallel lines cut by a transversal can never exhibit equal alternate interior angles under Euclidean rules"
         },
         {
           "id": "D",
-          "text": "Only triangles can contain $60^\\circ$ angles"
+          "text": "Only interior angles inside closed geometric triangles are permitted to assume values of exactly $60^\\circ$"
         }
       ],
       "correct_option_id": "B",
@@ -724,11 +723,11 @@
       "options": [
         {
           "id": "A",
-          "text": "The Vertical Angles Theorem"
+          "text": "The Vertical Angles Theorem (Intersecting straight lines produce equal pairs of opposite angles at the vertex)"
         },
         {
           "id": "B",
-          "text": "The Linear Pair Postulate"
+          "text": "The Linear Pair Postulate (Two adjacent angles forming a straight line are supplementary and sum to $180^\\circ$)"
         },
         {
           "id": "C",
@@ -736,7 +735,7 @@
         },
         {
           "id": "D",
-          "text": "The Complementary Angle Theorem"
+          "text": "The Complementary Angle Theorem (Two adjacent angles that form a right angle always sum to exactly $90^\\circ$)"
         }
       ],
       "correct_option_id": "C",
@@ -751,19 +750,19 @@
       "options": [
         {
           "id": "A",
-          "text": "If a triangle is not equilateral, then its angles are not equal"
+          "text": "If a triangle is not equilateral, then all three of its interior angles are strictly unequal (Inverse statement)"
         },
         {
           "id": "B",
-          "text": "If a triangle has three equal sides, then it has a perimeter"
+          "text": "If a triangle has three equal sides, then its perimeter is three times the side length (Property statement)"
         },
         {
           "id": "C",
-          "text": "If three angles are acute, then the triangle is equilateral"
+          "text": "If all three angles of a triangle are acute and strictly less than $90^\\circ$, then the triangle is equilateral"
         },
         {
           "id": "D",
-          "text": "If all three angles of a triangle are equal, then the triangle is equilateral"
+          "text": "If all three angles of a triangle are equal, then the triangle is equilateral (Converse: swap If and Then)"
         }
       ],
       "correct_option_id": "D",
@@ -778,19 +777,19 @@
       "options": [
         {
           "id": "A",
-          "text": "$134^\\circ$"
+          "text": "$134^\\circ$ (Consecutive interior angle supplementary to $46^\\circ$: $180^\\circ - 46^\\circ = 134^\\circ$)"
         },
         {
           "id": "B",
-          "text": "$46^\\circ$"
+          "text": "$46^\\circ$ (Alternate interior angle directly corresponding to the given acute angle on line $a$)"
         },
         {
           "id": "C",
-          "text": "$90^\\circ$"
+          "text": "$90^\\circ$ (Perpendicular orientation angle if transversal $d$ were orthogonal to all corridors)"
         },
         {
           "id": "D",
-          "text": "$144^\\circ$"
+          "text": "$144^\\circ$ (Calculation resulting from mistakenly subtracting $46^\\circ$ from an incorrect $190^\\circ$)"
         }
       ],
       "correct_option_id": "A",
@@ -805,7 +804,7 @@
       "options": [
         {
           "id": "A",
-          "text": "Two lines that never meet are always perpendicular"
+          "text": "Two coplanar straight lines that never intersect at any point in the plane are always strictly perpendicular"
         },
         {
           "id": "B",
@@ -813,11 +812,11 @@
         },
         {
           "id": "C",
-          "text": "Every pair of equal angles must be vertically opposite"
+          "text": "Any two angles that have equal degree measures in a plane must always be vertically opposite across a vertex"
         },
         {
           "id": "D",
-          "text": "The sum of two consecutive interior angles is always $90^\\circ$"
+          "text": "The sum of two consecutive interior angles formed by a transversal across parallel lines is always $90^\\circ$"
         }
       ],
       "correct_option_id": "B",

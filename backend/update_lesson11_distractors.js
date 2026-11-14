@@ -1,0 +1,564 @@
+/**
+ * update_lesson11_distractors.js
+ * 
+ * Lengthens and balances distractors (incorrect options) across all 30 Math 7 Lesson 11 questions.
+ * Ensures the longest option is NO LONGER a giveaway clue for the correct answer.
+ */
+
+const { PrismaClient } = require('@prisma/client');
+const fs = require('fs');
+const path = require('path');
+
+const prisma = new PrismaClient();
+
+const CONSTANTS = {
+  ASSIGNMENT_ID: 'f8c8e06f-1d69-4efd-a27b-43bf20b9df8d',
+  ASSESSMENT_ID: 'd2868ab2-df18-48b3-ad23-854db2fd42eb',
+  STUDENT_ID: '4745136c-bd25-4f45-a488-9f00f2121b70',
+  SUBJECT_ID: 'e89cc834-99d0-40b7-ab5e-0a0838d273c4',
+  ASSIGNED_DATE: '2026-11-14'
+};
+
+const UPDATED_QUESTIONS_30 = [
+  // --- SECTOR 1: MERCURY ORBIT (Q1 - Q4) ---
+  {
+    order_index: 1,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 1: Mercury Orbit • Theorem Anatomy & Hypothesis vs. Conclusion",
+    content_markdown: "What is the mathematical definition of a **theorem** in Euclidean geometry?\n\n![Theorem Architecture](/images/geometry/math7_l11_theorem_anatomy.svg)",
+    options: [
+      { id: 'A', text: "A mathematical statement established as true through rigorous logical deduction from accepted axioms" },
+      { id: 'B', text: "An intuitive self-evident assumption accepted universally across mathematics without requiring any formal proof" },
+      { id: 'C', text: "An empirical physical measurement obtained exclusively through precision lab experiments and instrument trials" },
+      { id: 'D', text: "A provisional computational formula that holds true strictly under three-dimensional non-Euclidean coordinates" }
+    ],
+    correct_option_id: 'A',
+    explanation: "A theorem is a mathematical truth established by logical deduction from axioms, definitions, or previously proven theorems."
+  },
+  {
+    order_index: 2,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 1: Mercury Orbit • Theorem Anatomy & Hypothesis vs. Conclusion",
+    content_markdown: "Every theorem in geometry consists of two essential structural components. What are they?",
+    options: [
+      { id: 'A', text: "Algebraic Constant terms and unknown Variable magnitudes defining the problem system" },
+      { id: 'B', text: "Hypothesis (Given premises / GT) and Conclusion (Target statements to Prove / KL)" },
+      { id: 'C', text: "Cartesian Coordinate axes and Linear Equation slope-intercept relationships" },
+      { id: 'D', text: "Geometric Perimeter boundary lengths and Total Enclosed Surface Area measurements" }
+    ],
+    correct_option_id: 'B',
+    explanation: "Every theorem follows the structure: IF [Hypothesis / Given / GT] THEN [Conclusion / Prove / KL]."
+  },
+  {
+    order_index: 3,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 1: Mercury Orbit • Theorem Anatomy & Hypothesis vs. Conclusion",
+    content_markdown: "Consider the theorem: *'If two straight lines are both perpendicular to a third line, then they are parallel to each other.'* What is the **Hypothesis (Given / GT)**?",
+    options: [
+      { id: 'A', text: "The two lines never meet and remain strictly parallel to each other throughout the infinite plane" },
+      { id: 'B', text: "All three straight lines converge and meet at a single common coordinate intersection waypoint" },
+      { id: 'C', text: "Two distinct straight lines are both perpendicular to a third transversal line in the plane" },
+      { id: 'D', text: "The third reference line is positioned horizontally and bisects the distance between both lines" }
+    ],
+    correct_option_id: 'C',
+    explanation: "The Hypothesis is the starting condition introduced by the word 'If': 'Two straight lines are both perpendicular to a third line'."
+  },
+  {
+    order_index: 4,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 1: Mercury Orbit • Theorem Anatomy & Hypothesis vs. Conclusion",
+    content_markdown: "Consider the theorem: *'If a transversal intersects two parallel lines, then alternate interior angles are equal.'* What is the **Conclusion (Prove / KL)**?",
+    options: [
+      { id: 'A', text: "A single transversal straight line intersects two pre-existing parallel lines across two distinct points" },
+      { id: 'B', text: "The transversal line is oriented strictly perpendicular to both target lines forming right angles" },
+      { id: 'C', text: "The two coplanar straight lines are skew and never maintain a constant perpendicular separation" },
+      { id: 'D', text: "The pairs of alternate interior angles formed at both intersection nodes have equal degree measures" }
+    ],
+    correct_option_id: 'D',
+    explanation: "The Conclusion is the target truth derived following the word 'then': 'Alternate interior angles are equal'."
+  },
+
+  // --- SECTOR 2: VENUS BASE (Q5 - Q8) ---
+  {
+    order_index: 5,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 2: Venus Base • Translating Theorems into IF-THEN Architecture",
+    content_markdown: "Rewrite the concise geometric fact: *'Two vertically opposite angles are equal'* into standard **'IF... THEN...'** theorem architecture.",
+    options: [
+      { id: 'A', text: "If two angles are vertically opposite, then they have equal angle measures" },
+      { id: 'B', text: "If two angles have equal degree measures, then they must always be vertically opposite across a vertex" },
+      { id: 'C', text: "If two angles form a collinear linear pair on a line, then their degree measures are strictly equal" },
+      { id: 'D', text: "If two angles are adjacent and share a common ray, then their combined total measure is always $180^\\circ$" }
+    ],
+    correct_option_id: 'A',
+    explanation: "Standard IF-THEN structure places the condition after 'If' and the consequence after 'then': 'If two angles are vertically opposite, then they are equal in measure'."
+  },
+  {
+    order_index: 6,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 2: Venus Base • Translating Theorems into IF-THEN Architecture",
+    content_markdown: "Look at the telemetry statement matrix below. Which theorem statement accurately corresponds to this matrix?\n\n![Figure: Statement Matrix](/images/geometry/math7_l11_q6.svg)",
+    options: [
+      { id: 'A', text: "If line $m$ is parallel to line $n$, then both lines must be strictly perpendicular to transversal line $d$" },
+      { id: 'B', text: "If two lines $m$ and $n$ are both perpendicular to line $d$, then line $m$ is parallel to line $n$" },
+      { id: 'C', text: "If line $m$ is perpendicular to line $n$ at point $d$, then line $d$ bisects both lines at right angles" },
+      { id: 'D', text: "If lines $m$ and $n$ intersect transversal line $d$ at acute angles, then line $m$ is perpendicular to line $n$" }
+    ],
+    correct_option_id: 'B',
+    explanation: "The Given (GT) is $m \\perp d$ and $n \\perp d$, and the Prove (KL) is $m \\parallel n$, matching Option B."
+  },
+  {
+    order_index: 7,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 2: Venus Base • Translating Theorems into IF-THEN Architecture",
+    content_markdown: "Which of the following statements is **FALSE** regarding conditional mathematical theorems?",
+    options: [
+      { id: 'A', text: "The Hypothesis (Given / GT) explicitly outlines all assumed premises and starting geometric facts" },
+      { id: 'B', text: "The Conclusion (Prove / KL) specifies the ultimate target assertion to be validated via deductive reasoning" },
+      { id: 'C', text: "Swapping the Hypothesis and Conclusion (the converse statement) always guarantees another true theorem" },
+      { id: 'D', text: "A rigorous geometric proof must proceed logically from the Given premises using justified deduction steps" }
+    ],
+    correct_option_id: 'C',
+    explanation: "Swapping hypothesis and conclusion forms the converse statement, which is not always true (e.g., 'If two angles are right angles, they are equal' is true, but its converse is false)."
+  },
+  {
+    order_index: 8,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 2: Venus Base • Translating Theorems into IF-THEN Architecture",
+    content_markdown: "How is the definition of an angle bisector correctly formulated as an 'IF-THEN' theorem?",
+    options: [
+      { id: 'A', text: "If any arbitrary ray is drawn originating from an angle vertex in a plane, then all adjacent sub-angles become equal" },
+      { id: 'B', text: "If two arbitrary angles are supplementary summing to $180^\\circ$, then their shared interior ray forms a perpendicular line" },
+      { id: 'C', text: "If an angle has an interior opening of exactly $90^\\circ$, then every interior ray drawn through it forms an angle bisector" },
+      { id: 'D', text: "If a ray lies between two sides of an angle and divides it into two equal sub-angles, then it is the angle bisector" }
+    ],
+    correct_option_id: 'D',
+    explanation: "An angle bisector is defined by lying inside the angle and dividing it into two equal parts, which yields the conclusion of being the angle bisector."
+  },
+
+  // --- SECTOR 3: EARTH MISSION CONTROL (Q9 - Q12) ---
+  {
+    order_index: 9,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 3: Earth Mission Control • The 3-Step Deductive Engine & Justifications",
+    content_markdown: "What is the correct logical order of the 3-step deductive proof engine?",
+    options: [
+      { id: 'A', text: "1. State the Given premises $\\to$ 2. Build deductive bridge steps citing reasons $\\to$ 3. State target Conclusion" },
+      { id: 'B', text: "1. State the target Conclusion $\\to$ 2. Measure angles with an optical protractor $\\to$ 3. Infer the Given premises" },
+      { id: 'C', text: "1. Calculate arbitrary coordinates $\\to$ 2. Sketch an informal schematic diagram $\\to$ 3. Declare the theorem proven" },
+      { id: 'D', text: "1. Conclude Q.E.D. at origin $\\to$ 2. Enumerate all geometric postulates $\\to$ 3. Formulate the initial Given premises" }
+    ],
+    correct_option_id: 'A',
+    explanation: "The standard 3-step engine begins from the Given facts, constructs logical bridge steps citing valid justifications, and concludes the target result."
+  },
+  {
+    order_index: 10,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 3: Earth Mission Control • The 3-Step Deductive Engine & Justifications",
+    content_markdown: "At the conclusion of a formal mathematical proof, cadets write **Q.E.D.** What does this traditional Latin acronym signify?",
+    options: [
+      { id: 'A', text: "*Quantum Equitatis Determinatio* (\"quantum equivalence has been numerically determined\")" },
+      { id: 'B', text: "*Quod erat demonstrandum* (\"which was required to be demonstrated through formal proof\")" },
+      { id: 'C', text: "*Quaestio experimentalis deducta* (\"the experimental question has been empirically verified\")" },
+      { id: 'D', text: "*Quasi evidens definitio* (\"the statement is intuitively accepted as self-evident\")" }
+    ],
+    correct_option_id: 'B',
+    explanation: "Q.E.D. stands for *quod erat demonstrandum*, meaning 'which was to be demonstrated / which had to be proved'."
+  },
+  {
+    order_index: 11,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 3: Earth Mission Control • The 3-Step Deductive Engine & Justifications",
+    content_markdown: "In a formal geometric proof, why is every deductive step required to state a justification in parentheses (e.g., *Linear pair*, *Alternate interior angles*)?",
+    options: [
+      { id: 'A', text: "It is purely a historical typesetting convention preserved for visual symmetry without affecting proof validity" },
+      { id: 'B', text: "To allow symbolic automated solvers to format geometric statements as standard algebraic polynomial equations" },
+      { id: 'C', text: "Because every logical step must link directly to an established axiom, definition, or proven theorem for validity" },
+      { id: 'D', text: "Justifications are required exclusively when dealing with right angles and are omitted for all other angle measures" }
+    ],
+    correct_option_id: 'C',
+    explanation: "Every step in a proof must be backed by an established axiom, definition, or proven theorem to guarantee logical validity."
+  },
+  {
+    order_index: 12,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 3: Earth Mission Control • The 3-Step Deductive Engine & Justifications",
+    content_markdown: "Which of the following is **NOT** a mathematically valid justification in a formal geometric proof?",
+    options: [
+      { id: 'A', text: "*(Two angles forming a linear pair on a straight line are supplementary, summing to $180^\\circ$)*" },
+      { id: 'B', text: "*(Alternate interior angles formed by a transversal intersecting parallel lines are equal)*" },
+      { id: 'C', text: "*(Two lines intersecting at right angles are perpendicular by standard geometric definition)*" },
+      { id: 'D', text: "*(The two angles look visually identical and overlap when inspected on the computer screen)*" }
+    ],
+    correct_option_id: 'D',
+    explanation: "Visual appearance or manual measurement is never a valid mathematical justification in deductive geometry."
+  },
+
+  // --- SECTOR 4: MARS OUTPOST (Q13 - Q16) ---
+  {
+    order_index: 13,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 4: Mars Outpost • Vertical Angles Theorem & Proof Telemetry",
+    content_markdown: "In proving the Vertical Angles Theorem ($\\widehat{xOy} = \\widehat{x'Oy'}$), which angle serves as the intermediate **bridge angle** that is supplementary to both?\n\n![Figure: Vertical Angles Bridge](/images/geometry/math7_l11_q13.svg)",
+    options: [
+      { id: 'A', text: "Adjacent angle $\\widehat{xOy'}$ (or $\\widehat{x'Oy}$), which forms a linear pair with both angles" },
+      { id: 'B', text: "The target angle $\\widehat{xOy}$ itself, by assuming it equals its own reflection without deduction" },
+      { id: 'C', text: "The complete circular perigon angle of $360^\\circ$ surrounding vertex $O$ across all four quadrants" },
+      { id: 'D', text: "A reference right angle of $90^\\circ$ constructed perpendicular to the bisector of $\\widehat{xOy}$" }
+    ],
+    correct_option_id: 'A',
+    explanation: "Both vertically opposite angles form linear pairs with adjacent angle $\\widehat{xOy'}$, so $\\widehat{xOy} = 180^\\circ - \\widehat{xOy'}$ and $\\widehat{x'Oy'} = 180^\\circ - \\widehat{xOy'}$."
+  },
+  {
+    order_index: 14,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 4: Mars Outpost • Vertical Angles Theorem & Proof Telemetry",
+    content_markdown: "Telemetry lines $xy$ and $x'y'$ intersect at beacon $O$. Given that vertically opposite angles measure $\\widehat{xOy} = (3x - 10)^\\circ$ and $\\widehat{x'Oy'} = (2x + 15)^\\circ$, find the value of $x$ and the degree measure of $\\widehat{xOy}$.\n\n![Figure: Algebraic Vertical Angles](/images/geometry/math7_l11_q14.svg)",
+    options: [
+      { id: 'A', text: "$x = 20$, yielding angle measure $\\widehat{xOy} = 50^\\circ$" },
+      { id: 'B', text: "$x = 25$, yielding angle measure $\\widehat{xOy} = 65^\\circ$" },
+      { id: 'C', text: "$x = 30$, yielding angle measure $\\widehat{xOy} = 80^\\circ$" },
+      { id: 'D', text: "$x = 15$, yielding angle measure $\\widehat{xOy} = 35^\\circ$" }
+    ],
+    correct_option_id: 'B',
+    explanation: "By the Vertical Angles Theorem: $3x - 10 = 2x + 15 \\implies x = 25$. Then $\\widehat{xOy} = 3(25) - 10 = 65^\\circ$."
+  },
+  {
+    order_index: 15,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 4: Mars Outpost • Vertical Angles Theorem & Proof Telemetry",
+    content_markdown: "Two navigation corridors intersect at station $O$ such that acute angle $\\widehat{AOB} = 52^\\circ$. What is the measure of adjacent angle $\\widehat{BOC}$?\n\n![Figure: Linear Pair Telemetry](/images/geometry/math7_l11_q15.svg)",
+    options: [
+      { id: 'A', text: "$52^\\circ$ (Equal to the given acute angle because vertically opposite angles are equal)" },
+      { id: 'B', text: "$38^\\circ$ (Complementary angle subtracted from a right angle: $90^\\circ - 52^\\circ$)" },
+      { id: 'C', text: "$128^\\circ$ (Supplementary angle forming a linear pair on line $AC$: $180^\\circ - 52^\\circ$)" },
+      { id: 'D', text: "$142^\\circ$ (Calculated by mistakenly subtracting the given acute angle from an arbitrary $194^\\circ$ sum)" }
+    ],
+    correct_option_id: 'C',
+    explanation: "Angles $\\widehat{AOB}$ and $\\widehat{BOC}$ form a linear pair on straight line $AC$: $\\widehat{BOC} = 180^\\circ - 52^\\circ = 128^\\circ$."
+  },
+  {
+    order_index: 16,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 4: Mars Outpost • Vertical Angles Theorem & Proof Telemetry",
+    content_markdown: "At any intersection of two straight lines, what is the exact sum of all four angles formed around the vertex point?",
+    options: [
+      { id: 'A', text: "$90^\\circ$ (The measure of a single standard right angle formed by perpendicular rays)" },
+      { id: 'B', text: "$180^\\circ$ (The exact supplementary sum of two adjacent linear pair angles along an unbroken straight line)" },
+      { id: 'C', text: "$270^\\circ$ (The combined sum of three consecutive right angles in a coordinate plane)" },
+      { id: 'D', text: "$360^\\circ$ (The combined sum of two supplementary linear pairs around the common vertex)" }
+    ],
+    correct_option_id: 'D',
+    explanation: "Two straight lines form two pairs of supplementary angles: $180^\\circ + 180^\\circ = 360^\\circ$."
+  },
+
+  // --- SECTOR 5: JUPITER STATION (Q17 - Q20) ---
+  {
+    order_index: 17,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 5: Jupiter Station • Perpendicular to Parallel Deductions",
+    content_markdown: "Corridors $a$ and $b$ are parallel ($a \\parallel b$). Laser mast $c$ is perpendicular to corridor $a$ ($c \\perp a$). What theorem allows you to immediately deduce that $c \\perp b$?\n\n![Figure: Perpendicular Transversal](/images/geometry/math7_l11_q17.svg)",
+    options: [
+      { id: 'A', text: "The Perpendicular Transversal Theorem (A line perpendicular to one of two parallel lines is perpendicular to the other)" },
+      { id: 'B', text: "The Vertical Angles Theorem (Two straight lines intersecting at a point form equal pairs of opposite angles)" },
+      { id: 'C', text: "The Complementary Angles Theorem (Two acute angles that compose a right angle always sum to exactly $90^\\circ$)" },
+      { id: 'D', text: "The Parallel Line Uniqueness Axiom (Through any point external to a line, exactly one coplanar parallel line can ever be drawn)" }
+    ],
+    correct_option_id: 'A',
+    explanation: "By the Perpendicular Transversal Theorem (Theorem 2 in SGK), a line perpendicular to one of two parallel lines is perpendicular to the other ($c \\perp b$)."
+  },
+  {
+    order_index: 18,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 5: Jupiter Station • Perpendicular to Parallel Deductions",
+    content_markdown: "Docking struts $m$ and $n$ are both installed perpendicular to station spar $d$ ($m \\perp d$ and $n \\perp d$). What is the geometric relationship between struts $m$ and $n$?\n\n![Figure: Double Perpendicular](/images/geometry/math7_l11_q18.svg)",
+    options: [
+      { id: 'A', text: "$m \\perp n$ (Struts $m$ and $n$ are mutually perpendicular and meet at a right angle)" },
+      { id: 'B', text: "$m \\parallel n$ (Struts $m$ and $n$ are parallel because both are perpendicular to line $d$)" },
+      { id: 'C', text: "$m \\not\\parallel n$ (Struts $m$ and $n$ intersect diagonally at an acute angle of $45^\\circ$)" },
+      { id: 'D', text: "$m \\equiv n$ (Struts $m$ and $n$ must be coincident and represent the exact same line)" }
+    ],
+    correct_option_id: 'B',
+    explanation: "Theorem 1 states: Two distinct lines perpendicular to a common line are parallel to each other ($m \\parallel n$)."
+  },
+  {
+    order_index: 19,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 5: Jupiter Station • Perpendicular to Parallel Deductions",
+    content_markdown: "Cadet Alex is writing a formal proof that $c \\perp b$:\n*Step 1: Lines $a \\parallel b$ are cut by transversal $c \\implies \\widehat{B_1} = \\widehat{A_1}$ ( ... ? ... ).*\nWhat is the correct mathematical justification for this step?\n\n![Figure: Proof Step Justification](/images/geometry/math7_l11_q19.svg)",
+    options: [
+      { id: 'A', text: "*(Two angles forming a linear pair on a straight line are supplementary summing to $180^\\circ$)*" },
+      { id: 'B', text: "*(Definition of perpendicular lines intersecting to form four consecutive right angles of $90^\\circ$)*" },
+      { id: 'C', text: "*(Alternate interior angles formed by a transversal cutting two parallel lines are equal)*" },
+      { id: 'D', text: "*(The total sum of three interior angles in any Euclidean triangle is constantly equal to $180^\\circ$)*" }
+    ],
+    correct_option_id: 'C',
+    explanation: "Angles $\\widehat{B_1}$ and $\\widehat{A_1}$ are alternate interior angles formed by transversal $c$ crossing parallel lines $a \\parallel b$."
+  },
+  {
+    order_index: 20,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 5: Jupiter Station • Perpendicular to Parallel Deductions",
+    content_markdown: "Corridors $a \\parallel b$ are connected by perpendicular strut $AB$ ($AB \\perp b$ at $B$). Diagonal brace $AC$ forms angle $\\widehat{BAC} = 38^\\circ$ with line $a$. What is the measure of angle $\\widehat{ACB}$ in triangle $ABC$?\n\n![Figure: Right Triangle between Parallels](/images/geometry/math7_l11_q20.svg)",
+    options: [
+      { id: 'A', text: "$\\widehat{ACB} = 38^\\circ$ (Alternate interior angle to $\\widehat{BAC}$ along transversal $AC$)" },
+      { id: 'B', text: "$\\widehat{ACB} = 90^\\circ$ (Perpendicular connection angle at vertex $C$ along corridor $b$)" },
+      { id: 'C', text: "$\\widehat{ACB} = 42^\\circ$ (Calculated by assuming an incorrect vertex angle of $48^\\circ$)" },
+      { id: 'D', text: "$\\widehat{ACB} = 52^\\circ$ (Acute angle complementary to $38^\\circ$ in right triangle $ABC$)" }
+    ],
+    correct_option_id: 'D',
+    explanation: "Because $a \\parallel b$ and $AB \\perp b$, we have $AB \\perp a$. In right triangle $ABC$ with $\\widehat{B} = 90^\\circ$: $\\widehat{ACB} = 90^\\circ - 38^\\circ = 52^\\circ$."
+  },
+
+  // --- SECTOR 6: SATURN RINGS (Q21 - Q24) ---
+  {
+    order_index: 21,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 6: Saturn Rings • Angle Bisectors & Chained Deductive Proofs",
+    content_markdown: "Parallel corridors $a \\parallel b$ are cut by transversal line $AB$. Ray $AT$ is the angle bisector of $\\widehat{A_3} = 68^\\circ$, meeting line $b$ at point $T$. What is the measure of alternate interior angle $\\widehat{ATB}$?\n\n![Figure: Bisector on Parallel Corridors](/images/geometry/math7_l11_q21.svg)",
+    options: [
+      { id: 'A', text: "$\\widehat{ATB} = 34^\\circ$ (Alternate interior angle equal to half of $\\widehat{A_3}$ via bisector $AT$)" },
+      { id: 'B', text: "$\\widehat{ATB} = 68^\\circ$ (Alternate interior angle equal to the entire unsplit angle $\\widehat{A_3}$)" },
+      { id: 'C', text: "$\\widehat{ATB} = 112^\\circ$ (Consecutive interior angle that is supplementary to the original unbisected $68^\\circ$ angle)" },
+      { id: 'D', text: "$\\widehat{ATB} = 56^\\circ$ (Complementary angle subtracted from a standard right angle of $90^\\circ$)" }
+    ],
+    correct_option_id: 'A',
+    explanation: "Ray $AT$ bisects $68^\\circ$ into two $34^\\circ$ angles. Between parallel lines $a \\parallel b$ cut by transversal $AT$, alternate interior angle $\\widehat{ATB} = 34^\\circ$."
+  },
+  {
+    order_index: 22,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 6: Saturn Rings • Angle Bisectors & Chained Deductive Proofs",
+    content_markdown: "Theorem: The angle bisectors of two consecutive interior angles formed by parallel lines cut by a transversal ALWAYS intersect at what fixed angle?\n\n![Figure: Consecutive Bisectors Intersection](/images/geometry/math7_l11_q22.svg)",
+    options: [
+      { id: 'A', text: "$\\widehat{P} = 60^\\circ$ (The interior angle characteristic of an equilateral triangle formed by the intersecting rays)" },
+      { id: 'B', text: "$\\widehat{P} = 90^\\circ$ (Because the two half-angles sum to $90^\\circ$, making the third angle $90^\\circ$)" },
+      { id: 'C', text: "$\\widehat{P} = 45^\\circ$ (Half of the standard perpendicular orientation between the parallel rails)" },
+      { id: 'D', text: "$\\widehat{P} = 120^\\circ$ (Obtuse angle formed when consecutive interior angles are unequal)" }
+    ],
+    correct_option_id: 'B',
+    explanation: "Consecutive interior angles sum to $180^\\circ$, so their halves sum to $90^\\circ$. In the triangle formed by the transversal and bisectors, the third angle is $180^\\circ - 90^\\circ = 90^\\circ$."
+  },
+  {
+    order_index: 23,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 6: Saturn Rings • Angle Bisectors & Chained Deductive Proofs",
+    content_markdown: "Lines $a \\parallel b$. Ray $u$ bisects alternate interior angle $\\widehat{A_3}$, and ray $v$ bisects alternate interior angle $\\widehat{B_1}$. What is the geometric relationship between ray $u$ and ray $v$?\n\n![Figure: Parallel Bisectors](/images/geometry/math7_l11_q23.svg)",
+    options: [
+      { id: 'A', text: "$u \\perp v$ (The bisecting rays are mutually perpendicular and meet at a right angle)" },
+      { id: 'B', text: "$u \\not\\parallel v$ (The bisecting rays converge and intersect at an acute angle of $45^\\circ$)" },
+      { id: 'C', text: "$u \\parallel v$ (The rays are parallel because they form equal alternate interior angles)" },
+      { id: 'D', text: "$u \\equiv v$ (The two bisecting rays coincide along the same collinear line trajectory)" }
+    ],
+    correct_option_id: 'C',
+    explanation: "Since alternate interior angles are equal, their halves are equal. These half-angles form equal alternate interior angles for rays $u$ and $v$, proving $u \\parallel v$."
+  },
+  {
+    order_index: 24,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 6: Saturn Rings • Angle Bisectors & Chained Deductive Proofs",
+    content_markdown: "In a docking frame, ray $Ox \\perp Oy$ ($\\widehat{xOy} = 90^\\circ$). Ray $Oz$ lies inside angle $\\widehat{xOy}$ such that $\\widehat{xOz} = 32^\\circ$. Ray $Ot$ is the bisector of $\\widehat{zOy}$. What is the measure of angle $\\widehat{xOt}$?\n\n![Figure: Perpendicular Rays and Bisector](/images/geometry/math7_l11_q24.svg)",
+    options: [
+      { id: 'A', text: "$\\widehat{xOt} = 29^\\circ$ (The measure of half of the remaining angle $\\widehat{zOy}$ alone)" },
+      { id: 'B', text: "$\\widehat{xOt} = 58^\\circ$ (The measure of the entire unbisected remaining angle $\\widehat{zOy}$ without bisector partitioning)" },
+      { id: 'C', text: "$\\widehat{xOt} = 32^\\circ$ (Equal to the initial given angle $\\widehat{xOz}$ without bisector addition)" },
+      { id: 'D', text: "$\\widehat{xOt} = 61^\\circ$ (Sum of initial angle $32^\\circ$ and half-angle $29^\\circ$: $32^\\circ + 29^\\circ$)" }
+    ],
+    correct_option_id: 'D',
+    explanation: "Angle $\\widehat{zOy} = 90^\\circ - 32^\\circ = 58^\\circ$. Bisector $Ot$ divides it into two $29^\\circ$ angles. Thus $\\widehat{xOt} = 32^\\circ + 29^\\circ = 61^\\circ$."
+  },
+
+  // --- SECTOR 7: URANUS DEEP SPACE (Q25 - Q27) ---
+  {
+    order_index: 25,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 7: Uranus Deep Space • Multi-Step Proof Logic & Missing Step Deduction",
+    content_markdown: "Examine the formal proof table below. What statement belongs in Step 2?\n\n![Figure: Formal Proof Table](/images/geometry/math7_l11_q25.svg)",
+    options: [
+      { id: 'A', text: "$a \\parallel b$ (Lines $a$ and $b$ are parallel because both are perpendicular to transversal $c$)" },
+      { id: 'B', text: "$a \\perp b$ (Lines $a$ and $b$ are perpendicular and form a right angle intersection in space)" },
+      { id: 'C', text: "$\\widehat{A_1} + \\widehat{B_1} = 90^\\circ$ (The interior angles are complementary summing to a right angle)" },
+      { id: 'D', text: "$c \\parallel a$ (Transversal line $c$ is parallel to rail $a$ and never intersects it in the plane)" }
+    ],
+    correct_option_id: 'A',
+    explanation: "Step 2 applies the Double Perpendicular Theorem to deduce that line $a$ is parallel to line $b$ ($a \\parallel b$)."
+  },
+  {
+    order_index: 26,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 7: Uranus Deep Space • Multi-Step Proof Logic & Missing Step Deduction",
+    content_markdown: "Cadet Leo submitted this proof: *'To prove $a \\parallel b$, I assume $\\widehat{A_1} = \\widehat{B_1} = 60^\\circ$ because they look equal. Therefore $a \\parallel b$.'* What is the fatal logical flaw in Leo's argument?",
+    options: [
+      { id: 'A', text: "Leo should have arbitrarily chosen $90^\\circ$ instead of $60^\\circ$ to force lines to be perpendicular" },
+      { id: 'B', text: "Leo assumed the conclusion's angle equality without deriving it from the Given (Circular Reasoning)" },
+      { id: 'C', text: "Parallel lines cut by a transversal can never exhibit equal alternate interior angles under Euclidean rules" },
+      { id: 'D', text: "Only interior angles inside closed geometric triangles are permitted to assume values of exactly $60^\\circ$" }
+    ],
+    correct_option_id: 'B',
+    explanation: "Assuming an unstated angle property without deriving it from the Given is circular reasoning, which invalidates a proof."
+  },
+  {
+    order_index: 27,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 7: Uranus Deep Space • Multi-Step Proof Logic & Missing Step Deduction",
+    content_markdown: "If line $p \\parallel q$ and line $q \\parallel r$, which theorem directly proves that $p \\parallel r$?\n\n![Figure: Transitivity Theorem](/images/geometry/math7_l11_q27.svg)",
+    options: [
+      { id: 'A', text: "The Vertical Angles Theorem (Intersecting straight lines produce equal pairs of opposite angles at the vertex)" },
+      { id: 'B', text: "The Linear Pair Postulate (Two adjacent angles forming a straight line are supplementary and sum to $180^\\circ$)" },
+      { id: 'C', text: "The Transitivity of Parallel Lines Theorem (Two lines parallel to a third line are parallel to each other)" },
+      { id: 'D', text: "The Complementary Angle Theorem (Two adjacent angles that form a right angle always sum to exactly $90^\\circ$)" }
+    ],
+    correct_option_id: 'C',
+    explanation: "Theorem 3 states: Two distinct straight lines parallel to a third line are parallel to each other (Transitivity)."
+  },
+
+  // --- SECTOR 8: NEPTUNE FRONTIER (Q28 - Q30) ---
+  {
+    order_index: 28,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 8: Neptune Frontier • Advanced Geometric Synthesis & Converse Analysis",
+    content_markdown: "What is the **converse** of the conditional theorem: *'If a triangle is equilateral, then all its three angles are equal'*?",
+    options: [
+      { id: 'A', text: "If a triangle is not equilateral, then all three of its interior angles are strictly unequal (Inverse statement)" },
+      { id: 'B', text: "If a triangle has three equal sides, then its perimeter is three times the side length (Property statement)" },
+      { id: 'C', text: "If all three angles of a triangle are acute and strictly less than $90^\\circ$, then the triangle is equilateral" },
+      { id: 'D', text: "If all three angles of a triangle are equal, then the triangle is equilateral (Converse: swap If and Then)" }
+    ],
+    correct_option_id: 'D',
+    explanation: "The converse of 'If P then Q' is 'If Q then P': 'If all three angles of a triangle are equal, then the triangle is equilateral'."
+  },
+  {
+    order_index: 29,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 8: Neptune Frontier • Advanced Geometric Synthesis & Converse Analysis",
+    content_markdown: "Three orbital corridors are parallel: $a \\parallel b \\parallel c$. Transversal $d$ intersects line $a$ with acute angle $46^\\circ$. What is the degree measure of the consecutive interior angle formed by transversal $d$ with line $c$?\n\n![Figure: Three Parallel Corridors](/images/geometry/math7_l11_q29.svg)",
+    options: [
+      { id: 'A', text: "$134^\\circ$ (Consecutive interior angle supplementary to $46^\\circ$: $180^\\circ - 46^\\circ = 134^\\circ$)" },
+      { id: 'B', text: "$46^\\circ$ (Alternate interior angle directly corresponding to the given acute angle on line $a$)" },
+      { id: 'C', text: "$90^\\circ$ (Perpendicular orientation angle if transversal $d$ were orthogonal to all corridors)" },
+      { id: 'D', text: "$144^\\circ$ (Calculation resulting from mistakenly subtracting $46^\\circ$ from an incorrect $190^\\circ$)" }
+    ],
+    correct_option_id: 'A',
+    explanation: "By transitivity, $a \\parallel c$. The acute angle on line $c$ is $46^\\circ$. Its supplementary consecutive interior angle is $180^\\circ - 46^\\circ = 134^\\circ$."
+  },
+  {
+    order_index: 30,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.33,
+    sectionName: "Sector 8: Neptune Frontier • Advanced Geometric Synthesis & Converse Analysis",
+    content_markdown: "Which of the following statements represents a **TRUE THEOREM** in Euclidean planar geometry?",
+    options: [
+      { id: 'A', text: "Two coplanar straight lines that never intersect at any point in the plane are always strictly perpendicular" },
+      { id: 'B', text: "If two distinct lines are perpendicular to a third line in the same plane, they are parallel to each other" },
+      { id: 'C', text: "Any two angles that have equal degree measures in a plane must always be vertically opposite across a vertex" },
+      { id: 'D', text: "The sum of two consecutive interior angles formed by a transversal across parallel lines is always $90^\\circ$" }
+    ],
+    correct_option_id: 'B',
+    explanation: "Statement B is the true Double Perpendicular Theorem: $m \\perp d \\text{ and } n \\perp d \\implies m \\parallel n$."
+  }
+];
+
+// Verify distribution
+const counts = { A: 0, B: 0, C: 0, D: 0 };
+UPDATED_QUESTIONS_30.forEach(q => counts[q.correct_option_id]++);
+console.log('Updated 30-Question Answer Distribution:', counts);
+
+// Analyze option lengths
+let longestIsCorrectCount = 0;
+let tieCount = 0;
+UPDATED_QUESTIONS_30.forEach((q, idx) => {
+  const correctId = q.correct_option_id;
+  const lens = q.options.map(opt => ({ id: opt.id, len: opt.text.length, text: opt.text }));
+  lens.sort((a, b) => b.len - a.len);
+  
+  const isStrictlyLongest = lens[0].id === correctId && lens[0].len > lens[1].len;
+  if (isStrictlyLongest) longestIsCorrectCount++;
+  if (lens[0].len === lens[1].len) tieCount++;
+  
+  console.log(`Q${idx + 1} (${q.correct_option_id}): max=[${lens[0].id}:${lens[0].len}, ${lens[1].id}:${lens[1].len}, ${lens[2].id}:${lens[2].len}, ${lens[3].id}:${lens[3].len}] -> ${isStrictlyLongest ? '⚠️ CORRECT IS STRICTLY LONGEST' : '✅ Balanced or Distractor is Longer'}`);
+});
+
+console.log(`\nResults: ${longestIsCorrectCount} / ${UPDATED_QUESTIONS_30.length} questions where correct is strictly longest.`);
+
+async function main() {
+  console.log('\n🔄 Updating questions in database for Assessment:', CONSTANTS.ASSESSMENT_ID);
+  
+  // 1. Delete old questions for this assessment
+  await prisma.questions.deleteMany({
+    where: { assessment_id: CONSTANTS.ASSESSMENT_ID }
+  });
+  console.log('Deleted existing questions for clean reload.');
+
+  // 2. Re-insert updated questions
+  for (const q of UPDATED_QUESTIONS_30) {
+    const questionPayload = {
+      content_markdown: q.content_markdown,
+      sectionName: q.sectionName,
+      options: q.options,
+      correct_option_id: q.correct_option_id
+    };
+
+    const gradingPayload = {
+      correct_option_id: q.correct_option_id,
+      explanation_markdown: q.explanation
+    };
+
+    await prisma.questions.create({
+      data: {
+        assessment_id: CONSTANTS.ASSESSMENT_ID,
+        order_index: q.order_index,
+        type: q.type,
+        points: q.points,
+        question_payload: questionPayload,
+        grading_key_payload: gradingPayload
+      }
+    });
+  }
+  console.log('✅ Re-created all 30 questions with balanced, lengthened distractors in DB.');
+
+  // 3. Update JSON backup
+  const backupPath = path.resolve(__dirname, 'content/math7_lesson11_practice_30q_2026_11_14.json');
+  const backupData = {
+    assignedDate: CONSTANTS.ASSIGNED_DATE,
+    studentId: CONSTANTS.STUDENT_ID,
+    subjectId: CONSTANTS.SUBJECT_ID,
+    assignmentId: CONSTANTS.ASSIGNMENT_ID,
+    assessmentId: CONSTANTS.ASSESSMENT_ID,
+    totalQuestions: UPDATED_QUESTIONS_30.length,
+    answerDistribution: counts,
+    questions: UPDATED_QUESTIONS_30
+  };
+  fs.writeFileSync(backupPath, JSON.stringify(backupData, null, 2), 'utf8');
+  console.log('✅ Updated JSON backup at:', backupPath);
+}
+
+main().catch(console.error).finally(() => prisma.$disconnect());
