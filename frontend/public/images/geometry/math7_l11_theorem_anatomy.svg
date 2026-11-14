@@ -46,7 +46,7 @@
   <!-- Card 2: 3-Step Proof Engine Chain -->
   <g transform="translate(25, 175)">
     <rect x="0" y="0" width="490" height="125" rx="12" fill="#0C1B2E" fill-opacity="0.9" stroke="#818CF8" stroke-width="1.2"/>
-    <text x="20" y="24" fill="#A5B4FC" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" letter-spacing="1">DEDUCTIVE PROOF ENGINE (CHỨNG MINH)</text>
+    <text x="20" y="24" fill="#A5B4FC" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" letter-spacing="1">DEDUCTIVE PROOF ENGINE (FORMAL PROOF)</text>
 
     <!-- Step 1 -->
     <rect x="15" y="38" width="138" height="72" rx="8" fill="#1E1B4B" stroke="#6366F1" stroke-width="1"/>

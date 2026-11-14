@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 300" width="100%" height="260" role="img" aria-labelledby="title desc">
+  <title id="title">Q23: Parallel Bisectors of Alternate Interior Angles</title>
+  <desc id="desc">Bisectors of alternate interior angles are mutually parallel</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0E1626"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="540" height="300" rx="16" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.3"/>
+  <rect x="110" y="15" width="320" height="26" rx="13" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
+  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="11" font-weight="bold" text-anchor="middle">BISECTORS OF ALTERNATE INTERIOR ANGLES</text>
+  <line x1="40" y1="80" x2="500" y2="80" stroke="#38BDF8" stroke-width="3"/><text x="510" y="85" fill="#38BDF8" font-size="16" font-weight="bold">a</text>
+  <line x1="40" y1="220" x2="500" y2="220" stroke="#38BDF8" stroke-width="3"/><text x="510" y="225" fill="#38BDF8" font-size="16" font-weight="bold">b</text>
+  <line x1="180" y1="240" x2="360" y2="60" stroke="#C4B5FD" stroke-width="2.5"/>
+  <circle cx="310" cy="110" r="4.5" fill="#FFF"/><text x="295" y="100" fill="#FFF" font-size="13" font-weight="bold">A</text>
+  <circle cx="230" cy="190" r="4.5" fill="#FFF"/><text x="245" y="205" fill="#FFF" font-size="13" font-weight="bold">B</text>
+  <line x1="310" y1="110" x2="160" y2="60" stroke="#34D399" stroke-width="2.5"/>
+  <text x="145" y="65" fill="#34D399" font-size="14" font-weight="bold">u</text>
+  <line x1="230" y1="190" x2="80" y2="140" stroke="#34D399" stroke-width="2.5"/>
+  <text x="65" y="145" fill="#34D399" font-size="14" font-weight="bold">v</text>
+  <text x="360" y="260" fill="#34D399" font-family="monospace" font-size="14" font-weight="bold">Deduction: u ∥ v</text>
+</svg>
