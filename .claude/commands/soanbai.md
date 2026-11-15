@@ -1,3 +1,6 @@
+---
+description: Tạo trọn gói bài giảng tương tác và bộ bài tập tiếng Anh từ A-Z cho học sinh Thái (Lớp 11) hoặc Nam Việt (Lớp 12) theo quy chuẩn Thầy Thức.
+---
 # Command: /soanbai
 Mục đích: Lệnh tự động tạo trọn gói bài giảng tương tác và bộ bài tập tiếng Anh từ A-Z cho học sinh Thái (Lớp 11) hoặc Nam Việt (Lớp 12) theo quy chuẩn Thầy Thức.
 
@@ -15,13 +18,20 @@ $ARGUMENTS
      - Username: `thai` (ID: `9208f557-3288-442e-accf-15fc8c763e68`)
      - Subject: `ENG_11` (ID: `f36e3e6b-46e2-4839-a2e8-8a78ff88a9a0`)
      - Mục tiêu: 8.5+ Giữa kì & THPT. Bỏ Phonetics, tập trung nâng cao Từ vựng & Ngữ pháp.
-     - Tài liệu gốc: `/home/dantey/Dantey/teaching/lop_11/`
+     - Tài liệu gốc: `/home/dantey/Dantey/teaching/lop_11/` và **file PDF SGK**: `~/Downloads/SGK – Tiếng Anh 11 – Chương trình mới.pdf`
    - **Nam Việt (Lớp 12):**
      - Username: `nam_viet` (ID: `d76bd9d6-6cf5-409c-847b-b0e5c07a0876`)
      - Subject: `ENG_12` (ID: `a15d4b19-412a-4bff-acd5-86714381b7af`)
      - Mục tiêu: 7+ THPT Quốc Gia. Luôn đưa các câu hỏi TỪ VỰNG lên đầu trong đề trắc nghiệm.
-     - Tài liệu gốc: `/home/dantey/Dantey/teaching/lop12NamViet/`
+     - Tài liệu gốc: `/home/dantey/Dantey/teaching/lop12NamViet/` và **file PDF SGK**: `~/Downloads/tieng-anh-12-global-successcompressed-2_173202514.pdf`
    - Teacher ID: `dc62e5df-2344-4785-b058-b95f5dbe0983` (Thầy Thức).
+
+2. Công cụ trích xuất & nghiên cứu tài liệu:
+   - **Dùng `pdftotext`:** Trích xuất nhanh văn bản các trang/Unit trong file PDF mà không tốn context token:
+     `pdftotext -f <trang_dau> -l <trang_cuoi> ~/Downloads/<file_sgk>.pdf -`
+   - **Dùng MCP `firecrawl`:** Crawl các bài đọc tin tức quốc tế, ngữ liệu IELTS/THPTQG thực tế từ web để đưa vào bài đọc hiểu hoặc đề thi.
+   - **Dùng `pandoc`:** Khi Thầy yêu cầu in đề phát cho học sinh làm trên giấy, xuất đề bài ra file Word `.docx`:
+     `pandoc de_kiem_tra.md -o de_kiem_tra.docx`
 
 ### Bước 2: Thiết kế Phòng học tương tác (Interactive Studio)
 1. Tạo thư mục tại: `frontend/public/lectures/<slug>/`

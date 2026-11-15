@@ -1,9 +1,12 @@
-# Command: /soanhoakeithley (hoặc /soanhoa)
+---
+description: Tạo trọn gói bài giảng và bộ bài tập Hóa học lớp 9 cho học sinh Keithley Lake từ file .txt hoặc .md theo quy chuẩn Thầy Thức.
+---
+# Command: /soanhoa
 Mục đích: Lệnh tạo trọn gói bài giảng và bộ bài tập Hóa học lớp 9 cho học sinh Keithley Lake từ file .txt hoặc .md theo quy chuẩn Thầy Thức.
 
 ## Input Parameters:
 $ARGUMENTS
-(Cú pháp hỗ trợ: `/soanhoakeithley [đường dẫn file .txt / .md] [mode: EXERCISE_ONLY | BOTH | LECTURE_ONLY]`)
+(Cú pháp hỗ trợ: `/soanhoa [đường dẫn file .txt / .md] [mode: EXERCISE_ONLY | BOTH | LECTURE_ONLY]`)
 
 ---
 
@@ -14,6 +17,16 @@ $ARGUMENTS
 - Giáo viên: **Thầy Thức** (`teacher` - ID: `dc62e5df-2344-4785-b058-b95f5dbe0983`)
 - Môn học: **Hóa học 9** (`CHEM_9` - ID: `6fc7387b-13b8-4e27-8240-a60c03dc1d51`)
 - Thư mục tài liệu gốc: `/home/dantey/Dantey/teaching/lop6/Chemistry/` (hoặc file Thầy truyền vào ở `$ARGUMENTS`).
+- **File PDF SGK & SBT sẵn có:**
+  - `~/Downloads/SGK-KHTN-Lop-9.pdf` (Phần Hóa học)
+  - `~/Downloads/sbt-khoa-hoc-tu-nhien-9-ket-noi-tri-thuc-pdf-xem-online-tai-pdf-mien-p.pdf`
+
+### Công cụ xử lý & khai thác tài liệu:
+- **`pdftotext`:** Trích xuất nhanh lý thuyết, phương trình phản ứng và bài tập từ file PDF KHTN 9:
+  `pdftotext -f <trang_dau> -l <trang_cuoi> ~/Downloads/SGK-KHTN-Lop-9.pdf -`
+- **`pandoc`:** Xuất phiếu bài tập/nhiệm vụ hóa học ra file Word `.docx` khi Thầy cần bản in:
+  `pandoc mission_chem9.md -o mission_chem9.docx`
+- **MCP `firecrawl`:** Dùng khi cần tra cứu các phản ứng hóa học mở rộng, phương pháp điều chế thực tế từ các nguồn tài liệu quốc tế.
 
 ### Bước 2: Xác định chế độ soạn bài (3 Chế độ)
 1. `EXERCISE_ONLY` (Chỉ làm bài tập): Soạn bộ 25-30 câu trắc nghiệm chia 8 Trạm Hành Tinh trong 90 phút.

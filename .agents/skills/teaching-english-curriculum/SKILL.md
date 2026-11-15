@@ -46,14 +46,23 @@ Khi người dùng yêu cầu tạo bài, tự động nhận diện đối tư�
 
 ### Bước 1: Khai Thác Tài Liệu & Thiết Kế Đề Bài
 
-1. Đọc tệp nội dung bài học trong thư mục học sinh (VD: `mid_term_1_english_11_practice_test.txt` hoặc `Unit4_Urbanisation_Vocab_Grammar_Handbook.html`).
-2. **Trích xuất dữ liệu bài giảng:**
+1. **Nguồn tài liệu:**
+   - Đọc tệp nội dung bài học trong thư mục học sinh (VD: `mid_term_1_english_11_practice_test.txt` hoặc `Unit4_Urbanisation_Vocab_Grammar_Handbook.html`).
+   - **Kho file PDF SGK sẵn có trong `~/Downloads/`:**
+     - Thái (Lớp 11): `~/Downloads/SGK – Tiếng Anh 11 – Chương trình mới.pdf`
+     - Nam Việt (Lớp 12): `~/Downloads/tieng-anh-12-global-successcompressed-2_173202514.pdf`
+2. **Khai thác PDF bằng `pdftotext` & MCPs:**
+   - Sử dụng `pdftotext -f <trang_dau> -l <trang_cuoi> ~/Downloads/<file.pdf> -` để trích nhanh từ vựng, ngữ pháp và bài đọc của từng Unit.
+   - Sử dụng **MCP `firecrawl`** để cào (crawl) các bài đọc thời sự, ngữ liệu IELTS/THPTQG thực tế từ các trang tin tức quốc tế.
+3. **Trích xuất dữ liệu bài giảng:**
    - **50 Từ vựng trọng tâm:** Có phát âm IPA, loại từ, nghĩa tiếng Việt, cụm từ Collocation và câu ví dụ song ngữ.
    - **3 Chuyên đề ngữ pháp cốt lõi:** Bảng công thức, dấu hiệu nhận biết, bảng đối chiếu và các công thức viết lại câu kinh điển.
-3. **Soạn bộ câu hỏi trắc nghiệm (60 - 100 câu):**
+4. **Soạn bộ câu hỏi trắc nghiệm (60 - 100 câu):**
    - **Với Nam Việt (Lớp 12):** Luôn xếp **các câu hỏi Từ vựng lên đầu**, tiếp theo là Ngữ pháp, cuối cùng là Đọc hiểu. Tập trung chắc chắn mục tiêu 7+.
    - **Với Thái (Lớp 11):** Bỏ phần Phonetics nếu yêu cầu, tập trung sâu vào Từ vựng & Ngữ pháp nâng cao cho mục tiêu 8.5+.
    - Mỗi câu hỏi phải có đầy đủ: `content`, `options` (A, B, C, D), `correct_answer` và `explanation` chi tiết từ Thầy Thức.
+5. **Xuất bản đề thi trên giấy (nếu Thầy yêu cầu bản in):**
+   - Sử dụng **`pandoc`** để biên dịch nhanh sang file Word: `pandoc de_kiem_tra.md -o de_kiem_tra.docx`.
 
 ---
 

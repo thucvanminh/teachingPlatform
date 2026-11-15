@@ -103,6 +103,49 @@ OpenCode commands are configured in `.opencode/commands/` and can be invoked dir
 
 ---
 
+## 📚 Tài Liệu Nguồn PDF, Pandoc, pdftotext & Khai Thác MCPs
+
+### 1. Kho Sách Giáo Khoa & Sách Bài Tập PDF Sẵn Có (`~/Downloads/`)
+Hệ thống tận dụng trực tiếp các file PDF bản chuẩn được lưu tại `~/Downloads/`:
+- **Toán 7 (Keithley Lake):**
+  - `~/Downloads/sach-giao-khoa-toan-7-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf`
+- **Hóa học 9 / KHTN 9 (Keithley Lake):**
+  - `~/Downloads/SGK-KHTN-Lop-9.pdf`
+  - `~/Downloads/sbt-khoa-hoc-tu-nhien-9-ket-noi-tri-thuc-pdf-xem-online-tai-pdf-mien-p.pdf`
+- **Tiếng Anh 11 (Thái):**
+  - `~/Downloads/SGK – Tiếng Anh 11 – Chương trình mới.pdf`
+- **Tiếng Anh 12 (Nam Việt):**
+  - `~/Downloads/tieng-anh-12-global-successcompressed-2_173202514.pdf`
+
+### 2. Quy Trình Khai Thác Dữ Liệu PDF Bằng `pdftotext`, `pdftoppm` & Vision
+- **Đối với PDF có Text Layer:** Dùng `pdftotext` để trích xuất nhanh văn bản các trang/Unit:
+  ```bash
+  pdftotext -f <trang_dau> -l <trang_cuoi> ~/Downloads/<file.pdf> -
+  ```
+- **Đối với PDF Dạng Scan / Ảnh chụp (như các bản SGK trong `~/Downloads/`):**
+  - Các bản PDF scan không có text layer, do đó dùng `pdftoppm` xuất trang cần đọc sang ảnh PNG sắc nét:
+    ```bash
+    pdftoppm -png -r 150 -f <trang> -l <trang> ~/Downloads/<file_sgk>.pdf /tmp/opencode/page
+    ```
+  - AI sẽ dùng công cụ `read` trực tiếp lên file ảnh PNG vừa xuất để đọc lý thuyết, đề bài, bảng biểu, công thức KaTeX và sơ đồ hình học/thí nghiệm với độ chính xác tuyệt đối.
+- **Vẽ lại hình học & sơ đồ:** Từ ảnh scan gốc, AI tự động lập trình file Vector SVG chuẩn lưu tại `frontend/public/images/geometry/` để hiển thị trên web.
+
+### 3. Đóng Gói Đề Kiểm Tra & Phiếu Học Tập Bằng `pandoc`
+- Khi Thầy Thức yêu cầu xuất phiếu bài tập hoặc đề kiểm tra ra định dạng in ấn cho học sinh làm trên giấy, AI tự động dùng `pandoc` chuyển đổi từ Markdown sang file Microsoft Word:
+  ```bash
+  pandoc de_kiem_tra.md -o de_kiem_tra.docx
+  ```
+- File Word sinh ra giữ nguyên định dạng bảng biểu, in đậm, danh sách câu hỏi trắc nghiệm A, B, C, D rõ ràng, sẵn sàng mở bằng LibreOffice hoặc Word để in.
+
+### 4. Tận Dụng MCPs Cho Nghiên Cứu & Cập Nhật Nội Dung Mới
+- **MCP `firecrawl` (đã tích hợp trong `opencode.json`):**
+  - Dùng để cào (crawl) các bài báo tiếng Anh thời sự từ các nguồn uy tín (BBC, National Geographic, The Guardian) để thiết kế bài đọc hiểu (Reading Comprehension) cho học sinh Lớp 11 và 12.
+  - Trích xuất đề thi thử THPT Quốc Gia mới nhất từ các cổng thông tin giáo dục mà không bị dính mã quảng cáo rác.
+- **MCP WebSearch & Docs Lookup:**
+  - Tra cứu các ứng dụng thực tế của phản ứng hóa học (Hóa 9) và các dạng bài toán thực tế (Toán 7) để lồng ghép vào cốt truyện Vũ trụ (Cosmic Space Mission).
+
+---
+
 ## Agent Skills (`.agents/skills/` & `.opencode/skills/`)
 
 Dự án tích hợp các skills chuyên sâu:

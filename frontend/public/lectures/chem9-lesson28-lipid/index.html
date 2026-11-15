@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orbital Chemistry Lab: Lipids &amp; Triglycerides (Lesson 28)</title>
+  
+  <!-- KaTeX for High-Contrast Chemical Equations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+
+  <!-- Three.js & OrbitControls for Interactive 3D Molecular Simulation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Starfield Canvas Background -->
+  <canvas id="starfieldCanvas"></canvas>
+  <canvas id="confettiCanvas" class="canvas-confetti"></canvas>
+
+  <div class="app-container">
+    <!-- Sci-Fi Orbital Header -->
+    <header class="station-header">
+      <div class="header-left">
+        <div class="status-badge">
+          <span class="pulse-dot"></span>
+          <span>ORBITAL ORGANIC LAB • LESSON 28 TELEMETRY ACTIVE</span>
+        </div>
+        <h1 class="header-title">
+          <span class="gradient-text">LIPIDS &amp; TRIGLYCERIDES</span>
+          <span class="sub-title">DEEP SPACE ORGANIC BIOCHEMISTRY &amp; SAPONIFICATION VIRTUAL LAB</span>
+        </h1>
+      </div>
+      <div class="header-right">
+        <div class="cadet-badge">
+          <span class="badge-role">Astronaut Cadet</span>
+          <span class="badge-name">Keithley Lake • Grade 7 &amp; Chem 9</span>
+        </div>
+        <button id="soundToggleBtn" class="control-btn" title="Toggle Sound">
+          <span id="soundIcon">🔊</span> Sound
+        </button>
+      </div>
+    </header>
+
+    <!-- Sector Navigation Bar -->
+    <nav class="sector-nav">
+      <button class="nav-tab active" data-sector="sector1">
+        <span class="tab-icon">🧬</span>
+        <span class="tab-label">Sector 1: Molecular Architecture</span>
+      </button>
+      <button class="nav-tab" data-sector="sector2">
+        <span class="tab-icon">🧪</span>
+        <span class="tab-label">Sector 2: Solubility &amp; Density Bench</span>
+      </button>
+      <button class="nav-tab" data-sector="sector3">
+        <span class="tab-icon">⚗️</span>
+        <span class="tab-label">Sector 3: Saponification Reactor</span>
+      </button>
+      <button class="nav-tab" data-sector="sector4">
+        <span class="tab-icon">🚀</span>
+        <span class="tab-label">Sector 4: Space Industry &amp; Bio-Energy</span>
+      </button>
+      <button class="nav-tab" data-sector="sector5">
+        <span class="tab-icon">⚡</span>
+        <span class="tab-label">Sector 5: Flight Readiness Quiz</span>
+      </button>
+    </nav>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="main-content">
+      
+      <!-- ============================================== -->
+      <!-- SECTOR 1: MOLECULAR BLUEPRINT & ESTER BONDS   -->
+      <!-- ============================================== -->
+      <section id="sector1" class="sector-pane active">
+        <div class="pane-grid">
+          <!-- Left: 3D WebGL Three.js Molecule Viewer -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <div class="header-badge-row">
+                <span class="tag cyan">Three.js 3D Blueprint</span>
+                <span class="molar-mass-badge">$M = 890\text{ g/mol}$ (Tristearin)</span>
+              </div>
+              <h3>Triglyceride Molecular Blueprint • 3D Triester Architecture</h3>
+            </div>
+            <p class="card-desc">
+              General formula: <strong>$(\text{RCOO})_3\text{C}_3\text{H}_5$</strong> • Backbone: <strong>Glycerol $\text{C}_3\text{H}_5$</strong> • Functional linkage: <strong>3 Ester bonds $-\text{COO}-$</strong>
+            </p>
+
+            <div class="molecule-3d-wrapper">
+              <div class="molecule-3d-toolbar">
+                <div class="model-badge">
+                  <span class="pulse-dot"></span>
+                  <span>WebGL 3D Ball &amp; Stick Model</span>
+                </div>
+                <div class="model-actions">
+                  <button id="toggle3dRotateBtn" class="tool-btn active" title="Toggle Auto-Rotation">🔄 Rotate</button>
+                  <button id="reset3dViewBtn" class="tool-btn" title="Reset Camera View">🎯 Reset</button>
+                  <button id="switchFatBtn" class="tool-btn" title="Toggle Saturated / Unsaturated">🔀 Switch Fat</button>
+                </div>
+              </div>
+
+              <!-- 3D Canvas Container -->
+              <div id="molecule3dCanvasContainer" class="molecule-3d-container">
+                <div id="atomTooltip" class="atom-3d-tooltip"></div>
+                <div class="canvas-hint">Drag to rotate 360° • Scroll to zoom • Hover atom</div>
+              </div>
+            </div>
+
+            <div class="formula-hud-card" style="margin-top: 1rem;">
+              <div class="hud-title">⚡ Molecular Breakdown Key</div>
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; font-size: 0.75rem; text-align: center;">
+                <div style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 0.5rem; padding: 0.5rem;">
+                  <span style="color: var(--cyan-glow); font-weight: 800;">Glycerol Core</span><br>
+                  $\text{CH}_2-\text{CH}-\text{CH}_2$
+                </div>
+                <div style="background: rgba(244, 63, 94, 0.15); border: 1px solid rgba(244, 63, 94, 0.3); border-radius: 0.5rem; padding: 0.5rem;">
+                  <span style="color: var(--rose-glow); font-weight: 800;">3 Ester Links</span><br>
+                  $-\text{COO}-$
+                </div>
+                <div style="background: rgba(52, 211, 153, 0.15); border: 1px solid rgba(52, 211, 153, 0.3); border-radius: 0.5rem; padding: 0.5rem;">
+                  <span style="color: var(--emerald-glow); font-weight: 800;">Hydrocarbon Tails</span><br>
+                  $-\text{C}_{17}\text{H}_{35} \text{ / } -\text{C}_{15}\text{H}_{31}$
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Theory Briefing & Formulas -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag amber">Orbital Flight Telemetry</span>
+              <h3>Core Principles: Lipids &amp; Fatty Acids</h3>
+            </div>
+            
+            <div class="formula-hud-card">
+              <div class="hud-title">🔬 1. Definition of Lipids</div>
+              <p class="card-desc" style="margin-bottom: 0;">
+                Lipids are organic compounds found in living cells that are <strong>insoluble in water</strong>, but soluble in non-polar organic solvents such as gasoline, kerosene, and benzene. The most prevalent lipids are <strong>fats</strong> (chất béo) and <strong>waxes</strong> (sáp).
+              </p>
+            </div>
+
+            <div class="formula-hud-card">
+              <div class="hud-title">⚗️ 2. Glycerol &amp; Fatty Acid Constituents</div>
+              <p class="card-desc">
+                <strong>Glycerol</strong> is a trihydric alcohol with 3 hydroxyl groups ($-\text{OH}$):
+              </p>
+              <div class="katex-formula-box">
+                $$\text{CH}_2(\text{OH})-\text{CH}(\text{OH})-\text{CH}_2(\text{OH}) \quad \iff \quad \text{C}_3\text{H}_5(\text{OH})_3 \quad (M = 92\text{ g/mol})$$
+              </div>
+              <p class="card-desc">
+                <strong>Fatty acids</strong> are monocarboxylic acids with long, unbranched hydrocarbon chains:
+              </p>
+              <ul style="font-size: 0.8rem; color: var(--text-muted); padding-left: 1.25rem; line-height: 1.6;">
+                <li><strong>Palmitic Acid:</strong> $\text{C}_{15}\text{H}_{31}\text{COOH}$ (saturated, $M = 256\text{ g/mol}$)</li>
+                <li><strong>Stearic Acid:</strong> $\text{C}_{17}\text{H}_{35}\text{COOH}$ (saturated, $M = 284\text{ g/mol}$)</li>
+                <li><strong>Oleic Acid:</strong> $\text{C}_{17}\text{H}_{33}\text{COOH}$ (monounsaturated with $1\text{ C}=\text{C}$ double bond, $M = 282\text{ g/mol}$)</li>
+              </ul>
+            </div>
+
+            <div class="formula-hud-card">
+              <div class="hud-title">🧪 3. General Triglyceride Structure</div>
+              <div class="katex-formula-box">
+                $$(\text{RCOO})_3\text{C}_3\text{H}_5 \quad \text{or} \quad \begin{cases} \text{CH}_2-\text{O}-\text{CO}-\text{R}_1 \\ \text{CH}-\text{O}-\text{CO}-\text{R}_2 \\ \text{CH}_2-\text{O}-\text{CO}-\text{R}_3 \end{cases}$$
+              </div>
+              <p class="card-desc" style="margin-bottom: 0;">
+                The groups $\text{R}_1, \text{R}_2, \text{R}_3$ may be identical or distinct, determining whether the fat is homogeneous or mixed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 2: SOLUBILITY & DENSITY BENCH          -->
+      <!-- ============================================== -->
+      <section id="sector2" class="sector-pane">
+        <div class="pane-grid">
+          <!-- Left: Virtual Test Tube Simulator -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <div class="header-badge-row">
+                <span class="tag emerald">Virtual Laboratory Bench</span>
+                <span class="molar-mass-badge">Density $D < 1.0\text{ g/cm}^3$</span>
+              </div>
+              <h3>Physical Properties &amp; Solubility Simulator</h3>
+            </div>
+            <p class="card-desc">
+              Test the solubility and buoyancy of vegetable oil in polar (Water) vs non-polar (Hexane / Gasoline) solvents.
+            </p>
+
+            <!-- Test Tube Visualizer Rack -->
+            <div class="test-tube-rack">
+              <div class="tube-container">
+                <div class="tube-glass" id="tubeWater">
+                  <div class="liquid-layer layer-oil" id="oilLayerWater">
+                    <div class="meniscus-line"></div>
+                  </div>
+                  <div class="liquid-layer layer-water" id="waterLayer"></div>
+                </div>
+                <span class="tube-label">Tube A: Oil + Water</span>
+                <span class="tube-desc">Immiscible • Oil floats on water ($D_{\text{oil}} \approx 0.92\text{ g/mL}$)</span>
+              </div>
+
+              <div class="tube-container">
+                <div class="tube-glass" id="tubeHexane">
+                  <div class="liquid-layer layer-solution" id="solutionLayer"></div>
+                </div>
+                <span class="tube-label">Tube B: Oil + Hexane</span>
+                <span class="tube-desc">Homogeneous Solution • Lipids dissolve readily</span>
+              </div>
+            </div>
+
+            <!-- Simulator Actions -->
+            <div class="sim-controls-grid">
+              <button id="addOilBtn" class="sim-btn">
+                <span>🫒</span> Add 10 mL Vegetable Oil
+              </button>
+              <button id="shakeTubesBtn" class="sim-btn">
+                <span>🌪️</span> Agitate / Shake Test Tubes
+              </button>
+              <button id="coolTubesBtn" class="sim-btn">
+                <span>❄️</span> Cool to $0^\circ\text{C}$ (Solidify)
+              </button>
+              <button id="resetTubesBtn" class="sim-btn">
+                <span>🔄</span> Reset Laboratory Bench
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Physical Rules HUD -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag cyan">Physical Chemistry Telemetry</span>
+              <h3>Physical State &amp; Saturation Rules</h3>
+            </div>
+
+            <div class="reaction-card">
+              <div class="reaction-title-row">
+                <span class="reaction-name">💧 1. Liquid Fats (Plant Oils)</span>
+                <span class="tag emerald">Unsaturated</span>
+              </div>
+              <p class="reaction-desc">
+                Derived mainly from plants (sunflower, peanut, olive, soybean) and fish. Rich in <strong>unsaturated fatty acids</strong> (e.g., oleic, linoleic). Double bonds ($\text{C}=\text{C}$) cause molecular bends, preventing tight crystallization, leaving them liquid at room temperature.
+              </p>
+            </div>
+
+            <div class="reaction-card">
+              <div class="reaction-title-row">
+                <span class="reaction-name">🧈 2. Solid Fats (Animal Tallow &amp; Butter)</span>
+                <span class="tag amber">Saturated</span>
+              </div>
+              <p class="reaction-desc">
+                Derived mainly from animals (lard, beef tallow, butter). Rich in <strong>saturated fatty acids</strong> (palmitic, stearic). Straight hydrocarbon chains pack tightly together, yielding higher melting points that remain solid at room temperature.
+              </p>
+            </div>
+
+            <div class="reaction-card">
+              <div class="reaction-title-row">
+                <span class="reaction-name">⚖️ 3. Density &amp; Water Immiscibility</span>
+                <span class="tag rose">Hydrophobic</span>
+              </div>
+              <p class="reaction-desc">
+                All fats are lighter than water ($D \approx 0.90 - 0.93\text{ g/cm}^3 < 1.0\text{ g/cm}^3$). Because triglycerides contain massive non-polar hydrocarbon tails, water molecules form hydrogen bonds only with each other, forcing lipids to separate and float on top.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 3: SAPONIFICATION REACTOR BENCH         -->
+      <!-- ============================================== -->
+      <section id="sector3" class="sector-pane">
+        <div class="pane-grid">
+          <!-- Left: Stoichiometric Saponification Bench -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <div class="header-badge-row">
+                <span class="tag rose">Alkaline Hydrolysis</span>
+                <span class="molar-mass-badge">Ratio $1 : 3 \to 3 : 1$</span>
+              </div>
+              <h3>Saponification Chamber &amp; Mass Conservation (SBT 28.9)</h3>
+            </div>
+            <p class="card-desc">
+              Adjust fat mass and observe exact stoichiometric $\text{NaOH}$ consumption, soap synthesis, and glycerol recovery.
+            </p>
+
+            <div class="katex-formula-box">
+              $$(\text{RCOO})_3\text{C}_3\text{H}_5 + 3\text{NaOH} \xrightarrow{t^\circ} 3\text{RCOONa} + \text{C}_3\text{H}_5(\text{OH})_3$$
+            </div>
+
+            <!-- Reactant Sliders -->
+            <div class="slider-group">
+              <div class="slider-header">
+                <span>Fat / Oil Mass ($m_{\text{fat}}$):</span>
+                <span id="fatMassDisplay" style="color: var(--amber-glow);">500 g (Coconut Oil)</span>
+              </div>
+              <input type="range" id="fatMassSlider" class="slider-input" min="100" max="1000" step="50" value="500">
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-header">
+                <span>Reaction Efficiency ($H\%$):</span>
+                <span id="efficiencyDisplay" style="color: var(--emerald-glow);">100%</span>
+              </div>
+              <input type="range" id="efficiencySlider" class="slider-input" min="50" max="100" step="5" value="100">
+            </div>
+
+            <!-- Live Stoichiometric Telemetry -->
+            <div class="reactor-telemetry-box">
+              <div class="hud-title">📊 Real-Time Stoichiometry Telemetry</div>
+              <div class="telemetry-row">
+                <div class="telemetry-item">
+                  <div class="telemetry-label">NaOH Consumed</div>
+                  <div class="telemetry-val amber" id="naohVal">90.0 g</div>
+                </div>
+                <div class="telemetry-item">
+                  <div class="telemetry-label">Glycerol Yield</div>
+                  <div class="telemetry-val highlight" id="glycerolVal">69.0 g</div>
+                </div>
+                <div class="telemetry-item">
+                  <div class="telemetry-label">Pure Soap Synthesized</div>
+                  <div class="telemetry-val highlight" id="soapVal">521.0 g</div>
+                </div>
+                <div class="telemetry-item">
+                  <div class="telemetry-label">Mass Conservation</div>
+                  <div class="telemetry-val" id="conservVal">590.0 g = 590.0 g</div>
+                </div>
+              </div>
+              <p style="font-size: 0.75rem; color: var(--text-muted); text-align: center;">
+                Law of Conservation of Mass: $m_{\text{fat}} + m_{\text{NaOH}} = m_{\text{soap}} + m_{\text{glycerol}}$
+              </p>
+            </div>
+
+            <div style="margin-top: 1rem; display: flex; gap: 0.75rem;">
+              <button id="saltOutBtn" class="sim-btn" style="flex: 1;">
+                <span>🧂</span> Add Saturated NaCl ("Salting Out")
+              </button>
+              <button id="cureSoapBtn" class="sim-btn" style="flex: 1;">
+                <span>🧼</span> Mold &amp; Solidify Soap Bar
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Soap Chemistry Mechanics -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag cyan">Reaction Mechanics</span>
+              <h3>Chemical Dynamics &amp; Soap Cleansing</h3>
+            </div>
+
+            <div class="reaction-card">
+              <div class="reaction-title-row">
+                <span class="reaction-name">🧼 Why Is It Called "Saponification"?</span>
+              </div>
+              <p class="reaction-desc">
+                From Latin <em>sapo</em> (soap). The sodium or potassium salts of long-chain fatty acids ($R\text{COONa}$ or $R\text{COOK}$) are the active cleansing agents in commercial soap.
+              </p>
+            </div>
+
+            <div class="reaction-card">
+              <div class="reaction-title-row">
+                <span class="reaction-name">🧂 The Role of Saturated NaCl Solution</span>
+              </div>
+              <p class="reaction-desc">
+                After boiling fat with caustic soda, adding saturated $\text{NaCl}$ increases the solution's ionic strength and density. The sodium salts of fatty acids become insoluble ("salted out"), coagulating into a white curdy layer that floats for easy harvesting.
+              </p>
+            </div>
+
+            <div class="reaction-card">
+              <div class="reaction-title-row">
+                <span class="reaction-name">🧴 Dual Cleansing Action (Amphipathic Micelle)</span>
+              </div>
+              <p class="reaction-desc">
+                Each soap molecule features a non-polar, hydrophobic hydrocarbon tail ($-R$) that dissolves greasy grime, and a polar, hydrophilic ionic head ($-\text{COO}^-\text{Na}^+$) that anchors into water, forming spherical micelles that rinse away dirt.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 4: SPACE INDUSTRY & BIO-ENERGY         -->
+      <!-- ============================================== -->
+      <section id="sector4" class="sector-pane">
+        <div class="pane-grid">
+          <!-- Left: Applications Grid -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <div class="header-badge-row">
+                <span class="tag purple">Space Logistics</span>
+                <span class="molar-mass-badge">Energy: $9\text{ kcal/g} \approx 38\text{ kJ/g}$</span>
+              </div>
+              <h3>Technological &amp; Biological Applications of Lipids</h3>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem;">
+              <div class="reaction-card">
+                <span style="font-size: 1.5rem;">⚡</span>
+                <h4 style="color: #fff; font-size: 0.9rem; margin: 0.3rem 0;">Primary Energy Fuel</h4>
+                <p class="reaction-desc">
+                  Lipids yield $9\text{ kcal/g}$—more than double that of carbohydrates ($4\text{ kcal/g}$) and proteins ($4\text{ kcal/g}$), serving as living organisms' most compact energy reserve.
+                </p>
+              </div>
+
+              <div class="reaction-card">
+                <span style="font-size: 1.5rem;">🛡️</span>
+                <h4 style="color: #fff; font-size: 0.9rem; margin: 0.3rem 0;">Cell Membrane Bilayer</h4>
+                <p class="reaction-desc">
+                  Phospholipids form the universal semi-permeable cellular envelope, protecting internal organelle mechanics against hostile external space environments.
+                </p>
+              </div>
+
+              <div class="reaction-card">
+                <span style="font-size: 1.5rem;">⛽</span>
+                <h4 style="color: #fff; font-size: 0.9rem; margin: 0.3rem 0;">Biodiesel Propulsion</h4>
+                <p class="reaction-desc">
+                  Transesterification of vegetable oils with methanol forms fatty acid methyl esters (FAME), providing renewable clean biofuel for spacecraft rovers.
+                </p>
+              </div>
+
+              <div class="reaction-card">
+                <span style="font-size: 1.5rem;">💊</span>
+                <h4 style="color: #fff; font-size: 0.9rem; margin: 0.3rem 0;">Vitamin Solubilization</h4>
+                <p class="reaction-desc">
+                  Essential lipid-soluble vitamins ($A, D, E, K$) require dietary fat carriers to cross the intestinal wall into astronauts' bloodstream.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Nutritional Guidelines & Obesity Prevention -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag amber">Cadet Health Directives</span>
+              <h3>Preventing Obesity &amp; Cardiovascular Disorders (SGK Part II.5)</h3>
+            </div>
+
+            <div class="formula-hud-card">
+              <div class="hud-title">⚠️ Obesity Pathology</div>
+              <p class="card-desc" style="margin-bottom: 0;">
+                Excessive dietary lipid intake without corresponding physical activity leads to visceral adipose tissue accumulation, precipitating atherosclerosis, hypertension, stroke, type 2 diabetes, and fatty liver syndrome.
+              </p>
+            </div>
+
+            <div class="formula-hud-card">
+              <div class="hud-title">🥗 Astronaut Dietary Directives</div>
+              <ul style="font-size: 0.8rem; color: var(--text-muted); padding-left: 1.25rem; line-height: 1.6;">
+                <li><strong>Prioritize Unsaturated Oils:</strong> Emphasize vegetable oils (olive, sunflower, sesame) and fish oils rich in <strong>Omega-3</strong> fatty acids.</li>
+                <li><strong>Restrict Saturated &amp; Trans Fats:</strong> Minimize consumption of animal fats, artificial margarines, and industrially deep-fried high-temperature fast foods.</li>
+                <li><strong>Balanced Caloric Ratio:</strong> Maintain lipid intake at $20\% - 30\%$ of total daily metabolic caloric expenditure.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 5: FLIGHT READINESS QUIZ               -->
+      <!-- ============================================== -->
+      <section id="sector5" class="sector-pane">
+        <div class="card glass-card">
+          <div class="card-header">
+            <div class="header-badge-row">
+              <span class="tag cyan">Interactive Telemetry Check</span>
+              <span id="quizScoreBadge" class="molar-mass-badge">Score: 0 / 5</span>
+            </div>
+            <h3>Flight Readiness Verification • 5 Core Telemetry Problems</h3>
+            <p class="card-desc">
+              Answer the questions below to test your mastery of Lesson 28 before engaging the main 30-problem mission.
+            </p>
+          </div>
+
+          <div class="quiz-container" id="quizContainer">
+            <!-- Dynamically populated by app.js -->
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

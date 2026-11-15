@@ -22,6 +22,15 @@ Kỹ năng này hướng dẫn thực hiện trọn gói quy trình tạo bài g
 | **Giáo viên** | **Thầy Thức** (`teacher`) | `dc62e5df-2344-4785-b058-b95f5dbe0983` | Flight Commander • Soạn đề, giám sát và chấm bài |
 | **Môn học** | **Toán 7** (`MATH_7`) | `e89cc834-99d0-40b7-ab5e-0a0838d273c4` | SGK Toán 7 Cánh Diều / Kết Nối Tri Thức bản chuẩn quốc tế |
 | **Thư mục tài liệu gốc** | `/home/dantey/Dantey/teaching/lop6/Math/` | Thư mục cục bộ | Các file sách giáo khoa, bài tập chuyên đề Toán 7 |
+| **File PDF SGK sẵn có** | `~/Downloads/sach-giao-khoa-toan-7-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf` | Tệp PDF cục bộ | Toàn văn SGK Toán 7 Kết Nối Tri Thức Tập 1 |
+
+### Công Cụ Xử Lý Dữ Liệu & Tài Liệu Nguồn:
+- **`pdftotext`:** Trích xuất nhanh văn bản bài học & bài tập từ file PDF SGK Toán 7:
+  `pdftotext -f <trang_dau> -l <trang_cuoi> ~/Downloads/sach-giao-khoa-toan-7-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf -`
+- **Vision `read`:** Đọc trực tiếp các trang PDF chứa hình vẽ hình học để chuyển hóa thành vector SVG.
+- **`pandoc`:** Xuất phiếu bài tập hoặc đề thi ra file Word `.docx` khi Thầy cần bản in:
+  `pandoc mission_math7.md -o mission_math7.docx`
+- **MCP `firecrawl` / WebSearch:** Tra cứu thêm các bài toán thực tế quốc tế (NASA/Space missions) để làm tư liệu phong phú.
 
 ---
 

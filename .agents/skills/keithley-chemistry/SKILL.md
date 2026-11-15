@@ -25,6 +25,14 @@ Kỹ năng này hướng dẫn thực hiện trọn gói quy trình tạo bài g
 | **Giáo viên** | **Thầy Thức** (`teacher`) | `dc62e5df-2344-4785-b058-b95f5dbe0983` | Flight Commander • Soạn bài, kiểm duyệt, phân công |
 | **Môn học** | **Hóa học 9** (`CHEM_9`) | `6fc7387b-13b8-4e27-8240-a60c03dc1d51` | Hóa học THCS / KHTN 9 chuẩn quốc tế |
 | **Thư mục tài liệu gốc** | `/home/dantey/Dantey/teaching/lop6/Chemistry/` | Thư mục cục bộ | Chứa các file bài giảng, tóm tắt lý thuyết `.txt` và đề bài `.md` |
+| **File PDF SGK & SBT sẵn có** | `~/Downloads/SGK-KHTN-Lop-9.pdf` và `sbt-khoa-hoc-tu-nhien-9-ket-noi-tri-thuc-pdf-xem-online-tai-pdf-mien-p.pdf` | Tệp PDF cục bộ | Sách giáo khoa & Sách bài tập KHTN 9 (Phần Hóa học) |
+
+### Công Cụ Xử Lý Dữ Liệu & Tài Liệu Nguồn:
+- **`pdftotext`:** Trích xuất nhanh nội dung lý thuyết, phương trình hóa học và bài tập từ file PDF SGK KHTN 9:
+  `pdftotext -f <trang_dau> -l <trang_cuoi> ~/Downloads/SGK-KHTN-Lop-9.pdf -`
+- **`pandoc`:** Biên dịch đề thi hoặc nhiệm vụ phi hành đoàn ra file Word `.docx` khi Thầy cần in ấn:
+  `pandoc mission_chem9.md -o mission_chem9.docx`
+- **MCP `firecrawl`:** Crawl tra cứu các ứng dụng công nghiệp, mỏ quặng vũ trụ và điều chế hóa học thực tế từ các nguồn tài liệu mở quốc tế.
 
 ---
 

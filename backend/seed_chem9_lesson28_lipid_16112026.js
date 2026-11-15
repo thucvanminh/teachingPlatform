@@ -1,0 +1,800 @@
+const fs = require('fs');
+const path = require('path');
+const { PrismaClient } = require(path.resolve(__dirname, 'node_modules/@prisma/client'));
+const prisma = new PrismaClient();
+
+const CONSTANTS = {
+  TEACHER_ID: 'dc62e5df-2344-4785-b058-b95f5dbe0983', // Thầy Thức
+  STUDENT_ID: '4745136c-bd25-4f45-a488-9f00f2121b70', // Keithley Lake
+  SUBJECT_ID: '6fc7387b-13b8-4e27-8240-a60c03dc1d51', // CHEM_9
+  ASSIGNED_DATE: '2026-11-16'
+};
+
+const LECTURE_MARKDOWN = `# 🔬 LESSON 28: LIPIDS & TRIGLYCERIDES ((RCOO)₃C₃H₅)
+**Cadet Keithley Lake • Grade 9 Chemistry • 16/11/2026**
+
+Interactive Simulation Studio: \`/lectures/chem9-lesson28-lipid/index.html\`
+
+---
+
+### 1. Definition of Lipids
+* **Lipids** are organic compounds found in living cells that are **insoluble in water**, but soluble in non-polar organic solvents such as gasoline, kerosene, and benzene.
+* The most common lipids encountered in daily life are **fats** (dầu thực vật và mỡ động vật) and **waxes** (sáp).
+
+---
+
+### 2. Chemical Nature & Structure of Fats
+* Fats are **triesters** formed by the trihydric alcohol **glycerol** and **fatty acids**.
+* **Glycerol Structure:**
+$$\\text{CH}_2(\\text{OH})-\\text{CH}(\\text{OH})-\\text{CH}_2(\\text{OH}) \\quad \\iff \\quad \\text{C}_3\\text{H}_5(\\text{OH})_3 \\quad (M = 92\\text{ g/mol})$$
+* **Fatty Acids ($R\\text{-COOH}$):** Long, unbranched carbon chains:
+  - **Palmitic acid:** $\\text{C}_{15}\\text{H}_{31}\\text{COOH}$ ($M = 256\\text{ g/mol}$, saturated)
+  - **Stearic acid:** $\\text{C}_{17}\\text{H}_{35}\\text{COOH}$ ($M = 284\\text{ g/mol}$, saturated)
+  - **Oleic acid:** $\\text{C}_{17}\\text{H}_{33}\\text{COOH}$ ($M = 282\\text{ g/mol}$, monounsaturated with $1\\text{ C}=\\text{C}$)
+* **General Condensed Formula of Fats:**
+$$(\\text{RCOO})_3\\text{C}_3\\text{H}_5$$
+
+---
+
+### 3. Physical Properties
+* **State at Room Temperature:**
+  - **Liquid fats (Plant oils):** Peanut, sunflower, soybean, olive oils, and fish oils. Rich in **unsaturated** fatty acid chains.
+  - **Solid fats (Animal fats):** Lard, beef tallow, butter. Rich in **saturated** fatty acid chains.
+* **Density & Solubility:** Lighter than water ($D \\approx 0.90 - 0.93\\text{ g/cm}^3 < 1.0\\text{ g/cm}^3$), completely immiscible with water (floats as a distinct layer), dissolves in non-polar organic solvents (benzene, gasoline, ether).
+
+---
+
+### 4. Chemical Properties: Saponification Reaction
+When heated with alkali solutions ($\\text{NaOH}$ or $\\text{KOH}$), fats undergo alkaline hydrolysis, called **saponification**:
+$$(\\text{RCOO})_3\\text{C}_3\\text{H}_5 + 3\\text{NaOH} \\xrightarrow{t^\\circ} 3\\text{RCOONa} + \\text{C}_3\\text{H}_5(\\text{OH})_3$$
+* **Products:** Sodium carboxylate salts (soap) and glycerol.
+* **Stoichiometric ratio:** $1\\text{ mol fat} + 3\\text{ mol NaOH} \\to 3\\text{ mol soap} + 1\\text{ mol glycerol}$.
+* **Law of Conservation of Mass:**
+$$m_{\\text{fat}} + m_{\\text{NaOH}} = m_{\\text{soap}} + m_{\\text{glycerol}}$$
+* **Salting Out:** Adding saturated $\\text{NaCl}$ solution causes the soap curds to float to the top for harvesting.
+
+---
+
+### 5. Biological Functions & Obesity Prevention
+* **Energy Yield:** $\\sim 9\\text{ kcal/g}$ ($\approx 37.6\\text{ kJ/g}$), more than double carbs ($4\\text{ kcal/g}$) or proteins ($4\\text{ kcal/g}$).
+* **Cell Membrane Structure:** Phospholipid bilayer envelope.
+* **Dietary Directives:** Prioritize unsaturated oils and Omega-3 fish oils; limit saturated animal fats, trans fats, and deep-fried fast foods to prevent obesity, atherosclerosis, and cardiovascular disease.`;
+
+const QUESTIONS_DATA = [
+  // =========================================================================
+  // SECTOR 1: MERCURY ORBIT • MOLECULAR BLUEPRINT & DEFINITIONS (Q1 – Q4)
+  // =========================================================================
+  {
+    order_index: 1,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.3,
+    sectionName: 'Sector 1: Mercury Orbit • Definition of Lipids',
+    content_markdown: 'According to fundamental biochemical principles, which statement accurately defines lipids and their characteristic solubility behavior?',
+    options: [
+      { id: 'A', text: 'Lipids are organic compounds that dissolve freely in polar water but are completely insoluble in organic solvents.' },
+      { id: 'B', text: 'Lipids are organic compounds synthesized in living cells that are insoluble in water, but soluble in non-polar organic solvents such as gasoline, kerosene, and benzene.' },
+      { id: 'C', text: 'Lipids are inorganic macromolecular salts that dissolve only in concentrated mineral acids.' },
+      { id: 'D', text: 'Lipids are gaseous hydrocarbons that dissolve in water upon exposure to ultraviolet radiation.' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'By definition (SGK Part I & SBT 28.1), lipids are organic compounds present in living cells that are insoluble in water, but soluble in non-polar organic solvents like gasoline, kerosene, and benzene.'
+  },
+  {
+    order_index: 2,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.3,
+    sectionName: 'Sector 1: Mercury Orbit • Chemical Nature of Fats',
+    content_markdown: 'What is the precise chemical classification and general structural formula of fats (chất béo)?',
+    options: [
+      { id: 'A', text: 'Fats are triesters of glycerol and long-chain fatty acids, represented by the general formula $(\\text{RCOO})_3\\text{C}_3\\text{H}_5$.' },
+      { id: 'B', text: 'Fats are monoesters formed between ethanol and acetic acid, with formula $\\text{CH}_3\\text{COOC}_2\\text{H}_5$.' },
+      { id: 'C', text: 'Fats are polyethers formed by the dehydration of glucose molecules.' },
+      { id: 'D', text: 'Fats are inorganic coordination complexes of sodium and magnesium ions.' }
+    ],
+    correct_option_id: 'A',
+    explanation: 'Fats are triesters (esters containing three ester groups -COO-) formed by glycerol with fatty acids, having the general condensed formula (RCOO)3C3H5 (SBT 28.2 / SGK Part II.1).'
+  },
+  {
+    order_index: 3,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.3,
+    sectionName: 'Sector 1: Mercury Orbit • Glycerol Architecture',
+    content_markdown: 'Astronaut Cadet Keithley inspects the molecular structure of **glycerol**. Which description of glycerol is correct?',
+    options: [
+      { id: 'A', text: 'It is a monocarboxylic acid with formula $\\text{CH}_3\\text{COOH}$ and molar mass $60\\text{ g/mol}$.' },
+      { id: 'B', text: 'It is a trihydric alcohol with formula $\\text{C}_3\\text{H}_5(\\text{OH})_3$ containing three hydroxyl groups ($-\\text{OH}$) and molar mass $92\\text{ g/mol}$.' },
+      { id: 'C', text: 'It is a volatile hydrocarbon gas with formula $\\text{C}_3\\text{H}_8$ and molar mass $44\\text{ g/mol}$.' },
+      { id: 'D', text: 'It is an unsaturated alkene with one double bond and formula $\\text{C}_3\\text{H}_6$.' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'Glycerol (glycerin) is a trihydric alcohol with structural formula CH2(OH)-CH(OH)-CH2(OH), condensed as C3H5(OH)3, with molar mass M = 3(12) + 8(1) + 3(16) = 92 g/mol.'
+  },
+  {
+    order_index: 4,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.3,
+    sectionName: 'Sector 1: Mercury Orbit • Fatty Acid Characteristics',
+    content_markdown: 'Which of the following organic acids is a saturated fatty acid commonly found in natural animal fats and plant oils?',
+    options: [
+      { id: 'A', text: 'Formic acid ($\\text{HCOOH}$)' },
+      { id: 'B', text: 'Acetic acid ($\\text{CH}_3\\text{COOH}$)' },
+      { id: 'C', text: 'Stearic acid ($\\text{C}_{17}\\text{H}_{35}\\text{COOH}$)' },
+      { id: 'D', text: 'Oxalic acid ($(\\text{COOH})_2$)' }
+    ],
+    correct_option_id: 'C',
+    explanation: 'Fatty acids are monocarboxylic acids with long, unbranched carbon chains. Common fatty acids include palmitic acid (C15H31COOH, saturated) and stearic acid (C17H35COOH, saturated).'
+  },
+
+  // =========================================================================
+  // SECTOR 2: VENUS BASE • PHYSICAL STATES, DENSITY & POLARITY (Q5 – Q8)
+  // =========================================================================
+  {
+    order_index: 5,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.3,
+    sectionName: 'Sector 2: Venus Base • Physical States of Lipids',
+    content_markdown: 'At standard room temperature ($25^\\circ\\text{C}$), which of the following substances exists primarily in a **liquid** state? (SBT 28.3)',
+    options: [
+      { id: 'A', text: 'Plant vegetable oil (peanut oil, sunflower oil)' },
+      { id: 'B', text: 'Solid beef tallow' },
+      { id: 'C', text: 'Pork lard' },
+      { id: 'D', text: 'Dairy butter' }
+    ],
+    correct_option_id: 'A',
+    explanation: 'Plant oils (peanut oil, sunflower oil, olive oil) are rich in unsaturated fatty acid residues and remain in the liquid state at room temperature. Beef tallow, pork lard, and butter are solids.'
+  },
+  {
+    order_index: 6,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.3,
+    sectionName: 'Sector 2: Venus Base • Density & Water Buoyancy',
+    content_markdown: 'When $20\\text{ mL}$ of cooking oil is poured into a beaker containing $100\\text{ mL}$ of distilled water, what physical phenomenon is observed?',
+    options: [
+      { id: 'A', text: 'The oil dissolves completely to form a transparent, homogeneous solution.' },
+      { id: 'B', text: 'The oil sinks directly to the bottom because it is significantly denser than water.' },
+      { id: 'C', text: 'The oil does not dissolve and floats on top of the water because its density ($D \\approx 0.92\\text{ g/cm}^3$) is less than that of water ($1.0\\text{ g/cm}^3$).' },
+      { id: 'D', text: 'The oil reacts vigorously with water, liberating hydrogen gas.' }
+    ],
+    correct_option_id: 'C',
+    explanation: 'Fats are lighter than water (density D ≈ 0.90 - 0.93 g/cm³) and are non-polar, so they are immiscible with polar water molecules and float as a distinct top layer.'
+  },
+  {
+    order_index: 7,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.3,
+    sectionName: 'Sector 2: Venus Base • Cooking Oil vs Mineral Oil',
+    content_markdown: 'Cadet Keithley must distinguish between culinary cooking oil (vegetable oil) and mineral lubricating engine oil. What is the fundamental chemical difference between them?',
+    options: [
+      { id: 'A', text: 'Cooking oil is a triester of glycerol and fatty acids, whereas mineral lubricating oil is a mixture of long-chain petroleum hydrocarbons (alkanes).' },
+      { id: 'B', text: 'Cooking oil is an inorganic hydroxide, while engine oil is a carbohydrate.' },
+      { id: 'C', text: 'Engine oil dissolves completely in water, whereas cooking oil does not.' },
+      { id: 'D', text: 'Both oils possess identical chemical structures and differ only in color.' }
+    ],
+    correct_option_id: 'A',
+    explanation: 'Vegetable/cooking oils are organic lipids (triesters of glycerol and fatty acids) that undergo saponification. Mineral engine oils are petroleum-derived hydrocarbons (alkanes) that cannot be saponified.'
+  },
+  {
+    order_index: 8,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.3,
+    sectionName: 'Sector 2: Venus Base • Molecular Saturation & Melting Point',
+    content_markdown: 'Why do vegetable oils generally have lower melting points than solid animal fats?',
+    options: [
+      { id: 'A', text: 'Vegetable oils contain smaller inorganic ions that melt rapidly.' },
+      { id: 'B', text: 'Vegetable oils contain carbon-carbon double bonds ($\\text{C}=\\text{C}$) that introduce kinks into the fatty acid chains, preventing tight molecular packing.' },
+      { id: 'C', text: 'Vegetable oils contain no carbon atoms in their molecular skeleton.' },
+      { id: 'D', text: 'Animal fats are held together entirely by ionic ionic lattice bonds.' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'Unsaturated fatty acids in vegetable oils contain cis C=C double bonds that create kinks in the acyl chains, reducing intermolecular contact and lowering melting temperatures below room temperature.'
+  },
+
+  // =========================================================================
+  // SECTOR 3: EARTH MISSION CONTROL • BIOLOGICAL FUNCTIONS & HEALTH (Q9 – Q12)
+  // =========================================================================
+  {
+    order_index: 9,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.3,
+    sectionName: 'Sector 3: Earth Mission Control • Energy Density Comparison',
+    content_markdown: 'Comparing the metabolic energy released upon complete oxidation in human tissues, how does $1\\text{ g}$ of lipid compare to $1\\text{ g}$ of carbohydrate or protein?',
+    options: [
+      { id: 'A', text: 'Lipids yield approximately $9\\text{ kcal/g}$ ($\approx 37.6\\text{ kJ/g}$), more than double the energy of carbohydrates ($\approx 4\\text{ kcal/g}$) or proteins ($\approx 4\\text{ kcal/g}$).' },
+      { id: 'B', text: 'Lipids yield only $1\\text{ kcal/g}$, far less than carbohydrates.' },
+      { id: 'C', text: 'Lipids yield zero metabolic energy because they cannot be digested.' },
+      { id: 'D', text: 'All three macronutrients yield identical energy values of $20\\text{ kcal/g}$.' }
+    ],
+    correct_option_id: 'A',
+    explanation: 'Lipids are highly reduced molecules rich in C-H bonds, delivering ~9 kcal/g (~38 kJ/g) upon biological oxidation, compared to ~4 kcal/g for carbohydrates and proteins.'
+  },
+  {
+    order_index: 10,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.3,
+    sectionName: 'Sector 3: Earth Mission Control • Physiological Role of Lipids',
+    content_markdown: 'Which of the following physiological processes requires dietary lipids for proper biological function?',
+    options: [
+      { id: 'A', text: 'The dissolution and gastrointestinal absorption of fat-soluble vitamins (A, D, E, K).' },
+      { id: 'B', text: 'The structural formation of phospholipid cell membrane bilayers.' },
+      { id: 'C', text: 'Subcutaneous thermal insulation and mechanical visceral organ cushioning.' },
+      { id: 'D', text: 'All of the above physiological functions.' }
+    ],
+    correct_option_id: 'D',
+    explanation: 'Lipids serve diverse vital roles: carrier solvent for fat-soluble vitamins (A, D, E, K), structural component of cell membranes (phospholipid bilayer), and thermal/mechanical protection.'
+  },
+  {
+    order_index: 11,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.3,
+    sectionName: 'Sector 3: Earth Mission Control • Obesity & Cardiovascular Prevention',
+    content_markdown: 'To maintain cardiovascular wellness and prevent obesity, which dietary practice is recommended? (SGK Part II.5 / SBT 28.10)',
+    options: [
+      { id: 'A', text: 'Consume excessive amounts of deep-fried fast foods prepared at high temperatures.' },
+      { id: 'B', text: 'Completely eliminate all fats from the diet indefinitely.' },
+      { id: 'C', text: 'Prioritize unsaturated plant oils and omega-3 fish oils while limiting saturated animal fats and artificial trans fats.' },
+      { id: 'D', text: 'Replace all dietary water with pure animal tallow.' }
+    ],
+    correct_option_id: 'C',
+    explanation: 'Health guidelines emphasize balancing caloric intake, prioritizing unsaturated vegetable oils and omega-3 fish oils, and limiting saturated animal fats and processed trans fats.'
+  },
+  {
+    order_index: 12,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.3,
+    sectionName: 'Sector 3: Earth Mission Control • Technological Applications',
+    content_markdown: 'Beyond nutrition, what are the primary industrial applications of fats? (SBT 28.7)',
+    options: [
+      { id: 'A', text: 'Raw material for manufacturing soap, cosmetics, and renewable biodiesel fuels.' },
+      { id: 'B', text: 'Production of high-strength structural steel beams.' },
+      { id: 'C', text: 'Synthesis of noble gases like helium and neon.' },
+      { id: 'D', text: 'Extinguishing electrical fires inside spacecraft reactors.' }
+    ],
+    correct_option_id: 'A',
+    explanation: 'Fats are industrial feedstocks for manufacturing soap (saponification), cosmetics/moisturizers (glycerol and emollients), pharmaceuticals, and renewable biodiesel.'
+  },
+
+  // =========================================================================
+  // SECTOR 4: MARS OUTPOST • SAPONIFICATION REACTIONS (Q13 – Q16)
+  // =========================================================================
+  {
+    order_index: 13,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.3,
+    sectionName: 'Sector 4: Mars Outpost • Saponification Definition',
+    content_markdown: 'What is the chemical name of the reaction where a fat is boiled with an aqueous alkali solution ($\\text{NaOH}$ or $\\text{KOH}$)? (SBT 28.4)',
+    options: [
+      { id: 'A', text: 'Polymerization reaction' },
+      { id: 'B', text: 'Saponification reaction (alkaline hydrolysis)' },
+      { id: 'C', text: 'Halogenation reaction' },
+      { id: 'D', text: 'Electrochemical reduction' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'The alkaline hydrolysis of fats using a strong base (NaOH or KOH) produces glycerol and fatty acid salts (soap) and is known as the saponification reaction (phản ứng xà phòng hoá).'
+  },
+  {
+    order_index: 14,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.3,
+    sectionName: 'Sector 4: Mars Outpost • Stoichiometric Molar Ratio',
+    content_markdown: 'In the balanced chemical equation for the saponification of a simple fat: $$(\\text{RCOO})_3\\text{C}_3\\text{H}_5 + 3\\text{NaOH} \\xrightarrow{t^\\circ} 3\\text{RCOONa} + \\text{C}_3\\text{H}_5(\\text{OH})_3$$ What is the stoichiometric molar ratio between **fat : $\\text{NaOH}$ : glycerol**?',
+    options: [
+      { id: 'A', text: '$1 : 1 : 1$' },
+      { id: 'B', text: '$1 : 3 : 1$' },
+      { id: 'C', text: '$3 : 1 : 3$' },
+      { id: 'D', text: '$1 : 2 : 2$' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'One mole of triglyceride contains three ester linkages and requires exactly three moles of NaOH to yield three moles of sodium carboxylate (soap) and one mole of glycerol (ratio 1 : 3 : 1).'
+  },
+  {
+    order_index: 15,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.3,
+    sectionName: 'Sector 4: Mars Outpost • Acidic vs Alkaline Hydrolysis',
+    content_markdown: 'How does the **alkaline hydrolysis** (saponification) of a fat fundamentally differ from its **acid-catalyzed hydrolysis**?',
+    options: [
+      { id: 'A', text: 'Acid hydrolysis is irreversible and yields soap, whereas alkaline hydrolysis is reversible and yields hydrocarbons.' },
+      { id: 'B', text: 'Alkaline hydrolysis is irreversible and yields fatty acid salts (soap) plus glycerol, whereas acid hydrolysis is reversible and yields free fatty acids plus glycerol.' },
+      { id: 'C', text: 'Neither reaction produces glycerol.' },
+      { id: 'D', text: 'Both reactions yield identical gaseous products.' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'Acid hydrolysis is a reversible equilibrium reaction yielding free fatty acids and glycerol. Alkaline hydrolysis is irreversible because the base neutralizes fatty acids into carboxylate salts (soap).'
+  },
+  {
+    order_index: 16,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.3,
+    sectionName: 'Sector 4: Mars Outpost • Salting Out Technique',
+    content_markdown: 'During laboratory soap synthesis, why is saturated sodium chloride solution ($\\text{NaCl}$) added to the mixture after boiling fat with $\\text{NaOH}$?',
+    options: [
+      { id: 'A', text: 'To destroy the soap and convert it into toxic chlorine gas.' },
+      { id: 'B', text: 'To increase the solution density and ionic strength, precipitating the sodium fatty acid salts ("salting out") so the soap curds float to the surface for extraction.' },
+      { id: 'C', text: 'To evaporate all liquid glycerol instantly.' },
+      { id: 'D', text: 'To neutralize all bases and turn the solution acidic.' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'Adding saturated NaCl solution decreases the solubility of sodium carboxylate salts and increases liquid density, causing the soap to aggregate and float to the surface ("salting out").'
+  },
+
+  // =========================================================================
+  // SECTOR 5: JUPITER STATION • MOLAR MASS & STOICHIOMETRY (Q17 – Q20)
+  // =========================================================================
+  {
+    order_index: 17,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.35,
+    sectionName: 'Sector 5: Jupiter Station • Tripalmitin Molar Mass',
+    content_markdown: 'The pure triglyceride **tripalmitin** has the chemical formula $(\\text{C}_{15}\\text{H}_{31}\\text{COO})_3\\text{C}_3\\text{H}_5$. Given atomic masses: $C = 12, H = 1, O = 16$. What is the molar mass of tripalmitin?',
+    options: [
+      { id: 'A', text: '$650\\text{ g/mol}$' },
+      { id: 'B', text: '$806\\text{ g/mol}$' },
+      { id: 'C', text: '$890\\text{ g/mol}$' },
+      { id: 'D', text: '$920\\text{ g/mol}$' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'Molecular formula is C51H98O6: M = 51(12) + 98(1) + 6(16) = 612 + 98 + 96 = 806 g/mol.'
+  },
+  {
+    order_index: 18,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.35,
+    sectionName: 'Sector 5: Jupiter Station • Tristearin Saponification Workout',
+    content_markdown: 'An orbital laboratory reacts $445\\text{ g}$ of pure tristearin ($(\\text{C}_{17}\\text{H}_{35}\\text{COO})_3\\text{C}_3\\text{H}_5$, $M = 890\\text{ g/mol}$) with an exact stoichiometric quantity of $\\text{NaOH}$ ($M = 40\\text{ g/mol}$). What mass of pure glycerol ($M = 92\\text{ g/mol}$) is synthesized? (Assume $100\\%$ yield)',
+    options: [
+      { id: 'A', text: '$23.0\\text{ g}$' },
+      { id: 'B', text: '$46.0\\text{ g}$' },
+      { id: 'C', text: '$92.0\\text{ g}$' },
+      { id: 'D', text: '$138.0\\text{ g}$' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'Moles of tristearin: n = 445 / 890 = 0.50 mol. Since 1 mol fat yields 1 mol glycerol, n(glycerol) = 0.50 mol. Mass of glycerol: m = 0.50 * 92 = 46.0 g.'
+  },
+  {
+    order_index: 19,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.35,
+    sectionName: 'Sector 5: Jupiter Station • Soap Mass Calculation',
+    content_markdown: 'In the reaction from the previous problem ($445\\text{ g}$ tristearin + stoichiometric $\\text{NaOH}$ $\\to$ soap + $46\\text{ g}$ glycerol), what is the total mass of sodium stearate soap ($\\text{C}_{17}\\text{H}_{35}\\text{COONa}$, $M = 306\\text{ g/mol}$) obtained?',
+    options: [
+      { id: 'A', text: '$153.0\\text{ g}$' },
+      { id: 'B', text: '$306.0\\text{ g}$' },
+      { id: 'C', text: '$459.0\\text{ g}$' },
+      { id: 'D', text: '$612.0\\text{ g}$' }
+    ],
+    correct_option_id: 'C',
+    explanation: 'Moles of soap = 3 * n(fat) = 3 * 0.50 = 1.50 mol. Mass of soap: m = 1.50 * 306 = 459.0 g. Alternatively, by mass conservation: m(soap) = m(fat) + m(NaOH) - m(glycerol) = 445 + (1.50 * 40) - 46 = 445 + 60 - 46 = 459.0 g.'
+  },
+  {
+    order_index: 20,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.35,
+    sectionName: 'Sector 5: Jupiter Station • Potassium Soap Synthesis',
+    content_markdown: 'When synthesizing soft liquid soap using potassium hydroxide ($\\text{KOH}$, $M = 56\\text{ g/mol}$), how many grams of pure $\\text{KOH}$ are required to completely saponify $0.20\\text{ mol}$ of pure triolein?',
+    options: [
+      { id: 'A', text: '$11.2\\text{ g}$' },
+      { id: 'B', text: '$22.4\\text{ g}$' },
+      { id: 'C', text: '$33.6\\text{ g}$' },
+      { id: 'D', text: '$44.8\\text{ g}$' }
+    ],
+    correct_option_id: 'C',
+    explanation: 'Ratio is 1 fat : 3 KOH. Moles of KOH = 0.20 * 3 = 0.60 mol. Mass of KOH: m = 0.60 * 56 = 33.6 g.'
+  },
+
+  // =========================================================================
+  // SECTOR 6: SATURN RINGS • MASS CONSERVATION & YIELD (Q21 – Q23)
+  // =========================================================================
+  {
+    order_index: 21,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.35,
+    sectionName: 'Sector 6: Saturn Rings • SBT Problem 28.9 Mastery',
+    content_markdown: 'To completely saponify the fat present in $500\\text{ g}$ of coconut oil, an orbital chemist adds exactly $90.0\\text{ g}$ of pure $\\text{NaOH}$ ($M = 40\\text{ g/mol}$). Assuming a $100\\%$ reaction yield, what are the masses of pure glycerol ($M = 92\\text{ g/mol}$) and soap obtained? (SBT 28.9)',
+    options: [
+      { id: 'A', text: '$46\\text{ g}$ glycerol and $544\\text{ g}$ soap' },
+      { id: 'B', text: '$69\\text{ g}$ glycerol and $521\\text{ g}$ soap' },
+      { id: 'C', text: '$92\\text{ g}$ glycerol and $498\\text{ g}$ soap' },
+      { id: 'D', text: '$138\\text{ g}$ glycerol and $452\\text{ g}$ soap' }
+    ],
+    correct_option_id: 'B',
+    explanation: 'Moles of NaOH: n = 90.0 / 40 = 2.25 mol. Moles of glycerol: n(gly) = 2.25 / 3 = 0.75 mol. Mass of glycerol: m(gly) = 0.75 * 92 = 69.0 g. By mass conservation: m(soap) = m(fat) + m(NaOH) - m(gly) = 500 + 90 - 69 = 521.0 g.'
+  },
+  {
+    order_index: 22,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.35,
+    sectionName: 'Sector 6: Saturn Rings • Saponification with Efficiency H%',
+    content_markdown: 'An orbital reactor treats $178.0\\text{ g}$ of tristearin ($M = 890\\text{ g/mol}$) with excess caustic soda solution. Due to temperature fluctuations in the space chamber, the saponification proceeds with an efficiency of $H = 85\\%$. What actual mass of pure glycerol ($M = 92\\text{ g/mol}$) is isolated?',
+    options: [
+      { id: 'A', text: '$15.64\\text{ g}$' },
+      { id: 'B', text: '$18.40\\text{ g}$' },
+      { id: 'C', text: '$21.65\\text{ g}$' },
+      { id: 'D', text: '$31.28\\text{ g}$' }
+    ],
+    correct_option_id: 'A',
+    explanation: 'Initial moles of tristearin: n = 178.0 / 890 = 0.20 mol. Theoretical glycerol yield: 0.20 * 92 = 18.40 g. With efficiency H = 85%, actual mass: m = 18.40 * 0.85 = 15.64 g.'
+  },
+  {
+    order_index: 23,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.35,
+    sectionName: 'Sector 6: Saturn Rings • Complete Combustion Telemetry',
+    content_markdown: 'In a microgravity combustion calorimeter, $0.05\\text{ mol}$ of pure triolein ($\\text{C}_{57}\\text{H}_{104}\\text{O}_6$) is burned completely in excess oxygen: $$\\text{C}_{57}\\text{H}_{104}\\text{O}_6 + 80\\text{O}_2 \\xrightarrow{t^\\circ} 57\\text{CO}_2 + 52\\text{H}_2\\text{O}$$ What volume of carbon dioxide gas ($\\text{CO}_2$) is evolved at standard conditions ($25^\\circ\\text{C}, 1\\text{ bar}$, molar volume $24.79\\text{ L/mol}$)?',
+    options: [
+      { id: 'A', text: '$35.33\\text{ L}$' },
+      { id: 'B', text: '$57.00\\text{ L}$' },
+      { id: 'C', text: '$70.65\\text{ L}$' },
+      { id: 'D', text: '$141.30\\text{ L}$' }
+    ],
+    correct_option_id: 'C',
+    explanation: 'Moles of CO2 produced: n(CO2) = 0.05 * 57 = 2.85 mol. Volume of CO2 at standard conditions: V = 2.85 * 24.79 = 70.65 L.'
+  },
+
+  // =========================================================================
+  // SECTOR 7: URANUS DEEP SPACE • HYDROGENATION & BIODIESEL (Q24 – Q25)
+  // =========================================================================
+  {
+    order_index: 24,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.35,
+    sectionName: 'Sector 7: Uranus Deep Space • Catalytic Hydrogenation (Hardening)',
+    content_markdown: 'To convert liquid triolein ($(\\text{C}_{17}\\text{H}_{33}\\text{COO})_3\\text{C}_3\\text{H}_5$, $M = 884\\text{ g/mol}$) into solid tristearin for spacecraft storage, hydrogen gas is added across the double bonds: $$(\\text{C}_{17}\\text{H}_{33}\\text{COO})_3\\text{C}_3\\text{H}_5 + 3\\text{H}_2 \\xrightarrow{\\text{Ni}, t^\\circ} (\\text{C}_{17}\\text{H}_{35}\\text{COO})_3\\text{C}_3\\text{H}_5$$ What volume of $\\text{H}_2$ gas at standard conditions ($24.79\\text{ L/mol}$) is required to hydrogenate $176.8\\text{ g}$ of pure triolein?',
+    options: [
+      { id: 'A', text: '$4.96\\text{ L}$' },
+      { id: 'B', text: '$9.92\\text{ L}$' },
+      { id: 'C', text: '$14.87\\text{ L}$' },
+      { id: 'D', text: '$29.75\\text{ L}$' }
+    ],
+    correct_option_id: 'C',
+    explanation: 'Moles of triolein: n = 176.8 / 884 = 0.20 mol. Triolein has 3 C=C double bonds, requiring 3 moles of H2 per mole of fat: n(H2) = 0.20 * 3 = 0.60 mol. Volume of H2: V = 0.60 * 24.79 = 14.87 L.'
+  },
+  {
+    order_index: 25,
+    type: 'MULTIPLE_CHOICE',
+    points: 0.35,
+    sectionName: 'Sector 7: Uranus Deep Space • Biodiesel Transesterification',
+    content_markdown: 'In space habitat fuel recycling, a triglyceride reacts with methanol ($\\text{CH}_3\\text{OH}$, $M = 32\\text{ g/mol}$) in the presence of an alkaline catalyst to produce fatty acid methyl esters (biodiesel) and glycerol: $$\\text{Triglyceride} + 3\\text{CH}_3\\text{OH} \\xrightarrow{\\text{catalyst}} 3\\text{R-COOCH}_3 + \\text{C}_3\\text{H}_5(\\text{OH})_3$$ How many grams of methanol are required to convert $1.50\\text{ mol}$ of triglyceride into biodiesel?',
+    options: [
+      { id: 'A', text: '$48.0\\text{ g}$' },
+      { id: 'B', text: '$96.0\\text{ g}$' },
+      { id: 'C', text: '$144.0\\text{ g}$' },
+      { id: 'D', text: '$192.0\\text{ g}$' }
+    ],
+    correct_option_id: 'C',
+    explanation: 'Moles of methanol needed: n = 1.50 * 3 = 4.50 mol. Mass of methanol: m = 4.50 * 32 = 144.0 g.'
+  },
+
+  // =========================================================================
+  // SECTOR 8: NEPTUNE FRONTIER • 5 CONSTRUCTED-RESPONSE PROBLEMS (Q26 – Q30)
+  // =========================================================================
+  {
+    order_index: 26,
+    type: 'ESSAY_UPLOAD',
+    points: 0.45,
+    sectionName: 'Sector 8: Neptune Frontier • Problem 1: Structural Blueprint & Chemical Differentiation',
+    content_markdown: `### Orbital Problem 1: Structural Blueprint & Chemical Differentiation (0.45 Points)
+
+**Part a):**
+* Write the general structural formula of a simple fat (triglyceride) and explicitly identify its two parent chemical components.
+* State the name of the characteristic functional group connecting the glycerol backbone to the fatty acid hydrocarbon chains.
+
+**Part b):**
+* Cadet Keithley receives two unlabeled reagent bottles:
+  - **Bottle A:** Plant culinary cooking oil (vegetable oil).
+  - **Bottle B:** Synthetic lubricating engine oil (liquid alkane hydrocarbons).
+* Propose a chemical test using aqueous sodium hydroxide ($\\text{NaOH}$) solution and gentle heating to distinguish between Bottle A and Bottle B. State the clear visual observations and write the general chemical equation for the reacting sample.`,
+    rubric: `* Part a (0.2 pts): General formula (RCOO)3C3H5; components: glycerol (C3H5(OH)3) and fatty acids (R-COOH); functional group: ester group (-COO-).
+* Part b (0.25 pts): Add aqueous NaOH and heat gently in a water bath. Bottle A (vegetable oil) dissolves/emulsifies and undergoes saponification, producing soap that foams upon shaking and forms a clear homogeneous solution: (RCOO)3C3H5 + 3NaOH -> 3RCOONa + C3H5(OH)3. Bottle B (engine oil) does not react and remains permanently separated into two distinct immiscible layers.`,
+    explanation: `Model Answer:
+a) General formula: (RCOO)3C3H5. Parent components: Glycerol (C3H5(OH)3) and fatty acids (R-COOH). Characteristic functional group: Ester linkage (-COO-).
+b) Chemical Differentiation Test:
+- Procedure: Place 2 mL of liquid from each bottle into separate test tubes. Add 5 mL of 20% aqueous NaOH solution and heat gently in a boiling water bath for 5-10 minutes while stirring.
+- Observations:
+  * Bottle A (vegetable cooking oil) reacts completely through saponification:
+    (RCOO)3C3H5 + 3NaOH --t°--> 3RCOONa (soap) + C3H5(OH)3 (glycerol)
+    The oily layer disappears, creating a thick, homogeneous soap solution that produces rich lather when agitated with water.
+  * Bottle B (lubricating engine oil) consists of inert alkane hydrocarbons; it exhibits zero reaction with NaOH and remains as an insoluble oil layer floating on top of the aqueous base.`
+  },
+  {
+    order_index: 27,
+    type: 'ESSAY_UPLOAD',
+    points: 0.45,
+    sectionName: 'Sector 8: Neptune Frontier • Problem 2: Saponification Stoichiometry & Mass Conservation',
+    content_markdown: `### Orbital Problem 2: Saponification Stoichiometry & Mass Conservation Workout (0.45 Points)
+
+An orbital hygiene facility processes $1000.0\\text{ g}$ of refined coconut oil containing triglycerides. The flight chemist adds $160.0\\text{ g}$ of pure sodium hydroxide ($\\text{NaOH}$, $M = 40.0\\text{ g/mol}$) dissolved in water, providing the exact stoichiometric amount required for complete hydrolysis.
+
+**Part a):**
+* Write the balanced chemical equation for the saponification reaction of a triglyceride $(\\text{RCOO})_3\\text{C}_3\\text{H}_5$ with $\\text{NaOH}$.
+
+**Part b):**
+* Calculate the number of moles of $\\text{NaOH}$ consumed in the reaction.
+* Determine the theoretical number of moles and the mass (in grams) of pure glycerol ($\\text{C}_3\\text{H}_5(\\text{OH})_3$, $M = 92.0\\text{ g/mol}$) produced.
+
+**Part c):**
+* Using the **Law of Conservation of Mass**, calculate the total mass of pure sodium soap ($\\text{RCOONa}$) obtained upon complete $100\\%$ reaction.`,
+    rubric: `* Part a (0.1 pts): Balanced equation: (RCOO)3C3H5 + 3NaOH -> 3RCOONa + C3H5(OH)3.
+* Part b (0.2 pts): Moles of NaOH = 160.0 / 40.0 = 4.00 mol. Moles of glycerol = 4.00 / 3 = 1.333 mol (or 4/3 mol). Mass of glycerol = (4/3) * 92.0 = 122.67 g (or 122.7 g).
+* Part c (0.15 pts): Law of Conservation of Mass: m(soap) = m(fat) + m(NaOH) - m(glycerol) = 1000.0 + 160.0 - 122.67 = 1037.33 g (or 1037.3 g).`,
+    explanation: `Model Answer:
+a) Saponification Equation:
+   (RCOO)3C3H5 + 3NaOH --t°--> 3RCOONa + C3H5(OH)3
+
+b) Moles & Mass of Glycerol:
+   - Moles of NaOH consumed: n(NaOH) = 160.0 / 40.0 = 4.00 mol.
+   - According to the reaction stoichiometry, 3 moles of NaOH yield 1 mole of glycerol:
+     n(glycerol) = n(NaOH) / 3 = 4.00 / 3 ≈ 1.333 mol.
+   - Mass of glycerol produced:
+     m(glycerol) = n * M = (4/3) * 92.0 ≈ 122.67 g.
+
+c) Total Mass of Pure Soap:
+   - Applying the Law of Conservation of Mass:
+     m(fat) + m(NaOH) = m(soap) + m(glycerol)
+     m(soap) = m(fat) + m(NaOH) - m(glycerol)
+     m(soap) = 1000.0 + 160.0 - 122.67 = 1037.33 g (or ~1.037 kg).`
+  },
+  {
+    order_index: 28,
+    type: 'ESSAY_UPLOAD',
+    points: 0.45,
+    sectionName: 'Sector 8: Neptune Frontier • Problem 3: Tripalmitin Saponification with Reaction Efficiency',
+    content_markdown: `### Orbital Problem 3: Tripalmitin Saponification with Reaction Efficiency (0.45 Points)
+
+A synthesis chamber is charged with $403.0\\text{ g}$ of pure tripalmitin ($(\\text{C}_{15}\\text{H}_{31}\\text{COO})_3\\text{C}_3\\text{H}_5$, $M = 806.0\\text{ g/mol}$) and treated with excess aqueous $\\text{NaOH}$ solution at $85^\\circ\\text{C}$.
+
+**Part a):**
+* Calculate the initial number of moles of tripalmitin, and calculate the minimum mass of pure $\\text{NaOH}$ ($M = 40.0\\text{ g/mol}$) theoretically required for complete reaction.
+
+**Part b):**
+* Due to thermal dissipation, the saponification proceeds with an overall reaction efficiency of **$H = 90.0\\%$**.
+* Calculate the actual mass (in grams) of pure glycerol ($M = 92.0\\text{ g/mol}$) isolated from the mixture.
+
+**Part c):**
+* Calculate the actual mass (in grams) of sodium palmitate soap ($\\text{C}_{15}\\text{H}_{31}\\text{COONa}$, $M = 278.0\\text{ g/mol}$) synthesized at this $90.0\\%$ efficiency.`,
+    rubric: `* Part a (0.15 pts): Moles of tripalmitin = 403.0 / 806.0 = 0.50 mol. Theoretical NaOH = 0.50 * 3 = 1.50 mol -> m(NaOH) = 1.50 * 40.0 = 60.0 g.
+* Part b (0.15 pts): Theoretical glycerol = 0.50 mol -> 0.50 * 92.0 = 46.0 g. Actual glycerol at 90% = 46.0 * 0.90 = 41.4 g.
+* Part c (0.15 pts): Theoretical soap = 3 * 0.50 = 1.50 mol -> 1.50 * 278.0 = 417.0 g. Actual soap at 90% = 417.0 * 0.90 = 375.3 g.`,
+    explanation: `Model Answer:
+a) Moles of Reactants:
+   - n(tripalmitin) = 403.0 / 806.0 = 0.50 mol.
+   - Saponification ratio: (C15H31COO)3C3H5 + 3NaOH -> 3C15H31COONa + C3H5(OH)3.
+   - Required NaOH: n(NaOH) = 3 * 0.50 = 1.50 mol.
+   - Minimum mass of pure NaOH: m(NaOH) = 1.50 * 40.0 = 60.0 g.
+
+b) Actual Glycerol Yield:
+   - Theoretical yield: n(glycerol, theory) = 0.50 mol -> m(glycerol, theory) = 0.50 * 92.0 = 46.0 g.
+   - With efficiency H = 90.0%:
+     m(glycerol, actual) = 46.0 * 0.90 = 41.4 g.
+
+c) Actual Soap Yield:
+   - Theoretical moles of sodium palmitate: n(soap, theory) = 3 * 0.50 = 1.50 mol.
+   - Theoretical mass of soap: m(soap, theory) = 1.50 * 278.0 = 417.0 g.
+   - With efficiency H = 90.0%:
+     m(soap, actual) = 417.0 * 0.90 = 375.3 g.`
+  },
+  {
+    order_index: 29,
+    type: 'ESSAY_UPLOAD',
+    points: 0.45,
+    sectionName: 'Sector 8: Neptune Frontier • Problem 4: Hydrogenation & Oil Hardening',
+    content_markdown: `### Orbital Problem 4: Hydrogenation & Fat Hardening Stoichiometry (0.45 Points)
+
+The orbital galley requires solid cooking fat with enhanced shelf-stability and converts liquid triolein ($(\\text{C}_{17}\\text{H}_{33}\\text{COO})_3\\text{C}_3\\text{H}_5$, $M = 884.0\\text{ g/mol}$) into solid tristearin ($(\\text{C}_{17}\\text{H}_{35}\\text{COO})_3\\text{C}_3\\text{H}_5$, $M = 890.0\\text{ g/mol}$) through catalytic hydrogenation.
+
+**Part a):**
+* Write the balanced chemical equation for the hydrogenation of triolein into tristearin in the presence of a nickel ($\\text{Ni}$) catalyst under heat.
+
+**Part b):**
+* For a reaction batch of $442.0\\text{ g}$ of pure triolein, calculate the volume of hydrogen gas ($\\text{H}_2$, in liters) consumed at standard conditions ($25^\\circ\\text{C}, 1\\text{ bar}$, molar volume $24.79\\text{ L/mol}$) assuming $100\\%$ complete addition.
+
+**Part c):**
+* Calculate the theoretical mass (in grams) of solid tristearin produced. Explain why saturated solid fats resist oxidation (rancidity) and have longer shelf-lives in space storage compared to unsaturated liquid oils.`,
+    rubric: `* Part a (0.15 pts): Equation: (C17H33COO)3C3H5 + 3H2 --Ni, t°--> (C17H35COO)3C3H5.
+* Part b (0.15 pts): Moles of triolein = 442.0 / 884.0 = 0.50 mol. Moles of H2 = 0.50 * 3 = 1.50 mol. Volume of H2 = 1.50 * 24.79 = 37.185 L (or 37.19 L).
+* Part c (0.15 pts): Mass of tristearin = 0.50 * 890.0 = 445.0 g. Explanation: Saturated fats lack reactive C=C double bonds, making them much less susceptible to auto-oxidation by atmospheric oxygen (rancidity), thus giving them superior chemical stability.`,
+    explanation: `Model Answer:
+a) Balanced Hydrogenation Equation:
+   (C17H33COO)3C3H5 + 3H2 --Ni, t°--> (C17H35COO)3C3H5
+
+b) Hydrogen Volume at Standard Conditions:
+   - n(triolein) = 442.0 / 884.0 = 0.50 mol.
+   - Each mole of triolein contains 3 C=C double bonds and requires 3 moles of H2:
+     n(H2) = 0.50 * 3 = 1.50 mol.
+   - Volume of H2 gas at standard conditions (25°C, 1 bar):
+     V(H2) = 1.50 * 24.79 = 37.185 L (or ~37.19 L).
+
+c) Product Mass & Shelf-Life Explanation:
+   - Mass of solid tristearin: m = n * M = 0.50 * 890.0 = 445.0 g.
+     (Notice: 442.0 g triolein + 3.0 g H2 = 445.0 g tristearin, verifying conservation of mass).
+   - Chemical Stability: Unsaturated oils contain C=C double bonds with allylic C-H bonds that easily react with oxygen via free-radical auto-oxidation, producing bad-smelling aldehydes, ketones, and carboxylic acids (rancidity). Saturated fats lack double bonds and are highly resistant to oxidation, offering vastly superior shelf-life in deep space storage.`
+  },
+  {
+    order_index: 30,
+    type: 'ESSAY_UPLOAD',
+    points: 0.45,
+    sectionName: 'Sector 8: Neptune Frontier • Problem 5: Nutritional Biochemistry & Health Directives',
+    content_markdown: `### Orbital Problem 5: Nutritional Biochemistry & Health Directives (0.45 Points)
+
+Astronaut Cadet Keithley's daily metabolic expenditure in orbital flight training is calibrated at $2500\\text{ kcal}$ per day.
+
+**Part a):**
+* Given that dietary lipids supply approximately $9.0\\text{ kcal/g}$ of metabolic energy, calculate the mass of fat (in grams) required to provide **$30.0\\%$** of Keithley's daily caloric requirement.
+
+**Part b):**
+* Explain biologically why excessive, uncontrolled consumption of saturated animal fats and industrial trans fats increases the clinical risk of atherosclerosis, hypertension, and cardiovascular disease.
+
+**Part c):**
+* Formulate **three specific, evidence-based dietary directives** for Cadet Keithley to optimize physical stamina, brain function, and body composition during long-duration space flight missions. (Reference SGK Part II.5 and SBT 28.10/28.11)`,
+    rubric: `* Part a (0.15 pts): Energy from fat = 2500 * 0.30 = 750 kcal. Mass of fat = 750 / 9.0 = 83.33 g (or 83.3 g).
+* Part b (0.15 pts): Saturated and trans fats elevate low-density lipoprotein (LDL, "bad") cholesterol in the blood. Excess LDL particles deposit into arterial walls, causing plaque buildup (atherosclerosis), narrowing blood vessels, increasing vascular resistance (hypertension), and elevating the risk of myocardial infarction and stroke.
+* Part c (0.15 pts): 3 directives: 1) Prioritize unsaturated plant oils and omega-3 fish oils; 2) Restrict deep-fried fast foods, animal tallow, and trans fats; 3) Balance total lipid calories within 20-30% of daily metabolic expenditure coupled with regular exercise.`,
+    explanation: `Model Answer:
+a) Mass of Dietary Fat:
+   - Caloric contribution from lipids (30%):
+     E(lipid) = 2500 * 0.30 = 750 kcal.
+   - Since 1 g of fat provides 9.0 kcal:
+     m(fat) = 750 / 9.0 ≈ 83.33 g.
+
+b) Pathophysiology of Saturated & Trans Fats:
+   - Saturated fatty acids and trans fats downregulate LDL receptors and stimulate hepatic synthesis of Low-Density Lipoprotein (LDL) cholesterol ("bad cholesterol").
+   - Circulating LDL penetrates arterial endothelial linings, undergoes oxidative modification, and triggers macrophage foam cell accumulation, forming rigid atheromatous plaques.
+   - This causes lumen narrowing and vascular stiffness (atherosclerosis), requiring higher cardiac pumping pressure (hypertension) and severely increasing the risk of coronary heart disease and ischemic stroke.
+
+c) Three Evidence-Based Dietary Directives:
+   1. Prioritize Healthy Unsaturated Fats: Consume vegetable oils (olive, sunflower, flaxseed) and fatty fish rich in polyunsaturated Omega-3 fatty acids (EPA and DHA) to maintain cell membrane fluidity and support cognitive sharpness.
+   2. Restrict High-Temperature & Saturated Fats: Limit animal tallow, high-fat dairy, and avoid commercially deep-fried fast foods that contain oxidized lipids and harmful trans-fat isomers.
+   3. Maintain Caloric Balance & Active Metabolism: Ensure total lipid intake remains within 20% - 30% of daily caloric needs, accompanied by scheduled cardiovascular exercise to promote lipid turnover and prevent visceral adipose deposition.`
+  }
+];
+
+async function seed() {
+  console.log('========================================================================');
+  console.log('🚀 SEEDING LESSON 28: LIPIDS & TRIGLYCERIDES FOR KEITHLEY LAKE');
+  console.log('📅 Target Date:', CONSTANTS.ASSIGNED_DATE);
+  console.log('👨‍🚀 Student: Keithley Lake (@keithley)');
+  console.log('🧪 Subject: CHEM_9 (Hóa học 9)');
+  console.log(`🎯 Total Problems: ${QUESTIONS_DATA.length} (25 MCQs + 5 ESSAY_UPLOAD)`);
+  console.log('========================================================================');
+
+  const targetDate = new Date(`${CONSTANTS.ASSIGNED_DATE}T00:00:00.000Z`);
+
+  // 1. Clean up existing assignments and attempts on 2026-11-16 for CHEM_9
+  const existingAsgns = await prisma.daily_student_assignments.findMany({
+    where: {
+      student_id: CONSTANTS.STUDENT_ID,
+      assigned_date: targetDate,
+      learning_units: {
+        subject_id: CONSTANTS.SUBJECT_ID
+      }
+    },
+    include: {
+      assessment_attempts: true
+    }
+  });
+
+  if (existingAsgns.length > 0) {
+    console.log(`⚠️ Cleaning up ${existingAsgns.length} previous CHEM_9 assignment(s) on ${CONSTANTS.ASSIGNED_DATE}...`);
+    for (const a of existingAsgns) {
+      for (const att of a.assessment_attempts) {
+        await prisma.student_answers.deleteMany({ where: { attempt_id: att.id } });
+        await prisma.assessment_attempts.delete({ where: { id: att.id } });
+      }
+      await prisma.daily_student_assignments.delete({ where: { id: a.id } });
+    }
+    console.log('✓ Cleaned previous mission records.');
+  }
+
+  // 2. Create Learning Unit (Flight Briefing & Interactive Lecture)
+  const unit = await prisma.learning_units.create({
+    data: {
+      subject_id: CONSTANTS.SUBJECT_ID,
+      created_by: CONSTANTS.TEACHER_ID,
+      title: 'Lesson 28: Lipids & Triglycerides ((RCOO)₃C₃H₅)',
+      description: 'Comprehensive study of lipids, triglyceride structure, physical states, saponification stoichiometry, and nutritional directives.',
+      lecture_content_markdown: LECTURE_MARKDOWN,
+      lecture_attachments: [],
+      is_template: true
+    }
+  });
+  console.log(`✅ Created Learning Unit: ${unit.id} ("${unit.title}")`);
+
+  // 3. Create Daily Student Assignment Card
+  const assignment = await prisma.daily_student_assignments.create({
+    data: {
+      student_id: CONSTANTS.STUDENT_ID,
+      learning_unit_id: unit.id,
+      assigned_by: CONSTANTS.TEACHER_ID,
+      assigned_date: targetDate,
+      custom_session_minutes: 90,
+      teacher_daily_note: '🚀 Welcome to Lesson 28: Lipids & Triglycerides, Astronaut Cadet Keithley! Explore the 3D Molecular Laboratory Studio and master the 30-problem cosmic practice mission across 8 planetary sectors. Keep your stoichiometry balanced and fly high!',
+      is_published: true
+    }
+  });
+  console.log(`✅ Created Daily Assignment Card: ${assignment.id}`);
+
+  // 4. Create In-Session 90M Assessment
+  const assessment = await prisma.assessments.create({
+    data: {
+      learning_unit_id: unit.id,
+      type: 'IN_SESSION_90M',
+      title: 'Cosmic Chemistry Mission: Lipids & Saponification Dynamics (90 mins)',
+      instructions: 'Timed orbital chemistry session covering Lesson 28 across 8 Planetary Sectors. 25 MCQs and 5 Constructed-Response problems. 100% English telemetry.',
+      time_limit_minutes: 90,
+      max_score: 10.0
+    }
+  });
+  console.log(`✅ Created In-Session Assessment: ${assessment.id}`);
+
+  // 5. Populate Questions into Assessment
+  let count = 0;
+  for (const q of QUESTIONS_DATA) {
+    const qType = q.type;
+    const questionPayload = {
+      content_markdown: q.content_markdown,
+      sectionName: q.sectionName
+    };
+
+    if (qType === 'MULTIPLE_CHOICE') {
+      questionPayload.options = q.options.map(opt => ({
+        id: opt.id,
+        text: opt.text
+      }));
+      // CRITICAL FOR INSTANT SOUND FX & SHAKE ANIMATION ON MISTAKES:
+      questionPayload.correct_option_id = q.correct_option_id;
+    }
+
+    let gradingPayload = {};
+    if (qType === 'MULTIPLE_CHOICE') {
+      gradingPayload = {
+        correct_option_id: q.correct_option_id,
+        explanation: q.explanation
+      };
+    } else if (qType === 'ESSAY_UPLOAD') {
+      gradingPayload = {
+        rubric_markdown: q.rubric,
+        explanation: q.explanation
+      };
+    }
+
+    await prisma.questions.create({
+      data: {
+        assessment_id: assessment.id,
+        order_index: q.order_index,
+        points: q.points,
+        type: qType,
+        question_payload: questionPayload,
+        grading_key_payload: gradingPayload
+      }
+    });
+    count++;
+  }
+  console.log(`✅ Successfully inserted ${count} questions (25 MCQs + 5 ESSAY_UPLOAD).`);
+
+  // 6. Initialize Assessment Attempt (NOT_STARTED)
+  const attempt = await prisma.assessment_attempts.create({
+    data: {
+      daily_assignment_id: assignment.id,
+      assessment_id: assessment.id,
+      student_id: CONSTANTS.STUDENT_ID,
+      status: 'NOT_STARTED'
+    }
+  });
+  console.log(`✅ Initialized Mission Attempt: ${attempt.id} (Status: NOT_STARTED)`);
+
+  console.log('\n🎉 ALL SYSTEMS GO: Lesson 28 Chemistry Mission deployed successfully for Keithley Lake!');
+  return {
+    unitId: unit.id,
+    assignmentId: assignment.id,
+    assessmentId: assessment.id,
+    attemptId: attempt.id
+  };
+}
+
+seed()
+  .catch((err) => {
+    console.error('❌ Error executing seed:', err);
+    process.exit(1);
+  })
+  .finally(async () => {
+    await prisma.$disconnect();
+  });

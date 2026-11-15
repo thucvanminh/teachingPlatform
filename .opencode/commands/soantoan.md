@@ -17,6 +17,15 @@ $ARGUMENTS
 - Giáo viên: **Thầy Thức** (`teacher` - ID: `dc62e5df-2344-4785-b058-b95f5dbe0983`)
 - Môn học: **Toán 7** (`MATH_7` - ID: `b1cfb82f-fa75-47eb-ba05-7281f6d3fdf2`)
 - Thư mục tài liệu gốc: `/home/dantey/Dantey/teaching/lop6/Math/`
+- **File PDF SGK sẵn có:** `~/Downloads/sach-giao-khoa-toan-7-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf`
+
+### Công cụ xử lý & khai thác tài liệu:
+- **`pdftotext`:** Đọc trích xuất nhanh bài tập và lý thuyết theo trang từ SGK Toán 7:
+  `pdftotext -f <trang_dau> -l <trang_cuoi> ~/Downloads/sach-giao-khoa-toan-7-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf -`
+- **Thị giác (Vision `read`):** Dùng lệnh `read` trực tiếp khi cần quan sát hình vẽ hình học gốc trong PDF để vẽ lại thành vector SVG.
+- **`pandoc`:** Xuất phiếu bài tập/đề toán ra file Word `.docx` khi Thầy cần bản in:
+  `pandoc mission_toan7.md -o mission_toan7.docx`
+- **MCP `firecrawl`:** Tra cứu thêm các dạng toán ứng dụng vũ trụ hoặc đề kiểm tra quốc tế nếu cần mở rộng.
 
 ### Bước 2: 5 Trụ cột vàng BẮT BUỘC
 1. **100% Pure English Immersion:** Tuyệt đối không có bất kỳ từ tiếng Việt nào trong ngoặc đơn (VD: dùng `adjacent angles`, `linear pair`, `vertical opposite angles`, `angle bisector` thay vì kẹp chữ tiếng Việt).
