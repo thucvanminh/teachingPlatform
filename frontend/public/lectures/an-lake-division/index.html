@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bé an_lake Khám Phá Phép Chia Kì Diệu | 16/11/2026</title>
+  <title>Bé an_lake Khám Phá Phép Chia Kỳ Diệu (Three.js 3D) | 16/11/2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
   <style>
     :root {
       --primary: #FF6B8B;
@@ -57,7 +60,7 @@
 
     .main-container {
       width: 100%;
-      max-width: 880px;
+      max-width: 920px;
       background: var(--card-bg);
       border-radius: 40px;
       box-shadow: var(--shadow);
@@ -183,8 +186,8 @@
       background: #F1F5F9;
       border: 3px solid transparent;
       border-radius: 26px;
-      padding: 12px 22px;
-      font-size: 1.1rem;
+      padding: 12px 20px;
+      font-size: 1.05rem;
       font-weight: 600;
       font-family: inherit;
       color: #64748B;
@@ -260,6 +263,85 @@
       color: #E63946;
     }
 
+    /* Examples Section in Lesson */
+    .examples-container {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .example-card {
+      background: white;
+      border-radius: 22px;
+      padding: 18px;
+      border: 3px solid #E2E8F0;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+      transition: all 0.25s ease;
+    }
+
+    .example-card:hover {
+      border-color: #FF6B8B;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 107, 139, 0.15);
+    }
+
+    .example-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #9D4EDD;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .example-desc {
+      font-size: 1.05rem;
+      color: #475569;
+      line-height: 1.5;
+    }
+
+    .example-formula {
+      margin-top: 10px;
+      background: #FFF8E7;
+      color: #D97706;
+      font-weight: 700;
+      font-size: 1.25rem;
+      padding: 6px 14px;
+      border-radius: 14px;
+      display: inline-block;
+      border: 1px dashed #F59E0B;
+    }
+
+    .rules-table-box {
+      margin-top: 24px;
+      background: white;
+      border-radius: 24px;
+      padding: 20px;
+      border: 3px solid #E0E7FF;
+    }
+
+    .rules-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .rules-table th {
+      background: #EEF2FF;
+      color: #4338CA;
+      padding: 10px;
+      border-radius: 12px;
+      font-weight: 700;
+    }
+
+    .rules-table td {
+      padding: 10px 8px;
+      border-bottom: 1px dashed #E2E8F0;
+    }
+
     .big-rule-box {
       background: linear-gradient(135deg, #9D4EDD, #7B2CBF);
       color: white;
@@ -285,6 +367,64 @@
       border-radius: 50px;
       margin-top: 10px;
       border: 2px solid rgba(255, 255, 255, 0.4);
+    }
+
+    /* 3D Three.js Lab Container */
+    .three-stage-box {
+      width: 100%;
+      background: linear-gradient(180deg, #E0F2FE 0%, #F0FDF4 100%);
+      border: 4px solid #38BDF8;
+      border-radius: 32px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
+      margin-bottom: 22px;
+    }
+
+    .three-stage-header {
+      position: absolute;
+      top: 14px;
+      left: 18px;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      padding: 6px 16px;
+      border-radius: 20px;
+      border: 2px solid #BAE6FD;
+    }
+
+    .three-stage-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0369A1;
+    }
+
+    .three-hint-badge {
+      position: absolute;
+      bottom: 12px;
+      right: 18px;
+      z-index: 5;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      padding: 4px 14px;
+      border-radius: 16px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #0284C7;
+    }
+
+    #threeCanvas {
+      width: 100%;
+      height: 300px;
+      display: block;
+      cursor: grab;
+    }
+
+    #threeCanvas:active {
+      cursor: grabbing;
     }
 
     /* Lab Controls */
@@ -377,303 +517,298 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2.3rem;
+      font-size: 2.2rem;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
       cursor: pointer;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-      border: 3px solid #FFD166;
+      border: 3px solid #FDE68A;
       transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      position: relative;
     }
 
     .gift-item:hover {
-      transform: scale(1.18) rotate(8deg);
+      transform: scale(1.22) rotate(10deg);
       border-color: #FF6B8B;
-    }
-
-    .gift-item:active {
-      transform: scale(0.95);
+      box-shadow: 0 10px 22px rgba(255, 107, 139, 0.3);
     }
 
     /* Friends Grid */
     .friends-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
       margin-bottom: 24px;
     }
 
     .friend-card {
       background: white;
-      border-radius: 32px;
-      padding: 20px 16px;
       border: 4px solid #E2E8F0;
+      border-radius: 32px;
+      padding: 20px;
       text-align: center;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
-      transition: all 0.3s ease;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.05);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       position: relative;
     }
 
     .friend-avatar {
-      font-size: 3.8rem;
-      margin-bottom: 6px;
+      font-size: 3.5rem;
+      margin-bottom: 8px;
       display: inline-block;
-      transition: transform 0.2s;
-    }
-
-    .friend-card:hover .friend-avatar {
-      transform: scale(1.1) rotate(5deg);
+      transition: transform 0.2s ease;
     }
 
     .friend-name {
       font-size: 1.25rem;
       font-weight: 700;
       color: #334155;
+      margin-bottom: 12px;
     }
 
     .plate {
-      background: #F1F5F9;
+      background: #F8FAFC;
       border: 3px dashed #CBD5E1;
       border-radius: 24px;
-      min-height: 110px;
-      margin-top: 14px;
+      min-height: 100px;
       padding: 12px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      align-content: flex-start;
+      align-items: center;
       gap: 8px;
+      margin-bottom: 10px;
+      transition: all 0.2s ease;
       cursor: pointer;
-      transition: all 0.2s;
     }
 
     .plate:hover {
-      background: #E2E8F0;
-      border-color: #94A3B8;
+      border-color: #4ECDC4;
+      background: #F0FDFA;
     }
 
     .plate-counter {
-      margin-top: 10px;
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #2563EB;
-      background: #DBEAFE;
       display: inline-block;
-      padding: 5px 16px;
-      border-radius: 16px;
+      background: #EEF2F6;
+      color: #475569;
+      font-weight: 700;
+      font-size: 1.15rem;
+      padding: 4px 16px;
+      border-radius: 20px;
+    }
+
+    /* Feedback Banner */
+    .feedback-banner {
+      display: none;
+      padding: 22px;
+      border-radius: 28px;
+      text-align: center;
+      font-size: 1.3rem;
+      margin-bottom: 24px;
+      animation: popIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .feedback-banner.success {
+      background: linear-gradient(135deg, #D1FAE5, #A7F3D0);
+      color: #065F46;
+      border: 4px solid #34D399;
+      box-shadow: 0 12px 28px rgba(52, 211, 153, 0.35);
+    }
+
+    .feedback-banner.warning {
+      background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+      color: #92400E;
+      border: 4px solid #FBBF24;
+    }
+
+    .math-formula-box {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-top: 12px;
+      color: #047857;
+      background: white;
+      display: inline-block;
+      padding: 8px 30px;
+      border-radius: 50px;
+      border: 3px solid #34D399;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
     }
 
     /* Action Buttons */
     .action-row {
       display: flex;
-      justify-content: center;
-      gap: 14px;
       flex-wrap: wrap;
-      margin-bottom: 22px;
+      gap: 12px;
+      justify-content: center;
     }
 
     .big-action-btn {
       background: linear-gradient(135deg, #FF6B8B, #FF5376);
       color: white;
       border: none;
-      border-radius: 24px;
-      padding: 15px 28px;
+      border-radius: 26px;
+      padding: 14px 28px;
       font-size: 1.2rem;
       font-weight: 700;
       font-family: inherit;
       cursor: pointer;
-      display: flex;
+      box-shadow: 0 8px 24px rgba(255, 107, 139, 0.35);
+      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: inline-flex;
       align-items: center;
       gap: 10px;
-      box-shadow: 0 6px 20px rgba(255, 107, 139, 0.4);
-      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
     .big-action-btn:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 10px 26px rgba(255, 107, 139, 0.5);
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 12px 30px rgba(255, 107, 139, 0.45);
     }
 
     .big-action-btn.secondary {
-      background: linear-gradient(135deg, #6366F1, #4F46E5);
-      box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
-    }
-
-    .big-action-btn.secondary:hover {
-      box-shadow: 0 10px 26px rgba(99, 102, 241, 0.5);
+      background: linear-gradient(135deg, #4ECDC4, #26A69A);
+      box-shadow: 0 8px 24px rgba(78, 205, 196, 0.35);
     }
 
     .big-action-btn.reset {
-      background: #94A3B8;
-      box-shadow: 0 6px 16px rgba(148, 163, 184, 0.3);
+      background: #F1F5F9;
+      color: #475569;
+      box-shadow: none;
+      border: 2px solid #CBD5E1;
     }
 
-    /* Feedback Banner */
-    .feedback-banner {
-      border-radius: 28px;
-      padding: 20px 26px;
-      text-align: center;
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 22px;
-      display: none;
-      animation: popIn 0.3s ease;
+    .big-action-btn.reset:hover {
+      background: #E2E8F0;
+      transform: translateY(-2px);
     }
 
-    .feedback-banner.success {
-      display: block;
-      background: #D1FAE5;
-      color: #065F46;
-      border: 3px solid #10B981;
-    }
-
-    .feedback-banner.warning {
-      display: block;
-      background: #FEF3C7;
-      color: #92400E;
-      border: 3px solid #F59E0B;
-    }
-
-    .math-formula-box {
-      font-size: 1.9rem;
-      color: #0D9488;
-      background: white;
-      border-radius: 18px;
-      padding: 8px 24px;
-      display: inline-block;
-      margin-top: 10px;
-      border: 2px solid #99F6E4;
-      font-weight: 700;
-      box-shadow: 0 4px 12px rgba(13, 148, 136, 0.15);
-    }
-
-    /* Quiz Tab */
+    /* Quiz Container */
     .quiz-container {
-      background: #F8FAFC;
-      border-radius: 32px;
+      background: white;
+      border-radius: 36px;
       padding: 26px;
       border: 4px solid #E2E8F0;
+      box-shadow: var(--shadow);
     }
 
     .quiz-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 2px dashed #E2E8F0;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     .star-counter {
-      font-size: 1.45rem;
-      font-weight: 700;
-      color: #D97706;
       background: #FEF3C7;
-      padding: 8px 20px;
-      border-radius: 50px;
+      color: #B45309;
       border: 2px solid #FDE68A;
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 1.15rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .quiz-question-box {
+      background: #F8FAFC;
+      border-radius: 26px;
+      padding: 22px;
+      margin-bottom: 20px;
+      border: 2px solid #E2E8F0;
+    }
+
+    .quiz-visual {
+      font-size: 2.2rem;
+      margin: 14px 0;
+      padding: 12px;
+      background: white;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .quiz-options {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .quiz-btn {
+      background: white;
+      border: 3px solid #CBD5E1;
+      border-radius: 20px;
+      padding: 16px 20px;
+      font-size: 1.35rem;
+      font-weight: 700;
+      font-family: inherit;
+      color: #334155;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      text-align: center;
+    }
+
+    .quiz-btn:hover {
+      border-color: #4ECDC4;
+      background: #F0FDFA;
+      transform: translateY(-2px);
+    }
+
+    .quiz-btn.correct {
+      background: #D1FAE5 !important;
+      border-color: #10B981 !important;
+      color: #065F46 !important;
+      transform: scale(1.05);
+    }
+
+    .quiz-btn.wrong {
+      background: #FEE2E2 !important;
+      border-color: #EF4444 !important;
+      color: #991B1B !important;
+      animation: shake 0.4s ease;
+    }
+
+    /* Parent Guide */
+    .parent-guide {
+      background: #FDF4FF;
+      border: 3px solid #F0ABFC;
+      border-radius: 32px;
+      padding: 26px;
+    }
+
+    .guide-section {
+      margin-bottom: 18px;
+    }
+
+    .guide-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #86198F;
+      margin-bottom: 8px;
       display: flex;
       align-items: center;
       gap: 8px;
     }
 
-    .quiz-question-box {
-      background: white;
-      border-radius: 26px;
-      padding: 22px;
-      text-align: center;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
-      margin-bottom: 22px;
-      border: 2px solid #CBD5E1;
-    }
-
-    .quiz-visual {
-      font-size: 2.6rem;
-      margin: 14px 0;
-      letter-spacing: 8px;
-    }
-
-    .quiz-options {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 18px;
-    }
-
-    .quiz-btn {
-      background: white;
-      border: 3px solid #E2E8F0;
-      border-radius: 22px;
-      padding: 16px 12px;
-      font-size: 1.7rem;
-      font-weight: 700;
-      font-family: inherit;
-      color: #1E293B;
-      cursor: pointer;
-      transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    .quiz-btn:hover {
-      border-color: #6366F1;
-      background: #EEF2FF;
-      transform: translateY(-3px) scale(1.03);
-    }
-
-    .quiz-btn.correct {
-      background: #10B981 !important;
-      color: white !important;
-      border-color: #059669 !important;
-      animation: celebrate 0.5s ease;
-    }
-
-    .quiz-btn.wrong {
-      background: #EF4444 !important;
-      color: white !important;
-      border-color: #DC2626 !important;
-      animation: shake 0.4s ease;
-    }
-
-    /* Parents Guide */
-    .parent-guide {
-      background: #FDF4FF;
-      border-radius: 32px;
-      border: 3px solid #F0ABFC;
-      padding: 26px;
-      font-family: 'Quicksand', sans-serif;
-    }
-
-    .guide-section {
-      margin-bottom: 22px;
-      background: white;
-      padding: 18px 22px;
-      border-radius: 22px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    }
-
-    .guide-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #86198F;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
     .guide-list {
-      padding-left: 22px;
-      line-height: 1.75;
-      color: #374151;
-      font-size: 1.08rem;
+      padding-left: 20px;
+      line-height: 1.7;
+      color: #4A044E;
+      font-size: 1.05rem;
     }
 
     /* Animations */
     @keyframes bounceGentle {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
+      50% { transform: translateY(-4px); }
     }
 
     @keyframes wiggle {
       0%, 100% { transform: rotate(0deg); }
-      25% { transform: rotate(-8deg); }
-      75% { transform: rotate(8deg); }
+      25% { transform: rotate(-5deg); }
+      75% { transform: rotate(5deg); }
     }
 
     @keyframes popIn {
@@ -685,12 +820,6 @@
       0%, 100% { transform: translateX(0); }
       20%, 60% { transform: translateX(-8px); }
       40%, 80% { transform: translateX(8px); }
-    }
-
-    @keyframes celebrate {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2) rotate(4deg); }
-      100% { transform: scale(1); }
     }
 
     @keyframes fadeIn {
@@ -716,6 +845,7 @@
       .quiz-options { grid-template-columns: 1fr; }
       .sound-toggle-btn { top: 16px; right: 16px; width: 42px; height: 42px; font-size: 1.2rem; }
       .back-home-btn { top: 16px; left: 16px; padding: 6px 12px; font-size: 0.85rem; }
+      #threeCanvas { height: 220px; }
     }
   </style>
 </head>
@@ -733,19 +863,19 @@
       <div class="date-badge">
         <span>📅</span> 16 Tháng 11, 2026
       </div>
-      <h1 class="kid-title">Chuyến Phiêu Lưu Chia Kẹo</h1>
+      <h1 class="kid-title">Chuyến Phiêu Lưu Chia Kẹo 3D</h1>
       <p class="kid-subtitle">Dành tặng bạn nhỏ <span class="name-highlight">an_lake</span> 6 tuổi thông thái 🌟</p>
     </div>
 
     <!-- TABS NAVIGATION -->
     <div class="tabs-nav">
-      <button class="tab-btn active" data-tab="storyTab">📖 1. Câu Chuyện</button>
-      <button class="tab-btn" data-tab="labTab">🍬 2. Tự Tay Chia Quà</button>
-      <button class="tab-btn" data-tab="quizTab">🎮 3. Trò Chơi Đố Vui</button>
+      <button class="tab-btn active" data-tab="storyTab">📖 1. Câu Chuyện &amp; Ví Dụ</button>
+      <button class="tab-btn" data-tab="labTab">🍬 2. Phòng Kẹo 3D Three.js</button>
+      <button class="tab-btn" data-tab="quizTab">🎮 3. Đấu Trường 20 Câu Đố</button>
       <button class="tab-btn" data-tab="parentsTab">👨‍👩‍👧 4. Lời Nhắn Ba Mẹ</button>
     </div>
 
-    <!-- TAB 1: STORY -->
+    <!-- TAB 1: STORY & EXAMPLES -->
     <div id="storyTab" class="tab-content active">
       <div class="story-card">
         <div class="story-bubble">
@@ -766,9 +896,9 @@
         <div class="story-bubble" style="border-left-color: #FFD166;">
           <div class="story-emoji">🖐️⭐</div>
           <div class="story-text">
-            <strong>Cách chia bí mật của an_lake:</strong><br/>
-            "Một cái cho Thỏ Mimi, một cái cho Gấu Misa...<br/>
-            Lại một cái cho Thỏ Mimi, một cái cho Gấu Misa..."<br/>
+            <strong>Bí kíp chia quà nhịp nhàng của an_lake:</strong><br/>
+            <em>"Một cái cho Thỏ Mimi, một cái cho Gấu Misa...<br/>
+            Lại một cái cho Thỏ Mimi, một cái cho Gấu Misa..."</em><br/>
             Chia từng lượt cho tới khi hết sạch kẹo trong rổ!
           </div>
         </div>
@@ -778,17 +908,90 @@
           <p>Có <strong>6 cái kẹo</strong> chia đều cho <strong>2 bạn</strong>, mỗi bạn được <strong>3 cái kẹo</strong>!</p>
           <div class="big-rule-formula">6 ÷ 2 = 3</div>
         </div>
+
+        <!-- 5 VÍ DỤ MINH HỌA SINH ĐỘNG -->
+        <h3 style="margin-top: 26px; color: #7E22CE; font-size: 1.4rem;">🌈 5 Ví Dụ Chia Quà Bé Hay Gặp Hằng Ngày:</h3>
+        <div class="examples-container">
+          <div class="example-card">
+            <div class="example-title">🍓 1. Dâu Tây Thơm Mọng</div>
+            <div class="example-desc">Có <strong>8 quả dâu tây</strong> chia đều cho <strong>2 bạn thỏ</strong>. Mỗi bạn thỏ được mấy quả dâu?</div>
+            <div class="example-formula">8 ÷ 2 = 4 quả dâu</div>
+          </div>
+
+          <div class="example-card">
+            <div class="example-title">🥕 2. Cà Rốt Giòn Ngọt</div>
+            <div class="example-desc">Có <strong>9 củ cà rốt</strong> chia đều cho <strong>3 bạn chuột túi</strong>. Mỗi bạn chuột túi được mấy củ?</div>
+            <div class="example-formula">9 ÷ 3 = 3 củ cà rốt</div>
+          </div>
+
+          <div class="example-card">
+            <div class="example-title">🍭 3. Kẹo Mút Cầu Vồng</div>
+            <div class="example-desc">Có <strong>12 que kẹo mút</strong> chia đều cho <strong>3 bạn sóc</strong>. Mỗi bạn sóc được mấy que kẹo?</div>
+            <div class="example-formula">12 ÷ 3 = 4 que kẹo</div>
+          </div>
+
+          <div class="example-card">
+            <div class="example-title">🍪 4. Bánh Quy Bơ Thơm</div>
+            <div class="example-desc">Có <strong>10 chiếc bánh quy</strong> chia đều cho <strong>2 bạn gấu</strong>. Mỗi bạn gấu được mấy chiếc bánh?</div>
+            <div class="example-formula">10 ÷ 2 = 5 chiếc bánh</div>
+          </div>
+
+          <div class="example-card">
+            <div class="example-title">🥢 5. Đôi Đũa Bữa Cơm</div>
+            <div class="example-desc">Bé An lấy <strong>8 chiếc đũa</strong> chia đều cho <strong>4 người</strong> ăn cơm. Mỗi người được mấy chiếc đũa?</div>
+            <div class="example-formula">8 ÷ 4 = 2 chiếc (1 đôi)</div>
+          </div>
+        </div>
+
+        <!-- BẢNG BÍ KÍP CHIA NHANH -->
+        <div class="rules-table-box">
+          <h4 style="color: #3730A3; font-size: 1.25rem; margin-bottom: 12px; text-align: center;">
+            ⭐ Bảng Bí Kíp Chia Nhanh Nhất Quả Đất Của Bé An ⭐
+          </h4>
+          <table class="rules-table">
+            <thead>
+              <tr>
+                <th>Số Quà</th>
+                <th>Số Bạn Nhận</th>
+                <th>Mỗi Bạn Được</th>
+                <th>Phép Tính Phép Thuật</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>4 🍓</td><td>2 bạn</td><td>2 món</td><td><strong>4 ÷ 2 = 2</strong></td></tr>
+              <tr><td>6 🍬</td><td>2 bạn</td><td>3 món</td><td><strong>6 ÷ 2 = 3</strong></td></tr>
+              <tr><td>8 🍎</td><td>2 bạn</td><td>4 món</td><td><strong>8 ÷ 2 = 4</strong></td></tr>
+              <tr><td>10 🍪</td><td>2 bạn</td><td>5 món</td><td><strong>10 ÷ 2 = 5</strong></td></tr>
+              <tr><td>6 🥕</td><td>3 bạn</td><td>2 món</td><td><strong>6 ÷ 3 = 2</strong></td></tr>
+              <tr><td>9 🍉</td><td>3 bạn</td><td>3 món</td><td><strong>9 ÷ 3 = 3</strong></td></tr>
+              <tr><td>12 🍭</td><td>3 bạn</td><td>4 món</td><td><strong>12 ÷ 3 = 4</strong></td></tr>
+              <tr><td>8 🥢</td><td>4 bạn</td><td>2 món</td><td><strong>8 ÷ 4 = 2</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <div style="text-align: center;">
         <button class="big-action-btn" onclick="switchTab('labTab')" style="margin: 0 auto;">
-          🚀 Bé an_lake Thử Tự Chia Kẹo Nào!
+          🚀 Bé an_lake Vào Phòng Kẹo 3D Three.js Ngay!
         </button>
       </div>
     </div>
 
-    <!-- TAB 2: INTERACTIVE SHARING LAB -->
+    <!-- TAB 2: INTERACTIVE 3D THREE.JS LAB -->
     <div id="labTab" class="tab-content">
+      <!-- THREE.JS 3D CANDY STAGE -->
+      <div class="three-stage-box">
+        <div class="three-stage-header">
+          <span style="font-size: 1.3rem;">✨</span>
+          <span class="three-stage-title">Phòng Thí Nghiệm Kẹo Phép Thuật 3D (Three.js)</span>
+        </div>
+        <div class="three-hint-badge">
+          🖱️ Bé rê chuột / chạm tay để xoay ngắm kẹo 3D!
+        </div>
+        <canvas id="threeCanvas"></canvas>
+      </div>
+
       <div class="lab-controls">
         <div class="control-group">
           <span>🎁 Chọn số quà:</span>
@@ -851,12 +1054,17 @@
       </div>
     </div>
 
-    <!-- TAB 3: QUIZ -->
+    <!-- TAB 3: 20 QUIZ QUESTIONS -->
     <div id="quizTab" class="tab-content">
       <div class="quiz-container">
         <div class="quiz-header">
-          <h2 style="font-size: 1.45rem; color: #1E293B;">🎯 Thử Thách Bé an_lake Thông Thái</h2>
-          <div class="star-counter">⭐ <span id="quizScore">0</span> / 5 Sao</div>
+          <div>
+            <h2 style="font-size: 1.45rem; color: #1E293B;">🎯 Đấu Trường 20 Câu Đố Bé an_lake Thông Thái</h2>
+            <p id="quizQuestionTracker" style="font-size: 0.95rem; color: #64748B; font-weight: 600; margin-top: 2px;">
+              Câu hỏi 1 / 20
+            </p>
+          </div>
+          <div class="star-counter">⭐ <span id="quizScore">0</span> / 20 Sao</div>
         </div>
 
         <div class="quiz-question-box">
@@ -918,13 +1126,13 @@
     </div>
 
     <div class="card-footer">
-      Thiết kế dành riêng cho bé <strong>an_lake</strong> nhân ngày <strong>16/11/2026</strong> ✨ Chúc bé học vui và luôn yêu thích khám phá!
+      Thiết kế phiên bản 3D đặc biệt dành riêng cho bé <strong>an_lake</strong> nhân ngày <strong>16/11/2026</strong> ✨ Chúc bé học vui và luôn yêu thích khám phá!
     </div>
   </div>
 
   <script>
     /* ========================================================
-       WEB AUDIO SYNTHESIZER (No external mp3 required)
+       WEB AUDIO SYNTHESIZER
        ======================================================== */
     let audioCtx = null;
     let soundEnabled = true;
@@ -1058,6 +1266,207 @@
     updateConfetti();
 
     /* ========================================================
+       THREE.JS 3D CANDY WONDERLAND STAGE
+       ======================================================== */
+    let threeRenderer, threeScene, threeCamera;
+    let threeCandies = [];
+    let threePlates = [];
+    let threeStars = [];
+    let threeAnimId = null;
+
+    function initThreeJS() {
+      const canvasEl = document.getElementById('threeCanvas');
+      if (!canvasEl || typeof THREE === 'undefined') return;
+
+      const width = canvasEl.clientWidth || 800;
+      const height = canvasEl.clientHeight || 300;
+
+      threeScene = new THREE.Scene();
+      threeScene.background = new THREE.Color(0xF0F9FF);
+
+      threeCamera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
+      threeCamera.position.set(0, 3.5, 9);
+      threeCamera.lookAt(0, 0.5, 0);
+
+      threeRenderer = new THREE.WebGLRenderer({ canvas: canvasEl, antialias: true, alpha: true });
+      threeRenderer.setSize(width, height);
+      threeRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      threeRenderer.shadowMap.enabled = true;
+
+      // Lights
+      const ambientLight = new THREE.AmbientLight(0xffffff, 0.85);
+      threeScene.add(ambientLight);
+
+      const dirLight = new THREE.DirectionalLight(0xfff5ea, 0.9);
+      dirLight.position.set(5, 10, 7);
+      threeScene.add(dirLight);
+
+      const pinkLight = new THREE.PointLight(0xff6b8b, 0.8, 15);
+      pinkLight.position.set(-4, 3, 2);
+      threeScene.add(pinkLight);
+
+      const cyanLight = new THREE.PointLight(0x4ecdc4, 0.8, 15);
+      cyanLight.position.set(4, 3, 2);
+      threeScene.add(cyanLight);
+
+      // Floor Shadow Plane
+      const floorGeo = new THREE.PlaneGeometry(24, 14);
+      const floorMat = new THREE.MeshBasicMaterial({ color: 0xE0F2FE, transparent: true, opacity: 0.6 });
+      const floor = new THREE.Mesh(floorGeo, floorMat);
+      floor.rotation.x = -Math.PI / 2;
+      floor.position.y = -1.2;
+      threeScene.add(floor);
+
+      // Build 3D plates and background floating star particles
+      createThreePlates();
+      createThreeStars();
+      updateThreeCandies();
+
+      // Mouse interactive tilt
+      let mouseX = 0, mouseY = 0;
+      canvasEl.addEventListener('mousemove', (e) => {
+        const rect = canvasEl.getBoundingClientRect();
+        mouseX = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+        mouseY = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+      });
+
+      function animate() {
+        threeAnimId = requestAnimationFrame(animate);
+
+        // Smooth camera tilt
+        threeCamera.position.x += (mouseX * 1.5 - threeCamera.position.x) * 0.05;
+        threeCamera.position.y += ((3.5 - mouseY * 0.8) - threeCamera.position.y) * 0.05;
+        threeCamera.lookAt(0, 0.5, 0);
+
+        // Rotate & bob candies
+        const time = Date.now() * 0.002;
+        threeCandies.forEach((candy, idx) => {
+          candy.rotation.y += 0.015;
+          candy.rotation.x += 0.01;
+          candy.position.y = candy.userData.baseY + Math.sin(time + idx) * 0.12;
+        });
+
+        // Rotate plates gently
+        threePlates.forEach((plate, idx) => {
+          plate.rotation.y += 0.005;
+        });
+
+        // Twinkle stars
+        threeStars.forEach((star, idx) => {
+          star.rotation.z += 0.02;
+          star.position.y += Math.sin(time * 0.8 + idx) * 0.004;
+        });
+
+        threeRenderer.render(threeScene, threeCamera);
+      }
+      animate();
+
+      window.addEventListener('resize', () => {
+        if (!canvasEl || !threeRenderer || !threeCamera) return;
+        const w = canvasEl.clientWidth;
+        const h = canvasEl.clientHeight;
+        threeCamera.aspect = w / h;
+        threeCamera.updateProjectionMatrix();
+        threeRenderer.setSize(w, h);
+      });
+    }
+
+    function createThreePlates() {
+      threePlates.forEach(p => threeScene.remove(p));
+      threePlates = [];
+
+      const plateGeo = new THREE.CylinderGeometry(1.2, 1.4, 0.25, 32);
+      const plateRimGeo = new THREE.TorusGeometry(1.3, 0.08, 16, 32);
+      plateRimGeo.rotateX(Math.PI / 2);
+
+      const colors = [0xFF6B8B, 0x4ECDC4, 0xFFD166];
+      const spacing = 3.2;
+      const startX = -((labFriendsCount - 1) * spacing) / 2;
+
+      for (let i = 0; i < labFriendsCount; i++) {
+        const plateGroup = new THREE.Group();
+        const mat = new THREE.MeshStandardMaterial({
+          color: colors[i % colors.length],
+          roughness: 0.3,
+          metalness: 0.1
+        });
+        const mesh = new THREE.Mesh(plateGeo, mat);
+        const rim = new THREE.Mesh(plateRimGeo, new THREE.MeshStandardMaterial({ color: 0xFFFFFF }));
+
+        plateGroup.add(mesh);
+        plateGroup.add(rim);
+
+        plateGroup.position.set(startX + i * spacing, -0.9, 0.5);
+        threeScene.add(plateGroup);
+        threePlates.push(plateGroup);
+      }
+    }
+
+    function createThreeStars() {
+      threeStars.forEach(s => threeScene.remove(s));
+      threeStars = [];
+
+      const starGeo = new THREE.OctahedronGeometry(0.18, 0);
+      const starMat = new THREE.MeshStandardMaterial({
+        color: 0xFDE047,
+        emissive: 0xEAB308,
+        emissiveIntensity: 0.6,
+        roughness: 0.2
+      });
+
+      for (let i = 0; i < 24; i++) {
+        const star = new THREE.Mesh(starGeo, starMat);
+        star.position.set(
+          (Math.random() - 0.5) * 16,
+          Math.random() * 4 - 0.5,
+          (Math.random() - 0.5) * 6 - 2
+        );
+        threeScene.add(star);
+        threeStars.push(star);
+      }
+    }
+
+    function updateThreeCandies() {
+      if (!threeScene) return;
+      threeCandies.forEach(c => threeScene.remove(c));
+      threeCandies = [];
+
+      // Candies remaining in the main basket in 3D
+      const candyGeo = new THREE.SphereGeometry(0.35, 24, 24);
+      const candyRingGeo = new THREE.TorusGeometry(0.42, 0.12, 16, 24);
+      const colors = [0xFF5376, 0x10B981, 0xF59E0B, 0x8B5CF6, 0xEC4899, 0x06B6D4];
+
+      const count = basketGifts.length;
+      const radius = 1.6;
+
+      for (let i = 0; i < count; i++) {
+        const group = new THREE.Group();
+        const col = colors[i % colors.length];
+        const mat = new THREE.MeshStandardMaterial({
+          color: col,
+          roughness: 0.2,
+          metalness: 0.2,
+          emissive: col,
+          emissiveIntensity: 0.2
+        });
+
+        const centerSphere = new THREE.Mesh(candyGeo, mat);
+        const torusWrap = new THREE.Mesh(candyRingGeo, new THREE.MeshStandardMaterial({ color: 0xFFFFFF }));
+        group.add(centerSphere);
+        group.add(torusWrap);
+
+        const angle = (i / Math.max(count, 1)) * Math.PI * 2;
+        group.position.x = Math.cos(angle) * radius;
+        group.position.z = Math.sin(angle) * (radius * 0.6) - 1.2;
+        group.userData = { baseY: 1.8 + (i % 2) * 0.3 };
+        group.position.y = group.userData.baseY;
+
+        threeScene.add(group);
+        threeCandies.push(group);
+      }
+    }
+
+    /* ========================================================
        TABS SWITCHING
        ======================================================== */
     const tabs = document.querySelectorAll('.tab-btn');
@@ -1073,6 +1482,12 @@
       });
       if (tabId === 'labTab') {
         renderLab();
+        if (!threeRenderer) {
+          setTimeout(initThreeJS, 100);
+        } else {
+          createThreePlates();
+          updateThreeCandies();
+        }
       }
     }
 
@@ -1112,6 +1527,7 @@
       document.getElementById('btnFriends2').classList.toggle('active', count === 2);
       document.getElementById('btnFriends3').classList.toggle('active', count === 3);
       playPop();
+      createThreePlates();
       resetLab();
     }
 
@@ -1129,6 +1545,7 @@
       friendsPlates = Array.from({ length: labFriendsCount }, () => []);
       document.getElementById('feedbackBanner').style.display = 'none';
       renderLab();
+      updateThreeCandies();
     }
 
     function renderLab() {
@@ -1173,6 +1590,7 @@
       }
 
       checkSharingStatus();
+      updateThreeCandies();
     }
 
     function distributeOneGift(giftIndex) {
@@ -1258,43 +1676,148 @@
     }
 
     /* ========================================================
-       QUIZ SYSTEM
+       20 QUIZ QUESTIONS SYSTEM
        ======================================================== */
     const quizList = [
       {
-        text: 'Có 4 quả dâu tây 🍓 chia đều cho 2 bạn thỏ 🐰🐰. Mỗi bạn được mấy quả?',
+        text: 'Có 4 quả dâu tây đỏ mọng 🍓 chia đều cho 2 bạn thỏ 🐰🐰. Mỗi bạn thỏ nhận được mấy quả?',
         visual: '🍓 🍓 🍓 🍓   ➡️   🐰 🐰',
-        options: [1, 2, 3],
-        correct: 2,
+        options: ['1 quả dâu', '2 quả dâu tây', '3 quả dâu', '4 quả dâu'],
+        correctIndex: 1,
         explain: '4 quả dâu chia cho 2 bạn thỏ: 4 ÷ 2 = 2 quả dâu!'
       },
       {
-        text: 'Có 6 cái kẹo ngọt 🍬 chia đều cho 3 bạn mèo 🐱🐱🐱. Mỗi bạn được mấy cái kẹo?',
-        visual: '🍬 🍬 🍬 🍬 🍬 🍬   ➡️   🐱 🐱 🐱',
-        options: [2, 3, 4],
-        correct: 2,
-        explain: '6 cái kẹo chia cho 3 bạn mèo: 6 ÷ 3 = 2 cái kẹo!'
-      },
-      {
-        text: 'Có 6 củ cà rốt 🥕 chia đều cho 2 bạn chuột túi 🦘🦘. Mỗi bạn được mấy củ?',
+        text: 'Có 6 củ cà rốt giòn ngọt 🥕 chia đều cho 2 bạn chuột túi 🦘🦘. Mỗi bạn chuột túi được mấy củ cà rốt?',
         visual: '🥕 🥕 🥕 🥕 🥕 🥕   ➡️   🦘 🦘',
-        options: [2, 3, 4],
-        correct: 3,
+        options: ['2 củ cà rốt', '3 củ cà rốt', '4 củ cà rốt', '5 củ cà rốt'],
+        correctIndex: 1,
         explain: '6 củ cà rốt chia cho 2 bạn: 6 ÷ 2 = 3 củ cà rốt!'
       },
       {
-        text: 'Có 8 cái bánh quy 🍪 chia đều cho 4 bạn cún 🐶🐶🐶🐶. Mỗi bạn được mấy cái bánh?',
+        text: 'Có 8 quả táo đỏ thơm ngọt 🍎 chia đều cho 2 bạn sóc nâu 🐿️🐿️. Mỗi bạn sóc được mấy quả táo?',
+        visual: '🍎 🍎 🍎 🍎 🍎 🍎 🍎 🍎   ➡️   🐿️ 🐿️',
+        options: ['3 quả táo', '4 quả táo đỏ', '5 quả táo', '6 quả táo'],
+        correctIndex: 1,
+        explain: '8 quả táo chia cho 2 bạn sóc: 8 ÷ 2 = 4 quả táo đỏ!'
+      },
+      {
+        text: 'Có 10 ngôi sao may mắn lấp lánh ⭐ chia đều cho 2 bạn gấu 🐻🐻. Mỗi bạn gấu được mấy ngôi sao?',
+        visual: '⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐   ➡️   🐻 🐻',
+        options: ['4 ngôi sao', '5 ngôi sao may mắn', '6 ngôi sao', '8 ngôi sao'],
+        correctIndex: 1,
+        explain: '10 ngôi sao chia cho 2 bạn gấu: 10 ÷ 2 = 5 ngôi sao!'
+      },
+      {
+        text: 'Có 12 que kem hoa quả mát lạnh 🍦 chia đều cho 2 bạn chim cánh cụt 🐧🐧. Mỗi bạn chim được mấy que kem?',
+        visual: '🍦 🍦 🍦 🍦 🍦 🍦 🍦 🍦 🍦 🍦 🍦 🍦   ➡️   🐧 🐧',
+        options: ['5 que kem', '6 que kem', '7 que kem', '8 que kem'],
+        correctIndex: 1,
+        explain: '12 que kem chia cho 2 bạn: 12 ÷ 2 = 6 que kem hoa quả!'
+      },
+      {
+        text: 'Có 14 viên kẹo sô-cô-la ngọt ngào 🍫 chia đều cho 2 bạn khỉ con 🐒🐒. Mỗi bạn khỉ được mấy viên kẹo?',
+        visual: '🍫 🍫 🍫 🍫 🍫 🍫 🍫 🍫 🍫 🍫 🍫 🍫 🍫 🍫   ➡️   🐒 🐒',
+        options: ['6 viên kẹo', '7 viên kẹo sô-cô-la', '8 viên kẹo', '9 viên kẹo'],
+        correctIndex: 1,
+        explain: '14 viên kẹo chia cho 2 bạn: 14 ÷ 2 = 7 viên kẹo!'
+      },
+      {
+        text: 'Có 16 quả cherry đỏ mọng 🍒 chia đều cho 2 bạn thiên nga 🦢🦢. Mỗi bạn thiên nga được mấy quả cherry?',
+        visual: '🍒 (16 quả cherry)   ➡️   🦢 🦢',
+        options: ['7 quả cherry', '8 quả cherry đỏ', '9 quả cherry', '10 quả cherry'],
+        correctIndex: 1,
+        explain: '16 quả cherry chia cho 2 bạn: 16 ÷ 2 = 8 quả cherry!'
+      },
+      {
+        text: 'Có 18 hạt dẻ thơm lừng 🌰 chia đều cho 2 bạn sóc xám 🐿️🐿️. Mỗi bạn sóc nhận được mấy hạt dẻ?',
+        visual: '🌰 (18 hạt dẻ thơm lừng)   ➡️   🐿️ 🐿️',
+        options: ['8 hạt dẻ', '9 hạt dẻ thơm ngon', '10 hạt dẻ', '11 hạt dẻ'],
+        correctIndex: 1,
+        explain: '18 hạt dẻ chia cho 2 bạn sóc: 18 ÷ 2 = 9 hạt dẻ!'
+      },
+      {
+        text: 'Có 6 cái kẹo ngọt 🍬 chia đều cho 3 bạn mèo con 🐱🐱🐱. Mỗi bạn mèo nhận được mấy cái kẹo?',
+        visual: '🍬 🍬 🍬 🍬 🍬 🍬   ➡️   🐱 🐱 🐱',
+        options: ['1 cái kẹo', '2 cái kẹo ngọt', '3 cái kẹo', '4 cái kẹo'],
+        correctIndex: 1,
+        explain: '6 cái kẹo chia cho 3 bạn mèo: 6 ÷ 3 = 2 cái kẹo!'
+      },
+      {
+        text: 'Có 9 miếng dưa hấu ngọt mát 🍉 chia đều cho 3 bạn gấu trúc 🐼🐼🐼. Mỗi bạn gấu trúc được mấy miếng dưa?',
+        visual: '🍉 🍉 🍉 🍉 🍉 🍉 🍉 🍉 🍉   ➡️   🐼 🐼 🐼',
+        options: ['2 miếng dưa', '3 miếng dưa hấu', '4 miếng dưa', '5 miếng dưa'],
+        correctIndex: 1,
+        explain: '9 miếng dưa chia cho 3 bạn: 9 ÷ 3 = 3 miếng dưa!'
+      },
+      {
+        text: 'Có 12 que kẹo mút cầu vồng 🍭 chia đều cho 3 bạn thỏ trắng 🐰🐰🐰. Mỗi bạn thỏ được mấy que kẹo mút?',
+        visual: '🍭 (12 que kẹo mút cầu vồng)   ➡️   🐰 🐰 🐰',
+        options: ['3 que kẹo', '4 que kẹo mút', '5 que kẹo', '6 que kẹo'],
+        correctIndex: 1,
+        explain: '12 que kẹo mút chia cho 3 bạn: 12 ÷ 3 = 4 que kẹo mút!'
+      },
+      {
+        text: 'Có 15 viên bi ve phát sáng phép thuật 🔮 chia đều cho 3 chú rồng con 🐉🐉🐉. Mỗi chú rồng được mấy viên bi?',
+        visual: '🔮 (15 viên bi ve phát sáng)   ➡️   🐉 🐉 🐉',
+        options: ['4 viên bi', '5 viên bi ve phép thuật', '6 viên bi', '7 viên bi'],
+        correctIndex: 1,
+        explain: '15 viên bi ve chia cho 3 chú rồng: 15 ÷ 3 = 5 viên bi ve!'
+      },
+      {
+        text: 'Có 18 quả bóng bay sắc màu 🎈 chia đều cho 3 bạn voi con 🐘🐘🐘. Mỗi bạn voi nhận được mấy quả bóng bay?',
+        visual: '🎈 (18 quả bóng bay)   ➡️   🐘 🐘 🐘',
+        options: ['5 quả bóng', '6 quả bóng bay', '7 quả bóng', '8 quả bóng'],
+        correctIndex: 1,
+        explain: '18 quả bóng bay chia cho 3 bạn voi: 18 ÷ 3 = 6 quả bóng bay!'
+      },
+      {
+        text: 'Có 15 bắp ngô nướng vàng 🌽 chia đều cho 3 bạn hươu cao cổ 🦒🦒🦒. Mỗi bạn hươu nhận được mấy bắp ngô?',
+        visual: '🌽 (15 bắp ngô nướng)   ➡️   🦒 🦒 🦒',
+        options: ['4 bắp ngô', '5 bắp ngô nướng', '6 bắp ngô', '7 bắp ngô'],
+        correctIndex: 1,
+        explain: '15 bắp ngô chia cho 3 bạn hươu: 15 ÷ 3 = 5 bắp ngô nướng!'
+      },
+      {
+        text: 'Có 6 hộp sữa dâu thơm ngon 🧃 chia đều cho 3 bạn nhỏ cùng uống. Mỗi bạn nhỏ được mấy hộp sữa?',
+        visual: '🧃 🧃 🧃 🧃 🧃 🧃   ➡️   👦 👧 🧒',
+        options: ['1 hộp sữa', '2 hộp sữa dâu', '3 hộp sữa', '4 hộp sữa'],
+        correctIndex: 1,
+        explain: '6 hộp sữa chia cho 3 bạn: 6 ÷ 3 = 2 hộp sữa dâu!'
+      },
+      {
+        text: 'Có 8 chiếc bánh quy bơ 🍪 chia đều cho 4 bạn cún con 🐶🐶🐶🐶. Mỗi bạn cún nhận được mấy chiếc bánh quy?',
         visual: '🍪 🍪 🍪 🍪 🍪 🍪 🍪 🍪   ➡️   🐶 🐶 🐶 🐶',
-        options: [2, 3, 1],
-        correct: 2,
+        options: ['1 chiếc bánh', '2 chiếc bánh quy bơ', '3 chiếc bánh', '4 chiếc bánh'],
+        correctIndex: 1,
         explain: '8 cái bánh chia cho 4 bạn: 8 ÷ 4 = 2 cái bánh!'
       },
       {
-        text: 'Có 10 ngôi sao vàng ⭐ chia đều cho 2 bạn gấu 🐻🐻. Mỗi bạn được mấy ngôi sao?',
-        visual: '⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐   ➡️   🐻 🐻',
-        options: [4, 5, 6],
-        correct: 5,
-        explain: '10 ngôi sao chia cho 2 bạn gấu: 10 ÷ 2 = 5 ngôi sao!'
+        text: 'Bé An lấy 8 chiếc đũa 🥢 chia đều cho 4 người ăn cơm. Mỗi người nhận được mấy chiếc đũa?',
+        visual: '🥢 🥢 🥢 🥢 🥢 🥢 🥢 🥢   ➡️   👨 👩 👧 👦',
+        options: ['1 chiếc đũa', '2 chiếc đũa (1 đôi)', '3 chiếc đũa', '4 chiếc đũa'],
+        correctIndex: 1,
+        explain: '8 chiếc đũa chia cho 4 người: 8 ÷ 4 = 2 chiếc đũa, chính là 1 đôi đũa xinh xắn!'
+      },
+      {
+        text: 'Có 12 chiếc bánh cupcake kem dâu 🧁 chia đều cho 4 bạn kỳ lân 🦄🦄🦄🦄. Mỗi bạn kỳ lân được mấy chiếc bánh?',
+        visual: '🧁 (12 bánh cupcake kem dâu)   ➡️   🦄 🦄 🦄 🦄',
+        options: ['2 chiếc bánh', '3 chiếc bánh cupcake', '4 chiếc bánh', '5 chiếc bánh'],
+        correctIndex: 1,
+        explain: '12 chiếc bánh cupcake chia cho 4 bạn kỳ lân: 12 ÷ 4 = 3 chiếc bánh!'
+      },
+      {
+        text: 'Có 20 viên kẹo dẻo gấu Haribo 🧸 chia đều cho 2 bạn nhỏ. Mỗi bạn nhận được bao nhiêu viên kẹo gấu?',
+        visual: '🧸 (20 viên kẹo dẻo gấu Haribo)   ➡️   👧 👦',
+        options: ['8 viên kẹo', '10 viên kẹo gấu', '12 viên kẹo', '15 viên kẹo'],
+        correctIndex: 1,
+        explain: '20 viên kẹo chia cho 2 bạn: 20 ÷ 2 = 10 viên kẹo gấu!'
+      },
+      {
+        text: '👑 THỬ THÁCH CÚP VÀNG: Bé An mang ra 16 khối gạch LEGO phép thuật 🧱 chia đều cho 4 bạn thú để xây lâu đài. Mỗi bạn được mấy khối gạch?',
+        visual: '🧱 (16 khối gạch LEGO phép thuật)   ➡️   🐰 🐻 🐱 🐶',
+        options: ['3 khối gạch', '4 khối gạch LEGO', '5 khối gạch', '6 khối gạch'],
+        correctIndex: 1,
+        explain: '16 khối gạch LEGO chia cho 4 bạn: 16 ÷ 4 = 4 khối gạch LEGO!'
       }
     ];
 
@@ -1305,6 +1828,7 @@
     function renderCurrentQuiz() {
       quizAnswered = false;
       const q = quizList[currentQuizIndex];
+      document.getElementById('quizQuestionTracker').textContent = `Câu hỏi ${currentQuizIndex + 1} / ${quizList.length}`;
       document.getElementById('quizQuestionText').textContent = `Câu ${currentQuizIndex + 1}: ${q.text}`;
       document.getElementById('quizVisual').textContent = q.visual;
       document.getElementById('quizFeedback').innerHTML = '';
@@ -1313,22 +1837,22 @@
       const optionsBox = document.getElementById('quizOptionsContainer');
       optionsBox.innerHTML = '';
 
-      q.options.forEach(opt => {
+      q.options.forEach((optText, optIdx) => {
         const btn = document.createElement('button');
         btn.className = 'quiz-btn';
-        btn.textContent = opt;
-        btn.onclick = () => selectQuizAnswer(opt, btn);
+        btn.textContent = optText;
+        btn.onclick = () => selectQuizAnswer(optIdx, btn);
         optionsBox.appendChild(btn);
       });
     }
 
-    function selectQuizAnswer(choice, btnElement) {
+    function selectQuizAnswer(choiceIdx, btnElement) {
       if (quizAnswered) return;
       quizAnswered = true;
       const q = quizList[currentQuizIndex];
       const feedback = document.getElementById('quizFeedback');
 
-      if (choice === q.correct) {
+      if (choiceIdx === q.correctIndex) {
         btnElement.classList.add('correct');
         quizScore++;
         document.getElementById('quizScore').textContent = quizScore;
@@ -1338,13 +1862,14 @@
         speakVietnamese(`Đúng rồi! an lake giỏi quá!`);
       } else {
         btnElement.classList.add('wrong');
-        feedback.innerHTML = `<span style="color: #DC2626;">💡 Chưa đúng rồi! Đáp án đúng là <strong>${q.correct}</strong> (${q.explain})</span>`;
+        const correctText = q.options[q.correctIndex];
+        feedback.innerHTML = `<span style="color: #DC2626;">💡 Chưa đúng rồi! Đáp án đúng là <strong>${correctText}</strong> (${q.explain})</span>`;
         playWrongTone();
       }
 
       document.getElementById('btnNextQuiz').style.display = 'inline-flex';
       if (currentQuizIndex === quizList.length - 1) {
-        document.getElementById('btnNextQuiz').textContent = '🏆 Nhận Cúp Chiến Thắng!';
+        document.getElementById('btnNextQuiz').textContent = '🏆 Nhận Cúp Chiến Thắng 20 Câu!';
       }
     }
 
@@ -1357,25 +1882,25 @@
         const container = document.querySelector('.quiz-container');
         container.innerHTML = `
           <div style="text-align: center; padding: 26px;">
-            <div style="font-size: 4.5rem; margin-bottom: 10px;">🏆 ⭐ 👑</div>
-            <h2 style="color: #D97706; font-size: 1.9rem; margin: 12px 0;">
-              CHÚC MỪNG CHIẾN THẦN CHIA QUÀ AN_LAKE!
+            <div style="font-size: 5rem; margin-bottom: 12px; animation: popIn 0.5s ease;">🏆 👑 ⭐ 🌟</div>
+            <h2 style="color: #D97706; font-size: 2.1rem; margin: 12px 0;">
+              CHÚC MỪNG CHIẾN THẦN CHIA QUÀ 3D AN_LAKE!
             </h2>
-            <p style="font-size: 1.3rem; color: #334155; margin-bottom: 20px;">
-              Bé đã xuất sắc đạt được <strong>${quizScore} / 5</strong> ngôi sao thông thái!
+            <p style="font-size: 1.35rem; color: #334155; margin-bottom: 20px;">
+              Bé đã xuất sắc đạt được <strong>${quizScore} / ${quizList.length}</strong> ngôi sao thông thái tuyệt đối!
             </p>
-            <div style="background: #FEF3C7; padding: 18px; border-radius: 22px; border: 2px dashed #F59E0B; margin-bottom: 22px; font-size: 1.2rem; line-height: 1.6;">
-              🎖️ <strong>Huy Hiệu Ngày 16/11/2026:</strong><br/>
-              Bé an_lake là bậc thầy chia quà công bằng, luôn đem lại niềm vui và tiếng cười cho tất cả các bạn!
+            <div style="background: #FEF3C7; padding: 20px; border-radius: 24px; border: 3px dashed #F59E0B; margin-bottom: 24px; font-size: 1.25rem; line-height: 1.7;">
+              🎖️ <strong>Huy Hiệu Vinh Quang Ngày 16/11/2026:</strong><br/>
+              Bé an_lake là bậc thầy chia quà công bằng, làm chủ không gian kẹo 3D Three.js và luôn đem lại niềm vui cho muôn loài thú thần tiên!
             </div>
             <button class="big-action-btn" style="margin: 0 auto;" onclick="restartQuiz()">
-              🔄 Chơi lại trò chơi
+              🔄 Chơi lại 20 câu đố vui
             </button>
           </div>
         `;
         triggerConfetti();
         playSuccessChime();
-        speakVietnamese(`Chúc mừng an lake đã hoàn thành xuất sắc trò chơi chia quà!`);
+        speakVietnamese(`Chúc mừng an lake đã hoàn thành xuất sắc 20 câu hỏi chia quà và nhận cúp vàng chiến thắng!`);
       }
     }
 
