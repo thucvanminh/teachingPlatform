@@ -10,7 +10,7 @@ const LECTURE_DATA = {
   subject: "Tiếng Anh 12 (Global Success - Unit 7)",
   teacher: "Thầy Thức",
 
-  // 1. TỪ VỰNG CỐT LÕI (12 TỪ VỰNG TRỌNG TÂM CỦA BÀI HỌC)
+  // 1. TỪ VỰNG CỐT LÕI (20 TỪ VỰNG CỐT LÕI - SGK TRANG 90-101)
   vocabList: [
     {
         "id": 1,
@@ -155,6 +155,102 @@ const LECTURE_DATA = {
         "collocation": "go viral / viral video clip",
         "example": "The humorous clip of the clever dog went viral and garnered millions of shares overnight.",
         "exampleVi": "Đoạn clip hài hước về chú chó thông minh đã lan truyền chóng mặt và nhận được hàng triệu lượt chia sẻ sau một đêm."
+    },
+    {
+        "id": 13,
+        "unit": 4,
+        "unitName": "Nhóm 4: Báo Chí Số & Tương Tác Hiện Đại",
+        "word": "Fake news",
+        "ipa": "/ˌfeɪk ˈnjuːz/",
+        "pos": "noun phr.",
+        "meaning": "Tin tức giả mạo, tin bịa đặt",
+        "collocation": "spread fake news / combat fake news",
+        "example": "Social media users should be cautious to avoid spreading fake news without checking.",
+        "exampleVi": "Người dùng mạng xã hội nên cẩn trọng để tránh lan truyền tin giả mà chưa kiểm chứng."
+    },
+    {
+        "id": 14,
+        "unit": 4,
+        "unitName": "Nhóm 4: Báo Chí Số & Tương Tác Hiện Đại",
+        "word": "Fact-check",
+        "ipa": "/ˈfækt tʃek/",
+        "pos": "verb, noun",
+        "meaning": "Kiểm chứng thông tin, xác minh sự thật",
+        "collocation": "fact-check a story / fact-checking tool",
+        "example": "Reputable journalists always fact-check every single piece of information before publishing.",
+        "exampleVi": "Các nhà báo uy tín luôn kiểm chứng từng mẩu thông tin trước khi xuất bản."
+    },
+    {
+        "id": 15,
+        "unit": 4,
+        "unitName": "Nhóm 4: Báo Chí Số & Tương Tác Hiện Đại",
+        "word": "Credible",
+        "ipa": "/ˈkredəbl/",
+        "pos": "adjective",
+        "meaning": "Đáng tin cậy, có căn cứ xác thực",
+        "collocation": "credible source / highly credible",
+        "example": "An informative article must rely on credible sources to maintain the trust of readers.",
+        "exampleVi": "Một bài báo cung cấp nhiều thông tin phải dựa trên các nguồn đáng tin cậy để giữ vững niềm tin của độc giả."
+    },
+    {
+        "id": 16,
+        "unit": 4,
+        "unitName": "Nhóm 4: Báo Chí Số & Tương Tác Hiện Đại",
+        "word": "Interactive",
+        "ipa": "/ˌɪntərˈæktɪv/",
+        "pos": "adjective",
+        "meaning": "Có tính tương tác hai chiều",
+        "collocation": "interactive media / interactive features",
+        "example": "Digital media provides interactive features that allow users to comment and express their opinions.",
+        "exampleVi": "Truyền thông số cung cấp các tính năng tương tác cho phép người dùng bình luận và bày tỏ quan điểm."
+    },
+    {
+        "id": 17,
+        "unit": 4,
+        "unitName": "Nhóm 4: Báo Chí Số & Tương Tác Hiện Đại",
+        "word": "Accessible",
+        "ipa": "/əkˈsesəbl/",
+        "pos": "adjective",
+        "meaning": "Dễ tiếp cận, có thể truy cập được",
+        "collocation": "freely accessible / easily accessible",
+        "example": "Most online news articles are freely accessible with just a few clicks on a smartphone.",
+        "exampleVi": "Hầu hết các bài báo trực tuyến đều có thể tiếp cận miễn phí chỉ với vài cú nhấp trên điện thoại thông minh."
+    },
+    {
+        "id": 18,
+        "unit": 4,
+        "unitName": "Nhóm 4: Báo Chí Số & Tương Tác Hiện Đại",
+        "word": "Distribute",
+        "ipa": "/dɪˈstrɪbjuːt/",
+        "pos": "verb",
+        "meaning": "Phân phối, phát tán (thông tin, ấn phẩm)",
+        "collocation": "distribute news / distribute via electronic devices",
+        "example": "Digital news is distributed to millions of readers across the globe within seconds.",
+        "exampleVi": "Tin tức số được phân phối đến hàng triệu độc giả trên khắp toàn cầu trong vòng vài giây."
+    },
+    {
+        "id": 19,
+        "unit": 4,
+        "unitName": "Nhóm 4: Báo Chí Số & Tương Tác Hiện Đại",
+        "word": "Update",
+        "ipa": "/ʌpˈdeɪt/",
+        "pos": "verb, noun",
+        "meaning": "Cập nhật (tin tức); bản tin cập nhật",
+        "collocation": "update in real time / regular updates",
+        "example": "Online news websites can update breaking stories in real time as events unfold.",
+        "exampleVi": "Các trang báo mạng có thể cập nhật các câu chuyện nóng hổi theo thời gian thực khi sự việc diễn ra."
+    },
+    {
+        "id": 20,
+        "unit": 4,
+        "unitName": "Nhóm 4: Báo Chí Số & Tương Tác Hiện Đại",
+        "word": "Viewer",
+        "ipa": "/ˈvjuːə(r)/",
+        "pos": "noun",
+        "meaning": "Khán giả, người xem truyền hình/video",
+        "collocation": "television viewers / attract viewers",
+        "example": "The breaking news broadcast attracted over three million television viewers nationwide.",
+        "exampleVi": "Buổi phát sóng bản tin thời sự đặc biệt đã thu hút hơn ba triệu khán giả truyền hình trên cả nước."
     }
 ],
 
