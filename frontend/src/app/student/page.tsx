@@ -1334,9 +1334,13 @@ export default function StudentDashboard() {
                               Ngày {dateLabel}
                             </span>
                             <span className="text-xs text-slate-500 font-semibold">Lớp {gradeLabel}</span>
-                            {totalQuestionsCount > 0 && (
+                            {totalQuestionsCount > 0 ? (
                               <span className="text-xs font-mono font-bold text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded-md border border-slate-200">
                                 {totalQuestionsCount} câu trắc nghiệm
+                              </span>
+                            ) : (
+                              <span className="text-xs font-bold text-indigo-700 bg-indigo-50 px-2.5 py-0.5 rounded-full border border-indigo-200/80">
+                                Lý thuyết & Flashcard 3D
                               </span>
                             )}
                             {allGraded ? (
@@ -1367,8 +1371,18 @@ export default function StudentDashboard() {
 
                     {isExpanded && (
                       <div className="p-5 sm:p-6 pt-2 border-t border-slate-100 bg-slate-50/50">
-                        {/* Thông báo nếu buổi học không có BTVN (toàn bộ dồn làm tại lớp) */}
-                        {assignment.assessment_attempts?.every((a: any) => a.assessments?.type !== 'HOMEWORK') && (
+                        {/* Thông báo nếu buổi học không có BTVN hoặc chỉ có lý thuyết */}
+                        {(!assignment.assessment_attempts || assignment.assessment_attempts.length === 0) ? (
+                          <div className="mt-4 px-4 py-3 rounded-2xl bg-purple-50/90 border border-purple-200 text-purple-900 text-xs sm:text-sm flex flex-wrap items-center justify-between gap-2 shadow-2xs">
+                            <span className="font-semibold flex items-center space-x-2">
+                              <span className="text-base">📖</span>
+                              <span>Buổi học chuyên sâu lý thuyết & flashcard 3D tương tác (thầy chưa giao bài tập trắc nghiệm).</span>
+                            </span>
+                            <span className="text-xs font-bold px-3 py-1 rounded-full bg-purple-100 text-purple-800 border border-purple-200">
+                              Lý thuyết & Flashcard 3D
+                            </span>
+                          </div>
+                        ) : assignment.assessment_attempts?.every((a: any) => a.assessments?.type !== 'HOMEWORK') ? (
                           <div className="mt-4 px-4 py-3 rounded-2xl bg-blue-50/90 border border-blue-200 text-blue-900 text-xs sm:text-sm flex flex-wrap items-center justify-between gap-2 shadow-2xs">
                             <span className="font-semibold flex items-center space-x-2">
                               <span className="text-base">🎯</span>
@@ -1380,9 +1394,9 @@ export default function StudentDashboard() {
                                 : 'Luyện tập tại lớp'}
                             </span>
                           </div>
-                        )}
+                        ) : null}
 
-                        <div className={`grid grid-cols-1 ${assignment.assessment_attempts?.length === 1 ? 'md:grid-cols-2' : 'md:grid-cols-3'} gap-5 mt-5`}>
+                        <div className={`grid grid-cols-1 ${(!assignment.assessment_attempts || assignment.assessment_attempts.length <= 1) ? 'md:grid-cols-2' : 'md:grid-cols-3'} gap-5 mt-5`}>
                           {/* ========================================================
                               TRẠM 1: GIẢNG ĐƯỜNG TƯƠNG TÁC & FLASHCARD 3D
                               ======================================================== */}
@@ -1493,6 +1507,51 @@ export default function StudentDashboard() {
                               </div>
                             );
                           })()}
+
+                          {/* ========================================================
+                              TRẠM 2: DÀNH CHO BUỔI HỌC CHUYÊN SÂU LÝ THUYẾT (0 BÀI TẬP)
+                              ======================================================== */}
+                          {(!assignment.assessment_attempts || assignment.assessment_attempts.length === 0) && (
+                            <div className="group p-5 rounded-2xl bg-white border border-purple-200/90 bg-gradient-to-b from-purple-50/40 via-white to-white ring-1 ring-purple-100 flex flex-col justify-between shadow-xs transition duration-200 hover:-translate-y-0.5 hover:shadow-md">
+                              <div>
+                                <div className="flex items-center justify-between gap-2">
+                                  <span className="inline-flex items-center gap-1.5 text-xs font-bold px-2.5 py-1 rounded-lg border bg-purple-600 text-white border-purple-600 shadow-xs">
+                                    <BookOpen className="w-3.5 h-3.5" />
+                                    <span>Trạm 2: Đọc Cẩm Nang Chi Tiết</span>
+                                  </span>
+                                  <span className="text-xs font-bold text-purple-700 bg-purple-50 px-2.5 py-0.5 rounded-md border border-purple-200 font-mono">
+                                    KaTeX & Bảng Từ
+                                  </span>
+                                </div>
+
+                                <h4 className="text-base font-extrabold text-slate-900 mt-3.5 leading-snug tracking-tight group-hover:text-purple-900 transition-colors">
+                                  Hệ Thống Lý Thuyết & Công Thức Ngữ Pháp
+                                </h4>
+                                <p className="text-xs text-slate-600 mt-1.5 line-clamp-3 leading-relaxed">
+                                  Xem toàn văn bảng 20 từ vựng cốt lõi kèm phiên âm IPA, quy tắc Thể sai khiến (Active & Passive Causatives) và mẫu câu giao tiếp ngắt lời lịch sự.
+                                </p>
+
+                                <div className="mt-3.5 flex flex-wrap gap-1.5">
+                                  <span className="text-[11px] font-semibold px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-200/80 inline-flex items-center gap-1">
+                                    <Sparkles className="w-3 h-3 text-purple-500" /> 20 Từ vựng SGK
+                                  </span>
+                                  <span className="text-[11px] font-semibold px-2 py-0.5 rounded-md bg-indigo-50 text-indigo-700 border border-indigo-200/80 inline-flex items-center gap-1">
+                                    <Target className="w-3 h-3 text-indigo-500" /> Thể sai khiến
+                                  </span>
+                                </div>
+                              </div>
+
+                              <div className="mt-5 pt-3 border-t border-slate-100">
+                                <button
+                                  onClick={() => handleOpenLecture(assignment, 'briefing')}
+                                  className="w-full py-2.5 px-4 font-bold text-xs sm:text-sm rounded-xl border transition-all duration-150 active:scale-[0.98] inline-flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white border-purple-600 shadow-sm hover:shadow-purple-500/20"
+                                >
+                                  <BookOpen className="w-4 h-4" />
+                                  <span>Mở Cẩm Nang Bài Giảng (KaTeX)</span>
+                                </button>
+                              </div>
+                            </div>
+                          )}
 
                           {/* ========================================================
                               TRẠM 2 & TRẠM 3: LUYỆN TẬP TẠI LỚP & BÀI TẬP VỀ NHÀ
