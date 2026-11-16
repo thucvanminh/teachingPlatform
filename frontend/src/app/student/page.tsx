@@ -912,6 +912,17 @@ export default function StudentDashboard() {
                       </div>
 
                       <div className="flex items-center space-x-2 self-end sm:self-center">
+                        {hasLecture && (
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleOpenLecture(assignment, 'interactive');
+                            }}
+                            className="px-4 py-2 rounded-2xl bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-amber-950 font-extrabold text-xs sm:text-sm shadow-[0_3px_0_#b45309] active:translate-y-0.5 transition flex items-center space-x-1.5"
+                          >
+                            <span>Khám Phá Bài Học 🎈</span>
+                          </button>
+                        )}
                         {firstAttempt && (
                           <Link
                             href={`/student/mission/${firstAttempt.id}`}
@@ -948,12 +959,20 @@ export default function StudentDashboard() {
                                   {assignment.learning_units?.description || 'Bé xem ví dụ và hình vẽ phép tính nhé!'}
                                 </p>
                               </div>
-                              <button
-                                onClick={() => handleOpenLecture(assignment)}
-                                className="mt-6 w-full py-2.5 bg-amber-400 hover:bg-amber-500 text-amber-950 font-extrabold text-sm rounded-xl transition shadow"
-                              >
-                                Đọc Bài Giảng Của An Lake 🎈
-                              </button>
+                              <div className="mt-6 flex flex-col sm:flex-row gap-2">
+                                <button
+                                  onClick={() => handleOpenLecture(assignment, 'interactive')}
+                                  className="flex-1 py-2.5 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-amber-950 font-extrabold text-sm rounded-xl transition shadow flex items-center justify-center space-x-1"
+                                >
+                                  <span>Mở Card Tương Tác 🍭</span>
+                                </button>
+                                <button
+                                  onClick={() => handleOpenLecture(assignment, 'briefing')}
+                                  className="px-4 py-2.5 bg-pink-100 hover:bg-pink-200 text-pink-800 font-bold text-xs rounded-xl transition"
+                                >
+                                  Xem Tóm Tắt 📜
+                                </button>
+                              </div>
                             </div>
                           )}
 
@@ -1049,10 +1068,18 @@ export default function StudentDashboard() {
                   />
                 </div>
 
-                <div className="border-t-2 border-pink-100 pt-4 flex justify-end">
+                <div className="border-t-2 border-pink-100 pt-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+                  {activeLectureAssignment?.learning_units?.lecture_content_markdown?.match(/\/lectures\/[a-zA-Z0-9_\-\/]+\.html/) ? (
+                    <button
+                      onClick={() => handleOpenLecture(activeLectureAssignment, 'interactive')}
+                      className="w-full sm:w-auto px-5 py-2.5 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-amber-950 font-extrabold text-xs sm:text-sm rounded-2xl shadow-[0_3px_0_#b45309] active:translate-y-0.5 transition flex items-center justify-center space-x-1.5"
+                    >
+                      <span>🚀 Mở Card Tương Tác Chia Kẹo</span>
+                    </button>
+                  ) : <div />}
                   <button
                     onClick={() => setActiveLectureAssignment(null)}
-                    className="px-6 py-2.5 bg-pink-500 hover:bg-pink-600 text-white font-extrabold text-sm rounded-2xl shadow-[0_3px_0_#db2777] transition"
+                    className="w-full sm:w-auto px-6 py-2.5 bg-pink-500 hover:bg-pink-600 text-white font-extrabold text-sm rounded-2xl shadow-[0_3px_0_#db2777] active:translate-y-0.5 transition"
                   >
                     Đã Hiểu Bài Rồi! 🌟
                   </button>
