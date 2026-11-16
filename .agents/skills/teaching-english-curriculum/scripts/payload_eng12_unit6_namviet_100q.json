@@ -1,0 +1,2509 @@
+{
+  "studentUsername": "nam_viet",
+  "grade": 12,
+  "assignedDate": "2026-11-16T00:00:00.000Z",
+  "assessmentTitle": "Đấu trường 100 câu: 20 Từ Vựng Cốt Lõi & Thể Sai Khiến Unit 6 (100 câu)",
+  "timeLimitMinutes": 90,
+  "questions": [
+    {
+      "order": 1,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 1:** Modern medical centers are utilizing _______ to help radiologists detect cancer cells with greater speed and accuracy.",
+      "options": [
+        {
+          "id": "A",
+          "text": "artificial intelligence"
+        },
+        {
+          "id": "B",
+          "text": "standby mode"
+        },
+        {
+          "id": "C",
+          "text": "digital portfolio"
+        },
+        {
+          "id": "D",
+          "text": "repetitive task"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (artificial intelligence)**\n\n- **Dịch nghĩa:** Các trung tâm y tế hiện đại đang ứng dụng trí tuệ nhân tạo (artificial intelligence) để giúp các bác sĩ X-quang phát hiện tế bào ung thư nhanh và chuẩn xác hơn.\n- **Phân tích:**\n  + A. artificial intelligence (n. phr.): trí tuệ nhân tạo (AI).\n  + B. standby mode: chế độ chờ.\n  + C. digital portfolio: hồ sơ năng lực số.\n  + D. repetitive task: công việc lặp đi lặp lại."
+    },
+    {
+      "order": 2,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 2:** If you have a quick question about admission fees, you can interact with the university's online _______ at any hour.",
+      "options": [
+        {
+          "id": "A",
+          "text": "milestone"
+        },
+        {
+          "id": "B",
+          "text": "chatbot"
+        },
+        {
+          "id": "C",
+          "text": "maintenance"
+        },
+        {
+          "id": "D",
+          "text": "platform"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (chatbot)**\n\n- **Dịch nghĩa:** Nếu bạn có câu hỏi nhanh về học phí tuyển sinh, bạn có thể tương tác với chatbot trực tuyến của trường đại học vào bất cứ giờ nào.\n- **Phân tích:** *chatbot* (n) là chương trình phần mềm đối thoại tự động để giải đáp thắc mắc người dùng 24/7."
+    },
+    {
+      "order": 3,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 3:** Automotive assembly plants rely heavily on _______ robotics capable of welding metal frames with sub-millimeter precision.",
+      "options": [
+        {
+          "id": "A",
+          "text": "primitive"
+        },
+        {
+          "id": "B",
+          "text": "dependent"
+        },
+        {
+          "id": "C",
+          "text": "advanced"
+        },
+        {
+          "id": "D",
+          "text": "repetitive"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (advanced)**\n\n- **Dịch nghĩa:** Các nhà máy lắp ráp ô tô phụ thuộc rất nhiều vào công nghệ robot tiên tiến (advanced robotics) có khả năng hàn khung kim loại với độ chính xác dưới một milimet.\n- **Phân tích:** *advanced* (adj) nghĩa là tiên tiến, cấp cao, hiện đại. Trái nghĩa: *primitive* (nguyên thủy)."
+    },
+    {
+      "order": 4,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 4:** Computer software engineers spent months writing code to _______ the robotic arm to handle fragile glassware safely.",
+      "options": [
+        {
+          "id": "A",
+          "text": "depend"
+        },
+        {
+          "id": "B",
+          "text": "imitate"
+        },
+        {
+          "id": "C",
+          "text": "analyse"
+        },
+        {
+          "id": "D",
+          "text": "programme"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (programme)**\n\n- **Dịch nghĩa:** Các kỹ sư phần mềm máy tính đã dành nhiều tháng viết mã để lập trình (programme) cánh tay robot xử lý các đồ thủy tinh dễ vỡ một cách an toàn.\n- **Phân tích:** Cấu trúc *programme someone/something to do sth* (lập trình ai/cái gì làm gì)."
+    },
+    {
+      "order": 5,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 5:** Powerful neural algorithms can _______ millions of consumer transactions in real time to spot fraudulent card activity.",
+      "options": [
+        {
+          "id": "A",
+          "text": "analyse"
+        },
+        {
+          "id": "B",
+          "text": "standby"
+        },
+        {
+          "id": "C",
+          "text": "imitate"
+        },
+        {
+          "id": "D",
+          "text": "maintain"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (analyse)**\n\n- **Dịch nghĩa:** Các thuật toán nơ-ron mạnh mẽ có thể phân tích (analyse) hàng triệu giao dịch của người tiêu dùng theo thời gian thực để phát hiện hành vi gian lận thẻ.\n- **Phân tích:** *analyse* (v): phân tích dữ liệu, thông tin."
+    },
+    {
+      "order": 6,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 6:** International airports have installed _______ gates where passengers simply look into a camera to verify their identity.",
+      "options": [
+        {
+          "id": "A",
+          "text": "speech recognition"
+        },
+        {
+          "id": "B",
+          "text": "facial recognition"
+        },
+        {
+          "id": "C",
+          "text": "digital portfolio"
+        },
+        {
+          "id": "D",
+          "text": "standby mode"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (facial recognition)**\n\n- **Dịch nghĩa:** Các sân bay quốc tế đã lắp đặt các cổng nhận diện khuôn mặt (facial recognition) nơi hành khách chỉ việc nhìn vào máy ảnh để xác minh danh tính.\n- **Phân tích:** Cụm từ *facial recognition* (nhận diện khuôn mặt) dùng camera nhận diện nét mặt; khác với *speech recognition* (nhận dạng giọng nói)."
+    },
+    {
+      "order": 7,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 7:** Virtual assistants on smartphones use sophisticated _______ software to understand various regional accents and dialects.",
+      "options": [
+        {
+          "id": "A",
+          "text": "conversational platform"
+        },
+        {
+          "id": "B",
+          "text": "hands-on"
+        },
+        {
+          "id": "C",
+          "text": "speech recognition"
+        },
+        {
+          "id": "D",
+          "text": "hardware maintenance"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (speech recognition)**\n\n- **Dịch nghĩa:** Trợ lý ảo trên điện thoại thông minh sử dụng phần mềm nhận dạng giọng nói (speech recognition) tinh vi để hiểu được nhiều chất giọng vùng miền khác nhau.\n- **Phân tích:** *speech recognition* (n. phr.): công nghệ nhận dạng và chuyển đổi giọng nói thành văn bản/lệnh."
+    },
+    {
+      "order": 8,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 8:** Graduating seniors are encouraged to create a _______ showcasing their coding projects, design mockups, and internships.",
+      "options": [
+        {
+          "id": "A",
+          "text": "virtual tutor"
+        },
+        {
+          "id": "B",
+          "text": "standby mode"
+        },
+        {
+          "id": "C",
+          "text": "repetitive cycle"
+        },
+        {
+          "id": "D",
+          "text": "digital portfolio"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (digital portfolio)**\n\n- **Dịch nghĩa:** Sinh viên sắp tốt nghiệp được khuyến khích tạo hồ sơ năng lực số (digital portfolio) trưng bày các dự án lập trình, bản vẽ thiết kế và kinh nghiệm thực tập.\n- **Phân tích:** *digital portfolio* (n. phr.): tập hồ sơ năng lực lưu trữ trực tuyến để ứng tuyển việc làm hoặc đại học."
+    },
+    {
+      "order": 9,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 9:** Whenever Linda struggles with calculus late at night, she turns to an AI-powered _______ for step-by-step guidance.",
+      "options": [
+        {
+          "id": "A",
+          "text": "virtual tutor"
+        },
+        {
+          "id": "B",
+          "text": "autonomous vehicle"
+        },
+        {
+          "id": "C",
+          "text": "facial recognition"
+        },
+        {
+          "id": "D",
+          "text": "hardware maintenance"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (virtual tutor)**\n\n- **Dịch nghĩa:** Bất cứ khi nào Linda gặp khó khăn với môn giải tích lúc đêm muộn, bạn ấy đều tìm đến gia sư ảo (virtual tutor) tích hợp AI để được hướng dẫn từng bước.\n- **Phân tích:** *virtual tutor* (n. phr.): gia sư ảo / trợ giảng trực tuyến hướng dẫn học sinh 24/7."
+    },
+    {
+      "order": 10,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 10:** Vocational engineering schools place a strong emphasis on _______ training so students can operate industrial machinery with confidence.",
+      "options": [
+        {
+          "id": "A",
+          "text": "repetitive"
+        },
+        {
+          "id": "B",
+          "text": "hands-on"
+        },
+        {
+          "id": "C",
+          "text": "dependent"
+        },
+        {
+          "id": "D",
+          "text": "standby"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (hands-on)**\n\n- **Dịch nghĩa:** Các trường kỹ thuật nghề chú trọng đặc biệt vào việc đào tạo thực hành thực tế (hands-on training) để học sinh có thể vận hành máy móc công nghiệp một cách tự tin.\n- **Phân tích:** *hands-on* (adj): thực hành trực tiếp, giàu tính thực tiễn; trái ngược với *theoretical* (lý thuyết)."
+    },
+    {
+      "order": 11,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 11:** Our high school transitioned to a cloud-based learning _______ that allows students to access lecture videos and submit homework seamlessly.",
+      "options": [
+        {
+          "id": "A",
+          "text": "milestone"
+        },
+        {
+          "id": "B",
+          "text": "chatbot"
+        },
+        {
+          "id": "C",
+          "text": "platform"
+        },
+        {
+          "id": "D",
+          "text": "maintenance"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (platform)**\n\n- **Dịch nghĩa:** Trường trung học của chúng tôi đã chuyển sang một nền tảng học tập đám mây (learning platform) cho phép học sinh xem video bài giảng và nộp bài tập một cách liền mạch.\n- **Phân tích:** *platform* (n): nền tảng phần mềm/công nghệ."
+    },
+    {
+      "order": 12,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 12:** One major advantage of educational technology is _______, which tailors lesson pace and difficulty to each learner's unique strengths.",
+      "options": [
+        {
+          "id": "A",
+          "text": "speech recognition"
+        },
+        {
+          "id": "B",
+          "text": "repetitive routine"
+        },
+        {
+          "id": "C",
+          "text": "standby mode"
+        },
+        {
+          "id": "D",
+          "text": "personalised learning"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (personalised learning)**\n\n- **Dịch nghĩa:** Một ưu điểm lớn của công nghệ giáo dục là việc học tập cá nhân hoá (personalised learning), giúp điều chỉnh tốc độ và độ khó của bài học theo thế mạnh riêng của từng người học.\n- **Phân tích:** *personalised learning* (n. phr.): học tập được cá nhân hóa theo năng lực cá nhân."
+    },
+    {
+      "order": 13,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 13:** Businesses are adopting _______ to create virtual sales agents that answer complex buyer questions with human-like empathy.",
+      "options": [
+        {
+          "id": "A",
+          "text": "conversational AI"
+        },
+        {
+          "id": "B",
+          "text": "digital portfolio"
+        },
+        {
+          "id": "C",
+          "text": "standby battery"
+        },
+        {
+          "id": "D",
+          "text": "facial recognition"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (conversational AI)**\n\n- **Dịch nghĩa:** Các doanh nghiệp đang áp dụng trí tuệ nhân tạo đàm thoại (conversational AI) để tạo ra các nhân viên bán hàng ảo giải đáp thắc mắc phức tạp của người mua với sự thấu cảm như con người.\n- **Phân tích:** *conversational AI* (n. phr.): AI hội thoại có khả năng đối thoại tự nhiên."
+    },
+    {
+      "order": 14,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 14:** Electric _______ cars equipped with LIDAR and radar sensors are expected to reduce traffic collisions caused by human error.",
+      "options": [
+        {
+          "id": "A",
+          "text": "dependent"
+        },
+        {
+          "id": "B",
+          "text": "autonomous"
+        },
+        {
+          "id": "C",
+          "text": "repetitive"
+        },
+        {
+          "id": "D",
+          "text": "hands-on"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (autonomous)**\n\n- **Dịch nghĩa:** Xe ô tô tự hành (autonomous cars) chạy điện trang bị cảm biến LIDAR và radar được kỳ vọng sẽ làm giảm các vụ va chạm giao thông do lỗi con người gây ra.\n- **Phân tích:** *autonomous* (adj): tự hành, tự trị, không cần người lái. Đồng nghĩa: *self-driving*."
+    },
+    {
+      "order": 15,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 15:** AI-powered automation relieves workers from _______ factory chores, giving them time to focus on creative problem-solving.",
+      "options": [
+        {
+          "id": "A",
+          "text": "autonomous"
+        },
+        {
+          "id": "B",
+          "text": "hands-on"
+        },
+        {
+          "id": "C",
+          "text": "repetitive"
+        },
+        {
+          "id": "D",
+          "text": "advanced"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (repetitive)**\n\n- **Dịch nghĩa:** Tự động hóa tích hợp AI giải phóng người lao động khỏi các công việc nhàm chán lặp đi lặp lại (repetitive chores) ở nhà máy, cho họ thời gian tập trung vào giải quyết vấn đề sáng tạo.\n- **Phân tích:** *repetitive* (adj): lặp đi lặp lại đơn điệu."
+    },
+    {
+      "order": 16,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 16:** Educators warn that high school students should not become completely _______ spell checkers and AI writing generators.",
+      "options": [
+        {
+          "id": "A",
+          "text": "proud of"
+        },
+        {
+          "id": "B",
+          "text": "advanced in"
+        },
+        {
+          "id": "C",
+          "text": "capable of"
+        },
+        {
+          "id": "D",
+          "text": "dependent on"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (dependent on)**\n\n- **Dịch nghĩa:** Các nhà giáo dục cảnh báo rằng học sinh THPT không nên trở nên hoàn toàn lệ thuộc vào (dependent on) phần mềm sửa lỗi chính tả và các công cụ tạo văn bản bằng AI.\n- **Phân tích:** Cụm tính từ đi với giới từ: *dependent on/upon sth* (lệ thuộc vào cái gì). Trái nghĩa: *independent of*."
+    },
+    {
+      "order": 17,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 17:** Skipping regular preventive _______ on server cooling units can lead to catastrophic hardware overheating and data loss.",
+      "options": [
+        {
+          "id": "A",
+          "text": "maintenance"
+        },
+        {
+          "id": "B",
+          "text": "milestone"
+        },
+        {
+          "id": "C",
+          "text": "chatbot"
+        },
+        {
+          "id": "D",
+          "text": "platform"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (maintenance)**\n\n- **Dịch nghĩa:** Bỏ qua việc bảo trì phòng ngừa định kỳ (preventive maintenance) cho các hệ thống làm mát máy chủ có thể dẫn đến việc phần cứng quá nhiệt nghiêm trọng và mất dữ liệu.\n- **Phân tích:** *maintenance* (n): sự bảo trì, bảo dưỡng máy móc."
+    },
+    {
+      "order": 18,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 18:** When the smart conference monitor is not receiving video signals for five minutes, it automatically shifts into _______ to conserve electricity.",
+      "options": [
+        {
+          "id": "A",
+          "text": "digital portfolio"
+        },
+        {
+          "id": "B",
+          "text": "standby mode"
+        },
+        {
+          "id": "C",
+          "text": "conversational AI"
+        },
+        {
+          "id": "D",
+          "text": "facial recognition"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (standby mode)**\n\n- **Dịch nghĩa:** Khi màn hình hội nghị thông minh không nhận tín hiệu video trong năm phút, nó sẽ tự động chuyển sang chế độ chờ (standby mode) để tiết kiệm điện năng.\n- **Phân tích:** *standby mode* (n. phr.): chế độ chờ sẵn sàng hoạt động của thiết bị điện tử."
+    },
+    {
+      "order": 19,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 19:** Humanoid robots developed by robotics institutes are engineered to _______ human facial gestures such as smiling and nodding.",
+      "options": [
+        {
+          "id": "A",
+          "text": "analyse"
+        },
+        {
+          "id": "B",
+          "text": "programme"
+        },
+        {
+          "id": "C",
+          "text": "imitate"
+        },
+        {
+          "id": "D",
+          "text": "depend"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (imitate)**\n\n- **Dịch nghĩa:** Các robot hình người được phát triển bởi các viện nghiên cứu robot được chế tạo để bắt chước (imitate) các biểu cảm khuôn mặt của con người như mỉm cười và gật đầu.\n- **Phân tích:** *imitate* (v): bắt chước, mô phỏng. Đồng nghĩa: *mimic*."
+    },
+    {
+      "order": 20,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 20:** The historic victory of Deep Blue over world chess champion Garry Kasparov in 1997 marked a monumental _______ in computer science.",
+      "options": [
+        {
+          "id": "A",
+          "text": "chatbot"
+        },
+        {
+          "id": "B",
+          "text": "standby"
+        },
+        {
+          "id": "C",
+          "text": "maintenance"
+        },
+        {
+          "id": "D",
+          "text": "milestone"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (milestone)**\n\n- **Dịch nghĩa:** Chiến thắng lịch sử của siêu máy tính Deep Blue trước nhà vô địch cờ vua thế giới Garry Kasparov vào năm 1997 đã đánh dấu một cột mốc quan trọng (monumental milestone) trong ngành khoa học máy tính.\n- **Phân tích:** Cụm collocations kinh điển: *mark a milestone* (đánh dấu một cột mốc lịch sử/bước ngoặt)."
+    },
+    {
+      "order": 21,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 21:** E-commerce websites use smart _______ to guide shoppers through checkout, recommend matching accessories, and process refunds.",
+      "options": [
+        {
+          "id": "A",
+          "text": "chatbots"
+        },
+        {
+          "id": "B",
+          "text": "milestones"
+        },
+        {
+          "id": "C",
+          "text": "standbys"
+        },
+        {
+          "id": "D",
+          "text": "portfolios"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (chatbots)**\n\n- **Dịch nghĩa:** Các trang thương mại điện tử sử dụng chatbot thông minh để hướng dẫn người mua thanh toán, gợi ý phụ kiện phù hợp và xử lý hoàn tiền.\n- **Phân tích:** *chatbots* (danh từ số nhiều) phù hợp ngữ cảnh hướng dẫn mua sắm tự động."
+    },
+    {
+      "order": 22,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 22:** Many digital banking apps now employ _______ scans, meaning customers can log in securely using just their face.",
+      "options": [
+        {
+          "id": "A",
+          "text": "virtual tutor"
+        },
+        {
+          "id": "B",
+          "text": "facial recognition"
+        },
+        {
+          "id": "C",
+          "text": "conversational AI"
+        },
+        {
+          "id": "D",
+          "text": "digital portfolio"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (facial recognition)**\n\n- **Dịch nghĩa:** Nhiều ứng dụng ngân hàng số hiện nay áp dụng quét nhận diện khuôn mặt (facial recognition scans), nghĩa là khách hàng có thể đăng nhập an toàn chỉ bằng khuôn mặt của mình.\n- **Phân tích:** *facial recognition* (nhận diện khuôn mặt) dùng cho sinh trắc học bảo mật."
+    },
+    {
+      "order": 23,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 23:** The foreign language learning application incorporates _______ so that learners receive immediate feedback on their vowel sounds.",
+      "options": [
+        {
+          "id": "A",
+          "text": "standby mode"
+        },
+        {
+          "id": "B",
+          "text": "repetitive chore"
+        },
+        {
+          "id": "C",
+          "text": "speech recognition"
+        },
+        {
+          "id": "D",
+          "text": "hardware maintenance"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (speech recognition)**\n\n- **Dịch nghĩa:** Ứng dụng học ngoại ngữ tích hợp nhận dạng giọng nói (speech recognition) để người học nhận được phản hồi tức thì về các nguyên âm của họ.\n- **Phân tích:** *speech recognition* (nhận dạng giọng nói) kiểm tra độ chính xác phát âm."
+    },
+    {
+      "order": 24,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 24:** Architects and graphic designers maintain a dynamic _______ online so prospective clients can review past project blueprints anytime.",
+      "options": [
+        {
+          "id": "A",
+          "text": "standby mode"
+        },
+        {
+          "id": "B",
+          "text": "milestone"
+        },
+        {
+          "id": "C",
+          "text": "virtual tutor"
+        },
+        {
+          "id": "D",
+          "text": "digital portfolio"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (digital portfolio)**\n\n- **Dịch nghĩa:** Các kiến trúc sư và nhà thiết kế đồ họa duy trì một hồ sơ năng lực số (digital portfolio) trực tuyến để khách hàng tiềm năng có thể xem các bản vẽ dự án trước đây bất cứ lúc nào.\n- **Phân tích:** *digital portfolio* (hồ sơ năng lực kỹ thuật số) để trưng bày các tác phẩm/sản phẩm."
+    },
+    {
+      "order": 25,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 25:** Modern curriculum developers believe that _______ allows gifted pupils to accelerate while giving remedial students the extra time they need.",
+      "options": [
+        {
+          "id": "A",
+          "text": "personalised learning"
+        },
+        {
+          "id": "B",
+          "text": "autonomous vehicle"
+        },
+        {
+          "id": "C",
+          "text": "standby mode"
+        },
+        {
+          "id": "D",
+          "text": "hardware maintenance"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (personalised learning)**\n\n- **Dịch nghĩa:** Các nhà phát triển chương trình học hiện đại tin rằng việc học cá nhân hoá (personalised learning) cho phép học sinh năng khiếu bứt phá tiến độ trong khi vẫn cho học sinh cần phụ đạo thời gian cần thiết.\n- **Phân tích:** *personalised learning* (học tập cá nhân hóa)."
+    },
+    {
+      "order": 26,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 26:** In smart agriculture, _______ tractors navigate expansive crop fields via GPS coordinates, planting seeds with zero human driver involvement.",
+      "options": [
+        {
+          "id": "A",
+          "text": "dependent"
+        },
+        {
+          "id": "B",
+          "text": "autonomous"
+        },
+        {
+          "id": "C",
+          "text": "repetitive"
+        },
+        {
+          "id": "D",
+          "text": "theoretical"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (autonomous)**\n\n- **Dịch nghĩa:** Trong nông nghiệp thông minh, máy kéo tự hành (autonomous tractors) di chuyển trên những cánh đồng rộng lớn qua tọa độ GPS, gieo hạt mà không cần người lái.\n- **Phân tích:** *autonomous* (tự hành, không người lái)."
+    },
+    {
+      "order": 27,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 27:** Sorting packages by postal code is a tedious and _______ task that is now handled effortlessly by robotic barcode scanners.",
+      "options": [
+        {
+          "id": "A",
+          "text": "hands-on"
+        },
+        {
+          "id": "B",
+          "text": "autonomous"
+        },
+        {
+          "id": "C",
+          "text": "repetitive"
+        },
+        {
+          "id": "D",
+          "text": "independent"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (repetitive)**\n\n- **Dịch nghĩa:** Phân loại bưu kiện theo mã bưu chính là một công việc tẻ nhạt và lặp đi lặp lại (tedious and repetitive task) mà hiện nay đã được các máy quét mã vạch bằng robot xử lý một cách dễ dàng.\n- **Phân tích:** *tedious and repetitive* là cặp từ thường đi liền nhau miêu tả công việc đơn điệu, nhàm chán."
+    },
+    {
+      "order": 28,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 28:** Instead of powering down the desktop computer entirely, John left it in _______ so his large video file could finish downloading overnight.",
+      "options": [
+        {
+          "id": "A",
+          "text": "speech recognition"
+        },
+        {
+          "id": "B",
+          "text": "digital portfolio"
+        },
+        {
+          "id": "C",
+          "text": "virtual tutor"
+        },
+        {
+          "id": "D",
+          "text": "standby mode"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (standby mode)**\n\n- **Dịch nghĩa:** Thay vì tắt máy tính để bàn hoàn toàn, John đã để nó ở chế độ chờ (standby mode) để tệp video dung lượng lớn có thể tải xong qua đêm.\n- **Phân tích:** *in standby mode* (ở chế độ chờ)."
+    },
+    {
+      "order": 29,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 29:** A fleet of electric delivery vans requires routine mechanical _______ to ensure battery health and tyre safety throughout the year.",
+      "options": [
+        {
+          "id": "A",
+          "text": "maintenance"
+        },
+        {
+          "id": "B",
+          "text": "milestone"
+        },
+        {
+          "id": "C",
+          "text": "chatbot"
+        },
+        {
+          "id": "D",
+          "text": "portfolio"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (maintenance)**\n\n- **Dịch nghĩa:** Một đội xe van giao hàng chạy điện đòi hỏi việc bảo trì cơ khí định kỳ (routine mechanical maintenance) để đảm bảo tuổi thọ pin và an toàn lốp xe trong suốt cả năm.\n- **Phân tích:** *routine maintenance* (bảo trì định kỳ)."
+    },
+    {
+      "order": 30,
+      "sectionName": "Từ vựng ngữ cảnh",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 30:** Parrots are famous for their remarkable ability to _______ household sounds like ringing telephones and microwave beeps.",
+      "options": [
+        {
+          "id": "A",
+          "text": "programme"
+        },
+        {
+          "id": "B",
+          "text": "imitate"
+        },
+        {
+          "id": "C",
+          "text": "analyse"
+        },
+        {
+          "id": "D",
+          "text": "maintain"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (imitate)**\n\n- **Dịch nghĩa:** Loài vẹt nổi tiếng với khả năng phi thường trong việc bắt chước (imitate) các âm thanh trong nhà như tiếng chuông điện thoại và tiếng bíp lò vi sóng.\n- **Phân tích:** *imitate* (v): bắt chước tiếng kêu/âm thanh."
+    },
+    {
+      "order": 31,
+      "sectionName": "Cấu tạo từ (Word Formation)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 31:** The laboratory technicians carried out a thorough statistical _______ of the chemical compound samples.",
+      "options": [
+        {
+          "id": "A",
+          "text": "analyse"
+        },
+        {
+          "id": "B",
+          "text": "analyst"
+        },
+        {
+          "id": "C",
+          "text": "analysis"
+        },
+        {
+          "id": "D",
+          "text": "analytical"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (analysis)**\n\n- **Dịch nghĩa:** Các kỹ thuật viên phòng thí nghiệm đã tiến hành một cuộc phân tích thống kê kỹ lưỡng (statistical analysis) các mẫu hợp chất hóa học.\n- **Phân tích:** Sau tính từ *statistical* cần một danh từ chỉ sự việc (*analysis*). *Analyst* là nhà phân tích (người), *analyse* là động từ."
+    },
+    {
+      "order": 32,
+      "sectionName": "Cấu tạo từ (Word Formation)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 32:** Data scientists must possess strong _______ skills in order to interpret complex algorithmic trends accurately.",
+      "options": [
+        {
+          "id": "A",
+          "text": "analytically"
+        },
+        {
+          "id": "B",
+          "text": "analysis"
+        },
+        {
+          "id": "C",
+          "text": "analyse"
+        },
+        {
+          "id": "D",
+          "text": "analytical"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (analytical)**\n\n- **Dịch nghĩa:** Các nhà khoa học dữ liệu phải sở hữu kỹ năng phân tích (analytical skills) vững vàng để diễn giải chính xác các xu hướng thuật toán phức tạp.\n- **Phân tích:** Đứng trước danh từ *skills* cần một tính từ (*analytical*)."
+    },
+    {
+      "order": 33,
+      "sectionName": "Cấu tạo từ (Word Formation)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 33:** The young comedian delighted the audience with his hilarious _______ of famous political figures.",
+      "options": [
+        {
+          "id": "A",
+          "text": "imitation"
+        },
+        {
+          "id": "B",
+          "text": "imitate"
+        },
+        {
+          "id": "C",
+          "text": "imitative"
+        },
+        {
+          "id": "D",
+          "text": "imitator"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (imitation)**\n\n- **Dịch nghĩa:** Diễn viên hài trẻ đã làm khán giả thích thú với màn bắt chước (imitation) hài hước các nhân vật chính trị gia nổi tiếng.\n- **Phân tích:** Sau tính từ sở hữu *his* và tính từ *hilarious* cần một danh từ chỉ sự bắt chước (*imitation*)."
+    },
+    {
+      "order": 34,
+      "sectionName": "Cấu tạo từ (Word Formation)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 34:** Babies develop their earliest communication cues through _______ gestures observed from their caretakers.",
+      "options": [
+        {
+          "id": "A",
+          "text": "imitate"
+        },
+        {
+          "id": "B",
+          "text": "imitative"
+        },
+        {
+          "id": "C",
+          "text": "imitation"
+        },
+        {
+          "id": "D",
+          "text": "imitatingly"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (imitative)**\n\n- **Dịch nghĩa:** Trẻ sơ sinh phát triển những tín hiệu giao tiếp sớm nhất thông qua các cử chỉ mang tính bắt chước (imitative gestures) quan sát được từ người chăm sóc.\n- **Phân tích:** Đứng trước danh từ *gestures* cần một tính từ (*imitative* - có tính bắt chước, mô phỏng)."
+    },
+    {
+      "order": 35,
+      "sectionName": "Cấu tạo từ (Word Formation)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 35:** Upon graduating from university, many young adults seek financial _______ so they no longer rely on their parents.",
+      "options": [
+        {
+          "id": "A",
+          "text": "depend"
+        },
+        {
+          "id": "B",
+          "text": "dependent"
+        },
+        {
+          "id": "C",
+          "text": "independence"
+        },
+        {
+          "id": "D",
+          "text": "dependably"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (independence)**\n\n- **Dịch nghĩa:** Sau khi tốt nghiệp đại học, nhiều thanh niên tìm kiếm sự độc lập về tài chính (financial independence) để không còn phải phụ thuộc vào cha mẹ.\n- **Phân tích:** Cụm từ *financial independence* (sự tự chủ/độc lập về tài chính). Cần danh từ sau tính từ *financial*."
+    },
+    {
+      "order": 36,
+      "sectionName": "Cấu tạo từ (Word Formation)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 36:** Autonomous driving sensors must be highly _______ in heavy rain, dense fog, and snowstorms.",
+      "options": [
+        {
+          "id": "A",
+          "text": "depend"
+        },
+        {
+          "id": "B",
+          "text": "dependably"
+        },
+        {
+          "id": "C",
+          "text": "dependence"
+        },
+        {
+          "id": "D",
+          "text": "dependable"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (dependable)**\n\n- **Dịch nghĩa:** Các cảm biến lái xe tự hành phải có độ tin cậy rất cao (highly dependable) trong điều kiện mưa to, sương mù dày đặc và bão tuyết.\n- **Phân tích:** Sau trạng từ *highly* và động từ liên kết *must be* cần một tính từ mang nghĩa 'đáng tin cậy' (*dependable* = *reliable*)."
+    },
+    {
+      "order": 37,
+      "sectionName": "Cấu tạo từ (Word Formation)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 37:** The building manager explained that the high elevator repair fees were caused by years of poor _______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "maintenance"
+        },
+        {
+          "id": "B",
+          "text": "maintained"
+        },
+        {
+          "id": "C",
+          "text": "maintain"
+        },
+        {
+          "id": "D",
+          "text": "maintainable"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (maintenance)**\n\n- **Dịch nghĩa:** Quản lý tòa nhà giải thích rằng chi phí sửa chữa thang máy cao là do nhiều năm bảo trì kém (poor maintenance).\n- **Phân tích:** Sau tính từ *poor* cần danh từ (*maintenance*). Chú ý chính tả *maintenance* (không viết *maintainance*)."
+    },
+    {
+      "order": 38,
+      "sectionName": "Cấu tạo từ (Word Formation)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 38:** The pioneering computer scientist gained worldwide _______ for proposing the theoretical foundation of machine learning.",
+      "options": [
+        {
+          "id": "A",
+          "text": "recognise"
+        },
+        {
+          "id": "B",
+          "text": "recognition"
+        },
+        {
+          "id": "C",
+          "text": "recognisable"
+        },
+        {
+          "id": "D",
+          "text": "recognisably"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (recognition)**\n\n- **Dịch nghĩa:** Nhà khoa học máy tính tiên phong đã nhận được sự công nhận trên toàn thế giới (worldwide recognition) vì đã đề xuất nền tảng lý thuyết của học máy.\n- **Phân tích:** Sau tính từ *worldwide* cần danh từ (*recognition*). Cụm *gain worldwide recognition* (được thế giới công nhận)."
+    },
+    {
+      "order": 39,
+      "sectionName": "Cấu tạo từ (Word Formation)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 39:** Even with sunglasses and a mask on, the famous pop singer was instantly _______ to her loyal fans.",
+      "options": [
+        {
+          "id": "A",
+          "text": "recognise"
+        },
+        {
+          "id": "B",
+          "text": "recognition"
+        },
+        {
+          "id": "C",
+          "text": "recognisable"
+        },
+        {
+          "id": "D",
+          "text": "recognisably"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (recognisable)**\n\n- **Dịch nghĩa:** Dù đeo kính râm và khẩu trang, nữ ca sĩ nhạc pop nổi tiếng vẫn dễ dàng được nhận ra (instantly recognisable) bởi những người hâm mộ trung thành của mình.\n- **Phân tích:** Sau *was instantly* (to be + adv) cần tính từ (*recognisable* = có thể nhận ra được)."
+    },
+    {
+      "order": 40,
+      "sectionName": "Cấu tạo từ (Word Formation)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 40:** Online learning platforms offer _______ lesson modules that adapt automatically based on students' quiz scores.",
+      "options": [
+        {
+          "id": "A",
+          "text": "person"
+        },
+        {
+          "id": "B",
+          "text": "personality"
+        },
+        {
+          "id": "C",
+          "text": "personally"
+        },
+        {
+          "id": "D",
+          "text": "personalised"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (personalised)**\n\n- **Dịch nghĩa:** Các nền tảng học tập trực tuyến cung cấp các học phần bài học được cá nhân hóa (personalised lesson modules) có thể tự động thích ứng dựa trên điểm bài kiểm tra của học sinh.\n- **Phân tích:** Cần tính từ dạng phân từ (*personalised*) bổ nghĩa cho cụm danh từ *lesson modules*."
+    },
+    {
+      "order": 41,
+      "sectionName": "Cấu tạo từ (Word Formation)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 41:** The extreme _______ of online news feeds can trap readers inside biased echo chambers.",
+      "options": [
+        {
+          "id": "A",
+          "text": "personalisation"
+        },
+        {
+          "id": "B",
+          "text": "personalise"
+        },
+        {
+          "id": "C",
+          "text": "personalised"
+        },
+        {
+          "id": "D",
+          "text": "personally"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (personalisation)**\n\n- **Dịch nghĩa:** Việc cá nhân hóa quá mức (extreme personalisation) các nguồn cấp tin tức trực tuyến có thể nhốt người đọc vào các buồng tiếng vang định kiến.\n- **Phân tích:** Sau mạo từ *The* và tính từ *extreme* cần một danh từ (*personalisation* - sự cá nhân hóa)."
+    },
+    {
+      "order": 42,
+      "sectionName": "Cấu tạo từ (Word Formation)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 42:** The educational robotics kit includes _______ microcontrollers that students can code using Python or block diagrams.",
+      "options": [
+        {
+          "id": "A",
+          "text": "programme"
+        },
+        {
+          "id": "B",
+          "text": "programmable"
+        },
+        {
+          "id": "C",
+          "text": "programmer"
+        },
+        {
+          "id": "D",
+          "text": "programmatically"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (programmable)**\n\n- **Dịch nghĩa:** Bộ kit robot giáo dục bao gồm các bộ vi điều khiển có thể lập trình được (programmable microcontrollers) mà học sinh có thể viết mã bằng Python hoặc sơ đồ khối.\n- **Phân tích:** Trước danh từ *microcontrollers* cần tính từ chỉ khả năng (*programmable* = có thể lập trình được)."
+    },
+    {
+      "order": 43,
+      "sectionName": "Cấu tạo từ (Word Formation)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 43:** Mastering pronunciation requires constant practice and the careful _______ of phoneme drills.",
+      "options": [
+        {
+          "id": "A",
+          "text": "repetitive"
+        },
+        {
+          "id": "B",
+          "text": "repeat"
+        },
+        {
+          "id": "C",
+          "text": "repetition"
+        },
+        {
+          "id": "D",
+          "text": "repetitively"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (repetition)**\n\n- **Dịch nghĩa:** Việc làm chủ phát âm đòi hỏi sự luyện tập liên tục và sự lặp lại cẩn thận (careful repetition) các bài tập luyện âm vị.\n- **Phân tích:** Sau mạo từ *the* và tính từ *careful* cần danh từ (*repetition* - sự lặp lại)."
+    },
+    {
+      "order": 44,
+      "sectionName": "Cấu tạo từ (Word Formation)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 44:** The robotic cleaner navigates _______ through living rooms by mapping obstacles with infrared sensors.",
+      "options": [
+        {
+          "id": "A",
+          "text": "autonomous"
+        },
+        {
+          "id": "B",
+          "text": "autonomy"
+        },
+        {
+          "id": "C",
+          "text": "autonomic"
+        },
+        {
+          "id": "D",
+          "text": "autonomously"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (autonomously)**\n\n- **Dịch nghĩa:** Máy hút bụi robot di chuyển một cách tự động/tự hành (autonomously) qua các phòng khách bằng cách lập bản đồ chướng ngại vật bằng cảm biến hồng ngoại.\n- **Phân tích:** Bổ nghĩa cho động từ *navigates* cần một trạng từ (*autonomously*)."
+    },
+    {
+      "order": 45,
+      "sectionName": "Cấu tạo từ (Word Formation)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 45:** University professors encourage students to exercise intellectual _______ rather than blindly memorising lecture slides.",
+      "options": [
+        {
+          "id": "A",
+          "text": "autonomy"
+        },
+        {
+          "id": "B",
+          "text": "autonomous"
+        },
+        {
+          "id": "C",
+          "text": "autonomously"
+        },
+        {
+          "id": "D",
+          "text": "autonomic"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (autonomy)**\n\n- **Dịch nghĩa:** Các giáo sư đại học khuyến khích sinh viên rèn luyện sự tự chủ về trí tuệ (intellectual autonomy) thay vì học vẹt một cách mù quáng các trang trình chiếu bài giảng.\n- **Phân tích:** Sau tính từ *intellectual* cần danh từ (*autonomy* - sự tự chủ, độc lập)."
+    },
+    {
+      "order": 46,
+      "sectionName": "Từ đồng nghĩa (Closest in Meaning)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 46:** The hospital recently invested in **advanced** diagnostic imaging devices to detect heart conditions earlier.",
+      "options": [
+        {
+          "id": "A",
+          "text": "outdated"
+        },
+        {
+          "id": "B",
+          "text": "cutting-edge"
+        },
+        {
+          "id": "C",
+          "text": "primitive"
+        },
+        {
+          "id": "D",
+          "text": "imitative"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (cutting-edge)**\n\n- **Dịch nghĩa:** Bệnh viện gần đây đã đầu tư vào các thiết bị chẩn đoán hình ảnh tiên tiến (advanced) để phát hiện bệnh tim sớm hơn.\n- **Phân tích:** *advanced* (tiên tiến, hiện đại) đồng nghĩa với *cutting-edge* (tối tân, hàng đầu). Các từ còn lại: *outdated* (lỗi thời), *primitive* (nguyên thủy)."
+    },
+    {
+      "order": 47,
+      "sectionName": "Từ đồng nghĩa (Closest in Meaning)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 47:** Humanoid robots are engineered to **imitate** human body language and facial expressions.",
+      "options": [
+        {
+          "id": "A",
+          "text": "neglect"
+        },
+        {
+          "id": "B",
+          "text": "reject"
+        },
+        {
+          "id": "C",
+          "text": "mimic"
+        },
+        {
+          "id": "D",
+          "text": "destroy"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (mimic)**\n\n- **Dịch nghĩa:** Robot hình người được thiết kế để bắt chước (imitate) ngôn ngữ cơ thể và biểu cảm khuôn mặt của con người.\n- **Phân tích:** *imitate* (bắt chước, mô phỏng) đồng nghĩa với *mimic*. *Reject* (từ chối), *neglect* (sao nhãng)."
+    },
+    {
+      "order": 48,
+      "sectionName": "Từ đồng nghĩa (Closest in Meaning)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 48:** Delivery drones fly along **autonomous** flight paths without direct human radio control.",
+      "options": [
+        {
+          "id": "A",
+          "text": "manually steered"
+        },
+        {
+          "id": "B",
+          "text": "human-operated"
+        },
+        {
+          "id": "C",
+          "text": "heavily dependent"
+        },
+        {
+          "id": "D",
+          "text": "self-directed"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (self-directed)**\n\n- **Dịch nghĩa:** Máy bay không người lái giao hàng bay theo các lộ trình bay tự hành (autonomous) mà không cần sự điều khiển vô tuyến trực tiếp của con người.\n- **Phân tích:** *autonomous* (tự chủ, tự hành) đồng nghĩa với *self-directed / self-governing*."
+    },
+    {
+      "order": 49,
+      "sectionName": "Từ đồng nghĩa (Closest in Meaning)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 49:** The chemistry teacher designed **hands-on** lab experiments so students could witness reactions firsthand.",
+      "options": [
+        {
+          "id": "A",
+          "text": "practical"
+        },
+        {
+          "id": "B",
+          "text": "theoretical"
+        },
+        {
+          "id": "C",
+          "text": "passive"
+        },
+        {
+          "id": "D",
+          "text": "abstract"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (practical)**\n\n- **Dịch nghĩa:** Giáo viên hóa học đã thiết kế các thí nghiệm thực hành thực tế (hands-on) để học sinh có thể tận mắt chứng kiến các phản ứng.\n- **Phân tích:** *hands-on* (thực tế, có trải nghiệm trực tiếp) đồng nghĩa với *practical* (thực tiễn). Trái nghĩa với *theoretical* (lý thuyết suông)."
+    },
+    {
+      "order": 50,
+      "sectionName": "Từ đồng nghĩa (Closest in Meaning)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 50:** Developing the first commercially viable quantum processor was considered a major **milestone** in computing history.",
+      "options": [
+        {
+          "id": "A",
+          "text": "setback"
+        },
+        {
+          "id": "B",
+          "text": "landmark"
+        },
+        {
+          "id": "C",
+          "text": "obstacle"
+        },
+        {
+          "id": "D",
+          "text": "routine"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (landmark)**\n\n- **Dịch nghĩa:** Phát triển bộ xử lý lượng tử thương mại khả thi đầu tiên được coi là một cột mốc quan trọng (major milestone) trong lịch sử điện toán.\n- **Phân tích:** *milestone* (cột mốc quan trọng, bước ngoặt) đồng nghĩa với *landmark / turning point*. *Setback* (sự thoái trào, trở ngại)."
+    },
+    {
+      "order": 51,
+      "sectionName": "Từ đồng nghĩa (Closest in Meaning)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 51:** The school selected a cloud-based **platform** to host digital textbooks and interactive assignments.",
+      "options": [
+        {
+          "id": "A",
+          "text": "barrier"
+        },
+        {
+          "id": "B",
+          "text": "roadblock"
+        },
+        {
+          "id": "C",
+          "text": "framework"
+        },
+        {
+          "id": "D",
+          "text": "handicap"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (framework)**\n\n- **Dịch nghĩa:** Nhà trường đã chọn một nền tảng (platform) dựa trên đám mây để lưu trữ sách giáo khoa số và bài tập tương tác.\n- **Phân tích:** *platform* (nền tảng công nghệ, hệ thống) gần nghĩa nhất với *framework / system*."
+    },
+    {
+      "order": 52,
+      "sectionName": "Từ đồng nghĩa (Closest in Meaning)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 52:** Factory workers complained about the **repetitive** motion required to pack hundreds of cartons every shift.",
+      "options": [
+        {
+          "id": "A",
+          "text": "variable"
+        },
+        {
+          "id": "B",
+          "text": "stimulating"
+        },
+        {
+          "id": "C",
+          "text": "thrilling"
+        },
+        {
+          "id": "D",
+          "text": "monotonous"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (monotonous)**\n\n- **Dịch nghĩa:** Các công nhân nhà máy phàn nàn về chuyển động lặp đi lặp lại đơn điệu (repetitive) khi phải đóng gói hàng trăm thùng hàng mỗi ca.\n- **Phân tích:** *repetitive* (lặp đi lặp lại gây chán) đồng nghĩa với *monotonous* (đơn điệu). *Stimulating* (kích thích hứng thú), *thrilling* (hồi hộp, kịch tính)."
+    },
+    {
+      "order": 53,
+      "sectionName": "Từ đồng nghĩa (Closest in Meaning)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 53:** Our economy has become increasingly **dependent on** imported semiconductors for tech manufacturing.",
+      "options": [
+        {
+          "id": "A",
+          "text": "reliant on"
+        },
+        {
+          "id": "B",
+          "text": "indifferent to"
+        },
+        {
+          "id": "C",
+          "text": "unrelated to"
+        },
+        {
+          "id": "D",
+          "text": "immune to"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (reliant on)**\n\n- **Dịch nghĩa:** Nền kinh tế của chúng ta ngày càng trở nên lệ thuộc vào (dependent on) chất bán dẫn nhập khẩu để sản xuất công nghệ.\n- **Phân tích:** *dependent on* (phụ thuộc vào) đồng nghĩa với *reliant on*."
+    },
+    {
+      "order": 54,
+      "sectionName": "Từ đồng nghĩa (Closest in Meaning)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 54:** Students engaged in a **virtual** tour of the solar system using virtual reality headsets.",
+      "options": [
+        {
+          "id": "A",
+          "text": "tangible"
+        },
+        {
+          "id": "B",
+          "text": "simulated"
+        },
+        {
+          "id": "C",
+          "text": "physical"
+        },
+        {
+          "id": "D",
+          "text": "concrete"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (simulated)**\n\n- **Dịch nghĩa:** Học sinh đã tham gia vào một chuyến tham quan ảo (virtual tour) hệ mặt trời bằng kính thực tế ảo.\n- **Phân tích:** *virtual* (ảo, mô phỏng qua máy tính) đồng nghĩa với *simulated*. Trái nghĩa với *tangible / physical / concrete* (hữu hình, thực tế)."
+    },
+    {
+      "order": 55,
+      "sectionName": "Từ đồng nghĩa (Closest in Meaning)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 55:** Statisticians were hired to **analyse** the customer survey feedback and highlight key pain points.",
+      "options": [
+        {
+          "id": "A",
+          "text": "discard hastily"
+        },
+        {
+          "id": "B",
+          "text": "glance at"
+        },
+        {
+          "id": "C",
+          "text": "examine in detail"
+        },
+        {
+          "id": "D",
+          "text": "misinterpret"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (examine in detail)**\n\n- **Dịch nghĩa:** Các nhà thống kê được thuê để phân tích (analyse) phản hồi khảo sát khách hàng và nêu bật các điểm vướng mắc chính.\n- **Phân tích:** *analyse* (phân tích) đồng nghĩa với *examine in detail* (xem xét, kiểm tra chi tiết)."
+    },
+    {
+      "order": 56,
+      "sectionName": "Từ trái nghĩa (Opposite in Meaning)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 56:** The aviation academy emphasizes **hands-on** flight simulator training over purely textbook instruction.",
+      "options": [
+        {
+          "id": "A",
+          "text": "experiential"
+        },
+        {
+          "id": "B",
+          "text": "practical"
+        },
+        {
+          "id": "C",
+          "text": "realistic"
+        },
+        {
+          "id": "D",
+          "text": "theoretical"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (theoretical)**\n\n- **Dịch nghĩa:** Học viện hàng không nhấn mạnh việc đào tạo mô phỏng bay thực hành (hands-on) hơn là chỉ học lý thuyết trên sách giáo khoa thuần túy.\n- **Phân tích:** *hands-on* (thực tế, có trải nghiệm trực tiếp) trái nghĩa với *theoretical* (thuộc về lý thuyết sách vở)."
+    },
+    {
+      "order": 57,
+      "sectionName": "Từ trái nghĩa (Opposite in Meaning)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 57:** The military developed **advanced** radar countermeasures to jam incoming missile signals.",
+      "options": [
+        {
+          "id": "A",
+          "text": "primitive"
+        },
+        {
+          "id": "B",
+          "text": "innovative"
+        },
+        {
+          "id": "C",
+          "text": "cutting-edge"
+        },
+        {
+          "id": "D",
+          "text": "sophisticated"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (primitive)**\n\n- **Dịch nghĩa:** Quân đội đã phát triển các biện pháp đối phó radar tiên tiến (advanced) để gây nhiễu tín hiệu tên lửa đang bay tới.\n- **Phân tích:** *advanced* (tiên tiến, tinh vi) trái nghĩa với *primitive* (thô sơ, nguyên thủy, lạc hậu)."
+    },
+    {
+      "order": 58,
+      "sectionName": "Từ trái nghĩa (Opposite in Meaning)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 58:** The mining company deployed **autonomous** haul trucks that operate without any human in the driver's cabin.",
+      "options": [
+        {
+          "id": "A",
+          "text": "self-governing"
+        },
+        {
+          "id": "B",
+          "text": "manually operated"
+        },
+        {
+          "id": "C",
+          "text": "automated"
+        },
+        {
+          "id": "D",
+          "text": "independent"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (manually operated)**\n\n- **Dịch nghĩa:** Công ty khai thác mỏ đã triển khai xe tải tự hành (autonomous) vận hành mà không cần bất kỳ con người nào trong buồng lái.\n- **Phân tích:** *autonomous* (tự động, tự hành) trái nghĩa với *manually operated* (được vận hành thủ công bằng tay)."
+    },
+    {
+      "order": 59,
+      "sectionName": "Từ trái nghĩa (Opposite in Meaning)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 59:** Elderly patients often feel anxious when they become totally **dependent on** automated healthcare gadgets.",
+      "options": [
+        {
+          "id": "A",
+          "text": "subservient to"
+        },
+        {
+          "id": "B",
+          "text": "reliant on"
+        },
+        {
+          "id": "C",
+          "text": "independent of"
+        },
+        {
+          "id": "D",
+          "text": "attached to"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (independent of)**\n\n- **Dịch nghĩa:** Các bệnh nhân cao tuổi thường cảm thấy lo lắng khi họ trở nên hoàn toàn phụ thuộc vào (dependent on) các thiết bị y tế tự động.\n- **Phân tích:** *dependent on* (phụ thuộc vào) trái nghĩa với *independent of* (độc lập, không phụ thuộc vào)."
+    },
+    {
+      "order": 60,
+      "sectionName": "Từ trái nghĩa (Opposite in Meaning)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 60:** Doing **repetitive** data entry for eight hours a day can quickly dull a young employee's creativity.",
+      "options": [
+        {
+          "id": "A",
+          "text": "tedious"
+        },
+        {
+          "id": "B",
+          "text": "monotonous"
+        },
+        {
+          "id": "C",
+          "text": "recurring"
+        },
+        {
+          "id": "D",
+          "text": "varied"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (varied)**\n\n- **Dịch nghĩa:** Làm công việc nhập dữ liệu lặp đi lặp lại (repetitive) tám tiếng một ngày có thể nhanh chóng làm cùn mòn sự sáng tạo của một nhân viên trẻ.\n- **Phân tích:** *repetitive* (lặp đi lặp lại đơn điệu) trái nghĩa với *varied* (đa dạng, phong phú nhiều màu sắc)."
+    },
+    {
+      "order": 61,
+      "sectionName": "Từ trái nghĩa (Opposite in Meaning)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 61:** Original thinkers strive to innovate rather than merely **imitate** existing marketplace products.",
+      "options": [
+        {
+          "id": "A",
+          "text": "originate"
+        },
+        {
+          "id": "B",
+          "text": "mimic"
+        },
+        {
+          "id": "C",
+          "text": "copy"
+        },
+        {
+          "id": "D",
+          "text": "duplicate"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (originate)**\n\n- **Dịch nghĩa:** Những người có tư duy độc lập phấn đấu đổi mới sáng tạo thay vì chỉ đơn thuần bắt chước (imitate) các sản phẩm hiện có trên thị trường.\n- **Phân tích:** *imitate* (bắt chước, sao chép) trái nghĩa với *originate* (khởi xướng, sáng tạo ra nguồn cội mới)."
+    },
+    {
+      "order": 62,
+      "sectionName": "Từ trái nghĩa (Opposite in Meaning)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 62:** During lockdown, students attended **virtual** classrooms instead of gathering on campus.",
+      "options": [
+        {
+          "id": "A",
+          "text": "simulated"
+        },
+        {
+          "id": "B",
+          "text": "physical"
+        },
+        {
+          "id": "C",
+          "text": "digital"
+        },
+        {
+          "id": "D",
+          "text": "online"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (physical)**\n\n- **Dịch nghĩa:** Trong thời gian phong tỏa, học sinh tham gia các lớp học ảo (virtual classrooms) thay vì tập trung trên khuôn viên trường.\n- **Phân tích:** *virtual* (ảo, trên mạng) trái nghĩa với *physical* (vật lý, trực tiếp ngoài đời thực)."
+    },
+    {
+      "order": 63,
+      "sectionName": "Từ trái nghĩa (Opposite in Meaning)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 63:** The beverage brand advertises that its juice contains no **artificial** coloring or synthetic flavors.",
+      "options": [
+        {
+          "id": "A",
+          "text": "chemical"
+        },
+        {
+          "id": "B",
+          "text": "man-made"
+        },
+        {
+          "id": "C",
+          "text": "natural"
+        },
+        {
+          "id": "D",
+          "text": "fake"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (natural)**\n\n- **Dịch nghĩa:** Thương hiệu đồ uống quảng cáo rằng nước ép của họ không chứa phẩm màu nhân tạo (artificial coloring) hay hương liệu tổng hợp.\n- **Phân tích:** *artificial* (nhân tạo, do con người chế tạo) trái nghĩa với *natural* (tự nhiên)."
+    },
+    {
+      "order": 64,
+      "sectionName": "Đọc hiểu điền từ (Guided Cloze)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 64:** **Read the following passage and mark the letter A, B, C, or D to choose the word or phrase that best fits each of the numbered blanks from 64 to 70:**\n\nArtificial intelligence is transforming high school education at an unprecedented pace. Modern schools are adopting cloud-based (64)_______ that bring learning resources straight to students' tablets. Through the power of AI, educators can now offer (65)_______, tailoring exercise difficulty and lesson speed to each teenager's progress. When studying at home, learners who encounter challenging calculus formulas or chemistry equations can consult an intelligent (66)_______ for step-by-step guidance. Furthermore, students can assemble their essays, lab reports, and coding projects inside a comprehensive (67)_______ to present to future college admissions officers.\n\nMachine learning models can also (68)_______ assessment results within seconds, highlighting concepts where the class needs extra review. By relieving teachers of (69)_______ administrative chores like grading multiple-choice sheets, technology gives educators more time for meaningful mentorship. Without question, the integration of smart pedagogical tools marks a historic (70)_______ in modern teaching.\n\n**Question 64:**",
+      "options": [
+        {
+          "id": "A",
+          "text": "standbys"
+        },
+        {
+          "id": "B",
+          "text": "milestones"
+        },
+        {
+          "id": "C",
+          "text": "chatbots"
+        },
+        {
+          "id": "D",
+          "text": "platforms"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (platforms)**\n\n- **Dịch nghĩa:** Modern schools are adopting cloud-based platforms (nền tảng đám mây)... mang tài nguyên học tập tới tận máy tính bảng của học sinh.\n- **Phân tích:** *cloud-based platforms* là cụm danh từ chỉ các nền tảng phần mềm đám mây."
+    },
+    {
+      "order": 65,
+      "sectionName": "Đọc hiểu điền từ (Guided Cloze)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 65:** **Read the following passage and mark the letter A, B, C, or D to choose the word or phrase that best fits each of the numbered blanks from 64 to 70:**\n\nArtificial intelligence is transforming high school education at an unprecedented pace. Modern schools are adopting cloud-based (64)_______ that bring learning resources straight to students' tablets. Through the power of AI, educators can now offer (65)_______, tailoring exercise difficulty and lesson speed to each teenager's progress. When studying at home, learners who encounter challenging calculus formulas or chemistry equations can consult an intelligent (66)_______ for step-by-step guidance. Furthermore, students can assemble their essays, lab reports, and coding projects inside a comprehensive (67)_______ to present to future college admissions officers.\n\nMachine learning models can also (68)_______ assessment results within seconds, highlighting concepts where the class needs extra review. By relieving teachers of (69)_______ administrative chores like grading multiple-choice sheets, technology gives educators more time for meaningful mentorship. Without question, the integration of smart pedagogical tools marks a historic (70)_______ in modern teaching.\n\n**Question 65:**",
+      "options": [
+        {
+          "id": "A",
+          "text": "personalised learning"
+        },
+        {
+          "id": "B",
+          "text": "speech recognition"
+        },
+        {
+          "id": "C",
+          "text": "standby mode"
+        },
+        {
+          "id": "D",
+          "text": "facial recognition"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (personalised learning)**\n\n- **Dịch nghĩa:** ...offer personalised learning, tailoring exercise difficulty and lesson speed to each teenager's progress.\n- **Phân tích:** *personalised learning* (học tập cá nhân hóa) điều chỉnh độ khó bài tập theo tốc độ học của từng học sinh."
+    },
+    {
+      "order": 66,
+      "sectionName": "Đọc hiểu điền từ (Guided Cloze)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 66:** **Read the following passage and mark the letter A, B, C, or D to choose the word or phrase that best fits each of the numbered blanks from 64 to 70:**\n\nArtificial intelligence is transforming high school education at an unprecedented pace. Modern schools are adopting cloud-based (64)_______ that bring learning resources straight to students' tablets. Through the power of AI, educators can now offer (65)_______, tailoring exercise difficulty and lesson speed to each teenager's progress. When studying at home, learners who encounter challenging calculus formulas or chemistry equations can consult an intelligent (66)_______ for step-by-step guidance. Furthermore, students can assemble their essays, lab reports, and coding projects inside a comprehensive (67)_______ to present to future college admissions officers.\n\nMachine learning models can also (68)_______ assessment results within seconds, highlighting concepts where the class needs extra review. By relieving teachers of (69)_______ administrative chores like grading multiple-choice sheets, technology gives educators more time for meaningful mentorship. Without question, the integration of smart pedagogical tools marks a historic (70)_______ in modern teaching.\n\n**Question 66:**",
+      "options": [
+        {
+          "id": "A",
+          "text": "autonomous vehicle"
+        },
+        {
+          "id": "B",
+          "text": "virtual tutor"
+        },
+        {
+          "id": "C",
+          "text": "hardware maintenance"
+        },
+        {
+          "id": "D",
+          "text": "repetitive cycle"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (virtual tutor)**\n\n- **Dịch nghĩa:** ...learners who encounter challenging calculus formulas can consult an intelligent virtual tutor for step-by-step guidance.\n- **Phân tích:** *virtual tutor* (gia sư ảo) giải đáp bài toán khó từng bước."
+    },
+    {
+      "order": 67,
+      "sectionName": "Đọc hiểu điền từ (Guided Cloze)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 67:** **Read the following passage and mark the letter A, B, C, or D to choose the word or phrase that best fits each of the numbered blanks from 64 to 70:**\n\nArtificial intelligence is transforming high school education at an unprecedented pace. Modern schools are adopting cloud-based (64)_______ that bring learning resources straight to students' tablets. Through the power of AI, educators can now offer (65)_______, tailoring exercise difficulty and lesson speed to each teenager's progress. When studying at home, learners who encounter challenging calculus formulas or chemistry equations can consult an intelligent (66)_______ for step-by-step guidance. Furthermore, students can assemble their essays, lab reports, and coding projects inside a comprehensive (67)_______ to present to future college admissions officers.\n\nMachine learning models can also (68)_______ assessment results within seconds, highlighting concepts where the class needs extra review. By relieving teachers of (69)_______ administrative chores like grading multiple-choice sheets, technology gives educators more time for meaningful mentorship. Without question, the integration of smart pedagogical tools marks a historic (70)_______ in modern teaching.\n\n**Question 67:**",
+      "options": [
+        {
+          "id": "A",
+          "text": "standby mode"
+        },
+        {
+          "id": "B",
+          "text": "conversational platform"
+        },
+        {
+          "id": "C",
+          "text": "digital portfolio"
+        },
+        {
+          "id": "D",
+          "text": "speech recognition"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (digital portfolio)**\n\n- **Dịch nghĩa:** ...assemble their essays, lab reports, and coding projects inside a comprehensive digital portfolio to present to college admissions officers.\n- **Phân tích:** *digital portfolio* (hồ sơ năng lực số) tổng hợp bài tập, dự án gửi tới hội đồng tuyển sinh."
+    },
+    {
+      "order": 68,
+      "sectionName": "Đọc hiểu điền từ (Guided Cloze)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 68:** **Read the following passage and mark the letter A, B, C, or D to choose the word or phrase that best fits each of the numbered blanks from 64 to 70:**\n\nArtificial intelligence is transforming high school education at an unprecedented pace. Modern schools are adopting cloud-based (64)_______ that bring learning resources straight to students' tablets. Through the power of AI, educators can now offer (65)_______, tailoring exercise difficulty and lesson speed to each teenager's progress. When studying at home, learners who encounter challenging calculus formulas or chemistry equations can consult an intelligent (66)_______ for step-by-step guidance. Furthermore, students can assemble their essays, lab reports, and coding projects inside a comprehensive (67)_______ to present to future college admissions officers.\n\nMachine learning models can also (68)_______ assessment results within seconds, highlighting concepts where the class needs extra review. By relieving teachers of (69)_______ administrative chores like grading multiple-choice sheets, technology gives educators more time for meaningful mentorship. Without question, the integration of smart pedagogical tools marks a historic (70)_______ in modern teaching.\n\n**Question 68:**",
+      "options": [
+        {
+          "id": "A",
+          "text": "programme"
+        },
+        {
+          "id": "B",
+          "text": "imitate"
+        },
+        {
+          "id": "C",
+          "text": "depend"
+        },
+        {
+          "id": "D",
+          "text": "analyse"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (analyse)**\n\n- **Dịch nghĩa:** Machine learning models can also analyse assessment results within seconds...\n- **Phân tích:** Động từ *analyse* (phân tích kết quả đánh giá). Sau động từ khuyết thiếu *can* dùng động từ nguyên mẫu không 'to'."
+    },
+    {
+      "order": 69,
+      "sectionName": "Đọc hiểu điền từ (Guided Cloze)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 69:** **Read the following passage and mark the letter A, B, C, or D to choose the word or phrase that best fits each of the numbered blanks from 64 to 70:**\n\nArtificial intelligence is transforming high school education at an unprecedented pace. Modern schools are adopting cloud-based (64)_______ that bring learning resources straight to students' tablets. Through the power of AI, educators can now offer (65)_______, tailoring exercise difficulty and lesson speed to each teenager's progress. When studying at home, learners who encounter challenging calculus formulas or chemistry equations can consult an intelligent (66)_______ for step-by-step guidance. Furthermore, students can assemble their essays, lab reports, and coding projects inside a comprehensive (67)_______ to present to future college admissions officers.\n\nMachine learning models can also (68)_______ assessment results within seconds, highlighting concepts where the class needs extra review. By relieving teachers of (69)_______ administrative chores like grading multiple-choice sheets, technology gives educators more time for meaningful mentorship. Without question, the integration of smart pedagogical tools marks a historic (70)_______ in modern teaching.\n\n**Question 69:**",
+      "options": [
+        {
+          "id": "A",
+          "text": "repetitive"
+        },
+        {
+          "id": "B",
+          "text": "hands-on"
+        },
+        {
+          "id": "C",
+          "text": "autonomous"
+        },
+        {
+          "id": "D",
+          "text": "dependent"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (repetitive)**\n\n- **Dịch nghĩa:** By relieving teachers of repetitive administrative chores like grading sheets...\n- **Phân tích:** *repetitive administrative chores* (những công việc giấy tờ hành chính mang tính lặp đi lặp lại đơn điệu như chấm phiếu trắc nghiệm)."
+    },
+    {
+      "order": 70,
+      "sectionName": "Đọc hiểu điền từ (Guided Cloze)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 70:** **Read the following passage and mark the letter A, B, C, or D to choose the word or phrase that best fits each of the numbered blanks from 64 to 70:**\n\nArtificial intelligence is transforming high school education at an unprecedented pace. Modern schools are adopting cloud-based (64)_______ that bring learning resources straight to students' tablets. Through the power of AI, educators can now offer (65)_______, tailoring exercise difficulty and lesson speed to each teenager's progress. When studying at home, learners who encounter challenging calculus formulas or chemistry equations can consult an intelligent (66)_______ for step-by-step guidance. Furthermore, students can assemble their essays, lab reports, and coding projects inside a comprehensive (67)_______ to present to future college admissions officers.\n\nMachine learning models can also (68)_______ assessment results within seconds, highlighting concepts where the class needs extra review. By relieving teachers of (69)_______ administrative chores like grading multiple-choice sheets, technology gives educators more time for meaningful mentorship. Without question, the integration of smart pedagogical tools marks a historic (70)_______ in modern teaching.\n\n**Question 70:**",
+      "options": [
+        {
+          "id": "A",
+          "text": "chatbot"
+        },
+        {
+          "id": "B",
+          "text": "milestone"
+        },
+        {
+          "id": "C",
+          "text": "standby"
+        },
+        {
+          "id": "D",
+          "text": "maintenance"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (milestone)**\n\n- **Dịch nghĩa:** ...the integration of smart pedagogical tools marks a historic milestone in modern teaching.\n- **Phân tích:** Cụm collocations: *mark a historic milestone* (đánh dấu một cột mốc lịch sử)."
+    },
+    {
+      "order": 71,
+      "sectionName": "Thể sai khiến chủ động (Active Causatives)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 71:** The computer science teacher had her students _______ the dialogue algorithm in pairs before presenting to the class.",
+      "options": [
+        {
+          "id": "A",
+          "text": "practising"
+        },
+        {
+          "id": "B",
+          "text": "to practise"
+        },
+        {
+          "id": "C",
+          "text": "practise"
+        },
+        {
+          "id": "D",
+          "text": "practised"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (practise)**\n\n- **Dịch nghĩa:** Giáo viên tin học đã yêu cầu học sinh của mình thực hành thuật toán đối thoại theo cặp trước khi trình bày trước lớp.\n- **Thần chú Thầy Thức:** *HAVE + Người + V-bare (nguyên thể không 'to')*.\n- **Công thức:** $S + have + someone + V_{bare}$. Do tân ngữ là *her students* (chỉ người) nên dùng *practise*."
+    },
+    {
+      "order": 72,
+      "sectionName": "Thể sai khiến chủ động (Active Causatives)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 72:** The school principal got the IT technicians _______ the latest anti-virus software on all lab workstations.",
+      "options": [
+        {
+          "id": "A",
+          "text": "install"
+        },
+        {
+          "id": "B",
+          "text": "installing"
+        },
+        {
+          "id": "C",
+          "text": "installed"
+        },
+        {
+          "id": "D",
+          "text": "to install"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (to install)**\n\n- **Dịch nghĩa:** Hiệu trưởng nhà trường đã nhờ các kỹ thuật viên CNTT cài đặt phần mềm diệt virus mới nhất trên tất cả các máy trạm trong phòng thực hành.\n- **Thần chú Thầy Thức:** *GET + Người + TO V*.\n- **Công thức:** $S + get + someone + to\text{-}V$. Tân ngữ *the IT technicians* (chỉ người) đi cùng động từ *get*, bắt buộc dùng *to install*."
+    },
+    {
+      "order": 73,
+      "sectionName": "Thể sai khiến chủ động (Active Causatives)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 73:** Before setting off on our cross-country road trip, my father had a seasoned mechanic _______ the brake pads and engine oil.",
+      "options": [
+        {
+          "id": "A",
+          "text": "check"
+        },
+        {
+          "id": "B",
+          "text": "to check"
+        },
+        {
+          "id": "C",
+          "text": "checked"
+        },
+        {
+          "id": "D",
+          "text": "checking"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (check)**\n\n- **Dịch nghĩa:** Trước khi khởi hành chuyến du lịch xuyên quốc gia, bố tôi đã nhờ một thợ cơ khí lành nghề kiểm tra má phanh và dầu động cơ.\n- **Thần chú Thầy Thức:** *HAVE + Người + V-bare*.\n- **Công thức:** $S + had + someone + V_{bare}$. Tân ngữ *a seasoned mechanic* (thợ máy - người) sau *had* $\\rightarrow$ dùng *check*."
+    },
+    {
+      "order": 74,
+      "sectionName": "Thể sai khiến chủ động (Active Causatives)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 74:** Linda managed to get her older brother _______ her with the difficult Python programming assignment.",
+      "options": [
+        {
+          "id": "A",
+          "text": "help"
+        },
+        {
+          "id": "B",
+          "text": "to help"
+        },
+        {
+          "id": "C",
+          "text": "helped"
+        },
+        {
+          "id": "D",
+          "text": "helping"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (to help)**\n\n- **Dịch nghĩa:** Linda đã thuyết phục được anh trai mình giúp đỡ bạn ấy bài tập lập trình Python khó.\n- **Thần chú Thầy Thức:** *GET + Người + TO V*.\n- **Công thức:** $S + get + someone + to\text{-}V$. Tân ngữ *her older brother* (người) sau *get* $\\rightarrow$ dùng *to help*."
+    },
+    {
+      "order": 75,
+      "sectionName": "Thể sai khiến chủ động (Active Causatives)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 75:** Did you have the postal courier _______ the sensitive confidential documents directly at the reception desk?",
+      "options": [
+        {
+          "id": "A",
+          "text": "left"
+        },
+        {
+          "id": "B",
+          "text": "to leave"
+        },
+        {
+          "id": "C",
+          "text": "leave"
+        },
+        {
+          "id": "D",
+          "text": "leaving"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (leave)**\n\n- **Dịch nghĩa:** Bạn có nhờ người đưa thư chuyển phát để lại các tài liệu mật nhạy cảm trực tiếp ở quầy lễ tân không?\n- **Thần chú Thầy Thức:** *HAVE + Người + V-bare*.\n- **Công thức:** Câu hỏi trợ động từ: $Did + S + have + someone + V_{bare}$? Tân ngữ *the postal courier* (người giao thư) $\\rightarrow$ dùng *leave*."
+    },
+    {
+      "order": 76,
+      "sectionName": "Thể sai khiến chủ động (Active Causatives)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 76:** The robotics club is trying to get local tech enterprises _______ funds for their upcoming international competition.",
+      "options": [
+        {
+          "id": "A",
+          "text": "provide"
+        },
+        {
+          "id": "B",
+          "text": "providing"
+        },
+        {
+          "id": "C",
+          "text": "provided"
+        },
+        {
+          "id": "D",
+          "text": "to provide"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (to provide)**\n\n- **Dịch nghĩa:** Câu lạc bộ robot đang cố gắng vận động các doanh nghiệp công nghệ địa phương tài trợ kinh phí cho cuộc thi quốc tế sắp tới của họ.\n- **Thần chú Thầy Thức:** *GET + Người/Doanh nghiệp + TO V*.\n- **Công thức:** $S + get + someone/party + to\text{-}V$. Tân ngữ chỉ chủ thể tác động sau *get* $\\rightarrow$ dùng *to provide*."
+    },
+    {
+      "order": 77,
+      "sectionName": "Thể sai khiến chủ động (Active Causatives)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 77:** The managing director had an independent auditor _______ every invoice issued during the last fiscal quarter.",
+      "options": [
+        {
+          "id": "A",
+          "text": "inspect"
+        },
+        {
+          "id": "B",
+          "text": "to inspect"
+        },
+        {
+          "id": "C",
+          "text": "inspected"
+        },
+        {
+          "id": "D",
+          "text": "inspecting"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (inspect)**\n\n- **Dịch nghĩa:** Giám đốc điều hành đã nhờ một kiểm toán viên độc lập kiểm tra từng hóa đơn phát hành trong quý tài chính vừa qua.\n- **Thần chú Thầy Thức:** *HAVE + Người + V-bare*.\n- **Công thức:** $S + had + someone + V_{bare}$. Tân ngữ *an independent auditor* (kiểm toán viên - người) $\\rightarrow$ dùng *inspect*."
+    },
+    {
+      "order": 78,
+      "sectionName": "Thể sai khiến chủ động (Active Causatives)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 78:** Could you please get the cleaning staff _______ the multimedia conference hall before the delegates arrive?",
+      "options": [
+        {
+          "id": "A",
+          "text": "sweep"
+        },
+        {
+          "id": "B",
+          "text": "to sweep"
+        },
+        {
+          "id": "C",
+          "text": "swept"
+        },
+        {
+          "id": "D",
+          "text": "sweeping"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (to sweep)**\n\n- **Dịch nghĩa:** Bạn có thể vui lòng nhờ nhân viên vệ sinh quét dọn hội trường hội nghị đa phương tiện trước khi các đại biểu tới không?\n- **Thần chú Thầy Thức:** *GET + Người + TO V*.\n- **Công thức:** $Could\\ you\\ get + someone + to\text{-}V$. Tân ngữ *the cleaning staff* (nhân viên - người) sau *get* $\\rightarrow$ dùng *to sweep*."
+    },
+    {
+      "order": 79,
+      "sectionName": "Thể sai khiến bị động (Passive Causatives)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 79:** The technology academy had all its campus desktop computers _______ with high-speed solid-state drives last weekend.",
+      "options": [
+        {
+          "id": "A",
+          "text": "upgrade"
+        },
+        {
+          "id": "B",
+          "text": "to upgrade"
+        },
+        {
+          "id": "C",
+          "text": "upgraded"
+        },
+        {
+          "id": "D",
+          "text": "upgrading"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (upgraded)**\n\n- **Dịch nghĩa:** Học viện công nghệ đã cho nâng cấp tất cả máy tính để bàn trong khuôn viên trường bằng ổ cứng SSD tốc độ cao vào cuối tuần trước.\n- **Thần chú Thầy Thức:** *HAVE / GET + VẬT + V3/ED*.\n- **Công thức:** $S + had + sth\\ (all\\ its\\ campus\\ desktop\\ computers\\ -\\ vật) + V_{3/ed}$. Đáp án là *upgraded*."
+    },
+    {
+      "order": 80,
+      "sectionName": "Thể sai khiến bị động (Passive Causatives)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 80:** Jessica will get her graduation photograph _______ by a studio portrait artist tomorrow morning.",
+      "options": [
+        {
+          "id": "A",
+          "text": "take"
+        },
+        {
+          "id": "B",
+          "text": "to take"
+        },
+        {
+          "id": "C",
+          "text": "taking"
+        },
+        {
+          "id": "D",
+          "text": "taken"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (taken)**\n\n- **Dịch nghĩa:** Jessica sẽ đi chụp ảnh tốt nghiệp bởi một nhiếp ảnh gia studio vào sáng mai.\n- **Thần chú Thầy Thức:** *GET + VẬT + V3/ED*.\n- **Công thức:** $S + get + sth\\ (her\\ graduation\\ photograph\\ -\\ vật) + V_{3/ed}$. Phân từ 2 của *take* là *taken*."
+    },
+    {
+      "order": 81,
+      "sectionName": "Thể sai khiến bị động (Passive Causatives)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 81:** The regional clinic had thousands of historical patient paper records _______ to streamline electronic data retrieval.",
+      "options": [
+        {
+          "id": "A",
+          "text": "digitised"
+        },
+        {
+          "id": "B",
+          "text": "to digitise"
+        },
+        {
+          "id": "C",
+          "text": "digitise"
+        },
+        {
+          "id": "D",
+          "text": "digitising"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (digitised)**\n\n- **Dịch nghĩa:** Phòng khám khu vực đã cho số hóa hàng ngàn hồ sơ bệnh án giấy lịch sử để tinh giản việc truy xuất dữ liệu điện tử.\n- **Thần chú Thầy Thức:** *HAVE + VẬT + V3/ED*.\n- **Công thức:** $S + had + sth\\ (patient\\ paper\\ records) + V_{3/ed}$. Đáp án: *digitised*."
+    },
+    {
+      "order": 82,
+      "sectionName": "Thể sai khiến bị động (Passive Causatives)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 82:** If you consistently experience blurred vision while reading computer screens, you should get your eyesight _______ immediately.",
+      "options": [
+        {
+          "id": "A",
+          "text": "test"
+        },
+        {
+          "id": "B",
+          "text": "tested"
+        },
+        {
+          "id": "C",
+          "text": "to test"
+        },
+        {
+          "id": "D",
+          "text": "testing"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (tested)**\n\n- **Dịch nghĩa:** Nếu bạn thường xuyên bị mờ mắt khi đọc màn hình máy tính, bạn nên đi kiểm tra thị lực ngay lập tức.\n- **Thần chú Thầy Thức:** *GET + VẬT + V3/ED*.\n- **Công thức:** $S + get + sth\\ (your\\ eyesight\\ -\\ thị lực) + V_{3/ed}$. Đi khám mắt (bác sĩ đo chứ mình không tự đo) $\\rightarrow$ *tested*."
+    },
+    {
+      "order": 83,
+      "sectionName": "Thể sai khiến bị động (Passive Causatives)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 83:** Following the destructive hailstorm, our neighbors had their solar roof panels _______ by certified contractors.",
+      "options": [
+        {
+          "id": "A",
+          "text": "repair"
+        },
+        {
+          "id": "B",
+          "text": "to repair"
+        },
+        {
+          "id": "C",
+          "text": "repaired"
+        },
+        {
+          "id": "D",
+          "text": "repairing"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (repaired)**\n\n- **Dịch nghĩa:** Sau trận mưa đá tàn khốc, những người hàng xóm của chúng tôi đã cho thợ sửa chữa các tấm pin năng lượng mặt trời trên mái nhà.\n- **Thần chú Thầy Thức:** *HAVE + VẬT + V3/ED*.\n- **Công thức:** $S + had + sth\\ (solar\\ roof\\ panels) + V_{3/ed}$. Đáp án: *repaired*."
+    },
+    {
+      "order": 84,
+      "sectionName": "Thể sai khiến bị động (Passive Causatives)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 84:** The financial institution gets its automated teller machines _______ every two weeks to avoid hardware jams.",
+      "options": [
+        {
+          "id": "A",
+          "text": "service"
+        },
+        {
+          "id": "B",
+          "text": "to service"
+        },
+        {
+          "id": "C",
+          "text": "servicing"
+        },
+        {
+          "id": "D",
+          "text": "serviced"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (serviced)**\n\n- **Dịch nghĩa:** Tổ chức tài chính cho bảo dưỡng các máy rút tiền tự động (ATM) hai tuần một lần để tránh kẹt phần cứng.\n- **Thần chú Thầy Thức:** *GET + VẬT + V3/ED*.\n- **Công thức:** $S + gets + sth\\ (ATMs) + V_{3/ed}$. Đáp án: *serviced*."
+    },
+    {
+      "order": 85,
+      "sectionName": "Thể sai khiến bị động (Passive Causatives)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 85:** Before sending out college scholarship submissions, applicants should have their personal essays _______ by an English native speaker.",
+      "options": [
+        {
+          "id": "A",
+          "text": "proofread"
+        },
+        {
+          "id": "B",
+          "text": "to proofread"
+        },
+        {
+          "id": "C",
+          "text": "proofreading"
+        },
+        {
+          "id": "D",
+          "text": "proofreader"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (proofread)**\n\n- **Dịch nghĩa:** Trước khi gửi hồ sơ xin học bổng đại học, ứng viên nên nhờ người bản ngữ đọc duyệt và sửa lỗi bài luận cá nhân của mình.\n- **Thần chú Thầy Thức:** *HAVE + VẬT + V3/ED*.\n- **Công thức:** $have + sth\\ (their\\ personal\\ essays) + V_{3/ed}$. Lưu ý bất quy tắc: *proofread* có quá khứ phân từ giữ nguyên mặt chữ là *proofread* (phát âm là `/ˈpruːfred/`)."
+    },
+    {
+      "order": 86,
+      "sectionName": "Thể sai khiến bị động (Passive Causatives)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 86:** Where did you get that elegant formal suit _______? The tailoring looks flawless.",
+      "options": [
+        {
+          "id": "A",
+          "text": "make"
+        },
+        {
+          "id": "B",
+          "text": "made"
+        },
+        {
+          "id": "C",
+          "text": "to make"
+        },
+        {
+          "id": "D",
+          "text": "making"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (made)**\n\n- **Dịch nghĩa:** Bạn đã may bộ vest trang trọng thanh lịch đó ở đâu vậy? Đường may trông thật hoàn hảo.\n- **Thần chú Thầy Thức:** *GET + VẬT + V3/ED*.\n- **Công thức:** $Where\\ did\\ you\\ get + sth\\ (that\\ suit) + V_{3/ed}$? Đi may quần áo (thợ may) $\\rightarrow$ dùng *made*."
+    },
+    {
+      "order": 87,
+      "sectionName": "Thể sai khiến bị động (Passive Causatives)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 87:** The museum curator had bulletproof glass barriers _______ around the historic oil painting for added protection.",
+      "options": [
+        {
+          "id": "A",
+          "text": "install"
+        },
+        {
+          "id": "B",
+          "text": "to install"
+        },
+        {
+          "id": "C",
+          "text": "installed"
+        },
+        {
+          "id": "D",
+          "text": "installing"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (installed)**\n\n- **Dịch nghĩa:** Người quản lý bảo tàng đã cho lắp đặt các rào chắn bằng kính chống đạn xung quanh bức tranh sơn dầu lịch sử để tăng cường bảo vệ.\n- **Thần chú Thầy Thức:** *HAVE + VẬT + V3/ED*.\n- **Công thức:** $had + sth\\ (barriers) + V_{3/ed}$. Đáp án: *installed*."
+    },
+    {
+      "order": 88,
+      "sectionName": "Thể sai khiến bị động (Passive Causatives)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 88:** Nam Việt had his cracked tablet screen _______ at the certified electronic service shop yesterday afternoon.",
+      "options": [
+        {
+          "id": "A",
+          "text": "replace"
+        },
+        {
+          "id": "B",
+          "text": "to replace"
+        },
+        {
+          "id": "C",
+          "text": "replacing"
+        },
+        {
+          "id": "D",
+          "text": "replaced"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (replaced)**\n\n- **Dịch nghĩa:** Nam Việt đã mang chiếc máy tính bảng bị nứt màn hình đi thay tại cửa hàng dịch vụ điện tử chính hãng vào chiều hôm qua.\n- **Thần chú Thầy Thức:** *HAVE + VẬT + V3/ED*.\n- **Công thức:** $had + sth\\ (his\\ cracked\\ tablet\\ screen) + V_{3/ed}$. Đáp án: *replaced*."
+    },
+    {
+      "order": 89,
+      "sectionName": "Mở rộng: MAKE & LET (Causatives)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 89:** The rigorous physical education instructor made all the students _______ two miles around the track before soccer practice.",
+      "options": [
+        {
+          "id": "A",
+          "text": "jog"
+        },
+        {
+          "id": "B",
+          "text": "to jog"
+        },
+        {
+          "id": "C",
+          "text": "jogged"
+        },
+        {
+          "id": "D",
+          "text": "jogging"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (jog)**\n\n- **Dịch nghĩa:** Người hướng dẫn thể dục nghiêm khắc đã bắt tất cả học sinh chạy bộ hai dặm quanh đường chạy trước buổi tập bóng đá.\n- **Công thức Thầy Thức:** $S + make + someone + V_{bare}$ (bắt buộc ai làm gì). Sau tân ngữ chỉ người *all the students* dùng động từ nguyên thể không 'to' (*jog*)."
+    },
+    {
+      "order": 90,
+      "sectionName": "Mở rộng: MAKE & LET (Causatives)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 90:** During the strict safety drill, building occupants were made _______ the stairs instead of using the elevators.",
+      "options": [
+        {
+          "id": "A",
+          "text": "use"
+        },
+        {
+          "id": "B",
+          "text": "to use"
+        },
+        {
+          "id": "C",
+          "text": "used"
+        },
+        {
+          "id": "D",
+          "text": "using"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (to use)**\n\n- **Dịch nghĩa:** Trong buổi diễn tập an toàn nghiêm ngặt, những người trong tòa nhà đã bị bắt buộc phải sử dụng cầu thang bộ thay vì dùng thang máy.\n- **Bẫy thi cực mạnh:** Thể bị động của MAKE: $be\\ made + to\text{-}V$ (bị bắt làm gì phải có 'to')! Ngược lại thể chủ động $make + sb + V_{bare}$."
+    },
+    {
+      "order": 91,
+      "sectionName": "Mở rộng: MAKE & LET (Causatives)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 91:** My parents never let me _______ violent online video games on school nights.",
+      "options": [
+        {
+          "id": "A",
+          "text": "played"
+        },
+        {
+          "id": "B",
+          "text": "to play"
+        },
+        {
+          "id": "C",
+          "text": "play"
+        },
+        {
+          "id": "D",
+          "text": "playing"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (play)**\n\n- **Dịch nghĩa:** Cha mẹ tôi không bao giờ cho phép tôi chơi trò chơi điện tử bạo lực trực tuyến vào các buổi tối trong tuần đi học.\n- **Công thức Thầy Thức:** $S + let + someone + V_{bare}$ (cho phép ai làm gì). Sau *me* dùng động từ nguyên thể không 'to' (*play*)."
+    },
+    {
+      "order": 92,
+      "sectionName": "Mở rộng: MAKE & LET (Causatives)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 92:** Tourists visiting the ancient temple are not allowed _______ photographic flashes near the delicate murals.",
+      "options": [
+        {
+          "id": "A",
+          "text": "discharge"
+        },
+        {
+          "id": "B",
+          "text": "discharged"
+        },
+        {
+          "id": "C",
+          "text": "discharging"
+        },
+        {
+          "id": "D",
+          "text": "to discharge"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (to discharge)**\n\n- **Dịch nghĩa:** Khách du lịch viếng thăm ngôi đền cổ không được phép bật đèn flash chụp ảnh gần các bức tranh tường tinh xảo.\n- **Công thức Thầy Thức:** Thể bị động tương đương của LET: $be\\ allowed + to\text{-}V$ (được phép làm gì). Do đó phải dùng *to discharge*."
+    },
+    {
+      "order": 93,
+      "sectionName": "Tìm lỗi sai (Error Identification)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 93:** The chemistry teacher **had** (A) the lab assistant **to set up** (B) the titration tubes **before** (C) the students **arrived** (D).",
+      "options": [
+        {
+          "id": "A",
+          "text": "to set up"
+        },
+        {
+          "id": "B",
+          "text": "had"
+        },
+        {
+          "id": "C",
+          "text": "before"
+        },
+        {
+          "id": "D",
+          "text": "arrived"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (to set up $\\rightarrow$ set up)**\n\n- **Dịch nghĩa:** Giáo viên hóa học đã nhờ trợ lý phòng thí nghiệm chuẩn bị các ống chuẩn độ trước khi học sinh đến.\n- **Giải thích lỗi sai:** Theo cấu trúc Thể sai khiến chủ động với HAVE: $S + have + someone + V_{bare}$. Tân ngữ là *the lab assistant* (người), do đó phải dùng động từ nguyên thể không 'to' *set up*, chứ không dùng *to set up*."
+    },
+    {
+      "order": 94,
+      "sectionName": "Tìm lỗi sai (Error Identification)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 94:** Mrs. Green **got** (A) the certified electrician **wire** (B) the whole workshop **so that** (C) all power outlets **worked safely** (D).",
+      "options": [
+        {
+          "id": "A",
+          "text": "got"
+        },
+        {
+          "id": "B",
+          "text": "wire"
+        },
+        {
+          "id": "C",
+          "text": "so that"
+        },
+        {
+          "id": "D",
+          "text": "worked safely"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (wire $\\rightarrow$ to wire)**\n\n- **Dịch nghĩa:** Bà Green đã nhờ thợ điện có chứng chỉ đi dây toàn bộ xưởng để mọi ổ cắm điện hoạt động an toàn.\n- **Giải thích lỗi sai:** Cấu trúc sai khiến chủ động với GET: $S + get + someone + to\text{-}V$. Tân ngữ là *the certified electrician* (người), sau *got* bắt buộc phải dùng *to wire*, sửa *wire* thành *to wire*."
+    },
+    {
+      "order": 95,
+      "sectionName": "Tìm lỗi sai (Error Identification)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 95:** We urgently **need to** (A) have our broken restaurant **refrigerator** (B) **repairing** (C) before all the fresh seafood **spoils** (D).",
+      "options": [
+        {
+          "id": "A",
+          "text": "need to"
+        },
+        {
+          "id": "B",
+          "text": "refrigerator"
+        },
+        {
+          "id": "C",
+          "text": "repairing"
+        },
+        {
+          "id": "D",
+          "text": "spoils"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (repairing $\\rightarrow$ repaired)**\n\n- **Dịch nghĩa:** Chúng tôi khẩn cấp cần mang chiếc tủ lạnh nhà hàng bị hỏng đi sửa trước khi tất cả hải sản tươi sống bị ôi thiu.\n- **Giải thích lỗi sai:** Cấu trúc sai khiến bị động: $have + sth\\ (our\\ broken\\ refrigerator\\ -\\ vật) + V_{3/ed}$. Không dùng dạng V-ing *repairing*, phải sửa thành quá khứ phân từ *repaired*."
+    },
+    {
+      "order": 96,
+      "sectionName": "Tìm lỗi sai (Error Identification)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 96:** Peter **got** (A) his tourist visa **renew** (B) at the consulate **in order to** (C) attend the AI robotics conference **in Tokyo** (D).",
+      "options": [
+        {
+          "id": "A",
+          "text": "got"
+        },
+        {
+          "id": "B",
+          "text": "in Tokyo"
+        },
+        {
+          "id": "C",
+          "text": "in order to"
+        },
+        {
+          "id": "D",
+          "text": "renew"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (renew $\\rightarrow$ renewed)**\n\n- **Dịch nghĩa:** Peter đã cho gia hạn visa du lịch của mình tại lãnh sự quán để tham dự hội nghị robot AI ở Tokyo.\n- **Giải thích lỗi sai:** Cấu trúc sai khiến bị động với GET: $get + sth\\ (his\\ tourist\\ visa\\ -\\ vật) + V_{3/ed}$. Sửa *renew* thành dạng phân từ 2 *renewed*."
+    },
+    {
+      "order": 97,
+      "sectionName": "Giao tiếp hằng ngày (Everyday Communication)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 97:** **Conference Chairman:** \"_______, ladies and gentlemen? The keynote address on generative AI is about to begin.\"\n\n**Audience:** *(The room becomes quiet and turns towards the stage)*",
+      "options": [
+        {
+          "id": "A",
+          "text": "May I have your attention, please?"
+        },
+        {
+          "id": "B",
+          "text": "Why are you talking so loudly?"
+        },
+        {
+          "id": "C",
+          "text": "Stop talking immediately!"
+        },
+        {
+          "id": "D",
+          "text": "Do you hear what I said?"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "**Đáp án đúng: A (May I have your attention, please?)**\n\n- **Dịch nghĩa:** Chủ tọa hội nghị: \"Xin quý vị vui lòng chú ý lắng nghe? Bài phát biểu chính về AI tạo sinh sắp bắt đầu.\"\n- **Phân tích:** Mẫu câu thu hút sự chú ý trang trọng, lịch sự nhất trong hội nghị (SGK tr. 84) là *\"May I have your attention, please?\"*. Các phương án còn lại đều thô lỗ, cộc lốc hoặc thiếu tính chuyên nghiệp."
+    },
+    {
+      "order": 98,
+      "sectionName": "Giao tiếp hằng ngày (Everyday Communication)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 98:** **Student:** \"_______, but could you please clarify how the deep neural network adjusts its weights during backpropagation?\"\n\n**Professor:** \"Of course. That is a fundamental concept. Let me show you this diagram.\"",
+      "options": [
+        {
+          "id": "A",
+          "text": "You are completely mistaken"
+        },
+        {
+          "id": "B",
+          "text": "I'm sorry for interrupting"
+        },
+        {
+          "id": "C",
+          "text": "I don't care about your slide"
+        },
+        {
+          "id": "D",
+          "text": "Listen to me right now"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "**Đáp án đúng: B (I'm sorry for interrupting)**\n\n- **Dịch nghĩa:** Học sinh: \"Em xin lỗi vì ngắt lời thầy, nhưng thầy có thể làm rõ cách mạng nơ-ron điều chỉnh trọng số trong quá trình lan truyền ngược không ạ?\" - Giáo sư: \"Dĩ nhiên rồi...\"\n- **Phân tích:** Mẫu câu ngắt lời lịch sự trong giờ học (SGK tr. 84) là *\"I'm sorry for interrupting, but...\"*."
+    },
+    {
+      "order": 99,
+      "sectionName": "Giao tiếp hằng ngày (Everyday Communication)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 99:** **Colleague A:** \"_______, Mr. David? Do you have two minutes to look over the revised budget estimates?\"\n\n**Colleague B:** \"Sure, come on in. Have a seat.\"",
+      "options": [
+        {
+          "id": "A",
+          "text": "Why are you sitting there"
+        },
+        {
+          "id": "B",
+          "text": "You must listen to me now"
+        },
+        {
+          "id": "C",
+          "text": "Could I ask you a quick question"
+        },
+        {
+          "id": "D",
+          "text": "Don't ignore me"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "**Đáp án đúng: C (Could I ask you a quick question)**\n\n- **Dịch nghĩa:** Đồng nghiệp A: \"Tôi có thể hỏi anh một câu nhanh được không, anh David? Anh có hai phút xem qua dự toán ngân sách sửa đổi không?\" - Đồng nghiệp B: \"Chắc chắn rồi, mời vào ngồi.\"\n- **Phân tích:** Mẫu câu xin phép hỏi nhanh lịch sự trong văn phòng công sở: *\"Could I ask you a quick question / Could I have a moment of your time?\"*."
+    },
+    {
+      "order": 100,
+      "sectionName": "Giao tiếp hằng ngày (Everyday Communication)",
+      "content": "Mark the letter A, B, C, or D to indicate the correct answer:\n\n**Question 100:** **Participant:** \"Sorry for the interruption, but _______? The microphone cut out for a moment.\"\n\n**Presenter:** \"Certainly. I was pointing out that autonomous vehicles have significantly lower reaction times than human drivers.\"",
+      "options": [
+        {
+          "id": "A",
+          "text": "can we leave the room now"
+        },
+        {
+          "id": "B",
+          "text": "why did you stop talking"
+        },
+        {
+          "id": "C",
+          "text": "do you know who I am"
+        },
+        {
+          "id": "D",
+          "text": "could you repeat that last point"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "**Đáp án đúng: D (could you repeat that last point)**\n\n- **Dịch nghĩa:** Người tham dự: \"Xin lỗi vì ngắt lời, nhưng diễn giả có thể nhắc lại ý vừa rồi được không ạ? Micro vừa bị mất tiếng một lúc.\" - Diễn giả: \"Chắc chắn rồi...\"\n- **Phân tích:** Mẫu câu nhờ nhắc lại ý vừa nói một cách lịch sự khi bị gián đoạn âm thanh (SGK tr. 84): *\"Sorry for the interruption, but could you repeat that (last point)?\"*."
+    }
+  ]
+}
