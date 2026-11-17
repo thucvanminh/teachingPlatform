@@ -28,18 +28,18 @@ const CONSTANTS = {
 };
 
 function getSectionName(index) {
-  if (index <= 15) {
-    return 'Phần 1: Danh động từ làm Chủ ngữ & Bổ ngữ (Gerunds as Subjects & Complements)';
-  } else if (index <= 30) {
-    return 'Phần 2: Danh động từ sau Giới từ & Cụm Giới từ (Gerunds after Prepositions)';
+  if (index <= 20) {
+    return 'Phần 1: Danh động từ làm Chủ ngữ, Bổ ngữ & sau Giới từ (Gerunds as Subjects & Objects of Prepositions)';
+  } else if (index <= 35) {
+    return 'Phần 2: Từ vựng cốt lõi Unit 4 trong ngữ cảnh (Core Vocabulary in Context)';
   } else if (index <= 45) {
-    return 'Phần 3: Bẫy điểm 8.5+: Các cụm từ có Giới từ "TO" đi với V-ing (Critical "TO + V-ing")';
-  } else if (index <= 60) {
-    return 'Phần 4: Động từ đi với V-ing & Thành ngữ cố định (Verbs & Idioms + Gerunds)';
+    return 'Phần 3: 10 Câu Biến đổi từ loại (Word Formation: Noun - Adj - Adv - Verb)';
+  } else if (index <= 55) {
+    return 'Phần 4: Động từ đi kèm V-ing & Thành ngữ cố định (Verbs & Idioms + Gerunds)';
   } else if (index <= 70) {
-    return 'Phần 5: 6 Cặp Động từ chuyển biến ý nghĩa & Thể bị động (Meaning-Shift Verbs & Passive Gerunds)';
+    return 'Phần 5: 6 Cặp Động từ đổi nghĩa & Danh động từ hoàn thành (Meaning-Shift Verbs & Perfect Gerunds)';
   } else {
-    return 'Phần 6: Viết lại câu tương đương & Danh động từ hoàn thành (Sentence Transformations & Perfect Gerunds)';
+    return 'Phần 6: Viết lại câu tương đương với Danh động từ (Sentence Transformations with Gerunds)';
   }
 }
 

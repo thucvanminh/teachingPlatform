@@ -1,17 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Generator script for Student Thái (Grade 11) - Date: 12/11/2026.
-Total: 80 Questions on Unit 4 Grammar: Gerunds as Subjects & Objects
-Combined with the 24 Core Vocabulary from 10/11/2026 and simple, accessible context.
-
-Sections:
-1. Questions 1 - 15: Gerunds as Subjects & Complements (Singular verb agreement, Not + V-ing)
-2. Questions 16 - 30: Gerunds after Prepositions (in, on, at, for, of, by, without, before, after)
-3. Questions 31 - 45: Crucial "TO + V-ing" Prepositional Phrases (contribute to, look forward to, be used to, object to...)
-4. Questions 46 - 60: Verbs followed by Gerunds & Fixed Idiomatic Expressions (enjoy, avoid, suggest, it's no use, there's no point in...)
-5. Questions 61 - 70: 6 Meaning-Shift Verbs (Remember, Forget, Regret, Stop, Try, Need) & Passive Gerunds
-6. Questions 71 - 80: Sentence Transformations & Perfect Gerunds (Having + V3/ed)
+Generator script for Student Thái (Grade 11) - Assessment Card: 12/11/2026.
+Subject: ENG_11 (Global Success - Unit 4: ASEAN and Viet Nam)
+Total: 80 Questions strictly adhering to the 5 Golden Rules:
+1. SỬ DỤNG TỪ VỰNG BÀI HỌC (24 từ cốt lõi Unit 4).
+2. TỐI THIỂU 2 TỪ VỰNG CỦA UNIT TRONG 4 ĐÁP ÁN (đối với các câu hỏi từ vựng).
+3. CHỐNG TRÙNG LẶP ĐÁP ÁN ĐÚNG LIÊN TIẾP (text của 2 câu kế nhau không bao giờ trùng nhau).
+4. ĐÚNG 10 CÂU HỎI CHIA TỪ LOẠI WORD FORMATION (đầy đủ 4 dạng Noun, Adj, Adv, Verb).
+5. TỪ VỰNG NGỮ CẢNH CƠ BẢN NHẤT CÓ THỂ (A1-A2 / B1 quen thuộc để Thái không bị ngợp).
+Phân bổ đáp án: Cân bằng 20 A, 20 B, 20 C, 20 D; không có 2 chữ cái đáp án giống nhau đứng cạnh nhau.
 """
 
 import json
@@ -19,33 +17,23 @@ import os
 
 questions = [
     # =========================================================================
-    # PHẦN 1: DANH ĐỘNG TỪ LÀM CHỦ NGỮ & BỔ NGỮ (CÂU 1 - 15)
-    # Quy tắc: V-ing (+ O / Adv) + V(số ít). Phủ định: Not + V-ing.
+    # PHẦN 1: DANH ĐỘNG TỪ LÀM CHỦ NGỮ, BỔ NGỮ & SAU GIỚI TỪ (CÂU 1 - 20)
+    # Ngữ pháp: V-ing làm chủ ngữ (động từ số ít), Not + V-ing, Giới từ + V-ing, 10 cụm "TO + V-ing"
+    # Ngữ cảnh: Từ vựng cơ bản, ngắn gọn, dễ hiểu
     # =========================================================================
     {
-        "content": "__________ economic cooperation among member countries is the main goal of ASEAN.",
+        "content": "__________ peace and friendship between countries is the main goal of ASEAN.",
         "options": [
-            {"id": "A", "text": "Promote"},
-            {"id": "B", "text": "Promoting"},
+            {"id": "A", "text": "Promoting"},
+            {"id": "B", "text": "Promote"},
             {"id": "C", "text": "Promoted"},
             {"id": "D", "text": "To promoting"}
         ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Vị trí đầu câu đứng trước động từ chính 'is' cần một Danh động từ (V-ing) đóng vai trò làm Chủ ngữ trong câu. Cấu trúc: V-ing + V(số ít). Ta chọn 'Promoting' (Việc thúc đẩy). Từ vựng 10/11: 'cooperation' (sự hợp tác), 'promote' (thúc đẩy)."
-    },
-    {
-        "content": "Maintaining peace and stability in Southeast Asia __________ a top priority for all member states.",
-        "options": [
-            {"id": "A", "text": "is"},
-            {"id": "B", "text": "are"},
-            {"id": "C", "text": "were"},
-            {"id": "D", "text": "be"}
-        ],
         "correctAnswer": "A",
-        "explanation": "Thầy Thức hướng dẫn Thái: Bẫy thi kinh điển! Chủ ngữ của câu là Danh động từ 'Maintaining' (Việc duy trì). Quy tắc vàng: Danh động từ làm chủ ngữ thì động từ chính LUÔN chia ở số ít (is/was/has/Vs-es), bất kể các danh từ theo sau có là gì. Ta chọn 'is'. Từ vựng 10/11: 'maintain' (duy trì), 'stability' (sự ổn định)."
+        "explanation": "Thầy Thức hướng dẫn Thái: Vị trí đầu câu đứng trước động từ chính 'is' cần một Danh động từ (V-ing) làm Chủ ngữ. Cấu trúc: V-ing + V(số ít). Chọn 'Promoting' (Việc thúc đẩy). Từ vựng Unit 4: 'promote' (thúc đẩy)."
     },
     {
-        "content": "Strengthening bilateral relations between nations __________ time and continuous efforts.",
+        "content": "Maintaining friendly relations with neighbouring nations __________ a lot of time and effort.",
         "options": [
             {"id": "A", "text": "require"},
             {"id": "B", "text": "requires"},
@@ -53,553 +41,557 @@ questions = [
             {"id": "D", "text": "have required"}
         ],
         "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Chủ ngữ là 'Strengthening' (Danh động từ V-ing), nên động từ ở thì Hiện tại đơn phải thêm 's' (chia số ít) ➔ 'requires'. Dù 'bilateral relations' ở số nhiều nhưng không làm thay đổi động từ chính. Từ vựng 10/11: 'strengthen' (củng cố, tăng cường)."
+        "explanation": "Thầy Thức hướng dẫn Thái: Bẫy danh từ số nhiều! Chủ ngữ là Danh động từ 'Maintaining' (việc duy trì - số ít). Do đó, động từ chính ở thì Hiện tại đơn phải chia số ít: 'requires' (thêm 's'). Từ vựng Unit 4: 'maintain' (duy trì)."
     },
     {
-        "content": "__________ the principles of the ASEAN Charter can lead to serious diplomatic problems.",
+        "content": "Strengthening cooperation among schools in the region __________ very useful for young students.",
         "options": [
-            {"id": "A", "text": "Not respecting"},
-            {"id": "B", "text": "No respecting"},
-            {"id": "C", "text": "Don't respect"},
-            {"id": "D", "text": "Not respect"}
+            {"id": "A", "text": "are"},
+            {"id": "B", "text": "were"},
+            {"id": "C", "text": "is"},
+            {"id": "D", "text": "be"}
         ],
-        "correctAnswer": "A",
-        "explanation": "Thầy Thức hướng dẫn Thái: Dạng phủ định của Danh động từ là 'NOT + V-ing' (tuyệt đối không mượn trợ động từ don't/doesn't khi làm chủ ngữ). Do đó, 'Not respecting' (Việc không tôn trọng...) là đáp án chính xác. Từ vựng 10/11: 'charter' (hiến chương)."
+        "correctAnswer": "C",
+        "explanation": "Thầy Thức hướng dẫn Thái: Chủ ngữ là 'Strengthening cooperation...' (Danh động từ V-ing số ít). Động từ to-be phải chia số ít là 'is'. Từ vựng Unit 4: 'strengthen' (củng cố, tăng cường), 'cooperation' (sự hợp tác)."
     },
     {
-        "content": "Our main task this year is __________ cultural diversity among high school students in the region.",
+        "content": "__________ the rules of the group can cause bad misunderstandings among members.",
         "options": [
-            {"id": "A", "text": "celebrate"},
-            {"id": "B", "text": "celebrating"},
+            {"id": "A", "text": "No respecting"},
+            {"id": "B", "text": "Don't respect"},
+            {"id": "C", "text": "Not respect"},
+            {"id": "D", "text": "Not respecting"}
+        ],
+        "correctAnswer": "D",
+        "explanation": "Thầy Thức hướng dẫn Thái: Dạng phủ định của Danh động từ làm chủ ngữ là 'NOT + V-ing' (tuyệt đối không dùng don't/doesn't). Ta chọn 'Not respecting' (Việc không tôn trọng...)."
+    },
+    {
+        "content": "Our main task this school year is __________ cultural diversity among all teenagers in our town.",
+        "options": [
+            {"id": "A", "text": "celebrating"},
+            {"id": "B", "text": "celebrate"},
             {"id": "C", "text": "celebrated"},
             {"id": "D", "text": "celebration"}
         ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Sau động từ to-be 'is', ta dùng Danh động từ (V-ing) đóng vai trò làm Bổ ngữ cho chủ ngữ (Subject Complement) để diễn giải cụ thể nhiệm vụ chính là việc gì: 'celebrating' (việc tôn vinh/tổ chức). Từ vựng 10/11: 'diversity' (sự đa dạng)."
+        "correctAnswer": "A",
+        "explanation": "Thầy Thức hướng dẫn Thái: Đứng sau to-be 'is', ta dùng V-ing đóng vai trò Bổ ngữ chủ ngữ (Subject Complement): 'celebrating' (việc tổ chức/tôn vinh). Từ vựng Unit 4: 'diversity' (sự đa dạng)."
     },
     {
-        "content": "__________ young volunteers to join community projects helps build future leaders.",
+        "content": "__________ young volunteers to join local charity activities helps build good leaders.",
         "options": [
-            {"id": "A", "text": "Encouraging"},
-            {"id": "B", "text": "Encourage"},
+            {"id": "A", "text": "Encourage"},
+            {"id": "B", "text": "Encouraging"},
             {"id": "C", "text": "Encouraged"},
             {"id": "D", "text": "To encouraging"}
         ],
-        "correctAnswer": "A",
-        "explanation": "Thầy Thức hướng dẫn Thái: Đầu câu cần một Danh động từ (V-ing) làm chủ ngữ cho động từ 'helps': 'Encouraging' (Việc khuyến khích...). Từ vựng 10/11: 'volunteer' (tình nguyện viên), 'leadership/leader' (lãnh đạo)."
+        "correctAnswer": "B",
+        "explanation": "Thầy Thức hướng dẫn Thái: Đứng đầu câu làm chủ ngữ cho động từ 'helps' cần Danh động từ: 'Encouraging' (Việc khuyến khích...). Từ vựng Unit 4: 'volunteer' (tình nguyện viên), 'leader/leadership' (lãnh đạo)."
     },
     {
-        "content": "Showing solidarity with flood victims __________ the true spirit of the ASEAN community.",
+        "content": "Showing solidarity with people in poor areas __________ the kind spirit of our club.",
         "options": [
             {"id": "A", "text": "reflect"},
-            {"id": "B", "text": "reflects"},
-            {"id": "C", "text": "reflecting"},
+            {"id": "B", "text": "reflecting"},
+            {"id": "C", "text": "reflects"},
             {"id": "D", "text": "are reflecting"}
         ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Chủ ngữ là 'Showing solidarity...' (V-ing làm chủ ngữ) ➔ Động từ chính chia số ít ở thì hiện tại đơn: 'reflects' (phản ánh). Dù danh từ đứng trước là 'victims' số nhiều nhưng chủ ngữ thực sự là hành động 'Showing'. Từ vựng 10/11: 'solidarity' (tình đoàn kết)."
+        "correctAnswer": "C",
+        "explanation": "Thầy Thức hướng dẫn Thái: Chủ ngữ là 'Showing solidarity...' (V-ing số ít), nên động từ chia ngôi thứ 3 số ít: 'reflects'. Dù có danh từ số nhiều 'areas', chủ ngữ thực sự là 'Showing'. Từ vựng Unit 4: 'solidarity' (tình đoàn kết)."
     },
     {
-        "content": "__________ national cultural identity is vital when countries integrate into the world economy.",
+        "content": "__________ national cultural identity is very important when our country connects with the world.",
         "options": [
             {"id": "A", "text": "Preserve"},
-            {"id": "B", "text": "Preserving"},
-            {"id": "C", "text": "Preserved"},
-            {"id": "D", "text": "Preserver"}
+            {"id": "B", "text": "Preserved"},
+            {"id": "C", "text": "Preserver"},
+            {"id": "D", "text": "Preserving"}
         ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Vị trí chủ ngữ đứng trước động từ 'is' cần một Danh động từ (V-ing): 'Preserving' (Việc gìn giữ, bảo tồn). Từ vựng 10/11: 'identity' (bản sắc), 'integration/integrate' (hội nhập)."
+        "correctAnswer": "D",
+        "explanation": "Thầy Thức hướng dẫn Thái: Vị trí chủ ngữ đứng trước 'is' cần Danh động từ: 'Preserving' (Việc gìn giữ, bảo tồn). Từ vựng Unit 4: 'identity' (bản sắc), 'cultural' (thuộc văn hóa)."
     },
     {
-        "content": "Participating in regional youth camps __________ students improve their foreign language skills.",
+        "content": "Joining regional youth exchange camps __________ high school students learn foreign languages faster.",
         "options": [
-            {"id": "A", "text": "help"},
-            {"id": "B", "text": "helps"},
+            {"id": "A", "text": "helps"},
+            {"id": "B", "text": "help"},
             {"id": "C", "text": "helping"},
             {"id": "D", "text": "are helping"}
         ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: 'Participating in...' (Việc tham gia vào...) là Danh động từ làm chủ ngữ, do đó động từ chính phải chia ngôi thứ 3 số ít: 'helps'. Từ vựng 10/11: 'participant/participate' (người tham gia / tham gia)."
-    },
-    {
-        "content": "__________ an official representative of the school at the summit was a great honour for Nam.",
-        "options": [
-            {"id": "A", "text": "Be"},
-            {"id": "B", "text": "Being"},
-            {"id": "C", "text": "Been"},
-            {"id": "D", "text": "To being"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Danh động từ của động từ 'to be' là 'Being', đóng vai trò chủ ngữ: 'Being an official representative...' (Việc là người đại diện chính thức...). Từ vựng 10/11: 'representative' (người đại diện)."
-    },
-    {
-        "content": "__________ in community activities brings happiness to many young volunteers.",
-        "options": [
-            {"id": "A", "text": "Being involved"},
-            {"id": "B", "text": "Be involved"},
-            {"id": "C", "text": "To being involved"},
-            {"id": "D", "text": "Involved"}
-        ],
         "correctAnswer": "A",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cụm 'be involved in' (tham gia vào) khi chuyển thành chủ ngữ ở dạng Danh động từ sẽ là 'Being involved in...'. Động từ chính là 'brings' (số ít). Từ vựng 10/11: 'involved in' (tham gia vào), 'volunteer' (tình nguyện viên)."
+        "explanation": "Thầy Thức hướng dẫn Thái: Chủ ngữ là hành động 'Joining...' (V-ing số ít) ➔ Động từ chính chia số ít: 'helps'. Từ vựng Unit 4: 'exchange' (giao lưu), 'participant/student'."
     },
     {
-        "content": "Building a peaceful and prosperous community __________ strong teamwork among all members.",
+        "content": "Viet Nam is proud of __________ an active member of the regional association since 1995.",
+        "options": [
+            {"id": "A", "text": "be"},
+            {"id": "B", "text": "being"},
+            {"id": "C", "text": "been"},
+            {"id": "D", "text": "to being"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Thầy Thức hướng dẫn Thái: Sau tính từ đi với giới từ 'proud of', động từ bắt buộc thêm '-ing': 'being' (việc là...). Từ vựng Unit 4: 'association' (hiệp hội)."
+    },
+    {
+        "content": "Many teenagers enjoy __________ in sports competitions and cultural events after class.",
+        "options": [
+            {"id": "A", "text": "participate"},
+            {"id": "B", "text": "participated"},
+            {"id": "C", "text": "participating"},
+            {"id": "D", "text": "to participate"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Thầy Thức hướng dẫn Thái: Động từ 'enjoy + V-ing' (thích làm gì) ➔ chọn 'participating'. Từ vựng Unit 4: 'participant / participate in' (tham gia)."
+    },
+    {
+        "content": "The school website needs __________ so that students can find scholarship information easily.",
         "options": [
             {"id": "A", "text": "need"},
-            {"id": "B", "text": "needs"},
-            {"id": "C", "text": "needing"},
-            {"id": "D", "text": "are needing"}
+            {"id": "B", "text": "needing"},
+            {"id": "C", "text": "are needing"},
+            {"id": "D", "text": "updating"}
+        ],
+        "correctAnswer": "D",
+        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc bị động của need: 'need + V-ing = need to be V3/ed' (cái gì cần được làm/sửa) ➔ 'needs updating' (cần được cập nhật). Từ vựng Unit 4: 'scholarship' (học bổng)."
+    },
+    {
+        "content": "Thai spent two months studying hard with a view to __________ a prestigious study award.",
+        "options": [
+            {"id": "A", "text": "winning"},
+            {"id": "B", "text": "win"},
+            {"id": "C", "text": "won"},
+            {"id": "D", "text": "to winning"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Thầy Thức hướng dẫn Thái: Cụm từ cố định: 'with a view to + V-ing' (với mục đích nhằm làm gì). Chữ 'to' là giới từ ➔ 'winning'. Từ vựng Unit 4: 'scholarship' (học bổng)."
+    },
+    {
+        "content": "He apologized to his teacher for __________ completed his homework on time.",
+        "options": [
+            {"id": "A", "text": "no having"},
+            {"id": "B", "text": "not having"},
+            {"id": "C", "text": "not to have"},
+            {"id": "D", "text": "don't have"}
         ],
         "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: 'Building a peaceful and prosperous community' là cụm V-ing làm chủ ngữ ➔ Động từ chia số ít 'needs'. Từ vựng 10/11: 'prosperous' (thịnh vượng, phồn vinh)."
+        "explanation": "Thầy Thức hướng dẫn Thái: Sau giới từ 'for', dạng phủ định của Perfect Gerund là 'Not having + V3/ed' ➔ 'not having completed' (vì đã không hoàn thành). Cực chuẩn ngữ pháp!"
     },
     {
-        "content": "__________ an ASEAN scholarship gave Minh the chance to study at a top university.",
-        "options": [
-            {"id": "A", "text": "Winning"},
-            {"id": "B", "text": "Win"},
-            {"id": "C", "text": "Won"},
-            {"id": "D", "text": "To winning"}
-        ],
-        "correctAnswer": "A",
-        "explanation": "Thầy Thức hướng dẫn Thái: Vị trí chủ ngữ đứng đầu câu trước động từ 'gave' cần Danh động từ: 'Winning' (Việc giành được/đạt được...). Từ vựng 10/11: 'scholarship' (học bổng)."
-    },
-    {
-        "content": "__________ enough information before visiting a new country causes many cultural misunderstandings.",
-        "options": [
-            {"id": "A", "text": "Not having"},
-            {"id": "B", "text": "No having"},
-            {"id": "C", "text": "Not to have"},
-            {"id": "D", "text": "Don't have"}
-        ],
-        "correctAnswer": "A",
-        "explanation": "Thầy Thức hướng dẫn Thái: Phủ định của Danh động từ là 'Not + V-ing'. 'Not having enough information...' (Việc không có đủ thông tin...). Động từ chính là 'causes' (số ít). Từ vựng 10/11: 'cultural exchange/diversity'."
-    },
-    {
-        "content": "One of the most effective ways to understand your neighbours is __________ in cultural exchanges.",
+        "content": "We look forward to __________ in the annual youth festival next month.",
         "options": [
             {"id": "A", "text": "take part"},
-            {"id": "B", "text": "taking part"},
-            {"id": "C", "text": "took part"},
+            {"id": "B", "text": "took part"},
+            {"id": "C", "text": "taking part"},
             {"id": "D", "text": "taken part"}
         ],
+        "correctAnswer": "C",
+        "explanation": "Thầy Thức hướng dẫn Thái: Cụm từ kinh điển: 'look forward to + V-ing' (chờ đợi, mong ngóng). 'To' là giới từ ➔ 'taking part'. Không chọn A vì nhầm 'to' là to-infinitive."
+    },
+    {
+        "content": "All ten countries in the bloc are committed to __________ peace and economic stability.",
+        "options": [
+            {"id": "A", "text": "maintain"},
+            {"id": "B", "text": "maintained"},
+            {"id": "C", "text": "maintenance"},
+            {"id": "D", "text": "maintaining"}
+        ],
+        "correctAnswer": "D",
+        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc: 'be committed to + V-ing' (cam kết làm việc gì). Chữ 'to' là giới từ ➔ 'maintaining'. Từ vựng Unit 4: 'bloc' (khối liên minh), 'stability' (sự ổn định)."
+    },
+    {
+        "content": "Several members objected to __________ the date of the international student meeting.",
+        "options": [
+            {"id": "A", "text": "delaying"},
+            {"id": "B", "text": "delay"},
+            {"id": "C", "text": "delayed"},
+            {"id": "D", "text": "to delay"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc: 'object to + V-ing' (phản đối việc gì). Chữ 'to' là giới từ ➔ chọn 'delaying' (việc trì hoãn)."
+    },
+    {
+        "content": "In addition to __________ good education, the school offers free sports clubs for teenagers.",
+        "options": [
+            {"id": "A", "text": "provide"},
+            {"id": "B", "text": "providing"},
+            {"id": "C", "text": "provided"},
+            {"id": "D", "text": "to provide"}
+        ],
         "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Sau 'is' dùng Danh động từ (V-ing) làm bổ ngữ cho chủ ngữ: 'taking part' (việc tham gia). Cụm 'take part in = participate in'. Từ vựng 10/11: 'cultural exchange' (giao lưu văn hóa)."
+        "explanation": "Thầy Thức hướng dẫn Thái: Cụm từ: 'in addition to + V-ing' (bên cạnh việc làm gì). Chữ 'to' là giới từ ➔ chọn 'providing'."
+    },
+    {
+        "content": "Prior to __________ the club, new students should read the member handbook carefully.",
+        "options": [
+            {"id": "A", "text": "join"},
+            {"id": "B", "text": "joined"},
+            {"id": "C", "text": "joining"},
+            {"id": "D", "text": "joint"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Thầy Thức hướng dẫn Thái: Cụm từ chỉ thời gian: 'prior to + V-ing' = 'before + V-ing' (trước khi làm gì). 'To' là giới từ ➔ 'joining'."
+    },
+    {
+        "content": "The school boy admitted to __________ an old book from the library without asking.",
+        "options": [
+            {"id": "A", "text": "take"},
+            {"id": "B", "text": "took"},
+            {"id": "C", "text": "taken"},
+            {"id": "D", "text": "taking"}
+        ],
+        "correctAnswer": "D",
+        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc thừa nhận: 'admit to + V-ing' (thú nhận đã làm gì). 'To' là giới từ ➔ 'taking'."
     },
 
     # =========================================================================
-    # PHẦN 2: DANH ĐỘNG TỪ SAU GIỚI TỪ ĐƠN & CỤM GIỚI TỪ (CÂU 16 - 30)
-    # Quy tắc: Preposition (in, on, at, for, of, by, without, before, after) + V-ing
+    # PHẦN 2: TỪ VỰNG CỐT LÕI UNIT 4 TRONG NGỮ CẢNH (CÂU 21 - 35)
+    # Quy tắc: Trong 4 phương án A, B, C, D BẮT BUỘC có tối thiểu 2 từ vựng Unit 4
+    # Ngữ cảnh: Từ vựng câu dẫn basic, dễ hiểu
+    # Chống trùng đáp án liên tiếp
     # =========================================================================
     {
-        "content": "Viet Nam succeeded in __________ regional integration into the ASEAN economic bloc.",
+        "content": "ASEAN is a regional __________ of ten countries in Southeast Asia working together for peace.",
         "options": [
-            {"id": "A", "text": "achieve"},
-            {"id": "B", "text": "achieving"},
-            {"id": "C", "text": "achieved"},
-            {"id": "D", "text": "achievement"}
+            {"id": "A", "text": "association"},   # Unit 4
+            {"id": "B", "text": "solidarity"},    # Unit 4
+            {"id": "C", "text": "building"},
+            {"id": "D", "text": "factory"}
         ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc cố định: 'succeed in + V-ing' (thành công trong việc gì). Đứng sau giới từ 'in' bắt buộc là V-ing ➔ 'achieving'. Từ vựng 10/11: 'integration' (sự hội nhập), 'bloc' (khối liên minh)."
+        "correctAnswer": "A",
+        "explanation": "Thầy Thức hướng dẫn Thái: ASEAN là một 'hiệp hội' khu vực gồm 10 quốc gia ➔ chọn 'association'. Phương án B ('solidarity' - tình đoàn kết) cũng là từ Unit 4 nhưng không hợp nghĩa ngữ cảnh."
     },
     {
-        "content": "Countries can solve territorial disagreements by __________ peaceful dialogues.",
+        "content": "Close economic __________ between Viet Nam and Laos has helped both countries grow stronger.",
+        "options": [
+            {"id": "A", "text": "competition"},
+            {"id": "B", "text": "cooperation"},   # Unit 4
+            {"id": "C", "text": "integration"},   # Unit 4
+            {"id": "D", "text": "separation"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Thầy Thức hướng dẫn Thái: Cụm từ quen thuộc: 'economic cooperation' (sự hợp tác kinh tế). Có 2 từ Unit 4 là 'cooperation' và 'integration'. Cả hai nước làm việc cùng nhau ➔ 'cooperation'."
+    },
+    {
+        "content": "Joining the world market has sped up the economic __________ of our country.",
+        "options": [
+            {"id": "A", "text": "tradition"},
+            {"id": "B", "text": "stability"},     # Unit 4
+            {"id": "C", "text": "integration"},   # Unit 4
+            {"id": "D", "text": "trouble"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Thầy Thức hướng dẫn Thái: Cụm từ: 'economic integration' (sự hội nhập kinh tế vào thị trường thế giới). Phương án B ('stability' - sự ổn định) và C đều là từ Unit 4. Chọn 'integration'."
+    },
+    {
+        "content": "All member countries showed strong __________ by sending food and clean water to the storm area.",
+        "options": [
+            {"id": "A", "text": "charter"},       # Unit 4
+            {"id": "B", "text": "conflict"},
+            {"id": "C", "text": "distance"},
+            {"id": "D", "text": "solidarity"}     # Unit 4
+        ],
+        "correctAnswer": "D",
+        "explanation": "Thầy Thức hướng dẫn Thái: Hành động giúp đỡ nhau khi gặp thiên tai thể hiện 'tình đoàn kết, gắn bó' ➔ chọn 'solidarity'. Đáp án A ('charter' - hiến chương) cũng là từ Unit 4."
+    },
+    {
+        "content": "Peace and political __________ are very important for companies to invest money safely.",
+        "options": [
+            {"id": "A", "text": "stability"},     # Unit 4
+            {"id": "B", "text": "prosperity"},    # Unit 4
+            {"id": "C", "text": "danger"},
+            {"id": "D", "text": "noise"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Thầy Thức hướng dẫn Thái: Cụm từ đi cùng 'Peace' là 'political stability' (sự ổn định chính trị). Đáp án B ('prosperity' - sự phồn vinh) cũng là từ Unit 4 nhưng 'stability' ghép chuẩn hơn."
+    },
+    {
+        "content": "We need to __________ friendly relations with all our good neighbours in the region.",
+        "options": [
+            {"id": "A", "text": "break"},
+            {"id": "B", "text": "maintain"},      # Unit 4
+            {"id": "C", "text": "promote"},       # Unit 4
+            {"id": "D", "text": "forget"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Thầy Thức hướng dẫn Thái: 'maintain friendly relations' (duy trì quan hệ hữu nghị thân thiện). Cả B ('maintain') và C ('promote') đều là từ Unit 4. 'Duy trì' hợp ngữ cảnh hơn."
+    },
+    {
+        "content": "The school held a book fair to __________ reading habits among teenagers.",
+        "options": [
+            {"id": "A", "text": "stop"},
+            {"id": "B", "text": "avoid"},
+            {"id": "C", "text": "promote"},       # Unit 4
+            {"id": "D", "text": "strengthen"}    # Unit 4
+        ],
+        "correctAnswer": "C",
+        "explanation": "Thầy Thức hướng dẫn Thái: 'promote reading habits' (thúc đẩy, khuyến khích thói quen đọc sách). Đáp án D ('strengthen') cũng là từ Unit 4. Ta chọn 'promote'."
+    },
+    {
+        "content": "'One Vision, One Identity, One Community' is the famous __________ of ASEAN.",
+        "options": [
+            {"id": "A", "text": "charter"},       # Unit 4
+            {"id": "B", "text": "song"},
+            {"id": "C", "text": "rule"},
+            {"id": "D", "text": "motto"}          # Unit 4
+        ],
+        "correctAnswer": "D",
+        "explanation": "Thầy Thức hướng dẫn Thái: Khẩu hiệu chính thức ngắn gọn tóm tắt mục tiêu gọi là 'motto' (khẩu hiệu, phương châm). A ('charter' - hiến chương) cũng là từ Unit 4."
+    },
+    {
+        "content": "All ten countries signed the official __________ to agree on shared laws and principles.",
+        "options": [
+            {"id": "A", "text": "charter"},       # Unit 4
+            {"id": "B", "text": "motto"},         # Unit 4
+            {"id": "C", "text": "letter"},
+            {"id": "D", "text": "story"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Thầy Thức hướng dẫn Thái: Văn kiện pháp lý chứa các nguyên tắc chung của tổ chức là 'charter' (hiến chương). Đáp án B ('motto') cũng thuộc Unit 4."
+    },
+    {
+        "content": "Viet Nam is an active member of the Southeast Asian trading __________.",
+        "options": [
+            {"id": "A", "text": "market"},
+            {"id": "B", "text": "bloc"},          # Unit 4
+            {"id": "C", "text": "association"},   # Unit 4
+            {"id": "D", "text": "room"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Thầy Thức hướng dẫn Thái: Cụm từ: 'trading bloc' hoặc 'regional bloc' (khối thương mại/khối liên minh). Đáp án C ('association') cũng là từ Unit 4. Khối liên kết thương mại dùng 'bloc'."
+    },
+    {
+        "content": "Our school organizes a yearly __________ so students can learn about Japanese and Thai traditions.",
+        "options": [
+            {"id": "A", "text": "sports match"},
+            {"id": "B", "text": "test session"},
+            {"id": "C", "text": "cultural exchange"}, # Unit 4
+            {"id": "D", "text": "solidarity"}         # Unit 4
+        ],
+        "correctAnswer": "C",
+        "explanation": "Thầy Thức hướng dẫn Thái: Hoạt động giao lưu để học hỏi văn hóa giữa các nước gọi là 'cultural exchange' (giao lưu văn hóa). Đáp án D ('solidarity') cũng thuộc Unit 4."
+    },
+    {
+        "content": "Two students were chosen to __________ their school at the city youth conference.",
+        "options": [
+            {"id": "A", "text": "volunteer"},     # Unit 4
+            {"id": "B", "text": "follow"},
+            {"id": "C", "text": "visit"},
+            {"id": "D", "text": "represent"}      # Unit 4
+        ],
+        "correctAnswer": "D",
+        "explanation": "Thầy Thức hướng dẫn Thái: Động từ: 'represent the school' (đại diện cho trường). Đáp án A ('volunteer') cũng là từ Unit 4. Ở đây cần nghĩa 'đại diện' ➔ 'represent'."
+    },
+    {
+        "content": "Each class sent one student __________ to give a presentation on green living.",
+        "options": [
+            {"id": "A", "text": "representative"}, # Unit 4
+            {"id": "B", "text": "participant"},    # Unit 4
+            {"id": "C", "text": "worker"},
+            {"id": "D", "text": "visitor"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Thầy Thức hướng dẫn Thái: 'student representative' (người đại diện học sinh). Cả A và B ('participant' - người tham dự) đều là từ Unit 4. Cụm 'người đại diện' chính xác là 'representative'."
+    },
+    {
+        "content": "Every __________ in the clean water project received a small gift and a certificate.",
+        "options": [
+            {"id": "A", "text": "enemy"},
+            {"id": "B", "text": "participant"},    # Unit 4
+            {"id": "C", "text": "volunteer"},      # Unit 4
+            {"id": "D", "text": "leader"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Thầy Thức hướng dẫn Thái: 'participant in the project' (người tham gia dự án). Đáp án C ('volunteer') cũng là từ Unit 4. Người tham gia nói chung là 'participant'."
+    },
+    {
+        "content": "Thai applied for a high school __________ to study English for one summer in Singapore.",
+        "options": [
+            {"id": "A", "text": "ticket"},
+            {"id": "B", "text": "holiday"},
+            {"id": "C", "text": "scholarship"},    # Unit 4
+            {"id": "D", "text": "contribution"}    # Unit 4
+        ],
+        "correctAnswer": "C",
+        "explanation": "Thầy Thức hướng dẫn Thái: Học bổng hỗ trợ học tập gọi là 'scholarship' (học bổng). Cả C và D ('contribution' - sự đóng góp) đều là từ Unit 4. Chọn 'scholarship'."
+    },
+
+    # =========================================================================
+    # PHẦN 3: ĐÚNG 10 CÂU BIẾN ĐỔI TỪ LOẠI WORD FORMATION (CÂU 36 - 45)
+    # Quy tắc: Cho đầy đủ 4 dạng Noun, Adjective, Adverb, Verb của cùng một gốc từ
+    # Ngữ cảnh: Câu văn ngắn gọn, từ vựng nền tảng basic
+    # =========================================================================
+    {
+        "content": "Viet Nam has made an important __________ to peace and green growth in the region.",
+        "options": [
+            {"id": "A", "text": "contributorily"}, # adv
+            {"id": "B", "text": "contribute"},     # v
+            {"id": "C", "text": "contributory"},   # adj
+            {"id": "D", "text": "contribution"}    # noun
+        ],
+        "correctAnswer": "D",
+        "explanation": "Thầy Thức hướng dẫn Thái: Dạng bài Word Formation! Sau mạo từ 'an' và tính từ 'important', vị trí này bắt buộc phải là một DANH TỪ: 'contribution' (sự đóng góp). Ta có cụm cố định: 'make a contribution to'."
+    },
+    {
+        "content": "With hard work and peaceful trade, the small fishing village became very __________.",
+        "options": [
+            {"id": "A", "text": "prosperous"},     # adj
+            {"id": "B", "text": "prosper"},        # v
+            {"id": "C", "text": "prosperity"},     # noun
+            {"id": "D", "text": "prosperously"}    # adv
+        ],
+        "correctAnswer": "A",
+        "explanation": "Thầy Thức hướng dẫn Thái: Sau linking verb 'became' và phó từ 'very', ta cần một TÍNH TỪ để miêu tả tính chất của ngôi làng: 'prosperous' (thịnh vượng, giàu có)."
+    },
+    {
+        "content": "Economic __________ helps poor families have better jobs and better homes.",
+        "options": [
+            {"id": "A", "text": "stably"},         # adv
+            {"id": "B", "text": "stability"},      # noun
+            {"id": "C", "text": "stabilize"},      # v
+            {"id": "D", "text": "stable"}          # adj
+        ],
+        "correctAnswer": "B",
+        "explanation": "Thầy Thức hướng dẫn Thái: Vị trí chủ ngữ đứng sau tính từ 'Economic' bắt buộc cần một DANH TỪ: 'stability' (sự ổn định kinh tế)."
+    },
+    {
+        "content": "The two youth groups worked __________ to clean up the park before the big holiday.",
+        "options": [
+            {"id": "A", "text": "cooperation"},    # noun
+            {"id": "B", "text": "cooperate"},      # v
+            {"id": "C", "text": "cooperatively"},  # adv
+            {"id": "D", "text": "cooperative"}     # adj
+        ],
+        "correctAnswer": "C",
+        "explanation": "Thầy Thức hướng dẫn Thái: Động từ hành động 'worked' cần một TRẠNG TỪ (Adverb - đuôi '-ly') đứng sau để bổ nghĩa cho cách thức làm việc: 'cooperatively' (một cách hợp tác, phối hợp ăn ý)."
+    },
+    {
+        "content": "Regional __________ helps countries share goods, knowledge, and modern technology.",
+        "options": [
+            {"id": "A", "text": "integrate"},      # v
+            {"id": "B", "text": "integrative"},    # adj
+            {"id": "C", "text": "integratively"},  # adv
+            {"id": "D", "text": "integration"}     # noun
+        ],
+        "correctAnswer": "D",
+        "explanation": "Thầy Thức hướng dẫn Thái: Đứng đầu câu làm chủ ngữ sau tính từ 'Regional' cần một DANH TỪ: 'integration' (sự hội nhập khu vực)."
+    },
+    {
+        "content": "Singapore has a very __________ population with many different ethnic communities.",
+        "options": [
+            {"id": "A", "text": "diverse"},        # adj
+            {"id": "B", "text": "diversity"},      # noun
+            {"id": "C", "text": "diversely"},      # adv
+            {"id": "D", "text": "diversify"}       # v
+        ],
+        "correctAnswer": "A",
+        "explanation": "Thầy Thức hướng dẫn Thái: Đứng trước danh từ 'population' và sau 'very', ta cần một TÍNH TỪ: 'diverse' (đa dạng). Cụm: 'a diverse population' (dân số đa dạng văn hóa)."
+    },
+    {
+        "content": "During the flood, local people showed deep __________ by sharing food with their neighbours.",
+        "options": [
+            {"id": "A", "text": "solidary"},       # adj
+            {"id": "B", "text": "solidarity"},     # noun
+            {"id": "C", "text": "solidarize"},     # v
+            {"id": "D", "text": "solidarily"}      # adv
+        ],
+        "correctAnswer": "B",
+        "explanation": "Thầy Thức hướng dẫn Thái: Sau tính từ 'deep' và động từ 'showed', ta cần một DANH TỪ làm tân ngữ: 'solidarity' (tình đoàn kết)."
+    },
+    {
+        "content": "Minh was chosen as a student __________ to speak at the international meeting.",
+        "options": [
+            {"id": "A", "text": "represent"},      # v
+            {"id": "B", "text": "representatively"},# adv
+            {"id": "C", "text": "representative"}, # noun
+            {"id": "D", "text": "representing"}    # v-ing
+        ],
+        "correctAnswer": "C",
+        "explanation": "Thầy Thức hướng dẫn Thái: Sau cụm danh từ 'a student', ta cần một DANH TỪ chỉ người để tạo thành cụm danh từ ghép: 'student representative' (người đại diện học sinh)."
+    },
+    {
+        "content": "The teenagers helped old people in the village on a completely __________ basis.",
+        "options": [
+            {"id": "A", "text": "voluntarily"},    # adv
+            {"id": "B", "text": "volunteer"},      # noun/verb
+            {"id": "C", "text": "volunteering"},   # v-ing
+            {"id": "D", "text": "voluntary"}       # adj
+        ],
+        "correctAnswer": "D",
+        "explanation": "Thầy Thức hướng dẫn Thái: Trước danh từ 'basis' và sau trạng từ 'completely', ta cần một TÍNH TỪ: 'voluntary' (tự nguyện). Cụm: 'on a voluntary basis' (trên tinh thần tự nguyện)."
+    },
+    {
+        "content": "Joining the student council is a great way to build your personal __________ skills.",
+        "options": [
+            {"id": "A", "text": "leadership"},     # noun
+            {"id": "B", "text": "lead"},           # v
+            {"id": "C", "text": "leading"},        # adj
+            {"id": "D", "text": "leadingly"}       # adv
+        ],
+        "correctAnswer": "A",
+        "explanation": "Thầy Thức hướng dẫn Thái: Trước danh từ 'skills' cần danh từ bổ nghĩa tạo danh từ ghép: 'leadership skills' (kỹ năng lãnh đạo). Rất hay gặp trong đề thi!"
+    },
+
+    # =========================================================================
+    # PHẦN 4: ĐỘNG TỪ ĐI VỚI V-ING & THÀNH NGỮ CỐ ĐỊNH (CÂU 46 - 55)
+    # Ngữ pháp: enjoy, avoid, delay, postpone, suggest, consider, it's no use,
+    # there is no point in, be worth, spend time, have difficulty...
+    # =========================================================================
+    {
+        "content": "Young students should avoid __________ too much fast food and sugary soda.",
+        "options": [
+            {"id": "A", "text": "eat"},
+            {"id": "B", "text": "ate"},
+            {"id": "C", "text": "to eat"},
+            {"id": "D", "text": "eating"}
+        ],
+        "correctAnswer": "D",
+        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc: 'avoid + V-ing' (tránh làm gì) ➔ chọn 'eating'. Câu văn cơ bản, quen thuộc."
+    },
+    {
+        "content": "The club decided to postpone __________ the outdoor camping trip because of heavy rain.",
         "options": [
             {"id": "A", "text": "hold"},
             {"id": "B", "text": "holding"},
             {"id": "C", "text": "held"},
-            {"id": "D", "text": "holder"}
+            {"id": "D", "text": "to hold"}
         ],
         "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Sau giới từ 'by' (bằng cách làm gì), động từ chia ở dạng V-ing ➔ 'by holding' (bằng cách tổ chức/tiến hành). Từ vựng 10/11: 'cooperation', 'stability'."
+        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc: 'postpone + V-ing' (hoãn lại việc làm gì) ➔ chọn 'holding'."
     },
     {
-        "content": "You should read the ASEAN Charter carefully before __________ the official agreement.",
+        "content": "My English teacher suggested __________ a mini drama about ASEAN cultures for the festival.",
         "options": [
-            {"id": "A", "text": "sign"},
-            {"id": "B", "text": "signing"},
-            {"id": "C", "text": "signed"},
-            {"id": "D", "text": "signature"}
+            {"id": "A", "text": "perform"},
+            {"id": "B", "text": "performed"},
+            {"id": "C", "text": "performing"},
+            {"id": "D", "text": "to perform"}
         ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Sau giới từ thời gian 'before' (trước khi) và 'after' (sau khi), động từ phải ở dạng V-ing ➔ 'before signing' (trước khi ký). Từ vựng 10/11: 'charter' (hiến chương)."
+        "correctAnswer": "C",
+        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc: 'suggest + V-ing' (gợi ý làm việc gì) ➔ chọn 'performing'. Tuyệt đối không dùng to-V sau suggest."
     },
     {
-        "content": "The school congratulated Thai on __________ the prestigious ASEAN youth scholarship.",
+        "content": "Have you ever considered __________ a student volunteer for the local green team?",
         "options": [
-            {"id": "A", "text": "win"},
-            {"id": "B", "text": "winning"},
-            {"id": "C", "text": "won"},
-            {"id": "D", "text": "winner"}
+            {"id": "A", "text": "become"},
+            {"id": "B", "text": "became"},
+            {"id": "C", "text": "to become"},
+            {"id": "D", "text": "becoming"}
         ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc khen ngợi: 'congratulate sb on + V-ing' (chúc mừng ai vì đã đạt được việc gì). Sau giới từ 'on' là V-ing ➔ 'winning'. Từ vựng 10/11: 'scholarship' (học bổng)."
+        "correctAnswer": "D",
+        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc: 'consider + V-ing' (cân nhắc làm việc gì) ➔ chọn 'becoming'."
     },
     {
-        "content": "She thanked her teachers for __________ her to develop confident leadership skills.",
+        "content": "The foreign delegates finished __________ the final trade report late yesterday afternoon.",
         "options": [
-            {"id": "A", "text": "help"},
-            {"id": "B", "text": "helping"},
-            {"id": "C", "text": "helped"},
-            {"id": "D", "text": "helpful"}
+            {"id": "A", "text": "writing"},
+            {"id": "B", "text": "write"},
+            {"id": "C", "text": "wrote"},
+            {"id": "D", "text": "to write"}
         ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc cảm ơn: 'thank sb for + V-ing' (cảm ơn ai vì đã giúp đỡ). Sau giới từ 'for' là V-ing ➔ 'helping'. Từ vựng 10/11: 'leadership' (năng lực lãnh đạo)."
+        "correctAnswer": "A",
+        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc: 'finish + V-ing' (hoàn thành việc gì) ➔ chọn 'writing'."
     },
     {
-        "content": "No decision can be made in ASEAN without __________ a complete consensus.",
-        "options": [
-            {"id": "A", "text": "reach"},
-            {"id": "B", "text": "reaching"},
-            {"id": "C", "text": "reached"},
-            {"id": "D", "text": "to reach"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Sau giới từ 'without' (mà không có/không làm gì), động từ phải chia V-ing ➔ 'without reaching' (mà không đạt được). Từ vựng 10/11: 'charter', 'cooperation'."
-    },
-    {
-        "content": "The ambassador apologized for __________ late to the regional youth association meeting.",
-        "options": [
-            {"id": "A", "text": "arrive"},
-            {"id": "B", "text": "arriving"},
-            {"id": "C", "text": "arrived"},
-            {"id": "D", "text": "arrival"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc xin lỗi: 'apologize for + V-ing' (xin lỗi vì đã làm gì). Sau giới từ 'for' là V-ing ➔ 'arriving'. Từ vựng 10/11: 'association' (hiệp hội)."
-    },
-    {
-        "content": "Volunteers are proud of __________ part in community projects to support poor children.",
-        "options": [
-            {"id": "A", "text": "take"},
-            {"id": "B", "text": "taking"},
-            {"id": "C", "text": "took"},
-            {"id": "D", "text": "taken"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc tự hào: 'be proud of + V-ing' (tự hào vì làm gì). Sau giới từ 'of' là V-ing ➔ 'taking'. Từ vựng 10/11: 'volunteer' (tình nguyện viên)."
-    },
-    {
-        "content": "Member countries are responsible for __________ peace and political stability within their borders.",
-        "options": [
-            {"id": "A", "text": "maintain"},
-            {"id": "B", "text": "maintaining"},
-            {"id": "C", "text": "maintained"},
-            {"id": "D", "text": "maintenance"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc chịu trách nhiệm: 'be responsible for + V-ing' (chịu trách nhiệm về việc gì). Sau 'for' ta chọn V-ing ➔ 'maintaining'. Từ vựng 10/11: 'maintain' (duy trì), 'stability' (sự ổn định)."
-    },
-    {
-        "content": "Thai is very keen on __________ more about the cultural diversity of ASEAN countries.",
-        "options": [
-            {"id": "A", "text": "learn"},
-            {"id": "B", "text": "learning"},
-            {"id": "C", "text": "learnt"},
-            {"id": "D", "text": "to learn"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cụm từ chỉ sở thích: 'be keen on + V-ing' = 'be fond of / interested in + V-ing' (say mê, thích làm gì). Sau giới từ 'on' là V-ing ➔ 'learning'. Từ vựng 10/11: 'diversity' (sự đa dạng)."
-    },
-    {
-        "content": "Good leaders always prevent conflicts from __________ into dangerous political disputes.",
-        "options": [
-            {"id": "A", "text": "turn"},
-            {"id": "B", "text": "turning"},
-            {"id": "C", "text": "turned"},
-            {"id": "D", "text": "to turn"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc ngăn cản: 'prevent sb/sth from + V-ing' (ngăn chặn ai/cái gì biến thành...). Sau giới từ 'from' chia V-ing ➔ 'turning'. Từ vựng 10/11: 'leadership', 'stability'."
-    },
-    {
-        "content": "Instead of __________ about cultural differences, we should celebrate our unique identity.",
-        "options": [
-            {"id": "A", "text": "worry"},
-            {"id": "B", "text": "worrying"},
-            {"id": "C", "text": "worried"},
-            {"id": "D", "text": "to worry"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cụm giới từ 'instead of + V-ing' (thay vì làm gì). Sau 'instead of' chọn V-ing ➔ 'worrying'. Từ vựng 10/11: 'identity' (bản sắc)."
-    },
-    {
-        "content": "After __________ the speech, the youth representative answered questions from the audience.",
-        "options": [
-            {"id": "A", "text": "finish"},
-            {"id": "B", "text": "finishing"},
-            {"id": "C", "text": "finished"},
-            {"id": "D", "text": "to finish"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Sau giới từ thời gian 'After' (sau khi), động từ chia ở dạng V-ing ➔ 'After finishing' (Sau khi hoàn thành). Từ vựng 10/11: 'representative' (người đại diện)."
-    },
-    {
-        "content": "All participants were capable of __________ clear solutions during the group discussion.",
-        "options": [
-            {"id": "A", "text": "propose"},
-            {"id": "B", "text": "proposing"},
-            {"id": "C", "text": "proposed"},
-            {"id": "D", "text": "proposal"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc có khả năng làm gì: 'be capable of + V-ing'. Sau giới từ 'of' ta dùng V-ing ➔ 'proposing' (đề xuất). Từ vựng 10/11: 'participant' (người tham gia)."
-    },
-    {
-        "content": "Young people can make a huge contribution by __________ in local charity events.",
-        "options": [
-            {"id": "A", "text": "help"},
-            {"id": "B", "text": "helping"},
-            {"id": "C", "text": "helped"},
-            {"id": "D", "text": "helper"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Sau giới từ phương tiện 'by' (bằng cách làm gì) là V-ing ➔ 'helping'. Từ vựng 10/11: 'contribution' (sự đóng góp, cống hiến)."
-    },
-
-    # =========================================================================
-    # PHẦN 3: BẪY ĐIỂM 8.5+: CÁC CỤM TỪ CÓ GIỚI TỪ "TO" ĐI VỚI V-ING (CÂU 31 - 45)
-    # Trọng tâm: contribute to, look forward to, be used to, object to, with a view to...
-    # =========================================================================
-    {
-        "content": "Every member nation should contribute to __________ regional solidarity and peace.",
-        "options": [
-            {"id": "A", "text": "strengthen"},
-            {"id": "B", "text": "strengthening"},
-            {"id": "C", "text": "strengthened"},
-            {"id": "D", "text": "strength"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: BẪY THI CỰC KỲ QUAN TRỌNG! Trong cấu trúc 'contribute to', chữ 'to' là GIỚI TỪ (preposition), không phải to-V nguyên mẫu. Do đó, sau 'contribute to' bắt buộc phải dùng V-ing ➔ 'strengthening' (đóng góp vào việc củng cố). Từ vựng 10/11: 'contribution/contribute', 'solidarity', 'strengthen'."
-    },
-    {
-        "content": "All student participants look forward to __________ the ASEAN cultural exchange next month.",
-        "options": [
-            {"id": "A", "text": "attend"},
-            {"id": "B", "text": "attending"},
-            {"id": "C", "text": "attended"},
-            {"id": "D", "text": "attendance"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cụm từ kinh điển trong mọi đề thi: 'look forward to + V-ing' (rất trông mong, háo hức làm việc gì). Chữ 'to' ở đây là giới từ ➔ 'attending'. Từ vựng 10/11: 'participant' (người tham gia), 'cultural exchange' (giao lưu văn hóa)."
-    },
-    {
-        "content": "The delegates are used to __________ in multicultural teams with people from different backgrounds.",
-        "options": [
-            {"id": "A", "text": "work"},
-            {"id": "B", "text": "working"},
-            {"id": "C", "text": "worked"},
-            {"id": "D", "text": "worker"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Phân biệt cẩn thận: 'used to + V-bare' (đã từng làm gì trong quá khứ) KHÁC với 'be / get used to + V-ing' (quen với việc làm gì ở hiện tại). Ở đây có to-be 'are used to' ➔ đi với V-ing 'working'. Từ vựng 10/11: 'diversity', 'cooperation'."
-    },
-    {
-        "content": "Several countries objected to __________ the deadline for signing the free trade agreement.",
-        "options": [
-            {"id": "A", "text": "delay"},
-            {"id": "B", "text": "delaying"},
-            {"id": "C", "text": "delayed"},
-            {"id": "D", "text": "to delay"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc phản đối: 'object to + V-ing' (phản đối việc làm gì). Chữ 'to' là giới từ ➔ 'delaying'. Không chọn A vì nhầm 'to' là to-infinitive. Từ vựng 10/11: 'bloc', 'agreement'."
-    },
-    {
-        "content": "Member countries are fully committed to __________ the shared values in the ASEAN Charter.",
-        "options": [
-            {"id": "A", "text": "uphold"},
-            {"id": "B", "text": "upholding"},
-            {"id": "C", "text": "upheld"},
-            {"id": "D", "text": "to uphold"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc cam kết: 'be committed to + V-ing' (cam kết làm việc gì). Chữ 'to' là giới từ ➔ 'upholding' (giữ gìn, ủng hộ). Từ vựng 10/11: 'charter' (hiến chương)."
-    },
-    {
-        "content": "The summit was organized with a view to __________ economic partnerships across the region.",
-        "options": [
-            {"id": "A", "text": "promote"},
-            {"id": "B", "text": "promoting"},
-            {"id": "C", "text": "promoted"},
-            {"id": "D", "text": "promoter"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cụm từ chỉ mục đích nâng cao: 'with a view to + V-ing' = 'with the aim of + V-ing' (với mục đích nhằm làm gì). Chữ 'to' là giới từ ➔ 'promoting'. Từ vựng 10/11: 'promote' (thúc đẩy, xúc tiến)."
-    },
-    {
-        "content": "In addition to __________ financial support, the scholarship provides free accommodation.",
-        "options": [
-            {"id": "A", "text": "offer"},
-            {"id": "B", "text": "offering"},
-            {"id": "C", "text": "offered"},
-            {"id": "D", "text": "to offer"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cụm liên từ: 'in addition to + V-ing / Noun' (bên cạnh việc làm gì). Chữ 'to' là giới từ ➔ 'offering'. Từ vựng 10/11: 'scholarship' (học bổng)."
-    },
-    {
-        "content": "Young volunteers devote their free time to __________ underprivileged families in rural areas.",
-        "options": [
-            {"id": "A", "text": "support"},
-            {"id": "B", "text": "supporting"},
-            {"id": "C", "text": "supported"},
-            {"id": "D", "text": "supporter"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc cống hiến: 'devote / dedicate [time/money] to + V-ing' (dành/cống hiến thời gian vào việc gì). 'To' là giới từ ➔ 'supporting'. Từ vựng 10/11: 'volunteer' (tình nguyện viên)."
-    },
-    {
-        "content": "Prior to __________ the regional association in 1995, Viet Nam had expanded trade with neighbouring nations.",
-        "options": [
-            {"id": "A", "text": "join"},
-            {"id": "B", "text": "joining"},
-            {"id": "C", "text": "joined"},
-            {"id": "D", "text": "joint"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cụm từ chỉ thời gian: 'prior to + V-ing' = 'before + V-ing' (trước khi làm gì). Chữ 'to' ở đây là giới từ ➔ 'joining'. Từ vựng 10/11: 'association' (hiệp hội)."
-    },
-    {
-        "content": "The school principal confessed to __________ mistake in calculating the scholarship scores.",
-        "options": [
-            {"id": "A", "text": "make"},
-            {"id": "B", "text": "making"},
-            {"id": "C", "text": "made"},
-            {"id": "D", "text": "maker"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc thú nhận: 'confess to / admit to + V-ing' (thú nhận đã làm gì). Chữ 'to' là giới từ ➔ 'making'. Từ vựng 10/11: 'scholarship' (học bổng)."
-    },
-    {
-        "content": "What leads to __________ good relationships among countries is mutual respect and cooperation.",
-        "options": [
-            {"id": "A", "text": "build"},
-            {"id": "B", "text": "building"},
-            {"id": "C", "text": "built"},
-            {"id": "D", "text": "builder"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cụm từ: 'lead to + V-ing / Noun' (dẫn đến kết quả là). Chữ 'to' là giới từ ➔ 'building'. Từ vựng 10/11: 'cooperation' (sự hợp tác)."
-    },
-    {
-        "content": "Delegates have a strong objection to __________ commercial taxes on agricultural products.",
-        "options": [
-            {"id": "A", "text": "raise"},
-            {"id": "B", "text": "raising"},
-            {"id": "C", "text": "raised"},
-            {"id": "D", "text": "to raise"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cụm danh từ: 'have an objection to + V-ing' (có sự phản đối đối với việc gì). Chữ 'to' là giới từ ➔ 'raising'. Từ vựng 10/11: 'representative/delegate', 'bloc'."
-    },
-    {
-        "content": "She soon got used to __________ speeches in front of large international audiences.",
-        "options": [
-            {"id": "A", "text": "give"},
-            {"id": "B", "text": "giving"},
-            {"id": "C", "text": "gave"},
-            {"id": "D", "text": "given"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: 'get used to + V-ing' (dần trở nên quen với việc gì). Sau 'get used to' bắt buộc là V-ing ➔ 'giving'. Từ vựng 10/11: 'leadership', 'representative'."
-    },
-    {
-        "content": "All members agreed that nothing should be an obstacle to __________ economic prosperity.",
-        "options": [
-            {"id": "A", "text": "achieve"},
-            {"id": "B", "text": "achieving"},
-            {"id": "C", "text": "achieved"},
-            {"id": "D", "text": "achievement"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cụm: 'an obstacle to + V-ing / Noun' (trở ngại đối với việc gì). 'To' là giới từ ➔ 'achieving'. Từ vựng 10/11: 'prosperity' (sự thịnh vượng, phồn vinh)."
-    },
-    {
-        "content": "Viet Nam always pays special attention to __________ traditional friendship with its neighbours.",
-        "options": [
-            {"id": "A", "text": "maintain"},
-            {"id": "B", "text": "maintaining"},
-            {"id": "C", "text": "maintained"},
-            {"id": "D", "text": "maintenance"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cụm: 'pay attention to + V-ing / Noun' (chú ý / dành sự quan tâm tới việc gì). Chữ 'to' là giới từ ➔ 'maintaining'. Từ vựng 10/11: 'maintain' (duy trì, gìn giữ)."
-    },
-
-    # =========================================================================
-    # PHẦN 4: ĐỘNG TỪ BẮT BUỘC ĐI VỚI V-ING & THÀNH NGỮ CỐ ĐỊNH (CÂU 46 - 60)
-    # Trọng tâm: enjoy, avoid, delay, suggest, it's no use, there's no point in...
-    # =========================================================================
-    {
-        "content": "Young ambassadors enjoy __________ in cultural exchanges with foreign students.",
-        "options": [
-            {"id": "A", "text": "participate"},
-            {"id": "B", "text": "participating"},
-            {"id": "C", "text": "participated"},
-            {"id": "D", "text": "to participate"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Động từ chỉ sở thích 'enjoy' luôn đi trực tiếp với Danh động từ (V-ing) ➔ 'enjoy participating'. Không bao giờ dùng 'enjoy to-V'. Từ vựng 10/11: 'participant/participate' (người tham gia / tham gia), 'cultural exchange' (giao lưu văn hóa)."
-    },
-    {
-        "content": "Leaders must avoid __________ misunderstandings that can damage regional solidarity.",
-        "options": [
-            {"id": "A", "text": "create"},
-            {"id": "B", "text": "creating"},
-            {"id": "C", "text": "created"},
-            {"id": "D", "text": "to create"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Động từ 'avoid' (tránh) bắt buộc đi kèm Danh động từ: 'avoid + V-ing' ➔ 'avoid creating'. Từ vựng 10/11: 'solidarity' (tình đoàn kết)."
-    },
-    {
-        "content": "The teacher suggested __________ a class presentation about the official ASEAN motto.",
-        "options": [
-            {"id": "A", "text": "make"},
-            {"id": "B", "text": "making"},
-            {"id": "C", "text": "made"},
-            {"id": "D", "text": "to make"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Động từ đề xuất 'suggest' khi không có tân ngữ chỉ người thì đi trực tiếp với V-ing: 'suggest + V-ing' ➔ 'making'. Từ vựng 10/11: 'motto' (khẩu hiệu, phương châm)."
-    },
-    {
-        "content": "They decided to postpone __________ the new educational charter until next month.",
-        "options": [
-            {"id": "A", "text": "sign"},
-            {"id": "B", "text": "signing"},
-            {"id": "C", "text": "signed"},
-            {"id": "D", "text": "to sign"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Động từ 'postpone' (trì hoãn, hoãn lại) luôn đi với V-ing: 'postpone + V-ing' ➔ 'signing'. Từ vựng 10/11: 'charter' (hiến chương)."
-    },
-    {
-        "content": "It is no use __________ about minor issues when we have bigger goals to achieve.",
-        "options": [
-            {"id": "A", "text": "argue"},
-            {"id": "B", "text": "arguing"},
-            {"id": "C", "text": "argued"},
-            {"id": "D", "text": "to argue"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc thành ngữ bất hủ: 'It is no use / It is no good + V-ing' (Vô ích khi làm gì). Ta chọn V-ing ➔ 'arguing'. Từ vựng 10/11: 'cooperation', 'stability'."
-    },
-    {
-        "content": "There is no point in __________ a new treaty if countries do not respect the agreement.",
-        "options": [
-            {"id": "A", "text": "sign"},
-            {"id": "B", "text": "signing"},
-            {"id": "C", "text": "signed"},
-            {"id": "D", "text": "to sign"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc thành ngữ: 'There is no point in + V-ing' (Chẳng có lý do/ích lợi gì khi làm việc gì). Sau 'point in' là V-ing ➔ 'signing'. Từ vựng 10/11: 'charter', 'cooperation'."
-    },
-    {
-        "content": "I couldn't help __________ proud when our school team won the ASEAN youth contest.",
+        "content": "When seeing the poor children smiling happily, I couldn't help __________ touched.",
         "options": [
             {"id": "A", "text": "feel"},
             {"id": "B", "text": "feeling"},
@@ -607,339 +599,342 @@ questions = [
             {"id": "D", "text": "to feel"}
         ],
         "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Thành ngữ: 'can't help / couldn't help + V-ing' (không thể nhịn được / không thể kìm nén được cảm xúc làm gì). Ta chọn 'feeling'. Từ vựng 10/11: 'scholarship', 'solidarity'."
+        "explanation": "Thầy Thức hướng dẫn Thái: Thành ngữ cố định: 'can't help / couldn't help + V-ing' (không thể nhịn được / không thể kìm lòng được) ➔ chọn 'feeling'."
     },
     {
-        "content": "The official ASEAN Charter is well worth __________ for any student of history.",
+        "content": "It is no use __________ about small mistakes in the past; let's focus on the future.",
         "options": [
-            {"id": "A", "text": "read"},
-            {"id": "B", "text": "reading"},
-            {"id": "C", "text": "readed"},
-            {"id": "D", "text": "to read"}
+            {"id": "A", "text": "worry"},
+            {"id": "B", "text": "worried"},
+            {"id": "C", "text": "worrying"},
+            {"id": "D", "text": "to worry"}
         ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc đáng giá: 'be worth + V-ing' (đáng để làm việc gì). Ta dùng V-ing ➔ 'reading'. Từ vựng 10/11: 'charter' (hiến chương)."
+        "correctAnswer": "C",
+        "explanation": "Thầy Thức hướng dẫn Thái: Thành ngữ: 'It is no use + V-ing' (vô ích khi làm gì) ➔ chọn 'worrying'."
     },
     {
-        "content": "Thai spent two hours __________ about the economic stability of Southeast Asian countries.",
+        "content": "There is no point in __________ with friends over small things when teamwork is needed.",
         "options": [
-            {"id": "A", "text": "read"},
-            {"id": "B", "text": "reading"},
-            {"id": "C", "text": "readed"},
-            {"id": "D", "text": "to read"}
+            {"id": "A", "text": "argue"},
+            {"id": "B", "text": "argued"},
+            {"id": "C", "text": "to argue"},
+            {"id": "D", "text": "arguing"}
         ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc thời gian: 'spend + [thời gian] + (on) + V-ing' (dành thời gian làm gì). Do đó ta chọn 'reading'. Từ vựng 10/11: 'stability' (sự ổn định)."
+        "correctAnswer": "D",
+        "explanation": "Thầy Thức hướng dẫn Thái: Thành ngữ: 'There is no point in + V-ing' (chẳng có ích gì khi làm gì) ➔ chọn 'arguing'. Chú ý: câu 53 này đáp án là 'arguing', KHÔNG lặp lại 'reading'!"
     },
     {
-        "content": "Foreign participants had a lot of difficulty in __________ local transportation.",
+        "content": "This short documentary about ASEAN history is well worth __________ by every student.",
         "options": [
-            {"id": "A", "text": "use"},
-            {"id": "B", "text": "using"},
-            {"id": "C", "text": "used"},
-            {"id": "D", "text": "to use"}
+            {"id": "A", "text": "watching"},
+            {"id": "B", "text": "watch"},
+            {"id": "C", "text": "watched"},
+            {"id": "D", "text": "to watch"}
         ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc gặp khó khăn: 'have difficulty / trouble (in) + V-ing'. Sau 'difficulty in' luôn là V-ing ➔ 'using'. Từ vựng 10/11: 'participant' (người tham gia)."
+        "correctAnswer": "A",
+        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc: 'be worth + V-ing' (rất đáng để làm gì) ➔ chọn 'watching'. Câu 54 chọn 'watching', hoàn toàn khác câu 53 ('arguing')!"
     },
     {
-        "content": "Would you mind __________ us understand the meaning of the ASEAN logo?",
+        "content": "Some new exchange students had a little difficulty in __________ local food at first.",
         "options": [
-            {"id": "A", "text": "help"},
-            {"id": "B", "text": "helping"},
-            {"id": "C", "text": "helped"},
-            {"id": "D", "text": "to help"}
+            {"id": "A", "text": "eat"},
+            {"id": "B", "text": "eating"},
+            {"id": "C", "text": "ate"},
+            {"id": "D", "text": "eaten"}
         ],
         "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Lời yêu cầu lịch sự: 'Would you mind + V-ing?' (Bạn có phiền/làm ơn làm gì...). Sau 'mind' bắt buộc là V-ing ➔ 'helping'. Từ vựng 10/11: 'identity', 'motto'."
-    },
-    {
-        "content": "Students should practise __________ English daily to prepare for international exchanges.",
-        "options": [
-            {"id": "A", "text": "speak"},
-            {"id": "B", "text": "speaking"},
-            {"id": "C", "text": "spoke"},
-            {"id": "D", "text": "to speak"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Động từ luyện tập: 'practise + V-ing' ➔ 'speaking'. Không dùng 'practise to-V'. Từ vựng 10/11: 'cultural exchange' (giao lưu văn hóa)."
-    },
-    {
-        "content": "He admitted __________ the ASEAN scholarship application form after the deadline.",
-        "options": [
-            {"id": "A", "text": "send"},
-            {"id": "B", "text": "sending"},
-            {"id": "C", "text": "sent"},
-            {"id": "D", "text": "to send"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Động từ thừa nhận: 'admit + V-ing' (thừa nhận đã làm gì). Ta chọn 'sending'. Từ vựng 10/11: 'scholarship' (học bổng)."
-    },
-    {
-        "content": "Volunteers were busy __________ food packs for disaster relief missions.",
-        "options": [
-            {"id": "A", "text": "prepare"},
-            {"id": "B", "text": "preparing"},
-            {"id": "C", "text": "prepared"},
-            {"id": "D", "text": "to prepare"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc bận rộn: 'be busy + V-ing' (bận rộn làm việc gì). Ta dùng V-ing ➔ 'preparing'. Từ vựng 10/11: 'volunteer' (tình nguyện viên), 'solidarity'."
-    },
-    {
-        "content": "Don't waste valuable time __________ online when you need to finish your project.",
-        "options": [
-            {"id": "A", "text": "chat"},
-            {"id": "B", "text": "chatting"},
-            {"id": "C", "text": "chatted"},
-            {"id": "D", "text": "to chat"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc lãng phí thời gian: 'waste time + (on) + V-ing' ➔ 'chatting'. Từ vựng 10/11: 'cooperation'."
+        "explanation": "Thầy Thức hướng dẫn Thái: Thành ngữ: 'have difficulty (in) + V-ing' (gặp khó khăn khi làm gì) ➔ chọn 'eating'."
     },
 
     # =========================================================================
-    # PHẦN 5: 6 ĐỘNG TỪ CHUYỂN NGHĨA (Remember, Forget, Regret, Stop, Try, Need) (CÂU 61 - 70)
+    # PHẦN 5: 6 CẶP ĐỘNG TỪ ĐỔI NGHĨA & DANH ĐỘNG TỪ HOÀN THÀNH (CÂU 56 - 70)
+    # Ngữ pháp: Remember, Forget, Regret, Stop, Try, Need (V-ing vs To-V) & Perfect Gerunds
     # =========================================================================
     {
-        "content": "Please remember __________ your name badge before entering the conference hall.",
+        "content": "Please remember __________ your name and class on the top of the test paper.",
         "options": [
-            {"id": "A", "text": "wear"},
-            {"id": "B", "text": "to wear"},
-            {"id": "C", "text": "wearing"},
-            {"id": "D", "text": "wore"}
+            {"id": "A", "text": "write"},
+            {"id": "B", "text": "writing"},
+            {"id": "C", "text": "to write"},
+            {"id": "D", "text": "wrote"}
         ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: 'Remember + to-V' là nhớ PHẢI LÀM việc gì (nhiệm vụ trong tương lai). 'Please remember...' là lời dặn dò bổn phận phải đeo thẻ tên ➔ chọn 'to wear'. (Khác với 'remember + V-ing' là nhớ việc đã làm trong quá khứ). Từ vựng 10/11: 'participant', 'representative'."
+        "correctAnswer": "C",
+        "explanation": "Thầy Thức hướng dẫn Thái: 'remember to-V' là nhớ phải làm bổn phận trong tương lai (lời nhắc nhở) ➔ chọn 'to write'."
     },
     {
-        "content": "I clearly remember __________ the Indonesian delegate at the youth forum in Ha Noi last year.",
+        "content": "I clearly remember __________ the kind teacher in Singapore during my trip last year.",
         "options": [
             {"id": "A", "text": "meet"},
-            {"id": "B", "text": "meeting"},
-            {"id": "C", "text": "to meet"},
-            {"id": "D", "text": "met"}
+            {"id": "B", "text": "to meet"},
+            {"id": "C", "text": "met"},
+            {"id": "D", "text": "meeting"}
         ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Có trạng từ quá khứ 'last year' (năm ngoái), người nói nhớ lại một ký ức/hành động ĐÃ LÀM trong quá khứ ➔ 'remember + V-ing' ➔ 'meeting'. Từ vựng 10/11: 'representative/delegate'."
+        "correctAnswer": "D",
+        "explanation": "Thầy Thức hướng dẫn Thái: 'remember + V-ing' là nhớ lại một ký ức/trải nghiệm đã xảy ra trong quá khứ ('last year') ➔ chọn 'meeting'."
     },
     {
-        "content": "Don't forget __________ your homework about the ASEAN Charter before tomorrow morning.",
+        "content": "Don't forget __________ your identity card when you enter the exam room.",
         "options": [
-            {"id": "A", "text": "finish"},
-            {"id": "B", "text": "to finish"},
-            {"id": "C", "text": "finishing"},
-            {"id": "D", "text": "finished"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: 'Don't forget + to-V' là nhắc nhở ai ĐỪNG QUÊN PHẢI LÀM việc gì (bổn phận tương lai). Ta chọn 'to finish'. Từ vựng 10/11: 'charter' (hiến chương)."
-    },
-    {
-        "content": "He will never forget __________ the first prize in the national ASEAN English competition.",
-        "options": [
-            {"id": "A", "text": "receive"},
-            {"id": "B", "text": "receiving"},
-            {"id": "C", "text": "to receive"},
-            {"id": "D", "text": "received"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: 'will never forget + V-ing' là cụm từ kinh điển diễn tả sẽ không bao giờ quên một kỷ niệm/sự việc ĐÃ TRẢI QUA ➔ chọn 'receiving'. Từ vựng 10/11: 'scholarship', 'solidarity'."
-    },
-    {
-        "content": "We regret __________ you that your application for the volunteer camp was not accepted.",
-        "options": [
-            {"id": "A", "text": "inform"},
-            {"id": "B", "text": "to inform"},
-            {"id": "C", "text": "informing"},
-            {"id": "D", "text": "informed"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: 'Regret + to-V' dùng khi lấy làm tiếc phải thông báo tin xấu (thường đi với các động từ inform, say, tell, announce) ➔ 'regret to inform'. (Khác với 'regret + V-ing' là hối tiếc vì đã làm điều gì trong quá khứ). Từ vựng 10/11: 'volunteer' (tình nguyện viên)."
-    },
-    {
-        "content": "She regretted __________ enough time preparing for the leadership interview.",
-        "options": [
-            {"id": "A", "text": "not spend"},
-            {"id": "B", "text": "not spending"},
-            {"id": "C", "text": "not to spend"},
-            {"id": "D", "text": "didn't spend"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: 'Regret + V-ing' diễn đạt sự hối tiếc vì ĐÃ LÀM (hoặc ĐÃ KHÔNG LÀM) điều gì trong quá khứ. Dạng phủ định là 'not + V-ing' ➔ 'not spending'. Từ vựng 10/11: 'leadership' (năng lực lãnh đạo)."
-    },
-    {
-        "content": "The delegates stopped __________ a quick lunch before continuing the afternoon discussion.",
-        "options": [
-            {"id": "A", "text": "have"},
-            {"id": "B", "text": "to have"},
-            {"id": "C", "text": "having"},
-            {"id": "D", "text": "had"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: 'Stop + to-V' là dừng việc đang làm lại ĐỂ LÀM một việc khác (chỉ mục đích). Các đại biểu dừng thảo luận lại để ăn trưa ➔ chọn 'to have'. ('Stop + V-ing' là dừng hẳn, từ bỏ hành động). Từ vựng 10/11: 'representative/delegate'."
-    },
-    {
-        "content": "Member countries stopped __________ unilateral trade barriers to promote regional prosperity.",
-        "options": [
-            {"id": "A", "text": "create"},
-            {"id": "B", "text": "creating"},
-            {"id": "C", "text": "to create"},
-            {"id": "D", "text": "created"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: 'Stop + V-ing' là DỪNG HẲN, CHẤM DỨT một hành động/chính sách. Các nước chấm dứt việc tạo ra rào cản thương mại ➔ 'stopped creating'. Từ vựng 10/11: 'promote' (thúc đẩy), 'prosperity' (sự thịnh vượng)."
-    },
-    {
-        "content": "Thai tried __________ the difficult grammar question, but he still needed his teacher's help.",
-        "options": [
-            {"id": "A", "text": "solve"},
-            {"id": "B", "text": "to solve"},
-            {"id": "C", "text": "solving"},
-            {"id": "D", "text": "solved"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: 'Try + to-V' là CỐ GẮNG, nỗ lực hết mình để vượt qua khó khăn làm gì ➔ 'tried to solve'. ('Try + V-ing' là thử nghiệm một giải pháp mới). Từ vựng 10/11: 'cooperation'."
-    },
-    {
-        "content": "The official website of the ASEAN youth association needs __________ to work faster.",
-        "options": [
-            {"id": "A", "text": "upgrade"},
-            {"id": "B", "text": "upgrading"},
-            {"id": "C", "text": "upgraded"},
-            {"id": "D", "text": "to upgrading"}
-        ],
-        "correctAnswer": "B",
-        "explanation": "Thầy Thức hướng dẫn Thái: Quy tắc bị động đặc biệt với động từ 'NEED': Khi chủ ngữ là VẬT (The official website), cấu trúc bị động là: 'S(vật) + need + V-ing' (= need to be V3/ed: cái gì cần được làm gì). Do đó ta chọn 'upgrading'. Từ vựng 10/11: 'association' (hiệp hội)."
-    },
-
-    # =========================================================================
-    # PHẦN 6: VIẾT LẠI CÂU TƯƠNG ĐƯƠNG & PERFECT GERUNDS (HAVING + V3/ed) (CÂU 71 - 80)
-    # =========================================================================
-    {
-        "content": "\"Why don't we organize a cultural exchange program for high school students?\" Nam said.\nChoose the sentence that is closest in meaning:",
-        "options": [
-            {"id": "A", "text": "Nam suggested organizing a cultural exchange program for high school students."},
-            {"id": "B", "text": "Nam refused to organize a cultural exchange program for high school students."},
-            {"id": "C", "text": "Nam promised to organize a cultural exchange program for high school students."},
-            {"id": "D", "text": "Nam advised us against organizing a cultural exchange program for high school students."}
+            {"id": "A", "text": "to bring"},
+            {"id": "B", "text": "bringing"},
+            {"id": "C", "text": "bring"},
+            {"id": "D", "text": "brought"}
         ],
         "correctAnswer": "A",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc gợi ý: 'Why don't we + V...?' được viết lại bằng: 'S + suggested + V-ing'. Phương án A là đáp án chính xác tuyệt đối. Từ vựng 10/11: 'cultural exchange' (giao lưu văn hóa)."
+        "explanation": "Thầy Thức hướng dẫn Thái: 'forget to-V' là quên phải làm nhiệm vụ chưa hoàn thành ➔ chọn 'to bring'."
     },
     {
-        "content": "It is completely pointless to argue about small mistakes in the past.\nChoose the sentence that is closest in meaning:",
+        "content": "Thai will never forget __________ the first prize in the English speaking contest.",
         "options": [
-            {"id": "A", "text": "There is no point in arguing about small mistakes in the past."},
-            {"id": "B", "text": "We should keep arguing about small mistakes in the past."},
-            {"id": "C", "text": "It is very useful to argue about small mistakes in the past."},
-            {"id": "D", "text": "There is no reason against arguing about small mistakes in the past."}
-        ],
-        "correctAnswer": "A",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc biến đổi tương đương: 'It is pointless + to-V' ➔ 'There is no point in + V-ing' (Chẳng có lý do/ích lợi gì khi làm gì). Phương án A là chính xác. Từ vựng 10/11: 'cooperation'."
-    },
-    {
-        "content": "It took the student committee three days to complete the solidarity poster.\nChoose the sentence that is closest in meaning:",
-        "options": [
-            {"id": "A", "text": "The student committee spent three days completing the solidarity poster."},
-            {"id": "B", "text": "The student committee wasted three days to complete the solidarity poster."},
-            {"id": "C", "text": "The student committee needed three days to completing the solidarity poster."},
-            {"id": "D", "text": "The student committee finished the solidarity poster after three days of wasted time."}
-        ],
-        "correctAnswer": "A",
-        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc biến đổi thời gian: 'It took + sb + [thời gian] + to-V' ➔ 'S + spent + [thời gian] + V-ing'. Phương án A là đáp án chuẩn xác. Từ vựng 10/11: 'solidarity' (tình đoàn kết)."
-    },
-    {
-        "content": "\"I'm sorry I did not attend the ASEAN youth volunteer meeting,\" Nam said.\nChoose the sentence that is closest in meaning:",
-        "options": [
-            {"id": "A", "text": "Nam apologized for not attending the ASEAN youth volunteer meeting."},
-            {"id": "B", "text": "Nam refused to attend the ASEAN youth volunteer meeting."},
-            {"id": "C", "text": "Nam denied attending the ASEAN youth volunteer meeting."},
-            {"id": "D", "text": "Nam admitted to attend the ASEAN youth volunteer meeting."}
-        ],
-        "correctAnswer": "A",
-        "explanation": "Thầy Thức hướng dẫn Thái: Lời xin lỗi: 'I'm sorry I did not...' ➔ 'S + apologized for not + V-ing'. Phương án A đúng cấu trúc và nghĩa. Từ vựng 10/11: 'volunteer' (tình nguyện viên)."
-    },
-    {
-        "content": "\"No, I didn't take confidential files from the office,\" the staff member said.\nChoose the sentence that is closest in meaning:",
-        "options": [
-            {"id": "A", "text": "The staff member denied taking confidential files from the office."},
-            {"id": "B", "text": "The staff member admitted taking confidential files from the office."},
-            {"id": "C", "text": "The staff member suggested taking confidential files from the office."},
-            {"id": "D", "text": "The staff member promised to take confidential files from the office."}
-        ],
-        "correctAnswer": "A",
-        "explanation": "Thầy Thức hướng dẫn Thái: Lời phủ nhận: 'No, I didn't...' được viết lại bằng: 'S + denied + V-ing' (phủ nhận đã làm gì). Phương án A là đáp án chính xác. Từ vựng 10/11: 'representative'."
-    },
-    {
-        "content": "The diplomat was praised for __________ great contributions to regional peace before he retired.",
-        "options": [
-            {"id": "A", "text": "having made"},
-            {"id": "B", "text": "have made"},
-            {"id": "C", "text": "made"},
-            {"id": "D", "text": "make"}
-        ],
-        "correctAnswer": "A",
-        "explanation": "Thầy Thức hướng dẫn Thái: Perfect Gerund (Danh động từ hoàn thành) 'having + V3/ed' được dùng để nhấn mạnh hành động đóng góp to lớn ĐÃ HOÀN TẤT TRƯỚC thời điểm nghỉ hưu ➔ 'for having made'. Từ vựng 10/11: 'contribution' (sự đóng góp, cống hiến)."
-    },
-    {
-        "content": "He denied __________ unauthorized information to journalists prior to the official summit announcement.",
-        "options": [
-            {"id": "A", "text": "having given"},
-            {"id": "B", "text": "have given"},
-            {"id": "C", "text": "to give"},
-            {"id": "D", "text": "give"}
-        ],
-        "correctAnswer": "A",
-        "explanation": "Thầy Thức hướng dẫn Thái: Động từ 'deny' đi với Perfect Gerund 'having + V3/ed' để nhấn mạnh việc đã làm trước đó trong quá khứ ➔ 'having given'. Từ vựng 10/11: 'representative'."
-    },
-    {
-        "content": "The student felt proud of __________ an ASEAN leadership scholarship after months of hard work.",
-        "options": [
-            {"id": "A", "text": "having won"},
-            {"id": "B", "text": "have won"},
+            {"id": "A", "text": "win"},
+            {"id": "B", "text": "winning"},
             {"id": "C", "text": "to win"},
             {"id": "D", "text": "won"}
         ],
-        "correctAnswer": "A",
-        "explanation": "Thầy Thức hướng dẫn Thái: Sau giới từ 'of', ta dùng Perfect Gerund 'having + V3/ed' để nhấn mạnh việc giành được học bổng đã diễn ra thành công trước đó ➔ 'having won'. Từ vựng 10/11: 'scholarship' (học bổng), 'leadership' (lãnh đạo)."
+        "correctAnswer": "B",
+        "explanation": "Thầy Thức hướng dẫn Thái: 'will never forget + V-ing' là không bao giờ quên một ký ức đẹp đã trải qua trong quá khứ ➔ chọn 'winning'."
     },
     {
-        "content": "He regretted __________ the chance to represent his school at the regional youth forum.",
+        "content": "We deeply regret __________ you that the flight to Jakarta has been delayed.",
         "options": [
-            {"id": "A", "text": "having missed"},
-            {"id": "B", "text": "have missed"},
-            {"id": "C", "text": "to missing"},
-            {"id": "D", "text": "miss"}
+            {"id": "A", "text": "inform"},
+            {"id": "B", "text": "informing"},
+            {"id": "C", "text": "to inform"},
+            {"id": "D", "text": "informed"}
         ],
-        "correctAnswer": "A",
-        "explanation": "Thầy Thức hướng dẫn Thái: 'Regret + having V3/ed' nhấn mạnh sự hối tiếc vì trước đó đã bỏ lỡ một cơ hội quý giá trong quá khứ ➔ 'having missed'. Từ vựng 10/11: 'represent' (đại diện)."
+        "correctAnswer": "C",
+        "explanation": "Thầy Thức hướng dẫn Thái: 'regret to inform/tell sb' là lấy làm tiếc khi phải thông báo tin buồn ➔ chọn 'to inform'."
     },
     {
-        "content": "Viet Nam was honored for __________ a prominent role in maintaining stability across the bloc.",
+        "content": "She now regrets __________ so much time playing video games before the final exam.",
         "options": [
-            {"id": "A", "text": "having played"},
-            {"id": "B", "text": "have played"},
-            {"id": "C", "text": "play"},
-            {"id": "D", "text": "to playing"}
+            {"id": "A", "text": "waste"},
+            {"id": "B", "text": "to waste"},
+            {"id": "C", "text": "wasted"},
+            {"id": "D", "text": "wasting"}
+        ],
+        "correctAnswer": "D",
+        "explanation": "Thầy Thức hướng dẫn Thái: 'regret + V-ing' là hối hận vì đã trót làm điều gì trong quá khứ ➔ chọn 'wasting'."
+    },
+    {
+        "content": "On the way home, the students stopped __________ some fresh water at the corner shop.",
+        "options": [
+            {"id": "A", "text": "to buy"},
+            {"id": "B", "text": "buying"},
+            {"id": "C", "text": "buy"},
+            {"id": "D", "text": "bought"}
         ],
         "correctAnswer": "A",
-        "explanation": "Thầy Thức hướng dẫn Thái: 'Honor sb for + having V3/ed' vinh danh ai vì trước đó đã đóng vai trò quan trọng ➔ 'having played'. Cụm 'play a role in + V-ing'. Từ vựng 10/11: 'maintain' (duy trì), 'stability' (sự ổn định), 'bloc' (khối liên minh)."
+        "explanation": "Thầy Thức hướng dẫn Thái: Dừng lại ĐỂ LÀM việc khác (chỉ mục đích) ➔ dùng 'stop + to-V': 'to buy'."
+    },
+    {
+        "content": "The doctor advised my grandfather to stop __________ cigarettes for his lung health.",
+        "options": [
+            {"id": "A", "text": "smoke"},
+            {"id": "B", "text": "smoking"},
+            {"id": "C", "text": "to smoke"},
+            {"id": "D", "text": "smoked"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Thầy Thức hướng dẫn Thái: Dừng hẳn, từ bỏ một thói quen ➔ dùng 'stop + V-ing': 'smoking'."
+    },
+    {
+        "content": "The math problem was very hard, but Nam tried his best __________ it by himself.",
+        "options": [
+            {"id": "A", "text": "solve"},
+            {"id": "B", "text": "solving"},
+            {"id": "C", "text": "to solve"},
+            {"id": "D", "text": "solved"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Thầy Thức hướng dẫn Thái: 'try to-V' là nỗ lực, cố gắng hết sức để vượt qua khó khăn làm gì ➔ chọn 'to solve'."
+    },
+    {
+        "content": "If you cannot fall asleep, try __________ a cup of warm milk before going to bed.",
+        "options": [
+            {"id": "A", "text": "drink"},
+            {"id": "B", "text": "to drink"},
+            {"id": "C", "text": "drank"},
+            {"id": "D", "text": "drinking"}
+        ],
+        "correctAnswer": "D",
+        "explanation": "Thầy Thức hướng dẫn Thái: 'try + V-ing' là thử nghiệm một giải pháp mới xem có hiệu quả không ➔ chọn 'drinking'."
+    },
+    {
+        "content": "The student admitted __________ his friend's notes without asking for permission first.",
+        "options": [
+            {"id": "A", "text": "having borrowed"},
+            {"id": "B", "text": "have borrowed"},
+            {"id": "C", "text": "to borrow"},
+            {"id": "D", "text": "borrow"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Thầy Thức hướng dẫn Thái: Nhấn mạnh hành động đã xảy ra và hoàn tất TRƯỚC thời điểm thừa nhận (admitted) ➔ Dùng Perfect Gerund 'having borrowed'."
+    },
+    {
+        "content": "The boy denied __________ the classroom window with his football yesterday.",
+        "options": [
+            {"id": "A", "text": "break"},
+            {"id": "B", "text": "having broken"},
+            {"id": "C", "text": "to have broken"},
+            {"id": "D", "text": "have broken"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Thầy Thức hướng dẫn Thái: Phủ nhận một việc đã làm xong trước đó ➔ Dùng 'denied + having broken'."
+    },
+    {
+        "content": "Viet Nam was praised for __________ held the ASEAN meeting very safely and successfully in 2020.",
+        "options": [
+            {"id": "A", "text": "to have"},
+            {"id": "B", "text": "have"},
+            {"id": "C", "text": "having"},
+            {"id": "D", "text": "had"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Thầy Thức hướng dẫn Thái: Sau giới từ 'for', hành động đã hoàn tất trong năm 2020 ➔ dùng 'having held'."
+    },
+    {
+        "content": "She felt very proud of __________ chosen as the youth leader for the school charity project.",
+        "options": [
+            {"id": "A", "text": "being"},
+            {"id": "B", "text": "have been"},
+            {"id": "C", "text": "to be"},
+            {"id": "D", "text": "having been"}
+        ],
+        "correctAnswer": "D",
+        "explanation": "Thầy Thức hướng dẫn Thái: Thể bị động hoàn thành: hành động 'được chọn' đã xảy ra và hoàn tất trước đó ➔ dùng Passive Perfect Gerund: 'having been chosen'."
+    },
+    {
+        "content": "Minh said sorry for __________ told his team leader about the change of meeting time.",
+        "options": [
+            {"id": "A", "text": "not having"},
+            {"id": "B", "text": "having not"},
+            {"id": "C", "text": "don't have"},
+            {"id": "D", "text": "not to have"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Thầy Thức hướng dẫn Thái: Dạng phủ định của Perfect Gerund: 'Not + having + V3/ed' ➔ 'not having told' (vì đã không nói trước)."
+    },
+
+    # =========================================================================
+    # PHẦN 6: VIẾT LẠI CÂU TƯƠNG ĐƯƠNG VỚI GERUNDS (CÂU 71 - 80)
+    # Ngữ pháp: Suggest + V-ing, There is no point in + V-ing, Spend time V-ing,
+    # Remember/Forget, Admitted/Denied + having V3, Had difficulty in + V-ing
+    # =========================================================================
+    {
+        "content": "\"Why don't we set up a sports club for high school students?\" said Nam.\nWhich sentence has the same meaning?",
+        "options": [
+            {"id": "A", "text": "Nam refused to set up a sports club for high school students."},
+            {"id": "B", "text": "Nam suggested setting up a sports club for high school students."},
+            {"id": "C", "text": "Nam promised to set up a sports club for high school students."},
+            {"id": "D", "text": "Nam advised us against setting up a sports club for high school students."}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Thầy Thức hướng dẫn Thái: Công thức chuyển đổi lời đề xuất: 'Why don't we + V' ➔ 'S + suggested + V-ing'. Phương án B hoàn toàn chính xác!"
+    },
+    {
+        "content": "It is completely useless to worry about things you cannot change.\nWhich sentence has the same meaning?",
+        "options": [
+            {"id": "A", "text": "You should keep worrying about things you cannot change."},
+            {"id": "B", "text": "It is very useful to worry about things you cannot change."},
+            {"id": "C", "text": "There is no point in worrying about things you cannot change."},
+            {"id": "D", "text": "There is no reason against worrying about things you cannot change."}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Thầy Thức hướng dẫn Thái: Công thức biến đổi: 'It is useless + to-V' ➔ 'There is no point in + V-ing' (chẳng có ích gì khi làm gì). Phương án C là đáp án đúng!"
+    },
+    {
+        "content": "It took the student team three days to draw the big ASEAN friendship poster.\nWhich sentence has the same meaning?",
+        "options": [
+            {"id": "A", "text": "The student team wasted three days to draw the big ASEAN friendship poster."},
+            {"id": "B", "text": "The student team needed three days to drawing the big ASEAN friendship poster."},
+            {"id": "C", "text": "The student team spent three days to draw the big ASEAN friendship poster."},
+            {"id": "D", "text": "The student team spent three days drawing the big ASEAN friendship poster."}
+        ],
+        "correctAnswer": "D",
+        "explanation": "Thầy Thức hướng dẫn Thái: Cấu trúc biến đổi thời gian: 'It took sb + [time] + to-V' ➔ 'S + spent + [time] + V-ing'. Phương án D chuẩn cấu trúc 'spent three days drawing'."
+    },
+    {
+        "content": "\"Please remember to turn off the fans before leaving the room,\" the teacher said.\nWhich sentence has the same meaning?",
+        "options": [
+            {"id": "A", "text": "The teacher reminded students to turn off the fans before leaving the room."},
+            {"id": "B", "text": "The teacher forgot to turn off the fans before leaving the room."},
+            {"id": "C", "text": "The teacher stopped students from turning off the fans before leaving the room."},
+            {"id": "D", "text": "The teacher regretted turning off the fans before leaving the room."}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Thầy Thức hướng dẫn Thái: 'Please remember to-V' là lời nhắc nhở ➔ 'S + reminded sb + to-V' (nhắc nhở ai làm gì). Phương án A là đáp án chính xác."
+    },
+    {
+        "content": "\"I took the library dictionary home by mistake,\" said the boy.\nWhich sentence has the same meaning?",
+        "options": [
+            {"id": "A", "text": "The boy denied having taken the library dictionary home."},
+            {"id": "B", "text": "The boy admitted having taken the library dictionary home."},
+            {"id": "C", "text": "The boy suggested taking the library dictionary home."},
+            {"id": "D", "text": "The boy refused to take the library dictionary home."}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Thầy Thức hướng dẫn Thái: Thừa nhận một hành động trong quá khứ ➔ 'S + admitted + having V3/ed'. Phương án B là đáp án chuẩn xác."
+    },
+    {
+        "content": "\"I did not break the school computer,\" said the student.\nWhich sentence has the same meaning?",
+        "options": [
+            {"id": "A", "text": "The student promised to break the school computer."},
+            {"id": "B", "text": "The student admitted breaking the school computer."},
+            {"id": "C", "text": "The student denied having broken the school computer."},
+            {"id": "D", "text": "The student suggested breaking the school computer."}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Thầy Thức hướng dẫn Thái: Phủ nhận việc trong quá khứ: 'S + denied + having V3/ed'. Phương án C là đáp án đúng."
+    },
+    {
+        "content": "It was difficult for the young boy to speak in front of a big crowd.\nWhich sentence has the same meaning?",
+        "options": [
+            {"id": "A", "text": "The young boy enjoyed speaking in front of a big crowd."},
+            {"id": "B", "text": "The young boy avoided speaking in front of a big crowd."},
+            {"id": "C", "text": "The young boy had no trouble speaking in front of a big crowd."},
+            {"id": "D", "text": "The young boy had difficulty in speaking in front of a big crowd."}
+        ],
+        "correctAnswer": "D",
+        "explanation": "Thầy Thức hướng dẫn Thái: Biến đổi cấu trúc: 'It was difficult for sb to-V' ➔ 'S + had difficulty (in) + V-ing'. Phương án D hoàn toàn chính xác."
+    },
+    {
+        "content": "We are very excited about visiting the ASEAN cultural park next weekend.\nWhich sentence has the same meaning?",
+        "options": [
+            {"id": "A", "text": "We look forward to visiting the ASEAN cultural park next weekend."},
+            {"id": "B", "text": "We refuse to visit the ASEAN cultural park next weekend."},
+            {"id": "C", "text": "We avoid visiting the ASEAN cultural park next weekend."},
+            {"id": "D", "text": "We regret visiting the ASEAN cultural park next weekend."}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Thầy Thức hướng dẫn Thái: 'be excited about V-ing' (háo hức làm gì) đồng nghĩa với 'look forward to + V-ing'. Phương án A là đáp án đúng!"
+    },
+    {
+        "content": "\"Why don't we invite our foreign friends to the school music festival?\" said Lan.\nWhich sentence has the same meaning?",
+        "options": [
+            {"id": "A", "text": "Lan refused to invite foreign friends to the school music festival."},
+            {"id": "B", "text": "Lan suggested inviting our foreign friends to the school music festival."},
+            {"id": "C", "text": "Lan warned us against inviting foreign friends to the school music festival."},
+            {"id": "D", "text": "Lan forgot to invite foreign friends to the school music festival."}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Thầy Thức hướng dẫn Thái: 'Why don't we + V' ➔ 'suggest + V-ing'. Phương án B là câu trả lời đúng!"
+    },
+    {
+        "content": "It is not a good idea to stay up late before an important exam.\nWhich sentence has the same meaning?",
+        "options": [
+            {"id": "A", "text": "You should keep staying up late before an important exam."},
+            {"id": "B", "text": "There is no point in avoiding staying up late before an important exam."},
+            {"id": "C", "text": "You should avoid staying up late before an important exam."},
+            {"id": "D", "text": "It is worth staying up late before an important exam."}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Thầy Thức hướng dẫn Thái: 'It is not a good idea to-V' (không nên làm gì) ➔ 'You should avoid + V-ing' (bạn nên tránh thức khuya). Phương án C là đáp án chính xác."
     }
 ]
 
-def main():
-    print(f"Generated {len(questions)} high-quality multiple choice questions.")
-
-    # Check distribution of correct answers
-    counts = {"A": 0, "B": 0, "C": 0, "D": 0}
-    for q in questions:
-        counts[q["correctAnswer"]] += 1
-    print(f"Answer distribution: {counts}")
-
-    output_path = os.path.join(os.path.dirname(__file__), "payload_thai_1211_80q.json")
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(questions, f, ensure_ascii=False, indent=2)
-    print(f"Saved payload to: {output_path}")
-
 if __name__ == "__main__":
-    main()
+    outputPath = os.path.join(os.path.dirname(__file__), "payload_thai_1211_80q.json")
+    with open(outputPath, "w", encoding="utf-8") as f:
+        json.dump(questions, f, ensure_ascii=False, indent=2)
+    print(f"Generated {len(questions)} questions into {outputPath}")
