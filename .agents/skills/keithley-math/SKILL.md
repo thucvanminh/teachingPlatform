@@ -2,15 +2,15 @@
 name: keithley-math
 description: >-
   End-to-end curriculum and mission generator for student Keithley Lake (Grade 7 Math / MATH_7)
-  under Thầy Thức. Generates 100% English cosmic space-themed missions, KaTeX formulas,
-  vector SVG diagrams, in-session practice (90-120m), automated database seeding, and Vercel git sync.
+  under Thầy Thức. Generates 100% English cosmic space-themed missions from PDF_of_documents, KaTeX formulas,
+  vector SVG diagrams, anti-longest-option balance, automated database seeding, and Vercel git sync.
   Use when the user asks to create math lessons, homework, or exercise cards for Keithley, e.g.
   "tạo bài tập toán cho keithley", "soạn bài học toán lớp 7 cho keithley", "tạo mission toán cho keithley".
 ---
 
 # Quy Trình Tạo Bài Giảng & Bài Tập Toán Lớp 7 Cho Keithley Lake (Thầy Thức)
 
-Kỹ năng này hướng dẫn thực hiện trọn gói quy trình tạo bài giảng và nhiệm vụ luyện tập toán học (`daily_student_assignments`) cho học sinh **Keithley Lake** (Lớp 7 - Chương trình Toán chuẩn quốc tế 100% Tiếng Anh).
+Kỹ năng này hướng dẫn thực hiện trọn gói quy trình tạo bài giảng và nhiệm vụ luyện tập toán học (`daily_student_assignments`) cho học sinh **Keithley Lake** (Lớp 7 - Chương trình Toán chuẩn quốc tế 100% Tiếng Anh, chủ đề vũ trụ).
 
 ---
 
@@ -21,16 +21,18 @@ Kỹ năng này hướng dẫn thực hiện trọn gói quy trình tạo bài g
 | **Học sinh** | **Keithley Lake** (`keithley`) | `4745136c-bd25-4f45-a488-9f00f2121b70` | Astronaut Cadet • Grade 7 Math & Chem 9 • 100% English |
 | **Giáo viên** | **Thầy Thức** (`teacher`) | `dc62e5df-2344-4785-b058-b95f5dbe0983` | Flight Commander • Soạn đề, giám sát và chấm bài |
 | **Môn học** | **Toán 7** (`MATH_7`) | `e89cc834-99d0-40b7-ab5e-0a0838d273c4` | SGK Toán 7 Cánh Diều / Kết Nối Tri Thức bản chuẩn quốc tế |
-| **Thư mục tài liệu gốc** | `/home/dantey/Dantey/teaching/lop6/Math/` | Thư mục cục bộ | Các file sách giáo khoa, bài tập chuyên đề Toán 7 |
-| **File PDF SGK sẵn có** | `~/Downloads/sach-giao-khoa-toan-7-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf` | Tệp PDF cục bộ | Toàn văn SGK Toán 7 Kết Nối Tri Thức Tập 1 |
+| **File PDF SGK chuẩn** | `PDF_of_documents/sach-giao-khoa-toan-7-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf` | Thư mục `PDF_of_documents/` ở gốc dự án | Toàn văn SGK Toán 7 Kết Nối Tri Thức Tập 1 |
 
 ### Công Cụ Xử Lý Dữ Liệu & Tài Liệu Nguồn:
+> [!IMPORTANT]
+> **Tuyệt đối KHÔNG đọc file `.md` hay `.txt` truyền vào nữa.** Dữ liệu bài học được trích xuất trực tiếp từ file PDF SGK Toán 7 tại `PDF_of_documents/`, kết hợp nghiên cứu qua MCPs.
 - **`pdftotext`:** Trích xuất nhanh văn bản bài học & bài tập từ file PDF SGK Toán 7:
-  `pdftotext -f <trang_dau> -l <trang_cuoi> ~/Downloads/sach-giao-khoa-toan-7-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf -`
-- **Vision `read`:** Đọc trực tiếp các trang PDF chứa hình vẽ hình học để chuyển hóa thành vector SVG.
+  `pdftotext -f <trang_dau> -l <trang_cuoi> PDF_of_documents/sach-giao-khoa-toan-7-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf -`
+- **Vision `read` & `pdftoppm`:** Nếu trang SGK chứa sơ đồ hình học, dùng `pdftoppm -png -r 150` xuất ảnh và dùng công cụ `read` để lập trình lại thành vector SVG chuẩn xác.
+- **MCP `firecrawl` / WebSearch:** Tra cứu thêm các bài toán thực tế quốc tế (NASA/Space missions, quỹ đạo vệ tinh) liên quan đến bài học để lồng ghép cốt truyện không gian.
+- **Giới hạn nội dung đúng với bài học, không quá khó:** Bám sát chuẩn kiến thức kỹ năng của SGK Toán 7, tránh đưa các định lý quá cao siêu ngoài chương trình.
 - **`pandoc`:** Xuất phiếu bài tập hoặc đề thi ra file Word `.docx` khi Thầy cần bản in:
   `pandoc mission_math7.md -o mission_math7.docx`
-- **MCP `firecrawl` / WebSearch:** Tra cứu thêm các bài toán thực tế quốc tế (NASA/Space missions) để làm tư liệu phong phú.
 
 ---
 
@@ -60,7 +62,6 @@ Kỹ năng này hướng dẫn thực hiện trọn gói quy trình tạo bài g
 - **Tuyệt đối không dùng ký tự bàn phím để vẽ hình** (`---+---`, `\ /`, `x | y`).
 - Mỗi bài toán hình học có hình vẽ minh họa phải được thiết kế thành file vector SVG chuyên dụng đặt tại:
   `frontend/public/images/geometry/<slug_ten_hinh>.svg`
-- Tuân thủ hướng dẫn thiết kế SVG nền vũ trụ tại [svg_diagram_guidelines.md](./references/svg_diagram_guidelines.md).
 - Chèn vào đề bài bằng cú pháp Markdown:
   ```markdown
   ![Figure: Description of Intersecting Vectors](/images/geometry/<slug_ten_hinh>.svg)
@@ -70,100 +71,54 @@ Kỹ năng này hướng dẫn thực hiện trọn gói quy trình tạo bài g
 - Toàn bộ công thức và góc phải dùng chuẩn LaTeX: `\widehat{AOB}`, `180^\circ`, `\perp`, `\parallel`, `\dfrac{a}{b}`.
 - Cấu hình KaTeX luôn sử dụng `output: 'html'` để **triệt tiêu hoàn toàn lỗi lặp ký tự MathML** (`A O B ^ AOB`).
 - Toàn bộ câu hỏi hiển thị với màu chữ trắng sáng có bóng đổ `text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]`.
-- Các từ khóa trọng tâm bọc trong cặp dấu `**từ_khóa**` sẽ tự động hiển thị màu **cyan phát quang** (`text-cyan-200 drop-shadow`).
 
-### Trụ cột 5: Đa Dạng Loại Câu Hỏi (Multi-Format Assessment)
-Đề thi gồm 3 dạng câu hỏi đan xen:
-1. **`MULTIPLE_CHOICE` (Trắc nghiệm 4 lựa chọn):** Chiếm ~70%, có 4 đáp án A, B, C, D rõ ràng.
-2. **`FILL_IN_BLANK` (Điền số đo góc):** Học sinh tự gõ giá trị số (ví dụ: `132` hoặc `72°`).
-3. **`ESSAY_UPLOAD` (Tự luận hình học & Nộp ảnh vở):** Học sinh gõ từng bước suy luận hình học hoặc đính kèm ảnh chụp bài giải trong vở.
+### Trụ cột 5: Cân Bằng Phương Án Trắc Nghiệm & Chống Bẫy Đáp Án Dài Nhất (Anti-Longest-Option Bias)
+> [!CAUTION]
+> **Quy tắc sư phạm tối thượng:** Trong các câu trắc nghiệm lý thuyết hoặc định lý hình học, **tuyệt đối không được để đáp án dài nhất luôn luôn là đáp án đúng!**
+> - Các phương án A, B, C, D phải được diễn đạt súc tích với **độ dài tương đương nhau**.
+> - Đáp án đúng phải được phân bổ cân bằng và ngẫu nhiên (lúc là câu ngắn, lúc là câu trung bình, lúc là câu dài), triệt tiêu thói quen học sinh đoán mò theo "mẹo câu dài nhất" thay vì suy luận toán học.
+- Đề thi gồm 3 dạng câu hỏi đan xen:
+  1. **`MULTIPLE_CHOICE` (Trắc nghiệm 4 lựa chọn):** Chiếm ~70%, 4 đáp án A, B, C, D rõ ràng, cân đối.
+  2. **`FILL_IN_BLANK` (Điền số đo góc):** Học sinh tự gõ giá trị số (ví dụ: `132` hoặc `72°`).
+  3. **`ESSAY_UPLOAD` (Tự luận hình học & Nộp ảnh vở):** Học sinh gõ từng bước suy luận hình học hoặc đính kèm ảnh chụp bài giải trong vở.
 
 ---
 
 ## 3. Quy Trình Thực Hiện Từng Bước (A-Z Workflow)
 
 ```text
-[Bước 1: Khai Thác Tài Liệu SGK Toán 7]
+[Bước 1: Trích Xuất Dữ Liệu SGK Toán 7 Từ PDF_of_documents/ & Nghiên Cứu MCPs]
        ↓
-[Bước 2: Thiết Kế File Vector SVG Hình Học]
+[Bước 2: Thiết Kế File Vector SVG Hình Học (Nếu Có)]
        ↓
-[Bước 3: Soạn Payload JSON Nhiệm Vụ Vũ Trụ]
+[Bước 3: Soạn Payload JSON Nhiệm Vụ Vũ Trụ (Cân Đối Độ Dài Đáp Án)]
        ↓
 [Bước 4: Nạp Tự Động Vào Database (seed_keithley_math.js)]
        ↓
 [Bước 5: Build Kiểm Tra & Push Lên GitHub / Deploy Vercel]
 ```
 
----
-
 ### Bước 1: Khai Thác Tài Liệu SGK Toán 7
-1. Đọc tài liệu tại `/home/dantey/Dantey/teaching/lop6/Math/` (ví dụ thư mục `Grade7_29_10/` hoặc các file PDF SGK Toán 7).
-2. Xác định trọng tâm bài học (ví dụ: *Bài 8: Góc ở vị trí đặc biệt. Tia phân giác của một góc* hoặc *Bài 9: Hai đường thẳng song song và dấu hiệu nhận biết*).
-3. Lập dàn ý 25 - 30 câu hỏi phủ khắp 8 Trạm Hành Tinh từ dễ, trung bình, khá đến nâng cao.
-
----
+1. Đọc trực tiếp file PDF tại `PDF_of_documents/sach-giao-khoa-toan-7-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf` bằng `pdftotext`.
+2. Xác định phạm vi bài học (ví dụ: *Bài 8: Góc ở vị trí đặc biệt. Tia phân giác* hoặc *Bài 9: Hai đường thẳng song song*).
+3. Lập dàn ý 25 - 30 câu hỏi phủ khắp 8 Trạm Hành Tinh. Tra cứu thêm qua WebSearch / Firecrawl để bổ sung ngữ cảnh không gian thực tế, **đảm bảo kiến thức đúng bài học và vừa sức**.
 
 ### Bước 2: Thiết Kế File Vector SVG Hình Học
-Đối với các câu hỏi cần hình vẽ trực quan:
 1. Tạo file `.svg` trong thư mục `frontend/public/images/geometry/`.
-2. Áp dụng chuẩn thiết kế: kích thước `viewBox="0 0 540 320"`, nền gradient tối `#080D1A`, đường nét phát sáng neon, điểm nút $O$ phát quang, nhãn góc rõ ràng.
-3. Kiểm tra bằng lệnh:
-   ```bash
-   curl -s http://localhost:3000/images/geometry/<ten_file>.svg | head -n 5
-   ```
-
----
+2. Áp dụng chuẩn thiết kế: kích thước `viewBox="0 0 540 320"`, nền gradient tối `#080D1A`, đường nét phát sáng neon, điểm nút phát quang, nhãn góc rõ ràng.
 
 ### Bước 3: Soạn Payload JSON Nhiệm Vụ Vũ Trụ
-Tạo file JSON tạm thời (ví dụ: `keithley_payload.json`) dựa theo cấu trúc chuẩn tại [math_mission_payload.json](./templates/math_mission_payload.json):
-- `assignedDate`: Ngày học theo định dạng `YYYY-MM-DD`.
-- `unitTitle`: Tên bài học tiếng Anh (ví dụ: `Lesson 8: Special Angle Pairs & Angle Bisectors`).
-- `unitDescription`: Mô tả ngắn gọn về nhiệm vụ chuyến bay.
-- `lectureMarkdown`: Tóm tắt lý thuyết chuyến bay (Space Flight Briefing) với công thức KaTeX.
-- `teacherNote`: Lời dặn dò truyền cảm hứng từ Thầy Thức.
-- `assessmentTitle`: Tiêu đề bài kiểm tra 90-120 phút.
-- `questions`: Mảng 25 - 30 câu hỏi gồm đầy đủ `order_index`, `points`, `sectionName`, `content_markdown`, `options` / `acceptable_answers` / `rubric`, và `explanation`.
+1. Soạn thảo 25 - 30 câu hỏi theo 8 Phân khu (Sector 1 -> Sector 8).
+2. **Kiểm tra độ dài đáp án trắc nghiệm:** Đảm bảo không rơi vào bẫy "đáp án dài nhất luôn đúng".
 
----
-
-### Bước 4: Nạp Tự Động Vào Database (Prisma Seeding)
-Chạy script nạp tự động chuyên dụng:
+### Bước 4: Nạp Tự Động Vào Database
+Chạy script seed:
 ```bash
-node .agents/skills/keithley-math/scripts/seed_keithley_math.js --payload keithley_payload.json
+node .agents/skills/keithley-math/scripts/seed_keithley_math.js
 ```
-Script sẽ tự động:
-1. Dọn dẹp các assignment và attempt cũ của Keithley trong ngày đó (nếu có).
-2. Tạo bản ghi `learning_units` (Flight Briefing).
-3. Tạo thẻ bài học hàng ngày `daily_student_assignments`.
-4. Tạo bài kiểm tra `assessments` (In-Session 90-120 phút).
-5. Nạp đồng loạt toàn bộ câu hỏi vào bảng `questions`.
-6. Khởi tạo `assessment_attempts` với trạng thái sẵn sàng làm bài.
 
----
-
-### Bước 5: Build Kiểm Tra & Push Lên GitHub / Deploy Vercel
-> [!CAUTION]
-> Sau khi nạp database, **BẮT BUỘC PHẢI COMMIT VÀ PUSH LÊN GITHUB** để Vercel nhận file SVG mới và bản cập nhật frontend:
-
-1. Chạy biên dịch kiểm tra tính toàn vẹn của Typescript và Next.js:
-   ```bash
-   npm run build --prefix frontend
-   ```
-2. Thêm toàn bộ các file ảnh SVG mới và code thay đổi vào Git:
-   ```bash
-   git add -A
-   git commit -m "feat(keithley): deploy math mission [Lesson Name] for Keithley Lake"
-   git push origin main
-   ```
-3. Chờ 30 - 60 giây để Vercel Production hoàn tất việc build và deploy tự động.
-
----
-
-## 4. Checklist Kiểm Định Trước Khi Hoàn Tất (Quality Control)
-
-- [ ] **100% Tiếng Anh:** Đã rà soát không còn bất kỳ chữ tiếng Việt nào trong ngoặc đơn ở đề bài và đáp án.
-- [ ] **Không có ASCII Art:** Tất cả hình vẽ hình học đều là file `.svg` đặt trong `frontend/public/images/geometry/`.
-- [ ] **Độ tương phản cao:** Chữ đề bài trắng sáng, công thức toán KaTeX không bị đen chìm vào nền.
-- [ ] **KaTeX chuẩn:** Đã kiểm tra không bị hiện lỗi chồng chữ `A O B ^ AOB`.
-- [ ] **Đã Push Git:** Đã thực hiện `git push origin main` thành công để Vercel cập nhật file ảnh và code mới.
-- [ ] **Đăng nhập kiểm tra:** Tài khoản `keithley` (mật khẩu: `123456`) đăng nhập thấy đúng nhiệm vụ của ngày chỉ định.
+### Bước 5: Build & Push Git
+1. `npm --prefix frontend run build`
+2. `git add frontend/ .agents/ .opencode/ .claude/`
+3. `git commit -m "feat(math7): add mission for Keithley Lake on <date>"`
+4. `git push origin main`

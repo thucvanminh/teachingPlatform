@@ -7,14 +7,35 @@ description: >-
 
 # Lệnh Nhanh Soạn Bài Tiếng Anh Từ A-Z (/soanbai)
 
-Khi người dùng gõ `/soanbai [tên học sinh] [ngày] [chủ đề]`:
+Khi người dùng gõ `/soanbai [tên học sinh] [ngày] [chủ đề / Unit]`:
 
 Thực hiện quy trình tạo bài giảng và bài tập theo đúng hướng dẫn chuẩn tại:
 👉 [teaching-english-curriculum](../teaching-english-curriculum/SKILL.md)
 
 ### Các bước thực thi tự động:
-1. **Nhận diện học sinh:** Thái (Lớp 11 - 8.5+) hoặc Nam Việt (Lớp 12 - 7+ THPTQG).
-2. **Khai thác dữ liệu:** Đọc tài liệu tại `/home/dantey/Dantey/teaching/lop_11/` hoặc `/home/dantey/Dantey/teaching/lop12NamViet/`.
-3. **Tạo Phòng học tương tác:** Sinh ứng dụng web tại `frontend/public/lectures/<slug>/` (50 từ vựng phát âm bản xứ, 3 chuyên đề ngữ pháp, Collocation game, Word family tree, Active recall, Sentence writing).
-4. **Nạp dữ liệu vào Database:** Chạy `.agents/skills/teaching-english-curriculum/scripts/seed_english_lesson.js`.
-5. **Build & Deploy:** Kiểm tra `npm --prefix frontend run build`, commit & push lên `main` để Vercel cập nhật.
+1. **Nhận diện học sinh:** 
+   - **Thái:** Lớp 11 (ID `9208f557-3288-442e-accf-15fc8c763e68`), môn `ENG_11` (`f36e3e6b-46e2-4839-a2e8-8a78ff88a9a0`), mục tiêu 8.5+.
+   - **Nam Việt:** Lớp 12 (ID `d76bd9d6-6cf5-409c-847b-b0e5c07a0876`), môn `ENG_12` (`a15d4b19-412a-4bff-acd5-86714381b7af`), mục tiêu 7+ THPTQG.
+2. **Khai thác dữ liệu nguồn (KHÔNG đọc file .md truyền vào):**
+   - Đọc trực tiếp các file PDF SGK trong thư mục `PDF_of_documents/` ở thư mục gốc của dự án:
+     + Thái: `PDF_of_documents/SGK – Tiếng Anh 11 – Chương trình mới.pdf`
+     + Nam Việt: `PDF_of_documents/tieng-anh-12-global-success.pdf` và `PDF_of_documents/tieng-anh-12-global-success-sbt.pdf`
+   - Dùng `pdftotext -f <trang_dau> -l <trang_cuoi>` để trích xuất từ vựng, ngữ pháp của Unit.
+   - Sử dụng **MCPs (Firecrawl, WebSearch)** để tra cứu ngữ liệu thời sự, bài báo quốc tế (BBC, National Geographic, The Guardian) và đề thi chuẩn nhằm làm phong phú bài đọc hiểu và ví dụ.
+   - **Giới hạn nội dung đúng với bài học, không quá khó:** Bám sát chuẩn SGK và mục tiêu của học sinh.
+3. **Bài giảng ngữ pháp chuyên sâu & Đa tầng (Grammar Compendium):**
+   - Phân tích cơ chế bản chất ngữ pháp, quy tắc hòa hợp $S - V - O$, công thức logic.
+   - Tối thiểu 2–3 ví dụ song ngữ thực chiến cho mỗi cấu trúc có phân tích thành phần câu.
+   - Cảnh báo bẫy thi nâng cao (bẫy danh từ số nhiều chèn giữa, bẫy giới từ "TO" đi với V-ing, bẫy mốc thời gian hoàn thành trước, bẫy bị động).
+   - **Tích hợp bài tập nhanh vận dụng ngay (Quick Check Drills):**
+     + Trên Card Markdown: Mỗi chuyên đề có 3–4 câu trắc nghiệm/điền từ/viết lại câu kèm bảng [Đáp án & Giải thích chi tiết].
+     + Trong Web Studio: Nhúng module tương tác **Interactive Quick Quiz Widget** vào trực tiếp từng Accordion chuyên đề ngữ pháp (đổi màu xanh/đỏ tức thì, âm thanh Chime/Buzzer, trượt mở box giải thích chi tiết).
+4. **Tạo Phòng học tương tác (Interactive Studio):** Sinh ứng dụng web tại `frontend/public/lectures/<slug>/` (Flashcard 3D hai chiều, 6 chuyên đề ngữ pháp kèm Quick Quiz, Collocation game, Word family tree, Active recall, Sentence writing).
+5. **Biên soạn bài tập trắc nghiệm (60 - 100 câu) theo 4 quy tắc vàng:**
+   - **Quy tắc 1:** Tất cả câu hỏi phải sử dụng từ vựng của bài giảng Unit đang học.
+   - **Quy tắc 2:** Các câu hỏi từ vựng, trong 4 đáp án A, B, C, D **bắt buộc có tối thiểu 2 từ vựng của Unit đang học** (tránh học sinh khoanh lụi vì chỉ thấy 1 từ mới).
+   - **Quy tắc 3:** **Đáp án đúng của các câu hỏi kế nhau phải khác nhau** (không trùng lặp liên tiếp, ví dụ 2 câu kế nhau không thể đều có đáp án đúng là "mass media").
+   - **Quy tắc 4:** **Luôn có đúng 10 câu hỏi dạng chia từ loại (Word Formation)**: cho 4 dạng Danh từ, Tính từ, Trạng từ, Động từ của cùng 1 gốc từ trong 4 đáp án A, B, C, D để học sinh chọn.
+   - Nam Việt (Lớp 12): Luôn ưu tiên đưa câu hỏi Từ vựng lên trước.
+6. **Nạp dữ liệu vào Database:** Chạy script seed nạp DB (`learning_units`, `daily_student_assignments`, `assessments`, `questions`, `assessment_attempts`).
+7. **Build & Deploy:** Kiểm tra `npm --prefix frontend run build`, commit & push lên `main` để Vercel cập nhật.

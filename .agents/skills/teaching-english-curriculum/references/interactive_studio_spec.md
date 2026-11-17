@@ -37,13 +37,22 @@ const LECTURE_DATA = {
     }
   ],
 
-  // 2. CHUYÊN ĐỀ NGỮ PHÁP (3 MODULES)
+  // 2. CHUYÊN ĐỀ NGỮ PHÁP (KÈM INTERACTIVE QUICK QUIZ DRILLS)
   grammarModules: [
     {
-      id: "gram1", // BẮT BUỘC: chuỗi ID
-      title: "1. Thì Quá khứ đơn vs. Hiện tại hoàn thành",
-      focus: "Trọng tâm Unit 1 - Bẫy nhận biết thời gian trong đề thi",
-      theoryHtml: `...toàn bộ thẻ HTML đẹp mắt (past-card, perfect-card, transform-formula-box)...` // BẮT BUỘC: app.js sẽ render trực tiếp theoryHtml này!
+      id: "gram1", // BẮT BUỘC: chuỗi ID duy nhất
+      title: "1. Danh Động Từ Làm Chủ Ngữ (Gerunds as Subjects)",
+      focus: "Trọng tâm Unit - Quy tắc hòa hợp số ít & Cấu trúc giả chủ ngữ",
+      theoryHtml: `...toàn bộ thẻ HTML đẹp mắt (quy tắc, bảng phân tích, bẫy 8.5+, ví dụ song ngữ)...`, // BẮT BUỘC: render trực tiếp
+      drills: [ // BẮT BUỘC: Mảng 3-4 câu trắc nghiệm tương tác nhanh
+        {
+          id: "d1_1",
+          question: "Maintaining friendly diplomatic relations ______ mutual trust.",
+          options: ["A. require", "B. requires", "C. requiring", "D. have required"],
+          correct: 1, // BẮT BUỘC: 0-based index của đáp án đúng (0=A, 1=B, 2=C, 3=D)
+          explanation: "Chủ ngữ là V-ing 'Maintaining' số ít nên động từ chính phải chia số ít là 'requires'."
+        }
+      ]
     }
   ],
 
