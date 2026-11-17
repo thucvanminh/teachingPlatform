@@ -33,3 +33,5 @@ Thumbs.db
 *.tsbuildinfo
 .taste-skill/
 .claude/
+PDF_of_documents/*
+PDF_of_documents/
