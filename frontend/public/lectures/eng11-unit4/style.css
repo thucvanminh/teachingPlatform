@@ -1866,3 +1866,177 @@ kbd, .fc-keyboard-guide kbd {
 .btn-subtle:active {
   transform: scale(0.98);
 }
+
+/* ========================================================
+   GRAMMAR COMPENDIUM & QUICK CHECK DRILLS (INTERACTIVE WIDGET)
+   ======================================================== */
+.grammar-drills-container {
+  margin-top: 24px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+}
+
+.drills-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed #cbd5e1;
+}
+
+.drills-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.drills-icon {
+  font-size: 1rem;
+}
+
+.drills-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  border: 1px solid #bfdbfe;
+}
+
+.drills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.drill-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  box-shadow: var(--shadow-2xs);
+  transition: border-color 0.15s ease;
+}
+
+.drill-card:hover {
+  border-color: #cbd5e1;
+}
+
+.drill-q-row {
+  display: flex;
+  gap: 8px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.drill-q-num {
+  font-weight: 800;
+  color: #2563eb;
+  white-space: nowrap;
+}
+
+.drill-q-text {
+  font-weight: 600;
+}
+
+.drill-options-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+@media (min-width: 640px) {
+  .drill-options-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.drill-opt-btn {
+  text-align: left;
+  padding: 10px 14px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: #334155;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 140ms ease;
+  line-height: 1.4;
+}
+
+.drill-opt-btn:hover:not(:disabled) {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+  color: #0f172a;
+  transform: translateY(-1px);
+}
+
+.drill-opt-btn:disabled {
+  cursor: default;
+}
+
+.drill-opt-btn.is-correct {
+  background: #f0fdf4 !important;
+  border-color: #22c55e !important;
+  color: #15803d !important;
+  font-weight: 700;
+  box-shadow: 0 0 0 1px #22c55e;
+}
+
+.drill-opt-btn.is-wrong {
+  background: #fef2f2 !important;
+  border-color: #ef4444 !important;
+  color: #b91c1c !important;
+  font-weight: 700;
+  animation: shake 300ms ease;
+}
+
+.drill-explanation-box {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.84rem;
+  line-height: 1.5;
+  animation: fadeIn 0.2s ease-in;
+}
+
+.drill-explanation-box.is-success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-left: 4px solid #16a34a;
+  color: #14532d;
+}
+
+.drill-explanation-box.is-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-left: 4px solid #dc2626;
+  color: #7f1d1d;
+}
+
+.drill-expl-header {
+  font-size: 0.82rem;
+  margin-bottom: 4px;
+}
+
+.drill-expl-text {
+  font-size: 0.84rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}

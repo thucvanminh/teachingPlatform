@@ -3,7 +3,7 @@
  * Tiếng Anh 11 Global Success
  * Soạn riêng cho: Bạn Thái (Lớp 11 - Mục tiêu 8.5+ Giữa kì & THPT)
  * Hướng dẫn & Bản quyền: Thầy Thức
- * Quy chuẩn: Đúng 24 từ vựng trọng tâm theo yêu cầu
+ * Quy chuẩn: Đúng 24 từ vựng trọng tâm + 6 Chuyên đề Ngữ pháp Danh Động Từ chuyên sâu kèm Interactive Drills
  */
 
 const LECTURE_DATA = {
@@ -119,10 +119,10 @@ const LECTURE_DATA = {
       word: "Charter",
       ipa: "/ˈtʃɑːtər/",
       pos: "noun",
-      meaning: "Hiến chương (văn kiện pháp lý cơ bản)",
-      collocation: "the ASEAN Charter / abide by the charter",
-      example: "The ASEAN Charter serves as a firm legal framework for regional integration and governance.",
-      exampleVi: "Hiến chương ASEAN đóng vai trò như một khuôn khổ pháp lý vững chắc cho sự hội nhập và điều hành khu vực."
+      meaning: "Hiến chương, văn kiện pháp lý cơ bản",
+      collocation: "ASEAN Charter / abide by the charter",
+      example: "The ASEAN Charter serves as a firm legal foundation for regional integration.",
+      exampleVi: "Hiến chương ASEAN đóng vai trò là nền tảng pháp lý vững chắc cho hội nhập khu vực."
     },
     {
       id: 10,
@@ -131,10 +131,10 @@ const LECTURE_DATA = {
       word: "Bloc",
       ipa: "/blɒk/",
       pos: "noun",
-      meaning: "Khối quốc gia, liên minh khu vực",
-      collocation: "regional trade bloc / member states of the bloc",
-      example: "ASEAN has become one of the most dynamic economic trade blocs in the Asia-Pacific region.",
-      exampleVi: "ASEAN đã trở thành một trong những khối thương mại kinh tế năng động nhất ở khu vực Châu Á - Thái Bình Dương."
+      meaning: "Khối liên minh, khối quốc gia",
+      collocation: "regional bloc / trading bloc",
+      example: "Viet Nam has emerged as one of the most dynamic economies in the 10-nation bloc.",
+      exampleVi: "Việt Nam đã nổi lên như một trong những nền kinh tế năng động nhất trong khối 10 quốc gia."
     },
     {
       id: 11,
@@ -143,10 +143,10 @@ const LECTURE_DATA = {
       word: "Cultural exchange",
       ipa: "/ˌkʌltʃərəl ɪksˈtʃeɪndʒ/",
       pos: "noun phrase",
-      meaning: "Sự giao lưu văn hóa",
-      collocation: "participate in cultural exchanges / annual cultural exchange",
-      example: "Cultural exchanges enable high school students to celebrate traditional arts and heritage.",
-      exampleVi: "Giao lưu văn hóa cho phép học sinh trung học tôn vinh nghệ thuật và di sản truyền thống."
+      meaning: "Giao lưu văn hóa",
+      collocation: "youth cultural exchange / facilitate cultural exchanges",
+      example: "Annual cultural exchanges provide high schoolers with opportunities to discover neighboring heritage.",
+      exampleVi: "Giao lưu văn hóa thường niên mang lại cho học sinh THPT cơ hội khám phá di sản của các nước láng giềng."
     },
     {
       id: 12,
@@ -154,11 +154,11 @@ const LECTURE_DATA = {
       unitName: "Nhóm 2: Hiến Chương & Ngoại Giao",
       word: "Involve in",
       ipa: "/ɪnˈvɒlv ɪn/",
-      pos: "phr. verb",
-      meaning: "Tham gia vào, gắn kết vào (thường dùng get/be involved in)",
-      collocation: "get involved in community projects / involve in youth forums",
-      example: "Thai decided to get involved in voluntary community projects organized by ASEAN youth clubs.",
-      exampleVi: "Thái đã quyết định tham gia vào các dự án cộng đồng tình nguyện do câu lạc bộ thanh niên ASEAN tổ chức."
+      pos: "verb phrase",
+      meaning: "Tham gia vào, can dự vào",
+      collocation: "be actively involved in / get involved in projects",
+      example: "Many high school students are enthusiastically involved in environmental cleanup projects.",
+      exampleVi: "Nhiều học sinh THPT tham gia rất nhiệt tình vào các dự án làm sạch môi trường."
     },
     {
       id: 13,
@@ -167,10 +167,10 @@ const LECTURE_DATA = {
       word: "Represent",
       ipa: "/ˌreprɪˈzent/",
       pos: "verb",
-      meaning: "Đại diện cho, tượng trưng cho",
-      collocation: "represent the nation / represent ASEAN youth",
-      example: "Outstanding high school delegates will represent Viet Nam at the upcoming regional summit.",
-      exampleVi: "Những đại biểu học sinh trung học xuất sắc sẽ đại diện cho Việt Nam tại hội nghị thượng đỉnh khu vực sắp tới."
+      meaning: "Đại diện, thay mặt cho",
+      collocation: "represent the nation / represent youth voices",
+      example: "Selected delegates will represent Viet Nam at the upcoming ASEAN Youth Leadership Conference.",
+      exampleVi: "Các đại biểu được tuyển chọn sẽ đại diện cho Việt Nam tại Hội nghị Thủ lĩnh Thanh niên ASEAN sắp tới."
     },
     {
       id: 14,
@@ -178,11 +178,11 @@ const LECTURE_DATA = {
       unitName: "Nhóm 2: Hiến Chương & Ngoại Giao",
       word: "Representative",
       ipa: "/ˌreprɪˈzentətɪv/",
-      pos: "noun / adj",
-      meaning: "Người đại diện; mang tính tiêu biểu",
-      collocation: "youth representative / official representative",
-      example: "She was selected as the official youth representative to deliver the keynote speech.",
-      exampleVi: "Cô ấy được chọn làm đại diện thanh niên chính thức để đọc bài phát biểu chủ đạo."
+      pos: "noun",
+      meaning: "Người đại diện, đại biểu tiêu biểu",
+      collocation: "official representative / student representative",
+      example: "Each country sent two outstanding student representatives to deliver national presentations.",
+      exampleVi: "Mỗi quốc gia đã cử hai đại diện học sinh xuất sắc đến thuyết trình về đất nước mình."
     },
     {
       id: 15,
@@ -191,10 +191,10 @@ const LECTURE_DATA = {
       word: "Participant",
       ipa: "/pɑːˈtɪsɪpənt/",
       pos: "noun",
-      meaning: "Người tham gia (hội nghị, sự kiện)",
-      collocation: "conference participants / active participant",
-      example: "All participants received certificates of merit for their energetic engagement in workshops.",
-      exampleVi: "Tất cả những người tham gia đều nhận được giấy khen vì sự tham gia tích cực trong các buổi hội thảo."
+      meaning: "Người tham gia, người tham dự",
+      collocation: "active participant / conference participant",
+      example: "All participants in the youth workshop gained valuable cross-cultural problem-solving skills.",
+      exampleVi: "Tất cả những người tham gia hội thảo thanh niên đều thu được kỹ năng giải quyết vấn đề đa văn hóa quý báu."
     },
     {
       id: 16,
@@ -202,14 +202,14 @@ const LECTURE_DATA = {
       unitName: "Nhóm 2: Hiến Chương & Ngoại Giao",
       word: "Volunteer",
       ipa: "/ˌvɒlənˈtɪər/",
-      pos: "verb / noun",
-      meaning: "Tình nguyện; người tình nguyện viên",
-      collocation: "volunteer for community work / student volunteer",
-      example: "Many students volunteer to assist international delegates during the cultural festival.",
-      exampleVi: "Nhiều học sinh tình nguyện hỗ trợ các đại biểu quốc tế trong suốt lễ hội văn hóa."
+      pos: "noun / verb",
+      meaning: "Tình nguyện viên; làm tình nguyện",
+      collocation: "youth volunteer / volunteer for community projects",
+      example: "He worked as a volunteer guiding international delegations throughout the summit week.",
+      exampleVi: "Cậu ấy đã làm việc như một tình nguyện viên hướng dẫn các đoàn quốc tế trong suốt tuần lễ hội nghị."
     },
 
-    // NHÓM 3: GIỚI TRẺ, BẢN SẮC & SỰ THỊNH VƯỢNG (8 TỪ)
+    // NHÓM 3: GIỚI TRẺ, BẢN SẮC & THỊNH VƯỢNG (8 TỪ)
     {
       id: 17,
       unit: 3,
@@ -217,10 +217,10 @@ const LECTURE_DATA = {
       word: "Scholarship",
       ipa: "/ˈskɒləʃɪp/",
       pos: "noun",
-      meaning: "Học bổng",
-      collocation: "win an ASEAN scholarship / offer scholarships",
-      example: "Prestigious ASEAN scholarships provide excellent educational opportunities for gifted students.",
-      exampleVi: "Các suất học bổng ASEAN danh giá mang lại những cơ hội giáo dục tuyệt vời cho học sinh tài năng."
+      meaning: "Học bổng tài trợ học tập",
+      collocation: "win a scholarship / apply for a prestigious scholarship",
+      example: "Thai is diligently preparing his academic portfolio to apply for a prestigious ASEAN scholarship.",
+      exampleVi: "Thái đang chăm chỉ chuẩn bị hồ sơ học thuật của mình để nộp đơn xin học bổng ASEAN danh giá."
     },
     {
       id: 18,
@@ -229,10 +229,10 @@ const LECTURE_DATA = {
       word: "Leadership",
       ipa: "/ˈliːdəʃɪp/",
       pos: "noun",
-      meaning: "Năng lực lãnh đạo, sự lãnh đạo",
-      collocation: "leadership skills / dynamic leadership",
-      example: "The youth camp aims to cultivate essential leadership skills and diplomatic confidence.",
-      exampleVi: "Trại hè thanh niên nhằm trau dồi các kỹ năng lãnh đạo thiết yếu và sự tự tin ngoại giao."
+      meaning: "Kỹ năng lãnh đạo, cương vị dẫn dắt",
+      collocation: "demonstrate leadership skills / youth leadership",
+      example: "Participating in model debates helps teenagers foster visionary leadership and teamwork qualities.",
+      exampleVi: "Tham gia các cuộc tranh biện mô phỏng giúp thiếu niên nuôi dưỡng phẩm chất lãnh đạo và làm việc nhóm có tầm nhìn."
     },
     {
       id: 19,
@@ -241,10 +241,10 @@ const LECTURE_DATA = {
       word: "Diversity",
       ipa: "/daɪˈvɜːsəti/",
       pos: "noun",
-      meaning: "Sự đa dạng, phong phú",
-      collocation: "cultural diversity / celebrate diversity",
-      example: "ASEAN is renowned worldwide for its rich linguistic and cultural diversity.",
-      exampleVi: "ASEAN nổi tiếng khắp thế giới nhờ sự đa dạng ngôn ngữ và văn hóa phong phú."
+      meaning: "Sự đa dạng, tính phong phú",
+      collocation: "cultural diversity / rich ethnic diversity",
+      example: "Unity in diversity is a core philosophical pillar underpinning the ASEAN Community.",
+      exampleVi: "Thống nhất trong đa dạng là trụ cột triết học cốt lõi củng cố Cộng đồng ASEAN."
     },
     {
       id: 20,
@@ -308,19 +308,19 @@ const LECTURE_DATA = {
     }
   ],
 
-  // 2. CHUYÊN ĐỀ NGỮ PHÁP (3 MODULES GERUNDS AS SUBJECTS & OBJECTS)
+  // 2. CHUYÊN ĐỀ NGỮ PHÁP (6 MODULES GERUNDS AS SUBJECTS & OBJECTS KÈM QUICK CHECK DRILLS)
   grammarModules: [
     {
       id: "gram1",
       title: "1. Danh Động Từ Làm Chủ Ngữ (Gerunds as Subjects)",
-      focus: "Trọng tâm Unit 4 - Quy tắc hòa hợp số ít & Cấu trúc giả chủ ngữ",
+      focus: "Quy tắc hòa hợp Chủ - Vị số ít, Phủ định Not + V-ing & Cấu trúc giả chủ ngữ",
       theoryHtml: `
         <div class="grammar-rule-card">
           <h4 style="font-size:1.05rem; font-weight:800; color:var(--text-main); margin-bottom:12px;">
             📌 BẢN CHẤT: DANH ĐỘNG TỪ (GERUND - V-ING) LÀM CHỦ NGỮ
           </h4>
           <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:16px;">
-            Khi muốn diễn tả một hành động, thói quen hoặc hoạt động đóng vai trò là chủ ngữ trong câu, ta sử dụng <strong>V-ing (Danh động từ)</strong>.
+            Khi muốn diễn tả một hành động, thói quen hoặc hoạt động đóng vai trò là chủ thể của câu, ta sử dụng <strong>V-ing (Danh động từ)</strong>. Bản thân V-ing đóng vai trò là một <strong>danh từ trừu tượng đếm không được</strong>.
           </p>
 
           <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:16px; margin-bottom:20px;">
@@ -332,9 +332,10 @@ const LECTURE_DATA = {
               <div style="font-family:'JetBrains Mono', monospace; font-size:1.05rem; font-weight:700; color:#1d4ed8; background:white; padding:10px 14px; border-radius:8px; border:1px solid #93c5fd; margin-bottom:10px;">
                 V-ing (+ O / Adv) + V(số ít - is / was / has / Vs/es)
               </div>
-              <p style="font-size:0.85rem; color:#1e3a8a;">
-                • Dù tân ngữ sau V-ing là danh từ số nhiều, động từ chính <strong>vẫn luôn chia số ít</strong>.<br>
-                • <em>Ví dụ:</em> <strong>Learning</strong> about ASEAN cultures <strong>is</strong> very interesting.
+              <p style="font-size:0.85rem; color:#1e3a8a; line-height:1.6;">
+                • Dù tân ngữ đứng sau V-ing là danh từ số nhiều, động từ chính <strong>vẫn luôn chia số ít</strong>.<br>
+                • <em>Ví dụ:</em> <strong>Learning</strong> about ASEAN cultures <strong>is</strong> very interesting.<br>
+                • <em>Ví dụ:</em> <strong>Maintaining</strong> friendly relations with neighbouring countries <strong>requires</strong> mutual trust.
               </p>
             </div>
 
@@ -344,85 +345,241 @@ const LECTURE_DATA = {
                 QUY TẮC 2: PHỦ ĐỊNH CỦA DANH ĐỘNG TỪ (NOT + V-ING)
               </div>
               <div style="font-family:'JetBrains Mono', monospace; font-size:1.05rem; font-weight:700; color:#15803d; background:white; padding:10px 14px; border-radius:8px; border:1px solid #86efac; margin-bottom:10px;">
-                NOT + V-ing + V(số ít)
+                NOT + V-ing (+ O) + V(số ít)
               </div>
-              <p style="font-size:0.85rem; color:#14532d;">
-                • Thêm trực tiếp <strong>NOT</strong> ngay trước danh động từ (không mượn trợ động từ don't/doesn't).<br>
-                • <em>Ví dụ:</em> <strong>Not knowing</strong> local customs <strong>creates</strong> cultural misunderstandings.
+              <p style="font-size:0.85rem; color:#14532d; line-height:1.6;">
+                • Thêm trực tiếp <strong>NOT</strong> ngay trước danh động từ (tuyệt đối không mượn trợ động từ don't/doesn't).<br>
+                • <em>Ví dụ:</em> <strong>Not knowing</strong> local diplomatic customs <strong>causes</strong> serious cultural misunderstandings.<br>
+                • <em>Ví dụ:</em> <strong>Not adhering</strong> to the charter <strong>undermines</strong> mutual trust.
               </p>
             </div>
           </div>
 
           <div class="pitfall-box">
-            <strong>⚠️ BẪY THI 8.5+ THƯỜNG GẶP:</strong>
+            <strong>⚠️ BẪY THI 8.5+ THƯỜNG GẶP NHẤT:</strong>
             <p style="margin-top:6px; font-size:0.9rem;">
-              ❌ <em>"Promoting regional cultural exchanges <u>are</u> important."</em> ➔ SAI vì thí sinh bị lừa bởi "exchanges" (số nhiều).<br>
-              ✅ <em>"Promoting regional cultural exchanges <strong>is</strong> important."</em> ➔ ĐÚNG vì chủ ngữ là hành động "Promoting" (V-ing số ít)!
+              ❌ <em>"Promoting regional cultural exchanges <u>are</u> important."</em> ➔ <strong>SAI!</strong> Thí sinh bị bẫy bởi danh từ số nhiều <em>exchanges</em> đứng ngay trước.<br>
+              ✅ <em>"Promoting regional cultural exchanges <strong>is</strong> important."</em> ➔ <strong>ĐÚNG!</strong> Chủ ngữ chính là hành động <em>Promoting</em> (ngôi thứ 3 số ít).
+            </p>
+          </div>
+
+          <div style="background:#faf5ff; border:1px solid #e9d5ff; border-radius:10px; padding:14px; margin-top:16px;">
+            <strong style="color:#7e22ce;">CẶP BIẾN ĐỔI GIẢ CHỦ NGỮ:</strong>
+            <code style="display:block; margin:6px 0; font-weight:700; color:#6b21a8;">It + be + Adj + (for sb) + to-V &hArr; V-ing + be + Adj</code>
+            <p style="font-size:0.85rem; color:#581c87; margin:0;">
+              <em>It is essential to preserve cultural identity.</em> &hArr; <strong>Preserving</strong> cultural identity <strong>is</strong> essential.
             </p>
           </div>
         </div>
-      `
+      `,
+      drills: [
+        {
+          id: "d1_1",
+          question: "Preserving traditional customs and national cultural identity ______ a challenging task for many Southeast Asian nations in the era of globalization.",
+          options: ["A. are", "B. is", "C. have been", "D. were"],
+          correct: 1,
+          explanation: "Chủ ngữ là danh động từ 'Preserving' (việc bảo tồn - ngôi thứ 3 số ít). Mặc dù có các danh từ số nhiều 'customs', 'nations', động từ chính vẫn luôn chia số ít là 'is'."
+        },
+        {
+          id: "d1_2",
+          question: "______ diplomatic protocols during bilateral negotiations causes serious misunderstandings between governments.",
+          options: ["A. Not respect", "B. Not respecting", "C. Don't respect", "D. Without respect"],
+          correct: 1,
+          explanation: "Ở vị trí chủ ngữ, dạng phủ định của danh động từ là 'Not + V-ing' ➔ 'Not respecting'. Tuyệt đối không dùng trợ động từ 'Don't respect' làm chủ ngữ."
+        },
+        {
+          id: "d1_3",
+          question: "Building strong trade partnerships among ASEAN member states ______ economic prosperity across the entire region.",
+          options: ["A. ensure", "B. ensures", "C. ensuring", "D. have ensured"],
+          correct: 1,
+          explanation: "Chủ ngữ là hành động 'Building' (V-ing số ít) ➔ Động từ chính chia ở thì Hiện tại đơn ngôi thứ 3 số ít: 'ensures'."
+        },
+        {
+          id: "d1_4",
+          question: "\"It is essential for young delegates to master diplomatic etiquette.\" Câu nào đồng nghĩa?",
+          options: [
+            "A. Mastering diplomatic etiquette is essential for young delegates.",
+            "B. To master diplomatic etiquette are essential for young delegates.",
+            "C. Master diplomatic etiquette is essential for young delegates.",
+            "D. Mastering diplomatic etiquette are essential for young delegates."
+          ],
+          correct: 0,
+          explanation: "Áp dụng cấu trúc chuyển đổi giả chủ ngữ: It + be + Adj + to-V &hArr; V-ing + be(số ít) + Adj. 'Mastering diplomatic etiquette is essential...' là phương án hoàn toàn chính xác."
+        }
+      ]
     },
     {
       id: "gram2",
-      title: "2. Danh Động Từ Làm Tân Ngữ (Gerunds after Prepositions & Specific Verbs)",
-      focus: "Mục tiêu 8.5+ - Giới từ 'TO' gây bẫy & Các động từ bắt buộc đi với V-ing",
+      title: "2. Danh Động Từ Sau Giới Từ & 10 Cụm 'TO' Bắt Buộc Đi Với V-ing",
+      focus: "Bản chất giới từ 'TO' vs to-infinitive & Bảng 10 Cụm từ cố định bẫy đề thi 8.5+",
       theoryHtml: `
         <div class="grammar-rule-card">
           <h4 style="font-size:1.05rem; font-weight:800; color:var(--text-main); margin-bottom:12px;">
-            📌 GERUND ĐỨNG SAU GIỚI TỪ & CÁC CỤM TỪ KINH ĐIỂN
+            📌 GERUND ĐỨNG SAU GIỚI TỪ (PREPOSITIONS)
           </h4>
           <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:16px;">
-            Mọi động từ đứng ngay sau <strong>giới từ (in, on, at, about, for, of, by, without...)</strong> đều phải chia ở dạng <strong>V-ing</strong>.
+            Mọi động từ đứng ngay sau <strong>giới từ (in, on, at, about, for, of, by, without, prior to...)</strong> đều bắt buộc phải chia ở dạng <strong>V-ing</strong>.
           </p>
 
           <div style="background:#fefce8; border:2px solid #fef08a; border-radius:12px; padding:16px; margin-bottom:18px;">
             <div style="font-size:0.85rem; font-weight:800; color:#854d0e; text-transform:uppercase; margin-bottom:8px;">
-              🔥 5 CỤM CÓ GIỚI TỪ "TO" BẮT BUỘC ĐI VỚI V-ING (CỰC HAY RA TRONG ĐỀ THI 8.5+):
+              🔥 BẢNG 10 CỤM CÓ GIỚI TỪ "TO" BẮT BUỘC ĐI VỚI V-ING (TRỌNG TÂM PHÂN LOẠI 8.5+):
             </div>
-            <ul style="font-size:0.9rem; color:#713f12; line-height:1.8;">
-              <li>1. <strong>look forward to + V-ing</strong>: mong đợi, trông ngóng</li>
-              <li>2. <strong>be / get used to + V-ing</strong>: quen với việc gì</li>
-              <li>3. <strong>object to / have an objection to + V-ing</strong>: phản đối việc gì</li>
-              <li>4. <strong>contribute to / make a contribution to + V-ing</strong>: đóng góp vào việc gì</li>
-              <li>5. <strong>commit oneself to / dedicate oneself to + V-ing</strong>: cam kết / cống hiến cho việc gì</li>
-            </ul>
+            <p style="font-size:0.85rem; color:#713f12; margin-bottom:10px;">
+              Trong 10 cụm dưới đây, <strong>"TO" LÀ GIỚI TỪ (PREPOSITION)</strong>, do đó sau nó bắt buộc dùng <strong>V-ing</strong> (không dùng To-V):
+            </p>
+            <div style="overflow-x:auto;">
+              <table style="width:100%; border-collapse:collapse; font-size:0.85rem; background:white; border-radius:8px; overflow:hidden;">
+                <thead>
+                  <tr style="background:#fef9c3; text-align:left; color:#854d0e;">
+                    <th style="padding:8px 10px; border-bottom:1px solid #fef08a;">Cụm từ cố định</th>
+                    <th style="padding:8px 10px; border-bottom:1px solid #fef08a;">Nghĩa tiếng Việt</th>
+                    <th style="padding:8px 10px; border-bottom:1px solid #fef08a;">Ví dụ thực tế ASEAN</th>
+                  </tr>
+                </thead>
+                <tbody style="color:#713f12;">
+                  <tr><td style="padding:8px 10px; font-weight:700;">1. contribute to + V-ing</td><td style="padding:8px 10px;">đóng góp vào</td><td style="padding:8px 10px;">contributes to <strong>strengthening</strong> regional stability</td></tr>
+                  <tr><td style="padding:8px 10px; font-weight:700;">2. look forward to + V-ing</td><td style="padding:8px 10px;">háo hức chờ mong</td><td style="padding:8px 10px;">look forward to <strong>participating</strong> in the youth camp</td></tr>
+                  <tr><td style="padding:8px 10px; font-weight:700;">3. be / get used to + V-ing</td><td style="padding:8px 10px;">quen với việc gì</td><td style="padding:8px 10px;">used to <strong>working</strong> in multicultural environments</td></tr>
+                  <tr><td style="padding:8px 10px; font-weight:700;">4. be committed to + V-ing</td><td style="padding:8px 10px;">cam kết làm gì</td><td style="padding:8px 10px;">committed to <strong>abiding</strong> by the ASEAN Charter</td></tr>
+                  <tr><td style="padding:8px 10px; font-weight:700;">5. object to + V-ing</td><td style="padding:8px 10px;">phản đối việc gì</td><td style="padding:8px 10px;">objected to <strong>delaying</strong> the trade integration</td></tr>
+                  <tr><td style="padding:8px 10px; font-weight:700;">6. be dedicated to + V-ing</td><td style="padding:8px 10px;">cống hiến vì</td><td style="padding:8px 10px;">dedicated to <strong>supporting</strong> underprivileged youth</td></tr>
+                  <tr><td style="padding:8px 10px; font-weight:700;">7. in addition to + V-ing</td><td style="padding:8px 10px;">bên cạnh việc gì</td><td style="padding:8px 10px;">in addition to <strong>promoting</strong> commercial trade</td></tr>
+                  <tr><td style="padding:8px 10px; font-weight:700;">8. with a view to + V-ing</td><td style="padding:8px 10px;">nhằm mục đích</td><td style="padding:8px 10px;">held with a view to <strong>deepening</strong> mutual trust</td></tr>
+                  <tr><td style="padding:8px 10px; font-weight:700;">9. prior to + V-ing</td><td style="padding:8px 10px;">trước khi làm gì</td><td style="padding:8px 10px;">prior to <strong>joining</strong> ASEAN in 1995</td></tr>
+                  <tr><td style="padding:8px 10px; font-weight:700;">10. admit to + V-ing</td><td style="padding:8px 10px;">thú nhận đã làm</td><td style="padding:8px 10px;">admitted to <strong>mishandling</strong> the conference funds</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
-          <div style="overflow-x:auto;">
-            <table class="modal-rules-table" style="width:100%; border-collapse:collapse; margin-bottom:16px;">
+          <div style="font-size:0.85rem; color:var(--text-muted); line-height:1.7;">
+            <strong>Các cụm giới từ cốt lõi khác:</strong><br>
+            • <code>succeed in + V-ing</code>: thành công trong việc... (<em>succeeded in maintaining peace</em>)<br>
+            • <code>prevent/stop sb from + V-ing</code>: ngăn cản ai làm gì (<em>prevent disputes from escalating</em>)<br>
+            • <code>by + V-ing</code> (bằng cách) vs <code>without + V-ing</code> (mà không làm gì): <em>resolve conflicts <strong>by listening</strong>; cannot pass <strong>without reaching</strong> consensus.</em>
+          </div>
+        </div>
+      `,
+      drills: [
+        {
+          id: "d2_1",
+          question: "High-ranking representatives of the ten member nations are looking forward to ______ in the opening ceremony of the 43rd ASEAN Summit.",
+          options: ["A. participate", "B. participating", "C. participated", "D. have participated"],
+          correct: 1,
+          explanation: "Cấu trúc cố định: 'look forward to + V-ing' (chữ 'to' ở đây là giới từ, không phải to-infinitive). Đáp án đúng là 'participating'."
+        },
+        {
+          id: "d2_2",
+          question: "Viet Nam has shown strong commitment to ______ peace, security, and economic cooperation across the Asia-Pacific region.",
+          options: ["A. maintain", "B. maintained", "C. maintaining", "D. maintenance"],
+          correct: 2,
+          explanation: "Cụm danh từ: 'commitment to + V-ing' (sự cam kết làm điều gì). Sau giới từ 'to' bắt buộc chọn V-ing: 'maintaining'."
+        },
+        {
+          id: "d2_3",
+          question: "In addition to ______ humanitarian assistance to flood victims, the charity group organized free language classes for local children.",
+          options: ["A. provide", "B. provided", "C. providing", "D. to providing"],
+          correct: 2,
+          explanation: "Cụm liên từ/giới từ: 'in addition to + V-ing' (bên cạnh việc làm gì). Do đó chọn 'providing'."
+        },
+        {
+          id: "d2_4",
+          question: "The leaders held an emergency session with a view to ______ long-standing cross-border trade barriers.",
+          options: ["A. eliminate", "B. eliminating", "C. to eliminate", "D. eliminated"],
+          correct: 1,
+          explanation: "Cụm từ: 'with a view to + V-ing' (nhằm mục đích làm gì). Thí sinh hay nhầm lẫn chọn A do tưởng là 'to + V'. Đáp án đúng là B (eliminating)."
+        }
+      ]
+    },
+    {
+      id: "gram3",
+      title: "3. Động Từ Bắt Buộc Theo Sau Bởi V-ing & 8 Thành Ngữ Cố Định",
+      focus: "3 Nhóm động từ theo trường nghĩa & 8 Thành ngữ kinh điển luôn đi với V-ing",
+      theoryHtml: `
+        <div class="grammar-rule-card">
+          <h4 style="font-size:1.05rem; font-weight:800; color:var(--text-main); margin-bottom:12px;">
+            📌 ĐỘNG TỪ ĐI KÈM GERUND & CÁC THÀNH NGỮ BẤT BIẾN
+          </h4>
+
+          <div style="overflow-x:auto; margin-bottom:18px;">
+            <table class="modal-rules-table" style="width:100%; border-collapse:collapse;">
               <thead>
                 <tr style="background:#f8fafc; text-align:left;">
-                  <th style="padding:10px; border-bottom:2px solid #e2e8f0;">Nhóm động từ</th>
+                  <th style="padding:10px; border-bottom:2px solid #e2e8f0;">Nhóm ngữ nghĩa</th>
                   <th style="padding:10px; border-bottom:2px solid #e2e8f0;">Động từ đi kèm V-ing</th>
-                  <th style="padding:10px; border-bottom:2px solid #e2e8f0;">Ví dụ minh họa</th>
+                  <th style="padding:10px; border-bottom:2px solid #e2e8f0;">Ví dụ thực chiến</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td style="padding:10px; border-bottom:1px solid #e2e8f0; font-weight:700; color:#1d4ed8;">Sở thích & Cảm xúc</td>
-                  <td style="padding:10px; border-bottom:1px solid #e2e8f0;">enjoy, fancy, dislike, mind, detest</td>
+                  <td style="padding:10px; border-bottom:1px solid #e2e8f0; font-weight:700; color:#1d4ed8;">1. Sở thích & Cảm xúc</td>
+                  <td style="padding:10px; border-bottom:1px solid #e2e8f0;">enjoy, fancy, adore, dislike, detest, mind, tolerate</td>
                   <td style="padding:10px; border-bottom:1px solid #e2e8f0;">Thai <strong>enjoys participating</strong> in youth summits.</td>
                 </tr>
                 <tr>
-                  <td style="padding:10px; border-bottom:1px solid #e2e8f0; font-weight:700; color:#15803d;">Hành động & Quyết định</td>
-                  <td style="padding:10px; border-bottom:1px solid #e2e8f0;">avoid, postpone, delay, finish, practice</td>
-                  <td style="padding:10px; border-bottom:1px solid #e2e8f0;">They <strong>avoided discussing</strong> sensitive territorial disputes.</td>
+                  <td style="padding:10px; border-bottom:1px solid #e2e8f0; font-weight:700; color:#15803d;">2. Tiến trình & Trì hoãn</td>
+                  <td style="padding:10px; border-bottom:1px solid #e2e8f0;">avoid, delay, postpone, put off, finish, practice, keep, risk</td>
+                  <td style="padding:10px; border-bottom:1px solid #e2e8f0;">They <strong>postponed signing</strong> the bilateral agreement.</td>
                 </tr>
                 <tr>
-                  <td style="padding:10px; font-weight:700; color:#b45309;">Đề xuất & Thừa nhận</td>
-                  <td style="padding:10px;">suggest, consider, admit, deny, involve, risk</td>
-                  <td style="padding:10px;">The ambassador <strong>suggested hosting</strong> a regional youth camp.</td>
+                  <td style="padding:10px; font-weight:700; color:#b45309;">3. Đề xuất & Nhận định</td>
+                  <td style="padding:10px;">suggest, recommend, consider, imagine, involve, admit, deny</td>
+                  <td style="padding:10px;">The ambassador <strong>suggested hosting</strong> an educational workshop.</td>
                 </tr>
               </tbody>
             </table>
           </div>
+
+          <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px; padding:14px;">
+            <strong style="color:#166534;">8 THÀNH NGỮ CỐ ĐỊNH (IDIOMATIC EXPRESSIONS) BẮT BUỘC ĐI VỚI V-ING:</strong>
+            <ul style="font-size:0.85rem; color:#14532d; line-height:1.8; margin-top:8px;">
+              <li>1. <strong>can't help / can't stand / can't bear + V-ing</strong>: không thể không / không thể chịu nổi làm gì</li>
+              <li>2. <strong>it's no use / it's no good + V-ing</strong>: vô ích khi làm điều gì</li>
+              <li>3. <strong>there is no point in + V-ing</strong>: chẳng có lý do/ích lợi gì khi làm gì</li>
+              <li>4. <strong>be worth + V-ing</strong>: đáng giá, rất đáng để làm việc gì</li>
+              <li>5. <strong>spend time / money + (on) + V-ing</strong>: dành thời gian/tiền bạc làm gì</li>
+              <li>6. <strong>waste time / money + (on) + V-ing</strong>: lãng phí thời gian/tiền bạc làm gì</li>
+              <li>7. <strong>have difficulty / trouble (in) + V-ing</strong>: gặp khó khăn, trở ngại khi làm gì</li>
+              <li>8. <strong>be busy + V-ing</strong>: đang bận rộn làm việc gì</li>
+            </ul>
+          </div>
         </div>
-      `
+      `,
+      drills: [
+        {
+          id: "d3_1",
+          question: "The minister suggested ______ an annual cultural festival to celebrate the founding anniversary of ASEAN.",
+          options: ["A. to organize", "B. organizing", "C. organized", "D. organize"],
+          correct: 1,
+          explanation: "Động từ 'suggest' khi đi trực tiếp với một động từ khác bắt buộc theo sau bởi V-ing: 'suggest doing sth'. Do đó chọn 'organizing'."
+        },
+        {
+          id: "d3_2",
+          question: "It is no use ______ about the strict visa requirements; we had better prepare all necessary documentation promptly.",
+          options: ["A. to complain", "B. complain", "C. complaining", "D. complained"],
+          correct: 2,
+          explanation: "Thành ngữ cố định: 'It is no use + V-ing' (vô ích khi làm gì). Đáp án đúng là C (complaining)."
+        },
+        {
+          id: "d3_3",
+          question: "Many international delegates had great difficulty ______ the rapid rhythm of the regional summit discussions.",
+          options: ["A. following", "B. to follow", "C. followed", "D. follow"],
+          correct: 0,
+          explanation: "Cấu trúc thành ngữ: 'have difficulty / trouble (in) + V-ing' (gặp khó khăn khi làm gì). Do đó chọn 'following'."
+        },
+        {
+          id: "d3_4",
+          question: "This historical research paper on 30 years of Viet Nam in ASEAN is definitely worth ______ before your presentation.",
+          options: ["A. read", "B. reading", "C. to read", "D. having read"],
+          correct: 1,
+          explanation: "Cấu trúc: 'be worth + V-ing' (rất đáng để làm việc gì). Chọn B (reading)."
+        }
+      ]
     },
     {
-      id: "gram3",
-      title: "3. 6 Cặp Động Từ Thay Đổi Ý Nghĩa (V-ing vs To-V) & Phân Hóa Điểm 8.5+",
+      id: "gram4",
+      title: "4. 6 Cặp Động Từ Thay Đổi Ý Nghĩa (V-ing vs To-V) & Phân Hóa Điểm 8.5+",
       focus: "Mục tiêu 8.5+ - Remember, Forget, Stop, Regret, Try, Need & Bẫy Đề Thi",
       theoryHtml: `
         <div class="grammar-rule-card">
@@ -430,69 +587,93 @@ const LECTURE_DATA = {
             📌 6 CẶP ĐỘNG TỪ THAY ĐỔI Ý NGHĨA KHI ĐI VỚI V-ING VS TO-V
           </h4>
 
-          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:14px; margin-bottom:20px;">
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:14px; margin-bottom:16px;">
             <div style="background:#fff1f2; border:1px solid #fecdd3; border-radius:10px; padding:14px;">
               <strong style="color:#be123c;">1. REMEMBER</strong><br>
               • <code>+ To-V</code>: Nhớ <strong>phải làm</strong> nhiệm vụ trong tương lai.<br>
-              • <code>+ V-ing</code>: Nhớ ký ức <strong>đã làm</strong> việc gì trong quá khứ.<br>
-              <em>Ví dụ:</em> "Please remember <strong>to submit</strong> your visa application."<br>
-              <em>Ví dụ:</em> "I distinctly remember <strong>meeting</strong> the Thai delegate last year."
+              • <code>+ V-ing</code>: Nhớ ký ức <strong>đã làm</strong> trong quá khứ.<br>
+              <em>Ví dụ:</em> Remember <strong>to bring</strong> your badge. vs I remember <strong>visiting</strong> Jakarta.
             </div>
 
             <div style="background:#fef2f2; border:1px solid #fee2e2; border-radius:10px; padding:14px;">
               <strong style="color:#991b1b;">2. FORGET</strong><br>
-              • <code>+ To-V</code>: Quên <strong>phải làm</strong> điều gì (không hoàn thành).<br>
+              • <code>+ To-V</code>: Quên <strong>phải làm</strong> điều gì (chưa thực hiện).<br>
               • <code>+ V-ing</code>: Quên ký ức <strong>đã từng làm</strong> (thường dùng: <em>will never forget</em>).<br>
-              <em>Ví dụ:</em> "Don't forget <strong>to bring</strong> your official credentials."<br>
-              <em>Ví dụ:</em> "He will never forget <strong>giving</strong> his speech at the ASEAN youth forum."
+              <em>Ví dụ:</em> Don't forget <strong>to submit</strong>. vs Never forget <strong>giving</strong> the speech.
             </div>
 
             <div style="background:#f5f3ff; border:1px solid #ddd6fe; border-radius:10px; padding:14px;">
               <strong style="color:#6d28d9;">3. STOP</strong><br>
               • <code>+ To-V</code>: <strong>Dừng lại để làm</strong> việc khác (chỉ mục đích).<br>
               • <code>+ V-ing</code>: <strong>Dừng hẳn, từ bỏ</strong> một hành động/thói quen.<br>
-              <em>Ví dụ:</em> "Ministers stopped <strong>to take</strong> a commemorative photo."<br>
-              <em>Ví dụ:</em> "Member nations stopped <strong>imposing</strong> unilateral trade tariffs."
+              <em>Ví dụ:</em> Stopped <strong>to take</strong> photos. vs Stopped <strong>imposing</strong> unilateral tariffs.
             </div>
 
             <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px; padding:14px;">
               <strong style="color:#15803d;">4. REGRET</strong><br>
-              • <code>+ To-V</code>: Lấy làm tiếc <strong>phải thông báo</strong> tin buồn (thường đi với <em>inform, announce, say</em>).<br>
+              • <code>+ To-V</code>: Lấy làm tiếc <strong>phải thông báo</strong> tin buồn (với <em>inform, announce</em>).<br>
               • <code>+ V-ing</code>: Hối tiếc vì <strong>đã trót làm</strong> việc gì.<br>
-              <em>Ví dụ:</em> "We regret <strong>to inform</strong> you that the summit was postponed."<br>
-              <em>Ví dụ:</em> "She regretted <strong>not taking</strong> part in the cultural exchange."
+              <em>Ví dụ:</em> Regret <strong>to inform</strong> you. vs Regretted <strong>not participating</strong> in the summit.
             </div>
 
             <div style="background:#fefce8; border:1px solid #fef08a; border-radius:10px; padding:14px;">
               <strong style="color:#854d0e;">5. TRY</strong><br>
               • <code>+ To-V</code>: <strong>Cố gắng, nỗ lực hết mình</strong> vượt qua khó khăn để làm.<br>
-              • <code>+ V-ing</code>: <strong>Thử nghiệm</strong> một phương pháp/giải pháp xem kết quả.<br>
-              <em>Ví dụ:</em> "Viet Nam tried <strong>to achieve</strong> economic stabilization."<br>
-              <em>Ví dụ:</em> "If traditional channels fail, try <strong>reaching out</strong> via digital diplomacy."
+              • <code>+ V-ing</code>: <strong>Thử nghiệm</strong> một phương pháp/giải pháp mới xem kết quả.<br>
+              <em>Ví dụ:</em> Tried <strong>to achieve</strong> consensus. vs Try <strong>reaching out</strong> via digital channels.
             </div>
 
             <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:10px; padding:14px;">
               <strong style="color:#1e40af;">6. NEED</strong><br>
               • <code>+ To-V</code>: Ai đó cần phải làm gì (chủ động).<br>
-              • <code>+ V-ing (= need to be V3/ed)</code>: Cái gì đó <strong>cần được sửa chữa, bảo dưỡng</strong> (bị động).<br>
-              <em>Ví dụ:</em> "We need <strong>to foster</strong> mutual trust and solidarity."<br>
-              <em>Ví dụ:</em> "The ASEAN community website needs <strong>redesigning</strong> (= needs to be redesigned)."
+              • <code>+ V-ing (= need to be V3/ed)</code>: Cái gì đó <strong>cần được sửa chữa, cập nhật</strong> (bị động).<br>
+              <em>Ví dụ:</em> We need <strong>to foster</strong> trust. vs The website needs <strong>updating</strong> (= to be updated).
             </div>
           </div>
         </div>
-      `
+      `,
+      drills: [
+        {
+          id: "d4_1",
+          question: "On their way to the ASEAN Secretariat building, the delegates stopped ______ some fuel for their service vehicle.",
+          options: ["A. get", "B. getting", "C. to get", "D. got"],
+          correct: 2,
+          explanation: "Hành động 'dừng xe lại ĐỂ ĐỔ XĂNG' là dừng lại nhằm mục đích thực hiện hành động khác ➔ Dùng 'stop + to-V'. Đáp án đúng là C (to get)."
+        },
+        {
+          id: "d4_2",
+          question: "I distinctly remember ______ the Minister of Foreign Affairs at the bilateral summit in Singapore three years ago.",
+          options: ["A. meet", "B. meeting", "C. to meet", "D. met"],
+          correct: 1,
+          explanation: "Nhớ lại một ký ức/trải nghiệm đã diễn ra trong quá khứ ('three years ago') ➔ Dùng 'remember + V-ing'. Chọn B (meeting)."
+        },
+        {
+          id: "d4_3",
+          question: "We deeply regret ______ you that your application for the ASEAN Youth Ambassador programme was unsuccessful.",
+          options: ["A. to inform", "B. informing", "C. inform", "D. informed"],
+          correct: 0,
+          explanation: "Cụm từ trang trọng khi thông báo tin không vui: 'regret to inform/tell sb' (lấy làm tiếc phải thông báo điều gì). Chọn A (to inform)."
+        },
+        {
+          id: "d4_4",
+          question: "The official translation of the ASEAN trade protocol is inaccurate; it urgently needs ______ before publication.",
+          options: ["A. to revise", "B. revising", "C. revise", "D. revised"],
+          correct: 1,
+          explanation: "Chủ ngữ là vật ('The official translation' - bản dịch), mang nghĩa bị động: cần ĐƯỢC CHỈNH SỬA ➔ Dùng 'need + V-ing' (= need to be revised). Chọn B (revising)."
+        }
+      ]
     },
     {
-      id: "gram4",
-      title: "4. Danh Động Từ Hoàn Thành (Perfect Gerunds: Having + V3/ed)",
-      focus: "Phân hóa 8.5+ - Nhấn mạnh hành động xảy ra trước & Dạng bị động",
+      id: "gram5",
+      title: "5. Danh Động Từ Hoàn Thành (Perfect Gerunds: Having + V3/ed)",
+      focus: "Phân hóa 8.5+ - Nhấn mạnh hành động xảy ra trước & Dạng bị động (Having been + V3/ed)",
       theoryHtml: `
         <div class="grammar-rule-card">
           <h4 style="font-size:1.05rem; font-weight:800; color:var(--text-main); margin-bottom:12px;">
-            📌 BẢN CHẤT: PERFECT GERUNDS (HAVING + V3/ed)
+            📌 BẢN CHẤT: PERFECT GERUNDS (HAVING + V3/ED)
           </h4>
           <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:16px;">
-            Được dùng khi ta muốn <strong>nhấn mạnh rõ ràng</strong> một hành động đã hoàn tất và kết thúc <strong>TRƯỚC</strong> thời điểm của động từ chính trong câu.
+            Được dùng khi ta muốn <strong>nhấn mạnh dứt khoát</strong> rằng một hành động đã diễn ra và hoàn tất <strong>TRƯỚC</strong> thời điểm của động từ chính trong câu.
           </p>
 
           <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:16px; margin-bottom:20px;">
@@ -503,10 +684,9 @@ const LECTURE_DATA = {
               <div style="font-family:'JetBrains Mono', monospace; font-size:1.05rem; font-weight:700; color:#1d4ed8; background:white; padding:10px 14px; border-radius:8px; border:1px solid #93c5fd; margin-bottom:10px;">
                 Having + V(3/ed)
               </div>
-              <p style="font-size:0.85rem; color:#1e3a8a;">
-                • Dùng sau các động từ: <em>admit, deny, regret, apologize for, congratulate on, remember...</em><br>
-                • <em>Ví dụ:</em> The diplomat admitted <strong>having made</strong> an inaccurate statement during the press conference.<br>
-                <em>(Vị nhà ngoại giao thừa nhận trước đó đã đưa ra phát biểu thiếu chính xác.)</em>
+              <p style="font-size:0.85rem; color:#1e3a8a; line-height:1.6;">
+                • Dùng sau: <em>admit, deny, regret, apologize for, congratulate on, be praised for...</em><br>
+                • <em>Ví dụ:</em> The diplomat admitted <strong>having made</strong> an inaccurate statement during the press conference.
               </p>
             </div>
 
@@ -517,10 +697,9 @@ const LECTURE_DATA = {
               <div style="font-family:'JetBrains Mono', monospace; font-size:1.05rem; font-weight:700; color:#7e22ce; background:white; padding:10px 14px; border-radius:8px; border:1px solid #c084fc; margin-bottom:10px;">
                 Having been + V(3/ed)
               </div>
-              <p style="font-size:0.85rem; color:#581c87;">
-                • Nhấn mạnh chủ thể <strong>được / bị tác động</strong> bởi hành động đã hoàn thành trước đó.<br>
-                • <em>Ví dụ:</em> She felt immensely proud of <strong>having been selected</strong> as the ASEAN youth ambassador.<br>
-                <em>(Cô ấy cảm thấy vô cùng tự hào vì trước đó đã được chọn làm đại sứ thanh niên ASEAN.)</em>
+              <p style="font-size:0.85rem; color:#581c87; line-height:1.6;">
+                • Nhấn mạnh chủ thể <strong>được / bị tác động</strong> bởi hành động đã hoàn tất trong quá khứ.<br>
+                • <em>Ví dụ:</em> She felt proud of <strong>having been selected</strong> as the ASEAN youth ambassador.
               </p>
             </div>
           </div>
@@ -529,15 +708,45 @@ const LECTURE_DATA = {
             <strong>⚠️ BẪY THI THPT QUỐC GIA:</strong>
             <p style="margin-top:6px; font-size:0.9rem;">
               Khi hai hành động có khoảng cách thời gian rõ rệt, đề thi thường bắt buộc dùng <strong>Having + V3/ed</strong> thay vì V-ing đơn thuần để nhấn mạnh tính trước - sau!<br>
-              <em>"He was accused of <strong>having leaked</strong> confidential documents."</em> (Hành động làm rò rỉ diễn ra trước khi bị cáo buộc).
+              <em>"He was accused of <strong>having leaked</strong> confidential documents."</em> (Hành động làm rò rỉ diễn ra trước khi bị phát hiện và cáo buộc).
             </p>
           </div>
         </div>
-      `
+      `,
+      drills: [
+        {
+          id: "d5_1",
+          question: "The former spokesperson denied ______ confidential discussion records of the summit to foreign journalists.",
+          options: ["A. to leak", "B. having leaked", "C. have leaked", "D. be leaked"],
+          correct: 1,
+          explanation: "Hành động 'làm rò rỉ thông tin' diễn ra và hoàn tất trước hành động 'phủ nhận' (denied) ➔ Dùng Perfect Gerund 'having leaked'."
+        },
+        {
+          id: "d5_2",
+          question: "Viet Nam was highly praised by international partners for ______ successfully as the ASEAN Chair in 2020.",
+          options: ["A. having served", "B. to have served", "C. served", "D. have been serving"],
+          correct: 0,
+          explanation: "Sau giới từ 'for', hành động đảm nhiệm nhiệm kỳ chủ tịch đã hoàn thành trong năm 2020 (trước thời điểm được khen ngợi) ➔ 'for having served'."
+        },
+        {
+          id: "d5_3",
+          question: "The youth delegate was extremely proud of ______ selected as the national representative for the cultural gala.",
+          options: ["A. having", "B. having been", "C. being", "D. to have been"],
+          correct: 1,
+          explanation: "Hành động 'được tuyển chọn' là bị động và đã hoàn thành trước đó ➔ Dùng Passive Perfect Gerund: 'having been selected'."
+        },
+        {
+          id: "d5_4",
+          question: "The diplomat apologized for ______ informed the organizing committee about the sudden schedule changes in advance.",
+          options: ["A. not having", "B. having not", "C. don't have", "D. not to have"],
+          correct: 0,
+          explanation: "Dạng phủ định của Perfect Gerund: 'Not + having + V3/ed' ➔ 'not having informed' (vì đã không thông báo trước)."
+        }
+      ]
     },
     {
-      id: "gram5",
-      title: "5. 6 Cấu Trúc Viết Lại Câu Kinh Điển Với Danh Động Từ Trong Đề Thi",
+      id: "gram6",
+      title: "6. 6 Cấu Trúc Viết Lại Câu Kinh Điển Với Danh Động Từ Trong Đề Thi",
       focus: "Mục tiêu 8.5+ - Rèn luyện kỹ năng biến đổi câu tương đương chuẩn đề thi THPT",
       theoryHtml: `
         <div class="grammar-rule-card">
@@ -549,33 +758,28 @@ const LECTURE_DATA = {
             <ul style="font-size:0.9rem; line-height:1.8;">
               <li style="margin-bottom:12px;">
                 <strong>1. Dạng Đề xuất (Suggestion):</strong><br>
-                <code>Let's / Why don't we / Shall we + V?</code> ➔ <code>S + suggested + V-ing</code><br>
-                <em>Ví dụ:</em> "Why don't we set up a regional youth council?" the president said.<br>
-                ➔ <em>The president suggested <strong>setting up</strong> a regional youth council.</em>
+                <code>Let's / Why don't we / Shall we + V?</code> &rarr; <code>S + suggested + V-ing</code><br>
+                <em>Ví dụ:</em> "Why don't we set up a regional youth council?" &rarr; <em>The president suggested <strong>setting up</strong> a regional youth council.</em>
               </li>
               <li style="margin-bottom:12px;">
                 <strong>2. Dạng Vô ích khi làm gì (Pointless / No use):</strong><br>
-                <code>It is pointless / meaningless + to-V</code> ➔ <code>There is no point in + V-ing</code> = <code>It is no use / no good + V-ing</code><br>
-                <em>Ví dụ:</em> It is pointless to argue about border regulations without diplomatic consultation.<br>
-                ➔ <em>There is no point in <strong>arguing</strong> about border regulations without diplomatic consultation.</em>
+                <code>It is pointless / meaningless + to-V</code> &rarr; <code>There is no point in + V-ing</code> = <code>It is no use / no good + V-ing</code><br>
+                <em>Ví dụ:</em> It is pointless to argue about border regulations without consultation. &rarr; <em>There is no point in <strong>arguing</strong>...</em>
               </li>
               <li style="margin-bottom:12px;">
                 <strong>3. Dạng Tiêu tốn thời gian (Spends vs Takes):</strong><br>
-                <code>It takes/took + sb + [time] + to-V</code> ➔ <code>S + spend/spent + [time] + (on) + V-ing</code><br>
-                <em>Ví dụ:</em> It took the delegate two days to review the draft charter.<br>
-                ➔ <em>The delegate spent two days <strong>reviewing</strong> the draft charter.</em>
+                <code>It takes/took + sb + [time] + to-V</code> &rarr; <code>S + spend/spent + [time] + (on) + V-ing</code><br>
+                <em>Ví dụ:</em> It took the delegate two days to review the draft charter. &rarr; <em>The delegate spent two days <strong>reviewing</strong>...</em>
               </li>
               <li style="margin-bottom:12px;">
                 <strong>4. Dạng Thừa nhận / Phủ nhận với Perfect Gerund:</strong><br>
-                <code>S + admitted / denied that S had done sth</code> ➔ <code>S + admitted / denied + (having) + V3/ed</code><br>
-                <em>Ví dụ:</em> The witness admitted that he had seen the unauthorized transaction.<br>
-                ➔ <em>The witness admitted <strong>having seen</strong> the unauthorized transaction.</em>
+                <code>S + admitted / denied that S had done sth</code> &rarr; <code>S + admitted / denied + (having) + V3/ed</code><br>
+                <em>Ví dụ:</em> The witness admitted that he had seen the transaction. &rarr; <em>The witness admitted <strong>having seen</strong>...</em>
               </li>
               <li style="margin-bottom:12px;">
                 <strong>5. Dạng Gặp khó khăn (Difficulty):</strong><br>
-                <code>It was difficult for sb to-V</code> ➔ <code>S + had difficulty / trouble (in) + V-ing</code><br>
-                <em>Ví dụ:</em> It was difficult for students to adapt to the international conference pace.<br>
-                ➔ <em>Students had difficulty (in) <strong>adapting</strong> to the international conference pace.</em>
+                <code>It was difficult for sb to-V</code> &rarr; <code>S + had difficulty / trouble (in) + V-ing</code><br>
+                <em>Ví dụ:</em> It was difficult for students to adapt to the conference pace. &rarr; <em>Students had difficulty (in) <strong>adapting</strong>...</em>
               </li>
               <li>
                 <strong>6. Dạng Cụm giới từ "TO" bẫy:</strong><br>
@@ -585,7 +789,47 @@ const LECTURE_DATA = {
             </ul>
           </div>
         </div>
-      `
+      `,
+      drills: [
+        {
+          id: "d6_1",
+          question: "\"Why don't we set up a regional youth volunteer network?\" the president said. ➔ The president suggested ______ a regional youth volunteer network.",
+          options: ["A. to set up", "B. setting up", "C. set up", "D. should set up"],
+          correct: 1,
+          explanation: "Công thức biến đổi đề xuất: 'Why don't we + V' ➔ 'suggest + V-ing'. Đáp án đúng là B (setting up)."
+        },
+        {
+          id: "d6_2",
+          question: "\"It took Thai two weeks to complete his presentation on ASEAN solidarity.\" Câu nào đồng nghĩa?",
+          options: [
+            "A. Thai spent two weeks to complete his presentation on ASEAN solidarity.",
+            "B. Thai spent two weeks completing his presentation on ASEAN solidarity.",
+            "C. Thai wastes two weeks completing his presentation on ASEAN solidarity.",
+            "D. Thai has difficulty completing his presentation in two weeks."
+          ],
+          correct: 1,
+          explanation: "Công thức chuyển đổi: It took sb + [time] + to-V &hArr; S + spent + [time] + (on) + V-ing. Đáp án đúng là B."
+        },
+        {
+          id: "d6_3",
+          question: "\"It is completely useless to argue about tariff details without clear market data.\" Câu nào đồng nghĩa?",
+          options: [
+            "A. There is no point in arguing about tariff details without clear market data.",
+            "B. There is no use to argue about tariff details without clear market data.",
+            "C. There is no point to argue about tariff details without clear market data.",
+            "D. It is not worth to argue about tariff details without clear market data."
+          ],
+          correct: 0,
+          explanation: "Công thức: 'It is useless + to-V' ➔ 'There is no point in + V-ing'. Phương án A là đáp án hoàn toàn chuẩn xác."
+        },
+        {
+          id: "d6_4",
+          question: "\"I did not reveal any confidential information to unauthorized persons,\" the officer said. ➔ The officer denied ______ any confidential information to unauthorized persons.",
+          options: ["A. to reveal", "B. having revealed", "C. reveal", "D. have revealed"],
+          correct: 1,
+          explanation: "Chuyển câu gián tiếp phủ nhận việc đã xảy ra trong quá khứ: 'S + denied + having V3/ed'. Đáp án đúng là B (having revealed)."
+        }
+      ]
     }
   ],
 

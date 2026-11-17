@@ -96,7 +96,7 @@
     const grammarBox = document.querySelector('.lecture-grammar-box');
     if (grammarBox) {
       grammarBox.style.cursor = 'pointer';
-      grammarBox.setAttribute('title', 'Bấm để xem chi tiết 5 Chuyên đề Ngữ pháp Danh Động Từ');
+      grammarBox.setAttribute('title', 'Bấm để xem chi tiết 6 Chuyên đề Ngữ pháp Danh Động Từ & Bộ Bài Tập Nhanh');
       grammarBox.addEventListener('click', () => {
         const vocabTabBtn = document.querySelector('.tabs-bar .tab-btn[data-tab="tab-vocab"]');
         if (vocabTabBtn) {
@@ -228,6 +228,42 @@
 
       const contentHtml = mod.theoryHtml || '';
 
+      let drillsHtml = '';
+      if (mod.drills && mod.drills.length > 0) {
+        drillsHtml = `
+          <div class="grammar-drills-container">
+            <div class="drills-header">
+              <div class="drills-title">
+                <span class="drills-icon">⚡</span>
+                <span>BÀI TẬP NHANH VẬN DỤNG NGAY (QUICK CHECK)</span>
+              </div>
+              <span class="drills-badge">${mod.drills.length} câu phản xạ</span>
+            </div>
+            <div class="drills-list">
+              ${mod.drills.map((drill, qIdx) => `
+                <div class="drill-card" data-drill-id="${drill.id}">
+                  <div class="drill-q-row">
+                    <span class="drill-q-num">Câu ${qIdx + 1}:</span>
+                    <span class="drill-q-text">${escapeHtml(drill.question)}</span>
+                  </div>
+                  <div class="drill-options-grid">
+                    ${drill.options.map((opt, optIdx) => `
+                      <button type="button" class="drill-opt-btn" data-drill-id="${drill.id}" data-opt-idx="${optIdx}">
+                        ${escapeHtml(opt)}
+                      </button>
+                    `).join('')}
+                  </div>
+                  <div class="drill-explanation-box" id="expl_${drill.id}" style="display: none;">
+                    <div class="drill-expl-header"></div>
+                    <div class="drill-expl-text">${escapeHtml(drill.explanation)}</div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+
       return `
         <div class="grammar-module-accordion">
           <button class="accordion-header" type="button" aria-expanded="${index === 0 ? 'true' : 'false'}">
@@ -237,6 +273,7 @@
           <div class="accordion-body" style="display: ${index === 0 ? 'block' : 'none'};">
             ${focusPill}
             ${contentHtml}
+            ${drillsHtml}
           </div>
         </div>
       `;
@@ -251,6 +288,62 @@
         body.style.display = isHidden ? 'block' : 'none';
         header.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
         if (chevron) chevron.textContent = isHidden ? '▲' : '▼';
+      });
+    });
+
+    // Drill Option Button events
+    container.querySelectorAll('.drill-opt-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const card = btn.closest('.drill-card');
+        if (!card || card.classList.contains('answered')) return;
+
+        const drillId = btn.getAttribute('data-drill-id');
+        const chosenIdx = parseInt(btn.getAttribute('data-opt-idx'), 10);
+
+        let targetDrill = null;
+        for (const m of LECTURE_DATA.grammarModules) {
+          if (m.drills) {
+            const found = m.drills.find(d => d.id === drillId);
+            if (found) { targetDrill = found; break; }
+          }
+        }
+        if (!targetDrill) return;
+
+        card.classList.add('answered');
+        const allBtns = card.querySelectorAll('.drill-opt-btn');
+        allBtns.forEach(b => {
+          b.disabled = true;
+        });
+
+        const isCorrect = chosenIdx === targetDrill.correct;
+        const explBox = card.querySelector('.drill-explanation-box');
+        const explHeader = explBox ? explBox.querySelector('.drill-expl-header') : null;
+
+        if (isCorrect) {
+          btn.classList.add('is-correct');
+          AudioEngine.playSuccessSound();
+          if (explHeader) {
+            explHeader.innerHTML = '🎉 <strong style="color:#15803d;">Chính xác! Xuất sắc!</strong>';
+          }
+          if (explBox) {
+            explBox.className = 'drill-explanation-box is-success';
+          }
+        } else {
+          btn.classList.add('is-wrong');
+          AudioEngine.playErrorSound();
+          const correctBtn = card.querySelector(`.drill-opt-btn[data-opt-idx="${targetDrill.correct}"]`);
+          if (correctBtn) correctBtn.classList.add('is-correct');
+          if (explHeader) {
+            explHeader.innerHTML = '❌ <strong style="color:#b91c1c;">Chưa chính xác! Hãy ghi nhớ quy tắc:</strong>';
+          }
+          if (explBox) {
+            explBox.className = 'drill-explanation-box is-error';
+          }
+        }
+
+        if (explBox) {
+          explBox.style.display = 'block';
+        }
       });
     });
   }
