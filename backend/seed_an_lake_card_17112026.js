@@ -2,7 +2,7 @@ const { PrismaClient } = require('./node_modules/@prisma/client');
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log('🚀 Bắt đầu tạo Card Bài Học 2D & 20 Bài Tập Đố Vui cho Bé an_lake (Lớp 1) ngày 17/11/2026...');
+  console.log('🚀 Bắt đầu tạo Card Bài Học 2D & 40 Bài Tập Đố Vui cho Bé an_lake (Lớp 1) ngày 17/11/2026...');
 
   // 1. Tìm tài khoản Bé An, Giáo viên Thầy Thức và Môn MATH_1
   const studentAn = await prisma.users.findUnique({
@@ -39,7 +39,7 @@ async function main() {
   });
 
   if (existingAsgns.length > 0) {
-    console.log(`⚠️ Tìm thấy ${existingAsgns.length} bài cũ ngày 17/11/2026 của Bé An, dọn dẹp...`);
+    console.log(`⚠️ Tìm thấy ${existingAsgns.length} bài cũ ngày 17/11/2026 của Bé An, dọn dẹp để thay bằng bộ 40 câu mới...`);
     for (const asgn of existingAsgns) {
       for (const att of asgn.assessment_attempts) {
         await prisma.student_answers.deleteMany({ where: { attempt_id: att.id } });
@@ -47,11 +47,11 @@ async function main() {
       }
       await prisma.daily_student_assignments.delete({ where: { id: asgn.id } });
     }
-    console.log('✓ Đã dọn dẹp xong.');
+    console.log('✓ Đã dọn dẹp xong bài cũ.');
   }
 
   // 3. Nội dung bài giảng Markdown tích hợp link Web Studio Card
-  const lectureMarkdown = `# 🍓 NÔNG TRẠI TRÁI CÂY & PHÉP CHIA ĐỀU KỲ DIỆU
+  const lectureMarkdown = `# 🍓 NÔNG TRẠI TRÁI CÂY & PHÉP CHIA ĐỀU KỲ DIỆU (40 BÀI TẬP)
 **Dành tặng bạn nhỏ an_lake 6 tuổi thông thái • 17/11/2026**
 
 Interactive Simulation Studio: \`/lectures/an-lake-fruit-farm-card/index.html\`
@@ -117,7 +117,7 @@ $$8 \\div 2 = 4$$
 ### 🎮 4 Trạm Khám Phá Trong Web Studio 2D:
 1. **Trạm 1 - Câu Chuyện Nông Trại**: Tìm hiểu nguyên tắc chia đều trái cây công bằng và 5 ví dụ trực quan.
 2. **Trạm 2 - Tự Tay Chia Trái Cây 2D**: Thao tác chia trái cây vector sinh động (dâu tây, táo, cà rốt, cam, bánh quy) cho 2, 3 hoặc 4 bạn thú.
-3. **Trạm 3 - Đấu Trường 20 Câu Đố**: 20 câu trắc nghiệm chuẩn mực, độ dài đồng đều, tính sao và nhận Cúp Vàng Vinh Quang 🏆!
+3. **Trạm 3 - Đấu Trường 40 Câu Đố**: 40 câu trắc nghiệm chuẩn mực, độ dài đồng đều, tính sao và nhận Cúp Vàng Vinh Quang 🏆!
 4. **Trạm 4 - Cẩm Nang Ba Mẹ**: Phương pháp gợi ý trẻ 6 tuổi tư duy chia đều thông qua đồ vật sinh hoạt gia đình.
 `;
 
@@ -126,8 +126,8 @@ $$8 \\div 2 = 4$$
     data: {
       subject_id: mathSubject.id,
       created_by: teacher.id,
-      title: 'Nông Trại Trái Cây & Phép Chia Đều Kỳ Diệu Cùng Bé an_lake',
-      description: 'Card học tập tương tác 2D & 20 bài tập đố vui phép chia đều ngày 17/11/2026: Bé an_lake khám phá câu chuyện thu hoạch trái ngọt, tự tay chia quà cho các bạn thú và chinh phục 20 câu đố nhận cúp vàng.',
+      title: 'Nông Trại Trái Cây & Phép Chia Đều Kỳ Diệu Cùng Bé an_lake (40 Thử Thách)',
+      description: 'Card học tập tương tác 2D & 40 bài tập đố vui phép chia đều ngày 17/11/2026: Bé an_lake khám phá câu chuyện thu hoạch trái ngọt, tự tay chia quà và chinh phục 40 câu đố nhận cúp vàng vinh quang.',
       lecture_content_markdown: lectureMarkdown,
       lecture_attachments: [],
       is_template: true,
@@ -135,21 +135,22 @@ $$8 \\div 2 = 4$$
   });
   console.log('✓ Đã tạo Learning Unit:', learningUnit.title);
 
-  // 5. Tạo Assessment (20 câu đố vui trắc nghiệm)
+  // 5. Tạo Assessment (40 câu đố vui trắc nghiệm)
   const assessment = await prisma.assessments.create({
     data: {
       learning_unit_id: learningUnit.id,
       type: 'IN_SESSION_90M',
-      title: 'Đại Hội Chia Trái Ngọt Cùng Bé an_lake (20 Thử Thách) 🍓👑',
-      instructions: 'Bé hãy đọc từng câu đố chia quả cho các bạn thú, suy nghĩ thật kĩ rồi bấm chọn đáp án đúng để rinh trọn 20 ngôi sao và Cúp Vô Địch nhé!',
-      time_limit_minutes: 60,
-      max_score: 20.0,
+      title: 'Đại Hội Chia Trái Ngọt Cùng Bé an_lake (40 Thử Thách) 🍓👑',
+      instructions: 'Bé hãy đọc từng câu đố chia quả cho các bạn thú, suy nghĩ thật kĩ rồi bấm chọn đáp án đúng để rinh trọn 40 ngôi sao và Cúp Vô Địch nhé!',
+      time_limit_minutes: 90,
+      max_score: 40.0,
     },
   });
   console.log('✓ Đã tạo Assessment:', assessment.title);
 
-  // 6. Danh sách 20 câu hỏi trắc nghiệm (ĐẢM BẢO ĐỒNG NHẤT 100% CẤU TRÚC VÀ ĐỘ DÀI CÁC ĐÁP ÁN)
+  // 6. Danh sách 40 câu hỏi trắc nghiệm đồng nhất 100% độ dài và cấu trúc
   const questionsData = [
+    // --- CÂU 1 ĐẾN 20 ---
     {
       order_index: 1,
       prompt: 'Có **4** quả táo chia đều cho **2** bạn. Hỏi mỗi bạn nhận được mấy quả táo?\n\n*Phép tính: $4 \\div 2 = ?$*',
@@ -410,6 +411,268 @@ $$8 \\div 2 = 4$$
       explanation: 'Có 20 quả bóng bay chia đều cho 4 bạn: $20 \\div 4 = 5$ quả bóng bay.',
       points: 1.0,
     },
+
+    // --- CÂU 21 ĐẾN 40 (THÊM MỚI THEO YÊU CẦU) ---
+    {
+      order_index: 21,
+      prompt: 'Có **6** quả lê chia đều cho **2** bạn. Hỏi mỗi bạn nhận được mấy quả lê?\n\n*Phép tính: $6 \\div 2 = ?$*',
+      options: [
+        { id: 'A', text: '3 quả lê' },
+        { id: 'B', text: '2 quả lê' },
+        { id: 'C', text: '4 quả lê' },
+        { id: 'D', text: '5 quả lê' },
+      ],
+      correct_option_id: 'A',
+      explanation: 'Có 6 quả lê chia đều cho 2 bạn: $6 \\div 2 = 3$ quả lê.',
+      points: 1.0,
+    },
+    {
+      order_index: 22,
+      prompt: 'Có **10** quả ổi chia đều cho **5** bạn. Hỏi mỗi bạn nhận được mấy quả ổi?\n\n*Phép tính: $10 \\div 5 = ?$*',
+      options: [
+        { id: 'A', text: '1 quả ổi' },
+        { id: 'B', text: '2 quả ổi' },
+        { id: 'C', text: '3 quả ổi' },
+        { id: 'D', text: '4 quả ổi' },
+      ],
+      correct_option_id: 'B',
+      explanation: 'Có 10 quả ổi chia đều cho 5 bạn: $10 \\div 5 = 2$ quả ổi.',
+      points: 1.0,
+    },
+    {
+      order_index: 23,
+      prompt: 'Có **12** quả đào chia đều cho **2** bạn. Hỏi mỗi bạn nhận được mấy quả đào?\n\n*Phép tính: $12 \\div 2 = ?$*',
+      options: [
+        { id: 'A', text: '5 quả đào' },
+        { id: 'B', text: '7 quả đào' },
+        { id: 'C', text: '6 quả đào' },
+        { id: 'D', text: '8 quả đào' },
+      ],
+      correct_option_id: 'C',
+      explanation: 'Có 12 quả đào chia đều cho 2 bạn: $12 \\div 2 = 6$ quả đào.',
+      points: 1.0,
+    },
+    {
+      order_index: 24,
+      prompt: 'Có **15** bông hoa chia đều cắm vào **3** lọ hoa. Hỏi mỗi lọ hoa có mấy bông hoa?\n\n*Phép tính: $15 \\div 3 = ?$*',
+      options: [
+        { id: 'A', text: '3 bông hoa' },
+        { id: 'B', text: '4 bông hoa' },
+        { id: 'C', text: '6 bông hoa' },
+        { id: 'D', text: '5 bông hoa' },
+      ],
+      correct_option_id: 'D',
+      explanation: 'Có 15 bông hoa chia đều vào 3 lọ: $15 \\div 3 = 5$ bông hoa.',
+      points: 1.0,
+    },
+    {
+      order_index: 25,
+      prompt: 'Có **16** quả dâu tây chia đều cho **2** bạn. Hỏi mỗi bạn nhận được mấy quả dâu tây?\n\n*Phép tính: $16 \\div 2 = ?$*',
+      options: [
+        { id: 'A', text: '8 quả dâu tây' },
+        { id: 'B', text: '7 quả dâu tây' },
+        { id: 'C', text: '9 quả dâu tây' },
+        { id: 'D', text: '6 quả dâu tây' },
+      ],
+      correct_option_id: 'A',
+      explanation: 'Có 16 quả dâu tây chia đều cho 2 bạn: $16 \\div 2 = 8$ quả dâu tây.',
+      points: 1.0,
+    },
+    {
+      order_index: 26,
+      prompt: 'Có **18** quả cam chia đều cho **2** bạn. Hỏi mỗi bạn nhận được mấy quả cam?\n\n*Phép tính: $18 \\div 2 = ?$*',
+      options: [
+        { id: 'A', text: '8 quả cam' },
+        { id: 'B', text: '9 quả cam' },
+        { id: 'C', text: '10 quả cam' },
+        { id: 'D', text: '7 quả cam' },
+      ],
+      correct_option_id: 'B',
+      explanation: 'Có 18 quả cam chia đều cho 2 bạn: $18 \\div 2 = 9$ quả cam.',
+      points: 1.0,
+    },
+    {
+      order_index: 27,
+      prompt: 'Có **14** củ cà rốt chia đều cho **2** chú thỏ. Hỏi mỗi chú thỏ nhận được mấy củ cà rốt?\n\n*Phép tính: $14 \\div 2 = ?$*',
+      options: [
+        { id: 'A', text: '6 củ cà rốt' },
+        { id: 'B', text: '8 củ cà rốt' },
+        { id: 'C', text: '7 củ cà rốt' },
+        { id: 'D', text: '5 củ cà rốt' },
+      ],
+      correct_option_id: 'C',
+      explanation: 'Có 14 củ cà rốt chia đều cho 2 chú thỏ: $14 \\div 2 = 7$ củ cà rốt.',
+      points: 1.0,
+    },
+    {
+      order_index: 28,
+      prompt: 'Có **20** chiếc bánh quy chia đều cho **4** bạn. Hỏi mỗi bạn nhận được mấy chiếc bánh quy?\n\n*Phép tính: $20 \\div 4 = ?$*',
+      options: [
+        { id: 'A', text: '4 chiếc bánh quy' },
+        { id: 'B', text: '6 chiếc bánh quy' },
+        { id: 'C', text: '3 chiếc bánh quy' },
+        { id: 'D', text: '5 chiếc bánh quy' },
+      ],
+      correct_option_id: 'D',
+      explanation: 'Có 20 chiếc bánh quy chia đều cho 4 bạn: $20 \\div 4 = 5$ chiếc bánh quy.',
+      points: 1.0,
+    },
+    {
+      order_index: 29,
+      prompt: 'Có **10** củ khoai lang chia đều cho **2** bạn. Hỏi mỗi bạn nhận được mấy củ khoai lang?\n\n*Phép tính: $10 \\div 2 = ?$*',
+      options: [
+        { id: 'A', text: '5 củ khoai lang' },
+        { id: 'B', text: '4 củ khoai lang' },
+        { id: 'C', text: '6 củ khoai lang' },
+        { id: 'D', text: '7 củ khoai lang' },
+      ],
+      correct_option_id: 'A',
+      explanation: 'Có 10 củ khoai lang chia đều cho 2 bạn: $10 \\div 2 = 5$ củ khoai lang.',
+      points: 1.0,
+    },
+    {
+      order_index: 30,
+      prompt: 'Có **12** quả cà chua chia đều cho **4** bạn. Hỏi mỗi bạn nhận được mấy quả cà chua?\n\n*Phép tính: $12 \\div 4 = ?$*',
+      options: [
+        { id: 'A', text: '2 quả cà chua' },
+        { id: 'B', text: '3 quả cà chua' },
+        { id: 'C', text: '4 quả cà chua' },
+        { id: 'D', text: '5 quả cà chua' },
+      ],
+      correct_option_id: 'B',
+      explanation: 'Có 12 quả cà chua chia đều cho 4 bạn: $12 \\div 4 = 3$ quả cà chua.',
+      points: 1.0,
+    },
+    {
+      order_index: 31,
+      prompt: 'Có **16** chiếc kẹo mút chia đều cho **4** bạn. Hỏi mỗi bạn nhận được mấy chiếc kẹo mút?\n\n*Phép tính: $16 \\div 4 = ?$*',
+      options: [
+        { id: 'A', text: '3 chiếc kẹo mút' },
+        { id: 'B', text: '5 chiếc kẹo mút' },
+        { id: 'C', text: '4 chiếc kẹo mút' },
+        { id: 'D', text: '6 chiếc kẹo mút' },
+      ],
+      correct_option_id: 'C',
+      explanation: 'Có 16 chiếc kẹo mút chia đều cho 4 bạn: $16 \\div 4 = 4$ chiếc kẹo mút.',
+      points: 1.0,
+    },
+    {
+      order_index: 32,
+      prompt: 'Có **18** quả dưa chuột chia đều cho **3** bạn. Hỏi mỗi bạn nhận được mấy quả dưa chuột?\n\n*Phép tính: $18 \\div 3 = ?$*',
+      options: [
+        { id: 'A', text: '5 quả dưa chuột' },
+        { id: 'B', text: '7 quả dưa chuột' },
+        { id: 'C', text: '8 quả dưa chuột' },
+        { id: 'D', text: '6 quả dưa chuột' },
+      ],
+      correct_option_id: 'D',
+      explanation: 'Có 18 quả dưa chuột chia đều cho 3 bạn: $18 \\div 3 = 6$ quả dưa chuột.',
+      points: 1.0,
+    },
+    {
+      order_index: 33,
+      prompt: 'Có **8** quả bơ chia đều cho **2** bạn. Hỏi mỗi bạn nhận được mấy quả bơ?\n\n*Phép tính: $8 \\div 2 = ?$*',
+      options: [
+        { id: 'A', text: '4 quả bơ' },
+        { id: 'B', text: '3 quả bơ' },
+        { id: 'C', text: '5 quả bơ' },
+        { id: 'D', text: '6 quả bơ' },
+      ],
+      correct_option_id: 'A',
+      explanation: 'Có 8 quả bơ chia đều cho 2 bạn: $8 \\div 2 = 4$ quả bơ.',
+      points: 1.0,
+    },
+    {
+      order_index: 34,
+      prompt: 'Có **14** quả chanh chia đều cho **2** bạn. Hỏi mỗi bạn nhận được mấy quả chanh?\n\n*Phép tính: $14 \\div 2 = ?$*',
+      options: [
+        { id: 'A', text: '6 quả chanh' },
+        { id: 'B', text: '7 quả chanh' },
+        { id: 'C', text: '8 quả chanh' },
+        { id: 'D', text: '9 quả chanh' },
+      ],
+      correct_option_id: 'B',
+      explanation: 'Có 14 quả chanh chia đều cho 2 bạn: $14 \\div 2 = 7$ quả chanh.',
+      points: 1.0,
+    },
+    {
+      order_index: 35,
+      prompt: 'Có **15** quả quýt chia đều cho **5** bạn. Hỏi mỗi bạn nhận được mấy quả quýt?\n\n*Phép tính: $15 \\div 5 = ?$*',
+      options: [
+        { id: 'A', text: '2 quả quýt' },
+        { id: 'B', text: '4 quả quýt' },
+        { id: 'C', text: '3 quả quýt' },
+        { id: 'D', text: '5 quả quýt' },
+      ],
+      correct_option_id: 'C',
+      explanation: 'Có 15 quả quýt chia đều cho 5 bạn: $15 \\div 5 = 3$ quả quýt.',
+      points: 1.0,
+    },
+    {
+      order_index: 36,
+      prompt: 'Có **20** quả táo chia đều cho **5** bạn. Hỏi mỗi bạn nhận được mấy quả táo?\n\n*Phép tính: $20 \\div 5 = ?$*',
+      options: [
+        { id: 'A', text: '3 quả táo' },
+        { id: 'B', text: '5 quả táo' },
+        { id: 'C', text: '6 quả táo' },
+        { id: 'D', text: '4 quả táo' },
+      ],
+      correct_option_id: 'D',
+      explanation: 'Có 20 quả táo chia đều cho 5 bạn: $20 \\div 5 = 4$ quả táo.',
+      points: 1.0,
+    },
+    {
+      order_index: 37,
+      prompt: 'Có **16** quả dưa hấu chia đều cho **2** xe đẩy. Hỏi mỗi xe đẩy chở mấy quả dưa hấu?\n\n*Phép tính: $16 \\div 2 = ?$*',
+      options: [
+        { id: 'A', text: '8 quả dưa hấu' },
+        { id: 'B', text: '7 quả dưa hấu' },
+        { id: 'C', text: '9 quả dưa hấu' },
+        { id: 'D', text: '6 quả dưa hấu' },
+      ],
+      correct_option_id: 'A',
+      explanation: 'Có 16 quả dưa hấu chia đều cho 2 xe: $16 \\div 2 = 8$ quả dưa hấu.',
+      points: 1.0,
+    },
+    {
+      order_index: 38,
+      prompt: 'Có **18** quả lê chia đều cho **2** bạn. Hỏi mỗi bạn nhận được mấy quả lê?\n\n*Phép tính: $18 \\div 2 = ?$*',
+      options: [
+        { id: 'A', text: '8 quả lê' },
+        { id: 'B', text: '9 quả lê' },
+        { id: 'C', text: '10 quả lê' },
+        { id: 'D', text: '7 quả lê' },
+      ],
+      correct_option_id: 'B',
+      explanation: 'Có 18 quả lê chia đều cho 2 bạn: $18 \\div 2 = 9$ quả lê.',
+      points: 1.0,
+    },
+    {
+      order_index: 39,
+      prompt: 'Có **12** bắp ngô chia đều cho **3** chú sóc. Hỏi mỗi chú sóc nhận được mấy bắp ngô?\n\n*Phép tính: $12 \\div 3 = ?$*',
+      options: [
+        { id: 'A', text: '3 bắp ngô' },
+        { id: 'B', text: '5 bắp ngô' },
+        { id: 'C', text: '4 bắp ngô' },
+        { id: 'D', text: '6 bắp ngô' },
+      ],
+      correct_option_id: 'C',
+      explanation: 'Có 12 bắp ngô chia đều cho 3 chú sóc: $12 \\div 3 = 4$ bắp ngô.',
+      points: 1.0,
+    },
+    {
+      order_index: 40,
+      prompt: 'Có **20** củ cà rốt chia đều cho **2** bạn thỏ trắng. Hỏi mỗi bạn thỏ trắng nhận được mấy củ cà rốt?\n\n*Phép tính: $20 \\div 2 = ?$*',
+      options: [
+        { id: 'A', text: '8 củ cà rốt' },
+        { id: 'B', text: '9 củ cà rốt' },
+        { id: 'C', text: '11 củ cà rốt' },
+        { id: 'D', text: '10 củ cà rốt' },
+      ],
+      correct_option_id: 'D',
+      explanation: 'Có 20 củ cà rốt chia đều cho 2 bạn thỏ: $20 \\div 2 = 10$ củ cà rốt! Chúc mừng Bé An xuất sắc chinh phục trọn vẹn 40 thử thách Nông Trại Trái Ngọt!',
+      points: 1.0,
+    },
   ];
 
   for (const q of questionsData) {
@@ -431,7 +694,7 @@ $$8 \\div 2 = 4$$
       },
     });
   }
-  console.log(`✓ Đã tạo thành công ${questionsData.length} câu hỏi trắc nghiệm đồng nhất.`);
+  console.log(`✓ Đã tạo thành công toàn bộ ${questionsData.length} câu hỏi trắc nghiệm đồng nhất.`);
 
   // 7. Giao bài ngày 17/11/2026 cho Bé An
   const assignment = await prisma.daily_student_assignments.create({
@@ -440,8 +703,8 @@ $$8 \\div 2 = 4$$
       learning_unit_id: learningUnit.id,
       assigned_by: teacher.id,
       assigned_date: targetDate,
-      custom_session_minutes: 60,
-      teacher_daily_note: 'Hôm nay bé an_lake cùng các bạn thú khám phá Nông Trại Trái Ngọt và học phép chia đều nhé! Bé bấm "Khám Phá Bài Học 🎈" để vào vườn hái trái cây và làm 20 câu đố nhận Cúp Vàng nha! 🍓🍎',
+      custom_session_minutes: 90,
+      teacher_daily_note: 'Hôm nay bé an_lake cùng các bạn thú khám phá Nông Trại Trái Ngọt và chinh phục trọn vẹn 40 câu đố vui nhận Cúp Vàng nhé! Bé bấm "Khám Phá Bài Học 🎈" để vào vườn hái trái cây nha! 🍓🍎',
       is_published: true,
     },
   });
@@ -456,7 +719,7 @@ $$8 \\div 2 = 4$$
     },
   });
 
-  console.log('✓ Đã giao card học tập & bài tập ngày 17/11/2026 cho Bé An (an_lake)!');
+  console.log('✓ Đã giao card học tập & bộ 40 bài tập ngày 17/11/2026 cho Bé An (an_lake)!');
   console.log(`  - Assignment ID: ${assignment.id}`);
   console.log(`  - Learning Unit ID: ${learningUnit.id}`);
   console.log(`  - Assessment ID: ${assessment.id}`);
