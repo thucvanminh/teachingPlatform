@@ -31,11 +31,12 @@ Thực hiện quy trình tạo bài giảng và bài tập theo đúng hướng 
      + Trên Card Markdown: Mỗi chuyên đề có 3–4 câu trắc nghiệm/điền từ/viết lại câu kèm bảng [Đáp án & Giải thích chi tiết].
      + Trong Web Studio: Nhúng module tương tác **Interactive Quick Quiz Widget** vào trực tiếp từng Accordion chuyên đề ngữ pháp (đổi màu xanh/đỏ tức thì, âm thanh Chime/Buzzer, trượt mở box giải thích chi tiết).
 4. **Tạo Phòng học tương tác (Interactive Studio):** Sinh ứng dụng web tại `frontend/public/lectures/<slug>/` (Flashcard 3D hai chiều, 6 chuyên đề ngữ pháp kèm Quick Quiz, Collocation game, Word family tree, Active recall, Sentence writing).
-5. **Biên soạn bài tập trắc nghiệm (60 - 100 câu) theo 4 quy tắc vàng:**
+5. **Biên soạn bài tập trắc nghiệm (60 - 100 câu) theo 5 quy tắc vàng:**
    - **Quy tắc 1:** Tất cả câu hỏi phải sử dụng từ vựng của bài giảng Unit đang học.
    - **Quy tắc 2:** Các câu hỏi từ vựng, trong 4 đáp án A, B, C, D **bắt buộc có tối thiểu 2 từ vựng của Unit đang học** (tránh học sinh khoanh lụi vì chỉ thấy 1 từ mới).
    - **Quy tắc 3:** **Đáp án đúng của các câu hỏi kế nhau phải khác nhau** (không trùng lặp liên tiếp, ví dụ 2 câu kế nhau không thể đều có đáp án đúng là "mass media").
    - **Quy tắc 4:** **Luôn có đúng 10 câu hỏi dạng chia từ loại (Word Formation)**: cho 4 dạng Danh từ, Tính từ, Trạng từ, Động từ của cùng 1 gốc từ trong 4 đáp án A, B, C, D để học sinh chọn.
+   - **Quy tắc 5 (Từ vựng ngữ cảnh cơ bản nhất có thể - Basic Context Words):** Vì cả Thái và Nam Việt đều khá yếu trong mảng từ vựng, **ngoài các từ vựng trọng tâm cần học trong Unit**, TẤT CẢ các từ ngữ khác dùng trong câu hỏi (câu dẫn ngữ cảnh, phương án nhiễu) **cố gắng dùng từ ngữ cơ bản, thông dụng nhất có thể (Basic A1 - A2 / B1 quen thuộc)**. Câu văn ngắn gọn, dễ hiểu, tránh các từ vựng hoa mỹ/quá khó ngoài Unit để học sinh không bị ngợp và làm được bài.
    - Nam Việt (Lớp 12): Luôn ưu tiên đưa câu hỏi Từ vựng lên trước.
 6. **Nạp dữ liệu vào Database:** Chạy script seed nạp DB (`learning_units`, `daily_student_assignments`, `assessments`, `questions`, `assessment_attempts`).
 7. **Build & Deploy:** Kiểm tra `npm --prefix frontend run build`, commit & push lên `main` để Vercel cập nhật.

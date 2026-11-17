@@ -101,14 +101,15 @@ Tạo thư mục `frontend/public/lectures/<slug>/` gồm 4 tệp:
 
 ---
 
-### Bước 4: Biên Soạn Bộ Bài Tập 60 - 100 Câu (Tuân Thủ 4 Quy Tắc Vàng)
+### Bước 4: Biên Soạn Bộ Bài Tập 60 - 100 Câu (Tuân Thủ 5 Quy Tắc Vàng)
 
 > [!CAUTION]
-> **4 QUY TẮC VÀNG BẮT BUỘC KHI SOẠN BÀI TẬP:**
+> **5 QUY TẮC VÀNG BẮT BUỘC KHI SOẠN BÀI TẬP:**
 > 1. **Sử dụng từ vựng bài học:** Tất cả câu hỏi phải ứng dụng trực tiếp các từ vựng đã dạy trong bài giảng của Unit.
 > 2. **Tối thiểu 2 từ vựng của Unit trong 4 phương án:** Đối với các câu hỏi về từ vựng, phần 4 đáp án A, B, C, D **phải chứa tối thiểu 2 từ vựng của Unit đang học**. Tuyệt đối không để chỉ có duy nhất 1 từ mới trong 4 đáp án (khiến học sinh khoanh lụi mà không đọc câu).
 > 3. **Chống trùng lặp đáp án đúng liên tiếp:** Các đáp án đúng của các câu hỏi kế nhau **phải khác nhau hoàn toàn**. Tuyệt đối không để 2 câu hỏi liên tiếp có cùng 1 từ/cụm từ đáp án đúng (ví dụ câu 5 đáp án đúng là "mass media" thì câu 6 đáp án đúng KHÔNG ĐƯỢC là "mass media").
 > 4. **Luôn có đúng 10 câu hỏi chia từ loại (Word Formation):** Trong bộ đề trắc nghiệm, **luôn luôn phải có đúng 10 câu hỏi dành cho dạng chia từ loại (Word Formation)**: cho 4 dạng Danh từ, Tính từ, Trạng từ, Động từ của cùng một gốc từ trong 4 phương án A, B, C, D để học sinh chọn đúng từ loại phù hợp với cấu trúc ngữ pháp của câu.
+> 5. **Từ vựng ngữ cảnh câu hỏi phải CƠ BẢN NHẤT CÓ THỂ (CRITICAL - Basic Context Vocabulary):** Do học sinh (cả Thái và Nam Việt) khá yếu trong mảng từ vựng chung, **ngoài phần từ vựng mục tiêu học trong Unit ra, TẤT CẢ các từ vựng khác dùng trong câu hỏi (câu dẫn đề bài, ngữ cảnh xung quanh, các đáp án nhiễu ngoài Unit) BẮT BUỘC phải dùng từ vựng cơ bản, thông dụng nhất có thể (A1 - A2 / B1 quen thuộc hàng ngày)**. Tuyệt đối không dùng các từ vựng hoa mỹ, hiếm gặp, từ vựng C1/C2 hoặc học thuật nâng cao ngoài Unit làm học sinh bị ngợp hoặc không dịch được câu dẫn. Câu văn cần ngắn gọn, rõ ràng, gãy gọn để học sinh tập trung tối đa vào việc nhận diện và áp dụng đúng từ vựng và ngữ pháp của bài học.
 
 - **Thứ tự sắp xếp:**
   - **Nam Việt (Lớp 12):** Bắt buộc xếp: **Từ vựng $\to$ Word Formation $\to$ Ngữ pháp $\to$ Đọc hiểu**.

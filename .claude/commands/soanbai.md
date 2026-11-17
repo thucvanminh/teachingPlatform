@@ -50,11 +50,12 @@ $ARGUMENTS
    - **Tính năng tương tác:** Flashcard 3D lật 2 chiều, Collocation Matching Game, Word Family Tree, Active Recall, Sentence Writing.
    - **Giao diện:** Chuẩn Light Theme (trắng/xám sáng, thanh lịch, hiện đại, không dùng nền tối).
 
-### Bước 4: Biên soạn bộ câu hỏi trắc nghiệm (60 - 100 câu) theo 4 quy tắc vàng
+### Bước 4: Biên soạn bộ câu hỏi trắc nghiệm (60 - 100 câu) theo 5 quy tắc vàng
 1. **Sử dụng từ vựng bài học:** Tất cả câu hỏi phải sử dụng từ vựng của phần bài giảng Unit đang học.
 2. **Tối thiểu 2 từ vựng Unit trong 4 phương án:** Các câu hỏi từ vựng, phần đáp án A, B, C, D **bắt buộc có tối thiểu 2 từ vựng của Unit đang học** (để tránh học sinh khoanh lụi dựa vào 1 từ vựng mới học duy nhất).
 3. **Chống trùng lặp đáp án đúng liên tiếp:** **Đáp án đúng của các câu hỏi kế nhau phải khác nhau** (ví dụ 2 câu hỏi kế nhau không thể đều có đáp án đúng là "mass media").
 4. **Luôn có đúng 10 câu hỏi chia từ loại (Word Formation):** Trong bộ đề luôn luôn có đúng 10 câu hỏi dành cho dạng chia từ loại: cho 4 dạng Danh từ, Tính từ, Trạng từ, Động từ của cùng một gốc từ trong 4 đáp án A, B, C, D để học sinh chọn.
+5. **Từ vựng ngữ cảnh cơ bản nhất có thể (CRITICAL - Basic Context Words):** Vì học sinh khá yếu mảng từ vựng, **ngoài các từ vựng học trong Unit**, tất cả các từ ngữ dùng trong câu hỏi (câu dẫn, đáp án nhiễu) **phải dùng từ cơ bản, quen thuộc nhất có thể (Basic A1 - A2 / B1)**. Câu văn ngắn gọn, dễ hiểu, tránh các từ ngữ hiếm hay quá khó ngoài Unit.
 - **Thứ tự:** Nam Việt (Lớp 12) bắt buộc đưa câu hỏi Từ vựng lên đầu đề.
 
 ### Bước 5: Nạp dữ liệu vào Database

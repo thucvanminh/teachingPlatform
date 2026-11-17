@@ -14,6 +14,7 @@ This reference contains the exact student profiles, curricula, target scores, an
 - **Thư mục tài liệu gốc:** `/home/dantey/Dantey/teaching/lop12NamViet/`
   - Units: `Unit4_Urbanisation_Vocab_Grammar_Handbook.html`, `Unit5_Lop12_Global_Success_The_World_of_Work.html`, chuyên đề câu bị động, điều kiện, tường thuật, liên từ...
 - **Đặc điểm giao diện & bài tập:**
+  - **Từ vựng nền tảng cơ bản (CRITICAL):** Nam Việt khá yếu trong mảng từ vựng. Do đó, **ngoài các từ vựng trọng tâm của Unit đang học**, mọi từ ngữ khác dùng trong câu hỏi (ngữ cảnh câu dẫn, phương án phụ) **bắt buộc phải dùng từ vựng cơ bản nhất có thể (Basic A1 - A2)**, câu văn ngắn gọn, dễ hiểu, tránh các từ vựng lạ/nâng cao gây cản trở việc làm bài.
   - **Sắp xếp thứ tự bài tập:** Luôn ưu tiên đưa **các câu hỏi Từ vựng (Vocabulary & Collocations) lên đầu**, sau đó đến Ngữ pháp, và cuối cùng là Đọc hiểu / Điền từ đoạn văn.
   - **Trải nghiệm Mobile-first:** Giao diện làm bài 1 câu hỏi trên 1 màn hình (không để học sinh phải cuộn trang dài), nút Next chuyển mượt mà giữa các câu.
   - **Hình thức bài tập:** Thường dồn toàn bộ câu hỏi vào bài tập làm trên lớp (`IN_SESSION_90M`), trừ khi thầy yêu cầu tách BTVN (`HOMEWORK`).
@@ -31,6 +32,7 @@ This reference contains the exact student profiles, curricula, target scores, an
   - Units 1, 2, 3: A Long and Healthy Life, The Generation Gap, Cities of the Future.
   - Tệp đề thi & tài liệu: `mid_term_1_english_11_practice_test.txt`, `kiemtragiuakiEnglish11GlobalSuccess.txt`, `tu_vung_collocations_English11.html`.
 - **Đặc điểm bài giảng & bài tập:**
+  - **Từ vựng nền tảng cơ bản (CRITICAL):** Dù mục tiêu 8.5+, nền tảng từ vựng chung của Thái vẫn còn những lỗ hổng. Vì vậy, **ngoài các từ vựng trọng tâm cần học trong Unit**, tất cả các từ vựng khác dùng trong câu hỏi (câu dẫn ngữ cảnh, bài tập trắc nghiệm) **phải sử dụng từ vựng cơ bản, quen thuộc nhất có thể (Basic A1 - B1)**. Câu văn gãy gọn, trong sáng, không đánh đố bằng từ vựng ngoài luồng, giúp Thái tập trung tối đa vào việc áp dụng chính xác từ vựng và ngữ pháp của bài học.
   - **Không dùng bài giảng văn bản thô nhàm chán.** Phải tạo một **Phòng Học Tương Tác Web (HTML5/CSS3/JS)** riêng biệt tại `frontend/public/lectures/<slug>/index.html`.
   - **Cấu trúc bài giảng tương tác bao gồm:**
     1. Cẩm nang 50 Từ vựng cốt lõi + 3 Chuyên đề ngữ pháp (kèm 4 công thức viết lại câu kinh điển).
@@ -46,5 +48,6 @@ This reference contains the exact student profiles, curricula, target scores, an
 ## 3. Quy chuẩn chung toàn hệ thống
 
 1. **Danh xưng giáo viên:** Luôn sử dụng danh xưng **Thầy Thức** trên toàn bộ hệ thống (lời dặn, tiêu đề bài giảng, câu mẫu, báo cáo phụ huynh).
-2. **Giao diện sáng (Light Theme):** Nền sáng (`#f8fafc`), thẻ trắng (`#ffffff`), chữ đậm nét tương phản cao (`#0f172a`), không dùng nền tối đen cho học sinh cấp 3.
-3. **Triển khai Production:** Luôn chạy `npm run build` kiểm tra 0 lỗi trước khi commit & push lên GitHub `main` để kích hoạt Vercel tự động deploy.
+2. **Từ vựng ngữ cảnh cơ bản (General Rule):** Ngoài từ vựng của Unit đang học, toàn bộ từ vựng nền tảng xuất hiện trong câu hỏi phải tối giản, dễ hiểu và cơ bản nhất có thể (Basic level).
+3. **Giao diện sáng (Light Theme):** Nền sáng (`#f8fafc`), thẻ trắng (`#ffffff`), chữ đậm nét tương phản cao (`#0f172a`), không dùng nền tối đen cho học sinh cấp 3.
+4. **Triển khai Production:** Luôn chạy `npm run build` kiểm tra 0 lỗi trước khi commit & push lên GitHub `main` để kích hoạt Vercel tự động deploy.

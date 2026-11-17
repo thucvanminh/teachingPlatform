@@ -84,11 +84,12 @@ OpenCode commands are configured in `.opencode/commands/` and can be invoked dir
      - Tối thiểu 2–3 ví dụ song ngữ cho mỗi cấu trúc có phân tích $S - V - O$.
      - **Tích hợp Quick Check Drills:** Trên Card Markdown có 3-4 câu trắc nghiệm/điền từ/viết lại câu kèm bảng [Đáp án & Giải thích chi tiết]; Trong Web Studio nhúng module tương tác Interactive Quick Quiz Widget đổi màu xanh/đỏ tức thì, phát âm thanh feedback và trượt mở box giải thích.
   3. **Tạo Web Studio:** Sinh web tại `frontend/public/lectures/<slug>/index.html` (50 từ vựng Web Speech API, các chuyên đề ngữ pháp kèm Quick Quiz, Flashcard 3D, Collocation Game, Word Tree, Light Theme).
-  4. **Bộ câu hỏi trắc nghiệm (60-100 câu) tuân thủ 4 quy tắc vàng:**
+  4. **Bộ câu hỏi trắc nghiệm (60-100 câu) tuân thủ 5 quy tắc vàng:**
      - Câu hỏi phải sử dụng từ vựng bài học.
      - Câu hỏi từ vựng: 4 lựa chọn A, B, C, D phải có **tối thiểu 2 từ vựng của Unit đang học** (chống khoanh lụi).
      - **Đáp án đúng của các câu hỏi kế nhau phải khác nhau** (không trùng lặp liên tiếp).
      - **Luôn có đúng 10 câu hỏi dạng chia từ loại (Word Formation)** với 4 dạng Danh từ, Tính từ, Trạng từ, Động từ trong các lựa chọn A, B, C, D.
+     - **Từ vựng ngữ cảnh cơ bản nhất có thể:** Vì học sinh (Thái, Nam Việt) khá yếu từ vựng, ngoài các từ vựng học trong Unit, tất cả các từ ngữ khác dùng trong câu hỏi (câu dẫn đề bài, đáp án nhiễu) **phải dùng từ cơ bản, quen thuộc nhất có thể (Basic A1 - A2 / B1)** để học sinh hiểu được câu và không bị nản.
   5. **Nạp Database & Deploy:** Chạy seed script nạp DB, test build `npm --prefix frontend run build`, commit & push `main`.
 
 ### 2. `/soanhoakeithley` hoặc `/soanhoa [ngày / tên bài học] [mode: EXERCISE_ONLY | BOTH | LECTURE_ONLY]`
