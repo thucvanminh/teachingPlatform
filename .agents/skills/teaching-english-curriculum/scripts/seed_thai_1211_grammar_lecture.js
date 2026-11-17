@@ -466,7 +466,7 @@ Hệ thống 24 từ vựng then chốt kết hợp phiên âm IPA, từ loại,
    - 10 cụm từ có giới từ "TO" đi với V-ing (*contribute to, look forward to, be committed to, object to...*).
    - Sự khác biệt về nghĩa của *remember, forget, regret, stop, try, need*.
    - Quy tắc V-ing làm chủ ngữ thì động từ chính **luôn chia số ít**.
-3. **Thực hành viết:** Tự đặt ít nhất 3 câu tiếng Anh ứng dụng danh động từ kết hợp với các từ vựng *cooperation, integration, solidarity* để chuẩn bị cho buổi luyện đề 80 câu trắc nghiệm nhé!
+3. **Thực hành viết:** Tự đặt ít nhất 3 câu tiếng Anh ứng dụng danh động từ kết hợp với các từ vựng *cooperation, integration, solidarity* để chuẩn bị cho buổi luyện đề 100 câu trắc nghiệm nhé!
 `;
 
 async function main() {
