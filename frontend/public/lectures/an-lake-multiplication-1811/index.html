@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bé an_lake: Phép Nhân 2 Chữ Số Kỳ Diệu | 18/11/2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #FF5E7E;
+      --primary-light: #FFEBF0;
+      --secondary: #00B8A9;
+      --secondary-light: #E8F8F5;
+      --accent: #FFB020;
+      --accent-light: #FFF7E6;
+      --purple: #8B5CF6;
+      --purple-light: #F3E8FF;
+      --dark: #1E293B;
+      --card-bg: #FFFFFF;
+      --success: #10B981;
+      --shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+      --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+
+    body {
+      font-family: 'Fredoka', 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #FFF1F2 0%, #F0FDFA 50%, #FEF9C3 100%);
+      color: var(--dark);
+      min-height: 100vh;
+      padding: 24px 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    #confettiCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    .main-container {
+      width: 100%;
+      max-width: 920px;
+      background: var(--card-bg);
+      border-radius: 40px;
+      box-shadow: var(--shadow);
+      border: 6px solid #FFF;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 24px;
+      transition: all 0.3s ease;
+    }
+
+    /* Top Navigation Buttons */
+    .sound-toggle-btn {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: #FFF;
+      border: 3px solid #FFD166;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.4rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      z-index: 10;
+    }
+
+    .sound-toggle-btn:hover {
+      transform: scale(1.15) rotate(10deg);
+      border-color: #FF5E7E;
+    }
+
+    .back-home-btn {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      background: #FFF;
+      border: 3px solid #FFD166;
+      border-radius: 24px;
+      padding: 8px 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: #78350F;
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      z-index: 10;
+    }
+
+    .back-home-btn:hover {
+      transform: scale(1.05);
+      border-color: #FF5E7E;
+      color: #FF5E7E;
+    }
+
+    /* Header */
+    .header-section {
+      text-align: center;
+      margin-bottom: 26px;
+      position: relative;
+    }
+
+    .date-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #FF5E7E, #FF9472);
+      color: white;
+      padding: 8px 22px;
+      border-radius: 50px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(255, 94, 126, 0.35);
+      animation: bounceGentle 3s infinite ease-in-out;
+    }
+
+    .kid-title {
+      font-size: 2.3rem;
+      font-weight: 700;
+      color: #E11D48;
+      margin-top: 14px;
+      line-height: 1.25;
+      text-shadow: 2px 2px 0px #FFE4E6;
+    }
+
+    .kid-subtitle {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1.2rem;
+      color: #475569;
+      margin-top: 8px;
+      font-weight: 600;
+    }
+
+    .name-highlight {
+      background: #FEF08A;
+      color: #B91C1C;
+      padding: 3px 16px;
+      border-radius: 20px;
+      display: inline-block;
+      transform: rotate(-2deg);
+      border: 2px dashed #F59E0B;
+      box-shadow: 0 3px 8px rgba(245, 158, 11, 0.25);
+    }
+
+    /* Tabs Navigation */
+    .tabs-nav {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 26px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      background: #F1F5F9;
+      border: 3px solid transparent;
+      border-radius: 26px;
+      padding: 12px 20px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      font-family: inherit;
+      color: #64748B;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .tab-btn:hover {
+      transform: translateY(-2px);
+      background: #E2E8F0;
+      color: #334155;
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, #00B8A9, #0D9488);
+      color: white;
+      box-shadow: 0 8px 22px rgba(0, 184, 169, 0.35);
+      border-color: #99F6E4;
+      transform: scale(1.05);
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Story Card */
+    .story-card {
+      background: linear-gradient(135deg, #FFFBEB, #FFF1F2);
+      border: 4px dashed #FBBF24;
+      border-radius: 32px;
+      padding: 26px;
+      margin-bottom: 22px;
+    }
+
+    .story-bubble {
+      background: white;
+      border-radius: 24px;
+      padding: 20px;
+      margin: 16px 0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      border-left: 8px solid #FF5E7E;
+    }
+
+    .story-emoji {
+      font-size: 2.8rem;
+      flex-shrink: 0;
+    }
+
+    .story-text {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #334155;
+    }
+
+    .story-text strong {
+      color: #E11D48;
+    }
+
+    /* Secret Technique Card */
+    .technique-box {
+      background: linear-gradient(135deg, #8B5CF6, #6D28D9);
+      color: white;
+      border-radius: 28px;
+      padding: 24px;
+      text-align: center;
+      margin: 20px 0;
+      box-shadow: 0 10px 28px rgba(139, 92, 246, 0.3);
+    }
+
+    .technique-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .technique-step {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 18px;
+      padding: 12px 20px;
+      margin: 8px 0;
+      font-size: 1.25rem;
+      font-weight: 600;
+      border: 1px dashed rgba(255, 255, 255, 0.4);
+    }
+
+    /* Examples Section in Lesson */
+    .examples-container {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .example-card {
+      background: white;
+      border-radius: 22px;
+      padding: 18px;
+      border: 3px solid #E2E8F0;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .example-card:hover {
+      border-color: #FF5E7E;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 94, 126, 0.15);
+    }
+
+    .example-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #8B5CF6;
+      margin-bottom: 6px;
+    }
+
+    .example-desc {
+      font-size: 1.05rem;
+      color: #475569;
+      line-height: 1.5;
+    }
+
+    .example-formula {
+      margin-top: 10px;
+      background: #FFF7ED;
+      color: #C2410C;
+      font-weight: 700;
+      font-size: 1.25rem;
+      padding: 6px 14px;
+      border-radius: 14px;
+      display: inline-block;
+      border: 1px dashed #EA580C;
+      text-align: center;
+    }
+
+    /* Quiz Container */
+    .quiz-container {
+      background: white;
+      border-radius: 36px;
+      padding: 26px;
+      border: 4px solid #E2E8F0;
+      box-shadow: var(--shadow);
+    }
+
+    .quiz-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 2px dashed #E2E8F0;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .star-counter {
+      background: #FEF3C7;
+      color: #B45309;
+      border: 2px solid #FDE68A;
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 1.15rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .quiz-question-box {
+      background: #F8FAFC;
+      border-radius: 26px;
+      padding: 22px;
+      margin-bottom: 20px;
+      border: 2px solid #E2E8F0;
+    }
+
+    .quiz-visual {
+      font-size: 2.1rem;
+      margin: 14px 0;
+      padding: 14px;
+      background: white;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      line-height: 1.5;
+    }
+
+    .quiz-options {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .quiz-btn {
+      background: white;
+      border: 3px solid #CBD5E1;
+      border-radius: 20px;
+      padding: 16px 20px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      font-family: inherit;
+      color: #334155;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      text-align: center;
+    }
+
+    .quiz-btn:hover {
+      border-color: #00B8A9;
+      background: #F0FDFA;
+      transform: translateY(-2px);
+    }
+
+    .quiz-btn.correct {
+      background: #D1FAE5 !important;
+      border-color: #10B981 !important;
+      color: #065F46 !important;
+      transform: scale(1.05);
+    }
+
+    .quiz-btn.wrong {
+      background: #FEE2E2 !important;
+      border-color: #EF4444 !important;
+      color: #991B1B !important;
+      animation: shake 0.4s ease;
+    }
+
+    .big-action-btn {
+      background: linear-gradient(135deg, #FF5E7E, #E11D48);
+      color: white;
+      border: none;
+      border-radius: 26px;
+      padding: 14px 28px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(255, 94, 126, 0.35);
+      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .big-action-btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 12px 30px rgba(255, 94, 126, 0.45);
+    }
+
+    /* Parent Guide */
+    .parent-guide {
+      background: #FDF4FF;
+      border: 3px solid #F0ABFC;
+      border-radius: 32px;
+      padding: 26px;
+    }
+
+    .guide-section {
+      margin-bottom: 18px;
+    }
+
+    .guide-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #86198F;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .guide-list {
+      padding-left: 20px;
+      line-height: 1.7;
+      color: #4A044E;
+      font-size: 1.05rem;
+    }
+
+    @keyframes bounceGentle {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.85); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-8px); }
+      40%, 80% { transform: translateX(8px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card-footer {
+      text-align: center;
+      margin-top: 26px;
+      font-size: 1rem;
+      color: #64748B;
+      font-weight: 500;
+      border-top: 2px dashed #E2E8F0;
+      padding-top: 16px;
+    }
+
+    @media (max-width: 600px) {
+      .kid-title { font-size: 1.8rem; }
+      .tab-btn { font-size: 0.95rem; padding: 10px 14px; }
+      .quiz-options { grid-template-columns: 1fr; }
+      .sound-toggle-btn { top: 16px; right: 16px; width: 42px; height: 42px; font-size: 1.2rem; }
+      .back-home-btn { top: 16px; left: 16px; padding: 6px 12px; font-size: 0.85rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="confettiCanvas"></canvas>
+
+  <div class="main-container">
+    <a href="/student" class="back-home-btn" title="Về Bảng Điều Khiển Học Tập">
+      <span>🏠</span> Bảng Học Tập
+    </a>
+    <button class="sound-toggle-btn" id="soundToggle" title="Bật/Tắt âm thanh">🔊</button>
+
+    <div class="header-section">
+      <div class="date-badge">
+        <span>📅</span> 18 Tháng 11, 2026
+      </div>
+      <h1 class="kid-title">Bí Kíp Phép Nhân 2 Chữ Số</h1>
+      <p class="kid-subtitle">Dành tặng bạn nhỏ <span class="name-highlight">an_lake</span> 6 tuổi thông thái 🍓🧺🌟</p>
+    </div>
+
+    <!-- TABS NAVIGATION -->
+    <div class="tabs-nav">
+      <button class="tab-btn active" data-tab="storyTab">📖 1. Bí Kíp &amp; Ví Dụ</button>
+      <button class="tab-btn" data-tab="quizTab">🎮 2. Đấu Trường 40 Câu Đố</button>
+      <button class="tab-btn" data-tab="parentsTab">👨‍👩‍👧 3. Lời Nhắn Ba Mẹ</button>
+    </div>
+
+    <!-- TAB 1: STORY & TECHNIQUE -->
+    <div id="storyTab" class="tab-content active">
+      <div class="story-card">
+        <div class="story-bubble">
+          <div class="story-emoji">🐰🐻</div>
+          <div class="story-text">
+            Hôm nay bạn <strong>Thỏ Mimi</strong> và <strong>Gấu Misa</strong> mang về <strong>3 chiếc giỏ</strong> 🧺🧺🧺. Trong mỗi chiếc giỏ đựng đúng <strong>24 quả dâu tây</strong> 🍓. Hỏi có tất cả bao nhiêu quả dâu tây?
+          </div>
+        </div>
+
+        <!-- BÍ KÍP TÁCH SỐ -->
+        <div class="technique-box">
+          <div class="technique-title">✨ Bí Kíp Phép Nhân Phép Thuật: "Tách Ra Nhân Rồi Gộp Lại" ✨</div>
+          <div class="technique-step">1. Tách số 24 thành: <strong>20</strong> và <strong>4</strong></div>
+          <div class="technique-step">2. Nhân từng phần với 3: <br/> 20 × 3 = <strong>60</strong> <br/> 4 × 3 = <strong>12</strong></div>
+          <div class="technique-step">3. Cộng hai kết quả lại: <strong>60 + 12 = 72</strong> quả dâu tây!</div>
+        </div>
+
+        <!-- 4 VÍ DỤ MINH HỌA -->
+        <h3 style="margin-top: 26px; color: #6D28D9; font-size: 1.4rem;">🌈 4 Ví Dụ Điển Hình Tuyệt Đẹp:</h3>
+        <div class="examples-container">
+          <div class="example-card">
+            <div class="example-title">🍓 1. Dâu Tây Trong Giỏ</div>
+            <div class="example-desc">Có <strong>3 chiếc giỏ</strong> 🧺🧺🧺, mỗi giỏ có <strong>24 quả dâu tây</strong> 🍓.</div>
+            <div class="example-formula">24 × 3 = 72 quả dâu tây</div>
+          </div>
+
+          <div class="example-card">
+            <div class="example-title">🍎 2. Thùng Táo Đỏ</div>
+            <div class="example-desc">Có <strong>8 thùng táo</strong> 📦📦, mỗi thùng có <strong>45 quả táo đỏ</strong> 🍎.</div>
+            <div class="example-formula">45 × 8 = 360 quả táo đỏ</div>
+          </div>
+
+          <div class="example-card">
+            <div class="example-title">🍬 3. Hộp Kẹo Ngọt</div>
+            <div class="example-desc">Có <strong>4 hộp quà</strong> 🎁🎁, mỗi hộp có <strong>15 viên kẹo ngọt</strong> 🍬.</div>
+            <div class="example-formula">15 × 4 = 60 viên kẹo ngọt</div>
+          </div>
+
+          <div class="example-card">
+            <div class="example-title">🍪 4. Khay Bánh Quy</div>
+            <div class="example-desc">Có <strong>2 khay bánh</strong> 🍽️🍽️, mỗi khay có <strong>35 chiếc bánh quy</strong> 🍪.</div>
+            <div class="example-formula">35 × 2 = 70 chiếc bánh quy</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center;">
+        <button class="big-action-btn" onclick="switchTab('quizTab')" style="margin: 0 auto;">
+          🚀 Bé an_lake Thử Sức 40 Câu Đố Vui Ngay!
+        </button>
+      </div>
+    </div>
+
+    <!-- TAB 2: 40 QUIZ QUESTIONS (UNIFORM OPTIONS) -->
+    <div id="quizTab" class="tab-content">
+      <div class="quiz-container">
+        <div class="quiz-header">
+          <div>
+            <h2 style="font-size: 1.45rem; color: #1E293B;">🎯 Đấu Trường 40 Câu Đố Nhân 2 Chữ Số</h2>
+            <p id="quizQuestionTracker" style="font-size: 0.95rem; color: #64748B; font-weight: 600; margin-top: 2px;">
+              Câu hỏi 1 / 40
+            </p>
+          </div>
+          <div class="star-counter">⭐ <span id="quizScore">0</span> / 40 Sao</div>
+        </div>
+
+        <div class="quiz-question-box">
+          <div id="quizQuestionText" style="font-size: 1.35rem; font-weight: 700; color: #0F172A;">
+            <!-- Render text -->
+          </div>
+          <div class="quiz-visual" id="quizVisual">
+            <!-- Render visual icons -->
+          </div>
+          <p style="color: #64748B; font-size: 1.15rem;">Bé bấm chọn đáp án đúng nhất nhé:</p>
+          <div class="quiz-options" id="quizOptionsContainer">
+            <!-- Generated Quiz buttons -->
+          </div>
+        </div>
+
+        <div id="quizFeedback" style="text-align: center; font-size: 1.35rem; font-weight: 700; min-height: 44px;"></div>
+
+        <div style="text-align: center; margin-top: 16px;">
+          <button id="btnNextQuiz" class="big-action-btn" style="display: none; margin: 0 auto;" onclick="nextQuiz()">
+            ➡️ Câu tiếp theo
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: PARENTS GUIDE -->
+    <div id="parentsTab" class="tab-content">
+      <div class="parent-guide">
+        <h2 style="color: #86198F; margin-bottom: 18px; font-size: 1.45rem;">
+          💡 Cẩm Nang Đồng Hành Cùng Bé an_lake Học Phép Nhân 2 Chữ Số
+        </h2>
+
+        <div class="guide-section">
+          <div class="guide-title">🌱 1. Nguyên lý chia nhỏ bài toán (Phân rã số)</div>
+          <ul class="guide-list">
+            <li>Với bé 6 tuổi, việc nhân thẳng $24 \times 3$ theo cột dọc nhớ số có thể còn bỡ ngỡ. Hãy dạy con phương pháp <strong>tách số tròn chục và số đơn vị</strong>: $24 = 20 + 4$.</li>
+            <li>Con tính $20 \times 3 = 60$ rất nhanh vì đã học bảng nhân 2, sau đó tính $4 \times 3 = 12$, cuối cùng cộng nhẩm $60 + 12 = 72$.</li>
+          </ul>
+        </div>
+
+        <div class="guide-section">
+          <div class="guide-title">🗣️ 2. Trò chơi trực quan tại nhà</div>
+          <ul class="guide-list">
+            <li><strong>Nhóm tiền đồ chơi / que tính:</strong> Chuẩn bị các bó 10 que tính và các que lẻ. Ví dụ lấy 2 bó 10 và 4 que lẻ, lặp lại 3 lần để bé đếm trực quan.</li>
+            <li><strong>Khích lệ từng bước:</strong> Luôn khen ngợi khi con tách được số thành công.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-footer">
+      Thiết kế chuyên đề phép nhân dành riêng cho bé <strong>an_lake</strong> nhân ngày <strong>18/11/2026</strong> ✨ Chúc bé học vui và luôn yêu thích toán học!
+    </div>
+  </div>
+
+  <script>
+    /* ========================================================
+       WEB AUDIO SYNTHESIZER
+       ======================================================== */
+    let audioCtx = null;
+    let soundEnabled = true;
+
+    function getAudioContext() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      return audioCtx;
+    }
+
+    function playTone(freq, type, duration, delay = 0) {
+      if (!soundEnabled) return;
+      try {
+        const ctx = getAudioContext();
+        setTimeout(() => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = type;
+          osc.frequency.setValueAtTime(freq, ctx.currentTime);
+          gain.gain.setValueAtTime(0.2, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start();
+          osc.stop(ctx.currentTime + duration);
+        }, delay * 1000);
+      } catch (e) {
+        console.warn('Audio not available', e);
+      }
+    }
+
+    function playPop() {
+      playTone(560, 'sine', 0.12);
+    }
+
+    function playSuccessChime() {
+      playTone(523.25, 'triangle', 0.18, 0.0); // C5
+      playTone(659.25, 'triangle', 0.18, 0.1); // E5
+      playTone(783.99, 'triangle', 0.18, 0.2); // G5
+      playTone(1046.50, 'triangle', 0.35, 0.3); // C6
+    }
+
+    function playWrongTone() {
+      playTone(220, 'sawtooth', 0.2, 0.0);
+      playTone(196, 'sawtooth', 0.25, 0.15);
+    }
+
+    function speakVietnamese(text) {
+      if (!soundEnabled || !('speechSynthesis' in window)) return;
+      try {
+        window.speechSynthesis.cancel();
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.lang = 'vi-VN';
+        utter.rate = 0.95;
+        utter.pitch = 1.15;
+        window.speechSynthesis.speak(utter);
+      } catch (e) {
+        console.log('Speech synthesis error', e);
+      }
+    }
+
+    const soundToggle = document.getElementById('soundToggle');
+    soundToggle.addEventListener('click', () => {
+      soundEnabled = !soundEnabled;
+      soundToggle.textContent = soundEnabled ? '🔊' : '🔇';
+      soundToggle.style.opacity = soundEnabled ? '1' : '0.6';
+      if (soundEnabled) playPop();
+    });
+
+    /* ========================================================
+       CONFETTI EFFECT
+       ======================================================== */
+    const canvas = document.getElementById('confettiCanvas');
+    const ctx = canvas.getContext('2d');
+    let confettiList = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    function triggerConfetti() {
+      const colors = ['#FF5E7E', '#00B8A9', '#FFB020', '#10B981', '#8B5CF6', '#F43F5E'];
+      for (let i = 0; i < 90; i++) {
+        confettiList.push({
+          x: canvas.width / 2,
+          y: canvas.height / 2 - 50,
+          vx: (Math.random() - 0.5) * 14,
+          vy: (Math.random() - 0.8) * 14,
+          size: Math.random() * 9 + 5,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          rotation: Math.random() * 360,
+          rotSpeed: (Math.random() - 0.5) * 12,
+          life: 1
+        });
+      }
+    }
+
+    function updateConfetti() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = confettiList.length - 1; i >= 0; i--) {
+        const p = confettiList[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.28;
+        p.rotation += p.rotSpeed;
+        p.life -= 0.012;
+
+        if (p.life <= 0) {
+          confettiList.splice(i, 1);
+          continue;
+        }
+
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate((p.rotation * Math.PI) / 180);
+        ctx.fillStyle = p.color;
+        ctx.globalAlpha = p.life;
+        ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+        ctx.restore();
+      }
+      requestAnimationFrame(updateConfetti);
+    }
+    updateConfetti();
+
+    /* ========================================================
+       TABS SWITCHING
+       ======================================================== */
+    const tabs = document.querySelectorAll('.tab-btn');
+    const contents = document.querySelectorAll('.tab-content');
+
+    function switchTab(tabId) {
+      playPop();
+      tabs.forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-tab') === tabId);
+      });
+      contents.forEach(sec => {
+        sec.classList.toggle('active', sec.id === tabId);
+      });
+    }
+
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        switchTab(btn.getAttribute('data-tab'));
+      });
+    });
+
+    /* ========================================================
+       40 QUESTIONS (2-DIGIT MULTIPLICATION WITH ICONS & UNIFORM OPTIONS)
+       ======================================================== */
+    const quizList = [
+      {
+        text: 'Chú thỏ có 3 chiếc giỏ, mỗi chiếc giỏ đựng 24 quả dâu tây. Hỏi có tất cả bao nhiêu quả dâu tây?',
+        visual: '🧺 🧺 🧺 (3 chiếc giỏ)  ×  🍓 (24 quả dâu)',
+        options: ['68 quả dâu tây', '72 quả dâu tây', '76 quả dâu tây', '70 quả dâu tây'],
+        correctIndex: 1, // B
+        explain: '3 chiếc giỏ đựng 24 quả dâu: 24 × 3 = 72 quả dâu tây!'
+      },
+      {
+        text: 'Bé An có 4 hộp quà, mỗi hộp quà có 15 viên kẹo ngọt. Hỏi có tất cả bao nhiêu viên kẹo ngọt?',
+        visual: '🎁 🎁 🎁 🎁 (4 hộp quà)  ×  🍬 (15 viên kẹo)',
+        options: ['60 viên kẹo ngọt', '55 viên kẹo ngọt', '65 viên kẹo ngọt', '50 viên kẹo ngọt'],
+        correctIndex: 0, // A
+        explain: '4 hộp quà có 15 viên kẹo: 15 × 4 = 60 viên kẹo ngọt!'
+      },
+      {
+        text: 'Gấu Misa xếp 2 khay bánh, mỗi khay bánh có 35 chiếc bánh quy. Hỏi có tất cả bao nhiêu chiếc bánh quy?',
+        visual: '🍽️ 🍽️ (2 khay bánh)  ×  🍪 (35 chiếc bánh quy)',
+        options: ['65 chiếc bánh quy', '75 chiếc bánh quy', '70 chiếc bánh quy', '80 chiếc bánh quy'],
+        correctIndex: 2, // C
+        explain: '2 khay có 35 chiếc bánh: 35 × 2 = 70 chiếc bánh quy!'
+      },
+      {
+        text: 'Bác nông dân hái 8 thùng táo, mỗi thùng có 45 quả táo đỏ. Hỏi có tất cả bao nhiêu quả táo đỏ?',
+        visual: '📦 📦 📦 📦 📦 📦 📦 📦 (8 thùng)  ×  🍎 (45 quả táo)',
+        options: ['340 quả táo đỏ', '350 quả táo đỏ', '380 quả táo đỏ', '360 quả táo đỏ'],
+        correctIndex: 3, // D
+        explain: '8 thùng có 45 quả táo: 45 × 8 = 360 quả táo đỏ!'
+      },
+      {
+        text: 'Công chúa Amara có 3 túi nhung, mỗi túi nhung đựng 25 viên ngọc ước. Hỏi có tất cả bao nhiêu viên ngọc ước?',
+        visual: '🎒 🎒 🎒 (3 túi nhung)  ×  🔮 (25 viên ngọc ước)',
+        options: ['75 viên ngọc ước', '70 viên ngọc ước', '80 viên ngọc ước', '85 viên ngọc ước'],
+        correctIndex: 0, // A
+        explain: '3 túi có 25 viên ngọc: 25 × 3 = 75 viên ngọc ước!'
+      },
+      {
+        text: 'Chú Rồng Xanh có 5 chùm bóng, mỗi chùm bóng có 14 quả bóng bay. Hỏi có tất cả bao nhiêu quả bóng bay?',
+        visual: '🎈 🎈 🎈 🎈 🎈 (5 chùm bóng)  ×  🎈 (14 quả bóng)',
+        options: ['65 quả bóng bay', '70 quả bóng bay', '75 quả bóng bay', '80 quả bóng bay'],
+        correctIndex: 1, // B
+        explain: '5 chùm có 14 quả bóng: 14 × 5 = 70 quả bóng bay!'
+      },
+      {
+        text: 'Trong vườn có 6 luống hoa, mỗi luống có 16 bông hoa hướng dương. Hỏi có tất cả bao nhiêu bông hoa hướng dương?',
+        visual: '🌻 🌻 🌻 🌻 🌻 🌻 (6 luống hoa)  ×  🌻 (16 bông hoa)',
+        options: ['90 bông hoa hướng dương', '92 bông hoa hướng dương', '96 bông hoa hướng dương', '98 bông hoa hướng dương'],
+        correctIndex: 2, // C
+        explain: '6 luống có 16 bông hoa: 16 × 6 = 96 bông hoa hướng dương!'
+      },
+      {
+        text: 'Bé An cắm 4 bình hoa pha lê, mỗi bình hoa cắm 22 cành hoa hồng. Hỏi có tất cả bao nhiêu cành hoa hồng?',
+        visual: '🏺 🏺 🏺 🏺 (4 bình hoa)  ×  🌹 (22 cành hoa)',
+        options: ['84 cành hoa hồng', '86 cành hoa hồng', '90 cành hoa hồng', '88 cành hoa hồng'],
+        correctIndex: 3, // D
+        explain: '4 bình hoa có 22 cành hoa: 22 × 4 = 88 cành hoa hồng!'
+      },
+      {
+        text: 'Đội thỏ thu hoạch 7 sọt cà rốt, mỗi sọt có 18 củ cà rốt. Hỏi có tất cả bao nhiêu củ cà rốt?',
+        visual: '🧺 🧺 🧺 🧺 🧺 🧺 🧺 (7 sọt)  ×  🥕 (18 củ cà rốt)',
+        options: ['126 củ cà rốt', '120 củ cà rốt', '124 củ cà rốt', '130 củ cà rốt'],
+        correctIndex: 0, // A
+        explain: '7 sọt có 18 củ cà rốt: 18 × 7 = 126 củ cà rốt!'
+      },
+      {
+        text: 'Bé An có 3 hộp bút sáp, mỗi hộp có 32 cây bút sáp màu. Hỏi có tất cả bao nhiêu cây bút sáp màu?',
+        visual: '🖍️ 🖍️ 🖍️ (3 hộp bút sáp)  ×  ✏️ (32 cây bút)',
+        options: ['92 cây bút sáp màu', '96 cây bút sáp màu', '98 cây bút sáp màu', '90 cây bút sáp màu'],
+        correctIndex: 1, // B
+        explain: '3 hộp có 32 cây bút: 32 × 3 = 96 cây bút sáp màu!'
+      },
+      {
+        text: 'Trên cây có 4 tổ chim, mỗi tổ chim có 12 chú chim non. Hỏi có tất cả bao nhiêu chú chim non?',
+        visual: '🪺 🪺 🪺 🪺 (4 tổ chim)  ×  🐥 (12 chú chim)',
+        options: ['44 chú chim non', '46 chú chim non', '48 chú chim non', '50 chú chim non'],
+        correctIndex: 2, // C
+        explain: '4 tổ có 12 chú chim: 12 × 4 = 48 chú chim non!'
+      },
+      {
+        text: 'Cửa hàng bánh xếp 5 khay bánh, mỗi khay có 26 chiếc bánh kem. Hỏi có tất cả bao nhiêu chiếc bánh kem?',
+        visual: '🧁 🧁 🧁 🧁 🧁 (5 khay bánh)  ×  🧁 (26 chiếc bánh)',
+        options: ['120 chiếc bánh kem', '125 chiếc bánh kem', '135 chiếc bánh kem', '130 chiếc bánh kem'],
+        correctIndex: 3, // D
+        explain: '5 khay có 26 chiếc bánh: 26 × 5 = 130 chiếc bánh kem!'
+      },
+      {
+        text: 'Chú khỉ hái 3 buồng chuối, mỗi buồng có 28 quả chuối chín. Hỏi có tất cả bao nhiêu quả chuối chín?',
+        visual: '🍌 🍌 🍌 (3 buồng chuối)  ×  🍌 (28 quả chuối)',
+        options: ['84 quả chuối chín', '82 quả chuối chín', '86 quả chuối chín', '80 quả chuối chín'],
+        correctIndex: 0, // A
+        explain: '3 buồng có 28 quả chuối: 28 × 3 = 84 quả chuối chín!'
+      },
+      {
+        text: 'Có 6 hộp kẹo dẻo, mỗi hộp có 15 viên kẹo gấu. Hỏi có tất cả bao nhiêu viên kẹo gấu?',
+        visual: '📦 📦 📦 📦 📦 📦 (6 hộp kẹo)  ×  🧸 (15 viên kẹo)',
+        options: ['85 viên kẹo gấu', '90 viên kẹo gấu', '95 viên kẹo gấu', '80 viên kẹo gấu'],
+        correctIndex: 1, // B
+        explain: '6 hộp có 15 viên kẹo: 15 × 6 = 90 viên kẹo gấu!'
+      },
+      {
+        text: 'Bé An gom 4 túi hạt dẻ, mỗi túi có 36 hạt dẻ thơm lừng. Hỏi có tất cả bao nhiêu hạt dẻ?',
+        visual: '🎒 🎒 🎒 🎒 (4 túi)  ×  🌰 (36 hạt dẻ)',
+        options: ['140 hạt dẻ', '142 hạt dẻ', '144 hạt dẻ', '148 hạt dẻ'],
+        correctIndex: 2, // C
+        explain: '4 túi có 36 hạt dẻ: 36 × 4 = 144 hạt dẻ!'
+      },
+      {
+        text: 'Có 8 đĩa cam, mỗi đĩa xếp 23 múi cam mọng nước. Hỏi có tất cả bao nhiêu múi cam?',
+        visual: '🍽️ 🍽️ 🍽️ 🍽️ 🍽️ 🍽️ 🍽️ 🍽️ (8 đĩa)  ×  🍊 (23 múi cam)',
+        options: ['180 múi cam', '182 múi cam', '186 múi cam', '184 múi cam'],
+        correctIndex: 3, // D
+        explain: '8 đĩa có 23 múi cam: 23 × 8 = 184 múi cam!'
+      },
+      {
+        text: 'Bác làm vườn thu được 3 rổ dưa hấu, mỗi rổ có 19 quả dưa hấu. Hỏi có tất cả bao nhiêu quả dưa hấu?',
+        visual: '🧺 🧺 🧺 (3 rổ)  ×  🍉 (19 quả dưa)',
+        options: ['57 quả dưa hấu', '54 quả dưa hấu', '58 quả dưa hấu', '60 quả dưa hấu'],
+        correctIndex: 0, // A
+        explain: '3 rổ có 19 quả dưa: 19 × 3 = 57 quả dưa hấu!'
+      },
+      {
+        text: 'Đội sóc xếp 5 hàng nấm, mỗi hàng có 24 cây nấm linh chi. Hỏi có tất cả bao nhiêu cây nấm?',
+        visual: '🍄 🍄 🍄 🍄 🍄 (5 hàng)  ×  🍄 (24 cây nấm)',
+        options: ['115 cây nấm', '120 cây nấm', '125 cây nấm', '110 cây nấm'],
+        correctIndex: 1, // B
+        explain: '5 hàng có 24 cây nấm: 24 × 5 = 120 cây nấm!'
+      },
+      {
+        text: 'Trong kho có 4 kiện hàng, mỗi kiện hàng chứa 42 chiếc cốc pha lê. Hỏi có tất cả bao nhiêu chiếc cốc pha lê?',
+        visual: '📦 📦 📦 📦 (4 kiện hàng)  ×  🥛 (42 chiếc cốc)',
+        options: ['162 chiếc cốc pha lê', '164 chiếc cốc pha lê', '168 chiếc cốc pha lê', '170 chiếc cốc pha lê'],
+        correctIndex: 2, // C
+        explain: '4 kiện có 42 chiếc cốc: 42 × 4 = 168 chiếc cốc pha lê!'
+      },
+      {
+        text: 'Bé An làm 7 vòng hoa, mỗi vòng hoa kết 15 đóa hoa tươi. Hỏi có tất cả bao nhiêu đóa hoa tươi?',
+        visual: '🌸 🌸 🌸 🌸 🌸 🌸 🌸 (7 vòng hoa)  ×  🌺 (15 đóa hoa)',
+        options: ['100 đóa hoa tươi', '102 đóa hoa tươi', '108 đóa hoa tươi', '105 đóa hoa tươi'],
+        correctIndex: 3, // D
+        explain: '7 vòng hoa có 15 đóa hoa: 15 × 7 = 105 đóa hoa tươi!'
+      },
+      {
+        text: 'Chú Rồng Xanh mang về 2 hòm báu vật, mỗi hòm chứa 48 viên kim cương. Hỏi có tất cả bao nhiêu viên kim cương?',
+        visual: '🎁 🎁 (2 hòm)  ×  💎 (48 viên kim cương)',
+        options: ['96 viên kim cương', '94 viên kim cương', '98 viên kim cương', '92 viên kim cương'],
+        correctIndex: 0, // A
+        explain: '2 hòm có 48 viên kim cương: 48 × 2 = 96 viên kim cương!'
+      },
+      {
+        text: 'Có 3 khay bánh mì, mỗi khay có 34 ổ bánh mì thơm phức. Hỏi có tất cả bao nhiêu ổ bánh mì?',
+        visual: '🥖 🥖 🥖 (3 khay)  ×  🍞 (34 ổ bánh mì)',
+        options: ['100 ổ bánh mì', '102 ổ bánh mì', '104 ổ bánh mì', '106 ổ bánh mì'],
+        correctIndex: 1, // B
+        explain: '3 khay có 34 ổ bánh mì: 34 × 3 = 102 ổ bánh mì!'
+      },
+      {
+        text: 'Có 5 lồng chim, mỗi lồng chim nuôi 18 chú chim sơn ca. Hỏi có tất cả bao nhiêu chú chim sơn ca?',
+        visual: '🛖 🛖 🛖 🛖 🛖 (5 lồng)  ×  🐦 (18 chú chim)',
+        options: ['85 chú chim sơn ca', '95 chú chim sơn ca', '90 chú chim sơn ca', '80 chú chim sơn ca'],
+        correctIndex: 2, // C
+        explain: '5 lồng có 18 chú chim: 18 × 5 = 90 chú chim sơn ca!'
+      },
+      {
+        text: 'Bạn mèo xếp 4 giá sách, mỗi giá sách có 27 cuốn truyện tranh. Hỏi có tất cả bao nhiêu cuốn truyện tranh?',
+        visual: '📚 📚 📚 📚 (4 giá sách)  ×  📖 (27 cuốn truyện)',
+        options: ['104 cuốn truyện tranh', '106 cuốn truyện tranh', '110 cuốn truyện tranh', '108 cuốn truyện tranh'],
+        correctIndex: 3, // D
+        explain: '4 giá sách có 27 cuốn truyện: 27 × 4 = 108 cuốn truyện tranh!'
+      },
+      {
+        text: 'Có 6 gói kẹo mút, mỗi gói kẹo có 21 que kẹo mút. Hỏi có tất cả bao nhiêu que kẹo mút?',
+        visual: '🍭 🍭 🍭 🍭 🍭 🍭 (6 gói)  ×  🍭 (21 que kẹo)',
+        options: ['126 que kẹo mút', '120 que kẹo mút', '124 que kẹo mút', '128 que kẹo mút'],
+        correctIndex: 0, // A
+        explain: '6 gói có 21 que kẹo: 21 × 6 = 126 que kẹo mút!'
+      },
+      {
+        text: 'Có 3 đĩa lê, mỗi đĩa có 29 quả lê ngọt mát. Hỏi có tất cả bao nhiêu quả lê?',
+        visual: '🍽️ 🍽️ 🍽️ (3 đĩa)  ×  🍐 (29 quả lê)',
+        options: ['84 quả lê', '87 quả lê', '89 quả lê', '85 quả lê'],
+        correctIndex: 1, // B
+        explain: '3 đĩa có 29 quả lê: 29 × 3 = 87 quả lê!'
+      },
+      {
+        text: 'Có 4 luống dâu tây, mỗi luống có 33 bụi cây dâu. Hỏi có tất cả bao nhiêu bụi cây dâu?',
+        visual: '🍓 🍓 🍓 🍓 (4 luống)  ×  🍓 (33 bụi cây)',
+        options: ['130 bụi cây dâu', '134 bụi cây dâu', '132 bụi cây dâu', '136 bụi cây dâu'],
+        correctIndex: 2, // C
+        explain: '4 luống có 33 bụi dâu: 33 × 4 = 132 bụi cây dâu!'
+      },
+      {
+        text: 'Có 5 rổ khoai tây, mỗi rổ có 25 củ khoai tây. Hỏi có tất cả bao nhiêu củ khoai tây?',
+        visual: '🧺 🧺 🧺 🧺 🧺 (5 rổ)  ×  🥔 (25 củ khoai)',
+        options: ['120 củ khoai tây', '122 củ khoai tây', '130 củ khoai tây', '125 củ khoai tây'],
+        correctIndex: 3, // D
+        explain: '5 rổ có 25 củ khoai: 25 × 5 = 125 củ khoai tây!'
+      },
+      {
+        text: 'Có 8 khay bánh donut, mỗi khay có 16 chiếc bánh donut. Hỏi có tất cả bao nhiêu chiếc bánh donut?',
+        visual: '🍩 🍩 🍩 🍩 🍩 🍩 🍩 🍩 (8 khay)  ×  🍩 (16 chiếc bánh)',
+        options: ['128 chiếc bánh donut', '124 chiếc bánh donut', '130 chiếc bánh donut', '126 chiếc bánh donut'],
+        correctIndex: 0, // A
+        explain: '8 khay có 16 chiếc bánh: 16 × 8 = 128 chiếc bánh donut!'
+      },
+      {
+        text: 'Có 3 giỏ bắp cải, mỗi giỏ có 38 cây bắp cải. Hỏi có tất cả bao nhiêu cây bắp cải?',
+        visual: '🧺 🧺 🧺 (3 giỏ)  ×  🥬 (38 cây bắp cải)',
+        options: ['110 cây bắp cải', '114 cây bắp cải', '116 cây bắp cải', '112 cây bắp cải'],
+        correctIndex: 1, // B
+        explain: '3 giỏ có 38 cây bắp cải: 38 × 3 = 114 cây bắp cải!'
+      },
+      {
+        text: 'Có 4 hộp bút chì màu, mỗi hộp có 35 chiếc bút chì màu. Hỏi có tất cả bao nhiêu chiếc bút chì màu?',
+        visual: '📦 📦 📦 📦 (4 hộp)  ×  ✏️ (35 chiếc bút)',
+        options: ['135 chiếc bút chì màu', '145 chiếc bút chì màu', '140 chiếc bút chì màu', '130 chiếc bút chì màu'],
+        correctIndex: 2, // C
+        explain: '4 hộp có 35 chiếc bút: 35 × 4 = 140 chiếc bút chì màu!'
+      },
+      {
+        text: 'Có 6 túi kẹo sô-cô-la, mỗi túi có 24 thanh sô-cô-la. Hỏi có tất cả bao nhiêu thanh sô-cô-la?',
+        visual: '🎒 🎒 🎒 🎒 🎒 🎒 (6 túi)  ×  🍫 (24 thanh sô-cô-la)',
+        options: ['140 thanh sô-cô-la', '142 thanh sô-cô-la', '148 thanh sô-cô-la', '144 thanh sô-cô-la'],
+        correctIndex: 3, // D
+        explain: '6 túi có 24 thanh sô-cô-la: 24 × 6 = 144 thanh sô-cô-la!'
+      },
+      {
+        text: 'Có 7 chùm nho, mỗi chùm có 17 quả nho tím. Hỏi có tất cả bao nhiêu quả nho tím?',
+        visual: '🍇 🍇 🍇 🍇 🍇 🍇 🍇 (7 chùm)  ×  🍇 (17 quả nho)',
+        options: ['119 quả nho tím', '115 quả nho tím', '121 quả nho tím', '117 quả nho tím'],
+        correctIndex: 0, // A
+        explain: '7 chùm có 17 quả nho: 17 × 7 = 119 quả nho tím!'
+      },
+      {
+        text: 'Có 4 bình nuôi cá, mỗi bình nuôi 29 chú cá vàng. Hỏi có tất cả bao nhiêu chú cá vàng?',
+        visual: '🐟 🐟 🐟 🐟 (4 bình cá)  ×  🐠 (29 chú cá vàng)',
+        options: ['112 chú cá vàng', '116 chú cá vàng', '118 chú cá vàng', '114 chú cá vàng'],
+        correctIndex: 1, // B
+        explain: '4 bình nuôi cá có 29 chú cá: 29 × 4 = 116 chú cá vàng!'
+      },
+      {
+        text: 'Có 5 rổ xoài cát, mỗi rổ có 31 quả xoài chín. Hỏi có tất cả bao nhiêu quả xoài chín?',
+        visual: '🧺 🧺 🧺 🧺 🧺 (5 rổ)  ×  🥭 (31 quả xoài)',
+        options: ['150 quả xoài chín', '152 quả xoài chín', '155 quả xoài chín', '160 quả xoài chín'],
+        correctIndex: 2, // C
+        explain: '5 rổ có 31 quả xoài: 31 × 5 = 155 quả xoài chín!'
+      },
+      {
+        text: 'Có 9 đĩa cherry, mỗi đĩa có 15 quả cherry. Hỏi có tất cả bao nhiêu quả cherry?',
+        visual: '🍽️ 🍽️ 🍽️ 🍽️ 🍽️ 🍽️ 🍽️ 🍽️ 🍽️ (9 đĩa)  ×  🍒 (15 quả cherry)',
+        options: ['130 quả cherry', '132 quả cherry', '138 quả cherry', '135 quả cherry'],
+        correctIndex: 3, // D
+        explain: '9 đĩa có 15 quả cherry: 15 × 9 = 135 quả cherry!'
+      },
+      {
+        text: 'Có 3 xe chở dưa, mỗi xe chở 46 quả dưa hấu khổng lồ. Hỏi có tất cả bao nhiêu quả dưa hấu?',
+        visual: '🚚 🚚 🚚 (3 xe chở dưa)  ×  🍉 (46 quả dưa)',
+        options: ['138 quả dưa hấu', '134 quả dưa hấu', '140 quả dưa hấu', '136 quả dưa hấu'],
+        correctIndex: 0, // A
+        explain: '3 xe có 46 quả dưa: 46 × 3 = 138 quả dưa hấu!'
+      },
+      {
+        text: 'Có 4 thùng gạch LEGO, mỗi thùng có 44 khối gạch LEGO. Hỏi có tất cả bao nhiêu khối gạch LEGO?',
+        visual: '🧱 🧱 🧱 🧱 (4 thùng LEGO)  ×  🧱 (44 khối gạch)',
+        options: ['172 khối gạch LEGO', '176 khối gạch LEGO', '178 khối gạch LEGO', '170 khối gạch LEGO'],
+        correctIndex: 1, // B
+        explain: '4 thùng có 44 khối gạch: 44 × 4 = 176 khối gạch LEGO!'
+      },
+      {
+        text: 'Có 8 khay bánh tart, mỗi khay có 21 chiếc bánh trứng. Hỏi có tất cả bao nhiêu chiếc bánh trứng?',
+        visual: '🥧 🥧 🥧 🥧 🥧 🥧 🥧 🥧 (8 khay)  ×  🥧 (21 chiếc bánh)',
+        options: ['164 chiếc bánh trứng', '166 chiếc bánh trứng', '168 chiếc bánh trứng', '170 chiếc bánh trứng'],
+        correctIndex: 2, // C
+        explain: '8 khay có 21 chiếc bánh: 21 × 8 = 168 chiếc bánh trứng!'
+      },
+      {
+        text: 'Có 9 hàng cờ lễ hội, mỗi hàng cắm 25 lá cờ sắc màu. Hỏi có tất cả bao nhiêu lá cờ sắc màu?',
+        visual: '🚩 🚩 🚩 🚩 🚩 🚩 🚩 🚩 🚩 (9 hàng cờ)  ×  🏳️ (25 lá cờ)',
+        options: ['220 lá cờ sắc màu', '222 lá cờ sắc màu', '228 lá cờ sắc màu', '225 lá cờ sắc màu'],
+        correctIndex: 3, // D
+        explain: '9 hàng cờ có 25 lá cờ: 25 × 9 = 225 lá cờ sắc màu!'
+      }
+    ];
+
+    let currentQuizIndex = 0;
+    let quizScore = 0;
+    let quizAnswered = false;
+
+    function renderCurrentQuiz() {
+      quizAnswered = false;
+      const q = quizList[currentQuizIndex];
+      document.getElementById('quizQuestionTracker').textContent = `Câu hỏi ${currentQuizIndex + 1} / ${quizList.length}`;
+      document.getElementById('quizQuestionText').textContent = `Câu ${currentQuizIndex + 1}: ${q.text}`;
+      document.getElementById('quizVisual').textContent = q.visual;
+      document.getElementById('quizFeedback').innerHTML = '';
+      document.getElementById('btnNextQuiz').style.display = 'none';
+
+      const optionsBox = document.getElementById('quizOptionsContainer');
+      optionsBox.innerHTML = '';
+
+      q.options.forEach((optText, optIdx) => {
+        const btn = document.createElement('button');
+        btn.className = 'quiz-btn';
+        btn.textContent = optText;
+        btn.onclick = () => selectQuizAnswer(optIdx, btn);
+        optionsBox.appendChild(btn);
+      });
+    }
+
+    function selectQuizAnswer(choiceIdx, btnElement) {
+      if (quizAnswered) return;
+      quizAnswered = true;
+      const q = quizList[currentQuizIndex];
+      const feedback = document.getElementById('quizFeedback');
+
+      if (choiceIdx === q.correctIndex) {
+        btnElement.classList.add('correct');
+        quizScore++;
+        document.getElementById('quizScore').textContent = quizScore;
+        feedback.innerHTML = `<span style="color: #059669;">🎉 ĐÚNG RỒI! Bé an_lake giỏi quá! ${q.explain}</span>`;
+        playSuccessChime();
+        triggerConfetti();
+        speakVietnamese(`Đúng rồi! an lake giỏi quá!`);
+      } else {
+        btnElement.classList.add('wrong');
+        const correctText = q.options[q.correctIndex];
+        feedback.innerHTML = `<span style="color: #DC2626;">💡 Chưa đúng rồi! Đáp án đúng là <strong>${correctText}</strong> (${q.explain})</span>`;
+        playWrongTone();
+      }
+
+      document.getElementById('btnNextQuiz').style.display = 'inline-flex';
+      if (currentQuizIndex === quizList.length - 1) {
+        document.getElementById('btnNextQuiz').textContent = '🏆 Nhận Cúp Chiến Thắng 40 Câu!';
+      }
+    }
+
+    function nextQuiz() {
+      playPop();
+      if (currentQuizIndex < quizList.length - 1) {
+        currentQuizIndex++;
+        renderCurrentQuiz();
+      } else {
+        const container = document.querySelector('.quiz-container');
+        container.innerHTML = `
+          <div style="text-align: center; padding: 26px;">
+            <div style="font-size: 5rem; margin-bottom: 12px; animation: popIn 0.5s ease;">🏆 👑 ⭐ 🌟</div>
+            <h2 style="color: #D97706; font-size: 2.1rem; margin: 12px 0;">
+              CHÚC MỪNG CHIẾN THẦN NHÂN SỐ AN_LAKE!
+            </h2>
+            <p style="font-size: 1.35rem; color: #334155; margin-bottom: 20px;">
+              Bé đã xuất sắc đạt được <strong>${quizScore} / ${quizList.length}</strong> ngôi sao thông thái tuyệt đối!
+            </p>
+            <div style="background: #FEF3C7; padding: 20px; border-radius: 24px; border: 3px dashed #F59E0B; margin-bottom: 24px; font-size: 1.25rem; line-height: 1.7;">
+              🎖️ <strong>Huy Hiệu Bậc Thầy Phép Nhân 18/11/2026:</strong><br/>
+              Bé an_lake đã thành thạo kỹ thuật tách số và chinh phục trọn vẹn 40 thử thách phép nhân số có 2 chữ số!
+            </div>
+            <button class="big-action-btn" style="margin: 0 auto;" onclick="restartQuiz()">
+              🔄 Chơi lại 40 câu đố vui
+            </button>
+          </div>
+        `;
+        triggerConfetti();
+        playSuccessChime();
+        speakVietnamese(`Chúc mừng an lake đã hoàn thành xuất sắc 40 câu hỏi phép nhân và nhận cúp vàng chiến thắng!`);
+      }
+    }
+
+    function restartQuiz() {
+      currentQuizIndex = 0;
+      quizScore = 0;
+      location.reload();
+    }
+
+    // Init
+    renderCurrentQuiz();
+  </script>
+</body>
+</html>
