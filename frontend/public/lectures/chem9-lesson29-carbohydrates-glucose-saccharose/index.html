@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orbital Bio-Reactor: Carbohydrates, Glucose & Saccharose (Lesson 29)</title>
+  
+  <!-- KaTeX for High-Contrast Chemical Equations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+
+  <!-- Three.js & OrbitControls for Interactive 3D Molecular Simulation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Starfield Canvas Background -->
+  <canvas id="starfieldCanvas"></canvas>
+  <canvas id="confettiCanvas" class="canvas-confetti"></canvas>
+
+  <div class="app-container">
+    <!-- Sci-Fi Orbital Header -->
+    <header class="station-header">
+      <div class="header-left">
+        <div class="status-badge">
+          <span class="pulse-dot"></span>
+          <span>ORBITAL BIO-REACTOR • LESSON 29 TELEMETRY ACTIVE</span>
+        </div>
+        <h1 class="header-title">
+          <span class="gradient-text">CARBOHYDRATES: GLUCOSE &amp; SACCHAROSE</span>
+          <span class="sub-title">DEEP SPACE BIO-FUEL SYNTHESIS, METABOLIC TELEMETRY &amp; MOLECULAR LAB</span>
+        </h1>
+      </div>
+      <div class="header-right">
+        <div class="cadet-badge">
+          <span class="badge-role">Astronaut Cadet</span>
+          <span class="badge-name">Keithley Lake • Grade 7 &amp; Chem 9</span>
+        </div>
+        <button id="soundToggleBtn" class="control-btn" title="Toggle Sound">
+          <span id="soundIcon">🔊</span> Sound
+        </button>
+      </div>
+    </header>
+
+    <!-- Sector Navigation Bar -->
+    <nav class="sector-nav">
+      <button class="nav-tab active" data-sector="sector1">
+        <span class="tab-icon">🧬</span>
+        <span class="tab-label">Sector 1: Molecular Architecture</span>
+      </button>
+      <button class="nav-tab" data-sector="sector2">
+        <span class="tab-icon">🪞</span>
+        <span class="tab-label">Sector 2: Silver Mirror Lab Bench</span>
+      </button>
+      <button class="nav-tab" data-sector="sector3">
+        <span class="tab-icon">⚗️</span>
+        <span class="tab-label">Sector 3: Fermentation Bio-Reactor</span>
+      </button>
+      <button class="nav-tab" data-sector="sector4">
+        <span class="tab-icon">✂️</span>
+        <span class="tab-label">Sector 4: Saccharose Hydrolysis</span>
+      </button>
+      <button class="nav-tab" data-sector="sector5">
+        <span class="tab-icon">⚡</span>
+        <span class="tab-label">Sector 5: Metabolic Telemetry &amp; Quiz</span>
+      </button>
+    </nav>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="main-content">
+      
+      <!-- ============================================== -->
+      <!-- SECTOR 1: MOLECULAR BLUEPRINT & GENERAL FORMULA -->
+      <!-- ============================================== -->
+      <section id="sector1" class="sector-pane active">
+        <div class="pane-grid">
+          <!-- Left: 3D WebGL Three.js Molecule Viewer -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <div class="header-badge-row">
+                <span class="tag cyan">Three.js 3D Blueprint</span>
+                <span id="moleculeMolarMass" class="molar-mass-badge">M = 180 g/mol</span>
+              </div>
+              <h3 id="moleculeTitle">Glucose ($\text{C}_6\text{H}_{12}\text{O}_6$) • Hexose Pyranose Ring</h3>
+            </div>
+            <p class="card-desc">
+              Formula: <strong>$\text{C}_6\text{H}_{12}\text{O}_6$</strong> &bull; General Format: <strong>$\text{C}_6(\text{H}_2\text{O})_6$</strong> ($n=6, m=6$) &bull; Active: <strong>$-\text{CHO}$ &amp; $5\times(-\text{OH})$</strong>
+            </p>
+
+            <div class="molecule-3d-wrapper">
+              <div class="molecule-3d-toolbar">
+                <div class="model-badge">
+                  <span class="pulse-dot"></span>
+                  <span id="currentModelLabel">Glucose Pyranose Ring</span>
+                </div>
+                <div class="model-actions">
+                  <button id="switchMoleculeBtn" class="tool-btn" title="Switch between Glucose and Saccharose">🔄 Switch to Saccharose</button>
+                  <button id="toggle3dRotateBtn" class="tool-btn active" title="Toggle Auto-Rotation">Auto-Rotate</button>
+                  <button id="reset3dViewBtn" class="tool-btn" title="Reset Camera View">🎯 Reset</button>
+                </div>
+              </div>
+
+              <!-- 3D Canvas Container -->
+              <div id="molecule3dCanvasContainer" class="molecule-3d-container">
+                <div class="canvas-hint">Drag to rotate 360&deg; &bull; Scroll to zoom &bull; Switch models via toolbar</div>
+              </div>
+            </div>
+
+            <div class="callout-box">
+              <span class="callout-icon">💡</span>
+              <div>
+                <strong>Carbohydrate Definition:</strong> Organic compounds composed strictly of <strong>Carbon ($\text{C}$)</strong>, <strong>Hydrogen ($\text{H}$)</strong>, and <strong>Oxygen ($\text{O}$)</strong>, generally obeying:
+                $$\text{C}_n(\text{H}_2\text{O})_m$$
+                <em>Examples:</em> Glucose $\text{C}_6(\text{H}_2\text{O})_6$, Saccharose $\text{C}_{12}(\text{H}_2\text{O})_{11}$, Starch $(\text{C}_6\text{H}_{10}\text{O}_5)_n$.
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Comparative Analysis -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag emerald">Comparative Telemetry</span>
+              <h3>Physical Properties &amp; Planetary Abundance</h3>
+            </div>
+            <p class="card-desc">
+              Direct comparison of Glucose and Saccharose from terrestrial data and planetary greenhouse crops.
+            </p>
+
+            <table class="telemetry-table">
+              <thead>
+                <tr>
+                  <th>Characteristic</th>
+                  <th>Glucose ($\text{C}_6\text{H}_{12}\text{O}_6$)</th>
+                  <th>Saccharose ($\text{C}_{12}\text{H}_{22}\text{O}_{11}$)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Molar Mass ($M$)</strong></td>
+                  <td>$180\text{ g/mol}$</td>
+                  <td>$342\text{ g/mol}$</td>
+                </tr>
+                <tr>
+                  <td><strong>Physical State</strong></td>
+                  <td>Colorless crystalline solid</td>
+                  <td>Colorless crystalline solid</td>
+                </tr>
+                <tr>
+                  <td><strong>Taste &amp; Odor</strong></td>
+                  <td>Sweet taste, odorless</td>
+                  <td>Sweeter taste, odorless</td>
+                </tr>
+                <tr>
+                  <td><strong>Water Solubility</strong></td>
+                  <td>Highly soluble in water</td>
+                  <td>Highly soluble in water</td>
+                </tr>
+                <tr>
+                  <td><strong>Density ($\rho$)</strong></td>
+                  <td>$1.56\text{ g/cm}^3$</td>
+                  <td>$1.58\text{ g/cm}^3$</td>
+                </tr>
+                <tr>
+                  <td><strong>Natural Occurrences</strong></td>
+                  <td>Ripe grapes, honey, blood (~0.1%)</td>
+                  <td>Sugarcane, sugar beet, palm</td>
+                </tr>
+                <tr>
+                  <td><strong>Classification</strong></td>
+                  <td>Monosaccharide (Single unit)</td>
+                  <td>Disaccharide (Glucose + Fructose)</td>
+                </tr>
+                <tr>
+                  <td><strong>Silver Mirror Test</strong></td>
+                  <td><span style="color:var(--emerald-glow); font-weight:bold;">Positive ($\text{Ag}\downarrow$)</span></td>
+                  <td><span style="color:var(--rose-glow); font-weight:bold;">Negative (No reaction)</span></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="callout-box amber">
+              <span class="callout-icon">🛰️</span>
+              <div>
+                <strong>Orbital Note on Density:</strong> Both pure glucose ($1.56\text{ g/cm}^3$) and saccharose ($1.58\text{ g/cm}^3$) are significantly denser than liquid water ($1.00\text{ g/cm}^3$), settling rapidly at the bottom in micro-centrifuge separators.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 2: SILVER MIRROR REACTION LAB BENCH     -->
+      <!-- ============================================== -->
+      <section id="sector2" class="sector-pane">
+        <div class="pane-grid">
+          <!-- Left: Virtual Experiment Setup -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <div class="header-badge-row">
+                <span class="tag cyan">Virtual Lab Bench</span>
+                <span class="molar-mass-badge">Tollens' Silver Mirror</span>
+              </div>
+              <h3>Ammoniacal Silver Nitrate Test ($\text{AgNO}_3 / \text{NH}_3$)</h3>
+            </div>
+            <p class="card-desc">
+              Follow standard laboratory protocol to observe the deposition of a reflective metallic silver mirror.
+            </p>
+
+            <!-- Stepper Indicators -->
+            <div class="step-tracker">
+              <div id="step1" class="step-node active">1. Add AgNO₃</div>
+              <div id="step2" class="step-node">2. Add NH₃</div>
+              <div id="step3" class="step-node">3. Add Glucose</div>
+              <div id="step4" class="step-node">4. Heat 75°C</div>
+            </div>
+
+            <!-- Test Tube Reaction Stage -->
+            <div class="mirror-tube-stage">
+              <div class="test-tube-wrapper">
+                <div class="test-tube-rim"></div>
+                <div class="test-tube-glass">
+                  <div id="tubeLiquid" class="liquid-fill">
+                    <div id="tubeBubbles" class="bubbles-container"></div>
+                  </div>
+                  <div id="silverMirrorLayer" class="silver-mirror-layer"></div>
+                </div>
+              </div>
+
+              <!-- Live Status Telemetry -->
+              <div style="flex:1; display:flex; flex-direction:column; gap:0.5rem;">
+                <div class="gauge-box">
+                  <span class="gauge-title">Chamber Temperature</span>
+                  <span id="tempDisplay" class="gauge-value">25°C</span>
+                  <span class="gauge-unit">Water Bath</span>
+                </div>
+                <div class="gauge-box">
+                  <span class="gauge-title">Precipitated Silver</span>
+                  <span id="agMassDisplay" class="gauge-value">0.00 g</span>
+                  <span class="gauge-unit">Metallic Ag (Mirror)</span>
+                </div>
+                <div class="gauge-box">
+                  <span class="gauge-title">Optical Reflectivity</span>
+                  <span id="reflectivityDisplay" class="gauge-value">8%</span>
+                  <span class="gauge-unit">Glass Surface</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lab Controls -->
+            <div class="lab-bench">
+              <div class="bench-controls">
+                <div class="control-group">
+                  <label class="control-label">Reagent Protocol</label>
+                  <button id="addReagentBtn" class="bench-btn">Add 1 mL AgNO₃ (1%)</button>
+                </div>
+                <div class="control-group">
+                  <label class="control-label">Bath Temperature (60-85°C)</label>
+                  <input id="tempSlider" type="range" class="bench-slider" min="25" max="85" value="25">
+                </div>
+              </div>
+              <div style="display:flex; gap:0.6rem;">
+                <button id="testSaccharoseBtn" class="control-btn" style="flex:1;">🧪 Test With Saccharose (Control)</button>
+                <button id="resetMirrorLabBtn" class="control-btn">🔄 Reset Bench</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Chemical Mechanism & Industrial Mirror Telemetry -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag rose">Reaction Mechanism</span>
+              <h3>Stoichiometry &amp; Industrial Mirror Plating</h3>
+            </div>
+            <p class="card-desc">
+              Glucose contains a terminal aldehyde group ($-\text{CHO}$) that reduces $\text{Ag}^+$ ions to shiny metallic $\text{Ag}$.
+            </p>
+
+            <div class="callout-box">
+              <span class="callout-icon">⚗️</span>
+              <div>
+                <strong>Simplified Balanced Equation (SGK Standard):</strong>
+                $$\text{C}_6\text{H}_{12}\text{O}_6 + \text{Ag}_2\text{O} \xrightarrow{\text{dd NH}_3, 70-80^\circ\text{C}} \text{C}_6\text{H}_{12}\text{O}_7 + 2\text{Ag}\downarrow$$
+                <strong>Detailed Ionic Complex Equation:</strong>
+                $$\text{C}_5\text{H}_{11}\text{O}_5\text{CHO} + 2[\text{Ag}(\text{NH}_3)_2]\text{OH} \xrightarrow{t^\circ} \text{C}_5\text{H}_{11}\text{O}_5\text{COONH}_4 + 2\text{Ag}\downarrow + 3\text{NH}_3 + \text{H}_2\text{O}$$
+              </div>
+            </div>
+
+            <div class="callout-box emerald">
+              <span class="callout-icon">✨</span>
+              <div>
+                <strong>Golden Mole Ratio Weapon:</strong>
+                $$1\text{ mol Glucose } (\text{C}_6\text{H}_{12}\text{O}_6) \longrightarrow 2\text{ mol Silver } (\text{Ag}\downarrow)$$
+                <em>Each $180\text{ g}$ of glucose reduces $2 \times 108 = 216\text{ g}$ of pure metallic silver!</em>
+              </div>
+            </div>
+
+            <div class="callout-box amber">
+              <span class="callout-icon">🛰️</span>
+              <div>
+                <strong>Industrial &amp; Space Telescope Applications:</strong>
+                <ul style="margin-left: 1.25rem; margin-top:0.35rem; line-height:1.5;">
+                  <li><strong>Mirror Production:</strong> Used to coat glass mirrors and the reflective inner walls of vacuum flasks (ruột phích).</li>
+                  <li><strong>Safe Silver Plating:</strong> Avoids highly toxic cyanide plating methods.</li>
+                  <li><strong>Telescope Mirror Refurbishment:</strong> Space stations use glucose-reduction silvering to resurface orbital observation optical mirrors!</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 3: FERMENTATION BIO-REACTOR             -->
+      <!-- ============================================== -->
+      <section id="sector3" class="sector-pane">
+        <div class="pane-grid">
+          <!-- Left: Bio-Reactor Simulation -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <div class="header-badge-row">
+                <span class="tag purple">Orbital Bio-Reactor</span>
+                <span class="molar-mass-badge">Zymase Enzyme Catalysis</span>
+              </div>
+              <h3>Ethanol Fuel Synthesis ($\text{C}_2\text{H}_5\text{OH}$) &amp; $\text{CO}_2$ Evolution</h3>
+            </div>
+            <p class="card-desc">
+              Ferment glucose synthesized in orbital hydroponic greenhouses into bio-fuel and beverage alcohol.
+            </p>
+
+            <div class="lab-bench">
+              <div class="bench-controls">
+                <div class="control-group">
+                  <label class="control-label">Initial Glucose Mass ($m_{\text{glucose}}$)</label>
+                  <input id="fermentGlucoseSlider" type="range" class="bench-slider" min="18" max="360" step="18" value="180">
+                  <span id="fermentGlucoseVal" style="font-size:0.82rem; color:var(--cyan-glow); font-family:monospace;">180.0 g (1.00 mol)</span>
+                </div>
+                <div class="control-group">
+                  <label class="control-label">Reaction Efficiency Yield ($H\%$)</label>
+                  <input id="fermentYieldSlider" type="range" class="bench-slider" min="50" max="100" step="5" value="90">
+                  <span id="fermentYieldVal" style="font-size:0.82rem; color:var(--amber-glow); font-family:monospace;">90% Efficiency</span>
+                </div>
+              </div>
+
+              <div style="display:flex; gap:0.75rem;">
+                <button id="startFermentBtn" class="bench-btn" style="flex:1;">🚀 Engage Zymase Fermentation</button>
+                <button id="resetFermentBtn" class="control-btn">🔄 Reset</button>
+              </div>
+            </div>
+
+            <!-- Telemetry Gauges -->
+            <div class="gauges-grid">
+              <div class="gauge-box">
+                <span class="gauge-title">Ethanol Yield</span>
+                <span id="ethanolYieldDisplay" class="gauge-value">82.8 g</span>
+                <span class="gauge-unit">Pure C₂H₅OH</span>
+              </div>
+              <div class="gauge-box">
+                <span class="gauge-title">CO₂ Gas Volume</span>
+                <span id="co2VolDisplay" class="gauge-value">44.62 L</span>
+                <span class="gauge-unit">25°C, 1 bar (Standard)</span>
+              </div>
+              <div class="gauge-box">
+                <span class="gauge-title">Yeast Activity</span>
+                <span id="yeastStatusDisplay" class="gauge-value" style="color:var(--emerald-glow);">ACTIVE</span>
+                <span class="gauge-unit">30-35°C Optimum</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Fermentation Chemistry & Stoichiometry -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag cyan">Stoichiometric Weapons</span>
+              <h3>Alcohol Fermentation Reaction &amp; Gas Laws</h3>
+            </div>
+            <p class="card-desc">
+              Biochemical breakdown of 6-carbon glucose into 2-carbon ethanol and carbon dioxide gas.
+            </p>
+
+            <div class="callout-box">
+              <span class="callout-icon">⚗️</span>
+              <div>
+                <strong>Balanced Biochemical Equation:</strong>
+                $$\text{C}_6\text{H}_{12}\text{O}_6 \xrightarrow{\text{Enzyme (Zymase)}, 30-35^\circ\text{C}} 2\text{C}_2\text{H}_5\text{OH} + 2\text{CO}_2\uparrow$$
+                <em>Molar masses:</em> $\text{C}_6\text{H}_{12}\text{O}_6 = 180\text{ g/mol}$, $\text{C}_2\text{H}_5\text{OH} = 46\text{ g/mol}$, $\text{CO}_2 = 44\text{ g/mol}$.
+              </div>
+            </div>
+
+            <div class="callout-box emerald">
+              <span class="callout-icon">📊</span>
+              <div>
+                <strong>Yield &amp; Volume Mathematical Formula:</strong>
+                $$n_{\text{ethanol}} = n_{\text{CO}_2} = 2 \times n_{\text{glucose}} \times \frac{H}{100}$$
+                $$m_{\text{ethanol}} = n_{\text{ethanol}} \times 46\text{ g/mol}$$
+                $$V_{\text{CO}_2} = n_{\text{CO}_2} \times 24.79\text{ L/mol } (25^\circ\text{C}, 1\text{ bar})$$
+              </div>
+            </div>
+
+            <div class="callout-box rose">
+              <span class="callout-icon">🍷</span>
+              <div>
+                <strong>Natural Wine Fermentation:</strong> Ripe grapes contain high concentrations of natural glucose and wild yeast on their skins. Crushing grapes activates fermentation, naturally synthesizing wine without needing added sugar.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 4: SACCHAROSE HYDROLYSIS REACTOR        -->
+      <!-- ============================================== -->
+      <section id="sector4" class="sector-pane">
+        <div class="pane-grid">
+          <!-- Left: Hydrolysis Chamber -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <div class="header-badge-row">
+                <span class="tag amber">Cleavage Reactor</span>
+                <span class="molar-mass-badge">Glycosidic Bond Cleavage</span>
+              </div>
+              <h3>Acid-Catalyzed Hydrolysis of Saccharose ($\text{C}_{12}\text{H}_{22}\text{O}_{11}$)</h3>
+            </div>
+            <p class="card-desc">
+              Saccharose is a disaccharide. Heating with acid breaks its central oxygen bridge, releasing equal moles of glucose and fructose.
+            </p>
+
+            <div class="lab-bench">
+              <div class="bench-controls">
+                <div class="control-group">
+                  <label class="control-label">Saccharose Mass</label>
+                  <input id="hydroSaccharoseSlider" type="range" class="bench-slider" min="34.2" max="342" step="34.2" value="34.2">
+                  <span id="hydroSaccharoseVal" style="font-size:0.82rem; color:var(--amber-glow); font-family:monospace;">34.2 g (0.10 mol)</span>
+                </div>
+                <div class="control-group">
+                  <label class="control-label">Catalyst Environment</label>
+                  <select id="catalystSelect" class="control-btn" style="width:100%;">
+                    <option value="acid">Dilute HCl + Heat (80°C)</option>
+                    <option value="enzyme">Sucrase / Invertase Enzyme</option>
+                    <option value="neutral">Neutral Water (No Reaction)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div style="display:flex; gap:0.75rem;">
+                <button id="runHydrolysisBtn" class="bench-btn" style="flex:1;">⚡ Run Hydrolysis Cleavage</button>
+                <button id="testHydroSilverBtn" class="control-btn">🪞 Test Silver Mirror</button>
+              </div>
+            </div>
+
+            <!-- Result Cards -->
+            <div class="gauges-grid">
+              <div class="gauge-box">
+                <span class="gauge-title">Glucose Formed</span>
+                <span id="hydroGlucoseDisplay" class="gauge-value">18.0 g</span>
+                <span class="gauge-unit">0.10 mol</span>
+              </div>
+              <div class="gauge-box">
+                <span class="gauge-title">Fructose Formed</span>
+                <span id="hydroFructoseDisplay" class="gauge-value">18.0 g</span>
+                <span class="gauge-unit">0.10 mol</span>
+              </div>
+              <div class="gauge-box">
+                <span class="gauge-title">Combined Mass</span>
+                <span id="hydroTotalDisplay" class="gauge-value">36.0 g</span>
+                <span class="gauge-unit">+1.8 g from H₂O</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Fructose vs Glucose & Silver Mirror Verification -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag cyan">Chemical Proof</span>
+              <h3>Hydrolysis Reaction &amp; Two-Step Silver Mirror Verification</h3>
+            </div>
+            <p class="card-desc">
+              Understanding why saccharose does not react directly with $\text{AgNO}_3/\text{NH}_3$, but reacts brilliantly after hydrolysis.
+            </p>
+
+            <div class="callout-box">
+              <span class="callout-icon">⚗️</span>
+              <div>
+                <strong>The Hydrolysis Chemical Equation:</strong>
+                $$\text{C}_{12}\text{H}_{22}\text{O}_{11} + \text{H}_2\text{O} \xrightarrow{\text{Acid/Enzyme}, t^\circ} \text{C}_6\text{H}_{12}\text{O}_6 \text{ (glucose)} + \text{C}_6\text{H}_{12}\text{O}_6 \text{ (fructose)}$$
+                <em>Notice:</em> Mass of products equals mass of saccharose <strong>plus</strong> the mass of reacted water ($18\text{ g/mol}$)!
+              </div>
+            </div>
+
+            <div class="callout-box amber">
+              <span class="callout-icon">🔍</span>
+              <div>
+                <strong>Isomers: Glucose vs Fructose:</strong>
+                Both possess the exact same molecular formula ($\text{C}_6\text{H}_{12}\text{O}_6$) and identical molar mass ($180\text{ g/mol}$), but differ in structural arrangement (glucose is an aldohexose, fructose is a ketohexose).
+              </div>
+            </div>
+
+            <div class="callout-box emerald">
+              <span class="callout-icon">🪞</span>
+              <div>
+                <strong>Two-Step Lab Verification of Saccharose:</strong>
+                <ol style="margin-left: 1.25rem; margin-top:0.35rem; line-height:1.5;">
+                  <li><strong>Step 1 (Direct Test):</strong> Pure saccharose $+ \text{AgNO}_3/\text{NH}_3 \xrightarrow{t^\circ} \text{Negative (Clear solution)}$.</li>
+                  <li><strong>Step 2 (Hydrolyzed Test):</strong> Saccharose $+$ dilute acid $+ t^\circ \to$ neutralize with $\text{NaOH} \to$ add $\text{AgNO}_3/\text{NH}_3 \xrightarrow{t^\circ} \mathbf{Positive\ (\text{Bright Silver Mirror} \Downarrow)}$.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 5: METABOLIC TELEMETRY & FLIGHT QUIZ    -->
+      <!-- ============================================== -->
+      <section id="sector5" class="sector-pane">
+        <div class="pane-grid">
+          <!-- Left: Astronaut Blood Glucose & ATP Regulation -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <div class="header-badge-row">
+                <span class="tag emerald">Life Support Telemetry</span>
+                <span class="molar-mass-badge">ATP Fuel Synthesis</span>
+              </div>
+              <h3>Astronaut Blood Glucose Regulation &amp; Cellular Energy</h3>
+            </div>
+            <p class="card-desc">
+              Glucose is the primary instantaneous fuel for human astronaut brain neurons and muscle contraction.
+            </p>
+
+            <div class="callout-box">
+              <span class="callout-icon">⚡</span>
+              <div>
+                <strong>Cellular Respiration Reaction:</strong>
+                $$\text{C}_6\text{H}_{12}\text{O}_6 + 6\text{O}_2 \longrightarrow 6\text{CO}_2 + 6\text{H}_2\text{O} + 30-32\text{ ATP (Energy)}$$
+                In orbital space missions, every breath of oxygen burns blood glucose to power brain computation and physical work.
+              </div>
+            </div>
+
+            <div class="callout-box cyan">
+              <span class="callout-icon">🩺</span>
+              <div>
+                <strong>Hormonal Feedback Cockpit (Insulin vs Glucagon):</strong>
+                <ul style="margin-left: 1.25rem; margin-top: 0.35rem; line-height: 1.5;">
+                  <li><strong>After Meals (High Blood Glucose):</strong> Pancreas secretes <strong>Insulin</strong> $\to$ guides glucose into body cells &amp; synthesizes glycogen storage in liver $\to$ restores normal blood sugar (~0.1%).</li>
+                  <li><strong>During Fasting / Space EVA (Low Blood Glucose):</strong> Pancreas secretes <strong>Glucagon</strong> $\to$ triggers liver glycogen breakdown into glucose $\to$ raises blood sugar back to stable levels.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="callout-box rose">
+              <span class="callout-icon">💉</span>
+              <div>
+                <strong>Medical 5% Glucose Intravenous Drip:</strong> An isotonic solution containing exactly $5\text{ g}$ of glucose per $100\text{ g}$ of solution ($25\text{ g}$ in $500\text{ g}$ drip bag), administered to restore immediate cellular energy without bursting blood cells.
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Flight Readiness Quiz -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <div class="header-badge-row">
+                <span class="tag amber">Knowledge Verification</span>
+                <span id="quizScoreBadge" class="molar-mass-badge">Score: 0 / 5</span>
+              </div>
+              <h3>Flight Readiness Quick Quiz</h3>
+            </div>
+            <p class="card-desc">
+              Test your grasp of carbohydrate formulas, silver mirror reactions, and fermentation stoichiometry.
+            </p>
+
+            <div id="quizContainer" class="quiz-container">
+              <!-- Dynamically Populated by app.js -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
