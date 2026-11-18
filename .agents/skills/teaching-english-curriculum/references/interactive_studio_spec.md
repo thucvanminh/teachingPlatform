@@ -1,137 +1,74 @@
-# Interactive Lecture Studio Specification (Quy Chuẩn Phòng Học Tương Tác)
+# Interactive Lecture Studio Specification (Quy Chuẩn Phòng Học Tương Tác Mới)
 
-Whenever creating an interactive lecture, it must be hosted in `frontend/public/lectures/<slug>/` and contain 4 core files:
-- `data.js`: Structured content matrix (Vocab, Grammar, Collocations, Word Tree, Recall, Writing).
-- `style.css`: Clean, bright Light Theme with soft shadows and tactile responsive elements.
-- `index.html`: Semantic layout with tab bar and panels.
-- `app.js`: Audio synthesis, drag/match game mechanics, evaluation algorithms.
+> [!IMPORTANT]
+> **QUY CHUẨN THIẾT KẾ MỚI (TỪ 18/11/2026 TRỞ ĐI):**
+> Phòng học tương tác độc lập tại `frontend/public/lectures/<slug>/` **CHỈ GIỮ LẠI ĐÚNG 2 PHẦN**:
+> 1. **1. Flashcard 3D (2 Chiều):** Luyện phản xạ từ vựng đa chiều với 2 chế độ chính:
+>    - *Chức năng 1 (EN ➔ VI):* Hiện tiếng Anh, IPA, audio phát âm 🔊 ➔ Giấu tiếng Việt ở mặt sau.
+>    - *Chức năng 2 (VI ➔ EN):* Hiện nghĩa tiếng Việt ➔ Giấu tiếng Anh, IPA, câu ví dụ ở mặt sau.
+>    - Có chế độ xem Luyện từng thẻ (Deck Player) và Lưới tất cả thẻ (Grid View), hỗ trợ phím tắt bàn phím (Space, Mũi tên, P, F, 1, 2) và xem toàn màn hình (Fullscreen).
+> 2. **2. Lý Thuyết & xx Từ Vựng Cốt Lõi:**
+>    - Danh sách từ vựng có thanh tìm kiếm nhanh, nút lọc nhóm Unit, nút phát âm Web Speech API, IPA, từ loại, nghĩa tiếng Việt, Collocation và câu ví dụ song ngữ.
+>    - Chuyên đề ngữ pháp chuyên sâu (Grammar Compendium) trình bày dạng Accordion thẻ đẹp mắt, phân tích cấu trúc câu $S - V - O$, cảnh báo bẫy thi và **nhúng trực tiếp Interactive Quick Quiz Drills** (bấm chọn đáp án đổi màu xanh/đỏ tức thì, phát âm thanh feedback và trượt mở box giải thích chi tiết).
+> 
+> **TUYỆT ĐỐI BỎ HOÀN TOÀN CÁC PHẦN 3, 4, 5, 6:**
+> - ❌ BỎ Phần 3: Collocations & Odd-One-Out.
+> - ❌ BỎ Phần 4: Word Family Tree & Open Cloze.
+> - ❌ BỎ Phần 5: Đoán Chữ (Active Recall).
+> - ❌ BỎ Phần 6: Thử Thách Đặt Câu (Writing).
 
 ---
 
-## 1. Chuẩn Hóa Khung Dữ Liệu (The Strict Data Contract)
+## 1. Cấu Trúc File Cần Có
 
-> [!CAUTION]
-> **Bài học xương máu:** Các trường (`fields`) giữa `data.js` và `app.js` phải khớp 100%. Nếu sai tên trường hoặc thiếu `id`, giao diện sẽ gặp lỗi `undefined` hoặc `NaN` và khung hiển thị sẽ bị **bỏ trống (blank)**!
+Mỗi phòng học tương tác gồm 4 file độc lập trong `frontend/public/lectures/<slug>/`:
+- `data.js`: Cung cấp `LECTURE_DATA` chuẩn (chỉ gồm `vocabList` và `grammarModules`).
+- `style.css`: Light Theme hiện đại, chuyển động mượt mà, hỗ trợ 3D transform cho thẻ Flashcard và Quick Quiz.
+- `index.html`: Khung HTML chỉ gồm 2 tabs (`tab-flashcards` và `tab-vocab`).
+- `app.js`: Bộ điều khiển audio (Web Audio API & Web Speech API), logic Flashcard 3D 2 chiều, tìm kiếm từ vựng và chấm Quick Quiz.
 
-### Cấu trúc chuẩn của `LECTURE_DATA` (trong `data.js`):
+---
+
+## 2. Chuẩn Hóa Khung Dữ Liệu (`data.js`)
 
 ```javascript
 const LECTURE_DATA = {
-  title: "...",
-  subject: "...",
+  title: "Unit 7: The World of Mass Media",
+  subject: "Tiếng Anh 12 - Global Success",
   teacher: "Thầy Thức",
 
-  // 1. TỪ VỰNG CỐT LÕI (50 TỪ VỰNG)
+  // 1. TỪ VỰNG CỐT LÕI (xx TỪ VỰNG)
   vocabList: [
     {
       id: 1, // BẮT BUỘC: Số nguyên dương
-      unit: 1, // 1, 2, hoặc 3
-      unitName: "Unit 1: A Long and Healthy Life",
-      word: "Longevity",
-      ipa: "/lɒnˈdʒevəti/",
+      unit: 1, // Nhóm/Unit số 1, 2, 3...
+      unitName: "Nhóm 1: Mass Media & Báo Chí",
+      word: "Leaflet",
+      ipa: "/ˈliːflət/",
       pos: "noun",
-      meaning: "Tuổi thọ, sự sống lâu",
-      collocation: "promote longevity / achieve longevity",
-      example: "A balanced diet and regular exercise are key factors that promote longevity.",
-      exampleVi: "Chế độ ăn cân bằng và tập thể dục đều đặn là những yếu tố then chốt giúp nâng cao tuổi thọ."
+      meaning: "Tờ rơi quảng cáo, truyền đơn",
+      collocation: "distribute leaflets / hand out leaflets",
+      example: "Volunteers handed out promotional leaflets to passers-by in the pedestrian street.",
+      exampleVi: "Các tình nguyện viên đã phát tờ rơi quảng cáo cho người qua đường trên phố đi bộ."
     }
   ],
 
   // 2. CHUYÊN ĐỀ NGỮ PHÁP (KÈM INTERACTIVE QUICK QUIZ DRILLS)
   grammarModules: [
     {
-      id: "gram1", // BẮT BUỘC: chuỗi ID duy nhất
-      title: "1. Danh Động Từ Làm Chủ Ngữ (Gerunds as Subjects)",
-      focus: "Trọng tâm Unit - Quy tắc hòa hợp số ít & Cấu trúc giả chủ ngữ",
-      theoryHtml: `...toàn bộ thẻ HTML đẹp mắt (quy tắc, bảng phân tích, bẫy 8.5+, ví dụ song ngữ)...`, // BẮT BUỘC: render trực tiếp
-      drills: [ // BẮT BUỘC: Mảng 3-4 câu trắc nghiệm tương tác nhanh
+      id: "gram1", // BẮT BUỘC: Chuỗi ID duy nhất
+      title: "1. Mệnh Đề Trạng Ngữ Chỉ Cách Thức (Manner)",
+      focus: "Cấu trúc As, Just as, Like và Giả định không có thật As if / As though",
+      theoryHtml: `...Toàn bộ nội dung lý thuyết HTML đẹp mắt (công thức, ví dụ song ngữ, bẫy thi)...`,
+      drills: [ // BẮT BUỘC: Mảng 3-4 câu hỏi Quick Quiz trắc nghiệm tương tác
         {
           id: "d1_1",
-          question: "Maintaining friendly diplomatic relations ______ mutual trust.",
-          options: ["A. require", "B. requires", "C. requiring", "D. have required"],
-          correct: 1, // BẮT BUỘC: 0-based index của đáp án đúng (0=A, 1=B, 2=C, 3=D)
-          explanation: "Chủ ngữ là V-ing 'Maintaining' số ít nên động từ chính phải chia số ít là 'requires'."
+          question: "She talks loudly on the phone as if no one else ______ in the room.",
+          options: ["A. is", "B. were", "C. will be", "D. has been"],
+          correct: 1, // 0-based index: 0=A, 1=B, 2=C, 3=D
+          explanation: "Thực tế có người trong phòng, giả định trái hiện tại với 'as if' lùi về 'were' cho tất cả các ngôi."
         }
       ]
-    }
-  ],
-
-  // 3. COLLOCATION MATCHING PAIRS (8 CẶP)
-  collocationPairs: [
-    {
-      id: 1, // BẮT BUỘC: Số nguyên để ghép cặp với cột danh từ
-      verb: "cut down on",
-      noun: "fatty foods and sugary drinks",
-      meaning: "(cắt giảm thức ăn dầu mỡ & đồ ngọt)"
-    }
-  ],
-
-  // 3B. ODD-ONE-OUT COLLOCATION (4 CÂU)
-  oddOneOut: [
-    {
-      id: 1,
-      nounPhrase: "________ the generation gap",
-      options: ["bridge", "narrow", "widen", "prescribe"], // Mảng 4 chuỗi ký tự (KHÔNG dùng mảng object)
-      wrongIndex: 3, // BẮT BUỘC: Index (0-3) của từ SAI cần tìm
-      explanation: "Chính xác! Ta dùng 'bridge/narrow/widen the generation gap'. 'prescribe' chỉ dùng cho thuốc kháng sinh!"
-    }
-  ],
-
-  // 4. WORD FAMILY TREE (4 GỐC TỪ)
-  wordFamilyRoots: [
-    {
-      id: 1,
-      root: "SUSTAIN",
-      pos: "verb",
-      meaning: "duy trì, chống đỡ",
-      derivatives: [
-        {
-          word: "sustainability", // BẮT BUỘC: Dùng tên trường 'word' (KHÔNG dùng 'form')
-          pos: "noun",
-          vi: "sự bền vững môi trường"
-        },
-        {
-          word: "sustainable",
-          pos: "adjective",
-          vi: "bền vững, thân thiện sinh thái"
-        }
-      ]
-    }
-  ],
-
-  // 4B. OPEN CLOZE WORD FORMATION (5 CÂU)
-  openCloze: [
-    {
-      id: 1, // BẮT BUỘC: Số nguyên để tìm kiếm
-      sentence: "It is crucial to follow a _________ diet containing all vital vitamins. (BALANCE)",
-      root: "BALANCE",
-      expectedAnswer: "balanced", // BẮT BUỘC: Dùng tên trường 'expectedAnswer' (chữ thường)
-      explanation: "Trước danh từ 'diet' cần một TÍNH TỪ mang nghĩa 'cân bằng' ➔ balanced."
-    }
-  ],
-
-  // 5. ACTIVE RECALL FIRST-LETTER CLUE (5 CÂU)
-  activeRecall: [
-    {
-      id: 1, // BẮT BUỘC: Số nguyên
-      sentence: "Modern city planners are building dedicated p_____________ zones where all motor vehicles are banned.",
-      clue: "p", // BẮT BUỘC: Chữ cái đầu gợi ý (ví dụ: 'p')
-      targetWord: "pedestrian", // BẮT BUỘC: Từ cần gõ (chữ thường)
-      ipa: "/pəˈdestriən/",
-      vi: "Người đi bộ / khu vực đi bộ",
-      definition: "A person walking rather than travelling in a vehicle." // BẮT BUỘC: Dùng 'definition' (KHÔNG dùng 'def')
-    }
-  ],
-
-  // 6. INTERACTIVE SENTENCE WRITING (4 THỬ THÁCH)
-  writingChallenges: [
-    {
-      id: 1, // BẮT BUỘC: Số nguyên (1, 2, 3...) để tránh lỗi parseInt ra NaN
-      keyword: "cut down on",
-      prompt: "Hãy viết 1 câu khuyên bạn bè 'cắt giảm đồ ngọt hoặc đồ ăn nhanh' dùng 'cut down on'.",
-      requiredWords: ["cut down on"],
-      forbiddenWords: ["cut down at", "cut down in"], // Bẫy cần bắt lỗi
-      modelAnswer: "You should cut down on fast food and sugary drinks to live a healthier life."
     }
   ]
 };
@@ -139,14 +76,11 @@ const LECTURE_DATA = {
 
 ---
 
-## 2. Các Lỗi Thường Gặp Phải Tránh (Anti-Patterns Checklist)
+## 3. Các Lỗi Phải Tránh (Anti-Patterns Checklist)
 
-| Lỗi sai từng gặp | Hậu quả trên giao diện | Cách khắc phục chuẩn |
+| Lỗi sai cần tránh | Hậu quả | Giải pháp chuẩn |
 | :--- | :--- | :--- |
-| **`app.js` kiểm tra `mod.id === 'tenses'`** nhưng trong `data.js` ID là `"gram1"` | Toàn bộ nội dung lý thuyết ngữ pháp bị rỗng trắng (blank accordion) | `app.js` luôn render trực tiếp `mod.theoryHtml`, không hardcode so sánh ID. |
-| **`collocationPairs` thiếu trường `id`** | Cột trái và cột phải đều có `data-id="undefined"`, trò chơi nối từ tê liệt | Bắt buộc đánh số `id: 1, 2, 3...` trên từng cặp. |
-| **`oddOneOut` dùng `options: [{ word, isOdd }]`** | Giao diện nút hiển thị `[object Object]` và không nhận sự kiện click | `options` phải là mảng chuỗi `["A", "B", "C", "D"]` kèm `wrongIndex: number`. |
-| **`wordFamilyRoots` dùng `d.form` thay vì `d.word`** | Các nhánh từ loại bị trống rỗng chữ | Đồng bộ tên trường là `d.word`. |
-| **`openCloze` dùng `answer` thay vì `expectedAnswer`** | Bấm kiểm tra luôn báo sai hoặc không tìm thấy câu hỏi | Đồng bộ `id: number` và `expectedAnswer: string`. |
-| **`activeRecall` dùng `def` thay vì `definition`** | Hộp định nghĩa hiển thị `"undefined"`, không nhận diện được từ mục tiêu | Dùng đầy đủ `definition`, `targetWord` và `clue`. |
-| **`writingChallenges` dùng `id: "w1"`** | `parseInt("w1", 10)` trả về `NaN`, câu hỏi không thể submit | Dùng số nguyên `id: 1, 2, 3...`. |
+| **Thêm tab hoặc section 3, 4, 5, 6** | Làm bài giảng bị loãng, không đúng yêu cầu của Thầy | Chỉ tạo đúng 2 tabs: 1. Flashcard 3D và 2. Lý Thuyết & Từ Vựng Cốt Lõi. |
+| **`app.js` gọi `initCollocations()` hoặc các hàm thừa** | Gây lỗi runtime console hoặc rác code | `DOMContentLoaded` chỉ gọi: `initTabs()`, `initFlashcards()`, `initVocabHub()`. |
+| **Thiếu `correct` hoặc `drills` trong `grammarModules`** | Module bài tập nhanh không hoạt động hoặc không đổi màu | Luôn cung cấp mảng `drills` đầy đủ `id`, `question`, `options`, `correct` (0-3), `explanation`. |
+| **Sai tên trường trong `vocabList`** | Flashcard bị trống chữ hoặc phát âm sai | Luôn có đủ: `id`, `word`, `ipa`, `pos`, `meaning`, `collocation`, `example`, `exampleVi`. |

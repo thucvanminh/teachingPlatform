@@ -42,12 +42,17 @@ $ARGUMENTS
   - **Trên Card Markdown:** Dưới mỗi chuyên đề có 3–4 câu trắc nghiệm/điền từ/viết lại câu kèm khung [Đáp án & Giải thích chi tiết].
   - **Trong Web Studio:** Nhúng module tương tác **Interactive Quick Quiz Widget** vào trực tiếp từng Accordion chuyên đề trong `data.js` & `app.js` (học sinh click chọn A, B, C, D ➔ đổi màu xanh/đỏ tức thì, phát âm thanh feedback và trượt mở box giải thích chi tiết).
 
-### Bước 3: Thiết kế Phòng học tương tác (Interactive Studio)
+### Bước 3: Thiết kế Phòng học tương tác (Interactive Studio) - CHỈ GỒM 2 PHẦN
 1. Tạo thư mục tại: `frontend/public/lectures/<slug>/`
-2. Tạo file `index.html` độc lập (HTML5, Tailwind/CSS nội tuyến, Web Speech API đọc phát âm chuẩn):
-   - **Từ vựng cốt lõi:** Có audio phát âm bản xứ (Web Speech API), IPA, từ loại, nghĩa tiếng Việt, Collocation và câu ví dụ song ngữ.
-   - **Chuyên đề ngữ pháp:** Lý thuyết chi tiết kèm widget bài tập nhanh (Interactive Quick Check) đổi màu chấm điểm tức thì.
-   - **Tính năng tương tác:** Flashcard 3D lật 2 chiều, Collocation Matching Game, Word Family Tree, Active Recall, Sentence Writing.
+2. Tạo file `index.html`, `style.css`, `data.js`, `app.js` độc lập. **Chỉ giữ lại đúng 2 phần, tuyệt đối bỏ các phần 3, 4, 5, 6:**
+   - **Phần 1. Flashcard 3D (2 Chiều):**
+     + *Chức năng 1 (Anh ➔ Việt):* Hiện từ tiếng Anh, IPA, audio phát âm 🔊, giấu tiếng Việt ở mặt sau.
+     + *Chức năng 2 (Việt ➔ Anh):* Hiện nghĩa tiếng Việt, giấu từ tiếng Anh, IPA ở mặt sau.
+     + Hỗ trợ chế độ xem Luyện từng thẻ (Deck) và Lưới thẻ (Grid), phím tắt bàn phím (<kbd>Space</kbd>, <kbd>←</kbd> <kbd>→</kbd>, <kbd>P</kbd>, <kbd>F</kbd>, <kbd>1</kbd>, <kbd>2</kbd>) và xem toàn màn hình (Fullscreen).
+   - **Phần 2. Lý Thuyết & Từ Vựng Cốt Lõi:**
+     + Bảng tra cứu từ vựng có thanh tìm kiếm nhanh, nút lọc nhóm, audio Web Speech API, IPA, từ loại, nghĩa tiếng Việt, Collocation và ví dụ song ngữ.
+     + Chuyên đề ngữ pháp: Lý thuyết chi tiết kèm widget bài tập nhanh (Interactive Quick Quiz Drills) đổi màu chấm điểm xanh/đỏ tức thì, phát âm thanh feedback và trượt mở box giải thích.
+   - **BỎ HOÀN TOÀN CÁC PHẦN 3, 4, 5, 6:** Tuyệt đối không tạo phần 3 (Collocation Game/Odd One Out), 4 (Word Family Tree/Open Cloze), 5 (Active Recall) và 6 (Writing).
    - **Giao diện:** Chuẩn Light Theme (trắng/xám sáng, thanh lịch, hiện đại, không dùng nền tối).
 
 ### Bước 4: Biên soạn bộ câu hỏi trắc nghiệm (60 - 100 câu) theo 5 quy tắc vàng

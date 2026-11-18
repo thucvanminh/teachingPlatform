@@ -58,18 +58,6 @@
       <button class="tab-btn" data-tab="tab-vocab" role="tab" aria-selected="false">
         2. Lý Thuyết &amp; 20 Từ Cốt Lõi
       </button>
-      <button class="tab-btn" data-tab="tab-collocations" role="tab" aria-selected="false">
-        3. Cụm Từ Tự Nhiên (Collocations)
-      </button>
-      <button class="tab-btn" data-tab="tab-wordfamily" role="tab" aria-selected="false">
-        4. Cây Từ Loại (Word Family)
-      </button>
-      <button class="tab-btn" data-tab="tab-recall" role="tab" aria-selected="false">
-        5. Đoán Chữ (Active Recall)
-      </button>
-      <button class="tab-btn" data-tab="tab-writing" role="tab" aria-selected="false">
-        6. Thử Thách Đặt Câu (Writing)
-      </button>
     </nav>
 
     <!-- ========================================================
@@ -284,107 +272,6 @@
         <div id="grammarContainer">
           <!-- Rendered dynamically by app.js -->
         </div>
-      </div>
-    </section>
-
-    <!-- ========================================================
-         TAB 3: COLLOCATION & ODD ONE OUT
-         ======================================================== -->
-    <section id="tab-collocations" class="tab-content" role="tabpanel">
-      <!-- Feature 1: Matching Game -->
-      <div class="game-instruction-banner">
-        <div>
-          <strong>🎯 Trò chơi Nối Cụm Từ (Collocation Pairing):</strong>
-          Nhấn 1 Động từ ở cột trái rồi nhấn Cụm Danh từ phù hợp ở cột phải. Tránh lỗi dịch "word-by-word"!
-        </div>
-        <button id="resetCollocBtn" class="btn-subtle" style="white-space:nowrap; margin-left: 12px; font-size:0.8rem; padding: 6px 12px;">
-          🔄 Chơi lại
-        </button>
-      </div>
-
-      <div class="colloc-match-grid" id="collocBoard">
-        <div class="match-column" id="collocVerbsCol">
-          <!-- Left items: Verbs -->
-        </div>
-        <div class="match-column" id="collocNounsCol">
-          <!-- Right items: Noun phrases -->
-        </div>
-      </div>
-
-      <div id="collocSuccessBanner" class="feedback-banner success" style="margin-bottom: 24px; text-align: center; font-weight: 700;">
-        🎉 Tuyệt vời! Nam Việt đã ghép chuẩn xác tất cả các Collocation trọng điểm Unit 7!
-      </div>
-
-      <!-- Feature 2: Odd One Out Collocation -->
-      <div class="section-headline" style="margin-top: 36px; margin-bottom: 12px;">
-        <span>🔍</span> Phát Hiện Kết Hợp Từ Sai (Odd One Out Collocation)
-      </div>
-      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">
-        Trong 4 phương án đi cùng cấu trúc trung tâm, có <strong>1 từ SAI ngữ pháp hoặc không tự nhiên</strong>. Hãy chạm vào từ không phù hợp!
-      </p>
-
-      <div id="oddOneOutContainer">
-        <!-- Rendered dynamically by app.js -->
-      </div>
-    </section>
-
-    <!-- ========================================================
-         TAB 4: WORD FAMILY & OPEN CLOZE
-         ======================================================== -->
-    <section id="tab-wordfamily" class="tab-content" role="tabpanel">
-      <div class="game-instruction-banner" style="background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); border-color: #e9d5ff; color: #6b21a8;">
-        <div>
-          <strong>🌳 Sơ Đồ Cây Từ Loại Tương Tác (Word Family Tree):</strong>
-          Nắm vững họ từ phái sinh (Noun - Verb - Adj - Adv) giúp bạn xử lý 100% dạng bài Biến đổi từ loại trong đề thi THPTQG.
-        </div>
-      </div>
-
-      <div id="wordFamilyContainer">
-        <!-- Rendered dynamically by app.js -->
-      </div>
-
-      <!-- Open Cloze Word Formation Practice -->
-      <div class="section-headline" style="margin-top: 36px; margin-bottom: 12px;">
-        <span>📝</span> Thử Thách Biến Đổi Dạng Từ (Open Cloze Word Formation)
-      </div>
-      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">
-        Xác định từ loại còn thiếu dựa vào cấu trúc ngữ pháp xung quanh ô trống, sau đó nhập dạng từ đúng của từ in hoa trong ngoặc.
-      </p>
-
-      <div id="openClozeContainer">
-        <!-- Rendered dynamically by app.js -->
-      </div>
-    </section>
-
-    <!-- ========================================================
-         TAB 5: ACTIVE RECALL (FIRST LETTER CLUE)
-         ======================================================== -->
-    <section id="tab-recall" class="tab-content" role="tabpanel">
-      <div class="game-instruction-banner" style="background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border-color: #fde68a; color: #92400e;">
-        <div>
-          <strong>⚡ Phản Xạ Truy Xuất Từ Vựng (Active Recall Challenge):</strong>
-          Đọc kỹ định nghĩa tiếng Anh và câu hoàn chỉnh khuyết từ. Sử dụng chữ cái đầu tiên làm gợi ý để tự gõ chính xác mặt chữ!
-        </div>
-      </div>
-
-      <div id="activeRecallContainer">
-        <!-- Rendered dynamically by app.js -->
-      </div>
-    </section>
-
-    <!-- ========================================================
-         TAB 6: INTERACTIVE SENTENCE WRITING
-         ======================================================== -->
-    <section id="tab-writing" class="tab-content" role="tabpanel">
-      <div class="game-instruction-banner" style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border-color: #bfdbfe; color: #1e40af;">
-        <div>
-          <strong>✍️ Thử Thách Đặt Câu Tương Tác &amp; Phân Tích Lỗi Ngay Lập Tức:</strong>
-          Chuyển từ vựng và cấu trúc mệnh đề cách thức (as if/were) &amp; kết quả (so/such...that) sang câu tự viết theo ngữ cảnh. Thuật toán tự động chấm từ khóa, giới từ và bẫy ngữ pháp!
-        </div>
-      </div>
-
-      <div id="writingChallengesContainer">
-        <!-- Rendered dynamically by app.js -->
       </div>
     </section>
 

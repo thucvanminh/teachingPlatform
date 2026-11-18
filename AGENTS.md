@@ -83,7 +83,7 @@ OpenCode commands are configured in `.opencode/commands/` and can be invoked dir
      - Phân tích cặn kẽ bản chất cơ chế ngữ pháp, bảng công thức, dấu hiệu nhận biết, bảng đối chiếu, bẫy thi 8.5+.
      - Tối thiểu 2–3 ví dụ song ngữ cho mỗi cấu trúc có phân tích $S - V - O$.
      - **Tích hợp Quick Check Drills:** Trên Card Markdown có 3-4 câu trắc nghiệm/điền từ/viết lại câu kèm bảng [Đáp án & Giải thích chi tiết]; Trong Web Studio nhúng module tương tác Interactive Quick Quiz Widget đổi màu xanh/đỏ tức thì, phát âm thanh feedback và trượt mở box giải thích.
-  3. **Tạo Web Studio:** Sinh web tại `frontend/public/lectures/<slug>/index.html` (50 từ vựng Web Speech API, các chuyên đề ngữ pháp kèm Quick Quiz, Flashcard 3D, Collocation Game, Word Tree, Light Theme).
+  3. **Tạo Web Studio (CHỈ GỒM 2 PHẦN):** Sinh web tại `frontend/public/lectures/<slug>/index.html` chỉ gồm đúng 2 phần: **1. Flashcard 3D (2 Chiều EN ➔ VI & VI ➔ EN)** phát âm bản xứ Web Speech API, phím tắt, fullscreen; và **2. Lý Thuyết & xx Từ vựng Cốt Lõi** kèm Accordion ngữ pháp nhúng Interactive Quick Quiz Widget đổi màu xanh/đỏ tức thì, Light Theme. **Tuyệt đối bỏ hoàn toàn các phần 3, 4, 5, 6** (Collocation Game, Word Tree, Active Recall, Writing).
   4. **Bộ câu hỏi trắc nghiệm (60-100 câu) tuân thủ 5 quy tắc vàng:**
      - Câu hỏi phải sử dụng từ vựng bài học.
      - Câu hỏi từ vựng: 4 lựa chọn A, B, C, D phải có **tối thiểu 2 từ vựng của Unit đang học** (chống khoanh lụi).

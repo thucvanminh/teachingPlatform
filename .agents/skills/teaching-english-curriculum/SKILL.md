@@ -78,26 +78,35 @@ Bài giảng ngữ pháp trên cả **Card Markdown** lẫn **Web Studio** phả
 
 ### Bước 3: Tạo Phòng Học Tương Tác Web (Interactive Studio)
 
+> [!IMPORTANT]
+> **QUY CHUẨN MỚI CHO BÀI GIẢNG TƯƠNG TÁC:**
+> Phòng học tương tác độc lập tại `frontend/public/lectures/<slug>/` **CHỈ GIỮ LẠI ĐÚNG 2 PHẦN**:
+> 1. **1. Flashcard 3D (2 Chiều):** Luyện phản xạ từ vựng đa chiều với 2 chế độ chính:
+>    - *Chức năng 1 (EN ➔ VI):* Hiện tiếng Anh, IPA, audio phát âm 🔊 ➔ Giấu tiếng Việt ở mặt sau.
+>    - *Chức năng 2 (VI ➔ EN):* Hiện nghĩa tiếng Việt ➔ Giấu từ tiếng Anh, IPA, câu ví dụ ở mặt sau.
+>    - Hỗ trợ chế độ Luyện từng thẻ (Deck) và Lưới thẻ (Grid), phím tắt bàn phím (<kbd>Space</kbd>, <kbd>←</kbd> <kbd>→</kbd>, <kbd>P</kbd>, <kbd>F</kbd>, <kbd>1</kbd>, <kbd>2</kbd>) và Toàn màn hình (Fullscreen).
+> 2. **2. Lý Thuyết & xx Từ Vựng Cốt Lõi:**
+>    - Bảng danh sách từ vựng có thanh tìm kiếm nhanh, nút lọc nhóm, audio phát âm Web Speech API, IPA, từ loại, nghĩa tiếng Việt, Collocation và câu ví dụ song ngữ.
+>    - Chuyên đề ngữ pháp chuyên sâu (Grammar Compendium) trình bày dạng Accordion thẻ đẹp mắt, phân tích cấu trúc $S - V - O$, cảnh báo bẫy thi và **nhúng trực tiếp Interactive Quick Quiz Drills** (bấm chọn đáp án đổi màu xanh/đỏ tức thì, phát âm thanh feedback và trượt mở box giải thích chi tiết).
+> 
+> **TUYỆT ĐỐI BỎ CÁC PHẦN 3, 4, 5, 6:**
+> Không đưa các phần Collocations, Word Family Tree, Đoán chữ (Active Recall), Thử thách đặt câu (Writing) vào phòng học tương tác nữa.
+
 Tạo thư mục `frontend/public/lectures/<slug>/` gồm 4 tệp:
 
-1. **`data.js`**: Chứa toàn bộ dữ liệu có cấu trúc:
+1. **`data.js`**: Chứa toàn bộ dữ liệu có cấu trúc (chỉ gồm `vocabList` và `grammarModules`):
    - `vocabList`: Từ vựng cốt lõi của Unit (có phát âm IPA, từ loại, nghĩa tiếng Việt, Collocation và câu ví dụ song ngữ).
    - `grammarModules`: Các chuyên đề ngữ pháp chuyên sâu, mỗi module chứa:
-     + `theoryHtml`: Bảng quy tắc, highlight bẫy thi 8.5+, ví dụ song ngữ.
+     + `theoryHtml`: Bảng quy tắc, highlight bẫy thi, ví dụ song ngữ.
      + `drills: [{ id, question, options, correct, explanation }]`: Mảng 3–4 câu hỏi interactive quiz cho từng chuyên đề.
-   - `collocationPairs`: 8-10 cặp ghép từ (`id: number`, `verb`, `noun`, `meaning`).
-   - `oddOneOut`: 4 câu đố (`options: string[]`, `wrongIndex: number`, `explanation`).
-   - `wordFamilyRoots`: 4 sơ đồ cây (`derivatives: [{ word, pos, vi }]`).
-   - `openCloze`: 5 câu điền từ (`id: number`, `expectedAnswer: string`, `explanation`).
-   - `activeRecall`: 5 thử thách (`id: number`, `clue: string`, `targetWord: string`, `definition: string`).
-   - `writingChallenges`: 4 thử thách đặt câu (`id: number`, `keyword`, `prompt`, `requiredWords`, `forbiddenWords`, `modelAnswer`).
-2. **`style.css`**: Giao diện Light Theme hiện đại, responsive mobile-first, stylesheet cho `.grammar-drills-container`, `.drill-card`, `.drill-opt-btn`, `.drill-explanation-box`.
-3. **`index.html`**: Khung ngữ nghĩa gồm thanh tab bar chuyển đổi các trạm học tập.
+2. **`style.css`**: Giao diện Light Theme hiện đại, responsive mobile-first, 3D card perspective, stylesheet cho `.grammar-drills-container`, `.drill-card`, `.drill-opt-btn`, `.drill-explanation-box`.
+3. **`index.html`**: Khung ngữ nghĩa gồm đúng 2 tabs: `tab-flashcards` và `tab-vocab`.
 4. **`app.js`**: Bộ điều khiển tương tác:
-   - **Web Speech API:** Phát âm giọng bản xứ khi bấm loa 🔊.
+   - **Flashcard 3D Engine:** Chuyển đổi 2 chế độ EN ➔ VI và VI ➔ EN, Deck vs Grid, lật thẻ 3D, xáo trộn, phím tắt.
+   - **Web Speech API:** Phát âm giọng bản xứ khi bấm loa 🔊 hoặc phím P.
    - **Web Audio API:** Âm thanh phản hồi khi làm đúng (`playSuccessSound`)/sai (`playErrorSound`).
    - **Interactive Quick Quiz Engine:** Gắn sự kiện click cho các nút drill trong từng accordion ngữ pháp, đổi màu xanh/đỏ và mở box giải thích.
-   - **Bộ thẩm định viết câu:** Kiểm tra từ khóa, phát hiện bẫy ngữ pháp.
+   - **Bộ lọc & Tìm kiếm từ vựng:** Tìm kiếm thời gian thực theo từ khóa, lọc theo nhóm Unit.
 
 ---
 

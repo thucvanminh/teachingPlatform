@@ -30,7 +30,10 @@ Thực hiện quy trình tạo bài giảng và bài tập theo đúng hướng 
    - **Tích hợp bài tập nhanh vận dụng ngay (Quick Check Drills):**
      + Trên Card Markdown: Mỗi chuyên đề có 3–4 câu trắc nghiệm/điền từ/viết lại câu kèm bảng [Đáp án & Giải thích chi tiết].
      + Trong Web Studio: Nhúng module tương tác **Interactive Quick Quiz Widget** vào trực tiếp từng Accordion chuyên đề ngữ pháp (đổi màu xanh/đỏ tức thì, âm thanh Chime/Buzzer, trượt mở box giải thích chi tiết).
-4. **Tạo Phòng học tương tác (Interactive Studio):** Sinh ứng dụng web tại `frontend/public/lectures/<slug>/` (Flashcard 3D hai chiều, 6 chuyên đề ngữ pháp kèm Quick Quiz, Collocation game, Word family tree, Active recall, Sentence writing).
+4. **Tạo Phòng học tương tác (Interactive Studio) - CHỈ GỒM 2 PHẦN:** Sinh ứng dụng web tại `frontend/public/lectures/<slug>/` chỉ gồm đúng 2 phần:
+   - **Phần 1. Flashcard 3D (2 Chiều):** Luyện phản xạ từ vựng cả 2 chiều (EN ➔ VI và VI ➔ EN), phát âm chuẩn Web Speech API, chế độ Luyện từng thẻ (Deck) và Lưới thẻ (Grid), hỗ trợ phím tắt bàn phím và xem toàn màn hình.
+   - **Phần 2. Lý Thuyết & xx Từ Vựng Cốt Lõi:** Bộ tra cứu từ vựng và chuyên đề ngữ pháp kĩ càng, tích hợp module **Interactive Quick Quiz Widget** (đổi màu xanh/đỏ tức thì, âm thanh feedback, trượt mở box giải thích chi tiết).
+   - **TUYỆT ĐỐI BỎ CÁC PHẦN 3, 4, 5, 6:** Bỏ hoàn toàn Collocation game, Word family tree, Active recall, Sentence writing.
 5. **Biên soạn bài tập trắc nghiệm (60 - 100 câu) theo 5 quy tắc vàng:**
    - **Quy tắc 1:** Tất cả câu hỏi phải sử dụng từ vựng của bài giảng Unit đang học.
    - **Quy tắc 2:** Các câu hỏi từ vựng, trong 4 đáp án A, B, C, D **bắt buộc có tối thiểu 2 từ vựng của Unit đang học** (tránh học sinh khoanh lụi vì chỉ thấy 1 từ mới).

@@ -163,7 +163,7 @@ Chào Nam Việt,
 Hôm nay con bước vào bài học ngày **17/11/2026** với chuyên đề **Unit 7: The World of Mass Media**. Thầy đã biên soạn cho con:
 1. **20 từ vựng cốt lõi mới** (hoàn toàn không trùng với bài 11/11), bám sát các trang SGK và SBT.
 2. **Cẩm nang ngữ pháp ngắn gọn, dễ hiểu** về Mệnh đề chỉ cách thức (*as if/were*) và Mệnh đề chỉ kết quả (*so/such...that*).
-3. **Phòng học tương tác Flashcard 3D** với phát âm giọng bản xứ và trò chơi phản xạ từ vựng.
+3. **Phòng học tương tác** với Flashcard 3D hai chiều và Lý thuyết ngữ pháp kèm bài tập trắc nghiệm nhanh Quick Drills.
 4. **Đấu trường 100 câu trắc nghiệm tại lớp:**
    - 32 câu đầu tiên là toàn bộ từ vựng mới học (được xếp lên đầu đúng nguyện vọng của con).
    - 18 câu chia từ loại (Word Formation) giúp con thành thạo nhận diện Danh từ, Động từ, Tính từ, Trạng từ.

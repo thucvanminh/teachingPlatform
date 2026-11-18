@@ -34,13 +34,10 @@ This reference contains the exact student profiles, curricula, target scores, an
 - **Đặc điểm bài giảng & bài tập:**
   - **Từ vựng nền tảng cơ bản (CRITICAL):** Dù mục tiêu 8.5+, nền tảng từ vựng chung của Thái vẫn còn những lỗ hổng. Vì vậy, **ngoài các từ vựng trọng tâm cần học trong Unit**, tất cả các từ vựng khác dùng trong câu hỏi (câu dẫn ngữ cảnh, bài tập trắc nghiệm) **phải sử dụng từ vựng cơ bản, quen thuộc nhất có thể (Basic A1 - B1)**. Câu văn gãy gọn, trong sáng, không đánh đố bằng từ vựng ngoài luồng, giúp Thái tập trung tối đa vào việc áp dụng chính xác từ vựng và ngữ pháp của bài học.
   - **Không dùng bài giảng văn bản thô nhàm chán.** Phải tạo một **Phòng Học Tương Tác Web (HTML5/CSS3/JS)** riêng biệt tại `frontend/public/lectures/<slug>/index.html`.
-  - **Cấu trúc bài giảng tương tác bao gồm:**
-    1. Cẩm nang 50 Từ vựng cốt lõi + 3 Chuyên đề ngữ pháp (kèm 4 công thức viết lại câu kinh điển).
-    2. Đấu trường Nối từ Collocation (Click/Tap Game kèm âm thanh Web Audio).
-    3. Phát hiện từ sai Odd One Out Collocation.
-    4. Sơ đồ cây họ từ Word Family Tree & Điền dạng từ Open Cloze.
-    5. Đoán chữ siêu tốc Active Recall (First-Letter Clue + định nghĩa tiếng Anh).
-    6. Thử thách Đặt câu tương tác có thuật toán chấm và sửa bẫy ngữ pháp tự động.
+  - **Cấu trúc bài giảng tương tác bao gồm đúng 2 phần:**
+    1. Flashcard 3D (2 Chiều): Luyện phản xạ từ vựng cả 2 chiều Anh ➔ Việt và Việt ➔ Anh với phát âm Web Speech API, chế độ Luyện từng thẻ (Deck) và Lưới thẻ (Grid).
+    2. Lý Thuyết & Từ Vựng Cốt Lõi: Bộ lọc tra cứu từ vựng và chuyên đề ngữ pháp chuyên sâu tích hợp bài tập nhanh (Interactive Quick Quiz) đổi màu xanh/đỏ tức thì kèm âm thanh và giải thích chi tiết.
+    *(Tuyệt đối bỏ các phần 3, 4, 5, 6: Collocation game, Word family, Active recall, Writing).*
   - **Bài tập làm trên lớp:** 60 - 100 câu trắc nghiệm 90 phút (bỏ phần Phonetics nếu yêu cầu, dồn trọng tâm vào Từ vựng & Ngữ pháp).
 
 ---
