@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="100%" height="280" role="img" aria-labelledby="title desc">
+  <title id="title">Q6: Bisectors of Supplementary Adjacent Angles</title>
+  <desc id="desc">Linear pair xOy and yOz with bisectors Ou and Ov</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0E1626"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="540" height="320" rx="18" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="120" y="15" width="300" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
+  <text x="270" y="34" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">SECTOR 2 · LINEAR PAIR BISECTORS (90°)</text>
+  <!-- Line zOx -->
+  <line x1="60" y1="230" x2="480" y2="230" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+  <text x="50" y="235" fill="#38BDF8" font-family="system-ui" font-size="15" font-weight="bold">z</text>
+  <text x="490" y="235" fill="#38BDF8" font-family="system-ui" font-size="15" font-weight="bold">x</text>
+  <!-- Center O -->
+  <circle cx="270" cy="230" r="5" fill="#22D3EE" filter="url(#neonGlow)"/>
+  <text x="270" y="255" fill="#FFF" font-family="system-ui" font-size="15" font-weight="bold" text-anchor="middle">O</text>
+  <!-- Ray Oy -->
+  <line x1="270" y1="230" x2="330" y2="80" stroke="#FFF" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="335" y="75" fill="#FFF" font-family="system-ui" font-size="15" font-weight="bold">y</text>
+  <!-- Bisector Ou -->
+  <line x1="270" y1="230" x2="430" y2="120" stroke="#34D399" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="440" y="125" fill="#34D399" font-family="system-ui" font-size="15" font-weight="bold">u</text>
+  <!-- Bisector Ov -->
+  <line x1="270" y1="230" x2="160" y2="100" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="145" y="105" fill="#F59E0B" font-family="system-ui" font-size="15" font-weight="bold">v</text>
+  <!-- Right Angle Square between Ou and Ov -->
+  <path d="M 252 206 L 274 190 L 292 214" fill="none" stroke="#22D3EE" stroke-width="2"/>
+  <text x="270" y="180" fill="#22D3EE" font-family="system-ui" font-size="14" font-weight="bold" text-anchor="middle">90°</text>
+</svg>

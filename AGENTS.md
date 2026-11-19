@@ -181,6 +181,7 @@ Dự án tích hợp các skills chuyên sâu:
 - `teaching-english-curriculum`: Soạn bài giảng & bài tập tiếng Anh THPT.
 - `keithley-chemistry`: Soạn bài giảng & bài tập Hóa học 9 chủ đề vũ trụ.
 - `keithley-math`: Soạn bài tập & vẽ vector SVG hình học Toán 7.
+- `svg-diagram-expert`: Thiết kế, tính toán tọa độ, sinh mã & thẩm định thị giác file vector SVG 2D (Toán, Lý, Hóa) qua `scripts/verify-svg.js` và Vision check.
 - `soanbai`: Shortcut skill cho quy trình soạn bài tiếng Anh.
 - `soanhoakeithley`: Shortcut skill cho Hóa học Keithley.
 - `soantoankeithley`: Shortcut skill cho Toán học Keithley.
