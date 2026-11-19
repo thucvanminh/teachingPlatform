@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="100%" height="280" role="img" aria-labelledby="title desc">
+  <title id="title">Q18: Exterior Angle Equation</title>
+  <desc id="desc">Triangle with exterior angle 100 deg and vertex 50 deg, find x and y</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0E1626"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="540" height="320" rx="18" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="120" y="15" width="300" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
+  <text x="270" y="34" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">SECTOR 4 · EXTERIOR ANGLE EQUATION</text>
+  <line x1="60" y1="220" x2="480" y2="220" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+  <!-- Triangle: A(140, 80), B(120, 220), C(250, 220) -->
+  <polygon points="140,80 120,220 250,220" fill="rgba(6,182,212,0.12)" stroke="#38BDF8" stroke-width="2.5"/>
+  <circle cx="140" cy="80" r="5" fill="#22D3EE"/><text x="140" y="65" fill="#FFF" font-family="system-ui" font-size="15" font-weight="bold" text-anchor="middle">50°</text>
+  <circle cx="120" cy="220" r="5" fill="#22D3EE"/>
+  <circle cx="250" cy="220" r="5" fill="#22D3EE"/>
+  <text x="75" y="210" fill="#F59E0B" font-family="monospace" font-size="13" font-weight="bold">100°</text>
+  <text x="135" y="210" fill="#38BDF8" font-family="monospace" font-size="13" font-weight="bold">x</text>
+  <text x="265" y="210" fill="#FB7185" font-family="monospace" font-size="13" font-weight="bold">y</text>
+</svg>
