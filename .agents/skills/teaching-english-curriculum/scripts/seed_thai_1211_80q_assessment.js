@@ -22,7 +22,7 @@ const CONSTANTS = {
   SUBJECT_ID: 'f36e3e6b-46e2-4839-a2e8-8a78ff88a9a0', // ENG_11
   ASSIGNMENT_ID: '72fd143c-3f97-45ef-87c7-bd3a906d68a9', // Assignment 12/11/2026
   LEARNING_UNIT_ID: '525dc2dd-840e-45a0-abab-7675a8149f1a', // Unit 4 Grammar & Vocab
-  TOTAL_QUESTIONS: 100,
+  TOTAL_QUESTIONS: 80,
   TIME_LIMIT_MINUTES: 90,
   MAX_SCORE: 10.00
 };
@@ -34,17 +34,17 @@ function getSectionName(index) {
     return 'Phần 2: Từ vựng cốt lõi Unit 4 trong ngữ cảnh (Core Vocabulary in Context)';
   } else if (index <= 45) {
     return 'Phần 3: 10 Câu Biến đổi từ loại (Word Formation: Noun - Adj - Adv - Verb)';
-  } else if (index <= 60) {
+  } else if (index <= 55) {
     return 'Phần 4: Động từ đi kèm V-ing & Thành ngữ cố định (Verbs & Idioms + Gerunds)';
-  } else if (index <= 80) {
+  } else if (index <= 70) {
     return 'Phần 5: 6 Cặp Động từ đổi nghĩa & Danh động từ hoàn thành (Meaning-Shift Verbs & Perfect Gerunds)';
   } else {
-    return 'Phần 6: Ngữ pháp nâng cao, Tìm lỗi sai & Viết lại câu (Advanced Grammar, Error Identification & Transformations)';
+    return 'Phần 6: Viết lại câu tương đương với Danh động từ (Sentence Transformations with Gerunds)';
   }
 }
 
 async function main() {
-  console.log('🚀 Bắt đầu quá trình nạp 100 câu hỏi trắc nghiệm cho bạn Thái ngày 12/11/2026...');
+  console.log('🚀 Bắt đầu quá trình nạp 80 câu hỏi trắc nghiệm cho bạn Thái ngày 12/11/2026...');
 
   const payloadPath = path.join(__dirname, 'payload_thai_1211_80q.json');
   if (!fs.existsSync(payloadPath)) {
@@ -87,8 +87,8 @@ async function main() {
   }
 
   // 3. Tạo mới Assessment
-  const assessmentTitle = 'Luyện tập chuyên sâu: 100 Câu Ngữ Pháp Danh Động Từ (Gerunds) & 24 Từ Vựng Unit 4';
-  const instructions = 'Bộ đề 100 câu trắc nghiệm bao trọn các chuyên đề Danh Động Từ (Gerunds) của Unit 4: Global Success 11, kết hợp 10 câu Word Formation và 24 từ vựng ASEAN cốt lõi. Hãy đọc kỹ từng câu, phân tích ngữ pháp để đạt điểm 8.5+ nhé!';
+  const assessmentTitle = 'Luyện tập chuyên sâu: 80 Câu Ngữ Pháp Danh Động Từ (Gerunds) & 24 Từ Vựng Unit 4';
+  const instructions = 'Bộ đề 80 câu trắc nghiệm bao trọn 6 chuyên đề Danh Động Từ (Gerunds) của Unit 4: Global Success 11, kết hợp nhuần nhuyễn 24 từ vựng ASEAN cốt lõi từ bài ngày 10/11. Hãy đọc kỹ từng câu, phân tích giới từ to và sắc thái của động từ để đạt điểm 8.5+ nhé!';
 
   const assessment = await prisma.assessments.create({
     data: {
@@ -156,8 +156,8 @@ async function main() {
 
   // 6. Cập nhật ghi chú của Thầy Thức trên Assignment
   const updatedNote = `Chào Thái! Thầy gửi em kế hoạch học tập ngày 12/11/2026:
-1. Đọc kỹ cẩm nang 6 Chuyên đề Ngữ pháp Danh Động Từ (Gerunds) và bấm vào Phòng Học Tương Tác Unit 4 để luyện Active Recall 24 từ vựng ASEAN.
-2. Hoàn thành bài kiểm tra 90 phút gồm 100 câu hỏi trắc nghiệm chuyên sâu (bao gồm 10 câu Word Formation, các câu hỏi từ vựng bám sát bài học, bẫy 'to + V-ing', chuyển nghĩa động từ và viết lại câu).
+1. Đọc kỹ cẩm nang 5 Chuyên đề Ngữ pháp Danh Động Từ (Gerunds) và bấm vào Phòng Học Tương Tác Unit 4 để luyện Active Recall 24 từ vựng ASEAN.
+2. Hoàn thành bài kiểm tra 90 phút gồm 80 câu hỏi trắc nghiệm chuyên sâu (bao gồm câu phân loại 8.5+ về bẫy 'to + V-ing' và chuyển nghĩa động từ).
 Chúc em học tốt và tự tin chinh phục điểm số cao nhất!`;
 
   await prisma.daily_student_assignments.update({

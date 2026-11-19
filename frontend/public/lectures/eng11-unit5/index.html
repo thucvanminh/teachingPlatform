@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 5: Global Warming - Phòng Học Tương Tác</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Top Compact Header: Unit & Grammar Compendium -->
+    <header class="lecture-header">
+      <div class="lecture-header-top">
+        <h1 class="lecture-unit-badge">
+          <span class="unit-tag-pill">UNIT ĐANG HỌC</span>
+          <span>Unit 5: Global Warming</span>
+        </h1>
+      </div>
+
+      <!-- Nội Dung Phần Grammar -->
+      <div class="lecture-grammar-box">
+        <div class="lecture-grammar-header">
+          <span class="lecture-grammar-title">Ngữ pháp trọng tâm: Mệnh Đề Phân Từ (Participle Clauses)</span>
+        </div>
+        <div class="lecture-grammar-grid">
+          <div class="grammar-item-chip">
+            <span class="grammar-item-label">1. Phân từ hiện tại (Present Participle - V-ing):</span>
+            <span class="grammar-item-formula">V-ing + (O), S + V (Chủ động)</span>
+            <span class="grammar-item-desc">Rút gọn mệnh đề nguyên nhân (Because/Since) &amp; thời gian (While/When). Vd: <em>Trapping too much heat, gases warm the Earth.</em></span>
+          </div>
+
+          <div class="grammar-item-chip">
+            <span class="grammar-item-label">2. Phân từ quá khứ (Past Participle - V3/ed):</span>
+            <span class="grammar-item-formula">V3/ed + (by O), S + V (Bị động)</span>
+            <span class="grammar-item-desc">Rút gọn mệnh đề bị động chỉ nguyên nhân &amp; điều kiện (If/Because). Vd: <em>Burnt for energy, coal releases CO2.</em></span>
+          </div>
+
+          <div class="grammar-item-chip">
+            <span class="grammar-item-label">3. Phân từ hoàn thành (Perfect Participle):</span>
+            <span class="grammar-item-formula">Having + V3/ed | Having been + V3/ed</span>
+            <span class="grammar-item-desc">Nhấn mạnh hành động xảy ra trước mệnh đề chính. Bẫy 8.5+: <em>Dangling Participle (Chủ ngữ 2 vế phải cùng là 1 thực thể).</em></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs Bar -->
+    <nav class="tabs-bar" role="tablist">
+      <button class="tab-btn active" data-tab="tab-flashcards" role="tab" aria-selected="true">
+        1. Flashcard 3D (2 Chiều)
+      </button>
+      <button class="tab-btn" data-tab="tab-vocab" role="tab" aria-selected="false">
+        2. Lý Thuyết &amp; 24 Từ Vựng Cốt Lõi
+      </button>
+    </nav>
+
+    <!-- ========================================================
+         TAB 1: INTERACTIVE 3D FLASHCARDS (2 FUNCTIONS)
+         ======================================================== -->
+    <section id="tab-flashcards" class="tab-content active" role="tabpanel">
+      <div class="flashcard-panel-wrapper">
+        <!-- Control Header & Mode Switcher -->
+        <div class="fc-control-card">
+          <div class="fc-control-top">
+            <div class="fc-modes-segmented">
+              <button class="mode-pill active" id="btnModeEnVi" data-mode="en-vi">
+                <span class="mode-icon">🇺🇸 ➔ 🇻🇳</span>
+                <span class="mode-text">Chức Năng 1 (Anh ➔ Việt)</span>
+              </button>
+              <button class="mode-pill" id="btnModeViEn" data-mode="vi-en">
+                <span class="mode-icon">🇻🇳 ➔ 🇺🇸</span>
+                <span class="mode-text">Chức Năng 2 (Việt ➔ Anh)</span>
+              </button>
+            </div>
+
+            <div class="fc-view-switcher">
+              <button class="view-btn active" id="btnViewDeck" title="Chế độ Luyện từng thẻ">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+                <span>Từng Thẻ</span>
+              </button>
+              <button class="view-btn" id="btnViewGrid" title="Chế độ Xem lưới thẻ">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                <span>Lưới Thẻ</span>
+              </button>
+              <button class="view-btn fullscreen-btn" id="btnFullscreen" title="Xem Toàn Màn Hình (F)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+                <span>Toàn Màn Hình</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="fc-shortcuts-banner">
+            <span class="shortcut-tip">💡 <strong>Phím tắt:</strong> <kbd>Space</kbd> Lật thẻ • <kbd>←</kbd> <kbd>→</kbd> Chuyển thẻ • <kbd>P</kbd> Phát âm • <kbd>F</kbd> Toàn màn hình • <kbd>1</kbd> Chế độ Anh-Việt • <kbd>2</kbd> Chế độ Việt-Anh</span>
+          </div>
+
+          <!-- Filter chips for cards -->
+          <div class="fc-unit-filters">
+            <span class="filter-label">Lọc chủ đề:</span>
+            <div class="filter-chips-wrap">
+              <button class="filter-chip active" data-unit="all">Tất Cả (24 Thẻ)</button>
+              <button class="filter-chip" data-unit="1">Nhóm 1: Năng Lượng &amp; Khí Thải</button>
+              <button class="filter-chip" data-unit="2">Nhóm 2: Khí Quyển &amp; Nóng Lên</button>
+              <button class="filter-chip" data-unit="3">Nhóm 3: Hậu Quả &amp; Bền Vững</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Deck View (Interactive 3D Flip) -->
+        <div id="fcDeckContainer" class="fc-deck-container">
+          <div class="fc-progress-wrap">
+            <span class="fc-progress-text" id="fcCounterText">Thẻ 1 / 24</span>
+            <div class="fc-progress-bar">
+              <div class="fc-progress-fill" id="fcProgressFill" style="width: 4.16%;"></div>
+            </div>
+            <span class="fc-progress-pct" id="fcProgressPct">4%</span>
+          </div>
+
+          <!-- 3D Card Scene -->
+          <div class="fc-stage">
+            <div class="flashcard-3d" id="mainFlashcard">
+              <!-- FRONT FACE -->
+              <div class="card-face card-face-front" id="cardFaceFront">
+                <!-- Content injected dynamically via JS -->
+              </div>
+
+              <!-- BACK FACE -->
+              <div class="card-face card-face-back" id="cardFaceBack">
+                <!-- Content injected dynamically via JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Navigation Actions -->
+          <div class="fc-actions-row">
+            <button class="fc-nav-btn" id="btnPrevCard" title="Thẻ trước (←)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+              <span>Trước</span>
+            </button>
+
+            <button class="fc-flip-btn" id="btnFlipCard" title="Lật thẻ (Space)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+              <span>Lật Mặt Thẻ</span>
+            </button>
+
+            <button class="fc-sound-btn" id="btnAudioSpeak" title="Phát âm (P)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+              <span>Phát Âm (US)</span>
+            </button>
+
+            <button class="fc-nav-btn primary" id="btnNextCard" title="Thẻ tiếp theo (→)">
+              <span>Tiếp Theo</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Grid View (All Cards) -->
+        <div id="fcGridContainer" class="fc-grid-container" style="display: none;">
+          <div class="fc-grid-wrapper" id="flashcardGrid">
+            <!-- Injected via JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         TAB 2: LÝ THUYẾT & 24 TỪ VỰNG CỐT LÕI
+         ======================================================== -->
+    <section id="tab-vocab" class="tab-content" role="tabpanel">
+      <!-- Vocabulary Browser Section -->
+      <div class="section-box">
+        <div class="section-header-row">
+          <div>
+            <h2 class="section-title">Bảng 24 Từ Vựng Cốt Lõi Unit 5: Global Warming</h2>
+            <p class="section-subtitle">Tra cứu từ vựng chuẩn SGK Tiếng Anh 11 Global Success kết hợp phiên âm IPA, từ loại, cụm cố định và audio phát âm bản xứ.</p>
+          </div>
+          <div class="vocab-stat-badge" id="statVocabCount">24 Từ</div>
+        </div>
+
+        <!-- Search & Filter Controls -->
+        <div class="vocab-filter-bar">
+          <div class="search-input-wrap">
+            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="text" id="vocabSearchInput" class="vocab-search-field" placeholder="Tìm kiếm từ tiếng Anh, tiếng Việt, Collocation...">
+          </div>
+
+          <div class="filter-chips-wrap" id="filterButtonGroup">
+            <button class="filter-chip active" data-unit="all">Tất Cả</button>
+            <button class="filter-chip" data-unit="1">Nhóm 1: Năng Lượng &amp; Khí Thải</button>
+            <button class="filter-chip" data-unit="2">Nhóm 2: Khí Quyển &amp; Nóng Lên</button>
+            <button class="filter-chip" data-unit="3">Nhóm 3: Hậu Quả &amp; Bền Vững</button>
+          </div>
+        </div>
+
+        <!-- Vocab Cards Grid -->
+        <div class="vocab-grid" id="vocabGrid">
+          <!-- Injected via JS -->
+        </div>
+        <div class="empty-state" id="vocabEmptyState" style="display: none;">
+          <p>Không tìm thấy từ vựng nào khớp với từ khóa tìm kiếm.</p>
+        </div>
+      </div>
+
+      <!-- Grammar Compendium & Interactive Quick Quiz Widgets -->
+      <div class="section-box grammar-modules-box">
+        <div class="section-header-row">
+          <div>
+            <h2 class="section-title">6 Chuyên Đề Ngữ Pháp Chuyên Sâu &amp; Thử Thách Vận Dụng Nhanh (Quick Check Drills)</h2>
+            <p class="section-subtitle">Bản đồ tri thức Participle Clauses (Mệnh đề phân từ) thiết kế riêng cho bạn Thái chinh phục điểm 8.5+ Kì thi Giữa kì &amp; Tốt nghiệp THPT.</p>
+          </div>
+        </div>
+
+        <div class="grammar-accordions-wrap" id="grammarAccordionContainer">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Note from Teacher -->
+    <footer class="app-footer">
+      <div class="footer-card">
+        <div class="footer-avatar">👨‍🏫</div>
+        <div class="footer-text">
+          <h4>Lời dặn dò từ Thầy Thức gửi bạn Thái:</h4>
+          <p>Unit 5 là một trong những chuyên đề ngữ pháp then chốt nhất của Lớp 11 (Mệnh đề phân từ). Hãy nhớ nguyên tắc vàng: <strong>Hai mệnh đề phải cùng một chủ ngữ</strong>. Đọc kỹ cẩm nang, luyện lật thẻ Flashcard 3D và làm trọn vẹn 80 câu trắc nghiệm online để đạt điểm số tối đa nhé!</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- SCRIPT FILES -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
