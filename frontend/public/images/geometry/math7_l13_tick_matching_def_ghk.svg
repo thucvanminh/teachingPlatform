@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="100%" height="auto" role="img" aria-labelledby="title desc">
+  <title id="title">Matching Corresponding Vertices</title>
+  <desc id="desc">Reflected congruent triangles DEF and GHK</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0E1626"/>
+    </linearGradient>
+    <marker id="arrowCyan" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38BDF8"/>
+    </marker>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#F59E0B"/>
+    </marker>
+  </defs>
+  <rect width="540" height="320" rx="18" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.45"/>
+  <rect x="62" y="12" width="416" height="26" rx="13" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
+  <text x="270" y="29" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" letter-spacing="0.8">SECTOR 1 · CORRESPONDING VERTICES &amp; SIDES</text>
+<polygon points="55,255 200,255 220,85" fill="rgba(6,182,212,0.12)" stroke="#38BDF8" stroke-width="2.8"/>
+<polygon points="485,255 340,255 320,85" fill="rgba(16,185,129,0.12)" stroke="#34D399" stroke-width="2.8"/>
+<line x1="132.5" y1="165.1" x2="142.5" y2="174.9" stroke="#F59E0B" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="397.5" y1="174.9" x2="407.5" y2="165.1" stroke="#F59E0B" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="122.5" y1="250.0" x2="132.5" y2="260.0" stroke="#FB7185" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="122.5" y1="260.0" x2="132.5" y2="250.0" stroke="#FB7185" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="407.5" y1="250.0" x2="417.5" y2="260.0" stroke="#FB7185" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="407.5" y1="260.0" x2="417.5" y2="250.0" stroke="#FB7185" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="202.6" y1="173.2" x2="216.5" y2="174.8" stroke="#22D3EE" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="203.5" y1="165.2" x2="217.4" y2="166.8" stroke="#22D3EE" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="323.5" y1="174.8" x2="337.4" y2="173.2" stroke="#22D3EE" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="322.6" y1="166.8" x2="336.5" y2="165.2" stroke="#22D3EE" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M 55.0 255.0 L 74.5 234.9 A 28 28 0 0 1 83.0 255.0 Z" fill="#F59E0B" fill-opacity="0.18"/>
+<path d="M 74.5 234.9 A 28 28 0 0 1 83.0 255.0" fill="none" stroke="#F59E0B" stroke-width="2"/>
+<path d="M 485.0 255.0 L 457.0 255.0 A 28 28 0 0 1 465.5 234.9 Z" fill="#F59E0B" fill-opacity="0.18"/>
+<path d="M 457.0 255.0 A 28 28 0 0 1 465.5 234.9" fill="none" stroke="#F59E0B" stroke-width="2"/>
+<path d="M 200.0 255.0 L 176.0 255.0 A 24 24 0 0 1 202.8 231.2 Z" fill="#34D399" fill-opacity="0.18"/>
+<path d="M 176.0 255.0 A 24 24 0 0 1 202.8 231.2" fill="none" stroke="#34D399" stroke-width="2"/>
+<path d="M 181.0 255.0 A 19 19 0 0 1 202.2 236.1" fill="none" stroke="#34D399" stroke-width="2"/>
+<path d="M 340.0 255.0 L 337.2 231.2 A 24 24 0 0 1 364.0 255.0 Z" fill="#34D399" fill-opacity="0.18"/>
+<path d="M 337.2 231.2 A 24 24 0 0 1 364.0 255.0" fill="none" stroke="#34D399" stroke-width="2"/>
+<path d="M 337.8 236.1 A 19 19 0 0 1 359.0 255.0" fill="none" stroke="#34D399" stroke-width="2"/>
+<circle cx="55.0" cy="255.0" r="4.5" fill="#22D3EE"/>
+<text x="41.0" y="263.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="end" dominant-baseline="central">D</text>
+<circle cx="200.0" cy="255.0" r="4.5" fill="#22D3EE"/>
+<text x="210.0" y="269.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="start" dominant-baseline="central">E</text>
+<circle cx="220.0" cy="85.0" r="4.5" fill="#22D3EE"/>
+<text x="220.0" y="70.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central">F</text>
+<circle cx="485.0" cy="255.0" r="4.5" fill="#22D3EE"/>
+<text x="499.0" y="263.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="start" dominant-baseline="central">G</text>
+<circle cx="340.0" cy="255.0" r="4.5" fill="#22D3EE"/>
+<text x="330.0" y="269.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="end" dominant-baseline="central">H</text>
+<circle cx="320.0" cy="85.0" r="4.5" fill="#22D3EE"/>
+<text x="320.0" y="70.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central">K</text>
+</svg>

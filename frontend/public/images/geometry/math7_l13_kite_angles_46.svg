@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="100%" height="auto" role="img" aria-labelledby="title desc">
+  <title id="title">Kite Triangle Angle Calculation</title>
+  <desc id="desc">Triangles ABD and CBD with AB=CB, AD=CD, angle DAB=90 deg, angle BDC=30 deg</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0E1626"/>
+    </linearGradient>
+    <marker id="arrowCyan" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38BDF8"/>
+    </marker>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#F59E0B"/>
+    </marker>
+  </defs>
+  <rect width="540" height="320" rx="18" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.45"/>
+  <rect x="110" y="12" width="320" height="26" rx="13" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
+  <text x="270" y="29" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" letter-spacing="0.8">SECTOR 6 · SSS ANGLE TRANSFER</text>
+<polygon points="95,168 315,75 430,168" fill="rgba(6,182,212,0.12)" stroke="#38BDF8" stroke-width="2.8"/>
+<polygon points="95,168 315,261 430,168" fill="rgba(16,185,129,0.10)" stroke="#34D399" stroke-width="2.8"/>
+<line x1="95" y1="168" x2="430" y2="168" stroke="#F59E0B" stroke-width="2.8"/>
+<path d="M 302.1 80.5 L 313.0 89.3 L 325.9 83.8" fill="none" stroke="#22D3EE" stroke-width="2"/>
+<path d="M 95.0 168.0 L 141.0 168.0 A 46 46 0 0 1 137.4 185.9 Z" fill="#F59E0B" fill-opacity="0.18"/>
+<path d="M 141.0 168.0 A 46 46 0 0 1 137.4 185.9" fill="none" stroke="#F59E0B" stroke-width="2"/>
+<line x1="211.4" y1="126.4" x2="206.0" y2="113.5" stroke="#FB7185" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="204.0" y1="129.5" x2="198.6" y2="116.6" stroke="#FB7185" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="206.0" y1="222.5" x2="211.4" y2="209.6" stroke="#FB7185" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="198.6" y1="219.4" x2="204.0" y2="206.5" stroke="#FB7185" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="376.9" y1="116.1" x2="368.1" y2="126.9" stroke="#22D3EE" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="368.1" y1="209.1" x2="376.9" y2="219.9" stroke="#22D3EE" stroke-width="2.4" stroke-linecap="round"/>
+<text x="165" y="190" fill="#F59E0B" font-family="monospace" font-size="13.5" font-weight="bold">30°</text>
+<text x="315" y="108" fill="#22D3EE" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">90°</text>
+<circle cx="95.0" cy="168.0" r="4.5" fill="#22D3EE"/>
+<text x="81.0" y="168.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="end" dominant-baseline="central">D</text>
+<circle cx="430.0" cy="168.0" r="4.5" fill="#22D3EE"/>
+<text x="444.0" y="168.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="start" dominant-baseline="central">B</text>
+<circle cx="315.0" cy="75.0" r="4.5" fill="#22D3EE"/>
+<text x="315.0" y="60.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central">A</text>
+<circle cx="315.0" cy="261.0" r="4.5" fill="#22D3EE"/>
+<text x="315.0" y="278.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central">C</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="auto" role="img" aria-labelledby="title desc">
+  <title id="title">Four Triangles SSS Comparison</title>
+  <desc id="desc">Four triangles ABC, DFE, MNP, GKH with tick marks</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0E1626"/>
+    </linearGradient>
+    <marker id="arrowCyan" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38BDF8"/>
+    </marker>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#F59E0B"/>
+    </marker>
+  </defs>
+  <rect width="600" height="340" rx="18" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.45"/>
+  <rect x="87" y="12" width="425" height="26" rx="13" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
+  <text x="300" y="29" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" letter-spacing="0.8">SECTOR 3 · IDENTIFYING SSS CONGRUENT TRIANGLES</text>
+<polygon points="45,110 110,260 145,90" fill="rgba(6,182,212,0.12)" stroke="#38BDF8" stroke-width="2.5"/>
+<line x1="72.5" y1="180.0" x2="82.5" y2="190.0" stroke="#FB7185" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="72.5" y1="190.0" x2="82.5" y2="180.0" stroke="#FB7185" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="93.6" y1="93.1" x2="96.4" y2="106.9" stroke="#F59E0B" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="119.8" y1="177.5" x2="133.5" y2="180.3" stroke="#34D399" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="121.5" y1="169.7" x2="135.2" y2="172.5" stroke="#34D399" stroke-width="2.4" stroke-linecap="round"/>
+<circle cx="45.0" cy="110.0" r="4.5" fill="#22D3EE"/>
+<text x="35.0" y="98.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="end" dominant-baseline="central">A</text>
+<circle cx="110.0" cy="260.0" r="4.5" fill="#22D3EE"/>
+<text x="110.0" y="278.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central">B</text>
+<circle cx="145.0" cy="90.0" r="4.5" fill="#22D3EE"/>
+<text x="157.0" y="80.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="start" dominant-baseline="central">C</text>
+<polygon points="185,250 285,255 255,100" fill="rgba(244,63,94,0.10)" stroke="#FB7185" stroke-width="2.5"/>
+<line x1="215.0" y1="170.0" x2="225.0" y2="180.0" stroke="#FB7185" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="215.0" y1="180.0" x2="225.0" y2="170.0" stroke="#FB7185" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="235.3" y1="245.5" x2="234.7" y2="259.5" stroke="#F59E0B" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="263.1" y1="178.8" x2="276.9" y2="176.2" stroke="#F59E0B" stroke-width="2.4" stroke-linecap="round"/>
+<circle cx="185.0" cy="250.0" r="4.5" fill="#22D3EE"/>
+<text x="173.0" y="258.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="end" dominant-baseline="central">D</text>
+<circle cx="285.0" cy="255.0" r="4.5" fill="#22D3EE"/>
+<text x="285.0" y="273.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central">E</text>
+<circle cx="255.0" cy="100.0" r="4.5" fill="#22D3EE"/>
+<text x="255.0" y="85.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central">F</text>
+<polygon points="405,185 332,90 318,260" fill="rgba(6,182,212,0.12)" stroke="#38BDF8" stroke-width="2.5"/>
+<line x1="363.5" y1="132.5" x2="373.5" y2="142.5" stroke="#FB7185" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="363.5" y1="142.5" x2="373.5" y2="132.5" stroke="#FB7185" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="366.1" y1="227.8" x2="356.9" y2="217.2" stroke="#F59E0B" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="332.3" y1="171.6" x2="318.4" y2="170.4" stroke="#34D399" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="331.6" y1="179.6" x2="317.7" y2="178.4" stroke="#34D399" stroke-width="2.4" stroke-linecap="round"/>
+<circle cx="405.0" cy="185.0" r="4.5" fill="#22D3EE"/>
+<text x="419.0" y="185.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="start" dominant-baseline="central">M</text>
+<circle cx="332.0" cy="90.0" r="4.5" fill="#22D3EE"/>
+<text x="332.0" y="75.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central">N</text>
+<circle cx="318.0" cy="260.0" r="4.5" fill="#22D3EE"/>
+<text x="326.0" y="278.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="start" dominant-baseline="central">P</text>
+<polygon points="570,250 475,95 460,255" fill="rgba(6,182,212,0.12)" stroke="#38BDF8" stroke-width="2.5"/>
+<line x1="517.5" y1="167.5" x2="527.5" y2="177.5" stroke="#FB7185" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="517.5" y1="177.5" x2="527.5" y2="167.5" stroke="#FB7185" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="515.3" y1="259.5" x2="514.7" y2="245.5" stroke="#F59E0B" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="474.8" y1="171.7" x2="460.9" y2="170.4" stroke="#34D399" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="474.1" y1="179.6" x2="460.2" y2="178.3" stroke="#34D399" stroke-width="2.4" stroke-linecap="round"/>
+<circle cx="570.0" cy="250.0" r="4.5" fill="#22D3EE"/>
+<text x="582.0" y="258.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="start" dominant-baseline="central">G</text>
+<circle cx="475.0" cy="95.0" r="4.5" fill="#22D3EE"/>
+<text x="475.0" y="80.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central">K</text>
+<circle cx="460.0" cy="255.0" r="4.5" fill="#22D3EE"/>
+<text x="450.0" y="267.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="end" dominant-baseline="central">H</text>
+<text x="300" y="316" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Matching tick marks indicate equal side lengths</text>
+</svg>

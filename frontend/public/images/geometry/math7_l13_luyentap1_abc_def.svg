@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="100%" height="auto" role="img" aria-labelledby="title desc">
+  <title id="title">Congruent Triangles Calculation</title>
+  <desc id="desc">Triangles ABC and DEF with BC=4cm, B=40 deg, C=60 deg</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0E1626"/>
+    </linearGradient>
+    <marker id="arrowCyan" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38BDF8"/>
+    </marker>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#F59E0B"/>
+    </marker>
+  </defs>
+  <rect width="540" height="320" rx="18" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.45"/>
+  <rect x="37" y="12" width="466" height="26" rx="13" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
+  <text x="270" y="29" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" letter-spacing="0.8">SECTOR 2 · SOLVING CORRESPONDING ANGLES &amp; SIDES</text>
+<polygon points="145,90 60,245 235,245" fill="rgba(6,182,212,0.12)" stroke="#38BDF8" stroke-width="2.8"/>
+<polygon points="395,90 305,245 480,245" fill="rgba(6,182,212,0.12)" stroke="#38BDF8" stroke-width="2.8"/>
+<path d="M 60.0 245.0 L 73.5 220.4 A 28 28 0 0 1 88.0 245.0 Z" fill="#F59E0B" fill-opacity="0.18"/>
+<path d="M 73.5 220.4 A 28 28 0 0 1 88.0 245.0" fill="none" stroke="#F59E0B" stroke-width="2"/>
+<path d="M 235.0 245.0 L 211.0 245.0 A 24 24 0 0 1 222.9 224.2 Z" fill="#34D399" fill-opacity="0.18"/>
+<path d="M 211.0 245.0 A 24 24 0 0 1 222.9 224.2" fill="none" stroke="#34D399" stroke-width="2"/>
+<path d="M 216.0 245.0 A 19 19 0 0 1 225.5 228.6" fill="none" stroke="#34D399" stroke-width="2"/>
+<path d="M 395.0 90.0 L 406.5 111.0 A 24 24 0 0 1 382.9 110.8 Z" fill="#FB7185" fill-opacity="0.18"/>
+<path d="M 406.5 111.0 A 24 24 0 0 1 382.9 110.8" fill="none" stroke="#FB7185" stroke-width="2"/>
+<text x="108" y="232" fill="#F59E0B" font-family="monospace" font-size="13" font-weight="bold">40°</text>
+<text x="180" y="232" fill="#34D399" font-family="monospace" font-size="13" font-weight="bold">60°</text>
+<text x="147" y="268" fill="#38BDF8" font-family="monospace" font-size="13.5" font-weight="bold" text-anchor="middle">4 cm</text>
+<text x="395" y="132" fill="#FB7185" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">?</text>
+<text x="392" y="268" fill="#FB7185" font-family="monospace" font-size="13.5" font-weight="bold" text-anchor="middle">EF = ?</text>
+<circle cx="145.0" cy="90.0" r="4.5" fill="#22D3EE"/>
+<text x="145.0" y="75.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central">A</text>
+<circle cx="60.0" cy="245.0" r="4.5" fill="#22D3EE"/>
+<text x="46.0" y="253.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="end" dominant-baseline="central">B</text>
+<circle cx="235.0" cy="245.0" r="4.5" fill="#22D3EE"/>
+<text x="249.0" y="253.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="start" dominant-baseline="central">C</text>
+<circle cx="395.0" cy="90.0" r="4.5" fill="#22D3EE"/>
+<text x="395.0" y="75.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" dominant-baseline="central">D</text>
+<circle cx="305.0" cy="245.0" r="4.5" fill="#22D3EE"/>
+<text x="291.0" y="253.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="end" dominant-baseline="central">F</text>
+<circle cx="480.0" cy="245.0" r="4.5" fill="#22D3EE"/>
+<text x="494.0" y="253.0" fill="#FFF" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="start" dominant-baseline="central">E</text>
+<text x="270" y="298" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Given: △ABC = △DEF</text>
+</svg>
