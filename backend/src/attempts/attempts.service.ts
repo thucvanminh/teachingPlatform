@@ -7,6 +7,51 @@ import { attempt_status, question_type, user_role, assessment_type } from '@pris
 export class AttemptsService {
   constructor(private prisma: PrismaService) {}
 
+  private normalizeFillText(val: unknown): string {
+    return (val ?? '')
+      .toString()
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, ' ');
+  }
+
+  private stripDegreeSuffix(val: string): string {
+    return val
+      .replace(/\s*(°|degrees?|degs?|độ|do)\s*$/i, '')
+      .trim();
+  }
+
+  private isFillAnswerCorrect(studentRaw: unknown, gradingKey: any): boolean {
+    const rawList: unknown[] =
+      gradingKey?.acceptable_answers ||
+      gradingKey?.accepted_answers ||
+      (gradingKey?.correct_text !== undefined ? [gradingKey.correct_text] : []) ||
+      (gradingKey?.expected_value !== undefined ? [gradingKey.expected_value] : []);
+
+    const studentNorm = this.normalizeFillText(studentRaw);
+    if (!studentNorm) return false;
+
+    const studentCompact = studentNorm.replace(/\s+/g, '');
+    const studentDegStripped = this.stripDegreeSuffix(studentNorm);
+    const isStudentNum = /^-?\d+(\.\d+)?$/.test(studentDegStripped);
+
+    return rawList.some((item) => {
+      const ansNorm = this.normalizeFillText(item);
+      if (!ansNorm) return false;
+      if (ansNorm === studentNorm) return true;
+      if (ansNorm.replace(/\s+/g, '') === studentCompact) return true;
+
+      const ansDegStripped = this.stripDegreeSuffix(ansNorm);
+      if (ansDegStripped && ansDegStripped === studentDegStripped) return true;
+
+      if (isStudentNum && /^-?\d+(\.\d+)?$/.test(ansDegStripped)) {
+        return Number(studentDegStripped) === Number(ansDegStripped);
+      }
+
+      return false;
+    });
+  }
+
   async startAttempt(attemptId: string, studentId: string) {
     const attempt = await this.prisma.assessment_attempts.findUnique({
       where: { id: attemptId },
@@ -93,11 +138,7 @@ export class AttemptsService {
           awardedPoints = 0;
         }
       } else if (question.type === question_type.FILL_IN_BLANK) {
-        const accepted = (gradingKey.accepted_answers || [gradingKey.correct_text]).map((s: string) =>
-          s?.toString().trim().toLowerCase(),
-        );
-        const studentText = (studentPayload.text || '').toString().trim().toLowerCase();
-        if (studentText && accepted.includes(studentText)) {
+        if (this.isFillAnswerCorrect(studentPayload.text, gradingKey)) {
           isCorrect = true;
           awardedPoints = qPoints;
           autoTotalScore += qPoints;
@@ -211,21 +252,29 @@ export class AttemptsService {
     }
 
     // Nếu bài chưa chấm xong và người xem là học sinh/phụ huynh -> ẩn grading_key_payload
-    // Lưu ý: Đối với IN_SESSION_90M (luyện tập tương tác tại lớp), trích xuất correct_option_id vào question_payload để kích hoạt animation rung lắc, âm thanh và phản hồi tức thì
+    // Lưu ý: Đối với IN_SESSION_90M (luyện tập tương tác tại lớp), trích xuất correct_option_id & acceptable_answers vào question_payload để kích hoạt animation rung lắc, âm thanh và phản hồi tức thì
     if (user.role !== user_role.TEACHER && attempt.status !== attempt_status.GRADED) {
       const isInSession = attempt.assessments?.type === assessment_type.IN_SESSION_90M;
       attempt.assessments.questions = attempt.assessments.questions.map((q) => {
         const { grading_key_payload, ...safeQ } = q;
-        const correctOpt =
-          (grading_key_payload as any)?.correct_option_id ||
-          (safeQ.question_payload as any)?.correct_option_id;
+        const gkp = (grading_key_payload as any) || {};
+        const qp = (safeQ.question_payload as any) || {};
+        const correctOpt = gkp.correct_option_id || qp.correct_option_id;
+        const acceptableAnswers =
+          gkp.acceptable_answers ||
+          gkp.accepted_answers ||
+          qp.acceptable_answers ||
+          qp.accepted_answers ||
+          (gkp.correct_text !== undefined ? [gkp.correct_text] : undefined) ||
+          (gkp.expected_value !== undefined ? [gkp.expected_value] : undefined);
 
-        if (isInSession && correctOpt) {
+        if (isInSession && (correctOpt || acceptableAnswers)) {
           return {
             ...safeQ,
             question_payload: {
-              ...(safeQ.question_payload as any),
-              correct_option_id: correctOpt,
+              ...qp,
+              ...(correctOpt ? { correct_option_id: correctOpt } : {}),
+              ...(acceptableAnswers ? { acceptable_answers: acceptableAnswers } : {}),
             },
           } as any;
         }

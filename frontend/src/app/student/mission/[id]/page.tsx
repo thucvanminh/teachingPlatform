@@ -176,6 +176,62 @@ function splitEmbeddedImage(markdown: string) {
   };
 }
 
+function normalizeFillText(val: unknown): string {
+  return (val ?? '')
+    .toString()
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, ' ');
+}
+
+function stripDegreeSuffix(val: string): string {
+  return val
+    .replace(/\s*(°|degrees?|degs?|độ|do)\s*$/i, '')
+    .trim();
+}
+
+function getQuestionAcceptableAnswers(q: any): string[] {
+  const gkp = q?.grading_key_payload || {};
+  const qp = q?.question_payload || {};
+  const raw =
+    gkp.acceptable_answers ||
+    gkp.accepted_answers ||
+    qp.acceptable_answers ||
+    qp.accepted_answers ||
+    (gkp.correct_text !== undefined ? [gkp.correct_text] : null) ||
+    (qp.correct_text !== undefined ? [qp.correct_text] : null) ||
+    (gkp.expected_value !== undefined ? [gkp.expected_value] : null) ||
+    (qp.expected_value !== undefined ? [qp.expected_value] : null) ||
+    [];
+  return Array.isArray(raw) ? raw.map((x) => x?.toString() ?? '').filter(Boolean) : [];
+}
+
+function isFillAnswerCorrect(studentRaw: unknown, q: any): boolean {
+  const acceptable = getQuestionAcceptableAnswers(q);
+  const studentNorm = normalizeFillText(studentRaw);
+  if (!studentNorm || acceptable.length === 0) return false;
+
+  const studentCompact = studentNorm.replace(/\s+/g, '');
+  const studentDegStripped = stripDegreeSuffix(studentNorm);
+  const isStudentNum = /^-?\d+(\.\d+)?$/.test(studentDegStripped);
+
+  return acceptable.some((item) => {
+    const ansNorm = normalizeFillText(item);
+    if (!ansNorm) return false;
+    if (ansNorm === studentNorm) return true;
+    if (ansNorm.replace(/\s+/g, '') === studentCompact) return true;
+
+    const ansDegStripped = stripDegreeSuffix(ansNorm);
+    if (ansDegStripped && ansDegStripped === studentDegStripped) return true;
+
+    if (isStudentNum && /^-?\d+(\.\d+)?$/.test(ansDegStripped)) {
+      return Number(studentDegStripped) === Number(ansDegStripped);
+    }
+
+    return false;
+  });
+}
+
 const sfx = new MissionSoundFX();
 
 export default function MissionRoomPage({ params }: { params: Promise<{ id: string }> }) {
@@ -193,6 +249,9 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
   const [showGridDrawer, setShowGridDrawer] = useState(false);
   const [passageExpanded, setPassageExpanded] = useState(false);
   const [shakingOption, setShakingOption] = useState<string | null>(null);
+  const [hadWrongAttempt, setHadWrongAttempt] = useState<Record<string, boolean>>({});
+  const [checkedFillState, setCheckedFillState] = useState<Record<string, 'CORRECT' | 'WRONG'>>({});
+  const [shakingFillInput, setShakingFillInput] = useState<string | null>(null);
   const [soundMuted, setSoundMuted] = useState<boolean>(false);
 
   useEffect(() => {
@@ -341,8 +400,9 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
 
     if (correctOpt) {
       if (normalizedChosen !== correctOpt) {
-        // Wrong answer: play alarm buzzer and trigger shake animation
+        // Wrong answer: play alarm buzzer, record wrong attempt for UI color, and trigger shake animation
         sfx.playWrong();
+        setHadWrongAttempt((prev) => (prev[questionId] ? prev : { ...prev, [questionId]: true }));
         setShakingOption(null);
         requestAnimationFrame(() => {
           setShakingOption(optionId);
@@ -370,6 +430,12 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
   };
 
   const handleFillText = (questionId: string, text: string) => {
+    setCheckedFillState((prev) => {
+      if (!prev[questionId]) return prev;
+      const next = { ...prev };
+      delete next[questionId];
+      return next;
+    });
     setAnswers((prev) => ({
       ...prev,
       [questionId]: {
@@ -377,6 +443,45 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
         text,
       },
     }));
+  };
+
+  const handleCheckFillBlank = (q: any) => {
+    if (!q) return;
+    const rawText = (answers[q.id]?.text || '').toString();
+    if (!rawText.trim()) {
+      sfx.playWrong();
+      setShakingFillInput(null);
+      requestAnimationFrame(() => {
+        setShakingFillInput(q.id);
+        setTimeout(() => {
+          setShakingFillInput((curr) => (curr === q.id ? null : curr));
+        }, 500);
+      });
+      return;
+    }
+
+    const acceptable = getQuestionAcceptableAnswers(q);
+    if (acceptable.length === 0) {
+      sfx.playClick();
+      return;
+    }
+
+    if (isFillAnswerCorrect(rawText, q)) {
+      sfx.playCorrect();
+      setShakingFillInput(null);
+      setCheckedFillState((prev) => ({ ...prev, [q.id]: 'CORRECT' }));
+    } else {
+      sfx.playWrong();
+      setHadWrongAttempt((prev) => (prev[q.id] ? prev : { ...prev, [q.id]: true }));
+      setCheckedFillState((prev) => ({ ...prev, [q.id]: 'WRONG' }));
+      setShakingFillInput(null);
+      requestAnimationFrame(() => {
+        setShakingFillInput(q.id);
+        setTimeout(() => {
+          setShakingFillInput((curr) => (curr === q.id ? null : curr));
+        }, 500);
+      });
+    }
   };
 
   const handleEssayText = (questionId: string, textResponse: string) => {
@@ -579,15 +684,24 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
     const selectedOpt = (ans.selected_option_id || '').toString().trim().toUpperCase();
 
     if (selectedOpt && correctOpt) {
-      return selectedOpt === correctOpt ? 'CORRECT' : 'WRONG';
+      if (selectedOpt === correctOpt) {
+        return hadWrongAttempt[q.id] ? 'CORRECT_AFTER_WRONG' : 'CORRECT';
+      }
+      return 'WRONG';
     }
 
-    if (ans.text && q.grading_key_payload?.acceptable_answers) {
-      const userText = ans.text.toString().trim().toLowerCase();
-      const isOk = q.grading_key_payload.acceptable_answers.some(
-        (a: string) => a.toString().trim().toLowerCase() === userText
-      );
-      return isOk ? 'CORRECT' : 'WRONG';
+    if (q.type === 'FILL_IN_BLANK') {
+      const checkedStatus = checkedFillState[q.id];
+      if (checkedStatus === 'CORRECT') {
+        return hadWrongAttempt[q.id] ? 'CORRECT_AFTER_WRONG' : 'CORRECT';
+      }
+      if (checkedStatus === 'WRONG') {
+        return 'WRONG';
+      }
+      if (ans.text && ans.text.toString().trim() !== '') {
+        return 'ANSWERED';
+      }
+      return 'UNANSWERED';
     }
 
     if (
@@ -615,6 +729,11 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
       return isCosmic
         ? `border-2 border-emerald-500 bg-emerald-950/70 text-emerald-300 font-bold shadow-[0_0_10px_rgba(16,185,129,0.35)] ${ringClass}`
         : `border-2 border-emerald-500 bg-emerald-50 text-emerald-800 font-bold shadow-2xs ${ringClass}`;
+    }
+    if (status === 'CORRECT_AFTER_WRONG') {
+      return isCosmic
+        ? `border-2 border-yellow-400 bg-yellow-500/25 text-yellow-200 font-bold shadow-[0_0_12px_rgba(250,204,21,0.45)] ${ringClass}`
+        : `border-2 border-yellow-500 bg-yellow-100 text-yellow-900 font-bold shadow-2xs ${ringClass}`;
     }
     if (status === 'WRONG') {
       return isCosmic
@@ -858,6 +977,8 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                   title={`${isCosmic ? 'Question' : 'Câu'} ${i + 1}${
                     status === 'CORRECT'
                       ? isCosmic ? ' (Correct)' : ' (Đúng)'
+                      : status === 'CORRECT_AFTER_WRONG'
+                      ? isCosmic ? ' (Correct after retry)' : ' (Đúng sau khi thử lại)'
                       : status === 'WRONG'
                       ? isCosmic ? ' (Incorrect - Click to review)' : ' (Sai - Bấm để xem lại)'
                       : ''
@@ -1311,21 +1432,98 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                 })()}
 
                 {/* FILL_IN_BLANK INPUT */}
-                {currentQ.type === 'FILL_IN_BLANK' && (
-                  <div>
-                    <input
-                      type="text"
-                      placeholder={isCosmic ? "Enter numerical value (e.g. 2.0 or 43.125)..." : "Gõ đáp số của con vào đây..."}
-                      value={currentAnswer.text || ''}
-                      onChange={(e) => handleFillText(currentQ.id, e.target.value)}
-                      className={`w-full p-3 rounded-xl text-sm focus:outline-none transition ${
-                        isCosmic
-                          ? 'bg-slate-900 border border-cyan-500/40 text-white focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400'
-                          : 'bg-slate-50 border border-slate-300 text-slate-900 font-semibold focus:bg-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500'
-                      }`}
-                    />
-                  </div>
-                )}
+                {currentQ.type === 'FILL_IN_BLANK' && (() => {
+                  const fillStatus = checkedFillState[currentQ.id];
+                  const isFillCorrect = fillStatus === 'CORRECT';
+                  const isFillWrong = fillStatus === 'WRONG';
+                  const isFillShaking = shakingFillInput === currentQ.id;
+
+                  return (
+                    <div className="space-y-2">
+                      <div className={`flex items-center gap-2 ${isFillShaking ? 'animate-shake' : ''}`}>
+                        <input
+                          type="text"
+                          placeholder={isCosmic ? "Enter numerical value (e.g. 45 or 80)..." : "Gõ đáp số của con vào đây..."}
+                          value={currentAnswer.text || ''}
+                          onChange={(e) => handleFillText(currentQ.id, e.target.value)}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                              e.preventDefault();
+                              handleCheckFillBlank(currentQ);
+                            }
+                          }}
+                          className={`flex-1 min-w-0 p-3 rounded-xl text-sm focus:outline-none transition ${
+                            isFillCorrect
+                              ? isCosmic
+                                ? 'bg-emerald-950/60 border-2 border-emerald-400 text-emerald-100 ring-2 ring-emerald-400/50 shadow-[0_0_16px_rgba(16,185,129,0.35)]'
+                                : 'bg-emerald-50 border-2 border-emerald-500 text-emerald-950 font-bold ring-2 ring-emerald-500/30'
+                              : isFillWrong
+                              ? isCosmic
+                                ? 'bg-rose-950/60 border-2 border-rose-500 text-rose-100 ring-2 ring-rose-500/50 shadow-[0_0_16px_rgba(244,63,94,0.35)]'
+                                : 'bg-rose-50 border-2 border-rose-500 text-rose-950 font-bold ring-2 ring-rose-500/30'
+                              : isCosmic
+                              ? 'bg-slate-900 border border-cyan-500/40 text-white focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400'
+                              : 'bg-slate-50 border border-slate-300 text-slate-900 font-semibold focus:bg-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500'
+                          }`}
+                        />
+                        <button
+                          type="button"
+                          onClick={() => handleCheckFillBlank(currentQ)}
+                          className={`shrink-0 px-4 py-3 rounded-xl text-xs sm:text-sm font-extrabold flex items-center space-x-1.5 transition active:scale-95 border ${
+                            isFillCorrect
+                              ? isCosmic
+                                ? 'bg-emerald-500 text-slate-950 border-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.45)]'
+                                : 'bg-emerald-600 text-white border-emerald-600'
+                              : isCosmic
+                              ? 'bg-cyan-500 hover:bg-cyan-400 text-slate-950 border-cyan-400 shadow-[0_0_12px_rgba(6,182,212,0.35)]'
+                              : 'bg-indigo-600 hover:bg-indigo-700 text-white border-indigo-600 shadow-xs'
+                          }`}
+                        >
+                          <Check className="w-4 h-4 stroke-[2.5]" />
+                          <span>Check</span>
+                        </button>
+                      </div>
+
+                      {isFillWrong && (
+                        <div
+                          className={`p-2.5 rounded-xl border text-xs font-bold flex items-center space-x-2 animate-in fade-in slide-in-from-top-1 ${
+                            isCosmic
+                              ? 'bg-rose-950/60 border-rose-500/50 text-rose-200 shadow-[0_0_12px_rgba(244,63,94,0.25)]'
+                              : 'bg-rose-50 border-rose-200 text-rose-900'
+                          }`}
+                        >
+                          <X className="w-4 h-4 text-rose-500 flex-shrink-0 stroke-[2.5]" />
+                          <span>
+                            {isKids
+                              ? 'Chưa đúng rồi! Bé kiểm tra và nhập lại nhé 🌸'
+                              : isCosmic
+                              ? 'Incorrect telemetry! Re-evaluate and try again.'
+                              : 'Chưa chính xác! Con hãy tính lại và bấm Check nhé.'}
+                          </span>
+                        </div>
+                      )}
+
+                      {isFillCorrect && (
+                        <div
+                          className={`p-2.5 rounded-xl border text-xs font-bold flex items-center space-x-2 animate-in fade-in slide-in-from-top-1 ${
+                            isCosmic
+                              ? 'bg-emerald-950/60 border-emerald-500/50 text-emerald-200 shadow-[0_0_12px_rgba(16,185,129,0.25)]'
+                              : 'bg-emerald-50 border-emerald-200 text-emerald-900'
+                          }`}
+                        >
+                          <Check className="w-4 h-4 text-emerald-600 flex-shrink-0 stroke-[2.5]" />
+                          <span>
+                            {isKids
+                              ? 'Chính xác rồi! Bé thông minh quá! ⭐'
+                              : isCosmic
+                              ? 'Correct telemetry locked on target! 🎯 Proceed to next sector.'
+                              : 'Chính xác! Con làm rất tốt! 🎯 Bấm "Tiếp theo" để tiếp tục.'}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })()}
 
                 {/* ESSAY_UPLOAD INPUT */}
                 {currentQ.type === 'ESSAY_UPLOAD' && (
@@ -1510,6 +1708,10 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
                 <div className="flex items-center space-x-1.5">
                   <span className={`w-3.5 h-3.5 rounded-md border-2 border-emerald-500 ${isCosmic ? 'bg-emerald-950/70' : 'bg-emerald-50'}`} />
                   <span className="text-emerald-600 font-bold">{isCosmic ? 'Correct' : 'Đúng'}</span>
+                </div>
+                <div className="flex items-center space-x-1.5">
+                  <span className={`w-3.5 h-3.5 rounded-md border-2 border-yellow-400 ${isCosmic ? 'bg-yellow-500/25' : 'bg-yellow-100'}`} />
+                  <span className="text-yellow-400 font-bold">{isCosmic ? 'Corrected' : 'Đúng (sau khi sai)'}</span>
                 </div>
                 <div className="flex items-center space-x-1.5">
                   <span className={`w-3.5 h-3.5 rounded-md border-2 border-rose-500 ${isCosmic ? 'bg-rose-950/70' : 'bg-rose-50'}`} />
