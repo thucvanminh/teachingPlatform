@@ -1,0 +1,2002 @@
+[
+  {
+    "orderIndex": 1,
+    "sectionName": "1. Từ Vựng Trọng Tâm Card 17/11/2026 (Vocabulary in Context)",
+    "content": "A girl gave me a small ______ on the street to tell people about the new shop.",
+    "options": [
+      {
+        "id": "A",
+        "text": "billboard"
+      },
+      {
+        "id": "B",
+        "text": "leaflet"
+      },
+      {
+        "id": "C",
+        "text": "fake news"
+      },
+      {
+        "id": "D",
+        "text": "viewer"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "• **leaflet** (n): tờ rơi, tờ bướm quảng cáo nhỏ.\n• Dịch: Một cô gái đã đưa cho tôi một tờ rơi nhỏ trên phố để giới thiệu với mọi người về cửa hàng mới."
+  },
+  {
+    "orderIndex": 2,
+    "sectionName": "1. Từ Vựng Trọng Tâm Card 17/11/2026 (Vocabulary in Context)",
+    "content": "Drivers can easily see the huge ______ next to the highway.",
+    "options": [
+      {
+        "id": "A",
+        "text": "leaflet"
+      },
+      {
+        "id": "B",
+        "text": "printing press"
+      },
+      {
+        "id": "C",
+        "text": "target customer"
+      },
+      {
+        "id": "D",
+        "text": "billboard"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "• **billboard** (n): biển quảng cáo lớn ngoài trời.\n• Dịch: Các tài xế có thể dễ dàng nhìn thấy biển quảng cáo lớn bên cạnh đường cao tốc."
+  },
+  {
+    "orderIndex": 3,
+    "sectionName": "1. Từ Vựng Trọng Tâm Card 17/11/2026 (Vocabulary in Context)",
+    "content": "I saw an interesting ______ for a new phone while watching TV last night.",
+    "options": [
+      {
+        "id": "A",
+        "text": "advert"
+      },
+      {
+        "id": "B",
+        "text": "literacy"
+      },
+      {
+        "id": "C",
+        "text": "presence"
+      },
+      {
+        "id": "D",
+        "text": "billboard"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "• **advert** (n): mẩu quảng cáo (viết tắt của advertisement).\n• Dịch: Tôi đã xem một mẩu quảng cáo thú vị về chiếc điện thoại mới khi xem TV tối qua."
+  },
+  {
+    "orderIndex": 4,
+    "sectionName": "1. Từ Vựng Trọng Tâm Card 17/11/2026 (Vocabulary in Context)",
+    "content": "The invention of the ______ helped people print many books quickly in the past.",
+    "options": [
+      {
+        "id": "A",
+        "text": "fake news"
+      },
+      {
+        "id": "B",
+        "text": "target customer"
+      },
+      {
+        "id": "C",
+        "text": "printing press"
+      },
+      {
+        "id": "D",
+        "text": "leaflet"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "• **printing press** (n): máy in (ấn loát).\n• Dịch: Việc phát minh ra máy in đã giúp con người in nhiều sách một cách nhanh chóng trong quá khứ."
+  },
+  {
+    "orderIndex": 5,
+    "sectionName": "1. Từ Vựng Trọng Tâm Card 17/11/2026 (Vocabulary in Context)",
+    "content": "High school students are the main ______ of this cheap study app.",
+    "options": [
+      {
+        "id": "A",
+        "text": "printing presses"
+      },
+      {
+        "id": "B",
+        "text": "target customers"
+      },
+      {
+        "id": "C",
+        "text": "fake news"
+      },
+      {
+        "id": "D",
+        "text": "billboards"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "• **target customer** (n): khách hàng mục tiêu.\n• Dịch: Học sinh cấp ba là khách hàng mục tiêu chính của ứng dụng học tập giá rẻ này."
+  },
+  {
+    "orderIndex": 6,
+    "sectionName": "1. Từ Vựng Trọng Tâm Card 17/11/2026 (Vocabulary in Context)",
+    "content": "Our school has a strong ______ on Facebook, so many students follow its daily news.",
+    "options": [
+      {
+        "id": "A",
+        "text": "advert"
+      },
+      {
+        "id": "B",
+        "text": "leaflet"
+      },
+      {
+        "id": "C",
+        "text": "viewer"
+      },
+      {
+        "id": "D",
+        "text": "presence"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "• **presence** (n): sự hiện diện, độ phủ sóng (trên mạng xã hội / truyền thông).\n• Dịch: Trường chúng tôi có độ phủ sóng mạnh trên Facebook, vì vậy rất nhiều học sinh theo dõi tin tức hàng ngày."
+  },
+  {
+    "orderIndex": 7,
+    "sectionName": "1. Từ Vựng Trọng Tâm Card 17/11/2026 (Vocabulary in Context)",
+    "content": "Children love this game because it is fun and ______; they can touch the screen to choose answers.",
+    "options": [
+      {
+        "id": "A",
+        "text": "reluctant"
+      },
+      {
+        "id": "B",
+        "text": "credible"
+      },
+      {
+        "id": "C",
+        "text": "interactive"
+      },
+      {
+        "id": "D",
+        "text": "audiovisual"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "• **interactive** (adj): có tính tương tác.\n• Dịch: Trẻ em thích trò chơi này vì nó vui và có tính tương tác; các em có thể chạm vào màn hình để chọn câu trả lời."
+  },
+  {
+    "orderIndex": 8,
+    "sectionName": "1. Từ Vựng Trọng Tâm Card 17/11/2026 (Vocabulary in Context)",
+    "content": "The school library website is easily ______ to all students on their phones.",
+    "options": [
+      {
+        "id": "A",
+        "text": "accessible"
+      },
+      {
+        "id": "B",
+        "text": "reluctant"
+      },
+      {
+        "id": "C",
+        "text": "audiovisual"
+      },
+      {
+        "id": "D",
+        "text": "interactive"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "• **accessible** (adj): có thể tiếp cận được, dễ dàng sử dụng.\n• Dịch: Trang web thư viện trường có thể dễ dàng tiếp cận đối với tất cả học sinh ngay trên điện thoại."
+  },
+  {
+    "orderIndex": 9,
+    "sectionName": "1. Từ Vựng Trọng Tâm Card 17/11/2026 (Vocabulary in Context)",
+    "content": "The teacher asked two students to ______ the test papers to everyone in class.",
+    "options": [
+      {
+        "id": "A",
+        "text": "fact-check"
+      },
+      {
+        "id": "B",
+        "text": "distribute"
+      },
+      {
+        "id": "C",
+        "text": "account for"
+      },
+      {
+        "id": "D",
+        "text": "update"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "• **distribute** (v): phân phát, phân phối.\n• Dịch: Giáo viên đã nhờ hai học sinh phát đề kiểm tra cho tất cả mọi người trong lớp."
+  },
+  {
+    "orderIndex": 10,
+    "sectionName": "1. Từ Vựng Trọng Tâm Card 17/11/2026 (Vocabulary in Context)",
+    "content": "With smartphones, we can send messages and get an ______ reply in one second.",
+    "options": [
+      {
+        "id": "A",
+        "text": "reluctant"
+      },
+      {
+        "id": "B",
+        "text": "accessible"
+      },
+      {
+        "id": "C",
+        "text": "audiovisual"
+      },
+      {
+        "id": "D",
+        "text": "instant"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "• **instant** (adj): ngay lập tức, tức thì.\n• Dịch: Với điện thoại thông minh, chúng ta có thể gửi tin nhắn và nhận được câu trả lời tức thì chỉ trong một giây."
+  },
+  {
+    "orderIndex": 11,
+    "sectionName": "1. Từ Vựng Trọng Tâm Card 17/11/2026 (Vocabulary in Context)",
+    "content": "You should not believe everything on the Internet because there is a lot of ______.",
+    "options": [
+      {
+        "id": "A",
+        "text": "fake news"
+      },
+      {
+        "id": "B",
+        "text": "printing press"
+      },
+      {
+        "id": "C",
+        "text": "target customer"
+      },
+      {
+        "id": "D",
+        "text": "media literacy"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "• **fake news** (n): tin giả, tin sai sự thật.\n• Dịch: Bạn không nên tin mọi thứ trên Internet vì có rất nhiều tin giả."
+  },
+  {
+    "orderIndex": 12,
+    "sectionName": "1. Từ Vựng Trọng Tâm Card 17/11/2026 (Vocabulary in Context)",
+    "content": "Good students always ______ information before sharing a story with their friends.",
+    "options": [
+      {
+        "id": "A",
+        "text": "distribute"
+      },
+      {
+        "id": "B",
+        "text": "account for"
+      },
+      {
+        "id": "C",
+        "text": "fact-check"
+      },
+      {
+        "id": "D",
+        "text": "update"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "• **fact-check** (v): kiểm chứng sự thật, kiểm tra tính xác thực.\n• Dịch: Học sinh giỏi luôn kiểm chứng sự thật trước khi chia sẻ một câu chuyện với bạn bè."
+  },
+  {
+    "orderIndex": 13,
+    "sectionName": "1. Từ Vựng Trọng Tâm Card 17/11/2026 (Vocabulary in Context)",
+    "content": "The teacher used ______ materials, such as short videos and audio clips, to make the lesson lively.",
+    "options": [
+      {
+        "id": "A",
+        "text": "instant"
+      },
+      {
+        "id": "B",
+        "text": "reluctant"
+      },
+      {
+        "id": "C",
+        "text": "accessible"
+      },
+      {
+        "id": "D",
+        "text": "audiovisual"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "• **audiovisual** (adj): nghe - nhìn (kết hợp cả âm thanh và hình ảnh).\n• Dịch: Giáo viên đã sử dụng các tài liệu nghe - nhìn, chẳng hạn như video ngắn và đoạn âm thanh, để làm bài học sinh động."
+  },
+  {
+    "orderIndex": 14,
+    "sectionName": "1. Từ Vựng Trọng Tâm Card 17/11/2026 (Vocabulary in Context)",
+    "content": "Online video ads ______ more than half of the company's total advertising budget.",
+    "options": [
+      {
+        "id": "A",
+        "text": "fact-check"
+      },
+      {
+        "id": "B",
+        "text": "account for"
+      },
+      {
+        "id": "C",
+        "text": "distribute"
+      },
+      {
+        "id": "D",
+        "text": "rely on"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "• **account for** (phr.v): chiếm (bao nhiêu phần trăm hoặc tỷ lệ).\n• Dịch: Quảng cáo video trực tuyến chiếm hơn một nửa tổng ngân sách quảng cáo của công ty."
+  },
+  {
+    "orderIndex": 15,
+    "sectionName": "2. Chia Từ Loại (Word Formation - 10 Câu)",
+    "content": "This website has many fun and ______ lessons for young learners. (INTERACT)",
+    "options": [
+      {
+        "id": "A",
+        "text": "interact"
+      },
+      {
+        "id": "B",
+        "text": "interaction"
+      },
+      {
+        "id": "C",
+        "text": "interactive"
+      },
+      {
+        "id": "D",
+        "text": "interactively"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "• Sau tính từ 'fun and' và trước danh từ 'lessons', ta cần một tính từ (Adj) để bổ nghĩa: **interactive** (có tính tương tác).\n• Dịch: Trang web này có nhiều bài học vui nhộn và có tính tương tác cho người học nhỏ tuổi."
+  },
+  {
+    "orderIndex": 16,
+    "sectionName": "2. Chia Từ Loại (Word Formation - 10 Câu)",
+    "content": "Many elderly people ______ on television to get their daily news. (RELY)",
+    "options": [
+      {
+        "id": "A",
+        "text": "rely"
+      },
+      {
+        "id": "B",
+        "text": "reliance"
+      },
+      {
+        "id": "C",
+        "text": "reliable"
+      },
+      {
+        "id": "D",
+        "text": "reliably"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "• Sau chủ ngữ 'Many elderly people' và trước giới từ 'on', ta cần một động từ nguyên mẫu (V): **rely** (dựa vào, tin cậy vào: *rely on*).\n• Dịch: Nhiều người cao tuổi dựa vào truyền hình để nhận tin tức hàng ngày."
+  },
+  {
+    "orderIndex": 17,
+    "sectionName": "2. Chia Từ Loại (Word Formation - 10 Câu)",
+    "content": "Watching English cartoons can be very ______ for young children. (EDUCATE)",
+    "options": [
+      {
+        "id": "A",
+        "text": "educate"
+      },
+      {
+        "id": "B",
+        "text": "education"
+      },
+      {
+        "id": "C",
+        "text": "educationally"
+      },
+      {
+        "id": "D",
+        "text": "educational"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "• Sau cấu trúc 'can be very + Adj', ta cần một tính từ: **educational** (mang tính giáo dục).\n• Dịch: Xem phim hoạt hình tiếng Anh có thể rất mang tính giáo dục cho trẻ nhỏ."
+  },
+  {
+    "orderIndex": 18,
+    "sectionName": "2. Chia Từ Loại (Word Formation - 10 Câu)",
+    "content": "Artists need a lot of ______ to make beautiful paintings. (CREATE)",
+    "options": [
+      {
+        "id": "A",
+        "text": "create"
+      },
+      {
+        "id": "B",
+        "text": "creativity"
+      },
+      {
+        "id": "C",
+        "text": "creative"
+      },
+      {
+        "id": "D",
+        "text": "creatively"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "• Sau cụm từ chỉ lượng 'a lot of', ta cần một danh từ không đếm được: **creativity** (sự sáng tạo).\n• Dịch: Các nghệ sĩ cần rất nhiều sự sáng tạo để vẽ nên những bức tranh đẹp."
+  },
+  {
+    "orderIndex": 19,
+    "sectionName": "2. Chia Từ Loại (Word Formation - 10 Câu)",
+    "content": "The colorful photos on the cover made the book look very ______. (ATTRACT)",
+    "options": [
+      {
+        "id": "A",
+        "text": "attract"
+      },
+      {
+        "id": "B",
+        "text": "attraction"
+      },
+      {
+        "id": "C",
+        "text": "attractive"
+      },
+      {
+        "id": "D",
+        "text": "attractively"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "• Sau động từ nối 'look very + Adj', ta cần một tính từ: **attractive** (thu hút, hấp dẫn).\n• Dịch: Những bức ảnh rực rỡ trên trang bìa đã khiến cuốn sách trông rất thu hút."
+  },
+  {
+    "orderIndex": 20,
+    "sectionName": "2. Chia Từ Loại (Word Formation - 10 Câu)",
+    "content": "The two brothers look similar, but their hobbies ______ a lot. (DIFFER)",
+    "options": [
+      {
+        "id": "A",
+        "text": "differ"
+      },
+      {
+        "id": "B",
+        "text": "difference"
+      },
+      {
+        "id": "C",
+        "text": "different"
+      },
+      {
+        "id": "D",
+        "text": "differently"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "• Sau chủ ngữ số nhiều 'their hobbies', ta cần một động từ chính ở thì hiện tại đơn: **differ** (khác nhau: *differ a lot*).\n• Dịch: Hai anh em trông giống nhau, nhưng sở thích của họ lại khác nhau rất nhiều."
+  },
+  {
+    "orderIndex": 21,
+    "sectionName": "2. Chia Từ Loại (Word Formation - 10 Câu)",
+    "content": "The teacher explained the new online media rules ________ so that every student could understand them easily. (INFORM)",
+    "options": [
+      {
+        "id": "A",
+        "text": "inform"
+      },
+      {
+        "id": "B",
+        "text": "information"
+      },
+      {
+        "id": "C",
+        "text": "informative"
+      },
+      {
+        "id": "D",
+        "text": "informatively"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "• Vị trí cần điền đứng sau động từ \"explained\" và tân ngữ \"rules\", dùng để bổ nghĩa cho hành động giải thích -> cần một trạng từ (adverb).\n• Phân tích từ loại gốc (INFORM):\n  - inform (v): thông báo\n  - information (n): thông tin\n  - informative (adj): cung cấp nhiều tin tức hữu ích\n  - informatively (adv): một cách đầy đủ thông tin, bổ ích\n• Dịch nghĩa: Giáo viên đã giải thích các quy định truyền thông trực tuyến mới một cách rất cặn kẽ và bổ ích để học sinh nào cũng hiểu dễ dàng."
+  },
+  {
+    "orderIndex": 22,
+    "sectionName": "2. Chia Từ Loại (Word Formation - 10 Câu)",
+    "content": "The company's new advert was a huge ________, attracting hundreds of new customers. (SUCCESS)",
+    "options": [
+      {
+        "id": "A",
+        "text": "succeed"
+      },
+      {
+        "id": "B",
+        "text": "success"
+      },
+      {
+        "id": "C",
+        "text": "successful"
+      },
+      {
+        "id": "D",
+        "text": "successfully"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "• Sau mạo từ \"a\" và tính từ \"huge\", vị trí này cần một danh từ (noun) số ít.\n• Phân tích từ loại gốc (SUCCESS):\n  - succeed (v): thành công\n  - success (n): sự thành công\n  - successful (adj): thành công\n  - successfully (adv): một cách thành công\n• Dịch nghĩa: Mẫu quảng cáo mới của công ty là một sự thành công lớn, thu hút hàng trăm khách hàng mới."
+  },
+  {
+    "orderIndex": 23,
+    "sectionName": "2. Chia Từ Loại (Word Formation - 10 Câu)",
+    "content": "Young learners should be ________ on online study groups to share reliable news with friends. (ACT)",
+    "options": [
+      {
+        "id": "A",
+        "text": "act"
+      },
+      {
+        "id": "B",
+        "text": "action"
+      },
+      {
+        "id": "C",
+        "text": "active"
+      },
+      {
+        "id": "D",
+        "text": "actively"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "• Đứng sau động từ to-be \"should be\", ta cần một tính từ (adjective) chỉ tính chất.\n• Cụm từ: be active on/in (năng động, tích cực tham gia vào).\n• Phân tích từ loại gốc (ACT):\n  - act (v/n): hành động\n  - action (n): hành động, hoạt động\n  - active (adj): tích cực, năng động\n  - actively (adv): một cách tích cực\n• Dịch nghĩa: Các bạn học sinh trẻ nên tích cực tham gia các nhóm học trực tuyến để chia sẻ tin tức đáng tin cậy với bạn bè."
+  },
+  {
+    "orderIndex": 24,
+    "sectionName": "2. Chia Từ Loại (Word Formation - 10 Câu)",
+    "content": "The youth club wants to ________ media literacy among high school students this year. (POPULAR)",
+    "options": [
+      {
+        "id": "A",
+        "text": "popularize"
+      },
+      {
+        "id": "B",
+        "text": "popularity"
+      },
+      {
+        "id": "C",
+        "text": "popular"
+      },
+      {
+        "id": "D",
+        "text": "popularly"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "• Cấu trúc \"want to + V (bare)\" đòi hỏi một động từ nguyên mẫu chỉ hành động.\n• Phân tích từ loại gốc (POPULAR):\n  - popularize (v): phổ biến hóa, truyền bá rộng rãi\n  - popularity (n): sự phổ biến, tính đại chúng\n  - popular (adj): phổ biến, được ưa thích\n  - popularly (adv): một cách phổ biến\n• Dịch nghĩa: Câu lạc bộ thanh niên muốn phổ biến kiến thức truyền thông (media literacy) đến các bạn học sinh cấp ba trong năm nay."
+  },
+  {
+    "orderIndex": 25,
+    "sectionName": "3. Đồng Nghĩa, Trái Nghĩa & Giao Tiếp (Closest / Opposite / Speaking)",
+    "content": "Mark the letter A, B, C, or D to indicate the word(s) CLOSEST in meaning to the underlined word in the following question.\n\nYou should only read news from a **credible** website before you share it with your family.",
+    "options": [
+      {
+        "id": "A",
+        "text": "cheap"
+      },
+      {
+        "id": "B",
+        "text": "funny"
+      },
+      {
+        "id": "C",
+        "text": "boring"
+      },
+      {
+        "id": "D",
+        "text": "reliable"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "• **credible** (adj): đáng tin cậy, có thể tin tưởng được đồng nghĩa với **reliable** (adj: đáng tin cậy).\n• Xét các đáp án:\n  - A. cheap: rẻ tiền\n  - B. funny: hài hước\n  - C. boring: nhàm chán\n  - D. reliable: đáng tin cậy\n• Dịch nghĩa: Bạn chỉ nên đọc tin tức từ một trang web đáng tin cậy trước khi chia sẻ với gia đình."
+  },
+  {
+    "orderIndex": 26,
+    "sectionName": "3. Đồng Nghĩa, Trái Nghĩa & Giao Tiếp (Closest / Opposite / Speaking)",
+    "content": "Mark the letter A, B, C, or D to indicate the word(s) CLOSEST in meaning to the underlined word in the following question.\n\nSmartphones give people **instant** access to the latest news stories from around the world.",
+    "options": [
+      {
+        "id": "A",
+        "text": "slow"
+      },
+      {
+        "id": "B",
+        "text": "immediate"
+      },
+      {
+        "id": "C",
+        "text": "difficult"
+      },
+      {
+        "id": "D",
+        "text": "heavy"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "• **instant** (adj): ngay lập tức, tức thì đồng nghĩa với **immediate** (adj: ngay lập tức).\n• Xét các đáp án:\n  - A. slow: chậm chạp\n  - B. immediate: ngay lập tức, trực tiếp\n  - C. difficult: khó khăn\n  - D. heavy: nặng nề\n• Dịch nghĩa: Điện thoại thông minh mang đến cho con người khả năng tiếp cận tức thì với những tin tức mới nhất từ khắp nơi trên thế giới."
+  },
+  {
+    "orderIndex": 27,
+    "sectionName": "3. Đồng Nghĩa, Trái Nghĩa & Giao Tiếp (Closest / Opposite / Speaking)",
+    "content": "Mark the letter A, B, C, or D to indicate the word(s) OPPOSITE in meaning to the underlined word in the following question.\n\nMany readers were worried when they saw a lot of **fake** news about the flood on social media.",
+    "options": [
+      {
+        "id": "A",
+        "text": "wrong"
+      },
+      {
+        "id": "B",
+        "text": "bad"
+      },
+      {
+        "id": "C",
+        "text": "true"
+      },
+      {
+        "id": "D",
+        "text": "strange"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "• **fake** (adj): giả mạo, không có thật trái nghĩa với **true** (adj: thật, chính xác, đúng đắn).\n• Xét các đáp án:\n  - A. wrong: sai trái\n  - B. bad: xấu, tồi\n  - C. true: thật, đúng sự thật\n  - D. strange: kỳ lạ\n• Dịch nghĩa: Nhiều độc giả đã rất lo lắng khi nhìn thấy nhiều tin tức giả mạo về trận lũ lụt trên mạng xã hội."
+  },
+  {
+    "orderIndex": 28,
+    "sectionName": "3. Đồng Nghĩa, Trái Nghĩa & Giao Tiếp (Closest / Opposite / Speaking)",
+    "content": "Mark the letter A, B, C, or D to indicate the word(s) OPPOSITE in meaning to the underlined word in the following question.\n\nMy grandfather is **reluctant** to read news on a tablet because he still prefers paper books.",
+    "options": [
+      {
+        "id": "A",
+        "text": "willing"
+      },
+      {
+        "id": "B",
+        "text": "afraid"
+      },
+      {
+        "id": "C",
+        "text": "tired"
+      },
+      {
+        "id": "D",
+        "text": "busy"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "• **reluctant** (adj): ngại ngùng, miễn cưỡng, không sẵn lòng trái nghĩa với **willing** (adj: sẵn lòng, vui vẻ làm gì).\n• Xét các đáp án:\n  - A. willing: sẵn lòng\n  - B. afraid: sợ hãi\n  - C. tired: mệt mỏi\n  - D. busy: bận rộn\n• Dịch nghĩa: Ông của tôi ngại đọc tin tức trên máy tính bảng vì ông vẫn thích đọc sách báo giấy hơn."
+  },
+  {
+    "orderIndex": 29,
+    "sectionName": "3. Đồng Nghĩa, Trái Nghĩa & Giao Tiếp (Closest / Opposite / Speaking)",
+    "content": "Mark the letter A, B, C, or D to indicate the sentence that best completes the following exchange.\n\nNam and Lan are talking about news on social media.\n- Nam: \"I think we must always fact-check stories before sharing them online.\"\n- Lan: \"________. There is so much fake news today.\"",
+    "options": [
+      {
+        "id": "A",
+        "text": "I don't think so"
+      },
+      {
+        "id": "B",
+        "text": "Exactly! I agree with you"
+      },
+      {
+        "id": "C",
+        "text": "You are wrong"
+      },
+      {
+        "id": "D",
+        "text": "It is not important"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "• Nam đưa ra quan điểm: \"Mình nghĩ chúng ta phải luôn kiểm chứng thông tin (fact-check) trước khi chia sẻ lên mạng.\"\n• Lan giải thích thêm: \"Ngày nay có quá nhiều tin giả\" -> Thể hiện sự đồng tình hoàn toàn với Nam.\n• Chọn B: \"Exactly! I agree with you\" (Chính xác! Mình hoàn toàn đồng ý với bạn).\n• Các đáp án khác:\n  - A. Mình không nghĩ vậy (trái ngược vế sau)\n  - C. Bạn sai rồi\n  - D. Điều đó không quan trọng."
+  },
+  {
+    "orderIndex": 30,
+    "sectionName": "3. Đồng Nghĩa, Trái Nghĩa & Giao Tiếp (Closest / Opposite / Speaking)",
+    "content": "Mark the letter A, B, C, or D to indicate the sentence that best completes the following exchange.\n\nTom and Peter are talking about traditional printed newspapers.\n- Tom: \"Do you think printed newspapers will disappear soon?\"\n- Peter: \"________. Many older people still love reading them every morning.\"",
+    "options": [
+      {
+        "id": "A",
+        "text": "Yes, they are gone"
+      },
+      {
+        "id": "B",
+        "text": "I am very busy now"
+      },
+      {
+        "id": "C",
+        "text": "That sounds terrible"
+      },
+      {
+        "id": "D",
+        "text": "No, I believe they are here to stay"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "• Tom hỏi: \"Cậu có nghĩ báo giấy in sẽ sớm biến mất không?\"\n• Peter giải thích ở vế sau: \"Nhiều người lớn tuổi vẫn thích đọc báo giấy mỗi sáng\" -> Peter tin rằng báo giấy sẽ không biến mất.\n• Thành ngữ Unit 7: **here to stay** (tiếp tục tồn tại lâu dài, được chấp nhận rộng rãi).\n• Chọn D: \"No, I believe they are here to stay\" (Không, mình tin rằng chúng vẫn sẽ tồn tại lâu dài).\n• Các đáp án khác:\n  - A. Có, chúng biến mất rồi (mâu thuẫn vế sau)\n  - B. Mình đang bận lắm (lạc đề)\n  - C. Nghe tồi tệ quá (lạc đề)."
+  },
+  {
+    "orderIndex": 31,
+    "sectionName": "4. Ngữ Pháp Unit 7 Đa Dạng (Manner, Result, Sửa Lỗi Sai, Viết Lại Câu)",
+    "content": "The company put up ________ an interesting advert on the website that thousands of viewers shared it.",
+    "options": [
+      {
+        "id": "A",
+        "text": "so"
+      },
+      {
+        "id": "B",
+        "text": "too"
+      },
+      {
+        "id": "C",
+        "text": "such"
+      },
+      {
+        "id": "D",
+        "text": "very"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "• Cấu trúc mệnh đề chỉ kết quả với cụm danh từ đếm được số ít:\n  **such + a/an + adj + N (số ít) + that + mệnh đề** (quá... đến nỗi mà...)\n• Ở đây có cụm \"an interesting advert\", do đó bắt buộc phải dùng **such**.\n• Lưu ý:\n  - \"so\" đi với tính từ: \"so + adj + that\" (trừ cấu trúc đảo ngữ ít gặp so + adj + a/an + N)\n  - \"too\" đi với cấu trúc \"too + adj + for O + to V\"\n  - \"very\" không dùng với mệnh đề chỉ kết quả bắt đầu bằng \"that\".\n• Dịch nghĩa: Công ty đã đăng một mẩu quảng cáo thú vị đến mức hàng ngàn người xem đã chia sẻ nó."
+  },
+  {
+    "orderIndex": 32,
+    "sectionName": "4. Ngữ Pháp Unit 7 Đa Dạng (Manner, Result, Sửa Lỗi Sai, Viết Lại Câu)",
+    "content": "There were ________ fake news stories on the website that young readers did not know what to believe.",
+    "options": [
+      {
+        "id": "A",
+        "text": "so many"
+      },
+      {
+        "id": "B",
+        "text": "so much"
+      },
+      {
+        "id": "C",
+        "text": "such many"
+      },
+      {
+        "id": "D",
+        "text": "too many"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "• Cấu trúc chỉ số lượng với mệnh đề kết quả:\n  **so many + danh từ đếm được số nhiều + that + mệnh đề** (quá nhiều... đến nỗi mà...)\n• \"fake news stories\" (các tin tức giả) là danh từ số nhiều đếm được, nên dùng **so many**.\n• Không dùng \"so much\" vì chỉ đi với danh từ không đếm được. Tiếng Anh không có cấu trúc \"such many\". \"too many\" chỉ đi với \"to V\", không đi với \"that\".\n• Dịch nghĩa: Có quá nhiều mẩu tin giả trên trang web đến mức các bạn đọc trẻ không biết nên tin vào điều gì."
+  },
+  {
+    "orderIndex": 33,
+    "sectionName": "4. Ngữ Pháp Unit 7 Đa Dạng (Manner, Result, Sửa Lỗi Sai, Viết Lại Câu)",
+    "content": "That boy behaves as if he ________ the manager of the TV station, but in fact he is only an ordinary viewer.",
+    "options": [
+      {
+        "id": "A",
+        "text": "is"
+      },
+      {
+        "id": "B",
+        "text": "will be"
+      },
+      {
+        "id": "C",
+        "text": "are"
+      },
+      {
+        "id": "D",
+        "text": "were"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "• Cấu trúc mệnh đề chỉ cách thức với **as if / as though** diễn tả một giả định trái với thực tế ở hiện tại (unreal present):\n  **S1 + V (hiện tại) + as if / as though + S2 + were / V-ed**\n• Vế sau cho biết sự thật: \"in fact he is only an ordinary viewer\" (thực tế cậu ấy chỉ là một khán giả bình thường) -> Trái với thực tế hiện tại, động từ to-be lùi thì giả định thành **were** cho mọi ngôi chủ ngữ.\n• Dịch nghĩa: Cậu bé đó cư xử như thể cậu ấy là giám đốc đài truyền hình, nhưng thực tế cậu ấy chỉ là một khán giả bình thường."
+  },
+  {
+    "orderIndex": 34,
+    "sectionName": "4. Ngữ Pháp Unit 7 Đa Dạng (Manner, Result, Sửa Lỗi Sai, Viết Lại Câu)",
+    "content": "The man described the car crash as if he ________ it himself, but he only read about it on Facebook later.",
+    "options": [
+      {
+        "id": "A",
+        "text": "saw"
+      },
+      {
+        "id": "B",
+        "text": "had seen"
+      },
+      {
+        "id": "C",
+        "text": "has seen"
+      },
+      {
+        "id": "D",
+        "text": "sees"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "• Cấu trúc **as if / as though** diễn tả một giả định trái với thực tế trong quá khứ (unreal past):\n  **S1 + V (quá khứ) + as if / as though + S2 + had + V3/ed**\n• Sự việc vụ tai nạn xe đã xảy ra trong quá khứ và người đàn ông không trực tiếp chứng kiến (ông ấy chỉ đọc trên Facebook sau đó) -> Lùi về thì Quá khứ hoàn thành giả định: **had seen**.\n• Dịch nghĩa: Người đàn ông miêu tả vụ đâm xe như thể ông ấy đã tự mình tận mắt chứng kiến, nhưng thực ra ông ấy chỉ đọc về nó trên Facebook sau đó."
+  },
+  {
+    "orderIndex": 35,
+    "sectionName": "4. Ngữ Pháp Unit 7 Đa Dạng (Manner, Result, Sửa Lỗi Sai, Viết Lại Câu)",
+    "content": "Mark the letter A, B, C, or D to indicate the underlined part that needs correction in the following question.\n\nThe new billboard was **(A) placed** on the main street, but it was **(B) made** **(C) such** high that nobody **(D) could** read the words.",
+    "options": [
+      {
+        "id": "A",
+        "text": "placed"
+      },
+      {
+        "id": "B",
+        "text": "made"
+      },
+      {
+        "id": "C",
+        "text": "such"
+      },
+      {
+        "id": "D",
+        "text": "could"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "• Sửa lỗi: **such** -> **so**.\n• Giải thích: \"high\" là một tính từ đơn lẻ, đi liền sau là mệnh đề bắt đầu bằng \"that\". Quy tắc chỉ kết quả với tính từ là:\n  **so + adj + that + clause** (quá... đến nỗi mà...)\n  Không dùng \"such\" vì \"such\" phải đi kèm với cụm danh từ (such + a/an + adj + N).\n• Dịch nghĩa: Tấm biển quảng cáo mới được đặt trên phố chính, nhưng nó lại bị làm quá cao đến nỗi không ai có thể đọc được chữ trên đó."
+  },
+  {
+    "orderIndex": 36,
+    "sectionName": "4. Ngữ Pháp Unit 7 Đa Dạng (Manner, Result, Sửa Lỗi Sai, Viết Lại Câu)",
+    "content": "Mark the letter A, B, C, or D to indicate the underlined part that needs correction in the following question.\n\nPeter talks as if he **(A) is** a famous news reporter, but he **(B) really** works as an **(C) ordinary** clerk in a small **(D) shop**.",
+    "options": [
+      {
+        "id": "A",
+        "text": "is"
+      },
+      {
+        "id": "B",
+        "text": "really"
+      },
+      {
+        "id": "C",
+        "text": "ordinary"
+      },
+      {
+        "id": "D",
+        "text": "shop"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "• Sửa lỗi: **is** -> **were**.\n• Giải thích: Mệnh đề theo sau \"as if\" diễn tả một điều trái ngược với thực tế ở hiện tại (thực tế Peter chỉ là nhân viên văn phòng bình thường trong một cửa hàng nhỏ). Khi diễn tả giả định trái với thực tế hiện tại, động từ to-be phải dùng **were** cho tất cả các ngôi.\n• Dịch nghĩa: Peter nói chuyện như thể anh ấy là một phóng viên truyền hình nổi tiếng, nhưng thực tế anh ấy chỉ làm nhân viên bình thường trong một tiệm nhỏ."
+  },
+  {
+    "orderIndex": 37,
+    "sectionName": "4. Ngữ Pháp Unit 7 Đa Dạng (Manner, Result, Sửa Lỗi Sai, Viết Lại Câu)",
+    "content": "Mark the letter A, B, C, or D to indicate the underlined part that needs correction in the following question.\n\nThe printing press **(A) was** a great machine **(B) because** it helped books **(C) become** **(D) very** cheap that poor people could buy them.",
+    "options": [
+      {
+        "id": "A",
+        "text": "was"
+      },
+      {
+        "id": "B",
+        "text": "because"
+      },
+      {
+        "id": "C",
+        "text": "become"
+      },
+      {
+        "id": "D",
+        "text": "very"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "• Sửa lỗi: **very** -> **so**.\n• Giải thích: Phía sau có mệnh đề chỉ kết quả \"that poor people could buy them\". Cấu trúc kết quả với tính từ \"cheap\" phải là **so + adj + that** (quá rẻ đến mức mà...). Trạng từ \"very\" chỉ mức độ đơn thuần và không thể kết hợp với mệnh đề \"that\" chỉ kết quả.\n• Dịch nghĩa: Máy in là một phát minh vĩ đại vì nó giúp sách trở nên quá rẻ đến mức người nghèo cũng có thể mua được."
+  },
+  {
+    "orderIndex": 38,
+    "sectionName": "4. Ngữ Pháp Unit 7 Đa Dạng (Manner, Result, Sửa Lỗi Sai, Viết Lại Câu)",
+    "content": "Mark the letter A, B, C, or D to indicate the sentence that is closest in meaning to the following question.\n\nThe billboard was so big that everyone in the street noticed it.",
+    "options": [
+      {
+        "id": "A",
+        "text": "It was so a big billboard that everyone in the street noticed it."
+      },
+      {
+        "id": "B",
+        "text": "It was such a big billboard that everyone in the street noticed it."
+      },
+      {
+        "id": "C",
+        "text": "The billboard was such big that everyone in the street noticed it."
+      },
+      {
+        "id": "D",
+        "text": "It was too big a billboard for everyone in the street to notice it."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "• Quy tắc chuyển đổi giữa cấu trúc **so... that** và **such... that**:\n  **S + be + so + adj + that + clause**\n  = **It + be + such + a/an + adj + N (số ít) + that + clause**\n• Câu gốc: \"Biển quảng cáo to đến mức mọi người trên phố đều chú ý đến nó.\"\n• Xét các đáp án:\n  - A sai ngữ pháp vì \"so a big billboard\" không đúng thứ tự.\n  - B đúng hoàn toàn ngữ pháp và ý nghĩa: \"Đó là một tấm biển quảng cáo to đến nỗi mọi người trên phố đều chú ý đến nó.\"\n  - C sai vì \"such\" không đi trực tiếp với tính từ đơn lẻ \"such big\".\n  - D sai nghĩa (quá to để ai đó có thể chú ý)."
+  },
+  {
+    "orderIndex": 39,
+    "sectionName": "4. Ngữ Pháp Unit 7 Đa Dạng (Manner, Result, Sửa Lỗi Sai, Viết Lại Câu)",
+    "content": "Mark the letter A, B, C, or D to indicate the sentence that is closest in meaning to the following question.\n\nIn fact, Nam is not a famous reporter, but he acts like one.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Nam acts as if he is a famous reporter."
+      },
+      {
+        "id": "B",
+        "text": "Nam is a famous reporter, so he acts like one."
+      },
+      {
+        "id": "C",
+        "text": "Nam acts as if he were a famous reporter."
+      },
+      {
+        "id": "D",
+        "text": "Nam acts like he has been a famous reporter."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "• Câu gốc: \"Thực tế thì Nam không phải là một phóng viên nổi tiếng, nhưng cậu ấy lại cư xử y như một phóng viên.\"\n• Cấu trúc viết lại câu với **as if / as though** diễn tả giả định trái với thực tế hiện tại:\n  **S + V(hiện tại) + as if + S + were...**\n• Xét các phương án:\n  - A sai vì dùng \"is\" (chưa lùi thì giả định)\n  - B sai nghĩa so với câu gốc\n  - C đúng ngữ pháp và sát nghĩa nhất: \"Nam cư xử như thể cậu ấy là một phóng viên nổi tiếng vậy.\"\n  - D sai thì."
+  },
+  {
+    "orderIndex": 40,
+    "sectionName": "4. Ngữ Pháp Unit 7 Đa Dạng (Manner, Result, Sửa Lỗi Sai, Viết Lại Câu)",
+    "content": "Mark the letter A, B, C, or D to indicate the sentence that is closest in meaning to the following question.\n\nThe advert was very funny, so all the students watched it many times.",
+    "options": [
+      {
+        "id": "A",
+        "text": "The advert was so funny that all the students watched it many times."
+      },
+      {
+        "id": "B",
+        "text": "The advert was such funny that all the students watched it many times."
+      },
+      {
+        "id": "C",
+        "text": "The advert was too funny that all the students watched it many times."
+      },
+      {
+        "id": "D",
+        "text": "It was so a funny advert that all the students watched it many times."
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "• Câu gốc mang ý nghĩa nguyên nhân - kết quả: \"Mẫu quảng cáo rất buồn cười, vì vậy tất cả học sinh đã xem lại nó nhiều lần.\"\n• Cấu trúc biến đổi với **so... that**:\n  **S + be + so + adj + that + clause** (quá... đến nỗi mà...)\n• Xét các phương án:\n  - A đúng cấu trúc: \"Mẫu quảng cáo hài hước đến mức tất cả học sinh đã xem lại nhiều lần.\"\n  - B sai vì \"such\" không đi liền với tính từ đơn lẻ \"such funny\".\n  - C sai cấu trúc (\"too\" không đi với mệnh đề \"that\").\n  - D sai trật tự từ (\"so a funny advert\")."
+  },
+  {
+    "orderIndex": 41,
+    "sectionName": "5. Đề Thi Form THPTQG 2025 (Basic) - Đọc Điền Thông Báo (Announcement)",
+    "content": "**ANNOUNCEMENT: JOIN OUR SCHOOL MEDIA DAY!**\n\nThe Media Club is happy to invite all students to our special School Media Day next Friday.\n• Students (41) ______ love taking photos or making videos are welcome to join.\n• We have many fun audiovisual activities, including (42) ______ video quizzes and photo shows.\n• Visitors can enjoy a wide (43) ______ of media activities in the main hall.\n• The workshop (44) ______ by our club president will start at 9:00 AM.\n• Members will also distribute paper (45) ______ to share tips on making a school advert.\n• Please come on time and (46) ______ all the exciting games!\n\nFor more details, visit the club room on the second floor.\n\n**Question 41:** Choose the best option to complete blank (41).",
+    "options": [
+      {
+        "id": "A",
+        "text": "which"
+      },
+      {
+        "id": "B",
+        "text": "whom"
+      },
+      {
+        "id": "C",
+        "text": "who"
+      },
+      {
+        "id": "D",
+        "text": "whose"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "• **Kiến thức:** Đại từ quan hệ (Relative Pronouns).\n• **Giải thích:** Danh từ đứng trước là 'Students' (chỉ người) và phía sau là động từ 'love', do đó cần đại từ quan hệ đóng vai trò chủ ngữ chỉ người là **who**.\n• 'which' thay thế cho vật, 'whom' làm tân ngữ chỉ người, 'whose' chỉ sở hữu."
+  },
+  {
+    "orderIndex": 42,
+    "sectionName": "5. Đề Thi Form THPTQG 2025 (Basic) - Đọc Điền Thông Báo (Announcement)",
+    "content": "**ANNOUNCEMENT: JOIN OUR SCHOOL MEDIA DAY!**\n\nThe Media Club is happy to invite all students to our special School Media Day next Friday.\n• Students (41) ______ love taking photos or making videos are welcome to join.\n• We have many fun audiovisual activities, including (42) ______ video quizzes and photo shows.\n• Visitors can enjoy a wide (43) ______ of media activities in the main hall.\n• The workshop (44) ______ by our club president will start at 9:00 AM.\n• Members will also distribute paper (45) ______ to share tips on making a school advert.\n• Please come on time and (46) ______ all the exciting games!\n\nFor more details, visit the club room on the second floor.\n\n**Question 42:** Choose the best option to complete blank (42).",
+    "options": [
+      {
+        "id": "A",
+        "text": "difficult"
+      },
+      {
+        "id": "B",
+        "text": "interactive"
+      },
+      {
+        "id": "C",
+        "text": "hungry"
+      },
+      {
+        "id": "D",
+        "text": "quiet"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "• **Kiến thức:** Từ vựng theo nghĩa của tính từ (Adjective meaning).\n• **Giải thích:** Trong ngữ cảnh ngày hội truyền thông ('fun games' và 'video quizzes'), tính từ phù hợp nhất là **interactive** (có tính tương tác: trò chơi đố vui tương tác).\n• Các từ khác không hợp nghĩa: difficult (khó khăn), hungry (đói bụng), quiet (yên tĩnh)."
+  },
+  {
+    "orderIndex": 43,
+    "sectionName": "5. Đề Thi Form THPTQG 2025 (Basic) - Đọc Điền Thông Báo (Announcement)",
+    "content": "**ANNOUNCEMENT: JOIN OUR SCHOOL MEDIA DAY!**\n\nThe Media Club is happy to invite all students to our special School Media Day next Friday.\n• Students (41) ______ love taking photos or making videos are welcome to join.\n• We have many fun audiovisual activities, including (42) ______ video quizzes and photo shows.\n• Visitors can enjoy a wide (43) ______ of media activities in the main hall.\n• The workshop (44) ______ by our club president will start at 9:00 AM.\n• Members will also distribute paper (45) ______ to share tips on making a school advert.\n• Please come on time and (46) ______ all the exciting games!\n\nFor more details, visit the club room on the second floor.\n\n**Question 43:** Choose the best option to complete blank (43).",
+    "options": [
+      {
+        "id": "A",
+        "text": "deal"
+      },
+      {
+        "id": "B",
+        "text": "amount"
+      },
+      {
+        "id": "C",
+        "text": "number"
+      },
+      {
+        "id": "D",
+        "text": "range"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "• **Kiến thức:** Cụm từ định lượng / Collocation.\n• **Giải thích:** Cụm từ cố định **a wide range of + danh từ số nhiều** mang nghĩa 'đa dạng, nhiều loại hoạt động khác nhau'.\n• 'a great deal of / an amount of' đi với danh từ không đếm được; 'a wide number of' không phải cụm chuẩn."
+  },
+  {
+    "orderIndex": 44,
+    "sectionName": "5. Đề Thi Form THPTQG 2025 (Basic) - Đọc Điền Thông Báo (Announcement)",
+    "content": "**ANNOUNCEMENT: JOIN OUR SCHOOL MEDIA DAY!**\n\nThe Media Club is happy to invite all students to our special School Media Day next Friday.\n• Students (41) ______ love taking photos or making videos are welcome to join.\n• We have many fun audiovisual activities, including (42) ______ video quizzes and photo shows.\n• Visitors can enjoy a wide (43) ______ of media activities in the main hall.\n• The workshop (44) ______ by our club president will start at 9:00 AM.\n• Members will also distribute paper (45) ______ to share tips on making a school advert.\n• Please come on time and (46) ______ all the exciting games!\n\nFor more details, visit the club room on the second floor.\n\n**Question 44:** Choose the best option to complete blank (44).",
+    "options": [
+      {
+        "id": "A",
+        "text": "held"
+      },
+      {
+        "id": "B",
+        "text": "holding"
+      },
+      {
+        "id": "C",
+        "text": "was held"
+      },
+      {
+        "id": "D",
+        "text": "to hold"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "• **Kiến thức:** Rút gọn mệnh đề quan hệ (Reduced Relative Clause).\n• **Giải thích:** Câu đã có vị ngữ chính là 'will start at 9:00 AM'. Buổi hội thảo được tổ chức bởi chủ tịch câu lạc bộ mang nghĩa bị động ('The workshop which was held by our club president...'), do đó rút gọn thành quá khứ phân từ **held**."
+  },
+  {
+    "orderIndex": 45,
+    "sectionName": "5. Đề Thi Form THPTQG 2025 (Basic) - Đọc Điền Thông Báo (Announcement)",
+    "content": "**ANNOUNCEMENT: JOIN OUR SCHOOL MEDIA DAY!**\n\nThe Media Club is happy to invite all students to our special School Media Day next Friday.\n• Students (41) ______ love taking photos or making videos are welcome to join.\n• We have many fun audiovisual activities, including (42) ______ video quizzes and photo shows.\n• Visitors can enjoy a wide (43) ______ of media activities in the main hall.\n• The workshop (44) ______ by our club president will start at 9:00 AM.\n• Members will also distribute paper (45) ______ to share tips on making a school advert.\n• Please come on time and (46) ______ all the exciting games!\n\nFor more details, visit the club room on the second floor.\n\n**Question 45:** Choose the best option to complete blank (45).",
+    "options": [
+      {
+        "id": "A",
+        "text": "viewers"
+      },
+      {
+        "id": "B",
+        "text": "billboards"
+      },
+      {
+        "id": "C",
+        "text": "leaflets"
+      },
+      {
+        "id": "D",
+        "text": "target customers"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "• **Kiến thức:** Từ vựng danh từ theo ngữ cảnh (Noun choice).\n• **Giải thích:** Động từ 'distribute paper ...' nghĩa là phân phát tài liệu giấy, từ phù hợp nhất là **leaflets** (tờ rơi: phân phát tờ rơi giấy để chia sẻ mẹo làm quảng cáo trường học).\n• Các từ khác: viewers (người xem truyền hình), billboards (biển quảng cáo tấm lớn ngoài trời), target customers (khách hàng mục tiêu)."
+  },
+  {
+    "orderIndex": 46,
+    "sectionName": "5. Đề Thi Form THPTQG 2025 (Basic) - Đọc Điền Thông Báo (Announcement)",
+    "content": "**ANNOUNCEMENT: JOIN OUR SCHOOL MEDIA DAY!**\n\nThe Media Club is happy to invite all students to our special School Media Day next Friday.\n• Students (41) ______ love taking photos or making videos are welcome to join.\n• We have many fun audiovisual activities, including (42) ______ video quizzes and photo shows.\n• Visitors can enjoy a wide (43) ______ of media activities in the main hall.\n• The workshop (44) ______ by our club president will start at 9:00 AM.\n• Members will also distribute paper (45) ______ to share tips on making a school advert.\n• Please come on time and (46) ______ all the exciting games!\n\nFor more details, visit the club room on the second floor.\n\n**Question 46:** Choose the best option to complete blank (46).",
+    "options": [
+      {
+        "id": "A",
+        "text": "give up"
+      },
+      {
+        "id": "B",
+        "text": "take part in"
+      },
+      {
+        "id": "C",
+        "text": "turn off"
+      },
+      {
+        "id": "D",
+        "text": "look after"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "• **Kiến thức:** Cụm động từ cơ bản (Phrasal verbs).\n• **Giải thích:** Cụm **take part in** có nghĩa là 'tham gia' (tham gia tất cả các trò chơi hào hứng).\n• Các phương án khác: give up (từ bỏ), turn off (tắt thiết bị), look after (chăm sóc)."
+  },
+  {
+    "orderIndex": 47,
+    "sectionName": "6. Đề Thi Form THPTQG 2025 (Basic) - Đọc Điền Tờ Rơi (Leaflet)",
+    "content": "**TIPS TO STAY SAFE FROM FAKE NEWS!**\n\nToday, news spreads very fast on social media. Follow these simple tips to protect yourself and your friends:\n• Always pay attention (47) ______ stories that sound too strange or shocking.\n• Check the author (48) ______ read other stories on the same website.\n• Always choose (49) ______ when you want reliable daily information, as opposed to false stories.\n• Be reluctant to believe a post if (50) ______ credible news sources do not report it.\n• Stop and think carefully before (51) ______ any link or video with your friends.\n• Reading this helpful leaflet will (52) ______ for your online safety habits!\n\n**Question 47:** Choose the best option to complete blank (47).",
+    "options": [
+      {
+        "id": "A",
+        "text": "of"
+      },
+      {
+        "id": "B",
+        "text": "in"
+      },
+      {
+        "id": "C",
+        "text": "on"
+      },
+      {
+        "id": "D",
+        "text": "to"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "• **Kiến thức:** Giới từ đi với cụm động từ (Prepositions).\n• **Giải thích:** Cụm từ cố định **pay attention to something** nghĩa là 'chú ý, để ý đến cái gì' (luôn chú ý đến những câu chuyện nghe quá kỳ lạ hoặc gây sốc)."
+  },
+  {
+    "orderIndex": 48,
+    "sectionName": "6. Đề Thi Form THPTQG 2025 (Basic) - Đọc Điền Tờ Rơi (Leaflet)",
+    "content": "**TIPS TO STAY SAFE FROM FAKE NEWS!**\n\nToday, news spreads very fast on social media. Follow these simple tips to protect yourself and your friends:\n• Always pay attention (47) ______ stories that sound too strange or shocking.\n• Check the author (48) ______ read other stories on the same website.\n• Always choose (49) ______ when you want reliable daily information, as opposed to false stories.\n• Be reluctant to believe a post if (50) ______ credible news sources do not report it.\n• Stop and think carefully before (51) ______ any link or video with your friends.\n• Reading this helpful leaflet will (52) ______ for your online safety habits!\n\n**Question 48:** Choose the best option to complete blank (48).",
+    "options": [
+      {
+        "id": "A",
+        "text": "and"
+      },
+      {
+        "id": "B",
+        "text": "but"
+      },
+      {
+        "id": "C",
+        "text": "or"
+      },
+      {
+        "id": "D",
+        "text": "so"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "• **Kiến thức:** Liên từ đẳng lập (Coordinating Conjunctions).\n• **Giải thích:** Liên từ **and** (và) dùng để nối hai hành động mệnh lệnh song song cùng hướng: 'Kiểm tra tác giả VÀ đọc các bài khác trên cùng trang web'."
+  },
+  {
+    "orderIndex": 49,
+    "sectionName": "6. Đề Thi Form THPTQG 2025 (Basic) - Đọc Điền Tờ Rơi (Leaflet)",
+    "content": "**TIPS TO STAY SAFE FROM FAKE NEWS!**\n\nToday, news spreads very fast on social media. Follow these simple tips to protect yourself and your friends:\n• Always pay attention (47) ______ stories that sound too strange or shocking.\n• Check the author (48) ______ read other stories on the same website.\n• Always choose (49) ______ when you want reliable daily information, as opposed to false stories.\n• Be reluctant to believe a post if (50) ______ credible news sources do not report it.\n• Stop and think carefully before (51) ______ any link or video with your friends.\n• Reading this helpful leaflet will (52) ______ for your online safety habits!\n\n**Question 49:** Choose the best option to complete blank (49).",
+    "options": [
+      {
+        "id": "A",
+        "text": "online free news sites"
+      },
+      {
+        "id": "B",
+        "text": "news sites online free"
+      },
+      {
+        "id": "C",
+        "text": "free online news sites"
+      },
+      {
+        "id": "D",
+        "text": "sites news free online"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "• **Kiến thức:** Trật tự từ trong cụm danh từ (Noun phrase word order).\n• **Giải thích:** Trật tự chuẩn: Tính từ chỉ tính chất chung ('free' - miễn phí) + Tính từ phương thức ('online' - trực tuyến) + Danh từ ghép chính ('news sites' - trang tin tức) -> **free online news sites** (giống mẫu câu 'heavy grocery bags' trong đề thi minh họa THPTQG 2025)."
+  },
+  {
+    "orderIndex": 50,
+    "sectionName": "6. Đề Thi Form THPTQG 2025 (Basic) - Đọc Điền Tờ Rơi (Leaflet)",
+    "content": "**TIPS TO STAY SAFE FROM FAKE NEWS!**\n\nToday, news spreads very fast on social media. Follow these simple tips to protect yourself and your friends:\n• Always pay attention (47) ______ stories that sound too strange or shocking.\n• Check the author (48) ______ read other stories on the same website.\n• Always choose (49) ______ when you want reliable daily information, as opposed to false stories.\n• Be reluctant to believe a post if (50) ______ credible news sources do not report it.\n• Stop and think carefully before (51) ______ any link or video with your friends.\n• Reading this helpful leaflet will (52) ______ for your online safety habits!\n\n**Question 50:** Choose the best option to complete blank (50).",
+    "options": [
+      {
+        "id": "A",
+        "text": "another"
+      },
+      {
+        "id": "B",
+        "text": "others"
+      },
+      {
+        "id": "C",
+        "text": "the others"
+      },
+      {
+        "id": "D",
+        "text": "other"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "• **Kiến thức:** Lượng từ / Từ chỉ định (Determiners).\n• **Giải thích:** Phía sau chỗ trống là danh từ số nhiều 'credible news sources' (các nguồn tin uy tín), nên cần dùng **other** ('other + danh từ số nhiều' = những ... khác).\n• 'another' đi với danh từ số ít; 'others' và 'the others' là đại từ đứng độc lập, không đi kèm danh từ ngay sau."
+  },
+  {
+    "orderIndex": 51,
+    "sectionName": "6. Đề Thi Form THPTQG 2025 (Basic) - Đọc Điền Tờ Rơi (Leaflet)",
+    "content": "**TIPS TO STAY SAFE FROM FAKE NEWS!**\n\nToday, news spreads very fast on social media. Follow these simple tips to protect yourself and your friends:\n• Always pay attention (47) ______ stories that sound too strange or shocking.\n• Check the author (48) ______ read other stories on the same website.\n• Always choose (49) ______ when you want reliable daily information, as opposed to false stories.\n• Be reluctant to believe a post if (50) ______ credible news sources do not report it.\n• Stop and think carefully before (51) ______ any link or video with your friends.\n• Reading this helpful leaflet will (52) ______ for your online safety habits!\n\n**Question 51:** Choose the best option to complete blank (51).",
+    "options": [
+      {
+        "id": "A",
+        "text": "cooking"
+      },
+      {
+        "id": "B",
+        "text": "sharing"
+      },
+      {
+        "id": "C",
+        "text": "sleeping"
+      },
+      {
+        "id": "D",
+        "text": "driving"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "• **Kiến thức:** Nghĩa của động từ dạng V-ing sau giới từ (Verb meaning).\n• **Giải thích:** Dựa vào tân ngữ 'any link or video with your friends', động từ thích hợp nhất là **sharing** (chia sẻ đường link hoặc video với bạn bè).\n• Các từ khác không hợp nghĩa: cooking (nấu ăn), sleeping (ngủ), driving (lái xe)."
+  },
+  {
+    "orderIndex": 52,
+    "sectionName": "6. Đề Thi Form THPTQG 2025 (Basic) - Đọc Điền Tờ Rơi (Leaflet)",
+    "content": "**TIPS TO STAY SAFE FROM FAKE NEWS!**\n\nToday, news spreads very fast on social media. Follow these simple tips to protect yourself and your friends:\n• Always pay attention (47) ______ stories that sound too strange or shocking.\n• Check the author (48) ______ read other stories on the same website.\n• Always choose (49) ______ when you want reliable daily information, as opposed to false stories.\n• Be reluctant to believe a post if (50) ______ credible news sources do not report it.\n• Stop and think carefully before (51) ______ any link or video with your friends.\n• Reading this helpful leaflet will (52) ______ for your online safety habits!\n\n**Question 52:** Choose the best option to complete blank (52).",
+    "options": [
+      {
+        "id": "A",
+        "text": "do wonders"
+      },
+      {
+        "id": "B",
+        "text": "make sense"
+      },
+      {
+        "id": "C",
+        "text": "take care"
+      },
+      {
+        "id": "D",
+        "text": "lose heart"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "• **Kiến thức:** Thành ngữ / Cụm từ cố định (Idiomatic collocations).\n• **Giải thích:** Cụm từ **do wonders (for something)** nghĩa là 'mang lại hiệu quả kỳ diệu / cực kỳ có ích cho cái gì' (Đọc tờ rơi hữu ích này sẽ mang lại hiệu quả tuyệt vời cho thói quen an toàn mạng của bạn).\n• make sense (hợp lý), take care (chăm sóc/cẩn thận), lose heart (nản lòng)."
+  },
+  {
+    "orderIndex": 53,
+    "sectionName": "7. Đề Thi Form THPTQG 2025 (Basic) - Sắp Xếp Câu & Hội Thoại (Arrangement)",
+    "content": "**Question 53:** Choose the correct arrangement of the sentences to make a meaningful dialogue.\n\na. \"Yes, I saw it near our school gate. The picture on it is very colourful.\"\nb. \"Have you seen the new cinema billboard on Green Street?\"\nc. \"That sounds great! Let's go see a film there this weekend.\"",
+    "options": [
+      {
+        "id": "A",
+        "text": "a - c - b"
+      },
+      {
+        "id": "B",
+        "text": "c - b - a"
+      },
+      {
+        "id": "C",
+        "text": "b - a - c"
+      },
+      {
+        "id": "D",
+        "text": "a - b - c"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "• **Kiến thức:** Sắp xếp hội thoại ngắn 3 lượt lời (Short dialogue arrangement).\n• **Giải thích:**\n  - **b:** Người thứ nhất mở đầu hỏi về biển quảng cáo rạp phim mới ('Have you seen the new cinema billboard...?').\n  - **a:** Người thứ hai xác nhận đã thấy gần cổng trường và khen tranh ảnh rất rực rỡ ('Yes, I saw it...').\n  - **c:** Người thứ nhất rủ cùng đi xem phim cuối tuần ('That sounds great! Let's go see a film...').\n• Thứ tự đúng: **b - a - c**."
+  },
+  {
+    "orderIndex": 54,
+    "sectionName": "7. Đề Thi Form THPTQG 2025 (Basic) - Sắp Xếp Câu & Hội Thoại (Arrangement)",
+    "content": "**Question 54:** Choose the correct arrangement of the sentences to make a meaningful dialogue.\n\na. \"Why should we do that? It was shared by hundreds of people!\"\nb. \"I just saw a post saying our school will close tomorrow because of heavy rain.\"\nc. \"Wait, Nam! You should fact-check that story before telling everyone.\"\nd. \"Because anyone can post fake news online to get views. We should only trust credible sources.\"\ne. \"You're right. Let me check the official school website first.\"",
+    "options": [
+      {
+        "id": "A",
+        "text": "c - a - d - b - e"
+      },
+      {
+        "id": "B",
+        "text": "b - c - a - d - e"
+      },
+      {
+        "id": "C",
+        "text": "b - a - c - e - d"
+      },
+      {
+        "id": "D",
+        "text": "d - b - c - a - e"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "• **Kiến thức:** Sắp xếp đoạn hội thoại 5 lượt lời (5-turn dialogue arrangement).\n• **Giải thích:**\n  - **b:** Nam kể về tin tức vừa đọc được trên mạng ('I just saw a post...').\n  - **c:** Mai khuyên Nam nên kiểm chứng trước ('Wait, Nam! You should fact-check that story...').\n  - **a:** Nam hỏi lý do tại sao phải làm vậy khi có nhiều người đã chia sẻ ('Why should we do that?...').\n  - **d:** Mai giải thích vì ai cũng có thể đăng tin giả và chỉ nên tin nguồn uy tín ('Because anyone can post fake news...').\n  - **e:** Nam đồng ý và quyết định kiểm tra trang web trường ('You're right. Let me check...').\n• Thứ tự đúng: **b - c - a - d - e**."
+  },
+  {
+    "orderIndex": 55,
+    "sectionName": "7. Đề Thi Form THPTQG 2025 (Basic) - Sắp Xếp Câu & Hội Thoại (Arrangement)",
+    "content": "**Question 55:** Choose the correct arrangement of the sentences to make a meaningful email.\n\na. We will learn how to design an attractive leaflet for our next school festival.\nb. Please let me know by Thursday if you can come so I can save you a seat.\nc. Dear Minh, I hope you are having a wonderful week!\nd. Best wishes, An.\ne. I am writing to invite you to our Media Club meeting this Friday afternoon.",
+    "options": [
+      {
+        "id": "A",
+        "text": "e - c - a - b - d"
+      },
+      {
+        "id": "B",
+        "text": "c - a - e - d - b"
+      },
+      {
+        "id": "C",
+        "text": "a - e - c - b - d"
+      },
+      {
+        "id": "D",
+        "text": "c - e - a - b - d"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "• **Kiến thức:** Sắp xếp thư điện tử / Email ngắn (Email arrangement).\n• **Giải thích:**\n  - **c:** Lời chào và hỏi thăm mở đầu thư ('Dear Minh, I hope you are having a wonderful week!').\n  - **e:** Nêu mục đích viết thư: mời tham gia câu lạc bộ ('I am writing to invite you...').\n  - **a:** Chi tiết hoạt động: học thiết kế tờ rơi cho lễ hội ('We will learn how to design an attractive leaflet...').\n  - **b:** Lời đề nghị phản hồi trước thứ Năm để giữ chỗ ('Please let me know by Thursday...').\n  - **d:** Lời chúc kết thư và chữ ký ('Best wishes, An.').\n• Thứ tự đúng: **c - e - a - b - d**."
+  },
+  {
+    "orderIndex": 56,
+    "sectionName": "7. Đề Thi Form THPTQG 2025 (Basic) - Sắp Xếp Câu & Hội Thoại (Arrangement)",
+    "content": "**Question 56:** Choose the correct arrangement of the sentences to make a meaningful short story.\n\na. Therefore, I decided to search for the event on a credible local news site.\nb. However, I felt reluctant to send it because the website had strange spelling errors.\nc. Last night, I saw an exciting story on my phone about a free music show.\nd. In the end, I found out it was fake news and felt happy that I stopped in time.\ne. At first, I wanted to send the link to all my close friends right away.",
+    "options": [
+      {
+        "id": "A",
+        "text": "c - e - b - a - d"
+      },
+      {
+        "id": "B",
+        "text": "c - b - e - a - d"
+      },
+      {
+        "id": "C",
+        "text": "e - c - b - d - a"
+      },
+      {
+        "id": "D",
+        "text": "a - c - e - b - d"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "• **Kiến thức:** Sắp xếp đoạn văn tự sự kể chuyện (Narrative paragraph arrangement).\n• **Giải thích:**\n  - **c:** Mở đầu câu chuyện tối qua thấy tin về buổi diễn ca nhạc ('Last night, I saw an exciting story...').\n  - **e:** Hành động ban đầu định gửi ngay cho bạn bè ('At first, I wanted to send the link...').\n  - **b:** Sự ngập ngừng (reluctant) do thấy trang web có nhiều lỗi chính tả lạ ('However, I felt reluctant to send it...').\n  - **a:** Quyết định kiểm tra trên trang tin địa phương uy tín ('Therefore, I decided to search...').\n  - **d:** Kết cục phát hiện đó là tin giả và thấy may mắn vì đã dừng lại kịp thời ('In the end, I found out it was fake news...').\n• Thứ tự đúng: **c - e - b - a - d**."
+  },
+  {
+    "orderIndex": 57,
+    "sectionName": "7. Đề Thi Form THPTQG 2025 (Basic) - Sắp Xếp Câu & Hội Thoại (Arrangement)",
+    "content": "**Question 57:** Choose the correct arrangement of the sentences to make a meaningful short paragraph.\n\na. For example, the invention of the printing press in the 15th century allowed books to reach ordinary people for the first time.\nb. Today, digital media is clearly here to stay, making knowledge accessible to millions around the world.\nc. In history, new technology has always helped improve human literacy.\nd. Later, television and radio created a strong presence in schools, helping students learn with sounds and images.\ne. As a result of these inventions, people can now read, study, and share ideas faster than ever before.",
+    "options": [
+      {
+        "id": "A",
+        "text": "a - c - d - b - e"
+      },
+      {
+        "id": "B",
+        "text": "c - d - a - e - b"
+      },
+      {
+        "id": "C",
+        "text": "c - a - d - b - e"
+      },
+      {
+        "id": "D",
+        "text": "b - c - a - d - e"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "• **Kiến thức:** Sắp xếp đoạn văn thông tin lịch sử (Informational paragraph arrangement).\n• **Giải thích:**\n  - **c:** Câu chủ đề khái quát: Công nghệ mới luôn giúp nâng cao khả năng biết chữ của con người ('Throughout history... improve human literacy').\n  - **a:** Dẫn chứng lịch sử đầu tiên: Máy in thế kỷ 15 đưa sách đến với dân thường ('For example, the invention of the printing press...').\n  - **d:** Bước phát triển tiếp theo trong thế kỷ 20: Truyền hình và phát thanh ('Later, television and radio created a strong presence...').\n  - **b:** Thời kỳ hiện tại: Truyền thông kỹ thuật số trở thành tất yếu ('Today, digital media is clearly here to stay...').\n  - **e:** Câu kết luận nêu kết quả chung ('As a result of these inventions, people can now read, study, and share ideas faster...').\n• Thứ tự đúng: **c - a - d - b - e**."
+  },
+  {
+    "orderIndex": 58,
+    "sectionName": "8. Đề Thi Form THPTQG 2025 (Basic) - Đọc Điền Mệnh Đề & Câu (Structure Cloze)",
+    "content": "**PRINTED NEWSPAPERS AND ONLINE NEWS**\n\nLong ago, before modern computers existed, people relied mainly on printed newspapers to get information. The invention of the printing press changed the world by spreading knowledge, improving literacy, (58) ______. For hundreds of years, families enjoyed holding a real paper in the morning, (59) ______.\n\nIn the 21st century, the Internet has changed how people read the news. Today, online websites account for a large part of daily reading and provide instant updates about events around the globe. (60) ______. Anyone with a smartphone can read articles, watch live videos, and comment on social media posts at any time.\n\n(61) ______. Printed papers usually hire professional editors who carefully check all facts, so their reports are often very credible. On the other hand, online platforms are fast and accessible, but they can sometimes spread fake news. To become smart readers, students need to practice media skills and know (62) ______.\n\n**Question 58:** Choose the best option to complete blank (58).",
+    "options": [
+      {
+        "id": "A",
+        "text": "and they connected people around the world"
+      },
+      {
+        "id": "B",
+        "text": "but connected people around the world"
+      },
+      {
+        "id": "C",
+        "text": "and to connect people around the world"
+      },
+      {
+        "id": "D",
+        "text": "and connecting people around the world"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "• **Kiến thức:** Cấu trúc song hành (Parallel Structure).\n• **Giải thích:** Sau giới từ 'by' là chuỗi các danh động từ song hành được nối bởi dấu phẩy và 'and': 'by spreading knowledge, improving literacy, **and connecting people around the world**'. Do đó cụm từ cần điền bắt buộc phải ở dạng V-ing."
+  },
+  {
+    "orderIndex": 59,
+    "sectionName": "8. Đề Thi Form THPTQG 2025 (Basic) - Đọc Điền Mệnh Đề & Câu (Structure Cloze)",
+    "content": "**PRINTED NEWSPAPERS AND ONLINE NEWS**\n\nLong ago, before modern computers existed, people relied mainly on printed newspapers to get information. The invention of the printing press changed the world by spreading knowledge, improving literacy, (58) ______. For hundreds of years, families enjoyed holding a real paper in the morning, (59) ______.\n\nIn the 21st century, the Internet has changed how people read the news. Today, online websites account for a large part of daily reading and provide instant updates about events around the globe. (60) ______. Anyone with a smartphone can read articles, watch live videos, and comment on social media posts at any time.\n\n(61) ______. Printed papers usually hire professional editors who carefully check all facts, so their reports are often very credible. On the other hand, online platforms are fast and accessible, but they can sometimes spread fake news. To become smart readers, students need to practice media skills and know (62) ______.\n\n**Question 59:** Choose the best option to complete blank (59).",
+    "options": [
+      {
+        "id": "A",
+        "text": "so they could receive instant updates from other countries"
+      },
+      {
+        "id": "B",
+        "text": "but getting news this way took a lot of time"
+      },
+      {
+        "id": "C",
+        "text": "because the Internet was already very popular"
+      },
+      {
+        "id": "D",
+        "text": "or they refused to read any printed books"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "• **Kiến thức:** Mệnh đề kết hợp chỉ sự tương phản (Compound sentence clause).\n• **Giải thích:** Câu trước nói về thói quen thích đọc báo giấy vào buổi sáng ('families enjoyed holding a real paper in the morning'), mệnh đề tương phản hợp logic là 'nhưng việc tiếp nhận tin tức theo cách này tốn nhiều thời gian' (**but getting news this way took a lot of time**).\n• Các phương án khác phi logic trong bối cảnh quá khứ chưa có Internet ('instant updates', 'the Internet was already very popular')."
+  },
+  {
+    "orderIndex": 60,
+    "sectionName": "8. Đề Thi Form THPTQG 2025 (Basic) - Đọc Điền Mệnh Đề & Câu (Structure Cloze)",
+    "content": "**PRINTED NEWSPAPERS AND ONLINE NEWS**\n\nLong ago, before modern computers existed, people relied mainly on printed newspapers to get information. The invention of the printing press changed the world by spreading knowledge, improving literacy, (58) ______. For hundreds of years, families enjoyed holding a real paper in the morning, (59) ______.\n\nIn the 21st century, the Internet has changed how people read the news. Today, online websites account for a large part of daily reading and provide instant updates about events around the globe. (60) ______. Anyone with a smartphone can read articles, watch live videos, and comment on social media posts at any time.\n\n(61) ______. Printed papers usually hire professional editors who carefully check all facts, so their reports are often very credible. On the other hand, online platforms are fast and accessible, but they can sometimes spread fake news. To become smart readers, students need to practice media skills and know (62) ______.\n\n**Question 60:** Choose the best option to complete blank (60).",
+    "options": [
+      {
+        "id": "A",
+        "text": "Digital news is now everywhere and clearly here to stay"
+      },
+      {
+        "id": "B",
+        "text": "Many ancient kings refused to read any written words"
+      },
+      {
+        "id": "C",
+        "text": "People had to wait weeks for a letter to arrive by ship"
+      },
+      {
+        "id": "D",
+        "text": "Most children prefer sleeping to playing outdoor sports"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "• **Kiến thức:** Điền câu văn đảm bảo tính liên kết mạch lạc (Sentence Coherence).\n• **Giải thích:** Đoạn 2 đang bàn luận về sự bùng nổ của tin tức trực tuyến trong thế kỷ 21, câu chèn vào cần củng cố ý này: **Digital news is now everywhere and clearly here to stay** (Tin tức kỹ thuật số hiện diện ở khắp mọi nơi và rõ ràng đã trở thành một phần tất yếu không thể thay thế).\n• Các phương án B, C, D hoàn toàn lạc đề so với mạch văn."
+  },
+  {
+    "orderIndex": 61,
+    "sectionName": "8. Đề Thi Form THPTQG 2025 (Basic) - Đọc Điền Mệnh Đề & Câu (Structure Cloze)",
+    "content": "**PRINTED NEWSPAPERS AND ONLINE NEWS**\n\nLong ago, before modern computers existed, people relied mainly on printed newspapers to get information. The invention of the printing press changed the world by spreading knowledge, improving literacy, (58) ______. For hundreds of years, families enjoyed holding a real paper in the morning, (59) ______.\n\nIn the 21st century, the Internet has changed how people read the news. Today, online websites account for a large part of daily reading and provide instant updates about events around the globe. (60) ______. Anyone with a smartphone can read articles, watch live videos, and comment on social media posts at any time.\n\n(61) ______. Printed papers usually hire professional editors who carefully check all facts, so their reports are often very credible. On the other hand, online platforms are fast and accessible, but they can sometimes spread fake news. To become smart readers, students need to practice media skills and know (62) ______.\n\n**Question 61:** Choose the best option to complete blank (61).",
+    "options": [
+      {
+        "id": "A",
+        "text": "The printing press was completely destroyed after the war"
+      },
+      {
+        "id": "B",
+        "text": "Watching films at the cinema is much more fun than reading"
+      },
+      {
+        "id": "C",
+        "text": "Both printed newspapers and online news have their own advantages"
+      },
+      {
+        "id": "D",
+        "text": "Every student should stop reading news on the Internet"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "• **Kiến thức:** Câu chủ đề của đoạn văn (Topic sentence).\n• **Giải thích:** Các câu tiếp theo trong đoạn 3 phân tích điểm mạnh của báo in (được biên tập viên kiểm tra kỹ lưỡng, đáng tin cậy) song song với điểm mạnh của báo mạng (nhanh chóng, dễ tiếp cận). Do đó câu chủ đề chính xác nhất là: **Both printed newspapers and online news have their own advantages** (Cả báo in và tin tức trực tuyến đều có những ưu điểm riêng của mình)."
+  },
+  {
+    "orderIndex": 62,
+    "sectionName": "8. Đề Thi Form THPTQG 2025 (Basic) - Đọc Điền Mệnh Đề & Câu (Structure Cloze)",
+    "content": "**PRINTED NEWSPAPERS AND ONLINE NEWS**\n\nLong ago, before modern computers existed, people relied mainly on printed newspapers to get information. The invention of the printing press changed the world by spreading knowledge, improving literacy, (58) ______. For hundreds of years, families enjoyed holding a real paper in the morning, (59) ______.\n\nIn the 21st century, the Internet has changed how people read the news. Today, online websites account for a large part of daily reading and provide instant updates about events around the globe. (60) ______. Anyone with a smartphone can read articles, watch live videos, and comment on social media posts at any time.\n\n(61) ______. Printed papers usually hire professional editors who carefully check all facts, so their reports are often very credible. On the other hand, online platforms are fast and accessible, but they can sometimes spread fake news. To become smart readers, students need to practice media skills and know (62) ______.\n\n**Question 62:** Choose the best option to complete blank (62).",
+    "options": [
+      {
+        "id": "A",
+        "text": "why televisions are heavier than laptops"
+      },
+      {
+        "id": "B",
+        "text": "where they can buy the most expensive clothes"
+      },
+      {
+        "id": "C",
+        "text": "how to build a big printing machine at home"
+      },
+      {
+        "id": "D",
+        "text": "how to choose credible news sources"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "• **Kiến thức:** Mệnh đề danh từ / Cụm từ hoàn thiện câu kết đoạn (Concluding clause).\n• **Giải thích:** Để trở thành độc giả thông thái trước nguy cơ tin giả trên mạng, học sinh cần rèn luyện kỹ năng truyền thông và biết cách lựa chọn các nguồn tin đáng tin cậy: **how to choose credible news sources**.\n• Các phương án khác (tivi nặng hơn laptop, mua quần áo đắt tiền, tự đóng máy in khổng lồ) không liên quan đến bài học."
+  },
+  {
+    "orderIndex": 63,
+    "sectionName": "9. Đề Thi Form THPTQG 2025 (Basic) - Đọc Hiểu 8 Câu (Reading 1)",
+    "content": "**Read the following passage and choose the correct answer.**\n\n**[Paragraph 1]** Long ago, people had to write books by hand, so books were rare and expensive. In the 15th century, Johannes Gutenberg invented the **printing press**. This machine helped workers print books quickly and **distribute** them to schools, libraries, and towns. Because books became cheaper and more common, general **literacy** increased, and many ordinary people learned how to read.\n\n**[Paragraph 2]** As printing technology improved, daily newspapers appeared in big cities. For the first time, large numbers of people could read about daily events and government decisions. People trusted printed newspapers because reporters gathered information with care. Newspapers became a **credible** source of news for communities and helped build modern community life.\n\n**[Paragraph 3]** In the 20th century, television arrived and changed mass media again. Unlike radio, television offered **audiovisual** content with moving pictures and sound. Millions of families bought television sets for their living rooms. Every evening, television **viewers** sat together to watch news programmes and sports games. In fact, **they** often discussed the evening news with their neighbours the next morning.\n\n**[Paragraph 4]** Today, many people get news on their smartphones and computers. However, **[Underlined sentence]: even though digital media is growing fast, traditional media like television and newspapers is here to stay.** Trained news writers check facts carefully before publishing, which makes traditional news reliable. For this reason, many people still turn to newspapers and television for checked news.\n\n**Question 63:** Which of the following is NOT mentioned in paragraph 1 as a result of the printing press?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Books became cheaper to buy."
+      },
+      {
+        "id": "B",
+        "text": "People stopped writing letters to their friends."
+      },
+      {
+        "id": "C",
+        "text": "General literacy increased among ordinary people."
+      },
+      {
+        "id": "D",
+        "text": "Printed books were sent to schools and towns."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "• Giải thích chi tiết bằng tiếng Việt:\n- Thông tin trong Đoạn 1 nêu rõ các kết quả của máy in (printing press):\n  + Sách rẻ hơn: 'Because books became cheaper and more common' (phù hợp phương án A).\n  + Tỷ lệ biết chữ tăng lên: 'general literacy increased, and many ordinary people learned how to read' (phù hợp phương án C).\n  + Sách được phân phối đến trường học và thị trấn: 'distribute them to schools, libraries, and towns' (phù hợp phương án D).\n- Phương án B ('Mọi người ngừng viết thư cho bạn bè') HOÀN TOÀN KHÔNG được nhắc đến trong bài (NOT mentioned) ➔ Chọn B."
+  },
+  {
+    "orderIndex": 64,
+    "sectionName": "9. Đề Thi Form THPTQG 2025 (Basic) - Đọc Hiểu 8 Câu (Reading 1)",
+    "content": "**Read the following passage and choose the correct answer.**\n\n**[Paragraph 1]** Long ago, people had to write books by hand, so books were rare and expensive. In the 15th century, Johannes Gutenberg invented the **printing press**. This machine helped workers print books quickly and **distribute** them to schools, libraries, and towns. Because books became cheaper and more common, general **literacy** increased, and many ordinary people learned how to read.\n\n**[Paragraph 2]** As printing technology improved, daily newspapers appeared in big cities. For the first time, large numbers of people could read about daily events and government decisions. People trusted printed newspapers because reporters gathered information with care. Newspapers became a **credible** source of news for communities and helped build modern community life.\n\n**[Paragraph 3]** In the 20th century, television arrived and changed mass media again. Unlike radio, television offered **audiovisual** content with moving pictures and sound. Millions of families bought television sets for their living rooms. Every evening, television **viewers** sat together to watch news programmes and sports games. In fact, **they** often discussed the evening news with their neighbours the next morning.\n\n**[Paragraph 4]** Today, many people get news on their smartphones and computers. However, **[Underlined sentence]: even though digital media is growing fast, traditional media like television and newspapers is here to stay.** Trained news writers check facts carefully before publishing, which makes traditional news reliable. For this reason, many people still turn to newspapers and television for checked news.\n\n**Question 64:** The word **distribute** in paragraph 1 can be best replaced by ______.",
+    "options": [
+      {
+        "id": "A",
+        "text": "give out"
+      },
+      {
+        "id": "B",
+        "text": "take back"
+      },
+      {
+        "id": "C",
+        "text": "keep secret"
+      },
+      {
+        "id": "D",
+        "text": "throw away"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "• Giải thích chi tiết bằng tiếng Việt:\n- Từ 'distribute' trong câu 'print books quickly and distribute them to schools...' mang nghĩa là phân phát, phân phối sách đến các nơi.\n- Phương án A: 'give out' = phân phát, chia phát (đồng nghĩa với distribute).\n- Phương án B: 'take back' = lấy lại; C: 'keep secret' = giữ bí mật; D: 'throw away' = vứt đi.\n➔ Chọn A."
+  },
+  {
+    "orderIndex": 65,
+    "sectionName": "9. Đề Thi Form THPTQG 2025 (Basic) - Đọc Hiểu 8 Câu (Reading 1)",
+    "content": "**Read the following passage and choose the correct answer.**\n\n**[Paragraph 1]** Long ago, people had to write books by hand, so books were rare and expensive. In the 15th century, Johannes Gutenberg invented the **printing press**. This machine helped workers print books quickly and **distribute** them to schools, libraries, and towns. Because books became cheaper and more common, general **literacy** increased, and many ordinary people learned how to read.\n\n**[Paragraph 2]** As printing technology improved, daily newspapers appeared in big cities. For the first time, large numbers of people could read about daily events and government decisions. People trusted printed newspapers because reporters gathered information with care. Newspapers became a **credible** source of news for communities and helped build modern community life.\n\n**[Paragraph 3]** In the 20th century, television arrived and changed mass media again. Unlike radio, television offered **audiovisual** content with moving pictures and sound. Millions of families bought television sets for their living rooms. Every evening, television **viewers** sat together to watch news programmes and sports games. In fact, **they** often discussed the evening news with their neighbours the next morning.\n\n**[Paragraph 4]** Today, many people get news on their smartphones and computers. However, **[Underlined sentence]: even though digital media is growing fast, traditional media like television and newspapers is here to stay.** Trained news writers check facts carefully before publishing, which makes traditional news reliable. For this reason, many people still turn to newspapers and television for checked news.\n\n**Question 65:** The word **credible** in paragraph 2 is OPPOSITE in meaning to ______.",
+    "options": [
+      {
+        "id": "A",
+        "text": "popular"
+      },
+      {
+        "id": "B",
+        "text": "expensive"
+      },
+      {
+        "id": "C",
+        "text": "unreliable"
+      },
+      {
+        "id": "D",
+        "text": "traditional"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "• Giải thích chi tiết bằng tiếng Việt:\n- Đề bài yêu cầu tìm từ TRÁI NGHĨA (OPPOSITE in meaning).\n- Từ 'credible' trong đoạn 2 ('Newspapers became a credible source of news...') có nghĩa là đáng tin cậy, có căn cứ xác thực (= trustworthy, reliable).\n- Trái nghĩa với 'credible' là 'unreliable' (không đáng tin cậy).\n- Các phương án khác: A. popular (phổ biến); B. expensive (đắt đỏ); D. traditional (truyền thống) không mang nghĩa trái ngược.\n➔ Chọn C."
+  },
+  {
+    "orderIndex": 66,
+    "sectionName": "9. Đề Thi Form THPTQG 2025 (Basic) - Đọc Hiểu 8 Câu (Reading 1)",
+    "content": "**Read the following passage and choose the correct answer.**\n\n**[Paragraph 1]** Long ago, people had to write books by hand, so books were rare and expensive. In the 15th century, Johannes Gutenberg invented the **printing press**. This machine helped workers print books quickly and **distribute** them to schools, libraries, and towns. Because books became cheaper and more common, general **literacy** increased, and many ordinary people learned how to read.\n\n**[Paragraph 2]** As printing technology improved, daily newspapers appeared in big cities. For the first time, large numbers of people could read about daily events and government decisions. People trusted printed newspapers because reporters gathered information with care. Newspapers became a **credible** source of news for communities and helped build modern community life.\n\n**[Paragraph 3]** In the 20th century, television arrived and changed mass media again. Unlike radio, television offered **audiovisual** content with moving pictures and sound. Millions of families bought television sets for their living rooms. Every evening, television **viewers** sat together to watch news programmes and sports games. In fact, **they** often discussed the evening news with their neighbours the next morning.\n\n**[Paragraph 4]** Today, many people get news on their smartphones and computers. However, **[Underlined sentence]: even though digital media is growing fast, traditional media like television and newspapers is here to stay.** Trained news writers check facts carefully before publishing, which makes traditional news reliable. For this reason, many people still turn to newspapers and television for checked news.\n\n**Question 66:** The word **they** in paragraph 3 refers to ______.",
+    "options": [
+      {
+        "id": "A",
+        "text": "living rooms"
+      },
+      {
+        "id": "B",
+        "text": "sports games"
+      },
+      {
+        "id": "C",
+        "text": "moving pictures"
+      },
+      {
+        "id": "D",
+        "text": "television viewers"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "• Giải thích chi tiết bằng tiếng Việt:\n- Xét câu trước đó trong đoạn 3: 'Every evening, television viewers sat together to watch news programmes and sports games. In fact, they often discussed the evening news with their neighbours the next morning.'\n- Chủ ngữ 'they' (họ) thảo luận tin tức buổi tối với hàng xóm chính là thay thế cho danh từ chỉ người đứng trước: 'television viewers' (những khán giả xem truyền hình).\n➔ Chọn D."
+  },
+  {
+    "orderIndex": 67,
+    "sectionName": "9. Đề Thi Form THPTQG 2025 (Basic) - Đọc Hiểu 8 Câu (Reading 1)",
+    "content": "**Read the following passage and choose the correct answer.**\n\n**[Paragraph 1]** Long ago, people had to write books by hand, so books were rare and expensive. In the 15th century, Johannes Gutenberg invented the **printing press**. This machine helped workers print books quickly and **distribute** them to schools, libraries, and towns. Because books became cheaper and more common, general **literacy** increased, and many ordinary people learned how to read.\n\n**[Paragraph 2]** As printing technology improved, daily newspapers appeared in big cities. For the first time, large numbers of people could read about daily events and government decisions. People trusted printed newspapers because reporters gathered information with care. Newspapers became a **credible** source of news for communities and helped build modern community life.\n\n**[Paragraph 3]** In the 20th century, television arrived and changed mass media again. Unlike radio, television offered **audiovisual** content with moving pictures and sound. Millions of families bought television sets for their living rooms. Every evening, television **viewers** sat together to watch news programmes and sports games. In fact, **they** often discussed the evening news with their neighbours the next morning.\n\n**[Paragraph 4]** Today, many people get news on their smartphones and computers. However, **[Underlined sentence]: even though digital media is growing fast, traditional media like television and newspapers is here to stay.** Trained news writers check facts carefully before publishing, which makes traditional news reliable. For this reason, many people still turn to newspapers and television for checked news.\n\n**Question 67:** Which of the following best paraphrases the underlined sentence in paragraph 4?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Digital media has replaced traditional media because it is much faster."
+      },
+      {
+        "id": "B",
+        "text": "Traditional media will continue to exist despite the fast growth of digital media."
+      },
+      {
+        "id": "C",
+        "text": "People only use traditional media when they do not have smartphones."
+      },
+      {
+        "id": "D",
+        "text": "Television and newspapers are no longer useful in modern society."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "• Giải thích chi tiết bằng tiếng Việt:\n- Câu gạch chân trong bài: 'even though digital media is growing fast, traditional media like television and newspapers is here to stay.'\n- Cụm thành ngữ 'be here to stay' = tồn tại lâu dài, là một phần tất yếu không biến mất.\n- Ý nghĩa câu gốc: Dù truyền thông số đang phát triển nhanh chóng, truyền thông truyền thống như truyền hình và báo in vẫn sẽ tiếp tục tồn tại.\n- Phương án B ('Traditional media will continue to exist despite the fast growth of digital media') diễn đạt lại chính xác và trọn vẹn nhất ý này.\n➔ Chọn B."
+  },
+  {
+    "orderIndex": 68,
+    "sectionName": "9. Đề Thi Form THPTQG 2025 (Basic) - Đọc Hiểu 8 Câu (Reading 1)",
+    "content": "**Read the following passage and choose the correct answer.**\n\n**[Paragraph 1]** Long ago, people had to write books by hand, so books were rare and expensive. In the 15th century, Johannes Gutenberg invented the **printing press**. This machine helped workers print books quickly and **distribute** them to schools, libraries, and towns. Because books became cheaper and more common, general **literacy** increased, and many ordinary people learned how to read.\n\n**[Paragraph 2]** As printing technology improved, daily newspapers appeared in big cities. For the first time, large numbers of people could read about daily events and government decisions. People trusted printed newspapers because reporters gathered information with care. Newspapers became a **credible** source of news for communities and helped build modern community life.\n\n**[Paragraph 3]** In the 20th century, television arrived and changed mass media again. Unlike radio, television offered **audiovisual** content with moving pictures and sound. Millions of families bought television sets for their living rooms. Every evening, television **viewers** sat together to watch news programmes and sports games. In fact, **they** often discussed the evening news with their neighbours the next morning.\n\n**[Paragraph 4]** Today, many people get news on their smartphones and computers. However, **[Underlined sentence]: even though digital media is growing fast, traditional media like television and newspapers is here to stay.** Trained news writers check facts carefully before publishing, which makes traditional news reliable. For this reason, many people still turn to newspapers and television for checked news.\n\n**Question 68:** Which of the following is TRUE according to paragraph 4?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Trained news writers check facts carefully before sharing news."
+      },
+      {
+        "id": "B",
+        "text": "Nobody reads newspapers or watches television news anymore."
+      },
+      {
+        "id": "C",
+        "text": "Traditional news is never checked before it is published."
+      },
+      {
+        "id": "D",
+        "text": "Smartphones have completely destroyed all traditional news companies."
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "• Giải thích chi tiết bằng tiếng Việt:\n- Căn cứ vào câu văn ở Đoạn 4: 'Trained news writers check facts carefully before publishing, which makes traditional news reliable.' (Các nhà báo chuyên nghiệp kiểm tra sự thật cẩn thận trước khi xuất bản, điều này làm cho tin tức truyền thống trở nên đáng tin cậy).\n- Do đó, phương án A là thông tin ĐÚNG (TRUE).\n- Phương án B, C, D đều sai sự thật so với nội dung bài đọc ('nobody reads', 'never checked', 'completely destroyed').\n➔ Chọn A."
+  },
+  {
+    "orderIndex": 69,
+    "sectionName": "9. Đề Thi Form THPTQG 2025 (Basic) - Đọc Hiểu 8 Câu (Reading 1)",
+    "content": "**Read the following passage and choose the correct answer.**\n\n**[Paragraph 1]** Long ago, people had to write books by hand, so books were rare and expensive. In the 15th century, Johannes Gutenberg invented the **printing press**. This machine helped workers print books quickly and **distribute** them to schools, libraries, and towns. Because books became cheaper and more common, general **literacy** increased, and many ordinary people learned how to read.\n\n**[Paragraph 2]** As printing technology improved, daily newspapers appeared in big cities. For the first time, large numbers of people could read about daily events and government decisions. People trusted printed newspapers because reporters gathered information with care. Newspapers became a **credible** source of news for communities and helped build modern community life.\n\n**[Paragraph 3]** In the 20th century, television arrived and changed mass media again. Unlike radio, television offered **audiovisual** content with moving pictures and sound. Millions of families bought television sets for their living rooms. Every evening, television **viewers** sat together to watch news programmes and sports games. In fact, **they** often discussed the evening news with their neighbours the next morning.\n\n**[Paragraph 4]** Today, many people get news on their smartphones and computers. However, **[Underlined sentence]: even though digital media is growing fast, traditional media like television and newspapers is here to stay.** Trained news writers check facts carefully before publishing, which makes traditional news reliable. For this reason, many people still turn to newspapers and television for checked news.\n\n**Question 69:** In which paragraph does the writer mention the reason why traditional news remains reliable?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Paragraph 1"
+      },
+      {
+        "id": "B",
+        "text": "Paragraph 2"
+      },
+      {
+        "id": "C",
+        "text": "Paragraph 3"
+      },
+      {
+        "id": "D",
+        "text": "Paragraph 4"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "• Giải thích chi tiết bằng tiếng Việt:\n- Đề bài hỏi: Tác giả nhắc đến lý do tại sao tin tức truyền thống vẫn đáng tin cậy ở đoạn văn nào?\n- Đoạn 4 nêu rõ: 'Trained news writers check facts carefully before publishing, which makes traditional news reliable. For this reason, many people still turn to newspapers and television for checked news.'\n- Vì vậy, thông tin này nằm ở Đoạn 4 (Paragraph 4) ➔ Chọn D."
+  },
+  {
+    "orderIndex": 70,
+    "sectionName": "9. Đề Thi Form THPTQG 2025 (Basic) - Đọc Hiểu 8 Câu (Reading 1)",
+    "content": "**Read the following passage and choose the correct answer.**\n\n**[Paragraph 1]** Long ago, people had to write books by hand, so books were rare and expensive. In the 15th century, Johannes Gutenberg invented the **printing press**. This machine helped workers print books quickly and **distribute** them to schools, libraries, and towns. Because books became cheaper and more common, general **literacy** increased, and many ordinary people learned how to read.\n\n**[Paragraph 2]** As printing technology improved, daily newspapers appeared in big cities. For the first time, large numbers of people could read about daily events and government decisions. People trusted printed newspapers because reporters gathered information with care. Newspapers became a **credible** source of news for communities and helped build modern community life.\n\n**[Paragraph 3]** In the 20th century, television arrived and changed mass media again. Unlike radio, television offered **audiovisual** content with moving pictures and sound. Millions of families bought television sets for their living rooms. Every evening, television **viewers** sat together to watch news programmes and sports games. In fact, **they** often discussed the evening news with their neighbours the next morning.\n\n**[Paragraph 4]** Today, many people get news on their smartphones and computers. However, **[Underlined sentence]: even though digital media is growing fast, traditional media like television and newspapers is here to stay.** Trained news writers check facts carefully before publishing, which makes traditional news reliable. For this reason, many people still turn to newspapers and television for checked news.\n\n**Question 70:** In which paragraph does the writer mention the addition of sound and moving pictures to home entertainment?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Paragraph 1"
+      },
+      {
+        "id": "B",
+        "text": "Paragraph 2"
+      },
+      {
+        "id": "C",
+        "text": "Paragraph 3"
+      },
+      {
+        "id": "D",
+        "text": "Paragraph 4"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "• Giải thích chi tiết bằng tiếng Việt:\n- Đề bài hỏi: Tác giả đề cập đến sự xuất hiện của âm thanh và hình ảnh chuyển động trong giải trí gia đình ở đoạn văn nào?\n- Đoạn 3 nêu rõ: 'television offered audiovisual content with moving pictures and sound. Millions of families bought television sets for their living rooms.'\n- Vì vậy, thông tin này nằm ở Đoạn 3 (Paragraph 3) ➔ Chọn C."
+  },
+  {
+    "orderIndex": 71,
+    "sectionName": "10. Đề Thi Form THPTQG 2025 (Basic) - Đọc Hiểu 10 Câu (Reading 2)",
+    "content": "**Read the following passage and choose the correct answer.**\n\n**[Paragraph 1]** Today, social media is one of the most powerful communication tools in the world. Information is **accessible** to everyone with an Internet connection, allowing **instant** communication across borders. Unlike traditional printed newspapers, social platforms are highly **interactive**, so users can comment, like, and share posts within seconds. Businesses also build a strong online **presence** to connect directly with their **target customer**, **as opposed to** placing an **advert** on a street **billboard** or printing paper **leaflets**.\n\n**[Paragraph 2]** However, this fast speed also creates serious problems. **[I]** The most dangerous issue is the fast spread of **fake news**. Recent studies show that teenagers **account for** a large percentage of online news readers, but many are **reluctant** to **fact-check** the stories they see. **[II]** Instead of looking for **credible** sources, **they** often share exciting headlines with their friends immediately. When people share unchecked posts, false information travels around the world in a few minutes. **[III]**\n\n**[Paragraph 3]** Fake news can cause real harm in daily life. False health advice can make people sick, and false stories about local events can divide communities. **[Underlined sentence]: To protect society, everyone needs to learn media literacy and check information before clicking share.** If a headline sounds too strange or shocking, readers should check trusted news websites or government websites. **[IV]** Taking one minute to check a story can stop the spread of dangerous lies.\n\n**[Paragraph 4]** In conclusion, social media has changed how people learn and talk to each other. While it offers useful tools for learning and business, users must stay careful. We should enjoy the benefits of fast communication while always watching out for false stories. Smart readers can stop false news from spreading.\n\n**Question 71:** According to paragraph 1, businesses build an online presence because ______.",
+    "options": [
+      {
+        "id": "A",
+        "text": "it is more expensive than traditional television adverts"
+      },
+      {
+        "id": "B",
+        "text": "it helps them connect directly with their target customers"
+      },
+      {
+        "id": "C",
+        "text": "they are not allowed to print paper advertisements anymore"
+      },
+      {
+        "id": "D",
+        "text": "traditional billboard adverts have completely disappeared"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "• Giải thích chi tiết bằng tiếng Việt:\n- Căn cứ câu cuối Đoạn 1: 'Businesses also build a strong online presence to connect directly with their target customer, as opposed to placing an advert on a street billboard or printing paper leaflets.' (Các doanh nghiệp cũng xây dựng sự hiện diện trực tuyến mạnh mẽ để kết nối trực tiếp với khách hàng mục tiêu của họ, thay vì đặt quảng cáo trên biển quảng cáo ngoài trời hay in tờ rơi giấy).\n- Do đó, lý do là để kết nối trực tiếp với khách hàng mục tiêu (connect directly with their target customers) ➔ Chọn B."
+  },
+  {
+    "orderIndex": 72,
+    "sectionName": "10. Đề Thi Form THPTQG 2025 (Basic) - Đọc Hiểu 10 Câu (Reading 2)",
+    "content": "**Read the following passage and choose the correct answer.**\n\n**[Paragraph 1]** Today, social media is one of the most powerful communication tools in the world. Information is **accessible** to everyone with an Internet connection, allowing **instant** communication across borders. Unlike traditional printed newspapers, social platforms are highly **interactive**, so users can comment, like, and share posts within seconds. Businesses also build a strong online **presence** to connect directly with their **target customer**, **as opposed to** placing an **advert** on a street **billboard** or printing paper **leaflets**.\n\n**[Paragraph 2]** However, this fast speed also creates serious problems. **[I]** The most dangerous issue is the fast spread of **fake news**. Recent studies show that teenagers **account for** a large percentage of online news readers, but many are **reluctant** to **fact-check** the stories they see. **[II]** Instead of looking for **credible** sources, **they** often share exciting headlines with their friends immediately. When people share unchecked posts, false information travels around the world in a few minutes. **[III]**\n\n**[Paragraph 3]** Fake news can cause real harm in daily life. False health advice can make people sick, and false stories about local events can divide communities. **[Underlined sentence]: To protect society, everyone needs to learn media literacy and check information before clicking share.** If a headline sounds too strange or shocking, readers should check trusted news websites or government websites. **[IV]** Taking one minute to check a story can stop the spread of dangerous lies.\n\n**[Paragraph 4]** In conclusion, social media has changed how people learn and talk to each other. While it offers useful tools for learning and business, users must stay careful. We should enjoy the benefits of fast communication while always watching out for false stories. Smart readers can stop false news from spreading.\n\n**Question 72:** Which of the following best summarises paragraph 1?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Traditional newspapers are much better than modern social media."
+      },
+      {
+        "id": "B",
+        "text": "Internet connections are too expensive for ordinary people to buy."
+      },
+      {
+        "id": "C",
+        "text": "Television commercials are the most interactive communication tool today."
+      },
+      {
+        "id": "D",
+        "text": "Social media provides fast, interactive, and accessible communication for people and businesses."
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "• Giải thích chi tiết bằng tiếng Việt:\n- Đoạn 1 giới thiệu sức mạnh của mạng xã hội: thông tin dễ tiếp cận (accessible), tức thì (instant), có tính tương tác cao (interactive) cho người dùng bình luận chia sẻ, và giúp các doanh nghiệp tiếp cận khách hàng mục tiêu hiệu quả.\n- Phương án D tóm tắt hoàn hảo nhất toàn bộ ý chính của Đoạn 1: 'Social media provides fast, interactive, and accessible communication for people and businesses.'\n- Các phương án A, B, C đều sai hoặc trái ngược với nội dung bài ➔ Chọn D."
+  },
+  {
+    "orderIndex": 73,
+    "sectionName": "10. Đề Thi Form THPTQG 2025 (Basic) - Đọc Hiểu 10 Câu (Reading 2)",
+    "content": "**Read the following passage and choose the correct answer.**\n\n**[Paragraph 1]** Today, social media is one of the most powerful communication tools in the world. Information is **accessible** to everyone with an Internet connection, allowing **instant** communication across borders. Unlike traditional printed newspapers, social platforms are highly **interactive**, so users can comment, like, and share posts within seconds. Businesses also build a strong online **presence** to connect directly with their **target customer**, **as opposed to** placing an **advert** on a street **billboard** or printing paper **leaflets**.\n\n**[Paragraph 2]** However, this fast speed also creates serious problems. **[I]** The most dangerous issue is the fast spread of **fake news**. Recent studies show that teenagers **account for** a large percentage of online news readers, but many are **reluctant** to **fact-check** the stories they see. **[II]** Instead of looking for **credible** sources, **they** often share exciting headlines with their friends immediately. When people share unchecked posts, false information travels around the world in a few minutes. **[III]**\n\n**[Paragraph 3]** Fake news can cause real harm in daily life. False health advice can make people sick, and false stories about local events can divide communities. **[Underlined sentence]: To protect society, everyone needs to learn media literacy and check information before clicking share.** If a headline sounds too strange or shocking, readers should check trusted news websites or government websites. **[IV]** Taking one minute to check a story can stop the spread of dangerous lies.\n\n**[Paragraph 4]** In conclusion, social media has changed how people learn and talk to each other. While it offers useful tools for learning and business, users must stay careful. We should enjoy the benefits of fast communication while always watching out for false stories. Smart readers can stop false news from spreading.\n\n**Question 73:** Which of the following is NOT stated in the passage as a harmful effect of fake news?",
+    "options": [
+      {
+        "id": "A",
+        "text": "It causes computers and smartphones to break down physically."
+      },
+      {
+        "id": "B",
+        "text": "It can divide communities during important community events."
+      },
+      {
+        "id": "C",
+        "text": "It can make people sick through false health advice."
+      },
+      {
+        "id": "D",
+        "text": "It can spread around the world in a few minutes."
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "• Giải thích chi tiết bằng tiếng Việt:\n- Đoạn 3 nêu các tác hại của tin giả:\n  + Làm người dân bị ốm vì lời khuyên sức khỏe sai lệch: 'False health advice can make people sick' (loại C).\n  + Chia rẽ cộng đồng trong các sự kiện cộng đồng: 'false stories about local events can divide communities' (loại B).\n- Đoạn 2 nêu tốc độ lan truyền nguy hại: 'false information travels around the world in a few minutes' (loại D).\n- Phương án A ('Làm máy tính và điện thoại thông minh bị hỏng phần cứng') KHÔNG HỀ được nhắc tới trong bài (NOT stated) ➔ Chọn A."
+  },
+  {
+    "orderIndex": 74,
+    "sectionName": "10. Đề Thi Form THPTQG 2025 (Basic) - Đọc Hiểu 10 Câu (Reading 2)",
+    "content": "**Read the following passage and choose the correct answer.**\n\n**[Paragraph 1]** Today, social media is one of the most powerful communication tools in the world. Information is **accessible** to everyone with an Internet connection, allowing **instant** communication across borders. Unlike traditional printed newspapers, social platforms are highly **interactive**, so users can comment, like, and share posts within seconds. Businesses also build a strong online **presence** to connect directly with their **target customer**, **as opposed to** placing an **advert** on a street **billboard** or printing paper **leaflets**.\n\n**[Paragraph 2]** However, this fast speed also creates serious problems. **[I]** The most dangerous issue is the fast spread of **fake news**. Recent studies show that teenagers **account for** a large percentage of online news readers, but many are **reluctant** to **fact-check** the stories they see. **[II]** Instead of looking for **credible** sources, **they** often share exciting headlines with their friends immediately. When people share unchecked posts, false information travels around the world in a few minutes. **[III]**\n\n**[Paragraph 3]** Fake news can cause real harm in daily life. False health advice can make people sick, and false stories about local events can divide communities. **[Underlined sentence]: To protect society, everyone needs to learn media literacy and check information before clicking share.** If a headline sounds too strange or shocking, readers should check trusted news websites or government websites. **[IV]** Taking one minute to check a story can stop the spread of dangerous lies.\n\n**[Paragraph 4]** In conclusion, social media has changed how people learn and talk to each other. While it offers useful tools for learning and business, users must stay careful. We should enjoy the benefits of fast communication while always watching out for false stories. Smart readers can stop false news from spreading.\n\n**Question 74:** The word **reluctant** in paragraph 2 mostly means ______.",
+    "options": [
+      {
+        "id": "A",
+        "text": "eager"
+      },
+      {
+        "id": "B",
+        "text": "excited"
+      },
+      {
+        "id": "C",
+        "text": "unwilling"
+      },
+      {
+        "id": "D",
+        "text": "confident"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "• Giải thích chi tiết bằng tiếng Việt:\n- Từ 'reluctant' trong câu 'many are reluctant to fact-check the stories they see' mang nghĩa là ngần ngại, do dự, không sẵn lòng làm điều gì (= unwilling, unwilling).\n- Phương án C: 'unwilling' = không sẵn lòng, ngại (đồng nghĩa với reluctant).\n- Các phương án khác: A. eager (háo hức); B. excited (hào hứng); D. confident (tự tin) đều mang nghĩa trái ngược hoặc không liên quan.\n➔ Chọn C."
+  },
+  {
+    "orderIndex": 75,
+    "sectionName": "10. Đề Thi Form THPTQG 2025 (Basic) - Đọc Hiểu 10 Câu (Reading 2)",
+    "content": "**Read the following passage and choose the correct answer.**\n\n**[Paragraph 1]** Today, social media is one of the most powerful communication tools in the world. Information is **accessible** to everyone with an Internet connection, allowing **instant** communication across borders. Unlike traditional printed newspapers, social platforms are highly **interactive**, so users can comment, like, and share posts within seconds. Businesses also build a strong online **presence** to connect directly with their **target customer**, **as opposed to** placing an **advert** on a street **billboard** or printing paper **leaflets**.\n\n**[Paragraph 2]** However, this fast speed also creates serious problems. **[I]** The most dangerous issue is the fast spread of **fake news**. Recent studies show that teenagers **account for** a large percentage of online news readers, but many are **reluctant** to **fact-check** the stories they see. **[II]** Instead of looking for **credible** sources, **they** often share exciting headlines with their friends immediately. When people share unchecked posts, false information travels around the world in a few minutes. **[III]**\n\n**[Paragraph 3]** Fake news can cause real harm in daily life. False health advice can make people sick, and false stories about local events can divide communities. **[Underlined sentence]: To protect society, everyone needs to learn media literacy and check information before clicking share.** If a headline sounds too strange or shocking, readers should check trusted news websites or government websites. **[IV]** Taking one minute to check a story can stop the spread of dangerous lies.\n\n**[Paragraph 4]** In conclusion, social media has changed how people learn and talk to each other. While it offers useful tools for learning and business, users must stay careful. We should enjoy the benefits of fast communication while always watching out for false stories. Smart readers can stop false news from spreading.\n\n**Question 75:** The word **they** in paragraph 2 refers to ______.",
+    "options": [
+      {
+        "id": "A",
+        "text": "recent studies"
+      },
+      {
+        "id": "B",
+        "text": "teenagers"
+      },
+      {
+        "id": "C",
+        "text": "exciting headlines"
+      },
+      {
+        "id": "D",
+        "text": "credible sources"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "• Giải thích chi tiết bằng tiếng Việt:\n- Căn cứ vào ngữ cảnh Đoạn 2: 'Recent studies show that teenagers account for a large percentage of online news readers, but many are reluctant to fact-check the stories they see. Instead of looking for credible sources, they often share exciting headlines with their friends immediately.'\n- Đại từ 'they' (họ) ở đây thay thế cho danh từ 'teenagers' (thanh thiếu niên, những người tiêu thụ tin tức nhưng ngại kiểm chứng và hay chia sẻ giật gân).\n➔ Chọn B."
+  },
+  {
+    "orderIndex": 76,
+    "sectionName": "10. Đề Thi Form THPTQG 2025 (Basic) - Đọc Hiểu 10 Câu (Reading 2)",
+    "content": "**Read the following passage and choose the correct answer.**\n\n**[Paragraph 1]** Today, social media is one of the most powerful communication tools in the world. Information is **accessible** to everyone with an Internet connection, allowing **instant** communication across borders. Unlike traditional printed newspapers, social platforms are highly **interactive**, so users can comment, like, and share posts within seconds. Businesses also build a strong online **presence** to connect directly with their **target customer**, **as opposed to** placing an **advert** on a street **billboard** or printing paper **leaflets**.\n\n**[Paragraph 2]** However, this fast speed also creates serious problems. **[I]** The most dangerous issue is the fast spread of **fake news**. Recent studies show that teenagers **account for** a large percentage of online news readers, but many are **reluctant** to **fact-check** the stories they see. **[II]** Instead of looking for **credible** sources, **they** often share exciting headlines with their friends immediately. When people share unchecked posts, false information travels around the world in a few minutes. **[III]**\n\n**[Paragraph 3]** Fake news can cause real harm in daily life. False health advice can make people sick, and false stories about local events can divide communities. **[Underlined sentence]: To protect society, everyone needs to learn media literacy and check information before clicking share.** If a headline sounds too strange or shocking, readers should check trusted news websites or government websites. **[IV]** Taking one minute to check a story can stop the spread of dangerous lies.\n\n**[Paragraph 4]** In conclusion, social media has changed how people learn and talk to each other. While it offers useful tools for learning and business, users must stay careful. We should enjoy the benefits of fast communication while always watching out for false stories. Smart readers can stop false news from spreading.\n\n**Question 76:** Which of the following best paraphrases the underlined sentence in paragraph 3?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Citizens should stop using social media completely to protect their communities."
+      },
+      {
+        "id": "B",
+        "text": "Only government officials need to learn how to check online news stories."
+      },
+      {
+        "id": "C",
+        "text": "People should share information quickly before other people find out about it."
+      },
+      {
+        "id": "D",
+        "text": "People must learn media skills and check if news is true to keep the public safe."
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "• Giải thích chi tiết bằng tiếng Việt:\n- Câu gạch chân trong Đoạn 3: 'To protect society, everyone needs to learn media literacy and check information before clicking share.'\n  + 'To protect society' = để bảo vệ xã hội (keep the public safe).\n  + 'learn media literacy' = trau dồi hiểu biết và kỹ năng truyền thông số (learn media skills).\n  + 'check information before clicking share' = xác thực thông tin trước khi nhấn chia sẻ (check if news is true).\n- Do đó, phương án D ('People must learn media skills and check if news is true to keep the public safe') là câu diễn đạt lại (paraphrase) chuẩn xác nhất.\n➔ Chọn D."
+  },
+  {
+    "orderIndex": 77,
+    "sectionName": "10. Đề Thi Form THPTQG 2025 (Basic) - Đọc Hiểu 10 Câu (Reading 2)",
+    "content": "**Read the following passage and choose the correct answer.**\n\n**[Paragraph 1]** Today, social media is one of the most powerful communication tools in the world. Information is **accessible** to everyone with an Internet connection, allowing **instant** communication across borders. Unlike traditional printed newspapers, social platforms are highly **interactive**, so users can comment, like, and share posts within seconds. Businesses also build a strong online **presence** to connect directly with their **target customer**, **as opposed to** placing an **advert** on a street **billboard** or printing paper **leaflets**.\n\n**[Paragraph 2]** However, this fast speed also creates serious problems. **[I]** The most dangerous issue is the fast spread of **fake news**. Recent studies show that teenagers **account for** a large percentage of online news readers, but many are **reluctant** to **fact-check** the stories they see. **[II]** Instead of looking for **credible** sources, **they** often share exciting headlines with their friends immediately. When people share unchecked posts, false information travels around the world in a few minutes. **[III]**\n\n**[Paragraph 3]** Fake news can cause real harm in daily life. False health advice can make people sick, and false stories about local events can divide communities. **[Underlined sentence]: To protect society, everyone needs to learn media literacy and check information before clicking share.** If a headline sounds too strange or shocking, readers should check trusted news websites or government websites. **[IV]** Taking one minute to check a story can stop the spread of dangerous lies.\n\n**[Paragraph 4]** In conclusion, social media has changed how people learn and talk to each other. While it offers useful tools for learning and business, users must stay careful. We should enjoy the benefits of fast communication while always watching out for false stories. Smart readers can stop false news from spreading.\n\n**Question 77:** According to the passage, checking trusted news websites or government websites is mentioned as ______.",
+    "options": [
+      {
+        "id": "A",
+        "text": "a good way to check strange or shocking headlines"
+      },
+      {
+        "id": "B",
+        "text": "an activity that only school teachers should do"
+      },
+      {
+        "id": "C",
+        "text": "a waste of time for young social media users"
+      },
+      {
+        "id": "D",
+        "text": "the main reason why fake news spreads quickly"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "• Giải thích chi tiết bằng tiếng Việt:\n- Căn cứ câu văn ở Đoạn 3: 'If a headline sounds too strange or shocking, readers should check trusted news websites or government websites. Taking one minute to check a story can stop the spread of dangerous lies.'\n- Việc kiểm tra trên các hãng tin uy tín hoặc trang web chính phủ được nhắc đến như một cách hiệu quả để xác minh những tiêu đề bất thường hoặc kịch tính (a good way to check strange or shocking headlines) ➔ Chọn A."
+  },
+  {
+    "orderIndex": 78,
+    "sectionName": "10. Đề Thi Form THPTQG 2025 (Basic) - Đọc Hiểu 10 Câu (Reading 2)",
+    "content": "**Read the following passage and choose the correct answer.**\n\n**[Paragraph 1]** Today, social media is one of the most powerful communication tools in the world. Information is **accessible** to everyone with an Internet connection, allowing **instant** communication across borders. Unlike traditional printed newspapers, social platforms are highly **interactive**, so users can comment, like, and share posts within seconds. Businesses also build a strong online **presence** to connect directly with their **target customer**, **as opposed to** placing an **advert** on a street **billboard** or printing paper **leaflets**.\n\n**[Paragraph 2]** However, this fast speed also creates serious problems. **[I]** The most dangerous issue is the fast spread of **fake news**. Recent studies show that teenagers **account for** a large percentage of online news readers, but many are **reluctant** to **fact-check** the stories they see. **[II]** Instead of looking for **credible** sources, **they** often share exciting headlines with their friends immediately. When people share unchecked posts, false information travels around the world in a few minutes. **[III]**\n\n**[Paragraph 3]** Fake news can cause real harm in daily life. False health advice can make people sick, and false stories about local events can divide communities. **[Underlined sentence]: To protect society, everyone needs to learn media literacy and check information before clicking share.** If a headline sounds too strange or shocking, readers should check trusted news websites or government websites. **[IV]** Taking one minute to check a story can stop the spread of dangerous lies.\n\n**[Paragraph 4]** In conclusion, social media has changed how people learn and talk to each other. While it offers useful tools for learning and business, users must stay careful. We should enjoy the benefits of fast communication while always watching out for false stories. Smart readers can stop false news from spreading.\n\n**Question 78:** Which of the following can be inferred from the passage?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Nobody will use social media in the future because of fake news."
+      },
+      {
+        "id": "B",
+        "text": "False information is always easy to recognize immediately by its title."
+      },
+      {
+        "id": "C",
+        "text": "Taking time to fact-check before sharing can prevent real-world harm."
+      },
+      {
+        "id": "D",
+        "text": "Teenagers are the only group of people who create false articles online."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "• Giải thích chi tiết bằng tiếng Việt:\n- Đoạn 3 chỉ ra: 'Fake news can cause real harm in daily life... Taking one minute to check a story can stop the spread of dangerous lies.'\n- Từ các thông tin này, ta có thể suy ra (infer) rằng: Việc dành một chút thời gian để kiểm chứng sự thật trước khi chia sẻ có thể ngăn chặn những tổn hại thực tế trong đời sống (Taking time to fact-check before sharing can prevent real-world harm).\n- Các phương án A ('không ai dùng MXH nữa'), B ('tin giả luôn dễ nhận biết'), D ('chỉ có thanh thiếu niên mới tạo tin giả') đều là suy diễn vô căn cứ hoặc sai sự thật ➔ Chọn C."
+  },
+  {
+    "orderIndex": 79,
+    "sectionName": "10. Đề Thi Form THPTQG 2025 (Basic) - Đọc Hiểu 10 Câu (Reading 2)",
+    "content": "**Read the following passage and choose the correct answer.**\n\n**[Paragraph 1]** Today, social media is one of the most powerful communication tools in the world. Information is **accessible** to everyone with an Internet connection, allowing **instant** communication across borders. Unlike traditional printed newspapers, social platforms are highly **interactive**, so users can comment, like, and share posts within seconds. Businesses also build a strong online **presence** to connect directly with their **target customer**, **as opposed to** placing an **advert** on a street **billboard** or printing paper **leaflets**.\n\n**[Paragraph 2]** However, this fast speed also creates serious problems. **[I]** The most dangerous issue is the fast spread of **fake news**. Recent studies show that teenagers **account for** a large percentage of online news readers, but many are **reluctant** to **fact-check** the stories they see. **[II]** Instead of looking for **credible** sources, **they** often share exciting headlines with their friends immediately. When people share unchecked posts, false information travels around the world in a few minutes. **[III]**\n\n**[Paragraph 3]** Fake news can cause real harm in daily life. False health advice can make people sick, and false stories about local events can divide communities. **[Underlined sentence]: To protect society, everyone needs to learn media literacy and check information before clicking share.** If a headline sounds too strange or shocking, readers should check trusted news websites or government websites. **[IV]** Taking one minute to check a story can stop the spread of dangerous lies.\n\n**[Paragraph 4]** In conclusion, social media has changed how people learn and talk to each other. While it offers useful tools for learning and business, users must stay careful. We should enjoy the benefits of fast communication while always watching out for false stories. Smart readers can stop false news from spreading.\n\n**Question 79:** Where in the passage does the following sentence best fit?\n\n**\"They often accept whatever appears on their screen without questioning its truth.\"**",
+    "options": [
+      {
+        "id": "A",
+        "text": "[I]"
+      },
+      {
+        "id": "B",
+        "text": "[II]"
+      },
+      {
+        "id": "C",
+        "text": "[III]"
+      },
+      {
+        "id": "D",
+        "text": "[IV]"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "• Giải thích chi tiết bằng tiếng Việt:\n- Xét câu cần chèn: 'They often accept whatever appears on their screen without questioning its truth.' (Họ thường chấp nhận bất cứ thứ gì xuất hiện trên màn hình mà không hề nghi vấn tính xác thực của nó).\n- Xem xét ngữ cảnh tại vị trí [II] ở Đoạn 2:\n  + Câu trước [II]: 'Recent studies show that teenagers account for a large percentage of online news readers, but many are reluctant to fact-check the stories they see.' (Nhiều người ngại kiểm chứng sự thật các câu chuyện họ thấy).\n  + Chèn câu: 'They often accept whatever appears on their screen without questioning its truth.' (Họ chấp nhận mọi thứ mà không nghi vấn ➔ giải thích cụ thể cho việc 'reluctant to fact-check').\n  + Câu sau [II]: 'Instead of looking for credible sources, they often share exciting headlines with their friends immediately.' (Thay vì tìm nguồn đáng tin cậy, họ chia sẻ ngay các tiêu đề gây chú ý).\n- Sự liên kết đại từ 'They' và mạch ý chuyển tiếp diễn ra cực kỳ tự nhiên và chặt chẽ tại vị trí [II] ➔ Chọn B."
+  },
+  {
+    "orderIndex": 80,
+    "sectionName": "10. Đề Thi Form THPTQG 2025 (Basic) - Đọc Hiểu 10 Câu (Reading 2)",
+    "content": "**Read the following passage and choose the correct answer.**\n\n**[Paragraph 1]** Today, social media is one of the most powerful communication tools in the world. Information is **accessible** to everyone with an Internet connection, allowing **instant** communication across borders. Unlike traditional printed newspapers, social platforms are highly **interactive**, so users can comment, like, and share posts within seconds. Businesses also build a strong online **presence** to connect directly with their **target customer**, **as opposed to** placing an **advert** on a street **billboard** or printing paper **leaflets**.\n\n**[Paragraph 2]** However, this fast speed also creates serious problems. **[I]** The most dangerous issue is the fast spread of **fake news**. Recent studies show that teenagers **account for** a large percentage of online news readers, but many are **reluctant** to **fact-check** the stories they see. **[II]** Instead of looking for **credible** sources, **they** often share exciting headlines with their friends immediately. When people share unchecked posts, false information travels around the world in a few minutes. **[III]**\n\n**[Paragraph 3]** Fake news can cause real harm in daily life. False health advice can make people sick, and false stories about local events can divide communities. **[Underlined sentence]: To protect society, everyone needs to learn media literacy and check information before clicking share.** If a headline sounds too strange or shocking, readers should check trusted news websites or government websites. **[IV]** Taking one minute to check a story can stop the spread of dangerous lies.\n\n**[Paragraph 4]** In conclusion, social media has changed how people learn and talk to each other. While it offers useful tools for learning and business, users must stay careful. We should enjoy the benefits of fast communication while always watching out for false stories. Smart readers can stop false news from spreading.\n\n**Question 80:** Which of the following best summarises the passage?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Social media offers fast connection, but users must critically check information to combat fake news."
+      },
+      {
+        "id": "B",
+        "text": "Businesses should stop building an online presence and return to television commercials."
+      },
+      {
+        "id": "C",
+        "text": "Fake news has destroyed the Internet, so people should avoid reading news completely."
+      },
+      {
+        "id": "D",
+        "text": "Teenagers should be banned from using social media platforms because they share rumors."
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "• Giải thích chi tiết bằng tiếng Việt:\n- Bài đọc gồm 4 đoạn:\n  + Đoạn 1: Lợi ích vượt trội và tốc độ lan tỏa của mạng xã hội trong đời sống và kinh doanh.\n  + Đoạn 2: Thách thức lớn từ tin giả (fake news) và thói quen lười kiểm chứng của người dùng trẻ.\n  + Đoạn 3: Tác hại nguy hiểm của tin giả và tầm quan trọng của việc trau dồi kỹ năng kiểm chứng tin tức.\n  + Đoạn 4: Kết luận kêu gọi người dùng tận hưởng tiện ích nhưng luôn tỉnh táo trước thông tin sai lệch.\n- Phương án A tóm tắt chuẩn xác và đầy đủ thông điệp của toàn bài: 'Social media offers fast connection, but users must critically check information to combat fake news.' (Mạng xã hội mang lại kết nối nhanh chóng, nhưng người dùng phải kiểm chứng thông tin cẩn trọng để chống lại tin giả).\n➔ Chọn A."
+  }
+]

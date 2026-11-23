@@ -1322,6 +1322,10 @@ export default function StudentDashboard() {
                 const isExpanded = expandedAssignmentId === assignment.id;
                 const dateLabel = formatAssignmentDate(assignment.assigned_date);
                 const title = assignment.learning_units?.title || 'Bài học';
+                const hasLecture = Boolean(
+                  assignment.learning_units?.lecture_content_markdown &&
+                  assignment.learning_units.lecture_content_markdown.trim() !== ''
+                );
 
                 // Tính tổng quan trạng thái của buổi học
                 const attempts = assignment.assessment_attempts || [];
@@ -1413,11 +1417,16 @@ export default function StudentDashboard() {
                           </div>
                         )}
 
-                        <div className={`grid grid-cols-1 ${(!assignment.assessment_attempts || assignment.assessment_attempts.length <= 1) ? 'md:grid-cols-2' : 'md:grid-cols-3'} gap-5 mt-5`}>
+                        <div className={`grid grid-cols-1 ${(() => {
+                          const totalCards = (hasLecture ? 1 : 0) + (assignment.assessment_attempts?.length || 0);
+                          if (totalCards >= 3) return 'md:grid-cols-3';
+                          if (totalCards === 2) return 'md:grid-cols-2';
+                          return '';
+                        })()} gap-5 mt-5`}>
                           {/* ========================================================
-                              TRẠM 1: GIẢNG ĐƯỜNG TƯƠNG TÁC & FLASHCARD 3D
+                              TRẠM 1: GIẢNG ĐƯỜNG TƯƠNG TÁC & FLASHCARD 3D (CHỈ HIỆN KHI CÓ BÀI GIẢNG)
                               ======================================================== */}
-                          {(() => {
+                          {hasLecture && (() => {
                             const appMatch = assignment.learning_units?.lecture_content_markdown?.match(/\/lectures\/[a-zA-Z0-9_\-\/]+\.html/);
                             const interactiveUrl = appMatch ? appMatch[0] : (
                               assignment.learning_units?.title?.toLowerCase().includes('ôn tập thi giữa kì') ||
