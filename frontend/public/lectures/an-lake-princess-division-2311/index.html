@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Công Chúa An Lake: Phép Chia Hết 3 Chữ Số Cho 1 Chữ Số | 23/11/2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --pink: #EC4899;
+      --pink-dark: #BE185D;
+      --pink-soft: #FCE7F3;
+      --purple: #9333EA;
+      --purple-soft: #F3E8FF;
+      --gold: #F59E0B;
+      --gold-soft: #FEF3C7;
+      --mint: #10B981;
+      --mint-soft: #D1FAE5;
+      --dark: #1E293B;
+      --shadow: 0 18px 40px rgba(236, 72, 153, 0.14);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+    body {
+      font-family: 'Fredoka', 'Quicksand', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #FFF1F2 0%, #FDF4FF 50%, #FEF9C3 100%);
+      color: var(--dark);
+      min-height: 100vh;
+      padding: 22px 14px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    #confettiCanvas {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    .main-container {
+      width: 100%;
+      max-width: 960px;
+      background: #FFFFFF;
+      border-radius: 36px;
+      box-shadow: var(--shadow);
+      border: 5px solid #FBCFE8;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 24px 32px;
+    }
+
+    .top-bar-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      gap: 10px;
+    }
+
+    .back-home-btn {
+      background: #FFF;
+      border: 2.5px solid #F9A8D4;
+      border-radius: 24px;
+      padding: 8px 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: #9D174D;
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 12px rgba(236, 72, 153, 0.08);
+      transition: all 0.2s ease;
+    }
+
+    .back-home-btn:hover { transform: scale(1.04); border-color: var(--pink); background: #FFF1F2; }
+
+    .sound-toggle-btn {
+      background: #FFF;
+      border: 2.5px solid #FCD34D;
+      border-radius: 50%;
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.3rem;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.14);
+      transition: transform 0.2s ease;
+    }
+
+    .sound-toggle-btn:hover { transform: scale(1.12) rotate(8deg); }
+
+    .header-section { text-align: center; margin-bottom: 22px; }
+
+    .date-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #EC4899, #A855F7);
+      color: #FFF;
+      padding: 7px 20px;
+      border-radius: 999px;
+      font-size: 0.98rem;
+      font-weight: 700;
+      box-shadow: 0 6px 16px rgba(236, 72, 153, 0.28);
+    }
+
+    .kid-title {
+      font-size: clamp(1.65rem, 3.6vw, 2.35rem);
+      font-weight: 700;
+      color: #BE185D;
+      margin-top: 12px;
+      line-height: 1.25;
+      text-shadow: 2px 2px 0 #FCE7F3;
+    }
+
+    .kid-subtitle {
+      font-size: 1.08rem;
+      color: #64748B;
+      margin-top: 6px;
+      font-weight: 600;
+    }
+
+    .name-highlight {
+      color: #9333EA;
+      background: #F3E8FF;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-weight: 700;
+    }
+
+    .tabs-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .tab-btn {
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 11px 18px;
+      border-radius: 22px;
+      border: 2.5px solid #FBCFE8;
+      background: #FFF;
+      color: #831843;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 3px 0 #FBCFE8;
+    }
+
+    .tab-btn:hover { transform: translateY(-2px); background: #FFF1F2; }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, #EC4899, #F43F5E);
+      color: #FFF;
+      border-color: #BE185D;
+      box-shadow: 0 4px 0 #9D174D;
+    }
+
+    .tab-content { display: none; animation: fadeIn 0.3s ease; }
+    .tab-content.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+    .story-banner {
+      background: linear-gradient(135deg, #FFF1F2, #FDF4FF);
+      border: 3px solid #F9A8D4;
+      border-radius: 26px;
+      padding: 20px;
+      margin-bottom: 22px;
+    }
+
+    .story-bubble {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #FFF;
+      padding: 16px 20px;
+      border-radius: 20px;
+      border-left: 6px solid var(--pink);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+      margin-bottom: 16px;
+      font-size: 1.08rem;
+      line-height: 1.6;
+    }
+
+    .story-emoji { font-size: 2.4rem; flex-shrink: 0; }
+
+    .lecture-img-wrap {
+      background: #FFF;
+      border: 3px solid #F9A8D4;
+      border-radius: 22px;
+      padding: 12px;
+      margin: 18px 0;
+      text-align: center;
+    }
+
+    .lecture-img-wrap img {
+      width: 100%;
+      max-width: 680px;
+      height: auto;
+      border-radius: 16px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .step-card {
+      background: #FFF;
+      border: 2.5px solid #E9D5FF;
+      border-radius: 20px;
+      padding: 16px;
+      box-shadow: 0 6px 14px rgba(147, 51, 234, 0.06);
+    }
+
+    .step-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #FFF;
+      margin-bottom: 8px;
+    }
+
+    .example-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .example-card {
+      background: #FFF;
+      border: 2.5px solid #FDE68A;
+      border-radius: 22px;
+      padding: 16px;
+      box-shadow: 0 6px 16px rgba(245, 158, 11, 0.08);
+    }
+
+    .example-formula {
+      margin-top: 10px;
+      background: #FEF3C7;
+      color: #B45309;
+      padding: 8px 12px;
+      border-radius: 14px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .big-action-btn {
+      font-family: inherit;
+      font-size: 1.12rem;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 26px;
+      border: none;
+      background: linear-gradient(135deg, #EC4899, #9333EA);
+      color: #FFF;
+      cursor: pointer;
+      box-shadow: 0 5px 0 #831843;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .big-action-btn:hover { transform: translateY(-2px); filter: brightness(1.05); }
+    .big-action-btn:active { transform: translateY(3px); box-shadow: 0 2px 0 #831843; }
+
+    /* SIMULATOR TAB */
+    .sim-box {
+      background: linear-gradient(135deg, #FDF2F8, #F5F3FF);
+      border: 3px solid #D8B4FE;
+      border-radius: 26px;
+      padding: 22px;
+    }
+
+    .sim-picker {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .sim-pill {
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 9px 16px;
+      border-radius: 18px;
+      border: 2px solid #D8B4FE;
+      background: #FFF;
+      color: #6B21A8;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .sim-pill.active {
+      background: #9333EA;
+      color: #FFF;
+      border-color: #6B21A8;
+      box-shadow: 0 3px 0 #581C87;
+    }
+
+    .sim-stage {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      align-items: center;
+      background: #FFF;
+      border-radius: 22px;
+      padding: 22px;
+      border: 2.5px solid #FBCFE8;
+    }
+
+    .long-div-board {
+      font-family: 'Courier New', monospace;
+      font-size: 1.75rem;
+      font-weight: 700;
+      background: #FFF8FB;
+      border: 2.5px dashed #F472B6;
+      border-radius: 20px;
+      padding: 20px;
+      min-height: 230px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .ld-grid {
+      display: grid;
+      grid-template-columns: 30px 30px 30px 24px 95px;
+      row-gap: 4px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .ld-vline {
+      border-left: 3.5px solid #BE185D;
+      padding-left: 10px;
+      text-align: left;
+    }
+
+    .ld-hline {
+      border-top: 3.5px solid #BE185D;
+      padding-top: 4px;
+    }
+
+    .sim-narration {
+      background: #FDF4FF;
+      border: 2px solid #E9D5FF;
+      border-radius: 18px;
+      padding: 16px;
+      font-size: 1.08rem;
+      line-height: 1.55;
+      color: #3B0764;
+      min-height: 130px;
+    }
+
+    /* QUIZ TAB */
+    .quiz-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .star-counter {
+      background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+      border: 2.5px solid #F59E0B;
+      color: #92400E;
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .quiz-question-box {
+      background: #FFF8FB;
+      border: 3px solid #F9A8D4;
+      border-radius: 26px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+
+    .quiz-visual {
+      margin: 14px auto;
+      text-align: center;
+    }
+
+    .quiz-visual img {
+      width: 100%;
+      max-width: 580px;
+      height: auto;
+      border-radius: 20px;
+      border: 2.5px solid #FBCFE8;
+      background: #FFF;
+      box-shadow: 0 8px 20px rgba(236, 72, 153, 0.1);
+    }
+
+    .quiz-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .quiz-opt-btn {
+      font-family: inherit;
+      font-size: 1.08rem;
+      font-weight: 700;
+      padding: 15px 18px;
+      border-radius: 20px;
+      border: 3px solid #FBCFE8;
+      background: #FFF;
+      color: #1E293B;
+      cursor: pointer;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 0 #FBCFE8;
+      transition: all 0.15s ease;
+    }
+
+    .quiz-opt-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      border-color: var(--pink);
+      background: #FFF1F2;
+    }
+
+    .quiz-opt-btn.correct {
+      background: #D1FAE5;
+      border-color: #10B981;
+      color: #065F46;
+      box-shadow: 0 4px 0 #059669;
+    }
+
+    .quiz-opt-btn.wrong {
+      background: #FFE4E6;
+      border-color: #F43F5E;
+      color: #9F1239;
+      animation: shake 0.35s ease;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-7px); }
+      75% { transform: translateX(7px); }
+    }
+
+    .opt-letter {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #FCE7F3;
+      color: #BE185D;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-weight: 700;
+    }
+
+    .parent-guide {
+      background: #FFFBEB;
+      border: 3px solid #FDE68A;
+      border-radius: 24px;
+      padding: 22px;
+      line-height: 1.7;
+    }
+
+    .guide-list { padding-left: 20px; margin-top: 8px; }
+    .guide-list li { margin-bottom: 8px; }
+
+    .card-footer {
+      text-align: center;
+      margin-top: 26px;
+      color: #9D174D;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="confettiCanvas"></canvas>
+
+  <div class="main-container">
+    <div class="top-bar-actions">
+      <a href="/student" class="back-home-btn">🏠 Về Bảng Học Tập</a>
+      <button class="sound-toggle-btn" id="soundToggle" title="Bật/Tắt âm thanh">🔊</button>
+    </div>
+
+    <div class="header-section">
+      <div class="date-badge">👑 23 Tháng 11, 2026 • Vương Quốc Công Chúa</div>
+      <h1 class="kid-title">Phép Chia Hết Số Có 3 Chữ Số Cho 1 Chữ Số</h1>
+      <p class="kid-subtitle">Dành tặng Công chúa nhỏ <span class="name-highlight">an_lake</span> thông thái ✨💎🦄</p>
+    </div>
+
+    <div class="tabs-nav">
+      <button class="tab-btn active" data-tab="storyTab">📖 1. Bí Kíp Công Chúa</button>
+      <button class="tab-btn" data-tab="simTab">🪄 2. Đũa Thần Đặt Tính Chia</button>
+      <button class="tab-btn" data-tab="quizTab">👑 3. Đấu Trường 10 Câu Đố</button>
+      <button class="tab-btn" data-tab="parentsTab">💌 4. Cẩm Nang Ba Mẹ</button>
+    </div>
+
+    <!-- TAB 1: STORY & GUIDE -->
+    <div id="storyTab" class="tab-content active">
+      <div class="story-banner">
+        <div class="story-bubble">
+          <div class="story-emoji">👸💎</div>
+          <div>
+            Chào mừng Công chúa <strong>An Lake</strong> đến với <strong>Vũ Hội Lâu Đài Pha Lê</strong>! Hôm nay Công chúa có <strong>168 viên ngọc trai lấp lánh</strong> 💎 và muốn chia đều cho <strong>7 nàng tiên nhỏ</strong> 🧚‍♀️. Mỗi nàng tiên sẽ nhận được bao nhiêu viên ngọc đây nhỉ?
+          </div>
+        </div>
+
+        <div class="lecture-img-wrap">
+          <img src="/images/lop1/princess_division_2311/lecture_princess_division.svg" alt="Bí kíp đặt tính chia công chúa 168 chia 7 bằng 24" />
+        </div>
+
+        <h3 style="color: #9D174D; font-size: 1.35rem; margin-top: 12px;">✨ 3 Câu Thần Chú Đặt Tính Chia Từ Trái Sang Phải:</h3>
+        <div class="steps-grid">
+          <div class="step-card">
+            <span class="step-badge" style="background: #EC4899;">Bước 1: CHIA</span>
+            <p>Nhìn từ <strong>trái sang phải</strong>. Nếu chữ số đầu tiên <strong>nhỏ hơn</strong> số chia (như <strong>1 &lt; 7</strong>), ta <strong>gộp 2 chữ số đầu</strong> (<strong>16 ÷ 7 = 2</strong>).</p>
+          </div>
+          <div class="step-card">
+            <span class="step-badge" style="background: #9333EA;">Bước 2: NHÂN &amp; TRỪ</span>
+            <p>Nhân ngược lại (<strong>2 × 7 = 14</strong>), rồi lấy số vừa chia trừ đi (<strong>16 − 14 = 2</strong>).</p>
+          </div>
+          <div class="step-card">
+            <span class="step-badge" style="background: #10B981;">Bước 3: HẠ &amp; DƯ 0</span>
+            <p>Hạ chữ số tiếp theo xuống cạnh số dư (<strong>2</strong> hạ <strong>8</strong> thành <strong>28</strong>). Chia tiếp (<strong>28 ÷ 7 = 4</strong>). Dư <strong>0</strong> là <strong>CHIA HẾT</strong>!</p>
+          </div>
+        </div>
+
+        <h3 style="color: #6B21A8; font-size: 1.35rem; margin-top: 22px;">🌈 3 Trường Hợp Phép Chia Hết Công Chúa Cần Nhớ:</h3>
+        <div class="example-grid">
+          <div class="example-card">
+            <div style="font-weight: 700; color: #BE185D; font-size: 1.08rem;">🌹 Kiểu 1: Chia từng số dễ ợt</div>
+            <p style="margin-top: 6px; font-size: 0.96rem;">Số đầu chia được ngay: <strong>3 ÷ 3 = 1</strong>, <strong>6 ÷ 3 = 2</strong>, <strong>9 ÷ 3 = 3</strong>.</p>
+            <div class="example-formula">369 ÷ 3 = 123</div>
+          </div>
+          <div class="example-card">
+            <div style="font-weight: 700; color: #7C3AED; font-size: 1.08rem;">💎 Kiểu 2: Gộp 2 chữ số đầu</div>
+            <p style="margin-top: 6px; font-size: 0.96rem;">Vì <strong>1 &lt; 7</strong>, gộp <strong>16 ÷ 7 = 2</strong> (dư 2), hạ <strong>8</strong> được <strong>28 ÷ 7 = 4</strong>.</p>
+            <div class="example-formula">168 ÷ 7 = 24</div>
+          </div>
+          <div class="example-card">
+            <div style="font-weight: 700; color: #059669; font-size: 1.08rem;">🌸 Kiểu 3: Chú ý số 0 ở thương</div>
+            <p style="margin-top: 6px; font-size: 0.96rem;"><strong>6 ÷ 6 = 1</strong>; hạ <strong>1</strong>, vì <strong>1 &lt; 6</strong> nên viết <strong>0</strong> ở thương; hạ <strong>8</strong> được <strong>18 ÷ 6 = 3</strong>.</p>
+            <div class="example-formula">618 ÷ 6 = 103</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
+        <button class="big-action-btn" onclick="switchTab('simTab')">🪄 Thử Đũa Thần Đặt Tính Chia</button>
+        <button class="big-action-btn" style="background: linear-gradient(135deg, #F59E0B, #EC4899);" onclick="switchTab('quizTab')">👑 Chinh Phục 10 Thử Thách Ngay!</button>
+      </div>
+    </div>
+
+    <!-- TAB 2: INTERACTIVE STEP-BY-STEP SIMULATOR -->
+    <div id="simTab" class="tab-content">
+      <div class="sim-box">
+        <h2 style="text-align: center; color: #831843; margin-bottom: 12px;">🪄 Phòng Phép Thuật Đặt Tính Chia Từng Bước</h2>
+        <p style="text-align: center; color: #6B21A8; margin-bottom: 16px; font-weight: 600;">Bé An chọn một phép tính rồi bấm nút "Bước Tiếp Theo ✨" để xem đũa thần giải từng bước nhé!</p>
+
+        <div class="sim-picker" id="simPicker"></div>
+
+        <div class="sim-stage">
+          <div class="long-div-board" id="longDivBoard"></div>
+          <div>
+            <div class="sim-narration" id="simNarration"></div>
+            <div style="margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap;">
+              <button class="big-action-btn" id="simNextBtn" onclick="nextSimStep()">✨ Bước Tiếp Theo</button>
+              <button class="tab-btn" onclick="resetSim()">🔄 Làm Lại</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: 10 PRINCESS QUIZ CHALLENGES -->
+    <div id="quizTab" class="tab-content">
+      <div class="quiz-header">
+        <div>
+          <h2 style="font-size: 1.4rem; color: #9D174D;">👑 Đấu Trường Công Chúa: 10 Thử Thách Phép Chia Hết</h2>
+          <p id="quizTracker" style="color: #64748B; font-weight: 600;">Câu hỏi 1 / 10</p>
+        </div>
+        <div class="star-counter">⭐ <span id="quizScore">0</span> / 10 Vương Miện</div>
+      </div>
+
+      <div class="quiz-question-box" id="quizBox">
+        <div id="quizPrompt" style="font-size: 1.22rem; font-weight: 700; color: #0F172A; line-height: 1.55;"></div>
+        <div class="quiz-visual" id="quizVisual"></div>
+        <div class="quiz-options" id="quizOptions"></div>
+      </div>
+
+      <div id="quizFeedback" style="text-align: center; font-size: 1.2rem; font-weight: 700; min-height: 44px; margin-bottom: 12px;"></div>
+      <div style="text-align: center;">
+        <button id="btnNextQuiz" class="big-action-btn" style="display: none; margin: 0 auto;" onclick="nextQuiz()">➡️ Thử Thách Tiếp Theo</button>
+      </div>
+    </div>
+
+    <!-- TAB 4: PARENTS GUIDE -->
+    <div id="parentsTab" class="tab-content">
+      <div class="parent-guide">
+        <h2 style="color: #92400E; margin-bottom: 14px;">💌 Cẩm Nang Đồng Hành Cùng Công Chúa An Lake</h2>
+        <ul class="guide-list">
+          <li><strong>Bản chất phép chia hết 3 chữ số cho 1 chữ số:</strong> Thực hiện theo đúng 4 nhịp <em>"Chia – Nhân – Trừ – Hạ"</em> từ trái sang phải, đến cuối cùng số dư bằng <strong>0</strong>.</li>
+          <li><strong>Hai lỗi trẻ hay gặp nhất:</strong> (1) Quên gộp 2 chữ số đầu khi hàng trăm nhỏ hơn số chia (như <code>168 ÷ 7</code>: lấy 16 chia 7); (2) Quên viết chữ số <code>0</code> ở thương khi hạ xuống số nhỏ hơn số chia (như <code>618 ÷ 6 = 103</code> chứ không phải 13, hay <code>560 ÷ 7 = 80</code> chứ không phải 8).</li>
+          <li><strong>Cách kiểm tra lại (Thử lại bằng phép nhân):</strong> Sau khi chia xong, khuyến khích bé nhân ngược: <code>Thương × Số chia = Số bị chia</code> (ví dụ <code>24 × 7 = 168</code>).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card-footer">
+      Thiết kế riêng tặng Công chúa <strong>An Lake</strong> • 23/11/2026 👑 Chúc bé học toán thật vui và lung linh!
+    </div>
+  </div>
+
+  <script>
+    let audioCtx = null;
+    let soundEnabled = true;
+
+    function getAudioCtx() {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      return audioCtx;
+    }
+
+    function playTone(freq, type, dur, delay = 0) {
+      if (!soundEnabled) return;
+      try {
+        const ctx = getAudioCtx();
+        setTimeout(() => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = type;
+          osc.frequency.setValueAtTime(freq, ctx.currentTime);
+          gain.gain.setValueAtTime(0.18, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + dur);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start();
+          osc.stop(ctx.currentTime + dur);
+        }, delay * 1000);
+      } catch {}
+    }
+
+    function playSparkle() {
+      playTone(659.25, 'sine', 0.12, 0);
+      playTone(880, 'sine', 0.14, 0.07);
+    }
+
+    function playWinChime() {
+      playTone(523.25, 'triangle', 0.16, 0);
+      playTone(659.25, 'triangle', 0.16, 0.09);
+      playTone(783.99, 'triangle', 0.18, 0.18);
+      playTone(1046.5, 'triangle', 0.32, 0.27);
+    }
+
+    function playWrongBuzzer() {
+      playTone(210, 'sawtooth', 0.18, 0);
+      playTone(165, 'sawtooth', 0.22, 0.12);
+    }
+
+    document.getElementById('soundToggle').addEventListener('click', (e) => {
+      soundEnabled = !soundEnabled;
+      e.target.textContent = soundEnabled ? '🔊' : '🔇';
+    });
+
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tabId));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.toggle('active', c.id === tabId));
+      playSparkle();
+    }
+
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+    });
+
+    // CONFETTI
+    const canvas = document.getElementById('confettiCanvas');
+    const cctx = canvas.getContext('2d');
+    let confettiPieces = [];
+    function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    function launchConfetti() {
+      const colors = ['#EC4899', '#A855F7', '#FACC15', '#38BDF8', '#10B981'];
+      for (let i = 0; i < 90; i++) {
+        confettiPieces.push({
+          x: Math.random() * canvas.width,
+          y: -20 - Math.random() * 120,
+          r: 5 + Math.random() * 6,
+          vx: (Math.random() - 0.5) * 6,
+          vy: 3 + Math.random() * 5,
+          color: colors[i % colors.length],
+          rot: Math.random() * 360,
+        });
+      }
+    }
+
+    function tickConfetti() {
+      cctx.clearRect(0, 0, canvas.width, canvas.height);
+      confettiPieces = confettiPieces.filter(p => p.y < canvas.height + 20);
+      for (const p of confettiPieces) {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.rot += 5;
+        cctx.save();
+        cctx.translate(p.x, p.y);
+        cctx.rotate((p.rot * Math.PI) / 180);
+        cctx.fillStyle = p.color;
+        cctx.fillRect(-p.r / 2, -p.r / 2, p.r, p.r * 0.6);
+        cctx.restore();
+      }
+      requestAnimationFrame(tickConfetti);
+    }
+    tickConfetti();
+
+    // TAB 2: LONG DIVISION SIMULATOR
+    const simCases = [
+      {
+        label: '168 ÷ 7',
+        dividend: '168',
+        divisor: '7',
+        quotient: '24',
+        steps: [
+          { msg: '✨ Sẵn sàng đặt tính chia <strong>168 ÷ 7</strong>. Công chúa An hãy bấm <strong>"Bước Tiếp Theo"</strong> nhé!', q: '', rows: [] },
+          { msg: '🔮 <strong>Bước 1:</strong> Vì <code>1 &lt; 7</code>, ta gộp <strong>16</strong> chia 7 được <strong>2</strong> (vì <code>2 × 7 = 14</code>).<br/>Lấy <code>16 - 14 = 2</code> (dư 2).', q: '2', rows: ['-14', ' 2 '] },
+          { msg: '🌟 <strong>Bước 2:</strong> Hạ chữ số <strong>8</strong> xuống cạnh số 2 được <strong>28</strong>.<br/>Lấy <code>28 ÷ 7 = 4</code> (vì <code>4 × 7 = 28</code>).', q: '24', rows: ['-14', ' 28', '-28'] },
+          { msg: '👑 <strong>Hoàn thành!</strong> Lấy <code>28 - 28 = 0</code>. Số dư bằng <strong>0</strong> (chia hết)!<br/>Vậy <strong>168 ÷ 7 = 24</strong>! Kiểm tra lại: <code>24 × 7 = 168</code>.', q: '24', rows: ['-14', ' 28', '-28', '  0'] },
+        ]
+      },
+      {
+        label: '369 ÷ 3',
+        dividend: '369',
+        divisor: '3',
+        quotient: '123',
+        steps: [
+          { msg: '✨ Đặt tính <strong>369 ÷ 3</strong>. Mỗi chữ số đều chia hết cho 3 đấy!', q: '', rows: [] },
+          { msg: '🌹 <strong>Bước 1:</strong> Hàng trăm <code>3 ÷ 3 = 1</code>. Viết 1 vào thương. <code>3 - 3 = 0</code>.', q: '1', rows: ['-3 ', ' 0 '] },
+          { msg: '🌸 <strong>Bước 2:</strong> Hạ <strong>6</strong> xuống: <code>6 ÷ 3 = 2</code>. Viết 2 vào thương. <code>6 - 6 = 0</code>.', q: '12', rows: ['-3 ', ' 06', ' -6', '  0'] },
+          { msg: '👑 <strong>Hoàn thành!</strong> Hạ <strong>9</strong> xuống: <code>9 ÷ 3 = 3</code>. <code>9 - 9 = 0</code>. Vậy <strong>369 ÷ 3 = 123</strong>!', q: '123', rows: ['-3 ', ' 06', ' -6', '  09', '  -9', '   0'] },
+        ]
+      },
+      {
+        label: '425 ÷ 5',
+        dividend: '425',
+        divisor: '5',
+        quotient: '85',
+        steps: [
+          { msg: '✨ Đặt tính <strong>425 ÷ 5</strong> (số tận cùng là 5 luôn chia hết cho 5!).', q: '', rows: [] },
+          { msg: '🧁 <strong>Bước 1:</strong> Vì <code>4 &lt; 5</code>, gộp <strong>42</strong> chia 5 được <strong>8</strong> (<code>8 × 5 = 40</code>). <code>42 - 40 = 2</code>.', q: '8', rows: ['-40', ' 2 '] },
+          { msg: '✨ <strong>Bước 2:</strong> Hạ <strong>5</strong> xuống cạnh 2 được <strong>25</strong>. <code>25 ÷ 5 = 5</code> (<code>5 × 5 = 25</code>).', q: '85', rows: ['-40', ' 25', '-25'] },
+          { msg: '👑 <strong>Hoàn thành!</strong> <code>25 - 25 = 0</code>. Vậy <strong>425 ÷ 5 = 85</strong>!', q: '85', rows: ['-40', ' 25', '-25', '  0'] },
+        ]
+      },
+      {
+        label: '618 ÷ 6',
+        dividend: '618',
+        divisor: '6',
+        quotient: '103',
+        steps: [
+          { msg: '✨ Đặt tính <strong>618 ÷ 6</strong> — Cẩn thận bẫy chữ số <strong>0</strong> ở giữa thương nhé!', q: '', rows: [] },
+          { msg: '🌸 <strong>Bước 1:</strong> <code>6 ÷ 6 = 1</code>, viết 1. <code>6 - 6 = 0</code>.', q: '1', rows: ['-6 ', ' 0 '] },
+          { msg: '⚠️ <strong>Bước 2 (Quan trọng!):</strong> Hạ <strong>1</strong> xuống. Vì <code>1 &lt; 6</code> nên ta phải viết <strong>0</strong> vào thương!', q: '10', rows: ['-6 ', ' 01'] },
+          { msg: '👑 <strong>Hoàn thành!</strong> Hạ tiếp <strong>8</strong> xuống cạnh 1 được <strong>18</strong>. <code>18 ÷ 6 = 3</code>. <code>18 - 18 = 0</code>. Vậy <strong>618 ÷ 6 = 103</strong>!', q: '103', rows: ['-6 ', ' 018', ' -18', '   0'] },
+        ]
+      },
+      {
+        label: '560 ÷ 7',
+        dividend: '560',
+        divisor: '7',
+        quotient: '80',
+        steps: [
+          { msg: '✨ Đặt tính <strong>560 ÷ 7</strong> — Chú ý chữ số <strong>0</strong> ở cuối nhé!', q: '', rows: [] },
+          { msg: '🕯️ <strong>Bước 1:</strong> Vì <code>5 &lt; 7</code>, lấy <strong>56</strong> chia 7 được <strong>8</strong> (<code>8 × 7 = 56</code>). <code>56 - 56 = 0</code>.', q: '8', rows: ['-56', '  0'] },
+          { msg: '👑 <strong>Hoàn thành!</strong> Hạ <strong>0</strong> xuống: <code>0 ÷ 7 = 0</code>! Nhớ viết thêm chữ số <strong>0</strong> vào thương. Vậy <strong>560 ÷ 7 = 80</strong>!', q: '80', rows: ['-56', '  00', '  -0', '   0'] },
+        ]
+      },
+      {
+        label: '744 ÷ 8',
+        dividend: '744',
+        divisor: '8',
+        quotient: '93',
+        steps: [
+          { msg: '✨ Đặt tính thử thách Vương Miện Vàng: <strong>744 ÷ 8</strong>!', q: '', rows: [] },
+          { msg: '💎 <strong>Bước 1:</strong> Vì <code>7 &lt; 8</code>, lấy <strong>74</strong> chia 8 được <strong>9</strong> (<code>9 × 8 = 72</code>). <code>74 - 72 = 2</code>.', q: '9', rows: ['-72', ' 2 '] },
+          { msg: '👑 <strong>Hoàn thành!</strong> Hạ <strong>4</strong> xuống cạnh 2 được <strong>24</strong>. <code>24 ÷ 8 = 3</code> (<code>3 × 8 = 24</code>). Dư <strong>0</strong>! Vậy <strong>744 ÷ 8 = 93</strong>!', q: '93', rows: ['-72', ' 24', '-24', '  0'] },
+        ]
+      }
+    ];
+
+    let activeSimIdx = 0;
+    let activeStepIdx = 0;
+
+    function renderSimPicker() {
+      const el = document.getElementById('simPicker');
+      el.innerHTML = simCases.map((c, idx) =>
+        `<button class="sim-pill ${idx === activeSimIdx ? 'active' : ''}" onclick="selectSimCase(${idx})">${c.label}</button>`
+      ).join('');
+    }
+
+    function selectSimCase(idx) {
+      activeSimIdx = idx;
+      activeStepIdx = 0;
+      playSparkle();
+      renderSimPicker();
+      renderSimStage();
+    }
+
+    function resetSim() {
+      activeStepIdx = 0;
+      playSparkle();
+      renderSimStage();
+    }
+
+    function nextSimStep() {
+      const c = simCases[activeSimIdx];
+      if (activeStepIdx < c.steps.length - 1) {
+        activeStepIdx++;
+        if (activeStepIdx === c.steps.length - 1) {
+          playWinChime();
+          launchConfetti();
+        } else {
+          playSparkle();
+        }
+        renderSimStage();
+      }
+    }
+
+    function renderSimStage() {
+      const c = simCases[activeSimIdx];
+      const step = c.steps[activeStepIdx];
+      const board = document.getElementById('longDivBoard');
+      const rowsHtml = step.rows.map(r => {
+        const color = r.trim().startsWith('-') ? '#E11D48' : (r.trim() === '0' ? '#059669' : '#7C3AED');
+        return `<div style="color:${color}; letter-spacing: 6px; white-space: pre;">${r}</div>`;
+      }).join('');
+
+      board.innerHTML = `
+        <div style="display:flex; gap:18px; align-items:flex-start;">
+          <div style="text-align:right; min-width:120px;">
+            <div style="color:#DB2777; letter-spacing: 6px;">${c.dividend}</div>
+            ${rowsHtml}
+          </div>
+          <div style="border-left: 4px solid #BE185D; padding-left: 14px; min-width: 90px;">
+            <div style="color:#0F766E; border-bottom: 4px solid #BE185D; padding-bottom: 4px;">${c.divisor}</div>
+            <div style="color:#059669; padding-top: 6px;">${step.q || '?'}</div>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('simNarration').innerHTML = step.msg;
+      const btn = document.getElementById('simNextBtn');
+      btn.style.opacity = activeStepIdx >= c.steps.length - 1 ? '0.5' : '1';
+    }
+
+    renderSimPicker();
+    renderSimStage();
+
+    // TAB 3: 10 QUIZ QUESTIONS
+    const quizData = [
+      {
+        prompt: '🌹 Công chúa An Lake có <strong>369</strong> bông hoa hồng phấn chia đều vào <strong>3</strong> bình pha lê hoàng gia. Hỏi mỗi bình có bao nhiêu bông hoa hồng? (369 ÷ 3 = ?)',
+        img: '/images/lop1/princess_division_2311/q01.svg',
+        options: [
+          { id: 'A', text: '121 bông hoa hồng' },
+          { id: 'B', text: '123 bông hoa hồng' },
+          { id: 'C', text: '132 bông hoa hồng' },
+          { id: 'D', text: '126 bông hoa hồng' },
+        ],
+        correct: 'B',
+        explain: '369 ÷ 3 = 123 bông hoa hồng (3÷3=1, 6÷3=2, 9÷3=3).'
+      },
+      {
+        prompt: '💎 Công chúa An Lake có <strong>168</strong> viên ngọc trai lấp lánh chia đều cho <strong>7</strong> nàng tiên nhỏ. Hỏi mỗi nàng tiên nhận được bao nhiêu viên ngọc trai? (168 ÷ 7 = ?)',
+        img: '/images/lop1/princess_division_2311/q02.svg',
+        options: [
+          { id: 'A', text: '22 viên ngọc trai' },
+          { id: 'B', text: '26 viên ngọc trai' },
+          { id: 'C', text: '24 viên ngọc trai' },
+          { id: 'D', text: '28 viên ngọc trai' },
+        ],
+        correct: 'C',
+        explain: '16 ÷ 7 = 2 (dư 2), hạ 8 được 28 ÷ 7 = 4. Vậy 168 ÷ 7 = 24 viên ngọc trai!'
+      },
+      {
+        prompt: '🎀 Trong tủ giày pha lê của Lâu Đài Hồng có <strong>144</strong> chiếc kẹp tóc nơ bướm được xếp đều vào <strong>4</strong> hộp nhung sang trọng. Hỏi mỗi hộp có bao nhiêu chiếc kẹp tóc? (144 ÷ 4 = ?)',
+        img: '/images/lop1/princess_division_2311/q03.svg',
+        options: [
+          { id: 'A', text: '36 chiếc kẹp tóc' },
+          { id: 'B', text: '34 chiếc kẹp tóc' },
+          { id: 'C', text: '38 chiếc kẹp tóc' },
+          { id: 'D', text: '32 chiếc kẹp tóc' },
+        ],
+        correct: 'A',
+        explain: '14 ÷ 4 = 3 (dư 2), hạ 4 được 24 ÷ 4 = 6. Vậy 144 ÷ 4 = 36 chiếc kẹp tóc!'
+      },
+      {
+        prompt: '🧁 Đầu bếp Hoàng Gia nướng <strong>425</strong> chiếc bánh cupcake dâu tây trang trí vương miện, xếp đều lên <strong>5</strong> khay tiệc vàng. Hỏi mỗi khay có bao nhiêu chiếc bánh? (425 ÷ 5 = ?)',
+        img: '/images/lop1/princess_division_2311/q04.svg',
+        options: [
+          { id: 'A', text: '80 chiếc bánh cupcake' },
+          { id: 'B', text: '75 chiếc bánh cupcake' },
+          { id: 'C', text: '95 chiếc bánh cupcake' },
+          { id: 'D', text: '85 chiếc bánh cupcake' },
+        ],
+        correct: 'D',
+        explain: '42 ÷ 5 = 8 (dư 2), hạ 5 được 25 ÷ 5 = 5. Vậy 425 ÷ 5 = 85 chiếc bánh!'
+      },
+      {
+        prompt: '🏰 Công chúa An Lake chuẩn bị <strong>252</strong> tấm thiệp mời dát kim tuyến gửi đều đến <strong>6</strong> vương quốc láng giềng. Hỏi mỗi vương quốc nhận được bao nhiêu tấm thiệp mời? (252 ÷ 6 = ?)',
+        img: '/images/lop1/princess_division_2311/q05.svg',
+        options: [
+          { id: 'A', text: '40 tấm thiệp mời' },
+          { id: 'B', text: '42 tấm thiệp mời' },
+          { id: 'C', text: '44 tấm thiệp mời' },
+          { id: 'D', text: '46 tấm thiệp mời' },
+        ],
+        correct: 'B',
+        explain: '25 ÷ 6 = 4 (dư 1), hạ 2 được 12 ÷ 6 = 2. Vậy 252 ÷ 6 = 42 tấm thiệp mời!'
+      },
+      {
+        prompt: '🦄 Trên bầu trời cầu vồng, <strong>8</strong> chú kỳ lân trắng có cánh cùng chở <strong>312</strong> ngôi sao ước nguyện về tháp pha lê. Hỏi mỗi chú kỳ lân chở bao nhiêu ngôi sao? (312 ÷ 8 = ?)',
+        img: '/images/lop1/princess_division_2311/q06.svg',
+        options: [
+          { id: 'A', text: '39 ngôi sao ước nguyện' },
+          { id: 'B', text: '37 ngôi sao ước nguyện' },
+          { id: 'C', text: '41 ngôi sao ước nguyện' },
+          { id: 'D', text: '38 ngôi sao ước nguyện' },
+        ],
+        correct: 'A',
+        explain: '31 ÷ 8 = 3 (dư 7), hạ 2 được 72 ÷ 8 = 9. Vậy 312 ÷ 8 = 39 ngôi sao!'
+      },
+      {
+        prompt: '🌸 Vườn ngự uyển có <strong>618</strong> bông hoa cẩm tú cầu xanh biếc trồng đều trên <strong>6</strong> luống hoa trái tim. Hỏi mỗi luống có bao nhiêu bông hoa? (618 ÷ 6 = ?)',
+        img: '/images/lop1/princess_division_2311/q07.svg',
+        options: [
+          { id: 'A', text: '13 bông hoa' },
+          { id: 'B', text: '130 bông hoa' },
+          { id: 'C', text: '103 bông hoa' },
+          { id: 'D', text: '108 bông hoa' },
+        ],
+        correct: 'C',
+        explain: '6 ÷ 6 = 1; hạ 1, vì 1 < 6 viết 0; hạ 8 được 18 ÷ 6 = 3. Vậy 618 ÷ 6 = 103 bông hoa!'
+      },
+      {
+        prompt: '🐚 Nàng tiên cá bạn thân của Công chúa An tặng <strong>315</strong> vỏ sò ánh xà cừ chia đều vào <strong>9</strong> rương kho báu nhỏ. Hỏi mỗi rương có bao nhiêu vỏ sò? (315 ÷ 9 = ?)',
+        img: '/images/lop1/princess_division_2311/q08.svg',
+        options: [
+          { id: 'A', text: '33 vỏ sò ánh xà cừ' },
+          { id: 'B', text: '37 vỏ sò ánh xà cừ' },
+          { id: 'C', text: '34 vỏ sò ánh xà cừ' },
+          { id: 'D', text: '35 vỏ sò ánh xà cừ' },
+        ],
+        correct: 'D',
+        explain: '31 ÷ 9 = 3 (dư 4), hạ 5 được 45 ÷ 9 = 5. Vậy 315 ÷ 9 = 35 vỏ sò!'
+      },
+      {
+        prompt: '🕯️ Để thắp sáng Vũ Hội Hoàng Gia, có <strong>560</strong> ngọn nến thơm lung linh chia đều lên <strong>7</strong> chiếc đèn chùm pha lê. Hỏi mỗi chiếc đèn chùm có bao nhiêu ngọn nến? (560 ÷ 7 = ?)',
+        img: '/images/lop1/princess_division_2311/q09.svg',
+        options: [
+          { id: 'A', text: '70 ngọn nến thơm' },
+          { id: 'B', text: '80 ngọn nến thơm' },
+          { id: 'C', text: '8 ngọn nến thơm' },
+          { id: 'D', text: '90 ngọn nến thơm' },
+        ],
+        correct: 'B',
+        explain: '56 ÷ 7 = 8, hạ 0 được 0 ÷ 7 = 0. Vậy 560 ÷ 7 = 80 ngọn nến thơm!'
+      },
+      {
+        prompt: '👑 <strong>THỬ THÁCH VƯƠNG MIỆN VÀNG:</strong> Kho báu Lâu Đài Pha Lê có <strong>744</strong> viên kim cương hồng chia đều để đính lên <strong>8</strong> chiếc vương miện công chúa. Hỏi mỗi vương miện được đính mấy viên? (744 ÷ 8 = ?)',
+        img: '/images/lop1/princess_division_2311/q10.svg',
+        options: [
+          { id: 'A', text: '91 viên kim cương hồng' },
+          { id: 'B', text: '92 viên kim cương hồng' },
+          { id: 'C', text: '93 viên kim cương hồng' },
+          { id: 'D', text: '94 viên kim cương hồng' },
+        ],
+        correct: 'C',
+        explain: '74 ÷ 8 = 9 (dư 2), hạ 4 được 24 ÷ 8 = 3. Vậy 744 ÷ 8 = 93 viên kim cương hồng!'
+      }
+    ];
+
+    let curQ = 0;
+    let score = 0;
+    let solvedCurrent = false;
+
+    function renderQuiz() {
+      const q = quizData[curQ];
+      solvedCurrent = false;
+      document.getElementById('quizTracker').textContent = `Câu hỏi ${curQ + 1} / ${quizData.length}`;
+      document.getElementById('quizPrompt').innerHTML = q.prompt;
+      document.getElementById('quizVisual').innerHTML = `<img src="${q.img}" alt="Minh họa câu ${curQ + 1}" />`;
+      document.getElementById('quizFeedback').innerHTML = '';
+      document.getElementById('btnNextQuiz').style.display = 'none';
+
+      const optsEl = document.getElementById('quizOptions');
+      optsEl.innerHTML = q.options.map(opt => `
+        <button class="quiz-opt-btn" onclick="pickQuizOpt('${opt.id}', this)">
+          <span class="opt-letter">${opt.id}</span>
+          <span>${opt.text}</span>
+        </button>
+      `).join('');
+    }
+
+    function pickQuizOpt(optId, btnEl) {
+      if (solvedCurrent) return;
+      const q = quizData[curQ];
+      const fb = document.getElementById('quizFeedback');
+
+      if (optId === q.correct) {
+        solvedCurrent = true;
+        score++;
+        document.getElementById('quizScore').textContent = score;
+        btnEl.classList.add('correct');
+        playWinChime();
+        launchConfetti();
+        fb.innerHTML = `<span style="color:#059669;">🎉 TUYỆT VỜI CÔNG CHÚA AN! ${q.explain}</span>`;
+        document.querySelectorAll('.quiz-opt-btn').forEach(b => b.disabled = true);
+        const nextBtn = document.getElementById('btnNextQuiz');
+        nextBtn.textContent = curQ === quizData.length - 1 ? '👑 Nhận Vương Miện Chiến Thắng!' : '➡️ Thử Thách Tiếp Theo';
+        nextBtn.style.display = 'inline-flex';
+      } else {
+        btnEl.classList.add('wrong');
+        playWrongBuzzer();
+        fb.innerHTML = `<span style="color:#E11D48;">Ôi chưa đúng rồi, Công chúa thử tính lại nhé! 💖</span>`;
+        setTimeout(() => btnEl.classList.remove('wrong'), 450);
+      }
+    }
+
+    function restartQuiz() {
+      curQ = 0;
+      score = 0;
+      document.getElementById('quizScore').textContent = 0;
+      document.getElementById('quizBox').innerHTML = `
+        <div id="quizPrompt" style="font-size: 1.22rem; font-weight: 700; color: #0F172A; line-height: 1.55;"></div>
+        <div class="quiz-visual" id="quizVisual"></div>
+        <div class="quiz-options" id="quizOptions"></div>
+      `;
+      renderQuiz();
+    }
+
+    function nextQuiz() {
+      if (curQ < quizData.length - 1) {
+        curQ++;
+        renderQuiz();
+      } else {
+        playWinChime();
+        launchConfetti();
+        document.getElementById('quizBox').innerHTML = `
+          <div style="text-align:center; padding: 28px 14px;">
+            <div style="font-size: 4.5rem;">👑✨💎</div>
+            <h2 style="color:#BE185D; font-size: 2rem; margin: 10px 0;">CHÚC MỪNG CÔNG CHÚA AN LAKE!</h2>
+            <p style="font-size: 1.15rem; color:#475569; margin-bottom: 18px;">
+              Công chúa đã xuất sắc hoàn thành trọn vẹn <strong>10/10 thử thách Phép Chia Hết 3 Chữ Số Cho 1 Chữ Số</strong> và rinh về Vương Miện Pha Lê!
+            </p>
+            <button class="big-action-btn" onclick="restartQuiz()">🔄 Chơi Lại Từ Đầu</button>
+          </div>
+        `;
+        document.getElementById('quizFeedback').innerHTML = '';
+        document.getElementById('btnNextQuiz').style.display = 'none';
+      }
+    }
+
+    renderQuiz();
+  </script>
+</body>
+</html>

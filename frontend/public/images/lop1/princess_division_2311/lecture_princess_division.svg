@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" width="680" height="340">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF1F2"/>
+      <stop offset="50%" stop-color="#FDF4FF"/>
+      <stop offset="100%" stop-color="#FEF9C3"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FFF5F7"/>
+    </linearGradient>
+  </defs>
+  <rect width="680" height="340" rx="28" fill="url(#bgGrad)" stroke="#F9A8D4" stroke-width="4"/>
+  <path d="M42 33.2 L44.42 39.58 L50.8 42 L44.42 44.42 L42 50.8 L39.58 44.42 L33.2 42 L39.58 39.58 Z" fill="#FBBF24" opacity="0.9"/>
+<path d="M635 35.4 L637.64 42.36 L644.6 45 L637.64 47.64 L635 54.6 L632.36 47.64 L625.4 45 L632.36 42.36 Z" fill="#EC4899" opacity="0.9"/>
+<path d="M625 282 L627.2 287.8 L633 290 L627.2 292.2 L625 298 L622.8 292.2 L617 290 L622.8 287.8 Z" fill="#FBBF24" opacity="0.9"/>
+<path d="M180 297.8 L181.98 303.02 L187.2 305 L181.98 306.98 L180 312.2 L178.02 306.98 L172.8 305 L178.02 303.02 Z" fill="#A855F7" opacity="0.9"/>
+
+  <!-- Title Banner -->
+  <rect x="120" y="16" width="440" height="38" rx="19" fill="#EC4899"/>
+  <text x="340" y="41" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">
+    BÍ KÍP ĐẶT TÍNH CHIA CÔNG CHÚA: 168 : 7 = 24
+  </text>
+
+  <!-- Princess on left -->
+  
+  <g transform="translate(92, 195) scale(1.15)">
+    <!-- Soft pastel aura -->
+    <circle cx="0" cy="4" r="56" fill="#FDF2F8" opacity="0.9" />
+    <!-- Gown skirt -->
+    <path d="M-22 22 Q-34 55 -38 68 Q0 78 38 68 Q34 55 22 22 Z" fill="#F472B6" stroke="#BE185D" stroke-width="2.2"/>
+    <path d="M-12 24 Q-16 56 -18 69 M0 24 L0 72 M12 24 Q16 56 18 69" stroke="#FBCFE8" stroke-width="1.8" fill="none" opacity="0.8"/>
+    <!-- Puff sleeves & bodice -->
+    <circle cx="-18" cy="14" r="8" fill="#F9A8D4" stroke="#BE185D" stroke-width="2"/>
+    <circle cx="18" cy="14" r="8" fill="#F9A8D4" stroke="#BE185D" stroke-width="2"/>
+    <path d="M-14 10 L14 10 L11 25 L-11 25 Z" fill="#EC4899" stroke="#BE185D" stroke-width="2"/>
+    <circle cx="0" cy="17" r="3.5" fill="#FDE047" stroke="#B45309" stroke-width="1"/>
+    <!-- Arms -->
+    <path d="M-18 18 Q-30 28 -34 17" stroke="#FDE2C8" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M18 18 Q28 26 37 12" stroke="#FDE2C8" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <!-- Magic Star Wand -->
+    <line x1="37" y1="12" x2="49" y2="-12" stroke="#D97706" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="49,-24 52,-15 61,-15 54,-10 57,-1 49,-6 41,-1 44,-10 37,-15 46,-15" fill="#FACC15" stroke="#D97706" stroke-width="1.5"/>
+    <!-- Hair back & fluffy side curls -->
+    <ellipse cx="0" cy="-12" rx="25" ry="25" fill="#5C3328"/>
+    <circle cx="-22" cy="-2" r="11" fill="#5C3328"/>
+    <circle cx="22" cy="-2" r="11" fill="#5C3328"/>
+    <circle cx="-20" cy="8" r="8" fill="#5C3328"/>
+    <circle cx="20" cy="8" r="8" fill="#5C3328"/>
+    <!-- Head -->
+    <circle cx="0" cy="-9" r="19" fill="#FDE2C8" stroke="#E5B89B" stroke-width="1.5"/>
+    <!-- Smooth parted princess bangs -->
+    <path d="M-19 -13 C-19 -28 19 -28 19 -13 C13 -16 5 -18 0 -22 C-5 -18 -13 -16 -19 -13 Z" fill="#5C3328"/>
+    <!-- Cute eyes, lashes, rosy cheeks & sweet smile -->
+    <circle cx="-7" cy="-9" r="2.7" fill="#1E293B"/>
+    <circle cx="7" cy="-9" r="2.7" fill="#1E293B"/>
+    <circle cx="-6" cy="-10" r="1" fill="#FFFFFF"/>
+    <circle cx="8" cy="-10" r="1" fill="#FFFFFF"/>
+    <ellipse cx="-11.5" cy="-4.5" rx="3.5" ry="2" fill="#FDA4AF" opacity="0.75"/>
+    <ellipse cx="11.5" cy="-4.5" rx="3.5" ry="2" fill="#FDA4AF" opacity="0.75"/>
+    <path d="M-4 -3.5 Q0 1.5 4 -3.5" stroke="#BE185D" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <!-- Golden Tiara -->
+    <path d="M-13 -26 L-10 -39 L-3 -31 L0 -43 L3 -31 L10 -39 L13 -26 Z" fill="#FACC15" stroke="#B45309" stroke-width="1.8" stroke-linejoin="round"/>
+    <circle cx="0" cy="-34" r="2.6" fill="#EC4899"/>
+    <circle cx="-8" cy="-31" r="1.8" fill="#38BDF8"/>
+    <circle cx="8" cy="-31" r="1.8" fill="#38BDF8"/>
+  </g>
+  <rect x="26" y="286" width="132" height="30" rx="15" fill="#FCE7F3" stroke="#F472B6" stroke-width="2"/>
+  <text x="92" y="306" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#9D174D">
+    Công Chúa An Lake
+  </text>
+
+  <!-- Center Long Division Box (Exact column grid: col1=224, col2=244, col3=264) -->
+  <rect x="186" y="72" width="215" height="236" rx="22" fill="url(#cardGrad)" stroke="#F472B6" stroke-width="3"/>
+  <text x="293" y="96" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#BE185D">
+    ĐẶT TÍNH RỒI TÍNH
+  </text>
+
+  <line x1="295" y1="112" x2="295" y2="288" stroke="#BE185D" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="295" y1="152" x2="375" y2="152" stroke="#BE185D" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Highlight pill for "16" -->
+  <rect x="212" y="114" width="44" height="34" rx="8" fill="#FCE7F3"/>
+  <text x="224" y="140" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="bold" fill="#DB2777">1</text>
+  <text x="244" y="140" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="bold" fill="#DB2777">6</text>
+  <text x="264" y="140" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="bold" fill="#7C3AED">8</text>
+
+  <!-- Divisor 7 & Quotient 24 -->
+  <text x="322" y="140" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="bold" fill="#0F766E">7</text>
+  <text x="332" y="186" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="bold" fill="#059669">24</text>
+
+  <!-- Step 1: - 14 -->
+  <text x="204" y="176" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="bold" fill="#64748B">-</text>
+  <text x="224" y="176" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="bold" fill="#E11D48">1</text>
+  <text x="244" y="176" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="bold" fill="#E11D48">4</text>
+  <line x1="212" y1="184" x2="256" y2="184" stroke="#94A3B8" stroke-width="2.5"/>
+
+  <!-- Step 2: remainder 2 + bring down 8 -> 28 -->
+  <text x="244" y="213" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="bold" fill="#7C3AED">2</text>
+  <text x="264" y="213" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="bold" fill="#7C3AED">8</text>
+
+  <text x="222" y="246" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="bold" fill="#64748B">-</text>
+  <text x="244" y="246" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="bold" fill="#E11D48">2</text>
+  <text x="264" y="246" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="bold" fill="#E11D48">8</text>
+  <line x1="232" y1="254" x2="278" y2="254" stroke="#94A3B8" stroke-width="2.5"/>
+
+  <!-- Final Remainder 0 -->
+  <circle cx="264" cy="280" r="15" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="264" y="288" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="bold" fill="#059669">0</text>
+
+  <!-- Step-by-step callouts on right -->
+  <rect x="418" y="72" width="240" height="70" rx="16" fill="#FFFFFF" stroke="#F472B6" stroke-width="2.5"/>
+  <circle cx="440" cy="94" r="12" fill="#EC4899"/>
+  <text x="440" y="99" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFF">1</text>
+  <text x="460" y="97" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#9D174D">1 &lt; 7 nên gộp 16 chia 7:</text>
+  <text x="434" y="122" font-family="Arial, sans-serif" font-size="13" fill="#334155">16 : 7 = 2 (vì 2 x 7 = 14)</text>
+  <text x="434" y="138" font-family="Arial, sans-serif" font-size="12" fill="#64748B">16 - 14 = 2 (dư 2)</text>
+
+  <rect x="418" y="155" width="240" height="70" rx="16" fill="#FFFFFF" stroke="#A855F7" stroke-width="2.5"/>
+  <circle cx="440" cy="177" r="12" fill="#9333EA"/>
+  <text x="440" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFF">2</text>
+  <text x="460" y="180" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#6B21A8">Hạ 8 xuống cạnh 2 được 28:</text>
+  <text x="434" y="205" font-family="Arial, sans-serif" font-size="13" fill="#334155">28 : 7 = 4 (vì 4 x 7 = 28)</text>
+  <text x="434" y="221" font-family="Arial, sans-serif" font-size="12" fill="#64748B">28 - 28 = 0</text>
+
+  <rect x="418" y="238" width="240" height="70" rx="16" fill="#ECFDF5" stroke="#10B981" stroke-width="2.5"/>
+  <circle cx="440" cy="260" r="12" fill="#10B981"/>
+  <text x="440" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFF">3</text>
+  <text x="460" y="263" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#065F46">Dư 0 = CHIA HẾT!</text>
+  <text x="434" y="290" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#047857">Kết quả: 168 : 7 = 24</text>
+</svg>
