@@ -704,7 +704,7 @@ export default function StudentDashboard() {
               <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-2 sm:p-4">
                 <div
                   className={`w-full ${
-                    hasInteractive ? 'max-w-6xl h-[92vh] max-h-[92vh]' : 'max-w-3xl max-h-[85vh]'
+                    hasInteractive ? 'max-w-6xl h-[92vh] max-h-[92vh]' : 'max-w-5xl h-[90vh] max-h-[90vh]'
                   } bg-slate-900 border border-cyan-500/40 rounded-3xl p-4 sm:p-8 flex flex-col overflow-hidden shadow-2xl transition-all`}
                 >
                   <div className="flex items-center justify-between border-b border-slate-800 pb-4 flex-shrink-0 flex-wrap gap-3">
@@ -783,10 +783,10 @@ export default function StudentDashboard() {
                       />
                     </div>
                   ) : (
-                    <div className="flex-1 overflow-y-auto py-6 pr-2">
+                    <div className="flex-1 overflow-y-auto py-6 pr-2 sm:pr-4 mission-scroll">
                       <FormattedContent
                         text={activeLectureAssignment.learning_units?.lecture_content_markdown || ''}
-                        className="text-slate-200 text-sm leading-relaxed"
+                        className="text-slate-100 text-base sm:text-lg leading-relaxed space-y-4"
                       />
 
                       {/* Sơ đồ đính kèm */}
@@ -1727,7 +1727,7 @@ export default function StudentDashboard() {
                   <div className="flex-1 overflow-y-auto p-6 sm:p-8">
                     <FormattedContent
                       text={activeLectureAssignment.learning_units?.lecture_content_markdown || ''}
-                      className="text-slate-700 text-sm leading-relaxed"
+                      className="text-slate-800 text-base sm:text-lg leading-relaxed space-y-4"
                     />
                   </div>
                 )}
