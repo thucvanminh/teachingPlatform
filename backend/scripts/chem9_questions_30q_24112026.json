@@ -1,0 +1,812 @@
+[
+  {
+    "order_index": 1,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.33,
+    "sectionName": "Sector 1: Mercury Orbit • General Molecular Formula & Polysaccharide Architecture",
+    "content_markdown": "In the **Mercury Orbit Analytical Bay**, Astronaut Cadet Keithley Lake calibrates a high-precision mass spectrometer to examine purified carbohydrate samples synthesized in orbital crop chambers. The telemetry indicates that both starch and cellulose are high-molecular-weight biopolymers assembled through the condensation of hundreds to thousands of glucose rings. Which telemetry record correctly states the general molecular formula and structural nature of these two macromolecules?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Both are natural biopolymers with formula $(\\text{C}_6\\text{H}_{12}\\text{O}_6)_n$, built from condensed fructose units."
+      },
+      {
+        "id": "B",
+        "text": "Both are natural biopolymers with formula $(\\text{C}_{12}\\text{H}_{22}\\text{O}_{11})_n$, built from condensed maltose units."
+      },
+      {
+        "id": "C",
+        "text": "Both are natural biopolymers with formula $(\\text{C}_6\\text{H}_{10}\\text{O}_5)_n$, built from condensed glucose units."
+      },
+      {
+        "id": "D",
+        "text": "Both are natural biopolymers with formula $(\\text{C}_5\\text{H}_{10}\\text{O}_5)_n$, built from condensed ribose units."
+      }
+    ],
+    "correct_option_id": "C",
+    "explanation": "Both starch and cellulose are complex natural biopolymers classified as **polysaccharides**, sharing the empirical repeating unit formula $(\\text{C}_6\\text{H}_{10}\\text{O}_5)_n$. They are assembled by the condensation polymerization of $n$ glucose molecules ($\text{C}_6\text{H}_{12}\text{O}_6$), where each glycosidic bond formation eliminates one water molecule: $$n\\text{C}_6\\text{H}_{12}\\text{O}_6 \\to (\\text{C}_6\\text{H}_{10}\\text{O}_5)_n + n\\text{H}_2\\text{O}$$ Consequently, each repeating monomer unit has a molar mass of $M_{\\text{unit}} = 12 \\times 6 + 1 \\times 10 + 16 \\times 5 = 162\\text{ g/mol}$. In contrast, $\\text{C}_6\\text{H}_{12}\\text{O}_6$ represents simple monosaccharides, $\\text{C}_{12}\\text{H}_{22}\\text{O}_{11}$ represents disaccharides like maltose or sucrose, and $\\text{C}_5\\text{H}_{10}\\text{O}_5$ represents pentose sugars."
+  },
+  {
+    "order_index": 2,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.33,
+    "sectionName": "Sector 1: Mercury Orbit • Physical Properties & Solubility Telemetry",
+    "content_markdown": "Inside the **Mercury Orbit Environmental Bay**, Cadet Keithley conducts thermal solubility tests on two solid white canisters labeled **Starch-Alpha** and **Cellulose-Beta**. He introduces separate $5.0\\text{ g}$ specimens into cold water at $20^\\circ\\text{C}$, boiling water at $100^\\circ\\text{C}$, and pure ethanol solvent. Which observation report accurately logs the physical appearance and solubility telemetry of these two substances?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Starch is a granular white solid forming a paste in hot water; cellulose is a fibrous white solid insoluble in hot water."
+      },
+      {
+        "id": "B",
+        "text": "Starch is a fibrous white solid dissolving fully in cold water; cellulose is a granular white solid soluble in ethanol."
+      },
+      {
+        "id": "C",
+        "text": "Starch is a fibrous white solid forming a paste in hot water; cellulose is a granular white solid insoluble in all water."
+      },
+      {
+        "id": "D",
+        "text": "Starch is a granular white solid dissolving fully in ethanol; cellulose is a fibrous white solid dissolving in cold water."
+      }
+    ],
+    "correct_option_id": "A",
+    "explanation": "Starch is a white, amorphous powder made of microscopic granules. It is completely insoluble in cold water; however, when heated in hot water ($>65^\\circ\\text{C}$), the granules absorb water, swell, and burst, forming a viscous colloidal suspension known as **starch paste**. In contrast, cellulose is a white, tough, fibrous solid that is completely insoluble in cold water, hot water, and common organic solvents such as ethanol and diethyl ether due to its rigid, crystalline microfibril structure."
+  },
+  {
+    "order_index": 3,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.33,
+    "sectionName": "Sector 1: Mercury Orbit • Molecular Architecture & Microscopic Shape",
+    "content_markdown": "Cadet Keithley images the macromolecular architecture of starch and cellulose using the **Mercury Orbit Cryo-Electron Microscope**. The high-resolution diffraction scan reveals that even though both compounds are composed entirely of linked $\\text{C}_6$ rings, starch aggregates into microscopic rounded granules while cellulose forms elongated, rigid fibrils with high tensile strength. What molecular-level structural feature accounts for this difference?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Starch forms rigid planar sheets stabilized by ionic metallic bonds, whereas cellulose forms tangled amorphous loops with no regular shape."
+      },
+      {
+        "id": "B",
+        "text": "Starch forms flexible elastomeric rings that dissolve in cold water, whereas cellulose forms loose globular clusters lacking intermolecular bonds."
+      },
+      {
+        "id": "C",
+        "text": "Starch forms hollow spherical cages stabilized by cyclic ester links, whereas cellulose forms fragile disordered strands with weak dipole forces."
+      },
+      {
+        "id": "D",
+        "text": "Starch forms helical and branched coils suited for compact storage, whereas cellulose forms straight chains held by dense hydrogen bonds."
+      }
+    ],
+    "correct_option_id": "D",
+    "explanation": "Starch consists of two structural polymers: **amylose** (linear chains coiling into loose helices) and **amylopectin** (highly branched chains via $\\alpha-1,6$-glycosidic linkages). These helical and branched geometries prevent linear stacking and cause the molecules to fold into compact, rounded granules ideal for space-efficient metabolic storage. In contrast, cellulose consists strictly of unbranched, linear chains of glucose in a $\\beta$-configuration, which allows adjacent polymer ribbons to align parallel to one another. Extensive intermolecular and intramolecular **hydrogen bonds** lock these chains into tightly packed, rigid, water-excluding crystalline microfibrils capable of bearing significant mechanical tension."
+  },
+  {
+    "order_index": 4,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.33,
+    "sectionName": "Sector 1: Mercury Orbit • Botanical Tissue Distribution",
+    "content_markdown": "The **Mercury Orbit Botanical Archive** catalogues plant matter harvested from planetary hydroponics to separate culinary food reserves from engineering fibers for structural 3D printing. Cadet Keithley must assign harvest batches according to their natural carbohydrate concentrations. Which catalogue log correctly identifies the primary botanical tissues and richest natural sources of starch and cellulose?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Starch dominates woody stems and cotton bolls ($95\\text{--}98\\%$); cellulose concentrates in cereal grains, corn kernels, and potato tubers."
+      },
+      {
+        "id": "B",
+        "text": "Starch concentrates in cereal grains, corn kernels, and potato tubers; cellulose dominates woody stems, bamboo, and cotton ($95\\text{--}98\\%$)."
+      },
+      {
+        "id": "C",
+        "text": "Starch constitutes the tough outer bark of trees and bamboo culms; cellulose constitutes the internal nutrient starch reserves of edible fruits."
+      },
+      {
+        "id": "D",
+        "text": "Starch forms the insoluble structural cell walls of mature flax and jute; cellulose forms the primary metabolic sugar granules of potato roots."
+      }
+    ],
+    "correct_option_id": "B",
+    "explanation": "In nature, plants allocate carbohydrates according to function: **Starch** serves as the principal chemical energy reserve stored in seeds, tubers, and roots (polished rice contains roughly $80\\%$, corn kernels $65\\text{--}75\\%$, wheat $60\\text{--}70\\%$, and dried potato tubers $20\\%$, cassava up to $30\\%$). **Cellulose** serves as the primary structural framework of plant cell walls, concentrated in mechanical support tissues such as wood ($40\\text{--}50\\%$), bamboo culms ($40\\text{--}50\\%$), flax, jute, and nearly pure in raw cotton fibers ($95\\text{--}98\\%$)."
+  },
+  {
+    "order_index": 5,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.33,
+    "sectionName": "Sector 2: Venus Base • Photosynthetic Biosynthesis & Gas Exchange",
+    "content_markdown": "Upon arriving at **Venus Base Alpha**, Cadet Keithley oversees the atmosphere generation grid inside the planetary biospheric biodomes. Genetically optimized crops convert carbon dioxide $(\\text{CO}_2)$ and water $(\\text{H}_2\\text{O})$ into structural and storage biopolymers while replenishing oxygen gas $(\\text{O}_2)$ for the station crew. Which balanced chemical equation and stoichiometric gas ratio represent the overall biosynthesis of biopolymers from solar radiation?",
+    "options": [
+      {
+        "id": "A",
+        "text": "$6n\\text{CO}_2 + 6n\\text{H}_2\\text{O} \\xrightarrow{\\text{light, chlorophyll}} (\\text{C}_6\\text{H}_{10}\\text{O}_5)_n + 5n\\text{O}_2$, consuming $6n$ moles of $\\text{CO}_2$ to release $5n$ moles of $\\text{O}_2$."
+      },
+      {
+        "id": "B",
+        "text": "$5n\\text{CO}_2 + 6n\\text{H}_2\\text{O} \\xrightarrow{\\text{light, chlorophyll}} (\\text{C}_6\\text{H}_{10}\\text{O}_5)_n + 6n\\text{O}_2$, consuming $5n$ moles of $\\text{CO}_2$ to release $6n$ moles of $\\text{O}_2$."
+      },
+      {
+        "id": "C",
+        "text": "$6n\\text{CO}_2 + 5n\\text{H}_2\\text{O} \\xrightarrow{\\text{light, chlorophyll}} (\\text{C}_6\\text{H}_{10}\\text{O}_5)_n + 6n\\text{O}_2$, consuming $6n$ moles of $\\text{CO}_2$ to release $6n$ moles of $\\text{O}_2$."
+      },
+      {
+        "id": "D",
+        "text": "$6n\\text{CO}_2 + 10n\\text{H}_2\\text{O} \\xrightarrow{\\text{light, chlorophyll}} (\\text{C}_6\\text{H}_{10}\\text{O}_5)_n + 12n\\text{O}_2$, consuming $6n$ moles of $\\text{CO}_2$ to release $12n$ moles of $\\text{O}_2$."
+      }
+    ],
+    "correct_option_id": "C",
+    "explanation": "The overall synthesis of polysaccharides (both starch and cellulose) in green plants occurs through photosynthesis followed by condensation polymerization: $$6n\\text{CO}_2 + 5n\\text{H}_2\\text{O} \\xrightarrow{\\text{light, chlorophyll}} (\\text{C}_6\\text{H}_{10}\\text{O}_5)_n + 6n\\text{O}_2\\uparrow$$ This equation is derived by combining primary glucose photosynthesis ($6n\\text{CO}_2 + 6n\\text{H}_2\\text{O} \\to n\\text{C}_6\\text{H}_{12}\\text{O}_6 + 6n\\text{O}_2$) with polysaccharide condensation ($n\\text{C}_6\\text{H}_{12}\\text{O}_6 \\to (\\text{C}_6\\text{H}_{10}\\text{O}_5)_n + n\\text{H}_2\\text{O}$), which cancels out $n\\text{H}_2\\text{O}$. Stoichiometrically, the volume of $\\text{CO}_2$ absorbed exactly equals the volume of $\\text{O}_2$ liberated ($6n\\text{ moles} : 6n\\text{ moles}$, or a $1:1$ molar gas ratio), perfectly stabilizing the biodome's atmospheric pressure."
+  },
+  {
+    "order_index": 6,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.33,
+    "sectionName": "Sector 2: Venus Base • Divergent Biological Functions in Plant Physiology",
+    "content_markdown": "Aboard **Venus Base Alpha**, Cadet Keithley investigates how orbital crops manage metabolic stresses during prolonged nocturnal cycles in the biodome. Plant cells must sustain cellular respiration in the dark while maintaining erect physical posture against indoor ventilation currents. How do the physiological functions of starch and cellulose diverge to fulfill these distinct survival requirements?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Starch serves as a dynamic energy reserve mobilized during darkness; cellulose serves as a permanent architectural scaffold for cell walls."
+      },
+      {
+        "id": "B",
+        "text": "Starch serves as a rigid structural wall protecting plant cells; cellulose serves as an immediate enzymatic fuel reserve during night cycles."
+      },
+      {
+        "id": "C",
+        "text": "Starch serves as a transport solvent circulating mineral ions; cellulose serves as a catalytic enzyme accelerating nocturnal respiration."
+      },
+      {
+        "id": "D",
+        "text": "Starch serves as a waterproof wax shielding delicate leaf tissue; cellulose serves as an electrical conductor transmitting growth impulses."
+      }
+    ],
+    "correct_option_id": "A",
+    "explanation": "In plant physiology, **starch** functions as a transient, non-osmotic metabolic fuel depot. During daylight, excess glucose generated by photosynthesis is stored as starch granules inside chloroplasts and amyloplasts. During darkness or seasonal dormancy, amylase enzymes hydrolyze starch back into transportable maltose and glucose to drive cellular respiration: $$(\\text{C}_6\\text{H}_{10}\\text{O}_5)_n + n\\text{H}_2\\text{O} \\xrightarrow{\\text{enzymes}} n\\text{C}_6\\text{H}_{12}\\text{O}_6$$ In contrast, **cellulose** is a permanent, recalcitrant structural biopolymer deposited into the primary and secondary cell walls. It provides the rigid skeleton that withstands internal turgor pressure and external mechanical stresses; plants do not hydrolyze their own cellulose back into glucose for respiration."
+  },
+  {
+    "order_index": 7,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.33,
+    "sectionName": "Sector 2: Venus Base • Chain Length & Non-Isomerism",
+    "content_markdown": "Inside the **Venus Base Bio-Polymer Analysis Bay**, Astronaut Cadet Keithley Lake examines molecular mass spectrometry readouts for starch and cellulose. Both polysaccharides share the same empirical repeating formula, $(\\text{C}_6\\text{H}_{10}\\text{O}_5)_x$. However, Mission Control notes that starch and cellulose are fundamentally **not** isomers of each other. Which statement correctly explains why starch and cellulose cannot be classified as isomers?",
+    "options": [
+      {
+        "id": "A",
+        "text": "They share the exact same degree of polymerization ($n = m$) and identical molar mass, but possess completely different elemental ratios."
+      },
+      {
+        "id": "B",
+        "text": "Starch is an inorganic crystal network lacking carbon atoms, whereas cellulose is an organic biopolymer formed exclusively by ester bonds."
+      },
+      {
+        "id": "C",
+        "text": "Their degrees of polymerization differ ($n \\neq m$), resulting in different molecular masses alongside distinct structural linkages."
+      },
+      {
+        "id": "D",
+        "text": "Both biopolymers share the exact same constant molecular mass, but starch contains nitrogen and phosphorus bridges along its main chain."
+      }
+    ],
+    "correct_option_id": "C",
+    "explanation": "By definition, chemical isomers must possess the exact same molecular formula and identical molecular mass. Although starch, $(\\text{C}_6\\text{H}_{10}\\text{O}_5)_n$, and cellulose, $(\\text{C}_6\\text{H}_{10}\\text{O}_5)_m$, share the same empirical formula of anhydroglucose units, their degrees of polymerization are fundamentally different ($n \\neq m$). In starch, $n$ typically ranges from $1{,}000$ to $6{,}000$ ($M \\approx 160{,}000 - 1{,}000{,}000\\text{ g/mol}$), whereas in cellulose, $m$ is much larger, typically ranging from $10{,}000$ to $14{,}000$ or more ($M$ up to several million $\\text{g/mol}$). Because their values of $n$ and $m$ are non-identical and variable, their actual molecular masses differ widely. Furthermore, starch consists of $\\alpha$-glucose units forming coiled/branched chains (amylose and amylopectin), whereas cellulose consists of $\\beta$-glucose units linked into straight, unbranched fibril bundles. Therefore, starch and cellulose are **not** isomers."
+  },
+  {
+    "order_index": 8,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.33,
+    "sectionName": "Sector 2: Venus Base • Molar Mass of Anhydroglucose Monomer Unit",
+    "content_markdown": "At the **Venus Base Stoichiometry Console**, Cadet Keithley analyzes the condensation polymerization of glucose ($\\text{C}_6\\text{H}_{12}\\text{O}_6$, $M = 180\\text{ g/mol}$) into starch and cellulose chains, $(\\text{C}_6\\text{H}_{10}\\text{O}_5)_x$. Each time a monomer joins the growing polysaccharide chain, one water molecule ($\\text{H}_2\\text{O}$, $M = 18\\text{ g/mol}$) is eliminated. What is the molar mass of one repeating anhydroglucose unit in the polymer, and how does it relate to glucose? (Atomic masses: $\\text{C} = 12$, $\\text{H} = 1$, $\\text{O} = 16$).",
+    "options": [
+      {
+        "id": "A",
+        "text": "$162\\text{ g/mol}$; it equals the mass of glucose ($180\\text{ g/mol}$) minus one eliminated water molecule ($18\\text{ g/mol}$)."
+      },
+      {
+        "id": "B",
+        "text": "$180\\text{ g/mol}$; it retains the exact molecular mass of glucose because polymer condensation occurs without losing any atoms."
+      },
+      {
+        "id": "C",
+        "text": "$144\\text{ g/mol}$; it is formed when two separate water molecules ($36\\text{ g/mol}$) are eliminated from each glucose monomer unit."
+      },
+      {
+        "id": "D",
+        "text": "$162\\text{ g/mol}$; it is formed when one molecule of carbon dioxide ($44\\text{ g/mol}$) is released from each glucose monomer unit."
+      }
+    ],
+    "correct_option_id": "A",
+    "explanation": "The molar mass of one repeating anhydroglucose unit, $\\text{C}_6\\text{H}_{10}\\text{O}_5$, is calculated from atomic masses ($\\text{C}=12$, $\\text{H}=1$, $\\text{O}=16$):\n$$M = (6 \\times 12) + (10 \\times 1) + (5 \\times 16) = 72 + 10 + 80 = 162\\text{ g/mol}$$\nDuring natural condensation polymerization:\n$$n\\text{C}_6\\text{H}_{12}\\text{O}_6 \\to (\\text{C}_6\\text{H}_{10}\\text{O}_5)_n + n\\text{H}_2\\text{O}$$\nEach glucose molecule ($\\text{C}_6\\text{H}_{12}\\text{O}_6$, $M = 180\\text{ g/mol}$) loses two hydrogen atoms and one oxygen atom (one $\\text{H}_2\\text{O}$ molecule, $M = 18\\text{ g/mol}$) as glycosidic bonds form. Therefore, the molar mass of each incorporated unit is exactly $180 - 18 = 162\\text{ g/mol}$."
+  },
+  {
+    "order_index": 9,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.33,
+    "sectionName": "Sector 3: Earth Mission Control • Iodine Colorimetry Mechanism",
+    "content_markdown": "At **Earth Mission Control Analytical Lab**, Cadet Keithley performs a standardized iodine colorimetric assay on carbohydrate samples using Lugol's iodine solution ($\\text{I}_2 / \\text{KI}$). Sample 1 (starch paste) turns an intense dark blue-violet, whereas Sample 2 (cellulose suspension) shows no color change and remains pale amber-yellow. What structural mechanism explains why starch forms a dark blue-violet complex with iodine, while cellulose does not?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Iodine chemically oxidizes the terminal aldehyde groups of starch to produce a blue pigment, whereas cellulose cannot undergo any redox reaction."
+      },
+      {
+        "id": "B",
+        "text": "Starch decomposes iodine molecules into charged triiodide ions that emit blue-violet light, whereas cellulose repels all halogen molecules."
+      },
+      {
+        "id": "C",
+        "text": "Iodine catalytically hydrolyzes starch chains into violet cyclic oligosaccharides, whereas cellulose strongly shields its glycosidic bonds."
+      },
+      {
+        "id": "D",
+        "text": "Linear polyiodide chains slip into helical amylose coils to form an inclusion complex, whereas linear cellulose fibers cannot trap iodine."
+      }
+    ],
+    "correct_option_id": "D",
+    "explanation": "The distinct colorimetric reaction of starch with iodine is governed by macromolecular architecture. Starch contains **amylose**, which adopts a hollow helical (spiral) coil conformation in aqueous suspension (with approximately 6 glucose units per turn). When iodine solution (containing $\\text{I}_3^-$ and $\\text{I}_5^-$ polyiodide ions) is added, the linear iodine species slip into the hydrophobic interior core of the amylose helices to form a **charge-transfer inclusion complex** (clathrate). This complex selectively absorbs yellow and red light, transmitting a characteristic **deep blue-violet** color. In contrast, **cellulose** consists of $\\beta$-glucose units joined by $\\beta$-1,4-glycosidic linkages that form rigid, completely straight, unbranched chains. These chains pack tightly into parallel microfibrils stabilized by dense networks of hydrogen bonds, lacking the helical cavities necessary to trap iodine. Therefore, cellulose exhibits no color change."
+  },
+  {
+    "order_index": 10,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.33,
+    "sectionName": "Sector 3: Earth Mission Control • Thermal Reversibility of Starch-Iodine Complex",
+    "content_markdown": "Inside the **Earth Mission Control Wet Chemistry Facility**, Cadet Keithley adds drops of iodine solution to a test tube containing starch paste, observing an immediate deep blue-violet color. Keithley then heats the mixture over a burner until boiling, observes the solution, and finally cools the tube in a cold-water bath back to room temperature. What visual changes occur during heating and cooling, and what molecular mechanism explains this phenomenon?",
+    "options": [
+      {
+        "id": "A",
+        "text": "The blue-violet color turns permanently red upon heating due to irreversible chemical oxidation, and remains red upon cooling."
+      },
+      {
+        "id": "B",
+        "text": "The blue-violet color vanishes upon heating as helices uncoil, and returns upon cooling as helices reform to trap iodine."
+      },
+      {
+        "id": "C",
+        "text": "The blue-violet color deepens into an opaque black precipitate upon heating, and completely decomposes into gas upon cooling."
+      },
+      {
+        "id": "D",
+        "text": "The blue-violet color remains completely unchanged throughout heating and cooling because covalent iodine bonds are heat-stable."
+      }
+    ],
+    "correct_option_id": "B",
+    "explanation": "The starch-iodine inclusion complex is held together by weak physical interactions (van der Waals forces and hydrophobic confinement within the amylose helix), rather than permanent covalent bonds.\n1. **Upon heating ($t^\\circ$):** The increased kinetic energy disrupts the weak hydrogen bonds maintaining the helical conformation of amylose. The helical coils uncoil and relax, releasing the trapped polyiodide molecules into solution; as a result, the deep blue-violet color **fades and disappears** (the solution becomes colorless or pale yellow).\n2. **Upon cooling:** As the thermal energy decreases, the amylose chains re-spool into their stable helical conformations, re-trapping the iodine molecules inside the coils, causing the deep blue-violet color to **reappear**.\nBecause the starch-iodine reaction is thermally reversible and destroyed at high temperatures, qualitative testing for starch must always be carried out and read at **room temperature**."
+  },
+  {
+    "order_index": 11,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.33,
+    "sectionName": "Sector 3: Earth Mission Control • Biochemical Fruit Ripening & Food Assay",
+    "content_markdown": "In the **Earth Mission Control Hydroponics Food Lab**, Cadet Keithley conducts a nutrient ripening assay on space-grown fruit crops. Keithley cuts a slice of green, unripe banana and a slice of yellow, fully ripe banana, placing two drops of iodine reagent onto each freshly exposed surface. What colorimetric result will Keithley observe, and what biochemical process explains the difference between the unripe and ripe fruit?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Both banana slices turn dark blue-violet because fruit ripening increases total starch storage while destroying all simple sugars."
+      },
+      {
+        "id": "B",
+        "text": "Neither slice shows any color change because iodine reacts solely with synthetic laboratory polymers and ignores plant tissues."
+      },
+      {
+        "id": "C",
+        "text": "The green slice turns dark blue-violet while the ripe slice shows little to no color, as enzymes hydrolyze starch into sugars."
+      },
+      {
+        "id": "D",
+        "text": "The ripe slice turns dark blue-violet while the green slice remains unchanged, as ripening plants convert simple sugars into starch."
+      }
+    ],
+    "correct_option_id": "C",
+    "explanation": "In green, unripe fruits (such as unripe bananas and apples), plants store excess photosynthetic carbohydrates in the form of **insoluble starch** (an energy reserve). Therefore, when iodine solution is dropped onto the green banana slice, it reacts with the abundant starch to form an immediate **dark blue-violet** stain.\nAs the fruit matures and ripens, endogenous plant enzymes (such as amylase and maltase) actively **hydrolyze the starch into soluble, sweet simple sugars** (glucose, fructose, and sucrose):\n$$(\\text{C}_6\\text{H}_{10}\\text{O}_5)_n + n\\text{H}_2\\text{O} \\xrightarrow{\\text{enzymes}} n\\text{C}_6\\text{H}_{12}\\text{O}_6$$\nIn a fully ripe banana, virtually all stored starch has been degraded into simple mono- and disaccharides. Since simple sugars do not possess the helical polymer structure required to trap iodine, the ripe banana slice shows **little to no blue-violet color change** (remaining the pale yellowish-brown color of the iodine reagent)."
+  },
+  {
+    "order_index": 12,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.33,
+    "sectionName": "Sector 3: Earth Mission Control • Acid-Catalyzed Hydrolysis Laboratory Experiment",
+    "content_markdown": "At the **Earth Mission Control Orbital Biochemistry Station**, Cadet Keithley replicates the textbook acid hydrolysis experiment (SGK p. 136) using two test tubes containing starch paste:\n* **Tube 1:** $3\\text{ mL}$ starch paste $+ 1\\text{ mL}$ dilute $\\text{HCl}$, heated in a boiling water bath ($100^\\circ\\text{C}$) for 10 minutes.\n* **Tube 2:** $3\\text{ mL}$ starch paste $+ 1\\text{ mL}$ distilled $\\text{H}_2\\text{O}$ (no acid), heated under identical conditions for 10 minutes.\n\nAfter cooling both tubes to room temperature, Keithley adds 2 drops of iodine solution to each tube. What are Keithley's observations and scientific conclusions?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Tube 1 shows no blue color as starch hydrolyzed into glucose; Tube 2 turns deep blue-violet as starch remained unhydrolyzed."
+      },
+      {
+        "id": "B",
+        "text": "Both Tube 1 and Tube 2 turn intense blue-violet because heating with dilute acid accelerates the formation of starch-iodine complexes."
+      },
+      {
+        "id": "C",
+        "text": "Tube 1 turns deep blue-violet because acid polymerizes glucose into starch; Tube 2 shows no color because boiling water destroys starch."
+      },
+      {
+        "id": "D",
+        "text": "Neither tube develops any color change because boiling water permanently decomposes all iodine molecules regardless of acid presence."
+      }
+    ],
+    "correct_option_id": "A",
+    "explanation": "In this classic experiment (SGK p. 136):\n1. **Tube 1 (Starch paste + dilute $\\text{HCl}$ heated):** The mineral acid acts as a catalyst in the presence of heat ($t^\\circ$), causing complete **hydrolysis** of the starch polymer chains into glucose monosaccharides:\n$$(\\text{C}_6\\text{H}_{10}\\text{O}_5)_n + n\\text{H}_2\\text{O} \\xrightarrow{\\text{HCl}, t^\\circ} n\\text{C}_6\\text{H}_{12}\\text{O}_6$$\nBecause glucose monosaccharides do not react with iodine to produce a colored complex, adding iodine to Tube 1 produces **no blue-violet color** (the solution remains the pale yellowish-brown color of iodine). If tested with Fehling's solution or alkaline $\\text{Cu(OH)}_2$, Tube 1 would form a red precipitate of $\\text{Cu}_2\\text{O}$, confirming the presence of glucose.\n2. **Tube 2 (Starch paste + $\\text{H}_2\\text{O}$ heated without acid):** In the absence of an acid catalyst or enzyme, starch does not undergo hydrolysis in neutral boiling water. The starch polymer chains remain intact. When iodine is added, it forms the characteristic **deep blue-violet** inclusion complex.\nThis experiment definitively proves that starch requires an acid catalyst (or specific enzyme) to undergo hydrolysis into glucose."
+  },
+  {
+    "order_index": 13,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.33,
+    "sectionName": "Sector 4: Mars Outpost • Complete Hydrolysis Stoichiometry & Reaction",
+    "content_markdown": "Inside the Mars Outpost Hydroponic Refinery, Cadet Keithley Lake monitors two automated hydrolysis bioreactors. Tank Alpha breaks down lunar potato starch ($(\\text{C}_6\\text{H}_{10}\\text{O}_5)_n$), while Tank Beta breaks down martian bamboo cellulose ($(\\text{C}_6\\text{H}_{10}\\text{O}_5)_m$). Both reactors operate with dilute acid catalyst ($\\text{H}^+$) at high temperature ($t^\\circ$). Which statement correctly identifies the final product and stoichiometric ratio of complete acid hydrolysis for both biopolymers?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Both biopolymers yield solely fructose ($\\text{C}_6\\text{H}_{12}\\text{O}_6$), requiring $2n$ molecules of water ($\\text{H}_2\\text{O}$) per $n$ polymer units."
+      },
+      {
+        "id": "B",
+        "text": "Both biopolymers yield equal glucose and fructose mixtures, requiring $2n$ molecules of water ($\\text{H}_2\\text{O}$) per $n$ polymer units."
+      },
+      {
+        "id": "C",
+        "text": "Both biopolymers yield solely glucose ($\\text{C}_6\\text{H}_{12}\\text{O}_6$), requiring $n$ molecules of water ($\\text{H}_2\\text{O}$) per $n$ polymer units."
+      },
+      {
+        "id": "D",
+        "text": "Both biopolymers yield solely maltose ($\\text{C}_{12}\\text{H}_{22}\\text{O}_{11}$), requiring $2n$ molecules of water ($\\text{H}_2\\text{O}$) per $n$ polymer units."
+      }
+    ],
+    "correct_option_id": "C",
+    "explanation": "Both starch and cellulose are high-molecular-weight polysaccharides built from repeating anhydroglucose units ($-\\text{C}_6\\text{H}_{10}\\text{O}_5-$). Under complete acid-catalyzed hydrolysis at elevated temperature, all glycosidic bonds are cleaved by water according to the stoichiometric equation:\n$$(\\text{C}_6\\text{H}_{10}\\text{O}_5)_n + n\\text{H}_2\\text{O} \\xrightarrow{\\text{H}^+, t^\\circ} n\\text{C}_6\\text{H}_{12}\\text{O}_6$$\nEvery $n$ units of polysaccharide require exactly $n$ molecules of $\\text{H}_2\\text{O}$ and break down completely into glucose ($\\text{C}_6\\text{H}_{12}\\text{O}_6$) as the sole monomeric product."
+  },
+  {
+    "order_index": 14,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.33,
+    "sectionName": "Sector 4: Mars Outpost • Hydrolysis Product Verification via Reducing Sugar Tests",
+    "content_markdown": "At the Mars Outpost Bio-analytical Wing, Cadet Keithley tests an unhydrolyzed starch suspension (Vial 1) versus an acid-hydrolyzed starch solution that has been neutralized with sodium hydroxide ($\\text{NaOH}$) (Vial 2). Keithley treats aliquots of both vials with Tollens reagent ($\\text{AgNO}_3/\\text{NH}_3$) and Fehling solution under gentle heating. What experimental observations verify the chemical change?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Vial 1 yields no reaction; Vial 2 forms a silver mirror and brick-red $\\text{Cu}_2\\text{O}$ as glucose has a free aldehyde group."
+      },
+      {
+        "id": "B",
+        "text": "Vial 1 forms a shiny silver mirror; Vial 2 yields no reaction because acid destroys all reactive reducing groups during high heating."
+      },
+      {
+        "id": "C",
+        "text": "Both vials form shiny silver mirrors and brick-red precipitates because starch and glucose have identical reducing power in water."
+      },
+      {
+        "id": "D",
+        "text": "Neither vial reacts with either reagent because carbohydrate polymers and monomers cannot reduce metallic cations in basic media."
+      }
+    ],
+    "correct_option_id": "A",
+    "explanation": "Intact, unhydrolyzed starch is a macromolecule in which glucose units are joined via glycosidic linkages, leaving negligible free reducing hemiacetal groups; therefore, Vial 1 cannot reduce Tollens reagent ($\\text{AgNO}_3/\\text{NH}_3$) or Fehling solution. When starch undergoes complete acid hydrolysis, it yields monomeric glucose ($\\text{C}_6\\text{H}_{12}\\text{O}_6$). After neutralization with $\\text{NaOH}$, glucose readily exhibits reducing sugar behavior via its open-chain aldehyde group ($-\\text{CHO}$), reducing $\\text{Ag}^+$ to metallic silver ($\\text{Ag}\\downarrow$, silver mirror) and $\\text{Cu}^{2+}$ to brick-red cuprous oxide ($\\text{Cu}_2\\text{O}\\downarrow$)."
+  },
+  {
+    "order_index": 15,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.33,
+    "sectionName": "Sector 4: Mars Outpost • Human Digestive Physiology & Enzyme Specificity",
+    "content_markdown": "During Mars surface extravehicular activities (EVAs), Cadet Keithley's biometric sensors monitor digestion of space rations containing potato starch versus celery cellulose. Salivary and pancreatic amylase rapidly break down dietary starch into maltose and glucose, yet celery cellulose passes through the human digestive tract chemically unhydrolyzed. Why can humans metabolize starch for energy but fail to digest cellulose?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Salivary amylase breaks cellulose into fructose, but human liver cells cannot convert fructose molecules into usable energy."
+      },
+      {
+        "id": "B",
+        "text": "Stomach hydrochloric acid dissolves all starch molecules instantly, but polymerizes cellulose into tough, inert sheets."
+      },
+      {
+        "id": "C",
+        "text": "Pancreatic enzymes convert cellulose into toxic acids, so intestinal tissue actively expels cellulose before digestion."
+      },
+      {
+        "id": "D",
+        "text": "Human enzymes cleave $\\alpha$-bonds in starch, but lack cellulase to break $\\beta$-glycosidic linkages in cellulose."
+      }
+    ],
+    "correct_option_id": "D",
+    "explanation": "Digestive enzyme catalysis exhibits strict stereochemical specificity. Starch is formed from $\\alpha$-glucose residues connected by $\\alpha$-1,4- and $\\alpha$-1,6-glycosidic bonds, which human salivary and pancreatic amylase enzymes can readily bind and cleave into maltose and glucose. In contrast, cellulose consists of $\\beta$-glucose monomers linked by rigid $\\beta$-1,4-glycosidic bonds. Because the human digestive tract does not secrete cellulase enzymes capable of cleaving $\\beta$-glycosidic linkages, humans cannot digest or hydrolyze cellulose into glucose for metabolic calories."
+  },
+  {
+    "order_index": 16,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.33,
+    "sectionName": "Sector 4: Mars Outpost • Nutritional Role of Dietary Fiber",
+    "content_markdown": "In the Mars Outpost Life-Support Nutrition Console, the dietary synthesizer warns Cadet Keithley that although pure cellulose provides $0\\text{ kcal}$ of metabolizable energy to astronauts, completely removing cellulose (plant fiber) from expedition meals triggers digestive health disorders. What vital physiological role does indigestible cellulose (dietary fiber/roughage) perform in the human digestive system?",
+    "options": [
+      {
+        "id": "A",
+        "text": "It dissolves directly in the bloodstream to regulate red blood cell count and synthesize complex peptide hormones."
+      },
+      {
+        "id": "B",
+        "text": "It adds bulk to stimulate intestinal peristalsis, prevents constipation, and promotes beneficial gut microflora."
+      },
+      {
+        "id": "C",
+        "text": "It undergoes anaerobic respiration in muscle fibers to generate extra ATP energy during high-stress EVA maneuvers."
+      },
+      {
+        "id": "D",
+        "text": "It acts as an inorganic buffer that neutralizes all bile acids and eliminates excess electrolytes from the kidneys."
+      }
+    ],
+    "correct_option_id": "B",
+    "explanation": "Although cellulose provides zero direct caloric energy to humans due to the lack of endogenous cellulase, it serves as an indispensable dietary component known as dietary fiber or roughage. In the intestinal tract, insoluble cellulose fibers absorb water, provide mechanical bulk to digestate, mechanically stimulate intestinal wall smooth-muscle contractions (peristalsis), prevent constipation, and support healthy gut microbiota, thereby maintaining optimal metabolic and digestive health."
+  },
+  {
+    "order_index": 17,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.33,
+    "sectionName": "Sector 5: Jupiter Station • Symbiotic Cellulose Fermentation in Nature",
+    "content_markdown": "While inspecting the closed-loop ecological life-support deck on Jupiter Station, Cadet Keithley observes that herbivorous ruminants (such as cattle) and wood-recycling insects (such as termites) thrive on diets composed almost entirely of fibrous cellulose. How are ruminants and termites able to extract nutritional energy from cellulose when they cannot synthesize cellulase on their own?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Their digestive tracts host symbiotic microorganisms whose secreted cellulase enzymes cleave cellulose into glucose."
+      },
+      {
+        "id": "B",
+        "text": "Their stomachs maintain extreme internal temperatures of $200^\\circ\\text{C}$ to break bonds without biological enzymes."
+      },
+      {
+        "id": "C",
+        "text": "Their salivary glands produce high concentrations of nitric acid to dissolve tough plant cell walls before swallowing."
+      },
+      {
+        "id": "D",
+        "text": "Their digestive cells absorb intact cellulose polymers directly through cell membranes without hydrolysis reactions."
+      }
+    ],
+    "correct_option_id": "A",
+    "explanation": "Neither ruminant mammals (like cows, sheep) nor termites produce cellulase enzymes directly from their own animal genome. Instead, their digestive systems (such as the specialized rumen compartment in cattle and the hindgut in termites) house rich communities of symbiotic anaerobic bacteria, protozoa, and fungi. These symbiotic microorganisms secrete cellulase enzymes that hydrolyze the $\\beta$-glycosidic bonds of cellulose into glucose, which is then fermented into volatile fatty acids and absorbed by the host animal as a rich source of metabolic energy."
+  },
+  {
+    "order_index": 18,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.33,
+    "sectionName": "Sector 5: Jupiter Station • Industrial Processing & Applications of Cellulose",
+    "content_markdown": "Inside Jupiter Station's Advanced Materials Fabrication Bay, Cadet Keithley reviews the manufacturing manifest for refined cellulose harvested from hydroponic cotton, wood pulp, and bamboo fibers. Which industrial application portfolio accurately pairs raw cellulose sources with their technological and daily-life products?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Synthesizing table sugar, formulating instant adhesive food paste, and fermenting beer from raw timber wood logs."
+      },
+      {
+        "id": "B",
+        "text": "Extracting edible cooking oils, vulcanizing synthetic vehicle tires, and producing high-octane rocket kerosene fuel."
+      },
+      {
+        "id": "C",
+        "text": "Manufacturing paper from wood pulp, spinning cotton into fabric, and producing rayon or cellulose acetate textiles."
+      },
+      {
+        "id": "D",
+        "text": "Smelting aluminum metal alloys, vulcanizing synthetic rubber tubing, and generating electrical battery electrolytes."
+      }
+    ],
+    "correct_option_id": "C",
+    "explanation": "Cellulose ($(\\text{C}_6\\text{H}_{10}\\text{O}_5)_m$) is a premier industrial raw material due to its high tensile strength, fibrous structure, and chemical versatility. Major industrial applications include: (1) wood pulp and bamboo processing for papermaking and construction materials, (2) cotton fiber harvesting for spinning natural textile yarns and weaving clothing, and (3) chemical esterification/etherification to manufacture artificial fibers and plastics such as cellulose acetate, rayon (viscose/artificial silk), and nitrocellulose."
+  },
+  {
+    "order_index": 19,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.33,
+    "sectionName": "Sector 5: Jupiter Station • Industrial & Culinary Applications of Starch",
+    "content_markdown": "Aboard the **Jupiter Station Agro-Chemical Module**, Astronaut Cadet Keithley logs the multi-sector resource allocation of refined plant starch $(\\text{C}_6\\text{H}_{10}\\text{O}_5)_n$ extracted from aeroponic crop yields.\n\nWhich statement accurately describes the major culinary, industrial, and biochemical applications of starch in orbital and planetary facilities?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Starch serves as structural fiber in spacecraft hulls, forms metallic alloys with titanium, and is refined into synthetic rocket fuel."
+      },
+      {
+        "id": "B",
+        "text": "Starch is deployed exclusively as an electrical insulator in wire harnesses and as a non-reactive coolant in cryogenic reactor engines."
+      },
+      {
+        "id": "C",
+        "text": "Starch functions as a dietary staple, culinary thickener, paper adhesive paste, and feedstock for glucose syrup and bioplastics."
+      },
+      {
+        "id": "D",
+        "text": "Starch acts as an inert fire-retardant gas, provides waterproof sealing for airlocks, and serves as an optical glass coating material."
+      }
+    ],
+    "correct_option_id": "C",
+    "explanation": "**Starch $(\\text{C}_6\\text{H}_{10}\\text{O}_5)_n$** is an essential carbohydrate with diverse applications across food science, biotechnology, and manufacturing:\n\n1. **Human Nutrition & Food Sector:** It is the primary dietary energy source for humans (staple foods such as rice, corn, potatoes, wheat). When heated with water, its granules absorb liquid and swell to form a viscous colloidal suspension (gelatinization), making it an indispensable **thickening agent** in sauces, soups, and processed foods.\n2. **Adhesives & Packaging:** Prepared starch paste has strong bonding properties on cellulose-based materials, serving as a primary non-toxic **adhesive** for paper cartons, cardboard, and parcel packaging.\n3. **Chemical & Biotechnology Feedstock:** Acid- or enzyme-catalyzed partial or complete hydrolysis yields dextrins, maltose, and **glucose syrup** (widely used in confectionery and pharmaceuticals). Furthermore, fermentation of starch hydrolysates yields bio-ethanol and lactic acid for producing biodegradable polylactic acid (**bioplastics**).\n\n*Distractor Analysis:*\n* **A, B, and D** are fictitious non-chemical claims: starch has no metallic, electrical insulating, cryogenic coolant, or structural hull capabilities (structural framework in plants is provided by cellulose, not starch)."
+  },
+  {
+    "order_index": 20,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.33,
+    "sectionName": "Sector 5: Jupiter Station • Analytical Laboratory Protocol Precautions",
+    "content_markdown": "In the **Jupiter Station Analytical Lab**, Cadet Keithley conducts acid-catalyzed hydrolysis of a starch sample using dilute sulfuric acid ($\\text{H}_2\\text{SO}_4$) at elevated temperature. Before adding Fehling's solution or Tollens' reagent to verify the presence of glucose, Keithley must add dilute sodium hydroxide ($\\text{NaOH}$) until the reaction mixture is neutral or slightly alkaline.\n\nWhy is this alkali neutralization step strictly required before performing the reduction tests?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Neutralization cools down the mixture to sub-zero temperatures to prevent atmospheric oxygen from oxidizing the aldehyde functional group."
+      },
+      {
+        "id": "B",
+        "text": "Acid neutralizes the alkaline test reagents, preventing the reduction of silver ions or copper(II) ions into visible precipitates."
+      },
+      {
+        "id": "C",
+        "text": "Sodium hydroxide converts unreacted polysaccharides into insoluble crystalline salts that catalyze the silver mirror crystallization."
+      },
+      {
+        "id": "D",
+        "text": "The alkali transforms the glucose into cyclic sucrose molecules that selectively precipitate as a bright brick-red copper complex."
+      }
+    ],
+    "correct_option_id": "B",
+    "explanation": "In analytical carbohydrate chemistry, the **neutralization of the acidic hydrolysate** is a mandatory prerequisite before carrying out Tollens' (silver mirror) or Fehling's / Benedict's tests:\n\n1. **Chemical Origin of the Acid:** The initial hydrolysis of starch requires an acid catalyst:\n$$(\\text{C}_6\\text{H}_{10}\\text{O}_5)_n + n\\text{H}_2\\text{O} \\xrightarrow{\\text{H}_2\\text{SO}_4, t^\\circ} n\\text{C}_6\\text{H}_{12}\\text{O}_6$$\n2. **Alkaline Nature of the Reagents:**\n   * **Tollens' reagent** consists of diamminesilver(I) hydroxide, $[\\text{Ag}(\\text{NH}_3)_2]\\text{OH}$. If residual acid is present, $\\text{H}^+$ protonates free ammonia ($\\text{NH}_3 + \\text{H}^+ \\to \\text{NH}_4^+$), destabilizing the complex and causing premature precipitation of silver oxide or preventing $\\text{Ag}^+$ reduction.\n   * **Fehling's reagent** requires an alkaline medium ($\\text{OH}^-$ ions) to form soluble bistartratocuprate(II) complexes and subsequently reduce $\\text{Cu}^{2+}$ to insoluble brick-red copper(I) oxide ($\\text{Cu}_2\\text{O}\\downarrow$):\n   $$\\text{R-CHO} + 2\\text{Cu}^{2+} + 4\\text{OH}^- \\xrightarrow{t^\\circ} \\text{R-COOH} + \\text{Cu}_2\\text{O}\\downarrow + 2\\text{H}_2\\text{O}$$\n   If unneutralized $\\text{H}_2\\text{SO}_4$ remains, it instantly consumes the hydroxide ions ($\\text{H}^+ + \\text{OH}^- \\to \\text{H}_2\\text{O}$), making the solution acidic and completely inhibiting the formation of $\\text{Cu}_2\\text{O}$.\n3. **Role of $\\text{NaOH}$:** Adding $\\text{NaOH}$ neutralizes the acid catalyst:\n$$\\text{H}_2\\text{SO}_4 + 2\\text{NaOH} \\to \\text{Na}_2\\text{SO}_4 + 2\\text{H}_2\\text{O}$$\nThis establishes the necessary neutral or alkaline $\\text{pH}$ required for the redox reaction to proceed."
+  },
+  {
+    "order_index": 21,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.34,
+    "sectionName": "Sector 6: Saturn Rings • Quantitative: Hydrolysis of Pure Starch with 100% Yield",
+    "content_markdown": "At the **Saturn Rings Orbital Processing Depot**, Cadet Keithley introduces $486.0\\text{ g}$ of pure, dry starch $(\\text{C}_6\\text{H}_{10}\\text{O}_5)_n$ into an automated catalytic hydrolyzer. The reaction achieves a $100\\%$ theoretical yield according to the stoichiometric equation:\n\n$$(\\text{C}_6\\text{H}_{10}\\text{O}_5)_n + n\\text{H}_2\\text{O} \\xrightarrow{\\text{Acid}, t^\\circ} n\\text{C}_6\\text{H}_{12}\\text{O}_6$$\n\nGiven the molar masses $M_{\\text{unit}} = 162.0\\text{ g/mol}$, $M_{\\text{water}} = 18.0\\text{ g/mol}$, and $M_{\\text{glucose}} = 180.0\\text{ g/mol}$, what are the mass of glucose produced and the mass of water consumed in this complete hydrolysis?",
+    "options": [
+      {
+        "id": "A",
+        "text": "$m_{\\text{glucose}} = 540.0\\text{ g}$ and $m_{\\text{water}} = 54.0\\text{ g}$"
+      },
+      {
+        "id": "B",
+        "text": "$m_{\\text{glucose}} = 486.0\\text{ g}$ and $m_{\\text{water}} = 108.0\\text{ g}$"
+      },
+      {
+        "id": "C",
+        "text": "$m_{\\text{glucose}} = 437.4\\text{ g}$ and $m_{\\text{water}} = 54.00\\text{ g}$"
+      },
+      {
+        "id": "D",
+        "text": "$m_{\\text{glucose}} = 540.0\\text{ g}$ and $m_{\\text{water}} = 27.00\\text{ g}$"
+      }
+    ],
+    "correct_option_id": "A",
+    "explanation": "**Step-by-Step Stoichiometric Derivation:**\n\n1. **Calculate the molar quantity of starch repeating units ($-\\text{C}_6\\text{H}_{10}\\text{O}_5-$):**\n$$n_{\\text{unit}} = \\frac{m_{\\text{starch}}}{M_{\\text{unit}}} = \\frac{486.0\\text{ g}}{162.0\\text{ g/mol}} = 3.00\\text{ mol}$$\n\n2. **Determine water consumption:**\nFrom the balanced hydrolysis equation, 1 mole of repeating unit consumes exactly 1 mole of water:\n$$n_{\\text{water}} = n_{\\text{unit}} = 3.00\\text{ mol}$$\n$$m_{\\text{water}} = n_{\\text{water}} \\times M_{\\text{water}} = 3.00\\text{ mol} \\times 18.0\\text{ g/mol} = 54.0\\text{ g}$$\n\n3. **Determine glucose production:**\nFrom stoichiometry, 1 mole of repeating unit produces 1 mole of glucose:\n$$n_{\\text{glucose}} = n_{\\text{unit}} = 3.00\\text{ mol}$$\n$$m_{\\text{glucose}} = n_{\\text{glucose}} \\times M_{\\text{glucose}} = 3.00\\text{ mol} \\times 180.0\\text{ g/mol} = 540.0\\text{ g}$$\n\n4. **Verification via Law of Conservation of Mass:**\n$$m_{\\text{reactants}} = m_{\\text{starch}} + m_{\\text{water}} = 486.0\\text{ g} + 54.0\\text{ g} = 540.0\\text{ g}$$\n$$m_{\\text{products}} = m_{\\text{glucose}} = 540.0\\text{ g}$$\nSince $m_{\\text{reactants}} = m_{\\text{products}} = 540.0\\text{ g}$, the conservation of mass is satisfied."
+  },
+  {
+    "order_index": 22,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.34,
+    "sectionName": "Sector 6: Saturn Rings • Quantitative: Hydrolysis of Pure Cellulose with Fractional Yield",
+    "content_markdown": "In the **Saturn Rings Biopolymer Refinery**, Cadet Keithley processes $162.0\\text{ g}$ of pure cellulose fiber $(\\text{C}_6\\text{H}_{10}\\text{O}_5)_m$ using a pressurized enzyme reactor to synthesize nutrient glucose for the orbital crew. Laboratory sensors indicate that the hydrolysis reaction proceeds with an efficiency of $H = 85.0\\%$.\n\n$$(\\text{C}_6\\text{H}_{10}\\text{O}_5)_m + m\\text{H}_2\\text{O} \\xrightarrow{\\text{Enzyme}, t^\\circ} m\\text{C}_6\\text{H}_{12}\\text{O}_6$$\n\nTaking $M_{\\text{unit}} = 162.0\\text{ g/mol}$ and $M_{\\text{glucose}} = 180.0\\text{ g/mol}$, what is the actual mass of pure glucose obtained?",
+    "options": [
+      {
+        "id": "A",
+        "text": "$180.00\\text{ g}$"
+      },
+      {
+        "id": "B",
+        "text": "$162.00\\text{ g}$"
+      },
+      {
+        "id": "C",
+        "text": "$137.70\\text{ g}$"
+      },
+      {
+        "id": "D",
+        "text": "$153.0\\text{ g}$"
+      }
+    ],
+    "correct_option_id": "D",
+    "explanation": "**Step-by-Step Mathematical Derivation:**\n\n1. **Calculate the amount of substance of cellulose repeating units:**\n$$n_{\\text{unit}} = \\frac{m_{\\text{cellulose}}}{M_{\\text{unit}}} = \\frac{162.0\\text{ g}}{162.0\\text{ g/mol}} = 1.00\\text{ mol}$$\n\n2. **Calculate the theoretical mass of glucose ($100\\%$ conversion):**\nEach repeating unit corresponds to $1\\text{ mol}$ of glucose:\n$$n_{\\text{glucose, theoretical}} = n_{\\text{unit}} = 1.00\\text{ mol}$$\n$$m_{\\text{glucose, theoretical}} = 1.00\\text{ mol} \\times 180.0\\text{ g/mol} = 180.0\\text{ g}$$\n\n3. **Calculate the actual mass of glucose accounting for reaction yield $H = 85.0\\%$:**\n$$m_{\\text{glucose, actual}} = m_{\\text{glucose, theoretical}} \\times \\frac{H}{100\\%}$$\n$$m_{\\text{glucose, actual}} = 180.0\\text{ g} \\times 0.850 = 153.0\\text{ g}$$\n\n*Analysis of Distractors:*\n* **A ($180.00\\text{ g}$):** Theoretical yield assuming $100\\%$ completion without applying the $85.0\\%$ yield factor.\n* **B ($162.00\\text{ g}$):** Mistaken assumption that mass of product equals starting polymer mass.\n* **C ($137.70\\text{ g}$):** Incorrectly taking $85.0\\%$ of the cellulose starting mass ($162.0 \\times 0.850 = 137.7\\text{ g}$), omitting the chemical addition of water ($+18\\text{ g/mol}$)."
+  },
+  {
+    "order_index": 23,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.34,
+    "sectionName": "Sector 6: Saturn Rings • Quantitative: Starch Sample with Purity & Yield",
+    "content_markdown": "During life-support supply analysis in the **Saturn Rings Sector**, Cadet Keithley tests a $25.0\\text{ g}$ sample of dehydrated orbital potato flour. Instrumental assay confirms that the flour contains $81.0\\%$ pure starch by mass, with the remainder being inert mineral ash and moisture. \n\nIf the sample is subjected to acid hydrolysis with an overall process efficiency of $H = 80.0\\%$, what mass of glucose is recovered? ($M_{\\text{unit}} = 162.0\\text{ g/mol}$, $M_{\\text{glucose}} = 180.0\\text{ g/mol}$)",
+    "options": [
+      {
+        "id": "A",
+        "text": "$22.50\\text{ g}$"
+      },
+      {
+        "id": "B",
+        "text": "$18.0\\text{ g}$"
+      },
+      {
+        "id": "C",
+        "text": "$16.20\\text{ g}$"
+      },
+      {
+        "id": "D",
+        "text": "$20.25\\text{ g}$"
+      }
+    ],
+    "correct_option_id": "B",
+    "explanation": "**Step-by-Step Quantitative Analysis:**\n\n1. **Calculate the mass of pure starch in the potato flour sample:**\n$$m_{\\text{pure starch}} = m_{\\text{sample}} \\times \\frac{\\text{Purity}}{100\\%} = 25.0\\text{ g} \\times 0.810 = 20.25\\text{ g}$$\n\n2. **Calculate the moles of starch repeating units ($-\\text{C}_6\\text{H}_{10}\\text{O}_5-$):**\n$$n_{\\text{unit}} = \\frac{m_{\\text{pure starch}}}{M_{\\text{unit}}} = \\frac{20.25\\text{ g}}{162.0\\text{ g/mol}} = 0.125\\text{ mol}$$\n\n3. **Calculate the theoretical mass of glucose formed ($100\\%$ yield):**\n$$m_{\\text{glucose, theo}} = n_{\\text{unit}} \\times M_{\\text{glucose}} = 0.125\\text{ mol} \\times 180.0\\text{ g/mol} = 22.50\\text{ g}$$\n\n4. **Calculate the actual mass of glucose recovered ($H = 80.0\\%$):**\n$$m_{\\text{glucose, actual}} = m_{\\text{glucose, theo}} \\times \\frac{H}{100\\%} = 22.50\\text{ g} \\times 0.800 = 18.0\\text{ g}$$\n\nAlternatively, combining purity and yield in a single formula:\n$$m_{\\text{glucose}} = m_{\\text{sample}} \\times \\frac{\\text{Purity}}{100\\%} \\times \\frac{180}{162} \\times \\frac{H}{100\\%}$$\n$$m_{\\text{glucose}} = 25.0 \\times 0.810 \\times \\frac{180}{162} \\times 0.800 = 20.25 \\times \\frac{10}{9} \\times 0.800 = 22.50 \\times 0.800 = 18.0\\text{ g}$$\n\n*Distractor Analysis:*\n* **A ($22.50\\text{ g}$):** Omission of the reaction efficiency factor ($H = 80.0\\%$).\n* **C ($16.20\\text{ g}$):** Direct calculation $20.25 \\times 0.800$, forgetting the stoichiometric mass gain from water addition (factor $\\frac{180}{162} = \\frac{10}{9}$).\n* **D ($20.25\\text{ g}$):** Mass of pure starch present in the initial flour sample."
+  },
+  {
+    "order_index": 24,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.34,
+    "sectionName": "Sector 6: Saturn Rings • Quantitative: Reverse Calculation for Required Cellulose",
+    "content_markdown": "The closed-loop life-support bio-synthesizer in the **Saturn Rings Research Facility** must generate exactly $450.0\\text{ g}$ of pure crystalline glucose to replenish emergency metabolic nutrient reserves. The system produces glucose via acid hydrolysis of pure agricultural cellulose fibers $(\\text{C}_6\\text{H}_{10}\\text{O}_5)_m$.\n\nIf the operational conversion efficiency of the hydrolysis reactor is $H = 75.0\\%$, what initial mass of pure cellulose must Cadet Keithley feed into the reactor? ($M_{\\text{unit}} = 162.0\\text{ g/mol}$, $M_{\\text{glucose}} = 180.0\\text{ g/mol}$)",
+    "options": [
+      {
+        "id": "A",
+        "text": "$405.0\\text{ g}$"
+      },
+      {
+        "id": "B",
+        "text": "$303.75\\text{ g}$"
+      },
+      {
+        "id": "C",
+        "text": "$540.0\\text{ g}$"
+      },
+      {
+        "id": "D",
+        "text": "$600.0\\text{ g}$"
+      }
+    ],
+    "correct_option_id": "C",
+    "explanation": "**Step-by-Step Reverse Stoichiometric Derivation:**\n\n1. **Calculate the target amount of substance of glucose:**\n$$n_{\\text{glucose}} = \\frac{m_{\\text{glucose}}}{M_{\\text{glucose}}} = \\frac{450.0\\text{ g}}{180.0\\text{ g/mol}} = 2.50\\text{ mol}$$\n\n2. **Account for the conversion efficiency ($H = 75.0\\%$):**\nBecause each mole of repeating unit produces one mole of glucose, the actual moles of glucose obtained relate to the starting moles of cellulose units by:\n$$n_{\\text{glucose}} = n_{\\text{unit, reacted}} = n_{\\text{unit, initial}} \\times \\frac{H}{100\\%}$$\n$$\\implies n_{\\text{unit, initial}} = \\frac{n_{\\text{glucose}}}{H / 100\\%} = \\frac{2.50\\text{ mol}}{0.750} = \\frac{2.50}{3/4} = \\frac{10.0}{3}\\text{ mol} \\approx 3.333\\text{ mol}$$\n\n3. **Calculate the required initial mass of pure cellulose:**\n$$m_{\\text{cellulose}} = n_{\\text{unit, initial}} \\times M_{\\text{unit}}$$\n$$m_{\\text{cellulose}} = \\frac{10.0}{3}\\text{ mol} \\times 162.0\\text{ g/mol} = 10.0 \\times 54.0\\text{ g} = 540.0\\text{ g}$$\n\nAlternatively, using direct dimensional formula:\n$$m_{\\text{cellulose}} = m_{\\text{glucose}} \\times \\frac{M_{\\text{unit}}}{M_{\\text{glucose}}} \\times \\frac{100\\%}{H}$$\n$$m_{\\text{cellulose}} = 450.0\\text{ g} \\times \\frac{162}{180} \\times \\frac{1}{0.750} = 405.0\\text{ g} \\times \\frac{4}{3} = 540.0\\text{ g}$$\n\n*Distractor Analysis:*\n* **A ($405.0\\text{ g}$):** Direct calculation $450.0 \\times \\frac{162}{180}$, assuming an ideal $100\\%$ yield without accounting for the $75.0\\%$ efficiency.\n* **B ($303.75\\text{ g}$):** Erroneously multiplying by efficiency instead of dividing ($405.0 \\times 0.750 = 303.75\\text{ g}$).\n* **D ($600.0\\text{ g}$):** Calculating $450.0 / 0.750 = 600.0\\text{ g}$, omitting the molar mass conversion factor $\\frac{162}{180}$ between polymer unit and glucose."
+  },
+  {
+    "order_index": 25,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.34,
+    "sectionName": "Sector 7: Uranus Deep Space • Quantitative: Wood Pulp Cellulose Hydrolysis with Purity %",
+    "content_markdown": "At the **Uranus Deep Space Outpost**, Astronaut Cadet Keithley inspects a cargo container holding an $810.0\\text{ g}$ sample of orbital timber chips to synthesize nutrient glucose. Chemical analysis confirms the sample contains $60.0\\%$ pure cellulose by mass, with the remainder consisting of inert orbital dust and lignin. If acid-catalyzed hydrolysis of the cellulose proceeds with an efficiency of $H = 80.0\\%$, what mass of pure glucose is recovered? (Given: $M_{\\text{cellulose unit}} = 162\\text{ g/mol}$, $M_{\\text{glucose}} = 180\\text{ g/mol}$.)",
+    "options": [
+      {
+        "id": "A",
+        "text": "$388.8\\text{ g}$"
+      },
+      {
+        "id": "B",
+        "text": "$540.0\\text{ g}$"
+      },
+      {
+        "id": "C",
+        "text": "$432.0\\text{ g}$"
+      },
+      {
+        "id": "D",
+        "text": "$720.0\\text{ g}$"
+      }
+    ],
+    "correct_option_id": "C",
+    "explanation": "**Step 1 — Calculate mass of pure cellulose in the timber sample:**\n$$m_{\\text{cellulose}} = 810.0 \\times \\frac{60.0}{100} = 486.0\\text{ g}$$\n\n**Step 2 — Determine moles of cellulose repeating units ($\\text{C}_6\\text{H}_{10}\\text{O}_5$):**\n$$n_{\\text{unit}} = \\frac{486.0}{162} = 3.00\\text{ mol}$$\n\n**Step 3 — Write the hydrolysis equation:**\n$$(\\text{C}_6\\text{H}_{10}\\text{O}_5)_n + n\\text{H}_2\\text{O} \\xrightarrow{\\text{H}^+, t^\\circ} n\\text{C}_6\\text{H}_{12}\\text{O}_6$$\nTheoretical yield of glucose ($100\\%$ efficiency):\n$$n_{\\text{glucose, theo}} = 3.00\\text{ mol} \\implies m_{\\text{glucose, theo}} = 3.00 \\times 180 = 540.0\\text{ g}$$\n\n**Step 4 — Calculate actual mass recovered at $H = 80.0\\%$:**\n$$m_{\\text{glucose, actual}} = 540.0 \\times \\frac{80.0}{100} = 432.0\\text{ g}$$"
+  },
+  {
+    "order_index": 26,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.34,
+    "sectionName": "Sector 7: Uranus Deep Space • Quantitative: Two-Step Starch-to-Bioethanol Synthesis",
+    "content_markdown": "Aboard the **Uranus Deep Space Bio-Refinery**, Astronaut Cadet Keithley converts $486.0\\text{ g}$ of pure starch into bio-ethanol ($\\text{C}_2\\text{H}_5\\text{OH}$) for maneuvering thruster propellant via a two-step sequence: acid hydrolysis to glucose followed by yeast fermentation:\n$$(\\text{C}_6\\text{H}_{10}\\text{O}_5)_n + n\\text{H}_2\\text{O} \\xrightarrow{\\text{H}^+, t^\\circ} n\\text{C}_6\\text{H}_{12}\\text{O}_6$$\n$$\\text{C}_6\\text{H}_{12}\\text{O}_6 \\xrightarrow{\\text{yeast, } 30^\\circ\\text{C}-35^\\circ\\text{C}} 2\\text{C}_2\\text{H}_5\\text{OH} + 2\\text{CO}_2\\uparrow$$\nIf the overall two-step process achieves a net efficiency of $H = 80.0\\%$, calculate the mass of pure ethanol collected. (Given: $M_{\\text{starch unit}} = 162\\text{ g/mol}$, $M_{\\text{ethanol}} = 46\\text{ g/mol}$.)",
+    "options": [
+      {
+        "id": "A",
+        "text": "$220.8\\text{ g}$"
+      },
+      {
+        "id": "B",
+        "text": "$276.0\\text{ g}$"
+      },
+      {
+        "id": "C",
+        "text": "$110.4\\text{ g}$"
+      },
+      {
+        "id": "D",
+        "text": "$138.0\\text{ g}$"
+      }
+    ],
+    "correct_option_id": "A",
+    "explanation": "**Step 1 — Calculate moles of starch repeating units reacted:**\n$$n_{\\text{unit}} = \\frac{486.0}{162} = 3.00\\text{ mol}$$\n\n**Step 2 — Stoichiometry of the two-step synthesis:**\n$$1\\text{ mol } (\\text{C}_6\\text{H}_{10}\\text{O}_5) \\to 1\\text{ mol } \\text{C}_6\\text{H}_{12}\\text{O}_6 \\to 2\\text{ mol } \\text{C}_2\\text{H}_5\\text{OH}$$\nTheoretical moles of ethanol produced ($100\\%$ yield):\n$$n_{\\text{ethanol, theo}} = 2 \\times 3.00 = 6.00\\text{ mol}$$\n\n**Step 3 — Apply the overall process efficiency ($H = 80.0\\%$):**\n$$n_{\\text{ethanol, actual}} = 6.00 \\times 0.80 = 4.80\\text{ mol}$$\n\n**Step 4 — Calculate mass of pure ethanol obtained:**\n$$m_{\\text{ethanol}} = 4.80 \\times 46 = 220.8\\text{ g}$$"
+  },
+  {
+    "order_index": 27,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.34,
+    "sectionName": "Sector 7: Uranus Deep Space • Quantitative: Evolved CO2 Gas Volume from Corn Starch Fermentation",
+    "content_markdown": "In the **Uranus Deep Space Agricultural Vault**, Cadet Keithley oversees the bioconversion of $324.0\\text{ g}$ of pure corn starch to generate carbon dioxide gas for closed-loop botanical pressurization. The starch undergoes two successive reactions: acid-catalyzed hydrolysis with an efficiency of $H_1 = 85.0\\%$, followed by enzymatic yeast fermentation with an efficiency of $H_2 = 90.0\\%$. Calculate the total volume of $\\text{CO}_2$ gas evolved at standard conditions ($25^\\circ\\text{C}, 1\\text{ bar}$, where the molar gas volume is $V_{\\text{mol}} = 24.79\\text{ L/mol}$). (Given: $M_{\\text{starch unit}} = 162\\text{ g/mol}$.)",
+    "options": [
+      {
+        "id": "A",
+        "text": "$37.93\\text{ L}$"
+      },
+      {
+        "id": "B",
+        "text": "$84.29\\text{ L}$"
+      },
+      {
+        "id": "C",
+        "text": "$99.16\\text{ L}$"
+      },
+      {
+        "id": "D",
+        "text": "$75.86\\text{ L}$"
+      }
+    ],
+    "correct_option_id": "D",
+    "explanation": "**Step 1 — Calculate moles of starch repeating units:**\n$$n_{\\text{unit}} = \\frac{324.0}{162} = 2.00\\text{ mol}$$\n\n**Step 2 — Determine theoretical moles of $\\text{CO}_2$:**\nEach $\\text{C}_6\\text{H}_{10}\\text{O}_5$ unit yields $1\\text{ mol }\\text{C}_6\\text{H}_{12}\\text{O}_6$, which ferments into $2\\text{ mol }\\text{CO}_2$:\n$$n_{\\text{CO}_2, \\text{theo}} = 2 \\times 2.00 = 4.00\\text{ mol}$$\n\n**Step 3 — Apply multi-step reaction efficiencies ($H_1 = 85.0\\%, H_2 = 90.0\\%$):**\n$$n_{\\text{CO}_2, \\text{actual}} = 4.00 \\times 0.85 \\times 0.90 = 3.06\\text{ mol}$$\n\n**Step 4 — Calculate gas volume at standard conditions ($25^\\circ\\text{C}, 1\\text{ bar}$):**\n$$V_{\\text{CO}_2} = 3.06 \\times 24.79 = 75.8574\\text{ L} \\approx 75.86\\text{ L}$$"
+  },
+  {
+    "order_index": 28,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.34,
+    "sectionName": "Sector 8: Neptune Frontier • Quantitative: Starch Hydrolysis + Silver Mirror Tollens Assay",
+    "content_markdown": "Arriving at the **Neptune Frontier Science Outpost**, Astronaut Cadet Keithley calibrates an optical infrared telemetry reflector by depositing a nanoscale silver mirror coating. Keithley begins by hydrolyzing $162.0\\text{ g}$ of pure starch in dilute mineral acid with an efficiency of $H = 85.0\\%$. After neutralizing the excess acid completely with sodium bicarbonate, the resulting glucose solution is treated with an excess of ammoniacal silver nitrate solution (Tollens' reagent, $\\text{AgNO}_3/\\text{NH}_3$). Calculate the mass of metallic silver ($\\text{Ag}$) precipitated onto the reflector surface. (Given: $M_{\\text{starch unit}} = 162\\text{ g/mol}$, $M_{\\text{Ag}} = 108\\text{ g/mol}$.)",
+    "options": [
+      {
+        "id": "A",
+        "text": "$91.80\\text{ g}$"
+      },
+      {
+        "id": "B",
+        "text": "$183.6\\text{ g}$"
+      },
+      {
+        "id": "C",
+        "text": "$216.0\\text{ g}$"
+      },
+      {
+        "id": "D",
+        "text": "$108.0\\text{ g}$"
+      }
+    ],
+    "correct_option_id": "B",
+    "explanation": "**Step 1 — Calculate moles of starch repeating units:**\n$$n_{\\text{unit}} = \\frac{162.0}{162} = 1.00\\text{ mol}$$\n\n**Step 2 — Calculate actual moles of glucose recovered ($H = 85.0\\%$):**\n$$n_{\\text{glucose}} = 1.00 \\times 0.85 = 0.85\\text{ mol}$$\n\n**Step 3 — Stoichiometry of Tollens' silver mirror reduction:**\nEach glucose molecule contains an aldehyde group ($-{\\text{CHO}}$) that reduces $2\\text{ Ag}^+$ ions to $2\\text{ mol Ag}$ metal:\n$$\\text{C}_6\\text{H}_{12}\\text{O}_6 + 2\\text{Ag}^+ + 2\\text{OH}^- \\xrightarrow{\\text{NH}_3, t^\\circ} \\text{C}_6\\text{H}_{12}\\text{O}_7 + 2\\text{Ag}\\downarrow + \\text{H}_2\\text{O}$$\n$$n_{\\text{Ag}} = 2 \\times n_{\\text{glucose}} = 2 \\times 0.85 = 1.70\\text{ mol}$$\n\n**Step 4 — Calculate mass of precipitated silver:**\n$$m_{\\text{Ag}} = 1.70 \\times 108 = 183.6\\text{ g}$$"
+  },
+  {
+    "order_index": 29,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.34,
+    "sectionName": "Sector 8: Neptune Frontier • Quantitative: Reverse Agricultural Crop Mass for Bio-Ethanol",
+    "content_markdown": "The **Neptune Frontier Orbital Propulsion Depot** issues an urgent requisition for $460.0\\text{ g}$ of pure ethanol ($\\text{C}_2\\text{H}_5\\text{OH}$) to refuel automated recon probes. Astronaut Cadet Keithley must extract this fuel from stored raw cassava flour containing $80.0\\%$ starch by mass (the remainder being non-reactive plant moisture and cellular matter). The production pipeline operates in two stages: acid hydrolysis with an efficiency of $H_1 = 80.0\\%$, followed by yeast fermentation with an efficiency of $H_2 = 75.0\\%$. Calculate the mass of raw cassava flour required to fulfill this requisition. (Given: $M_{\\text{starch unit}} = 162\\text{ g/mol}$, $M_{\\text{ethanol}} = 46\\text{ g/mol}$.)",
+    "options": [
+      {
+        "id": "A",
+        "text": "$1.01\\text{ kg}$"
+      },
+      {
+        "id": "B",
+        "text": "$1.35\\text{ kg}$"
+      },
+      {
+        "id": "C",
+        "text": "$1.69\\text{ kg}$"
+      },
+      {
+        "id": "D",
+        "text": "$3.38\\text{ kg}$"
+      }
+    ],
+    "correct_option_id": "C",
+    "explanation": "**Step 1 — Calculate moles of ethanol required:**\n$$n_{\\text{ethanol}} = \\frac{460.0}{46} = 10.0\\text{ mol}$$\n\n**Step 2 — Stoichiometric requirement of starch repeating units ($1:2$ ratio):**\n$$n_{\\text{unit, theo}} = \\frac{10.0}{2} = 5.00\\text{ mol}$$\n\n**Step 3 — Compute overall two-stage process efficiency:**\n$$H_{\\text{total}} = H_1 \\times H_2 = 0.80 \\times 0.75 = 0.60\\quad (60.0\\%)$$\n\n**Step 4 — Calculate actual moles and mass of pure starch needed:**\n$$n_{\\text{unit, actual}} = \\frac{5.00}{0.60} = \\frac{25}{3} \\approx 8.333\\text{ mol}$$\n$$m_{\\text{pure starch}} = \\frac{25}{3} \\times 162 = 1350.0\\text{ g}$$\n\n**Step 5 — Account for cassava flour purity ($80.0\\%$ starch):**\n$$m_{\\text{cassava}} = \\frac{1350.0}{0.80} = 1687.5\\text{ g} = 1.6875\\text{ kg} \\approx 1.69\\text{ kg}$$"
+  },
+  {
+    "order_index": 30,
+    "type": "MULTIPLE_CHOICE",
+    "points": 0.34,
+    "sectionName": "Sector 8: Neptune Frontier • Quantitative: Photosynthesis Mass and Gas Volume Balance",
+    "content_markdown": "Inside the **Neptune Frontier Closed-Loop Biome**, hydroponic algae panels synthesize $324.0\\text{ g}$ of structural cellulose via photosynthetic fixation according to the overall reaction equation:\n$$6n\\text{CO}_2 + 5n\\text{H}_2\\text{O} \\xrightarrow{\\text{chlorophyll, light}} (\\text{C}_6\\text{H}_{10}\\text{O}_5)_n + 6n\\text{O}_2\\uparrow$$\nAstronaut Cadet Keithley monitors life-support atmospheric telemetry. What mass of carbon dioxide ($\\text{CO}_2$) was absorbed from the cabin air, and what volume of breathable oxygen ($\\text{O}_2$) gas was released into the life-support system at standard conditions ($25^\\circ\\text{C}, 1\\text{ bar}$, where $V_{\\text{mol}} = 24.79\\text{ L/mol}$)? (Given: $M_{\\text{cellulose unit}} = 162\\text{ g/mol}$, $M_{\\text{CO}_2} = 44\\text{ g/mol}$.)",
+    "options": [
+      {
+        "id": "A",
+        "text": "$m(\\text{CO}_2) = 528.0\\text{ g};\\ V(\\text{O}_2) = 297.48\\text{ L}$"
+      },
+      {
+        "id": "B",
+        "text": "$m(\\text{CO}_2) = 264.0\\text{ g};\\ V(\\text{O}_2) = 148.74\\text{ L}$"
+      },
+      {
+        "id": "C",
+        "text": "$m(\\text{CO}_2) = 528.0\\text{ g};\\ V(\\text{O}_2) = 268.80\\text{ L}$"
+      },
+      {
+        "id": "D",
+        "text": "$m(\\text{CO}_2) = 440.0\\text{ g};\\ V(\\text{O}_2) = 247.90\\text{ L}$"
+      }
+    ],
+    "correct_option_id": "A",
+    "explanation": "**Step 1 — Calculate moles of cellulose repeating units synthesized:**\n$$n_{\\text{unit}} = \\frac{324.0}{162} = 2.00\\text{ mol}$$\n\n**Step 2 — Determine moles of $\\text{CO}_2$ absorbed and $\\text{O}_2$ produced:**\nFrom the balanced photosynthesis equation, $1\\text{ mol}$ of repeating unit requires $6\\text{ mol }\\text{CO}_2$ and releases $6\\text{ mol }\\text{O}_2$:\n$$n_{\\text{CO}_2} = 6 \\times 2.00 = 12.00\\text{ mol}$$\n$$n_{\\text{O}_2} = 6 \\times 2.00 = 12.00\\text{ mol}$$\n\n**Step 3 — Calculate mass of $\\text{CO}_2$ absorbed:**\n$$m_{\\text{CO}_2} = 12.00 \\times 44 = 528.0\\text{ g}$$\n\n**Step 4 — Calculate volume of $\\text{O}_2$ gas evolved at standard conditions ($25^\\circ\\text{C}, 1\\text{ bar}$):**\n$$V_{\\text{O}_2} = 12.00 \\times 24.79 = 297.48\\text{ L}$$"
+  }
+]
