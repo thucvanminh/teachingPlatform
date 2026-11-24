@@ -523,7 +523,7 @@
     <div class="tabs-nav">
       <button class="tab-btn active" data-tab="storyTab">📖 1. Bí Kíp Công Chúa</button>
       <button class="tab-btn" data-tab="simTab">🪄 2. Đũa Thần Đặt Tính Chia</button>
-      <button class="tab-btn" data-tab="quizTab">👑 3. Đấu Trường 10 Câu Đố</button>
+      <button class="tab-btn" data-tab="quizTab">👑 3. Đấu Trường 15 Câu Đố</button>
       <button class="tab-btn" data-tab="parentsTab">💌 4. Cẩm Nang Ba Mẹ</button>
     </div>
 
@@ -579,7 +579,7 @@
 
       <div style="text-align: center; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
         <button class="big-action-btn" onclick="switchTab('simTab')">🪄 Thử Đũa Thần Đặt Tính Chia</button>
-        <button class="big-action-btn" style="background: linear-gradient(135deg, #F59E0B, #EC4899);" onclick="switchTab('quizTab')">👑 Chinh Phục 10 Thử Thách Ngay!</button>
+        <button class="big-action-btn" style="background: linear-gradient(135deg, #F59E0B, #EC4899);" onclick="switchTab('quizTab')">👑 Chinh Phục 15 Thử Thách Ngay!</button>
       </div>
     </div>
 
@@ -604,14 +604,14 @@
       </div>
     </div>
 
-    <!-- TAB 3: 10 PRINCESS QUIZ CHALLENGES -->
+    <!-- TAB 3: 15 PRINCESS QUIZ CHALLENGES -->
     <div id="quizTab" class="tab-content">
       <div class="quiz-header">
         <div>
-          <h2 style="font-size: 1.4rem; color: #9D174D;">👑 Đấu Trường Công Chúa: 10 Thử Thách Phép Chia Hết</h2>
-          <p id="quizTracker" style="color: #64748B; font-weight: 600;">Câu hỏi 1 / 10</p>
+          <h2 style="font-size: 1.4rem; color: #9D174D;">👑 Đấu Trường Công Chúa: 15 Thử Thách Phép Chia Hết</h2>
+          <p id="quizTracker" style="color: #64748B; font-weight: 600;">Câu hỏi 1 / 15</p>
         </div>
-        <div class="star-counter">⭐ <span id="quizScore">0</span> / 10 Vương Miện</div>
+        <div class="star-counter">⭐ <span id="quizScore">0</span> / 15 Vương Miện</div>
       </div>
 
       <div class="quiz-question-box" id="quizBox">
@@ -1008,6 +1008,66 @@
         ],
         correct: 'C',
         explain: '74 ÷ 8 = 9 (dư 2), hạ 4 được 24 ÷ 8 = 3. Vậy 744 ÷ 8 = 93 viên kim cương hồng!'
+      },
+      {
+        prompt: '🍧 Công chúa An Lake có <strong>288</strong> chiếc bánh macaron cầu vồng thơm lừng được xếp đều vào <strong>4</strong> cỗ xe hoàng gia sang trọng. Hỏi mỗi cỗ xe xếp được bao nhiêu chiếc bánh macaron? (288 ÷ 4 = ?)',
+        img: '/images/lop1/princess_division_2311/q11.svg',
+        options: [
+          { id: 'A', text: '74 chiếc bánh macaron' },
+          { id: 'B', text: '72 chiếc bánh macaron' },
+          { id: 'C', text: '70 chiếc bánh macaron' },
+          { id: 'D', text: '76 chiếc bánh macaron' },
+        ],
+        correct: 'B',
+        explain: '28 ÷ 4 = 7 (dư 0), hạ 8 được 8 ÷ 4 = 2. Vậy 288 ÷ 4 = 72 chiếc bánh macaron!'
+      },
+      {
+        prompt: '🌸 Có <strong>385</strong> lọ nước hoa phép thuật tỏa ngát hương hoa hồng được Công chúa chia đều cho <strong>5</strong> nàng công chúa bạn thân. Hỏi mỗi nàng công chúa nhận được bao nhiêu lọ nước hoa? (385 ÷ 5 = ?)',
+        img: '/images/lop1/princess_division_2311/q12.svg',
+        options: [
+          { id: 'A', text: '77 lọ nước hoa' },
+          { id: 'B', text: '75 lọ nước hoa' },
+          { id: 'C', text: '79 lọ nước hoa' },
+          { id: 'D', text: '81 lọ nước hoa' },
+        ],
+        correct: 'A',
+        explain: '38 ÷ 5 = 7 (dư 3), hạ 5 được 35 ÷ 5 = 7. Vậy 385 ÷ 5 = 77 lọ nước hoa!'
+      },
+      {
+        prompt: '📚 Trong Thư Viện Hoàng Gia, có <strong>906</strong> cuốn truyện cổ tích bìa nhũ vàng được xếp đều vào <strong>3</strong> tủ sách pha lê. Hỏi mỗi tủ sách có bao nhiêu cuốn truyện cổ tích? (906 ÷ 3 = ?)',
+        img: '/images/lop1/princess_division_2311/q13.svg',
+        options: [
+          { id: 'A', text: '320 cuốn truyện cổ tích' },
+          { id: 'B', text: '32 cuốn truyện cổ tích' },
+          { id: 'C', text: '306 cuốn truyện cổ tích' },
+          { id: 'D', text: '302 cuốn truyện cổ tích' },
+        ],
+        correct: 'D',
+        explain: '9 ÷ 3 = 3; hạ 0: 0 ÷ 3 = 0, viết 0 vào thương; hạ 6: 6 ÷ 3 = 2. Vậy 906 ÷ 3 = 302 cuốn truyện cổ tích!'
+      },
+      {
+        prompt: '🌱 Vườn Bướm Cổ Tích có <strong>486</strong> hạt mầm hoa ngũ sắc phát sáng được chia đều cho <strong>6</strong> bạn sóc thần để gieo trồng. Hỏi mỗi bạn sóc thần nhận được bao nhiêu hạt mầm hoa? (486 ÷ 6 = ?)',
+        img: '/images/lop1/princess_division_2311/q14.svg',
+        options: [
+          { id: 'A', text: '83 hạt mầm hoa' },
+          { id: 'B', text: '81 hạt mầm hoa' },
+          { id: 'C', text: '85 hạt mầm hoa' },
+          { id: 'D', text: '80 hạt mầm hoa' },
+        ],
+        correct: 'B',
+        explain: '48 ÷ 6 = 8 (dư 0), hạ 6 được 6 ÷ 6 = 1. Vậy 486 ÷ 6 = 81 hạt mầm hoa ngũ sắc!'
+      },
+      {
+        prompt: '🌈 <strong>ĐẠI THỬ THÁCH CẦU VỒNG:</strong> Có <strong>819</strong> viên pha lê bảy sắc lung linh được đính đều lên <strong>9</strong> bức tranh tường của Đại Sảnh Hoàng Gia. Hỏi mỗi bức tranh tường được đính bao nhiêu viên pha lê? (819 ÷ 9 = ?)',
+        img: '/images/lop1/princess_division_2311/q15.svg',
+        options: [
+          { id: 'A', text: '93 viên pha lê' },
+          { id: 'B', text: '89 viên pha lê' },
+          { id: 'C', text: '91 viên pha lê' },
+          { id: 'D', text: '95 viên pha lê' },
+        ],
+        correct: 'C',
+        explain: '81 ÷ 9 = 9 (dư 0), hạ 9 được 9 ÷ 9 = 1. Vậy 819 ÷ 9 = 91 viên pha lê! Chúc mừng Công chúa An Lake chiến thắng rực rỡ! 👑🌈✨'
       }
     ];
 
@@ -1082,7 +1142,7 @@
             <div style="font-size: 4.5rem;">👑✨💎</div>
             <h2 style="color:#BE185D; font-size: 2rem; margin: 10px 0;">CHÚC MỪNG CÔNG CHÚA AN LAKE!</h2>
             <p style="font-size: 1.15rem; color:#475569; margin-bottom: 18px;">
-              Công chúa đã xuất sắc hoàn thành trọn vẹn <strong>10/10 thử thách Phép Chia Hết 3 Chữ Số Cho 1 Chữ Số</strong> và rinh về Vương Miện Pha Lê!
+              Công chúa đã xuất sắc hoàn thành trọn vẹn <strong>15/15 thử thách Phép Chia Hết 3 Chữ Số Cho 1 Chữ Số</strong> và rinh về Vương Miện Pha Lê!
             </p>
             <button class="big-action-btn" onclick="restartQuiz()">🔄 Chơi Lại Từ Đầu</button>
           </div>

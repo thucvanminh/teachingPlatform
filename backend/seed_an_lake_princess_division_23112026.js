@@ -2,7 +2,7 @@ const { PrismaClient } = require('./node_modules/@prisma/client');
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log('👑 Bắt đầu tạo Card Bài Giảng & 10 Bài Tập Công Chúa Phép Chia Hết cho Bé an_lake ngày 23/11/2026...');
+  console.log('👑 Bắt đầu tạo Card Bài Giảng & 15 Bài Tập Công Chúa Phép Chia Hết cho Bé an_lake ngày 23/11/2026...');
 
   // 1. Tìm tài khoản Bé An, Giáo viên và Môn MATH_1
   const studentAn = await prisma.users.findUnique({
@@ -95,7 +95,7 @@ Khi đặt tính chia số có **3 chữ số** cho số có **1 chữ số**, C
 ---
 
 ### 🎮 Khám Phá Phòng Phép Thuật Tương Tác:
-Bé bấm **"Khám Phá Bài Học 🎈"** để mở Đũa Thần Đặt Tính Chia từng bước và chinh phục **10 thử thách Công chúa rinh Vương Miện Vàng** nhé! 👑✨
+Bé bấm **"Khám Phá Bài Học 🎈"** để mở Đũa Thần Đặt Tính Chia từng bước và chinh phục **15 thử thách Công chúa rinh Vương Miện Vàng** nhé! 👑✨
 `;
 
   // 4. Tạo Learning Unit
@@ -103,9 +103,9 @@ Bé bấm **"Khám Phá Bài Học 🎈"** để mở Đũa Thần Đặt Tính 
     data: {
       subject_id: mathSubject.id,
       created_by: teacher.id,
-      title: 'Vương Quốc Công Chúa: Phép Chia Hết 3 Chữ Số Cho 1 Chữ Số (10 Thử Thách)',
+      title: 'Vương Quốc Công Chúa: Phép Chia Hết 3 Chữ Số Cho 1 Chữ Số (15 Thử Thách)',
       description:
-        'Bài giảng tương tác Đũa Thần Đặt Tính Chia & 10 bài tập phép chia hết số có 3 chữ số cho 1 chữ số (ví dụ 168÷7=24, 618÷6=103) kèm tranh minh họa Công chúa cho Bé An ngày 23/11/2026.',
+        'Bài giảng tương tác Đũa Thần Đặt Tính Chia & 15 bài tập phép chia hết số có 3 chữ số cho 1 chữ số (ví dụ 168÷7=24, 618÷6=103, 906÷3=302) kèm tranh minh họa Công chúa cho Bé An ngày 23/11/2026.',
       lecture_content_markdown: lectureMarkdown,
       lecture_attachments: [],
       is_template: true,
@@ -113,16 +113,16 @@ Bé bấm **"Khám Phá Bài Học 🎈"** để mở Đũa Thần Đặt Tính 
   });
   console.log('✓ Đã tạo Learning Unit:', learningUnit.title);
 
-  // 5. Tạo Assessment (10 câu trắc nghiệm minh họa công chúa)
+  // 5. Tạo Assessment (15 câu trắc nghiệm minh họa công chúa)
   const assessment = await prisma.assessments.create({
     data: {
       learning_unit_id: learningUnit.id,
       type: 'IN_SESSION_90M',
-      title: 'Đại Hội Công Chúa: Chinh Phục 10 Phép Chia Hết Kỳ Diệu 👑💎',
+      title: 'Đại Hội Công Chúa: Chinh Phục 15 Phép Chia Hết Kỳ Diệu 👑💎',
       instructions:
-        'Công chúa An Lake hãy ngắm tranh minh họa thật đáng yêu, đặt tính chia từ trái sang phải rồi chọn đáp án đúng để rinh trọn 10 ngôi sao và Vương Miện Vàng nhé!',
-      time_limit_minutes: 45,
-      max_score: 10.0,
+        'Công chúa An Lake hãy ngắm tranh minh họa thật đáng yêu, đặt tính chia từ trái sang phải rồi chọn đáp án đúng để rinh trọn 15 ngôi sao và Vương Miện Vàng nhé!',
+      time_limit_minutes: 60,
+      max_score: 15.0,
     },
   });
   console.log('✓ Đã tạo Assessment:', assessment.title);
@@ -280,6 +280,81 @@ Bé bấm **"Khám Phá Bài Học 🎈"** để mở Đũa Thần Đặt Tính 
         'Vì $7 < 8$, gộp $74 \\div 8 = 9$ (vì $9 \\times 8 = 72$, dư $2$). Hạ $4$ xuống được $24 \\div 8 = 3$ (dư $0$). Vậy $744 \\div 8 = 93$ viên kim cương hồng! Chúc mừng Công chúa An Lake rinh trọn Vương Miện Pha Lê! 👑✨',
       points: 1.0,
     },
+    {
+      order_index: 11,
+      prompt:
+        '![288 bánh macaron cầu vồng trên 4 cỗ xe hoàng gia](/images/lop1/princess_division_2311/q11.svg)\n\n🍧 Công chúa An Lake có **288** chiếc bánh macaron cầu vồng thơm lừng được xếp đều vào **4** cỗ xe hoàng gia sang trọng 🎠. Hỏi mỗi cỗ xe xếp được bao nhiêu chiếc bánh macaron?\n\n*Phép tính: $288 \\div 4 = ?$*',
+      options: [
+        { id: 'A', text: '74 chiếc bánh macaron' },
+        { id: 'B', text: '72 chiếc bánh macaron' },
+        { id: 'C', text: '70 chiếc bánh macaron' },
+        { id: 'D', text: '76 chiếc bánh macaron' },
+      ],
+      correct_option_id: 'B',
+      explanation:
+        'Vì $2 < 4$, gộp $28 \\div 4 = 7$ (dư $0$). Hạ $8$ xuống được $8 \\div 4 = 2$ (dư $0$). Vậy $288 \\div 4 = 72$ chiếc bánh macaron! 🍧',
+      points: 1.0,
+    },
+    {
+      order_index: 12,
+      prompt:
+        '![385 lọ nước hoa phép thuật tặng 5 nàng công chúa](/images/lop1/princess_division_2311/q12.svg)\n\n🌸 Có **385** lọ nước hoa phép thuật tỏa ngát hương hoa hồng được Công chúa chia đều cho **5** nàng công chúa bạn thân 👸. Hỏi mỗi nàng công chúa nhận được bao nhiêu lọ nước hoa?\n\n*Phép tính: $385 \\div 5 = ?$*',
+      options: [
+        { id: 'A', text: '77 lọ nước hoa' },
+        { id: 'B', text: '75 lọ nước hoa' },
+        { id: 'C', text: '79 lọ nước hoa' },
+        { id: 'D', text: '81 lọ nước hoa' },
+      ],
+      correct_option_id: 'A',
+      explanation:
+        'Vì $3 < 5$, gộp $38 \\div 5 = 7$ (vì $7 \\times 5 = 35$, dư $3$). Hạ $5$ xuống được $35 \\div 5 = 7$ (dư $0$). Vậy $385 \\div 5 = 77$ lọ nước hoa! 🌸',
+      points: 1.0,
+    },
+    {
+      order_index: 13,
+      prompt:
+        '![906 cuốn truyện cổ tích trong 3 tủ sách pha lê](/images/lop1/princess_division_2311/q13.svg)\n\n📚 Trong Thư Viện Hoàng Gia, có **906** cuốn truyện cổ tích bìa nhũ vàng được xếp đều vào **3** tủ sách pha lê 📖. Hỏi mỗi tủ sách có bao nhiêu cuốn truyện cổ tích?\n\n*Phép tính: $906 \\div 3 = ?$*',
+      options: [
+        { id: 'A', text: '320 cuốn truyện cổ tích' },
+        { id: 'B', text: '32 cuốn truyện cổ tích' },
+        { id: 'C', text: '306 cuốn truyện cổ tích' },
+        { id: 'D', text: '302 cuốn truyện cổ tích' },
+      ],
+      correct_option_id: 'D',
+      explanation:
+        '$9 \\div 3 = 3$; hạ $0$, $0 \\div 3 = 0$ (viết **$0$** vào thương); hạ $6$, $6 \\div 3 = 2$ (dư $0$). Vậy $906 \\div 3 = 302$ cuốn truyện cổ tích! 📚',
+      points: 1.0,
+    },
+    {
+      order_index: 14,
+      prompt:
+        '![486 hạt mầm hoa ngũ sắc gieo cùng 6 bạn sóc thần](/images/lop1/princess_division_2311/q14.svg)\n\n🌱 Vườn Bướm Cổ Tích có **486** hạt mầm hoa ngũ sắc phát sáng được chia đều cho **6** bạn sóc thần 🐿️ để gieo trồng. Hỏi mỗi bạn sóc thần nhận được bao nhiêu hạt mầm hoa?\n\n*Phép tính: $486 \\div 6 = ?$*',
+      options: [
+        { id: 'A', text: '83 hạt mầm hoa' },
+        { id: 'B', text: '81 hạt mầm hoa' },
+        { id: 'C', text: '85 hạt mầm hoa' },
+        { id: 'D', text: '80 hạt mầm hoa' },
+      ],
+      correct_option_id: 'B',
+      explanation:
+        'Vì $4 < 6$, gộp $48 \\div 6 = 8$ (dư $0$). Hạ $6$ xuống được $6 \\div 6 = 1$ (dư $0$). Vậy $486 \\div 6 = 81$ hạt mầm hoa ngũ sắc! 🌱',
+      points: 1.0,
+    },
+    {
+      order_index: 15,
+      prompt:
+        '![819 viên pha lê đính lên 9 bức tranh tường](/images/lop1/princess_division_2311/q15.svg)\n\n🌈 **ĐẠI THỬ THÁCH CẦU VỒNG:** Có **819** viên pha lê bảy sắc lung linh được đính đều lên **9** bức tranh tường của Đại Sảnh Hoàng Gia 🖼️. Hỏi mỗi bức tranh tường được đính bao nhiêu viên pha lê?\n\n*Phép tính: $819 \\div 9 = ?$*',
+      options: [
+        { id: 'A', text: '93 viên pha lê' },
+        { id: 'B', text: '89 viên pha lê' },
+        { id: 'C', text: '91 viên pha lê' },
+        { id: 'D', text: '95 viên pha lê' },
+      ],
+      correct_option_id: 'C',
+      explanation:
+        'Vì $8 < 9$, gộp $81 \\div 9 = 9$ (dư $0$). Hạ $9$ xuống được $9 \\div 9 = 1$ (dư $0$). Vậy $819 \\div 9 = 91$ viên pha lê! Chúc mừng Công chúa An Lake chiến thắng rực rỡ! 👑🌈✨',
+      points: 1.0,
+    },
   ];
 
   for (const q of questionsData) {
@@ -310,9 +385,9 @@ Bé bấm **"Khám Phá Bài Học 🎈"** để mở Đũa Thần Đặt Tính 
       learning_unit_id: learningUnit.id,
       assigned_by: teacher.id,
       assigned_date: targetDate,
-      custom_session_minutes: 45,
+      custom_session_minutes: 60,
       teacher_daily_note:
-        'Chào Công chúa An Lake! Hôm nay chúng mình cùng khám phá phép chia hết số có 3 chữ số cho 1 chữ số (như 168÷7=24) qua câu chuyện Lâu Đài Pha Lê và chinh phục 10 thử thách công chúa thật xinh nhé! 👑💎🦄',
+        'Chào Công chúa An Lake! Hôm nay chúng mình cùng khám phá phép chia hết số có 3 chữ số cho 1 chữ số (như 168÷7=24, 906÷3=302) qua câu chuyện Lâu Đài Pha Lê và chinh phục 15 thử thách công chúa thật xinh nhé! 👑💎🦄',
       is_published: true,
     },
   });
@@ -327,7 +402,7 @@ Bé bấm **"Khám Phá Bài Học 🎈"** để mở Đũa Thần Đặt Tính 
     },
   });
 
-  console.log('✓ Đã giao Card học tập & 10 bài tập ngày 23/11/2026 cho Công chúa An Lake!');
+  console.log('✓ Đã giao Card học tập & 15 bài tập ngày 23/11/2026 cho Công chúa An Lake!');
   console.log(`  - Assignment ID: ${assignment.id}`);
   console.log(`  - Learning Unit ID: ${learningUnit.id}`);
   console.log(`  - Assessment ID: ${assessment.id}`);
