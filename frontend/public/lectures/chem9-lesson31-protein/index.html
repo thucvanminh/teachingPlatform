@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orbital Bio-Reactor: Protein (Lesson 31)</title>
+
+  <!-- KaTeX for High-Contrast Chemical Equations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+
+  <!-- Three.js & OrbitControls for Interactive 3D Molecular Viewer -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="starfieldCanvas"></canvas>
+  <canvas id="confettiCanvas" class="canvas-confetti"></canvas>
+
+  <div class="app-container">
+    <!-- Sci-Fi Orbital Header -->
+    <header class="station-header">
+      <div class="header-left">
+        <div class="status-badge">
+          <span class="pulse-dot"></span>
+          <span>ORBITAL BIO-REACTOR &bull; LESSON 31 TELEMETRY ACTIVE</span>
+        </div>
+        <h1 class="header-title">
+          <span class="gradient-text">PROTEIN: AMINO ACIDS &amp; PEPTIDE CHAINS</span>
+          <span class="sub-title">MOLECULAR ARCHITECTURE, 3-TUBE EGG WHITE LAB, HYDROLYSIS &amp; FIBER BURN TEST</span>
+        </h1>
+      </div>
+      <div class="header-right">
+        <div class="cadet-badge">
+          <span class="badge-role">Astronaut Cadet</span>
+          <span class="badge-name">Keithley Lake &bull; Chem 9</span>
+        </div>
+        <button id="soundToggleBtn" class="control-btn" title="Toggle Sound">
+          <span id="soundIcon">🔊</span> Sound
+        </button>
+      </div>
+    </header>
+
+    <!-- Sector Navigation Bar -->
+    <nav class="sector-nav">
+      <button class="nav-tab active" data-sector="sector1">
+        <span class="tab-icon">🧬</span>
+        <span class="tab-label">Sector 1: Structure &amp; Peptide Bonds</span>
+      </button>
+      <button class="nav-tab" data-sector="sector2">
+        <span class="tab-icon">🥚</span>
+        <span class="tab-label">Sector 2: 3-Tube Egg White Lab</span>
+      </button>
+      <button class="nav-tab" data-sector="sector3">
+        <span class="tab-icon">🔥</span>
+        <span class="tab-label">Sector 3: Hydrolysis &amp; Burn Test</span>
+      </button>
+      <button class="nav-tab" data-sector="sector4">
+        <span class="tab-icon">💪</span>
+        <span class="tab-label">Sector 4: Roles &amp; Food Sources</span>
+      </button>
+      <button class="nav-tab" data-sector="sector5">
+        <span class="tab-icon">⚡</span>
+        <span class="tab-label">Sector 5: Flight Readiness Quiz</span>
+      </button>
+    </nav>
+
+    <main class="main-content">
+
+      <!-- ============================================== -->
+      <!-- SECTOR 1: STRUCTURE & PEPTIDE BONDS (3D LAB)   -->
+      <!-- ============================================== -->
+      <section id="sector1" class="sector-pane active">
+        <div class="pane-grid">
+          <!-- Left: 3D Molecular Viewer -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <div class="header-badge-row">
+                <span class="tag cyan">Three.js 3D Blueprint</span>
+                <span id="moleculeMassBadge" class="molar-mass-badge">Tens of thousands – Millions amu</span>
+              </div>
+              <h3 id="moleculeTitle">Protein Segment &bull; Linked by Peptide Bonds ($-\text{CO}-\text{NH}-$)</h3>
+            </div>
+            <p class="card-desc" id="moleculeFormulaDesc">
+              Alanine + Glycine unit: <strong>$-\text{HN}-\text{CH}(\text{CH}_3)-\text{CO}-\text{NH}-\text{CH}_2-\text{CO}-$</strong>
+            </p>
+
+            <div class="molecule-3d-wrapper">
+              <div class="molecule-3d-toolbar">
+                <div class="model-badge">
+                  <span class="pulse-dot"></span>
+                  <span id="currentModelLabel">Protein Chain Segment</span>
+                </div>
+                <div class="model-actions">
+                  <button class="tool-btn active" data-model="chain">Protein Segment</button>
+                  <button class="tool-btn" data-model="alanine">Alanine</button>
+                  <button class="tool-btn" data-model="glycine">Glycine</button>
+                  <button id="toggle3dRotateBtn" class="tool-btn active">Auto-Rotate</button>
+                </div>
+              </div>
+
+              <div id="molecule3dCanvasContainer" class="molecule-3d-container">
+                <div class="canvas-hint">Drag to rotate 360&deg; &bull; Scroll to zoom &bull; Amber link = Peptide bond</div>
+              </div>
+            </div>
+
+            <div class="callout-box">
+              <span class="callout-icon">🔗</span>
+              <div>
+                <strong>How Amino Acids Link:</strong> Both <strong>alanine</strong> and <strong>glycine</strong> contain an $-\text{NH}_2$ group and a $-\text{COOH}$ group. They join via <strong>peptide bonds</strong> ($-\text{CO}-\text{NH}-$) to build long protein chains.
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Concise KHTN 9 Concept & Structure -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag emerald">SGK Concept Summary</span>
+              <h3>What Is a Protein? (KHTN 9 Core Facts)</h3>
+            </div>
+            <p class="card-desc">
+              Essential structural facts for Lesson 31 (SGK pp. 138–139).
+            </p>
+
+            <div class="callout-box emerald">
+              <span class="callout-icon">📘</span>
+              <div>
+                <strong>Definition:</strong> Proteins are <strong>complex organic compounds</strong> with very large molecular masses, composed of many <strong>amino acid</strong> units linked together by <strong>peptide bonds</strong>.
+              </div>
+            </div>
+
+            <table class="telemetry-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Key Telemetry</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Building Blocks</strong></td>
+                  <td>Many <strong>amino acid</strong> units (e.g., alanine, glycine)</td>
+                </tr>
+                <tr>
+                  <td><strong>Connecting Bond</strong></td>
+                  <td><strong>Peptide bond</strong> ($-\text{CO}-\text{NH}-$)</td>
+                </tr>
+                <tr>
+                  <td><strong>Molecular Mass</strong></td>
+                  <td>Very large: <strong>tens of thousands to millions of amu</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Natural Occurrence</strong></td>
+                  <td>Found in <strong>both animals and plants</strong> (not only animals!)</td>
+                </tr>
+                <tr>
+                  <td><strong>Why Proteins Differ</strong></td>
+                  <td>Different <strong>sequences / arrangements</strong> of amino acids give different structures and functions</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="callout-box amber">
+              <span class="callout-icon">🛰️</span>
+              <div>
+                <strong>Amino Acid Comparison:</strong> Alanine ($\text{H}_2\text{N}-\text{CH}(\text{CH}_3)-\text{COOH}$) and glycine ($\text{H}_2\text{N}-\text{CH}_2-\text{COOH}$) share $-\text{NH}_2$ and $-\text{COOH}$ groups, differing only in their side group ($-\text{CH}_3$ vs. $-\text{H}$).
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 2: 3-TUBE EGG WHITE LAB (SGK p. 139)    -->
+      <!-- ============================================== -->
+      <section id="sector2" class="sector-pane">
+        <div class="pane-grid">
+          <!-- Left: 3-Tube Interactive Experiment -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <div class="header-badge-row">
+                <span class="tag amber">SGK Experiment</span>
+                <span class="molar-mass-badge">2 mL Egg White per Tube</span>
+              </div>
+              <h3>3-Tube Egg White Reaction Simulator</h3>
+            </div>
+            <p class="card-desc">
+              Test how egg white protein reacts with $1\text{ M }\text{HCl}$, gentle warming, and strong dry heating.
+            </p>
+
+            <div class="dual-tube-stage" style="min-height: 270px;">
+              <!-- Tube 1 -->
+              <div class="tube-station">
+                <div class="test-tube-wrapper compact">
+                  <div class="test-tube-rim"></div>
+                  <div class="test-tube-glass">
+                    <div id="eggTube1Liquid" class="liquid-fill" style="height:45%; background:rgba(254, 249, 195, 0.35);">
+                      <div id="eggTube1Curds" class="curds-layer"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tube-label">Tube 1 (+ HCl 1 M)</div>
+                <div id="eggTube1Status" class="tube-sublabel">Clear egg white</div>
+              </div>
+
+              <!-- Tube 2 -->
+              <div class="tube-station">
+                <div class="test-tube-wrapper compact">
+                  <div class="test-tube-rim"></div>
+                  <div class="test-tube-glass">
+                    <div id="eggTube2Liquid" class="liquid-fill" style="height:45%; background:rgba(254, 249, 195, 0.35);">
+                      <div id="eggTube2Curds" class="curds-layer"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tube-label">Tube 2 (Gentle Heat)</div>
+                <div id="eggTube2Status" class="tube-sublabel">Clear egg white</div>
+              </div>
+
+              <!-- Tube 3 -->
+              <div class="tube-station">
+                <div class="test-tube-wrapper compact">
+                  <div class="test-tube-rim"></div>
+                  <div id="eggTube3Glass" class="test-tube-glass">
+                    <div id="eggTube3Vapor" class="vapor-wisp">~ Burnt Hair Odor ~</div>
+                    <div id="eggTube3Liquid" class="liquid-fill" style="height:45%; background:rgba(254, 249, 195, 0.35);"></div>
+                  </div>
+                </div>
+                <div class="tube-label">Tube 3 (Strong Heat)</div>
+                <div id="eggTube3Status" class="tube-sublabel">Clear egg white</div>
+              </div>
+            </div>
+
+            <div class="lab-bench">
+              <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap:0.6rem;">
+                <button id="runTube1Btn" class="bench-btn">💧 1. Add HCl 1 M</button>
+                <button id="runTube2Btn" class="bench-btn">🕯️ 2. Gentle Heat (1 min)</button>
+                <button id="runTube3Btn" class="bench-btn">🔥 3. Strong Heat (Dry)</button>
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center; gap:0.75rem;">
+                <div id="eggLabFeedback" class="callout-box" style="flex:1; margin:0;">
+                  <span class="callout-icon">📋</span>
+                  <div>Select any tube button above to observe the chemical behavior of egg white protein.</div>
+                </div>
+                <button id="resetEggLabBtn" class="control-btn">🔄 Reset</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Coagulation & Decomposition Rules -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag cyan">Chemical Properties I &amp; II</span>
+              <h3>Coagulation &amp; Thermal Decomposition</h3>
+            </div>
+            <p class="card-desc">
+              Proteins change state easily under chemical agents and heat.
+            </p>
+
+            <div class="callout-box">
+              <span class="callout-icon">🧊</span>
+              <div>
+                <strong>1. Coagulation (Clumping / Solidifying):</strong>
+                <p style="margin-top:0.25rem;">
+                  Proteins change properties and <strong>coagulate</strong> under the action of:
+                </p>
+                <ul style="margin-left:1.25rem; margin-top:0.2rem; line-height:1.45;">
+                  <li><strong>Acids</strong> (e.g., adding $\text{HCl}$ to egg white or souring milk)</li>
+                  <li><strong>Bases</strong> (alkaline solutions)</li>
+                  <li><strong>Heat / Temperature</strong> (e.g., boiling or frying an egg)</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="callout-box rose">
+              <span class="callout-icon">🔥</span>
+              <div>
+                <strong>2. Decomposition on Strong Heating (No Water):</strong>
+                <p style="margin-top:0.25rem;">
+                  When heated strongly at high temperature without water, protein <strong>decomposes or chars</strong>, releasing volatile gases and a <strong>characteristic burnt odor</strong> (like burning hair).
+                </p>
+              </div>
+            </div>
+
+            <div class="callout-box emerald">
+              <span class="callout-icon">🍳</span>
+              <div>
+                <strong>Everyday Connection:</strong> Cooking meat, fish, or eggs uses <strong>heat-induced coagulation</strong> of protein to make food firm and digestible.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 3: HYDROLYSIS & FIBER BURN TEST         -->
+      <!-- ============================================== -->
+      <section id="sector3" class="sector-pane">
+        <div class="pane-grid">
+          <!-- Left: Protein Hydrolysis Simulator -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <div class="header-badge-row">
+                <span class="tag purple">Chemical Property III</span>
+                <span class="molar-mass-badge">Breaks Peptide Bonds</span>
+              </div>
+              <h3>Protein Hydrolysis Simulator</h3>
+            </div>
+            <p class="card-desc">
+              Complete hydrolysis breaks all peptide bonds and produces individual amino acids.
+            </p>
+
+            <div class="callout-box purple">
+              <span class="callout-icon">⚗️</span>
+              <div>
+                <strong>Hydrolysis Word Equation:</strong>
+                $$\text{Protein} + \text{H}_2\text{O} \xrightarrow{\text{Acid / Base / Enzyme}} \text{Amino acid}$$
+              </div>
+            </div>
+
+            <div id="hydrolysisChainBox" class="hydrolysis-chain">
+              <span class="aa-node">Alanine</span>
+              <span class="peptide-link">Peptide</span>
+              <span class="aa-node">Glycine</span>
+              <span class="peptide-link">Peptide</span>
+              <span class="aa-node">Alanine</span>
+              <span class="peptide-link">Peptide</span>
+              <span class="aa-node">Glycine</span>
+            </div>
+
+            <div class="lab-bench">
+              <div class="control-group">
+                <label class="control-label">Choose Hydrolysis Catalyst</label>
+                <div class="pathway-toggle">
+                  <button class="pathway-btn active" data-catalyst="acid">Acid ($\text{H}^+$)</button>
+                  <button class="pathway-btn" data-catalyst="base">Base ($\text{OH}^-$)</button>
+                  <button class="pathway-btn" data-catalyst="enzyme">Enzyme</button>
+                </div>
+              </div>
+              <div style="display:flex; gap:0.65rem;">
+                <button id="runHydrolysisBtn" class="bench-btn" style="flex:1;">🧪 Run Complete Hydrolysis</button>
+                <button id="resetHydrolysisBtn" class="control-btn">🔄 Reset Chain</button>
+              </div>
+              <div id="hydrolysisStatusText" style="font-size:0.86rem; color:#cbd5e1;">
+                Status: Intact protein chain linked by peptide bonds. Select a catalyst and run hydrolysis.
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Fiber Identification Burn Test -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <div class="header-badge-row">
+                <span class="tag amber">Material Diagnostics</span>
+                <span class="molar-mass-badge">SGK p. 140</span>
+              </div>
+              <h3>Distinguishing Natural Protein Fibers vs. Nylon</h3>
+            </div>
+            <p class="card-desc">
+              Test how natural silk, sheep wool, and synthetic nylon behave when burned.
+            </p>
+
+            <div class="sample-selector" style="grid-template-columns: repeat(3, 1fr);">
+              <button class="sample-pill active" data-fiber="silk">🐛 Natural Silk</button>
+              <button class="sample-pill" data-fiber="wool">🐑 Sheep Wool</button>
+              <button class="sample-pill" data-fiber="nylon">🧵 Nylon Fiber</button>
+            </div>
+
+            <div class="burner-stage">
+              <div class="fiber-sample-box">
+                <div id="fiberSwatch" class="fiber-swatch"></div>
+                <div id="fiberFlame" class="flame-badge">🔥</div>
+              </div>
+              <div style="flex:1; display:flex; flex-direction:column; gap:0.5rem;">
+                <div class="gauge-box">
+                  <span class="gauge-title">Odor Telemetry</span>
+                  <span id="fiberOdorDisplay" class="gauge-value" style="font-size:0.95rem;">Unlit Sample</span>
+                </div>
+                <div class="gauge-box">
+                  <span class="gauge-title">Residue &amp; Classification</span>
+                  <span id="fiberResidueDisplay" class="gauge-value" style="font-size:0.9rem;">Natural Silk (Protein)</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:0.65rem;">
+              <button id="burnFiberBtn" class="bench-btn" style="flex:1;">🔥 Ignite Burn Test</button>
+              <button id="resetFiberBtn" class="control-btn">🔄 Reset</button>
+            </div>
+
+            <div class="callout-box emerald">
+              <span class="callout-icon">👃</span>
+              <div>
+                <strong>Identification Rule:</strong> Natural protein fibers (<strong>silk, wool</strong>) release a <strong>characteristic burnt-hair odor</strong> and form brittle ash. Synthetic <strong>nylon</strong> melts into a hard bead without the burnt-hair smell.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 4: BIOLOGICAL ROLES & FOOD SOURCES      -->
+      <!-- ============================================== -->
+      <section id="sector4" class="sector-pane">
+        <div class="pane-grid">
+          <!-- Left: 4 Biological Roles -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag emerald">Human Physiology</span>
+              <h3>Key Biological Roles of Protein in the Body</h3>
+            </div>
+            <p class="card-desc">
+              Proteins have diverse structures tailored to four major roles in living organisms.
+            </p>
+
+            <div class="apps-grid">
+              <div class="app-mini-card">
+                <h4>🏗️ Structural Role</h4>
+                <p>Builds cells and tissues such as <strong>muscles, skin, and hair</strong>.</p>
+              </div>
+              <div class="app-mini-card">
+                <h4>⚡ Catalytic Role</h4>
+                <p><strong>Enzymes</strong> are specialized proteins that catalyze biochemical reactions.</p>
+              </div>
+              <div class="app-mini-card">
+                <h4>📡 Hormonal Role</h4>
+                <p>Many <strong>hormones</strong> are proteins that regulate physiological processes.</p>
+              </div>
+              <div class="app-mini-card">
+                <h4>🩸 Transport Role</h4>
+                <p>Carries nutrients and oxygen (e.g., <strong>hemoglobin</strong> transports $\text{O}_2$ to cells).</p>
+              </div>
+            </div>
+
+            <div class="callout-box rose">
+              <span class="callout-icon">⚠️</span>
+              <div>
+                <strong>Common Exam Traps (SBT KHTN 9):</strong>
+                <ul style="margin-left:1.25rem; margin-top:0.25rem; line-height:1.45;">
+                  <li>Providing primary energy is <strong>NOT</strong> protein's main role (carbohydrates &amp; lipids do that).</li>
+                  <li>Storing genetic information is <strong>NOT</strong> protein's role (DNA does that).</li>
+                  <li>Not all foods contain protein, and protein exists in <strong>both animals and plants</strong>.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Natural Sources & Summary -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <span class="tag cyan">Nutrition &amp; Materials</span>
+              <h3>Protein-Rich Foods &amp; Natural Fiber Sources</h3>
+            </div>
+            <p class="card-desc">
+              Daily dietary intake of protein is essential for healthy growth and tissue repair (SGK Fig. 31.2).
+            </p>
+
+            <div class="apps-grid">
+              <div class="app-mini-card">
+                <h4>🥛 Milk &amp; Dairy</h4>
+                <p>Rich in complete animal proteins for growth and tissue maintenance.</p>
+              </div>
+              <div class="app-mini-card">
+                <h4>🥚 Eggs</h4>
+                <p>Egg white (albumin) demonstrates protein coagulation on heating or acid addition.</p>
+              </div>
+              <div class="app-mini-card">
+                <h4>🥩 Meat &amp; 🐟 Fish</h4>
+                <p>Major dietary protein sources supplying essential amino acids.</p>
+              </div>
+              <div class="app-mini-card">
+                <h4>🧶 Silkworm Cocoons</h4>
+                <p>Source of natural silk protein fiber used in traditional textiles.</p>
+              </div>
+            </div>
+
+            <div class="callout-box">
+              <span class="callout-icon">🌱</span>
+              <div>
+                <strong>Plant Proteins Too:</strong> Beans, soy, and seeds also supply protein—so protein is NOT exclusive to animals!
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SECTOR 5: FLIGHT READINESS QUICK QUIZ          -->
+      <!-- ============================================== -->
+      <section id="sector5" class="sector-pane">
+        <div class="pane-grid">
+          <!-- Left: Master Reference Card -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <div class="header-badge-row">
+                <span class="tag emerald">Mission Briefing</span>
+                <span class="molar-mass-badge">Lesson 31 Summary</span>
+              </div>
+              <h3>Protein Master Reference Card</h3>
+            </div>
+            <p class="card-desc">
+              Quick final checklist before taking your 30-question Orbital Chemistry Mission.
+            </p>
+
+            <div class="callout-box">
+              <span class="callout-icon">🧬</span>
+              <div>
+                <strong>Structure &amp; Mass:</strong>
+                <ul style="margin-left:1.25rem; margin-top:0.25rem; line-height:1.45;">
+                  <li>Complex organic compounds with very large mass (<strong>tens of thousands to millions of amu</strong>).</li>
+                  <li>Made of many <strong>amino acid</strong> units linked by <strong>peptide bonds</strong> ($-\text{CO}-\text{NH}-$).</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="callout-box purple">
+              <span class="callout-icon">🧪</span>
+              <div>
+                <strong>Three Chemical Properties:</strong>
+                <ul style="margin-left:1.25rem; margin-top:0.25rem; line-height:1.45;">
+                  <li><strong>Coagulation:</strong> Caused by acid, base, or heat.</li>
+                  <li><strong>Strong Heating (No Water):</strong> Decomposes/chars with a <strong>burnt-hair odor</strong>.</li>
+                  <li><strong>Hydrolysis:</strong> Catalyzed by acid, base, or enzyme $\to$ breaks peptide bonds to form <strong>amino acids</strong>.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="callout-box amber">
+              <span class="callout-icon">🔥</span>
+              <div>
+                <strong>Fiber Test &amp; Roles:</strong> Burn test separates <strong>silk/wool</strong> (burnt-hair smell) from <strong>nylon</strong> (melts, no burnt-hair smell). Roles: structure, enzymes, hormones, transport (not primary energy).
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Quick Quiz -->
+          <div class="card glass-card">
+            <div class="card-header">
+              <div class="header-badge-row">
+                <span class="tag amber">Knowledge Verification</span>
+                <span id="quizScoreBadge" class="molar-mass-badge">Score: 0 / 6</span>
+              </div>
+              <h3>Flight Readiness Quick Quiz</h3>
+            </div>
+            <p class="card-desc">
+              Score 6 / 6 to unlock orbital confetti clearance for Lesson 31!
+            </p>
+
+            <div id="quizContainer" class="quiz-container"></div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
