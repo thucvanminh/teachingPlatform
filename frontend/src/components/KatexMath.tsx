@@ -42,11 +42,24 @@ function renderInlineContent(
   if (!rawText) return null;
 
   const isLight = variant === 'light';
-  const regex = /(\$[^\$]+?\$|\*\*[^*]+\*\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/g;
+  const regex = /(\$[^\$]+?\$|\*\*[^*]+\*\*|`[^`]+`|\[[^\]]+\]\([^)]+\)|_{3,})/g;
   const parts = rawText.split(regex);
 
   return parts.map((part, i) => {
     if (!part) return null;
+
+    // Inline fill-in blank ______ (3+ underscores) in light academic mode
+    if (isLight && /^_{3,}$/.test(part)) {
+      return (
+        <span
+          key={i}
+          className="inline-block min-w-[4.25rem] sm:min-w-[5rem] mx-1 px-2 border-b-2 border-blue-700 bg-blue-100/80 text-blue-800 rounded-t-sm font-mono font-bold text-center align-baseline select-none"
+          aria-label="chỗ trống"
+        >
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+      );
+    }
 
     // Inline math $...$
     if (part.startsWith('$') && part.endsWith('$') && part.length > 2) {
@@ -73,7 +86,7 @@ function renderInlineContent(
             key={i}
             className={
               isLight
-                ? 'font-bold text-blue-700 bg-blue-50 px-2.5 py-0.5 rounded-md border border-blue-200 mr-1.5 inline-block tracking-tight text-xs sm:text-sm'
+                ? 'font-extrabold text-white bg-blue-700 px-2.5 py-0.5 rounded-md mr-2 inline-block tracking-tight text-xs sm:text-sm shadow-2xs'
                 : 'font-black text-cyan-300 bg-cyan-950/80 px-2.5 py-1 rounded-lg border border-cyan-500/40 mr-1.5 inline-block tracking-tight text-sm sm:text-base shadow-xs'
             }
           >

@@ -271,27 +271,27 @@ export default function StudentResultPage({ params }: { params: Promise<{ id: st
   const timeSpentMins = Math.max(1, Math.round((attempt.time_spent_seconds || 0) / 60));
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 py-8 sm:py-10 px-4 sm:px-6 lg:px-8 font-sans">
-      <div className="max-w-5xl mx-auto space-y-8">
+    <div className="min-h-dvh bg-[#E8EEF5] text-slate-950 py-6 sm:py-10 px-3 sm:px-6 lg:px-8 font-sans">
+      <div className="max-w-5xl mx-auto space-y-6 sm:space-y-8">
         {/* Navigation Bar */}
-        <div className="flex items-center justify-between">
+        <div className="flex flex-wrap items-center justify-between gap-2">
           <button
             onClick={() => router.push('/student')}
-            className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-600 hover:text-blue-700 bg-white border border-slate-200 px-4 py-2 rounded-xl transition shadow-xs hover:shadow-sm"
+            className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-900 hover:text-blue-700 bg-white border-2 border-slate-300 px-4 py-2 rounded-xl transition shadow-xs hover:border-blue-600"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Về Bảng Điều Khiển</span>
           </button>
 
-          <span className="text-xs font-semibold text-slate-500 bg-slate-100 px-3 py-1 rounded-full border border-slate-200">
-            Học sinh: <strong className="text-slate-800">{studentName}</strong>
+          <span className="text-xs font-bold text-slate-800 bg-white px-3.5 py-1.5 rounded-full border-2 border-slate-300 shadow-2xs">
+            Học sinh: <strong className="text-slate-950">{studentName}</strong>
           </span>
         </div>
 
         {/* =========================================================
-            HERO SCORECARD: TASTE SKILL ACADEMIC RESULTS
+            HERO SCORECARD: HIGH-CONTRAST ACADEMIC RESULTS
             ========================================================= */}
-        <div className="rounded-3xl p-6 sm:p-8 bg-white border border-slate-200/90 shadow-sm relative overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-6 transition hover:shadow-md">
+        <div className="rounded-2xl sm:rounded-3xl p-5 sm:p-8 bg-white border-2 border-slate-300 shadow-md relative overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="h-1.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-500 absolute top-0 left-0 right-0" />
 
           <div className="space-y-2 max-w-xl">
@@ -479,46 +479,46 @@ export default function StudentResultPage({ params }: { params: Promise<{ id: st
                 return (
                   <div
                     key={q.id}
-                    className={`p-6 rounded-3xl border transition duration-200 bg-white shadow-xs ${
+                    className={`p-4 sm:p-6 rounded-2xl border-2 bg-white shadow-sm ${
                       !hasAnswered
-                        ? 'border-slate-200'
+                        ? 'border-slate-300'
                         : isCorrect === true
-                        ? 'border-emerald-200 hover:border-emerald-300 ring-1 ring-emerald-100'
-                        : 'border-rose-200 hover:border-rose-300 ring-1 ring-rose-100'
+                        ? 'border-emerald-500'
+                        : 'border-rose-500'
                     }`}
                   >
                     {/* Header Card */}
-                    <div className="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-                      <div className="flex items-center space-x-2.5">
+                    <div className="flex flex-wrap items-center justify-between gap-2 border-b-2 border-slate-200 pb-3 mb-4">
+                      <div className="flex flex-wrap items-center gap-2">
                         <span
-                          className={`w-7 h-7 rounded-xl flex items-center justify-center font-bold text-xs ${
+                          className={`w-7 h-7 rounded-lg flex items-center justify-center font-extrabold text-xs tabular-nums ${
                             !hasAnswered
-                              ? 'bg-slate-100 text-slate-500'
+                              ? 'bg-slate-200 text-slate-800'
                               : isCorrect === true
-                              ? 'bg-emerald-100 text-emerald-800'
-                              : 'bg-rose-100 text-rose-800'
+                              ? 'bg-emerald-600 text-white'
+                              : 'bg-rose-600 text-white'
                           }`}
                         >
                           {originalIndex + 1}
                         </span>
 
-                        <span className="font-extrabold text-slate-900 text-sm">
+                        <span className="font-extrabold text-slate-950 text-sm">
                           Câu {originalIndex + 1}
                         </span>
 
                         {(q.question_payload?.sectionName || q.question_payload?.section_name) && (
-                          <span className="hidden sm:inline-block text-[11px] font-semibold px-2.5 py-0.5 rounded-md bg-blue-50 text-blue-700 border border-blue-200/80 truncate max-w-[260px]">
+                          <span className="inline-block text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-blue-100 text-blue-900 border border-blue-300 truncate max-w-[240px] sm:max-w-[340px]">
                             {q.question_payload?.sectionName || q.question_payload?.section_name}
                           </span>
                         )}
 
                         <span
-                          className={`text-xs font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 ${
+                          className={`text-xs font-extrabold px-2.5 py-0.5 rounded-full flex items-center gap-1 ${
                             !hasAnswered
-                              ? 'bg-slate-100 text-slate-600 border border-slate-200'
+                              ? 'bg-slate-200 text-slate-800 border border-slate-300'
                               : isCorrect === true
-                              ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
-                              : 'bg-rose-50 text-rose-700 border border-rose-200'
+                              ? 'bg-emerald-100 text-emerald-900 border border-emerald-400'
+                              : 'bg-rose-100 text-rose-900 border border-rose-400'
                           }`}
                         >
                           {!hasAnswered ? (
@@ -537,13 +537,13 @@ export default function StudentResultPage({ params }: { params: Promise<{ id: st
                         </span>
                       </div>
 
-                      <span className="text-xs font-bold font-mono text-slate-600 bg-slate-50 px-2.5 py-1 rounded-lg border border-slate-200">
+                      <span className="text-xs font-extrabold font-mono tabular-nums text-slate-900 bg-slate-100 px-2.5 py-1 rounded-lg border border-slate-300">
                         {pointsEarned} / {q.points} điểm
                       </span>
                     </div>
 
                     {/* Question Content */}
-                    <div className="text-slate-900 text-sm sm:text-base font-normal leading-relaxed mb-4">
+                    <div className="text-slate-950 text-sm sm:text-base font-medium leading-relaxed mb-4">
                       <FormattedContent variant="light" text={q.question_payload?.content_markdown || q.question_payload?.prompt_markdown || ''} />
                     </div>
 
@@ -555,23 +555,31 @@ export default function StudentResultPage({ params }: { params: Promise<{ id: st
                           const isStudentChoice = studentOptionId === optId;
                           const isTargetCorrect = correctOptionId === optId;
 
-                          let optionStyle = 'border-slate-200 bg-slate-50 text-slate-700';
+                          let optionStyle = 'border-slate-300 bg-slate-50 text-slate-900 font-medium';
                           if (isTargetCorrect) {
-                            optionStyle = 'border-emerald-300 bg-emerald-50/80 text-emerald-900 font-bold ring-1 ring-emerald-200';
+                            optionStyle = 'border-emerald-600 bg-emerald-50 text-emerald-950 font-bold';
                           } else if (isStudentChoice && !isTargetCorrect) {
-                            optionStyle = 'border-rose-300 bg-rose-50/80 text-rose-900 font-bold ring-1 ring-rose-200';
+                            optionStyle = 'border-rose-600 bg-rose-50 text-rose-950 font-bold';
                           }
 
                           return (
                             <div
                               key={opt.id}
-                              className={`p-3 rounded-xl border flex items-center justify-between text-xs sm:text-sm ${optionStyle}`}
+                              className={`p-3 rounded-xl border-2 flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm ${optionStyle}`}
                             >
-                              <div className="flex items-center space-x-2.5">
-                                <span className="w-6 h-6 rounded-lg bg-white border border-slate-300 font-bold font-mono text-xs flex items-center justify-center">
+                              <div className="flex items-start gap-2.5 min-w-0">
+                                <span
+                                  className={`w-6 h-6 shrink-0 rounded-md font-extrabold font-mono text-xs flex items-center justify-center ${
+                                    isTargetCorrect
+                                      ? 'bg-emerald-600 text-white'
+                                      : isStudentChoice
+                                      ? 'bg-rose-600 text-white'
+                                      : 'bg-slate-900 text-white'
+                                  }`}
+                                >
                                   {opt.id}
                                 </span>
-                                <span>{opt.text}</span>
+                                <span className="break-words pt-0.5">{opt.text}</span>
                               </div>
 
                               <div className="flex items-center gap-2">

@@ -1145,12 +1145,12 @@ export default function StudentDashboard() {
   );
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 py-8 sm:py-10 px-4 sm:px-6 lg:px-8 font-sans">
-      <div className="max-w-6xl mx-auto space-y-8">
+    <div className="min-h-dvh bg-[#E8EEF5] text-slate-900 py-6 sm:py-10 px-3 sm:px-6 lg:px-8 font-sans">
+      <div className="max-w-6xl mx-auto space-y-6 sm:space-y-8">
         {/* =========================================================
             HERO COMMAND HUB: PERSONALIZED FOR THÁI & NAM VIỆT
             ========================================================= */}
-        <div className="rounded-3xl p-6 sm:p-8 bg-white border border-slate-200/90 shadow-sm relative overflow-hidden flex flex-col lg:flex-row lg:items-center justify-between gap-6 transition-all hover:shadow-md">
+        <div className="rounded-2xl sm:rounded-3xl p-5 sm:p-8 bg-white border-2 border-slate-300 shadow-md relative overflow-hidden flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           {/* Top subtle accent gradient bar */}
           <div
             className={`h-1.5 absolute top-0 left-0 right-0 ${
@@ -1343,10 +1343,10 @@ export default function StudentDashboard() {
                 return (
                   <div
                     key={assignment.id}
-                    className={`rounded-3xl border transition duration-300 overflow-hidden bg-white ${
+                    className={`rounded-2xl sm:rounded-3xl border-2 transition-[border-color,box-shadow] duration-200 overflow-hidden bg-white ${
                       isExpanded
-                        ? 'border-blue-500 shadow-lg ring-1 ring-blue-500/20'
-                        : 'border-slate-200 hover:border-slate-300 shadow-xs hover:shadow-sm'
+                        ? 'border-blue-600 shadow-lg'
+                        : 'border-slate-300 hover:border-slate-400 shadow-sm hover:shadow-md'
                     }`}
                   >
                     <button
