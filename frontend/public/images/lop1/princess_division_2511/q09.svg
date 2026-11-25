@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 290" width="600" height="290">
+  <defs>
+    <linearGradient id="qbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FEF9C3"/>
+      <stop offset="100%" stop-color="#FFF1F2"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="290" rx="26" fill="url(#qbg)" stroke="#EAB308" stroke-width="4"/>
+  <path d="M36 28 L38.2 33.8 L44 36 L38.2 38.2 L36 44 L33.8 38.2 L28 36 L33.8 33.8 Z" fill="#FBBF24" opacity="0.9"/>
+<path d="M560 31.2 L562.42 37.58 L568.8 40 L562.42 42.42 L560 48.8 L557.58 42.42 L551.2 40 L557.58 37.58 Z" fill="#EAB308" opacity="0.9"/>
+<path d="M555 242.8 L556.98 248.02 L562.2 250 L556.98 251.98 L555 257.2 L553.02 251.98 L547.8 250 L553.02 248.02 Z" fill="#A855F7" opacity="0.9"/>
+<path d="M170 253.6 L171.76 258.24 L176.4 260 L171.76 261.76 L170 266.4 L168.24 261.76 L163.6 260 L168.24 258.24 Z" fill="#FBBF24" opacity="0.9"/>
+
+  <rect x="24" y="16" width="164" height="32" rx="16" fill="#EAB308"/>
+  <text x="106" y="37" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">THỬ THÁCH 9</text>
+  <text x="204" y="38" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#831843">Táo Vàng Phép Thuật</text>
+
+  <!-- Princess Character Left -->
+  
+  <g transform="translate(88, 165) scale(1)">
+    <circle cx="0" cy="4" r="56" fill="#FDF2F8" opacity="0.9" />
+    <path d="M-22 22 Q-34 55 -38 68 Q0 78 38 68 Q34 55 22 22 Z" fill="#FDE047" stroke="#BE185D" stroke-width="2.2"/>
+    <path d="M-12 24 Q-16 56 -18 69 M0 24 L0 72 M12 24 Q16 56 18 69" stroke="#FBCFE8" stroke-width="1.8" fill="none" opacity="0.8"/>
+    <circle cx="-18" cy="14" r="8" fill="#F9A8D4" stroke="#BE185D" stroke-width="2"/>
+    <circle cx="18" cy="14" r="8" fill="#F9A8D4" stroke="#BE185D" stroke-width="2"/>
+    <path d="M-14 10 L14 10 L11 25 L-11 25 Z" fill="#EC4899" stroke="#BE185D" stroke-width="2"/>
+    <circle cx="0" cy="17" r="3.5" fill="#FDE047" stroke="#B45309" stroke-width="1"/>
+    <path d="M-18 18 Q-30 28 -34 17" stroke="#FDE2C8" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M18 18 Q28 26 37 12" stroke="#FDE2C8" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <line x1="37" y1="12" x2="49" y2="-12" stroke="#D97706" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="49,-24 52,-15 61,-15 54,-10 57,-1 49,-6 41,-1 44,-10 37,-15 46,-15" fill="#FACC15" stroke="#D97706" stroke-width="1.5"/>
+    <ellipse cx="0" cy="-12" rx="25" ry="25" fill="#5C3328"/>
+    <circle cx="-22" cy="-2" r="11" fill="#5C3328"/>
+    <circle cx="22" cy="-2" r="11" fill="#5C3328"/>
+    <circle cx="-20" cy="8" r="8" fill="#5C3328"/>
+    <circle cx="20" cy="8" r="8" fill="#5C3328"/>
+    <circle cx="0" cy="-9" r="19" fill="#FDE2C8" stroke="#E5B89B" stroke-width="1.5"/>
+    <path d="M-19 -13 C-19 -28 19 -28 19 -13 C13 -16 5 -18 0 -22 C-5 -18 -13 -16 -19 -13 Z" fill="#5C3328"/>
+    <circle cx="-7" cy="-9" r="2.7" fill="#1E293B"/>
+    <circle cx="7" cy="-9" r="2.7" fill="#1E293B"/>
+    <circle cx="-6" cy="-10" r="1" fill="#FFFFFF"/>
+    <circle cx="8" cy="-10" r="1" fill="#FFFFFF"/>
+    <ellipse cx="-11.5" cy="-4.5" rx="3.5" ry="2" fill="#FDA4AF" opacity="0.75"/>
+    <ellipse cx="11.5" cy="-4.5" rx="3.5" ry="2" fill="#FDA4AF" opacity="0.75"/>
+    <path d="M-4 -3.5 Q0 1.5 4 -3.5" stroke="#BE185D" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M-13 -26 L-10 -39 L-3 -31 L0 -43 L3 -31 L10 -39 L13 -26 Z" fill="#FACC15" stroke="#B45309" stroke-width="1.8" stroke-linejoin="round"/>
+    <circle cx="0" cy="-34" r="2.6" fill="#EC4899"/>
+    <circle cx="-8" cy="-31" r="1.8" fill="#38BDF8"/>
+    <circle cx="8" cy="-31" r="1.8" fill="#38BDF8"/>
+  </g>
+
+  <!-- Center Story Scene -->
+  <rect x="170" y="64" width="248" height="196" rx="20" fill="#FFFFFF" stroke="#FBCFE8" stroke-width="2.5"/>
+  
+        <text x="294" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#854D0E">728 quả táo vàng ÷ 7 cỗ xe kéo</text>
+        <!-- Golden Apple -->
+        <g transform="translate(294, 132)">
+          <circle cx="0" cy="2" r="16" fill="#FACC15" stroke="#B45309" stroke-width="2"/>
+          <path d="M0 -14 Q-4 -24 6 -24" stroke="#16A34A" stroke-width="2.5" fill="none"/>
+          <ellipse cx="6" cy="-20" rx="6" ry="3" fill="#4ADE80"/>
+          <text x="52" y="6" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#B45309">× 728</text>
+        </g>
+        <!-- 7 little carts -->
+        
+            <g transform="translate(196, 205)">
+              <rect x="-10" y="-8" width="20" height="14" rx="3" fill="#FEF3C7" stroke="#D97706" stroke-width="1.6"/>
+              <circle cx="-6" cy="8" r="3.5" fill="#94A3B8"/>
+              <circle cx="6" cy="8" r="3.5" fill="#94A3B8"/>
+              <text x="0" y="2" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#B45309">?</text>
+            </g>
+            <g transform="translate(228, 205)">
+              <rect x="-10" y="-8" width="20" height="14" rx="3" fill="#FEF3C7" stroke="#D97706" stroke-width="1.6"/>
+              <circle cx="-6" cy="8" r="3.5" fill="#94A3B8"/>
+              <circle cx="6" cy="8" r="3.5" fill="#94A3B8"/>
+              <text x="0" y="2" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#B45309">?</text>
+            </g>
+            <g transform="translate(260, 205)">
+              <rect x="-10" y="-8" width="20" height="14" rx="3" fill="#FEF3C7" stroke="#D97706" stroke-width="1.6"/>
+              <circle cx="-6" cy="8" r="3.5" fill="#94A3B8"/>
+              <circle cx="6" cy="8" r="3.5" fill="#94A3B8"/>
+              <text x="0" y="2" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#B45309">?</text>
+            </g>
+            <g transform="translate(292, 205)">
+              <rect x="-10" y="-8" width="20" height="14" rx="3" fill="#FEF3C7" stroke="#D97706" stroke-width="1.6"/>
+              <circle cx="-6" cy="8" r="3.5" fill="#94A3B8"/>
+              <circle cx="6" cy="8" r="3.5" fill="#94A3B8"/>
+              <text x="0" y="2" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#B45309">?</text>
+            </g>
+            <g transform="translate(324, 205)">
+              <rect x="-10" y="-8" width="20" height="14" rx="3" fill="#FEF3C7" stroke="#D97706" stroke-width="1.6"/>
+              <circle cx="-6" cy="8" r="3.5" fill="#94A3B8"/>
+              <circle cx="6" cy="8" r="3.5" fill="#94A3B8"/>
+              <text x="0" y="2" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#B45309">?</text>
+            </g>
+            <g transform="translate(356, 205)">
+              <rect x="-10" y="-8" width="20" height="14" rx="3" fill="#FEF3C7" stroke="#D97706" stroke-width="1.6"/>
+              <circle cx="-6" cy="8" r="3.5" fill="#94A3B8"/>
+              <circle cx="6" cy="8" r="3.5" fill="#94A3B8"/>
+              <text x="0" y="2" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#B45309">?</text>
+            </g>
+            <g transform="translate(388, 205)">
+              <rect x="-10" y="-8" width="20" height="14" rx="3" fill="#FEF3C7" stroke="#D97706" stroke-width="1.6"/>
+              <circle cx="-6" cy="8" r="3.5" fill="#94A3B8"/>
+              <circle cx="6" cy="8" r="3.5" fill="#94A3B8"/>
+              <text x="0" y="2" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#B45309">?</text>
+            </g>
+        <text x="294" y="244" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#64748B">Nhớ chú ý chữ số 0 ở giữa thương nhé!</text>
+      
+
+  <!-- Right Formula Crystal Card -->
+  <rect x="434" y="76" width="144" height="172" rx="20" fill="#FFFFFF" stroke="#EAB308" stroke-width="3"/>
+  <text x="506" y="102" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#9D174D">PHÉP CHIA HẾT</text>
+  <text x="506" y="142" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="bold" fill="#DB2777">728</text>
+  <text x="506" y="174" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold" fill="#7C3AED">÷ 7</text>
+  <line x1="454" y1="188" x2="558" y2="188" stroke="#F472B6" stroke-width="2.5" stroke-dasharray="5 4"/>
+  <rect x="466" y="198" width="80" height="36" rx="12" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2.5"/>
+  <text x="506" y="223" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="bold" fill="#B45309">= ?</text>
+</svg>
