@@ -123,7 +123,12 @@ Tạo thư mục `frontend/public/lectures/<slug>/` gồm 4 tệp:
 - **Thứ tự sắp xếp:**
   - **Nam Việt (Lớp 12):** Bắt buộc xếp: **Từ vựng $\to$ Word Formation $\to$ Ngữ pháp $\to$ Đọc hiểu**.
   - **Thái (Lớp 11):** Bỏ Phonetics, tập trung sâu vào Từ vựng, Word Formation, Ngữ pháp nâng cao, Đồng nghĩa/Trái nghĩa, Viết lại câu.
-- Mỗi câu hỏi phải có đầy đủ: `content`, `options` (A, B, C, D), `correct_answer` và `explanation` chi tiết từ Thầy Thức.
+- **Đa dạng hóa & Chuẩn Giao Diện Phòng Thi (`HighSchoolExamStudio`):**
+  - Giao diện phòng làm bài tập cho Thái và Nam Việt (`frontend/src/components/HighSchoolExamStudio.tsx`) sử dụng **Editorial Light Exam Theme** (`variant="light"` trong `KatexMath.tsx`, nền sáng `#F8FAFC`, chữ thường dễ đọc cho bài đọc dài, số liệu `tabular-nums`, hit-area $\ge 44\text{px}$, phím tắt `A–D` / `1–4` chọn đáp án & `←` `→` chuyển câu, nút `Xem giải thích` mở khóa ngay sau khi chọn đúng).
+  - **Phân nhóm Section:** Luôn gán `section_name` (hoặc `sectionName`) rõ ràng trong `question_payload` để UI tự động tạo **Section Navigator Pills** giúp học sinh nhảy nhanh giữa các phần (Từ vựng, Word Formation, Ngữ pháp, Đọc hiểu) trong đề 60–100 câu.
+  - **Tách Đọc Hiểu 2 Cột (Split Reader):** Đối với các câu Đọc điền khuyết, Thông báo, Tờ rơi, Đọc hiểu, hãy đặt đoạn văn vào `question_payload.passage` HOẶC ngăn cách bằng `\n\n**Question X:** ...` để giao diện tự động đưa văn bản sang **Khung Đọc Trái** (có nút chỉnh cỡ chữ `A-/A/A+`) và đặt câu hỏi + 4 đáp án ở **Khung Phải**.
+  - **Hỗ trợ `FILL_IN_BLANK` tiếng Anh:** Có thể xen kẽ câu hỏi gõ từ/chia dạng từ trực tiếp (`type: 'FILL_IN_BLANK'`) kèm mảng `accepted_answers` (chấm tự động tức thì qua `Kiểm tra`).
+- Mỗi câu hỏi phải có đầy đủ: `content`, `options` (A, B, C, D) hoặc `accepted_answers`, `correct_answer`, `section_name` và `explanation` chi tiết từ Thầy Thức.
 
 ---
 

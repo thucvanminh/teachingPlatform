@@ -62,6 +62,11 @@ $ARGUMENTS
 4. **Luôn có đúng 10 câu hỏi chia từ loại (Word Formation):** Trong bộ đề luôn luôn có đúng 10 câu hỏi dành cho dạng chia từ loại: cho 4 dạng Danh từ, Tính từ, Trạng từ, Động từ của cùng một gốc từ trong 4 đáp án A, B, C, D để học sinh chọn.
 5. **Từ vựng ngữ cảnh cơ bản nhất có thể (CRITICAL - Basic Context Words):** Vì học sinh khá yếu mảng từ vựng, **ngoài các từ vựng học trong Unit**, tất cả các từ ngữ dùng trong câu hỏi (câu dẫn, đáp án nhiễu) **phải dùng từ cơ bản, quen thuộc nhất có thể (Basic A1 - A2 / B1)**. Câu văn ngắn gọn, dễ hiểu, tránh các từ ngữ hiếm hay quá khó ngoài Unit.
 - **Thứ tự:** Nam Việt (Lớp 12) bắt buộc đưa câu hỏi Từ vựng lên đầu đề.
+- **Chuẩn UI Phòng Luyện Tập (`HighSchoolExamStudio`):**
+  - Giao diện làm bài của Thái và Nam Việt sử dụng **Editorial Light Exam Theme** (`frontend/src/components/HighSchoolExamStudio.tsx` + `variant="light"` trên `FormattedContent`).
+  - Luôn gắn `section_name` (hoặc `sectionName`) trong `question_payload` để UI gom nhóm **Section Navigator Pills** cho đề 60–100 câu.
+  - Với bài Đọc hiểu / Đọc điền khuyết / Thông báo / Tờ rơi: đặt đoạn văn trong `question_payload.passage` hoặc tách với câu hỏi bằng `\n\n**Question X:**` để UI tự động tách **2 cột (Bài đọc bên trái có nút `A-/A/A+` + Câu hỏi & 4 đáp án bên phải)**.
+  - Hỗ trợ đa dạng `MULTIPLE_CHOICE` và `FILL_IN_BLANK` (kèm `accepted_answers`).
 
 ### Bước 5: Nạp dữ liệu vào Database
 - Sử dụng script seed Node.js / Prisma Client (`learning_units`, `daily_student_assignments`, `assessments`, `questions`, `assessment_attempts`).

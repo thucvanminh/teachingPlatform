@@ -1269,19 +1269,23 @@ export default function StudentDashboard() {
                     <span>Live Interactive Lab • 3D Flashcard</span>
                   </span>
                   <span className="text-xs text-slate-400 font-mono">
-                    {isNamViet ? 'Unit 7: Mass Media' : 'Unit 4: ASEAN & Viet Nam'}
+                    {featuredAssignment?.assigned_date
+                      ? `Ngày ${formatAssignmentDate(featuredAssignment.assigned_date)}`
+                      : isNamViet ? 'Tiếng Anh 12' : 'Tiếng Anh 11'}
                   </span>
                 </div>
 
                 <h3 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
-                  {isNamViet
-                    ? 'Phòng Luyện Phản Xạ 50 Từ Vựng & Mệnh Đề Unit 7'
-                    : 'Phòng Luyện Từ Vựng Học Thuật & Ngữ Pháp Chuyên Sâu'}
+                  {featuredAssignment?.learning_units?.title ||
+                    (isNamViet
+                      ? 'Phòng Luyện Từ Vựng & Ngữ Pháp Tiếng Anh 12'
+                      : 'Phòng Luyện Từ Vựng Học Thuật & Ngữ Pháp Chuyên Sâu')}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  {isNamViet
-                    ? 'Lật thẻ 3D 2 chiều theo phím cách (Space), phát âm Web Speech API, mini-game Collocation và câu hỏi ngữ pháp cách thức (As if/were).'
-                    : 'Nắm chắc hệ thống Collocations B2/C1, cây từ loại (Word Family), đảo ngữ ngữ pháp và kỹ năng nhận diện bẫy đề thi 8.5+.'}
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed line-clamp-2">
+                  {featuredAssignment?.learning_units?.description ||
+                    (isNamViet
+                      ? 'Lật thẻ Flashcard 3D 2 chiều, phát âm Web Speech API, ngữ pháp chi tiết kèm bài tập phản xạ nhanh Quick Check.'
+                      : 'Nắm chắc từ vựng cốt lõi bằng Flashcard 3D 2 chiều, công thức ngữ pháp chuyên sâu và bài tập phản xạ nhanh.')}
                 </p>
               </div>
 
@@ -1486,7 +1490,7 @@ export default function StudentDashboard() {
                                         <Sparkles className="w-3 h-3 text-emerald-500" /> Flashcard 2 chiều
                                       </span>
                                       <span className="text-[11px] font-semibold px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-200/80 inline-flex items-center gap-1">
-                                        <Zap className="w-3 h-3 text-purple-500" /> Collocation
+                                        <Zap className="w-3 h-3 text-purple-500" /> Quick Check Quiz
                                       </span>
                                     </div>
                                   )}
@@ -1715,7 +1719,7 @@ export default function StudentDashboard() {
                 </div>
 
                 {/* Content / Iframe Frame */}
-                {hasInteractive && interactiveUrl ? (
+                {hasInteractive && interactiveUrl && lectureViewMode === 'interactive' ? (
                   <div className="flex-1 w-full h-full min-h-0 bg-slate-100 p-2">
                     <iframe
                       src={interactiveUrl}
@@ -1724,8 +1728,9 @@ export default function StudentDashboard() {
                     />
                   </div>
                 ) : (
-                  <div className="flex-1 overflow-y-auto p-6 sm:p-8">
+                  <div className="flex-1 overflow-y-auto p-6 sm:p-8 bg-white">
                     <FormattedContent
+                      variant="light"
                       text={activeLectureAssignment.learning_units?.lecture_content_markdown || ''}
                       className="text-slate-800 text-base sm:text-lg leading-relaxed space-y-4"
                     />

@@ -4,6 +4,8 @@ import React, { useMemo } from 'react';
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
 
+export type ContentVariant = 'dark' | 'light';
+
 interface KatexMathProps {
   math: string;
   block?: boolean;
@@ -32,10 +34,14 @@ export function KatexMath({ math, block = false, className = '' }: KatexMathProp
 }
 
 // Render inline markdown tokens: bold (**text**), inline math ($...$), code (`...`), links ([label](url))
-function renderInlineContent(rawText: string, customStrongClass?: string): React.ReactNode {
+function renderInlineContent(
+  rawText: string,
+  customStrongClass?: string,
+  variant: ContentVariant = 'dark',
+): React.ReactNode {
   if (!rawText) return null;
 
-  // Split by inline math ($...$), bold (**...**), code (`...`), and links ([label](url))
+  const isLight = variant === 'light';
   const regex = /(\$[^\$]+?\$|\*\*[^*]+\*\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/g;
   const parts = rawText.split(regex);
 
@@ -56,7 +62,7 @@ function renderInlineContent(rawText: string, customStrongClass?: string): React
       if (customStrongClass) {
         return (
           <strong key={i} className={customStrongClass}>
-            {renderInlineContent(inner, customStrongClass)}
+            {renderInlineContent(inner, customStrongClass, variant)}
           </strong>
         );
       }
@@ -65,7 +71,11 @@ function renderInlineContent(rawText: string, customStrongClass?: string): React
         return (
           <strong
             key={i}
-            className="font-black text-cyan-300 bg-cyan-950/80 px-2.5 py-1 rounded-lg border border-cyan-500/40 mr-1.5 inline-block tracking-tight text-sm sm:text-base shadow-xs"
+            className={
+              isLight
+                ? 'font-bold text-blue-700 bg-blue-50 px-2.5 py-0.5 rounded-md border border-blue-200 mr-1.5 inline-block tracking-tight text-xs sm:text-sm'
+                : 'font-black text-cyan-300 bg-cyan-950/80 px-2.5 py-1 rounded-lg border border-cyan-500/40 mr-1.5 inline-block tracking-tight text-sm sm:text-base shadow-xs'
+            }
           >
             {inner}
           </strong>
@@ -75,9 +85,13 @@ function renderInlineContent(rawText: string, customStrongClass?: string): React
       return (
         <strong
           key={i}
-          className="font-bold text-inherit brightness-125 drop-shadow-2xs tracking-tight"
+          className={
+            isLight
+              ? 'font-bold text-slate-950 tracking-tight'
+              : 'font-bold text-inherit brightness-125 drop-shadow-2xs tracking-tight'
+          }
         >
-          {renderInlineContent(inner, customStrongClass)}
+          {renderInlineContent(inner, customStrongClass, variant)}
         </strong>
       );
     }
@@ -88,7 +102,11 @@ function renderInlineContent(rawText: string, customStrongClass?: string): React
       return (
         <code
           key={i}
-          className="px-2 py-0.5 rounded-md bg-slate-800/90 text-cyan-300 border border-cyan-500/30 font-mono text-xs sm:text-sm font-semibold"
+          className={
+            isLight
+              ? 'px-1.5 py-0.5 rounded-md bg-slate-100 text-blue-700 border border-slate-200 font-mono text-xs sm:text-sm font-semibold'
+              : 'px-2 py-0.5 rounded-md bg-slate-800/90 text-cyan-300 border border-cyan-500/30 font-mono text-xs sm:text-sm font-semibold'
+          }
         >
           {inner}
         </code>
@@ -107,7 +125,11 @@ function renderInlineContent(rawText: string, customStrongClass?: string): React
           href={url}
           target={isExt ? '_blank' : undefined}
           rel={isExt ? 'noopener noreferrer' : undefined}
-          className="text-cyan-400 hover:text-cyan-300 underline font-semibold transition-colors duration-150 inline-flex items-center gap-1"
+          className={
+            isLight
+              ? 'text-blue-600 hover:text-blue-700 underline font-semibold transition-colors duration-150 inline-flex items-center gap-1'
+              : 'text-cyan-400 hover:text-cyan-300 underline font-semibold transition-colors duration-150 inline-flex items-center gap-1'
+          }
         >
           {label}
         </a>
@@ -237,7 +259,6 @@ function parseMarkdownBlocks(raw: string): BlockElement[] {
         i++;
         continue;
       }
-      // Multiline $$
       const mathLines: string[] = [trimmed.slice(2)];
       i++;
       while (i < lines.length && !lines[i].trim().endsWith('$$')) {
@@ -281,26 +302,33 @@ export function FormattedContent({
   text,
   className = '',
   strongClassName,
+  variant = 'dark',
 }: {
   text: string;
   className?: string;
   strongClassName?: string;
+  variant?: ContentVariant;
 }) {
   if (!text) return null;
 
+  const isLight = variant === 'light';
   const blocks = useMemo(() => parseMarkdownBlocks(text), [text]);
 
   return (
-    <div className={`space-y-4 text-inherit ${className}`}>
+    <div className={`space-y-3 text-inherit ${className}`}>
       {blocks.map((block, idx) => {
         switch (block.type) {
           case 'h1':
             return (
               <h1
                 key={idx}
-                className="text-2xl sm:text-3xl font-extrabold text-cyan-300 border-b border-cyan-500/30 pb-3 mb-4 mt-2 tracking-tight"
+                className={
+                  isLight
+                    ? 'text-xl sm:text-2xl font-extrabold text-slate-900 border-b border-slate-200 pb-2.5 mb-3 mt-1 tracking-tight'
+                    : 'text-2xl sm:text-3xl font-extrabold text-cyan-300 border-b border-cyan-500/30 pb-3 mb-4 mt-2 tracking-tight'
+                }
               >
-                {renderInlineContent(block.text || '', strongClassName)}
+                {renderInlineContent(block.text || '', strongClassName, variant)}
               </h1>
             );
 
@@ -308,16 +336,27 @@ export function FormattedContent({
             return (
               <h2
                 key={idx}
-                className="text-xl sm:text-2xl font-bold text-cyan-400 mt-6 mb-3 flex items-center gap-2 border-b border-slate-800/80 pb-2"
+                className={
+                  isLight
+                    ? 'text-lg sm:text-xl font-bold text-slate-900 mt-5 mb-2 flex items-center gap-2 border-b border-slate-200 pb-1.5'
+                    : 'text-xl sm:text-2xl font-bold text-cyan-400 mt-6 mb-3 flex items-center gap-2 border-b border-slate-800/80 pb-2'
+                }
               >
-                {renderInlineContent(block.text || '', strongClassName)}
+                {renderInlineContent(block.text || '', strongClassName, variant)}
               </h2>
             );
 
           case 'h3':
             return (
-              <h3 key={idx} className="text-lg sm:text-xl font-bold text-cyan-200 mt-5 mb-2">
-                {renderInlineContent(block.text || '', strongClassName)}
+              <h3
+                key={idx}
+                className={
+                  isLight
+                    ? 'text-base sm:text-lg font-bold text-slate-800 mt-4 mb-1.5'
+                    : 'text-lg sm:text-xl font-bold text-cyan-200 mt-5 mb-2'
+                }
+              >
+                {renderInlineContent(block.text || '', strongClassName, variant)}
               </h3>
             );
 
@@ -325,31 +364,49 @@ export function FormattedContent({
             return (
               <blockquote
                 key={idx}
-                className="p-4 my-3 rounded-2xl bg-cyan-950/50 border-l-4 border-cyan-400 text-cyan-100 shadow-md whitespace-pre-line"
+                className={
+                  isLight
+                    ? 'p-4 my-3 rounded-xl bg-slate-50 border border-slate-200 border-l-4 border-l-blue-600 text-slate-800 shadow-2xs whitespace-pre-line'
+                    : 'p-4 my-3 rounded-2xl bg-cyan-950/50 border-l-4 border-cyan-400 text-cyan-100 shadow-md whitespace-pre-line'
+                }
               >
-                {renderInlineContent(block.text || '', strongClassName)}
+                {renderInlineContent(block.text || '', strongClassName, variant)}
               </blockquote>
             );
 
           case 'hr':
-            return <hr key={idx} className="my-6 border-slate-700/60" />;
+            return <hr key={idx} className={isLight ? 'my-5 border-slate-200' : 'my-6 border-slate-700/60'} />;
 
           case 'table':
             return (
               <div
                 key={idx}
-                className="overflow-x-auto my-5 rounded-2xl border border-cyan-500/30 shadow-lg bg-slate-950/70"
+                className={
+                  isLight
+                    ? 'overflow-x-auto my-4 rounded-xl border border-slate-200 shadow-2xs bg-white'
+                    : 'overflow-x-auto my-5 rounded-2xl border border-cyan-500/30 shadow-lg bg-slate-950/70'
+                }
               >
                 <table className="w-full text-left border-collapse min-w-[540px]">
                   {block.headers && block.headers.length > 0 && (
                     <thead>
-                      <tr className="bg-slate-800/90 border-b border-cyan-500/30">
+                      <tr
+                        className={
+                          isLight
+                            ? 'bg-slate-50 border-b border-slate-200'
+                            : 'bg-slate-800/90 border-b border-cyan-500/30'
+                        }
+                      >
                         {block.headers.map((h, hIdx) => (
                           <th
                             key={hIdx}
-                            className="p-3.5 text-cyan-300 font-bold text-sm sm:text-base border-r border-slate-700/60 last:border-r-0"
+                            className={
+                              isLight
+                                ? 'p-3 text-slate-900 font-bold text-xs sm:text-sm border-r border-slate-200 last:border-r-0'
+                                : 'p-3.5 text-cyan-300 font-bold text-sm sm:text-base border-r border-slate-700/60 last:border-r-0'
+                            }
                           >
-                            {renderInlineContent(h, strongClassName)}
+                            {renderInlineContent(h, strongClassName, variant)}
                           </th>
                         ))}
                       </tr>
@@ -360,14 +417,22 @@ export function FormattedContent({
                       {block.rows.map((row, rIdx) => (
                         <tr
                           key={rIdx}
-                          className="border-b border-slate-800/80 hover:bg-slate-800/30 transition-colors duration-150"
+                          className={
+                            isLight
+                              ? 'border-b border-slate-100 hover:bg-slate-50/80 transition-colors duration-150'
+                              : 'border-b border-slate-800/80 hover:bg-slate-800/30 transition-colors duration-150'
+                          }
                         >
                           {row.map((cell, cIdx) => (
                             <td
                               key={cIdx}
-                              className="p-3.5 text-slate-200 text-sm sm:text-base border-r border-slate-800/60 last:border-r-0 align-top"
+                              className={
+                                isLight
+                                  ? 'p-3 text-slate-700 text-xs sm:text-sm border-r border-slate-100 last:border-r-0 align-top'
+                                  : 'p-3.5 text-slate-200 text-sm sm:text-base border-r border-slate-800/60 last:border-r-0 align-top'
+                              }
                             >
-                              {renderInlineContent(cell, strongClassName)}
+                              {renderInlineContent(cell, strongClassName, variant)}
                             </td>
                           ))}
                         </tr>
@@ -380,10 +445,17 @@ export function FormattedContent({
 
           case 'ul':
             return (
-              <ul key={idx} className="my-2.5 space-y-1.5 pl-6 list-disc text-slate-200 text-inherit">
+              <ul
+                key={idx}
+                className={
+                  isLight
+                    ? 'my-2 space-y-1.5 pl-5 list-disc text-slate-800 text-inherit'
+                    : 'my-2.5 space-y-1.5 pl-6 list-disc text-slate-200 text-inherit'
+                }
+              >
                 {block.items?.map((item, itemIdx) => (
                   <li key={itemIdx} className="leading-relaxed">
-                    {renderInlineContent(item, strongClassName)}
+                    {renderInlineContent(item, strongClassName, variant)}
                   </li>
                 ))}
               </ul>
@@ -391,10 +463,17 @@ export function FormattedContent({
 
           case 'ol':
             return (
-              <ol key={idx} className="my-2.5 space-y-1.5 pl-6 list-decimal text-slate-200 text-inherit">
+              <ol
+                key={idx}
+                className={
+                  isLight
+                    ? 'my-2 space-y-1.5 pl-5 list-decimal text-slate-800 text-inherit'
+                    : 'my-2.5 space-y-1.5 pl-6 list-decimal text-slate-200 text-inherit'
+                }
+              >
                 {block.items?.map((item, itemIdx) => (
                   <li key={itemIdx} className="leading-relaxed">
-                    {renderInlineContent(item, strongClassName)}
+                    {renderInlineContent(item, strongClassName, variant)}
                   </li>
                 ))}
               </ol>
@@ -417,13 +496,15 @@ export function FormattedContent({
                   className={`max-w-full sm:max-w-md max-h-72 w-auto rounded-2xl shadow-md p-1 object-contain mx-auto transition-transform hover:scale-[1.01] ${
                     isKidImg
                       ? 'border-2 border-pink-200 bg-white shadow-pink-100'
+                      : isLight
+                      ? 'border border-slate-200 bg-white shadow-xs'
                       : 'border border-cyan-500/40 shadow-[0_0_20px_rgba(6,182,212,0.25)] bg-[#0A0E1A]/90'
                   }`}
                 />
                 {block.alt && (
                   <span
                     className={`text-xs mt-1.5 font-bold tracking-wide text-center ${
-                      isKidImg ? 'text-pink-700' : 'text-cyan-300/80'
+                      isKidImg ? 'text-pink-700' : isLight ? 'text-slate-600' : 'text-cyan-300/80'
                     }`}
                   >
                     {block.alt}
@@ -436,8 +517,8 @@ export function FormattedContent({
           case 'paragraph':
           default:
             return (
-              <p key={idx} className="my-2 leading-relaxed whitespace-pre-line text-inherit">
-                {renderInlineContent(block.text || '', strongClassName)}
+              <p key={idx} className="my-1.5 leading-relaxed whitespace-pre-line text-inherit">
+                {renderInlineContent(block.text || '', strongClassName, variant)}
               </p>
             );
         }

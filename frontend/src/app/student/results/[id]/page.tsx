@@ -506,6 +506,12 @@ export default function StudentResultPage({ params }: { params: Promise<{ id: st
                           Câu {originalIndex + 1}
                         </span>
 
+                        {(q.question_payload?.sectionName || q.question_payload?.section_name) && (
+                          <span className="hidden sm:inline-block text-[11px] font-semibold px-2.5 py-0.5 rounded-md bg-blue-50 text-blue-700 border border-blue-200/80 truncate max-w-[260px]">
+                            {q.question_payload?.sectionName || q.question_payload?.section_name}
+                          </span>
+                        )}
+
                         <span
                           className={`text-xs font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 ${
                             !hasAnswered
@@ -537,8 +543,8 @@ export default function StudentResultPage({ params }: { params: Promise<{ id: st
                     </div>
 
                     {/* Question Content */}
-                    <div className="text-slate-900 text-sm sm:text-base font-medium leading-relaxed mb-4">
-                      <FormattedContent text={q.question_payload?.content_markdown || q.question_payload?.prompt_markdown || ''} />
+                    <div className="text-slate-900 text-sm sm:text-base font-normal leading-relaxed mb-4">
+                      <FormattedContent variant="light" text={q.question_payload?.content_markdown || q.question_payload?.prompt_markdown || ''} />
                     </div>
 
                     {/* Options list if MULTIPLE_CHOICE */}
@@ -621,7 +627,7 @@ export default function StudentResultPage({ params }: { params: Promise<{ id: st
                           <span>Giải thích chi tiết & Bẫy cần lưu ý:</span>
                         </span>
                         <div className="leading-relaxed text-slate-700">
-                          <FormattedContent text={q.grading_key_payload.explanation_markdown} />
+                          <FormattedContent variant="light" text={q.grading_key_payload.explanation_markdown} />
                         </div>
                       </div>
                     )}

@@ -4,6 +4,7 @@ import React, { useEffect, useState, use } from 'react';
 import { useRouter } from 'next/navigation';
 import { api, getUser } from '@/lib/api';
 import { FormattedContent } from '@/components/KatexMath';
+import { HighSchoolExamStudio } from '@/components/HighSchoolExamStudio';
 import { SpaceBackground } from '@/components/SpaceBackground';
 import {
   Clock,
@@ -758,6 +759,40 @@ export default function MissionRoomPage({ params }: { params: Promise<{ id: stri
     const ans = answers[q.id];
     return ans && (ans.selected_option_id || ans.text || ans.text_response || (ans.image_urls && ans.image_urls.length > 0));
   }).length;
+
+  if (isHighSchool) {
+    return (
+      <HighSchoolExamStudio
+        attempt={attempt}
+        questions={questions}
+        currentIndex={currentIndex}
+        setCurrentIndex={setCurrentIndex}
+        answers={answers}
+        timeLeft={timeLeft}
+        answeredCount={answeredCount}
+        submitting={submitting}
+        soundMuted={soundMuted}
+        setSoundMuted={setSoundMuted}
+        showGridDrawer={showGridDrawer}
+        setShowGridDrawer={setShowGridDrawer}
+        shakingOption={shakingOption}
+        checkedFillState={checkedFillState}
+        shakingFillInput={shakingFillInput}
+        isNamViet={isNamViet}
+        isThai={isThai}
+        getQuestionStatus={getQuestionStatus}
+        handleSelectOption={handleSelectOption}
+        handleFillText={handleFillText}
+        handleCheckFillBlank={handleCheckFillBlank}
+        handleSubmit={handleSubmit}
+        onExit={() => {
+          if (window.confirm('Con có chắc muốn rời phòng thi không? Bài làm chưa nộp sẽ cần làm lại từ đầu.')) {
+            router.push('/student');
+          }
+        }}
+      />
+    );
+  }
 
   const content = (
     <div
