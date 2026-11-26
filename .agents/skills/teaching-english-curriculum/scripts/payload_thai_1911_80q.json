@@ -1,164 +1,26 @@
 [
   {
-    "content": "__________ too much heat from the sun, greenhouse gases make the global temperature rise steadily.",
+    "content": "__________ with plastic bags and bottles, the city canal looked very dirty and smelled awful.",
     "options": [
       {
         "id": "A",
-        "text": "Trapping"
+        "text": "Covering"
       },
       {
         "id": "B",
-        "text": "Trapped"
+        "text": "Covered"
       },
       {
         "id": "C",
-        "text": "To trap"
+        "text": "Cover"
       },
       {
         "id": "D",
-        "text": "Trap"
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Thầy Thức hướng dẫn Thái: Mệnh đề nguyên nhân mang nghĩa chủ động ('Bởi vì khí nhà kính giữ quá nhiều nhiệt...') được rút gọn bằng Phân từ hiện tại V-ing ➔ 'Trapping'. Phương án A là đáp án chính xác."
-  },
-  {
-    "content": "Walking along the local river, the high school volunteers __________ hundreds of dirty plastic bottles.",
-    "options": [
-      {
-        "id": "A",
-        "text": "picking up"
-      },
-      {
-        "id": "B",
-        "text": "picked up"
-      },
-      {
-        "id": "C",
-        "text": "were picked up"
-      },
-      {
-        "id": "D",
-        "text": "to pick up"
+        "text": "To cover"
       }
     ],
     "correctAnswer": "B",
-    "explanation": "Thầy Thức hướng dẫn Thái: 'Walking along the local river' là mệnh đề phân từ rút gọn, câu đã có chủ ngữ 'the high school volunteers', vị trí còn thiếu là động từ chính ở thì Quá khứ đơn ➔ 'picked up'. Phương án B là đáp án đúng!"
-  },
-  {
-    "content": "__________ fossil fuels to produce electricity, old power stations release a lot of black smoke.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Burned"
-      },
-      {
-        "id": "B",
-        "text": "Burn"
-      },
-      {
-        "id": "C",
-        "text": "Burning"
-      },
-      {
-        "id": "D",
-        "text": "To burning"
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Thầy Thức hướng dẫn Thái: Chủ ngữ 'old power stations' chủ động thực hiện hành động đốt nhiên liệu hóa thạch. Rút gọn mệnh đề nguyên nhân chủ động dùng V-ing ➔ 'Burning'. Phương án C là đáp án đúng!"
-  },
-  {
-    "content": "Realizing the dangerous effects of extreme weather, the farmers __________ more trees around their vegetable fields.",
-    "options": [
-      {
-        "id": "A",
-        "text": "planting"
-      },
-      {
-        "id": "B",
-        "text": "to plant"
-      },
-      {
-        "id": "C",
-        "text": "were planted"
-      },
-      {
-        "id": "D",
-        "text": "planted"
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Thầy Thức hướng dẫn Thái: Vế trước là cụm phân từ 'Realizing...', vế sau cần một vị ngữ hoàn chỉnh thì Quá khứ đơn cho chủ ngữ 'the farmers' ➔ 'planted'. Phương án D là đáp án chính xác."
-  },
-  {
-    "content": "__________ the bushfire spread quickly towards the houses, the villagers called the firemen immediately.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Seeing"
-      },
-      {
-        "id": "B",
-        "text": "Seen"
-      },
-      {
-        "id": "C",
-        "text": "To seeing"
-      },
-      {
-        "id": "D",
-        "text": "Was seeing"
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Thầy Thức hướng dẫn Thái: Diễn tả hành động xảy ra liên tiếp ('Khi nhìn thấy đám cháy...'). Rút gọn mệnh đề thời gian chủ động dùng V-ing ➔ 'Seeing'. Phương án A là đáp án chính xác."
-  },
-  {
-    "content": "__________ how to calculate his carbon footprint, Nam asked his science teacher for helpful advice.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Didn't know"
-      },
-      {
-        "id": "B",
-        "text": "Not knowing"
-      },
-      {
-        "id": "C",
-        "text": "Not known"
-      },
-      {
-        "id": "D",
-        "text": "No knowing"
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Thầy Thức hướng dẫn Thái: Dạng phủ định của mệnh đề phân từ là 'NOT + V-ing' (tuyệt đối không mượn trợ động từ didn't/doesn't) ➔ 'Not knowing'. Phương án B là đáp án đúng!"
-  },
-  {
-    "content": "Looking at the tall factory chimneys, we __________ thick dark clouds of smoke pouring into the sky.",
-    "options": [
-      {
-        "id": "A",
-        "text": "seeing"
-      },
-      {
-        "id": "B",
-        "text": "were seen"
-      },
-      {
-        "id": "C",
-        "text": "saw"
-      },
-      {
-        "id": "D",
-        "text": "to see"
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Thầy Thức hướng dẫn Thái: Sau mệnh đề phân từ 'Looking...', mệnh đề chính cần động từ chia ở thì Quá khứ đơn 'saw' cho chủ ngữ 'we'. Phương án C là đáp án đúng!"
+    "explanation": "Thầy Thức hướng dẫn Thái: Con kênh 'bị bao phủ/ngập đầy' bởi rác thải (nghĩa bị động) ➔ dùng 'Covered'. Chọn B."
   },
   {
     "content": "__________ the news about the melting polar ice caps, the students decided to start a green club.",
@@ -184,73 +46,27 @@
     "explanation": "Thầy Thức hướng dẫn Thái: Rút gọn 'When they heard the news...' cùng chủ ngữ 'the students' thành V-ing ➔ 'Hearing'. Phương án D là đáp án chính xác."
   },
   {
-    "content": "__________ near the coal power plant, local residents often complain about the dirty air.",
+    "content": "Which sentence correctly combines: 'The students were worried about plastic waste. They joined the beach cleanup.'?",
     "options": [
       {
         "id": "A",
-        "text": "Living"
+        "text": "Worrying about plastic waste, the beach cleanup was joined by the students."
       },
       {
         "id": "B",
-        "text": "Lived"
+        "text": "Worried about plastic waste, the students joined the beach cleanup."
       },
       {
         "id": "C",
-        "text": "Live"
+        "text": "The students worried about plastic waste, joined the beach cleanup was fun."
       },
       {
         "id": "D",
-        "text": "Are living"
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Thầy Thức hướng dẫn Thái: Rút gọn 'Because they live near...' thành Present Participle 'Living' (mang nghĩa chủ động). Phương án A là đáp án chính xác."
-  },
-  {
-    "content": "Understanding the importance of renewable energy, the city council __________ thousands of solar panels on public roofs.",
-    "options": [
-      {
-        "id": "A",
-        "text": "installing"
-      },
-      {
-        "id": "B",
-        "text": "installed"
-      },
-      {
-        "id": "C",
-        "text": "were installed"
-      },
-      {
-        "id": "D",
-        "text": "to install"
+        "text": "Worried about plastic waste, the beach cleanup attracted the students."
       }
     ],
     "correctAnswer": "B",
-    "explanation": "Thầy Thức hướng dẫn Thái: Động từ chính của câu ở thì Quá khứ đơn là 'installed'. Phương án B là đáp án đúng!"
-  },
-  {
-    "content": "__________ that burning coal produces heavy soot, my family switched to electric cookers.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Knew"
-      },
-      {
-        "id": "B",
-        "text": "Known"
-      },
-      {
-        "id": "C",
-        "text": "Knowing"
-      },
-      {
-        "id": "D",
-        "text": "To know"
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Thầy Thức hướng dẫn Thái: Mệnh đề nguyên nhân mang nghĩa chủ động ('Because my family knew...') ➔ rút gọn thành 'Knowing'. Phương án C là đáp án chính xác."
+    "explanation": "Thầy Thức hướng dẫn Thái: Rút gọn 'Because the students were worried...' ➔ 'Worried about plastic waste, the students joined the beach cleanup.' Phương án B chuẩn xác và không bị lỗi lơ lửng. Chọn B!"
   },
   {
     "content": "Feeling very worried about global warming, Thai __________ reading an informative book on climate change.",
@@ -276,142 +92,50 @@
     "explanation": "Thầy Thức hướng dẫn Thái: Vế đầu là phân từ hiện tại 'Feeling...', vế sau cần động từ chính thì Quá khứ đơn ➔ 'started'. Phương án D là đáp án chính xác."
   },
   {
-    "content": "__________ reusable water bottles, teenagers help reduce the huge amount of plastic landfill waste.",
+    "content": "__________ about the serious danger of floods, the villagers packed their bags and left early.",
     "options": [
       {
         "id": "A",
-        "text": "Using"
+        "text": "Warning"
       },
       {
         "id": "B",
-        "text": "Used"
+        "text": "Warn"
       },
       {
         "id": "C",
-        "text": "Use"
+        "text": "Warned"
       },
       {
         "id": "D",
-        "text": "Were using"
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Thầy Thức hướng dẫn Thái: Rút gọn 'By using / When they use reusable bottles...' mang nghĩa chủ động ➔ 'Using'. Phương án A là đáp án đúng!"
-  },
-  {
-    "content": "Cycling to school every morning, the young boy __________ his daily carbon footprint effectively.",
-    "options": [
-      {
-        "id": "A",
-        "text": "reducing"
-      },
-      {
-        "id": "B",
-        "text": "reduces"
-      },
-      {
-        "id": "C",
-        "text": "to reduce"
-      },
-      {
-        "id": "D",
-        "text": "reduced by"
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Thầy Thức hướng dẫn Thái: Động từ chính ở thì Hiện tại đơn chia theo chủ ngữ số ít 'the young boy' ➔ 'reduces'. Phương án B là đáp án chính xác."
-  },
-  {
-    "content": "__________ enough money for solar panels, the small school still uses energy from fossil fuels.",
-    "options": [
-      {
-        "id": "A",
-        "text": "No having"
-      },
-      {
-        "id": "B",
-        "text": "Doesn't have"
-      },
-      {
-        "id": "C",
-        "text": "Not having"
-      },
-      {
-        "id": "D",
-        "text": "Not had"
+        "text": "To warn"
       }
     ],
     "correctAnswer": "C",
-    "explanation": "Thầy Thức hướng dẫn Thái: Phủ định của phân từ hiện tại là 'Not + V-ing' ➔ 'Not having'. Phương án C là đáp án chuẩn xác!"
+    "explanation": "Thầy Thức hướng dẫn Thái: Người dân làng 'được cảnh báo' về nguy cơ lũ lụt (nghĩa bị động: Because they were warned...) ➔ dùng Quá khứ phân từ 'Warned'. Chọn C."
   },
   {
-    "content": "Planting trees in the park, the green club members __________ very proud of their useful contribution.",
+    "content": "__________ the severe impact of sea level rise, local engineers designed stronger sea dykes.",
     "options": [
       {
         "id": "A",
-        "text": "feeling"
+        "text": "Forecasting"
       },
       {
         "id": "B",
-        "text": "to feel"
+        "text": "To forecast"
       },
       {
         "id": "C",
-        "text": "were felt"
+        "text": "Forecasted"
       },
       {
         "id": "D",
-        "text": "felt"
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Thầy Thức hướng dẫn Thái: Vị trí vị ngữ chính của câu ở thì Quá khứ đơn ➔ 'felt'. Phương án D là đáp án đúng!"
-  },
-  {
-    "content": "__________ off light bulbs and air conditioners when leaving, we save a large amount of electricity.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Turning"
-      },
-      {
-        "id": "B",
-        "text": "Turned"
-      },
-      {
-        "id": "C",
-        "text": "Turn"
-      },
-      {
-        "id": "D",
-        "text": "To turning"
+        "text": "Forecast"
       }
     ],
     "correctAnswer": "A",
-    "explanation": "Thầy Thức hướng dẫn Thái: Rút gọn 'When we turn off...' mang nghĩa chủ động ➔ 'Turning'. Phương án A là đáp án đúng!"
-  },
-  {
-    "content": "Working together in the environmental campaign, the classmates __________ great teamwork skills.",
-    "options": [
-      {
-        "id": "A",
-        "text": "developing"
-      },
-      {
-        "id": "B",
-        "text": "developed"
-      },
-      {
-        "id": "C",
-        "text": "to develop"
-      },
-      {
-        "id": "D",
-        "text": "were developed"
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Thầy Thức hướng dẫn Thái: Động từ chính của mệnh đề ở thì Quá khứ đơn ➔ 'developed'. Phương án B là đáp án chính xác."
+    "explanation": "Thầy Thức hướng dẫn Thái: Các kỹ sư chủ động dự báo tác động của nước biển dâng (chủ động) ➔ dùng 'Forecasting'. Chọn A."
   },
   {
     "content": "__________ about climate change on the news, my younger sister decided to save tap water at home.",
@@ -437,6 +161,719 @@
     "explanation": "Thầy Thức hướng dẫn Thái: Rút gọn mệnh đề thời gian 'When she read...' mang nghĩa chủ động ➔ 'Reading'. Phương án C là đáp án đúng!"
   },
   {
+    "content": "__________ cool in hot summer weather, farm animals can easily suffer from heat stress.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Not kept"
+      },
+      {
+        "id": "B",
+        "text": "Not keeping"
+      },
+      {
+        "id": "C",
+        "text": "Didn't keep"
+      },
+      {
+        "id": "D",
+        "text": "To not keep"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Thầy Thức hướng dẫn Thái: Mệnh đề điều kiện bị động phủ định ('If farm animals are not kept cool...') được rút gọn bằng 'Not + V3/ed' ➔ 'Not kept'. Phương án A là đáp án đúng!"
+  },
+  {
+    "content": "Planting trees in the park, the green club members __________ very proud of their useful contribution.",
+    "options": [
+      {
+        "id": "A",
+        "text": "feeling"
+      },
+      {
+        "id": "B",
+        "text": "to feel"
+      },
+      {
+        "id": "C",
+        "text": "were felt"
+      },
+      {
+        "id": "D",
+        "text": "felt"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Thầy Thức hướng dẫn Thái: Vị trí vị ngữ chính của câu ở thì Quá khứ đơn ➔ 'felt'. Phương án D là đáp án đúng!"
+  },
+  {
+    "content": "__________ by thousands of green trees, the small mountain village enjoys cool and fresh air all year.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Surrounding"
+      },
+      {
+        "id": "B",
+        "text": "Surround"
+      },
+      {
+        "id": "C",
+        "text": "Surrounded"
+      },
+      {
+        "id": "D",
+        "text": "To surround"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Thầy Thức hướng dẫn Thái: Ngôi làng 'được bao quanh' bởi hàng ngàn cây xanh (bị động: Because it is surrounded...) ➔ dùng 'Surrounded'. Chọn C."
+  },
+  {
+    "content": "Which sentence is grammatically correct?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Looking out of the window, Nam saw the tall factory chimney releasing smoke."
+      },
+      {
+        "id": "B",
+        "text": "Looking out of the window, black soot fell onto the table."
+      },
+      {
+        "id": "C",
+        "text": "Looking out of the window, the tall factory chimney was releasing smoke."
+      },
+      {
+        "id": "D",
+        "text": "Looking out of the window, it was a very gloomy afternoon."
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Thầy Thức hướng dẫn Thái: Người nhìn qua cửa sổ là bạn Nam ('Nam saw...'). Ống khói hay bồ hóng không biết nhìn! Phương án A là đáp án chính xác."
+  },
+  {
+    "content": "__________ near the windy coastline, the new wind farm produces enough green energy for the whole city.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Locating"
+      },
+      {
+        "id": "B",
+        "text": "Located"
+      },
+      {
+        "id": "C",
+        "text": "Locate"
+      },
+      {
+        "id": "D",
+        "text": "To locate"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Thầy Thức hướng dẫn Thái: Trang trại điện gió 'được đặt vị trí' ở bờ biển (bị động: Because it is located...) ➔ dùng 'Located'. Chọn B."
+  },
+  {
+    "content": "__________ near the coal power plant, local residents often complain about the dirty air.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Living"
+      },
+      {
+        "id": "B",
+        "text": "Lived"
+      },
+      {
+        "id": "C",
+        "text": "Live"
+      },
+      {
+        "id": "D",
+        "text": "Are living"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Thầy Thức hướng dẫn Thái: Rút gọn 'Because they live near...' thành Present Participle 'Living' (mang nghĩa chủ động). Phương án A là đáp án chính xác."
+  },
+  {
+    "content": "__________ in large amounts by factories, carbon dioxide causes air pollution and global warming.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Producing"
+      },
+      {
+        "id": "B",
+        "text": "To produce"
+      },
+      {
+        "id": "C",
+        "text": "Produced"
+      },
+      {
+        "id": "D",
+        "text": "Produce"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Thầy Thức hướng dẫn Thái: Khí CO2 'được thải ra / tạo ra' bởi các nhà máy (nghĩa bị động: If it is produced...) ➔ dùng Quá khứ phân từ 'Produced'. Chọn C."
+  },
+  {
+    "content": "__________ in solar energy, many countries are building huge power farms in sunny deserts.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Believed"
+      },
+      {
+        "id": "B",
+        "text": "Believing"
+      },
+      {
+        "id": "C",
+        "text": "Belief"
+      },
+      {
+        "id": "D",
+        "text": "Believe"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Thầy Thức hướng dẫn Thái: Các quốc gia chủ động tin tưởng vào năng lượng mặt trời (nghĩa chủ động: Because they believe...) ➔ dùng Present Participle 'Believing'. Chọn B."
+  },
+  {
+    "content": "__________ by the powerful typhoon, hundreds of electric poles fell onto the road.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Destroying"
+      },
+      {
+        "id": "B",
+        "text": "Destroy"
+      },
+      {
+        "id": "C",
+        "text": "To destroy"
+      },
+      {
+        "id": "D",
+        "text": "Destroyed"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Thầy Thức hướng dẫn Thái: Các cột điện 'bị phá hủy' bởi cơn bão lớn (bị động) ➔ dùng 'Destroyed'. Chọn D."
+  },
+  {
+    "content": "Walking along the local river, the high school volunteers __________ hundreds of dirty plastic bottles.",
+    "options": [
+      {
+        "id": "A",
+        "text": "picking up"
+      },
+      {
+        "id": "B",
+        "text": "picked up"
+      },
+      {
+        "id": "C",
+        "text": "were picked up"
+      },
+      {
+        "id": "D",
+        "text": "to pick up"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Thầy Thức hướng dẫn Thái: 'Walking along the local river' là mệnh đề phân từ rút gọn, câu đã có chủ ngữ 'the high school volunteers', vị trí còn thiếu là động từ chính ở thì Quá khứ đơn ➔ 'picked up'. Phương án B là đáp án đúng!"
+  },
+  {
+    "content": "Which sentence is grammatically correct and meaningful?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Cleaning up the dirty beach, many old plastic bottles were found by the students."
+      },
+      {
+        "id": "B",
+        "text": "Cleaning up the dirty beach, the hot sun made everyone very tired."
+      },
+      {
+        "id": "C",
+        "text": "Cleaning up the dirty beach, the ocean looked much cleaner and bluer."
+      },
+      {
+        "id": "D",
+        "text": "Cleaning up the dirty beach, the students felt very proud of their hard work."
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Thầy Thức hướng dẫn Thái: Chủ ngữ thực hiện hành động dọn dẹp bãi biển ('Cleaning up the dirty beach') phải là 'the students' (các em học sinh). Chai nhựa, mặt trời hay đại dương không thể tự dọn bãi biển! Chọn D."
+  },
+  {
+    "content": "__________ that burning coal produces heavy soot, my family switched to electric cookers.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Knew"
+      },
+      {
+        "id": "B",
+        "text": "Known"
+      },
+      {
+        "id": "C",
+        "text": "Knowing"
+      },
+      {
+        "id": "D",
+        "text": "To know"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Thầy Thức hướng dẫn Thái: Mệnh đề nguyên nhân mang nghĩa chủ động ('Because my family knew...') ➔ rút gọn thành 'Knowing'. Phương án C là đáp án chính xác."
+  },
+  {
+    "content": "__________ by our biology teacher, we planted ten young fruit trees in our school garden.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Encouraging"
+      },
+      {
+        "id": "B",
+        "text": "Encourage"
+      },
+      {
+        "id": "C",
+        "text": "To encourage"
+      },
+      {
+        "id": "D",
+        "text": "Encouraged"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Thầy Thức hướng dẫn Thái: Chúng tôi 'được khuyến khích, động viên' bởi giáo viên (bị động) ➔ dùng 'Encouraged'. Chọn D."
+  },
+  {
+    "content": "__________ the bushfire spread quickly towards the houses, the villagers called the firemen immediately.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Seeing"
+      },
+      {
+        "id": "B",
+        "text": "Seen"
+      },
+      {
+        "id": "C",
+        "text": "To seeing"
+      },
+      {
+        "id": "D",
+        "text": "Was seeing"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Thầy Thức hướng dẫn Thái: Diễn tả hành động xảy ra liên tiếp ('Khi nhìn thấy đám cháy...'). Rút gọn mệnh đề thời gian chủ động dùng V-ing ➔ 'Seeing'. Phương án A là đáp án chính xác."
+  },
+  {
+    "content": "__________ by industrial waste, the river water could no longer be used for cooking or drinking.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Polluting"
+      },
+      {
+        "id": "B",
+        "text": "Polluted"
+      },
+      {
+        "id": "C",
+        "text": "Pollute"
+      },
+      {
+        "id": "D",
+        "text": "To pollute"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Thầy Thức hướng dẫn Thái: Nước sông 'bị ô nhiễm' bởi chất thải công nghiệp (bị động) ➔ dùng 'Polluted'. Chọn B."
+  },
+  {
+    "content": "Looking at the tall factory chimneys, we __________ thick dark clouds of smoke pouring into the sky.",
+    "options": [
+      {
+        "id": "A",
+        "text": "seeing"
+      },
+      {
+        "id": "B",
+        "text": "were seen"
+      },
+      {
+        "id": "C",
+        "text": "saw"
+      },
+      {
+        "id": "D",
+        "text": "to see"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Thầy Thức hướng dẫn Thái: Sau mệnh đề phân từ 'Looking...', mệnh đề chính cần động từ chia ở thì Quá khứ đơn 'saw' cho chủ ngữ 'we'. Phương án C là đáp án đúng!"
+  },
+  {
+    "content": "Which sentence is grammatically correct and meaningful?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Walking in the burning woods, we saw thick smoke rising above the trees."
+      },
+      {
+        "id": "B",
+        "text": "Walking in the burning woods, thick smoke was seen by our eyes."
+      },
+      {
+        "id": "C",
+        "text": "Walking in the burning woods, the heat was completely unbearable."
+      },
+      {
+        "id": "D",
+        "text": "Walking in the burning woods, our eyes were hurt badly."
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Thầy Thức hướng dẫn Thái: Chủ ngữ sau dấu phẩy phải là người thực hiện hành động đi bộ ('we'). Các phương án B (smoke), C (the heat), D (our eyes) đều mắc bẫy phân từ lơ lửng sai ngữ pháp. Chọn A!"
+  },
+  {
+    "content": "__________ enough money for solar panels, the small school still uses energy from fossil fuels.",
+    "options": [
+      {
+        "id": "A",
+        "text": "No having"
+      },
+      {
+        "id": "B",
+        "text": "Doesn't have"
+      },
+      {
+        "id": "C",
+        "text": "Not having"
+      },
+      {
+        "id": "D",
+        "text": "Not had"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Thầy Thức hướng dẫn Thái: Phủ định của phân từ hiện tại là 'Not + V-ing' ➔ 'Not having'. Phương án C là đáp án chuẩn xác!"
+  },
+  {
+    "content": "__________ by the green club president, the school cleanup project was very successful.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Leading"
+      },
+      {
+        "id": "B",
+        "text": "Lead"
+      },
+      {
+        "id": "C",
+        "text": "Leader"
+      },
+      {
+        "id": "D",
+        "text": "Led"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Thầy Thức hướng dẫn Thái: Dự án dọn dẹp 'được dẫn dắt' bởi bạn chủ nhiệm CLB (bị động) ➔ dùng V3/ed 'Led'. Chọn D."
+  },
+  {
+    "content": "__________ off light bulbs and air conditioners when leaving, we save a large amount of electricity.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Turning"
+      },
+      {
+        "id": "B",
+        "text": "Turned"
+      },
+      {
+        "id": "C",
+        "text": "Turn"
+      },
+      {
+        "id": "D",
+        "text": "To turning"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Thầy Thức hướng dẫn Thái: Rút gọn 'When we turn off...' mang nghĩa chủ động ➔ 'Turning'. Phương án A là đáp án đúng!"
+  },
+  {
+    "content": "__________ of clean water, the dried crops in the field died within three weeks.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Depriving"
+      },
+      {
+        "id": "B",
+        "text": "Deprive"
+      },
+      {
+        "id": "C",
+        "text": "Deprived"
+      },
+      {
+        "id": "D",
+        "text": "To deprive"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Thầy Thức hướng dẫn Thái: Cây trồng 'bị tước đoạt, bị thiếu' nước sạch (bị động: Because they were deprived of...) ➔ dùng 'Deprived'. Chọn C."
+  },
+  {
+    "content": "Realizing the dangerous effects of extreme weather, the farmers __________ more trees around their vegetable fields.",
+    "options": [
+      {
+        "id": "A",
+        "text": "planting"
+      },
+      {
+        "id": "B",
+        "text": "to plant"
+      },
+      {
+        "id": "C",
+        "text": "were planted"
+      },
+      {
+        "id": "D",
+        "text": "planted"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Thầy Thức hướng dẫn Thái: Vế trước là cụm phân từ 'Realizing...', vế sau cần một vị ngữ hoàn chỉnh thì Quá khứ đơn cho chủ ngữ 'the farmers' ➔ 'planted'. Phương án D là đáp án chính xác."
+  },
+  {
+    "content": "Which sentence correctly fixes the grammar mistake in: 'Flying over the flooded village, many drowned cows were seen.'?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Flying over the flooded village, a loud noise was heard by everyone."
+      },
+      {
+        "id": "B",
+        "text": "Flying over the flooded village, many drowned cows could be observed."
+      },
+      {
+        "id": "C",
+        "text": "Flying over the flooded village, the helicopter pilot saw many drowned cows."
+      },
+      {
+        "id": "D",
+        "text": "Flying over the flooded village, the water was very high and deep."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Thầy Thức hướng dẫn Thái: Người bay qua ngôi làng là phi công trực thăng ('the helicopter pilot'). Phương án C chứa đúng chủ thể thực hiện hành động. Chọn C!"
+  },
+  {
+    "content": "Working together in the environmental campaign, the classmates __________ great teamwork skills.",
+    "options": [
+      {
+        "id": "A",
+        "text": "developing"
+      },
+      {
+        "id": "B",
+        "text": "developed"
+      },
+      {
+        "id": "C",
+        "text": "to develop"
+      },
+      {
+        "id": "D",
+        "text": "were developed"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Thầy Thức hướng dẫn Thái: Động từ chính của mệnh đề ở thì Quá khứ đơn ➔ 'developed'. Phương án B là đáp án chính xác."
+  },
+  {
+    "content": "__________ carefully on time, harmful factory waste can damage the local river ecology.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Not treated"
+      },
+      {
+        "id": "B",
+        "text": "Not treating"
+      },
+      {
+        "id": "C",
+        "text": "Didn't treat"
+      },
+      {
+        "id": "D",
+        "text": "Not treat"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Thầy Thức hướng dẫn Thái: Điều kiện bị động phủ định ('If harmful factory waste is not treated...') rút gọn thành 'Not + V3/ed' ➔ 'Not treated'. Chọn A."
+  },
+  {
+    "content": "Understanding the importance of renewable energy, the city council __________ thousands of solar panels on public roofs.",
+    "options": [
+      {
+        "id": "A",
+        "text": "installing"
+      },
+      {
+        "id": "B",
+        "text": "installed"
+      },
+      {
+        "id": "C",
+        "text": "were installed"
+      },
+      {
+        "id": "D",
+        "text": "to install"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Thầy Thức hướng dẫn Thái: Động từ chính của câu ở thì Quá khứ đơn là 'installed'. Phương án B là đáp án đúng!"
+  },
+  {
+    "content": "__________ by strong tropical storms, the coastal wooden houses had to be rebuilt.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Damaging"
+      },
+      {
+        "id": "B",
+        "text": "Damage"
+      },
+      {
+        "id": "C",
+        "text": "To damage"
+      },
+      {
+        "id": "D",
+        "text": "Damaged"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Thầy Thức hướng dẫn Thái: Nhà gỗ 'bị hư hại' bởi bão nhiệt đới (nghĩa bị động) ➔ dùng 'Damaged'. Chọn D."
+  },
+  {
+    "content": "__________ too much heat from the sun, greenhouse gases make the global temperature rise steadily.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Trapping"
+      },
+      {
+        "id": "B",
+        "text": "Trapped"
+      },
+      {
+        "id": "C",
+        "text": "To trap"
+      },
+      {
+        "id": "D",
+        "text": "Trap"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Thầy Thức hướng dẫn Thái: Mệnh đề nguyên nhân mang nghĩa chủ động ('Bởi vì khí nhà kính giữ quá nhiều nhiệt...') được rút gọn bằng Phân từ hiện tại V-ing ➔ 'Trapping'. Phương án A là đáp án chính xác."
+  },
+  {
+    "content": "__________ in huge amounts for electricity, coal releases dark smoke and toxic chemicals.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Burning"
+      },
+      {
+        "id": "B",
+        "text": "Burnt"
+      },
+      {
+        "id": "C",
+        "text": "To burn"
+      },
+      {
+        "id": "D",
+        "text": "To be burnt"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Thầy Thức hướng dẫn Thái: Than đá 'được đốt' (nghĩa bị động: If/Because it is burnt). Rút gọn mệnh đề bị động dùng Quá khứ phân từ V3/ed ➔ 'Burnt'. Chọn B."
+  },
+  {
+    "content": "__________ reusable water bottles, teenagers help reduce the huge amount of plastic landfill waste.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Using"
+      },
+      {
+        "id": "B",
+        "text": "Used"
+      },
+      {
+        "id": "C",
+        "text": "Use"
+      },
+      {
+        "id": "D",
+        "text": "Were using"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Thầy Thức hướng dẫn Thái: Rút gọn 'By using / When they use reusable bottles...' mang nghĩa chủ động ➔ 'Using'. Phương án A là đáp án đúng!"
+  },
+  {
+    "content": "Which sentence is grammatically correct and logical?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Worried about the storm, the school roof was quickly repaired."
+      },
+      {
+        "id": "B",
+        "text": "Worried about the storm, the headmaster told all students to go home early."
+      },
+      {
+        "id": "C",
+        "text": "Worried about the storm, our school bags were packed hurriedly."
+      },
+      {
+        "id": "D",
+        "text": "Worried about the storm, the rain began to fall heavily."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Thầy Thức hướng dẫn Thái: Người cảm thấy lo lắng ('Worried') phải là thầy hiệu trưởng ('the headmaster'). Mái trường (A), cặp sách (C) hay cơn mưa (D) không thể biết lo lắng! Chọn B."
+  },
+  {
     "content": "Living in a coastal fishing town, the local fishermen __________ the strong sea waves rising every year.",
     "options": [
       {
@@ -458,6 +895,144 @@
     ],
     "correctAnswer": "D",
     "explanation": "Thầy Thức hướng dẫn Thái: Động từ chính chia thì Hiện tại đơn với chủ ngữ số nhiều 'the local fishermen' ➔ 'see'. Phương án D là đáp án chính xác."
+  },
+  {
+    "content": "__________ from sunlight and wind, renewable energy helps protect our atmosphere from harmful gases.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Created"
+      },
+      {
+        "id": "B",
+        "text": "Creating"
+      },
+      {
+        "id": "C",
+        "text": "To create"
+      },
+      {
+        "id": "D",
+        "text": "Create"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Thầy Thức hướng dẫn Thái: Năng lượng tái tạo 'được tạo ra' từ ánh nắng và gió (nghĩa bị động: Because it is created...) ➔ dùng Quá khứ phân từ 'Created'. Chọn A."
+  },
+  {
+    "content": "__________ how to calculate his carbon footprint, Nam asked his science teacher for helpful advice.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Didn't know"
+      },
+      {
+        "id": "B",
+        "text": "Not knowing"
+      },
+      {
+        "id": "C",
+        "text": "Not known"
+      },
+      {
+        "id": "D",
+        "text": "No knowing"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Thầy Thức hướng dẫn Thái: Dạng phủ định của mệnh đề phân từ là 'NOT + V-ing' (tuyệt đối không mượn trợ động từ didn't/doesn't) ➔ 'Not knowing'. Phương án B là đáp án đúng!"
+  },
+  {
+    "content": "__________ by the strong summer sun, the dry forest grass caught fire very easily.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Heating"
+      },
+      {
+        "id": "B",
+        "text": "To heat"
+      },
+      {
+        "id": "C",
+        "text": "Heat"
+      },
+      {
+        "id": "D",
+        "text": "Heated"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Thầy Thức hướng dẫn Thái: Cỏ khô 'bị hun nóng' bởi ánh nắng mặt trời (bị động) ➔ dùng 'Heated'. Chọn D."
+  },
+  {
+    "content": "__________ fossil fuels to produce electricity, old power stations release a lot of black smoke.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Burned"
+      },
+      {
+        "id": "B",
+        "text": "Burn"
+      },
+      {
+        "id": "C",
+        "text": "Burning"
+      },
+      {
+        "id": "D",
+        "text": "To burning"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Thầy Thức hướng dẫn Thái: Chủ ngữ 'old power stations' chủ động thực hiện hành động đốt nhiên liệu hóa thạch. Rút gọn mệnh đề nguyên nhân chủ động dùng V-ing ➔ 'Burning'. Phương án C là đáp án đúng!"
+  },
+  {
+    "content": "Cycling to school every morning, the young boy __________ his daily carbon footprint effectively.",
+    "options": [
+      {
+        "id": "A",
+        "text": "reducing"
+      },
+      {
+        "id": "B",
+        "text": "reduces"
+      },
+      {
+        "id": "C",
+        "text": "to reduce"
+      },
+      {
+        "id": "D",
+        "text": "reduced by"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Thầy Thức hướng dẫn Thái: Động từ chính ở thì Hiện tại đơn chia theo chủ ngữ số ít 'the young boy' ➔ 'reduces'. Phương án B là đáp án chính xác."
+  },
+  {
+    "content": "__________ by rising sea levels, many coastal villagers decided to move to higher ground.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Threatening"
+      },
+      {
+        "id": "B",
+        "text": "Threaten"
+      },
+      {
+        "id": "C",
+        "text": "Threatened"
+      },
+      {
+        "id": "D",
+        "text": "To threaten"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Thầy Thức hướng dẫn Thái: Người dân làng 'bị đe dọa' bởi nước biển dâng (nghĩa bị động). Rút gọn dùng V3/ed ➔ 'Threatened'. Chọn C."
   },
   {
     "content": "Coal, crude oil, and natural gas are typical examples of __________ that harm our planet.",
@@ -1033,581 +1608,6 @@
     ],
     "correctAnswer": "A",
     "explanation": "Thầy Thức hướng dẫn Thái: Đứng trước danh từ 'health', vị trí này cần một Tính từ bổ nghĩa ➔ 'ecological' (thuộc về sinh thái). Chọn A."
-  },
-  {
-    "content": "__________ in huge amounts for electricity, coal releases dark smoke and toxic chemicals.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Burning"
-      },
-      {
-        "id": "B",
-        "text": "Burnt"
-      },
-      {
-        "id": "C",
-        "text": "To burn"
-      },
-      {
-        "id": "D",
-        "text": "To be burnt"
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Thầy Thức hướng dẫn Thái: Than đá 'được đốt' (nghĩa bị động: If/Because it is burnt). Rút gọn mệnh đề bị động dùng Quá khứ phân từ V3/ed ➔ 'Burnt'. Chọn B."
-  },
-  {
-    "content": "__________ by rising sea levels, many coastal villagers decided to move to higher ground.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Threatening"
-      },
-      {
-        "id": "B",
-        "text": "Threaten"
-      },
-      {
-        "id": "C",
-        "text": "Threatened"
-      },
-      {
-        "id": "D",
-        "text": "To threaten"
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Thầy Thức hướng dẫn Thái: Người dân làng 'bị đe dọa' bởi nước biển dâng (nghĩa bị động). Rút gọn dùng V3/ed ➔ 'Threatened'. Chọn C."
-  },
-  {
-    "content": "__________ by strong tropical storms, the coastal wooden houses had to be rebuilt.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Damaging"
-      },
-      {
-        "id": "B",
-        "text": "Damage"
-      },
-      {
-        "id": "C",
-        "text": "To damage"
-      },
-      {
-        "id": "D",
-        "text": "Damaged"
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Thầy Thức hướng dẫn Thái: Nhà gỗ 'bị hư hại' bởi bão nhiệt đới (nghĩa bị động) ➔ dùng 'Damaged'. Chọn D."
-  },
-  {
-    "content": "__________ cool in hot summer weather, farm animals can easily suffer from heat stress.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Not kept"
-      },
-      {
-        "id": "B",
-        "text": "Not keeping"
-      },
-      {
-        "id": "C",
-        "text": "Didn't keep"
-      },
-      {
-        "id": "D",
-        "text": "To not keep"
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Thầy Thức hướng dẫn Thái: Mệnh đề điều kiện bị động phủ định ('If farm animals are not kept cool...') được rút gọn bằng 'Not + V3/ed' ➔ 'Not kept'. Phương án A là đáp án đúng!"
-  },
-  {
-    "content": "__________ with plastic bags and bottles, the city canal looked very dirty and smelled awful.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Covering"
-      },
-      {
-        "id": "B",
-        "text": "Covered"
-      },
-      {
-        "id": "C",
-        "text": "Cover"
-      },
-      {
-        "id": "D",
-        "text": "To cover"
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Thầy Thức hướng dẫn Thái: Con kênh 'bị bao phủ/ngập đầy' bởi rác thải (nghĩa bị động) ➔ dùng 'Covered'. Chọn B."
-  },
-  {
-    "content": "__________ in large amounts by factories, carbon dioxide causes air pollution and global warming.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Producing"
-      },
-      {
-        "id": "B",
-        "text": "To produce"
-      },
-      {
-        "id": "C",
-        "text": "Produced"
-      },
-      {
-        "id": "D",
-        "text": "Produce"
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Thầy Thức hướng dẫn Thái: Khí CO2 'được thải ra / tạo ra' bởi các nhà máy (nghĩa bị động: If it is produced...) ➔ dùng Quá khứ phân từ 'Produced'. Chọn C."
-  },
-  {
-    "content": "__________ by the strong summer sun, the dry forest grass caught fire very easily.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Heating"
-      },
-      {
-        "id": "B",
-        "text": "To heat"
-      },
-      {
-        "id": "C",
-        "text": "Heat"
-      },
-      {
-        "id": "D",
-        "text": "Heated"
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Thầy Thức hướng dẫn Thái: Cỏ khô 'bị hun nóng' bởi ánh nắng mặt trời (bị động) ➔ dùng 'Heated'. Chọn D."
-  },
-  {
-    "content": "__________ from sunlight and wind, renewable energy helps protect our atmosphere from harmful gases.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Created"
-      },
-      {
-        "id": "B",
-        "text": "Creating"
-      },
-      {
-        "id": "C",
-        "text": "To create"
-      },
-      {
-        "id": "D",
-        "text": "Create"
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Thầy Thức hướng dẫn Thái: Năng lượng tái tạo 'được tạo ra' từ ánh nắng và gió (nghĩa bị động: Because it is created...) ➔ dùng Quá khứ phân từ 'Created'. Chọn A."
-  },
-  {
-    "content": "__________ by industrial waste, the river water could no longer be used for cooking or drinking.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Polluting"
-      },
-      {
-        "id": "B",
-        "text": "Polluted"
-      },
-      {
-        "id": "C",
-        "text": "Pollute"
-      },
-      {
-        "id": "D",
-        "text": "To pollute"
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Thầy Thức hướng dẫn Thái: Nước sông 'bị ô nhiễm' bởi chất thải công nghiệp (bị động) ➔ dùng 'Polluted'. Chọn B."
-  },
-  {
-    "content": "__________ about the serious danger of floods, the villagers packed their bags and left early.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Warning"
-      },
-      {
-        "id": "B",
-        "text": "Warn"
-      },
-      {
-        "id": "C",
-        "text": "Warned"
-      },
-      {
-        "id": "D",
-        "text": "To warn"
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Thầy Thức hướng dẫn Thái: Người dân làng 'được cảnh báo' về nguy cơ lũ lụt (nghĩa bị động: Because they were warned...) ➔ dùng Quá khứ phân từ 'Warned'. Chọn C."
-  },
-  {
-    "content": "__________ by the powerful typhoon, hundreds of electric poles fell onto the road.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Destroying"
-      },
-      {
-        "id": "B",
-        "text": "Destroy"
-      },
-      {
-        "id": "C",
-        "text": "To destroy"
-      },
-      {
-        "id": "D",
-        "text": "Destroyed"
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Thầy Thức hướng dẫn Thái: Các cột điện 'bị phá hủy' bởi cơn bão lớn (bị động) ➔ dùng 'Destroyed'. Chọn D."
-  },
-  {
-    "content": "__________ carefully on time, harmful factory waste can damage the local river ecology.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Not treated"
-      },
-      {
-        "id": "B",
-        "text": "Not treating"
-      },
-      {
-        "id": "C",
-        "text": "Didn't treat"
-      },
-      {
-        "id": "D",
-        "text": "Not treat"
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Thầy Thức hướng dẫn Thái: Điều kiện bị động phủ định ('If harmful factory waste is not treated...') rút gọn thành 'Not + V3/ed' ➔ 'Not treated'. Chọn A."
-  },
-  {
-    "content": "__________ near the windy coastline, the new wind farm produces enough green energy for the whole city.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Locating"
-      },
-      {
-        "id": "B",
-        "text": "Located"
-      },
-      {
-        "id": "C",
-        "text": "Locate"
-      },
-      {
-        "id": "D",
-        "text": "To locate"
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Thầy Thức hướng dẫn Thái: Trang trại điện gió 'được đặt vị trí' ở bờ biển (bị động: Because it is located...) ➔ dùng 'Located'. Chọn B."
-  },
-  {
-    "content": "__________ by thousands of green trees, the small mountain village enjoys cool and fresh air all year.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Surrounding"
-      },
-      {
-        "id": "B",
-        "text": "Surround"
-      },
-      {
-        "id": "C",
-        "text": "Surrounded"
-      },
-      {
-        "id": "D",
-        "text": "To surround"
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Thầy Thức hướng dẫn Thái: Ngôi làng 'được bao quanh' bởi hàng ngàn cây xanh (bị động: Because it is surrounded...) ➔ dùng 'Surrounded'. Chọn C."
-  },
-  {
-    "content": "__________ by our biology teacher, we planted ten young fruit trees in our school garden.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Encouraging"
-      },
-      {
-        "id": "B",
-        "text": "Encourage"
-      },
-      {
-        "id": "C",
-        "text": "To encourage"
-      },
-      {
-        "id": "D",
-        "text": "Encouraged"
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Thầy Thức hướng dẫn Thái: Chúng tôi 'được khuyến khích, động viên' bởi giáo viên (bị động) ➔ dùng 'Encouraged'. Chọn D."
-  },
-  {
-    "content": "Which sentence is grammatically correct and has NO dangling participle?",
-    "options": [
-      {
-        "id": "A",
-        "text": "Walking in the burning woods, we saw thick smoke rising above the trees."
-      },
-      {
-        "id": "B",
-        "text": "Walking in the burning woods, thick smoke was seen by our eyes."
-      },
-      {
-        "id": "C",
-        "text": "Walking in the burning woods, the heat was completely unbearable."
-      },
-      {
-        "id": "D",
-        "text": "Walking in the burning woods, our eyes were hurt badly."
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Thầy Thức hướng dẫn Thái: Chủ ngữ sau dấu phẩy phải là người thực hiện hành động đi bộ ('we'). Các phương án B (smoke), C (the heat), D (our eyes) đều mắc bẫy phân từ lơ lửng sai ngữ pháp. Chọn A!"
-  },
-  {
-    "content": "Which sentence correctly uses a past participle clause?",
-    "options": [
-      {
-        "id": "A",
-        "text": "Worried about the storm, the school roof was quickly repaired."
-      },
-      {
-        "id": "B",
-        "text": "Worried about the storm, the headmaster told all students to go home early."
-      },
-      {
-        "id": "C",
-        "text": "Worried about the storm, our school bags were packed hurriedly."
-      },
-      {
-        "id": "D",
-        "text": "Worried about the storm, the rain began to fall heavily."
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Thầy Thức hướng dẫn Thái: Người cảm thấy lo lắng ('Worried') phải là thầy hiệu trưởng ('the headmaster'). Mái trường (A), cặp sách (C) hay cơn mưa (D) không thể biết lo lắng! Chọn B."
-  },
-  {
-    "content": "Identify the sentence that correctly corrects the dangling error in: 'Flying over the flooded village, many drowned cows were seen.'",
-    "options": [
-      {
-        "id": "A",
-        "text": "Flying over the flooded village, a loud noise was heard by everyone."
-      },
-      {
-        "id": "B",
-        "text": "Flying over the flooded village, many drowned cows could be observed."
-      },
-      {
-        "id": "C",
-        "text": "Flying over the flooded village, the helicopter pilot saw many drowned cows."
-      },
-      {
-        "id": "D",
-        "text": "Flying over the flooded village, the water was very high and deep."
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Thầy Thức hướng dẫn Thái: Người bay qua ngôi làng là phi công trực thăng ('the helicopter pilot'). Phương án C chứa đúng chủ thể thực hiện hành động. Chọn C!"
-  },
-  {
-    "content": "__________ by the green club president, the school cleanup project was very successful.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Leading"
-      },
-      {
-        "id": "B",
-        "text": "Lead"
-      },
-      {
-        "id": "C",
-        "text": "Leader"
-      },
-      {
-        "id": "D",
-        "text": "Led"
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Thầy Thức hướng dẫn Thái: Dự án dọn dẹp 'được dẫn dắt' bởi bạn chủ nhiệm CLB (bị động) ➔ dùng V3/ed 'Led'. Chọn D."
-  },
-  {
-    "content": "Which sentence avoids a dangling participle mistake?",
-    "options": [
-      {
-        "id": "A",
-        "text": "Looking out of the window, Nam saw the tall factory chimney releasing smoke."
-      },
-      {
-        "id": "B",
-        "text": "Looking out of the window, black soot fell onto the table."
-      },
-      {
-        "id": "C",
-        "text": "Looking out of the window, the tall factory chimney was releasing smoke."
-      },
-      {
-        "id": "D",
-        "text": "Looking out of the window, it was a very gloomy afternoon."
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Thầy Thức hướng dẫn Thái: Người nhìn qua cửa sổ là bạn Nam ('Nam saw...'). Ống khói hay bồ hóng không biết nhìn! Phương án A là đáp án chính xác."
-  },
-  {
-    "content": "__________ in solar energy, many countries are building huge power farms in sunny deserts.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Believed"
-      },
-      {
-        "id": "B",
-        "text": "Believing"
-      },
-      {
-        "id": "C",
-        "text": "Belief"
-      },
-      {
-        "id": "D",
-        "text": "Believe"
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Thầy Thức hướng dẫn Thái: Các quốc gia chủ động tin tưởng vào năng lượng mặt trời (nghĩa chủ động: Because they believe...) ➔ dùng Present Participle 'Believing'. Chọn B."
-  },
-  {
-    "content": "__________ of clean water, the dried crops in the field died within three weeks.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Depriving"
-      },
-      {
-        "id": "B",
-        "text": "Deprive"
-      },
-      {
-        "id": "C",
-        "text": "Deprived"
-      },
-      {
-        "id": "D",
-        "text": "To deprive"
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Thầy Thức hướng dẫn Thái: Cây trồng 'bị tước đoạt, bị thiếu' nước sạch (bị động: Because they were deprived of...) ➔ dùng 'Deprived'. Chọn C."
-  },
-  {
-    "content": "Which sentence is grammatically correct and meaningful?",
-    "options": [
-      {
-        "id": "A",
-        "text": "Cleaning up the dirty beach, many old plastic bottles were found by the students."
-      },
-      {
-        "id": "B",
-        "text": "Cleaning up the dirty beach, the hot sun made everyone very tired."
-      },
-      {
-        "id": "C",
-        "text": "Cleaning up the dirty beach, the ocean looked much cleaner and bluer."
-      },
-      {
-        "id": "D",
-        "text": "Cleaning up the dirty beach, the students felt very proud of their hard work."
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Thầy Thức hướng dẫn Thái: Chủ ngữ thực hiện hành động dọn dẹp bãi biển ('Cleaning up the dirty beach') phải là 'the students' (các em học sinh). Chai nhựa, mặt trời hay đại dương không thể tự dọn bãi biển! Chọn D."
-  },
-  {
-    "content": "__________ the severe impact of sea level rise, local engineers designed stronger sea dykes.",
-    "options": [
-      {
-        "id": "A",
-        "text": "Forecasting"
-      },
-      {
-        "id": "B",
-        "text": "To forecast"
-      },
-      {
-        "id": "C",
-        "text": "Forecasted"
-      },
-      {
-        "id": "D",
-        "text": "Forecast"
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Thầy Thức hướng dẫn Thái: Các kỹ sư chủ động dự báo tác động của nước biển dâng (chủ động) ➔ dùng 'Forecasting'. Chọn A."
-  },
-  {
-    "content": "Which sentence correctly combines: 'The students were worried about plastic waste. They joined the beach cleanup.'?",
-    "options": [
-      {
-        "id": "A",
-        "text": "Worrying about plastic waste, the beach cleanup was joined by the students."
-      },
-      {
-        "id": "B",
-        "text": "Worried about plastic waste, the students joined the beach cleanup."
-      },
-      {
-        "id": "C",
-        "text": "The students worried about plastic waste, joined the beach cleanup was fun."
-      },
-      {
-        "id": "D",
-        "text": "Worried about plastic waste, the beach cleanup attracted the students."
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Thầy Thức hướng dẫn Thái: Rút gọn 'Because the students were worried...' ➔ 'Worried about plastic waste, the students joined the beach cleanup.' Phương án B chuẩn xác và không bị lỗi lơ lửng. Chọn B!"
   },
   {
     "content": "Tìm 01 lỗi sai trong câu: 'Was walking (A) along the sunny beach, the tourists (B) picked up (C) pieces of plastic litter (D).'",

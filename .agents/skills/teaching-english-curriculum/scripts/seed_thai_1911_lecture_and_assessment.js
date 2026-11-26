@@ -29,18 +29,14 @@ const CONSTANTS = {
 };
 
 function getSectionName(index) {
-  if (index <= 20) {
-    return 'Phần 1: Mệnh đề phân từ hiện tại (Present Participle Clauses - V-ing)';
-  } else if (index <= 35) {
-    return 'Phần 2: Từ vựng cốt lõi Unit 5 trong ngữ cảnh (Core Vocabulary in Context)';
-  } else if (index <= 45) {
-    return 'Phần 3: 10 Câu Biến đổi từ loại (Word Formation: Noun - Adj - Adv - Verb)';
+  if (index <= 45) {
+    return 'Phần 1: Grammar';
   } else if (index <= 60) {
-    return 'Phần 4: Mệnh đề phân từ quá khứ (Past Participle Clauses - V3/ed)';
+    return 'Phần 2: Từ vựng cốt lõi Unit 5 trong ngữ cảnh (Core Vocabulary in Context)';
   } else if (index <= 70) {
-    return 'Phần 5: Phân hóa 8.5+ - Bẫy Phân từ lơ lửng & Rút gọn cùng chủ ngữ (Dangling Participles)';
+    return 'Phần 3: 10 Câu Biến đổi từ loại (Word Formation: Noun - Adj - Adv - Verb)';
   } else {
-    return 'Phần 6: Tìm lỗi sai & Viết lại câu tương đương (Error Identification & Transformations)';
+    return 'Phần 4: Tìm lỗi sai & Viết lại câu tương đương (Error Identification & Transformations)';
   }
 }
 
