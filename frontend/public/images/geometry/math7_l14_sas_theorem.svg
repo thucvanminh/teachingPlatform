@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="100%" height="280" role="img" aria-labelledby="title desc">
+  <title id="title">SAS Congruence Theorem</title>
+  <desc id="desc">Two congruent triangles ABC and A'B'C' showing Side-Angle-Side with included angle 60 deg</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0E1626"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="540" height="320" rx="18" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="110" y="14" width="320" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
+  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">THEOREM 2 · SIDE - ANGLE - SIDE (SAS)</text>
+
+  <!-- Triangle ABC: A(65,245), B(235,245), C(130,115) -->
+  <path d="M 65 245 L 97.0 245.0 A 32 32 0 0 0 79.3 216.4 Z" fill="rgba(245,158,11,0.25)" stroke="none"/>
+  <path d="M 97.0 245.0 A 32 32 0 0 0 79.3 216.4" fill="none" stroke="#F59E0B" stroke-width="2.2"/>
+  <polygon points="65,245 235,245 130,115" fill="rgba(56,189,248,0.12)" stroke="#38BDF8" stroke-width="2.8" stroke-linejoin="round"/>
+  <line x1="150.0" y1="238.0" x2="150.0" y2="252.0" stroke="#34D399" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="89.7" y1="180.0" x2="102.2" y2="186.3" stroke="#FBBF24" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="92.8" y1="173.7" x2="105.3" y2="180.0" stroke="#FBBF24" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="65" cy="245" r="4.5" fill="#22D3EE"/><text x="50" y="260" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">A</text>
+  <circle cx="235" cy="245" r="4.5" fill="#22D3EE"/><text x="242" y="260" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">B</text>
+  <circle cx="130" cy="115" r="4.5" fill="#22D3EE"/><text x="130" y="100" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold" text-anchor="middle">C</text>
+  <text x="106" y="226" fill="#FBBF24" font-family="monospace" font-size="12" font-weight="bold">60°</text>
+  <text x="150" y="266" fill="#34D399" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">4 cm</text>
+  <text x="56" y="175" fill="#FBBF24" font-family="monospace" font-size="12" font-weight="bold">3 cm</text>
+
+  <!-- Congruence symbol -->
+  <text x="276" y="190" fill="#34D399" font-family="system-ui" font-size="22" font-weight="bold" text-anchor="middle">=</text>
+
+  <!-- Triangle A'B'C': A'(305,245), B'(475,245), C'(370,115) -->
+  <path d="M 305 245 L 337.0 245.0 A 32 32 0 0 0 319.3 216.4 Z" fill="rgba(245,158,11,0.25)" stroke="none"/>
+  <path d="M 337.0 245.0 A 32 32 0 0 0 319.3 216.4" fill="none" stroke="#F59E0B" stroke-width="2.2"/>
+  <polygon points="305,245 475,245 370,115" fill="rgba(52,211,153,0.12)" stroke="#34D399" stroke-width="2.8" stroke-linejoin="round"/>
+  <line x1="390.0" y1="238.0" x2="390.0" y2="252.0" stroke="#34D399" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="329.7" y1="180.0" x2="342.2" y2="186.3" stroke="#FBBF24" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="332.8" y1="173.7" x2="345.3" y2="180.0" stroke="#FBBF24" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="305" cy="245" r="4.5" fill="#34D399"/><text x="290" y="260" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">A'</text>
+  <circle cx="475" cy="245" r="4.5" fill="#34D399"/><text x="482" y="260" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">B'</text>
+  <circle cx="370" cy="115" r="4.5" fill="#34D399"/><text x="370" y="100" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold" text-anchor="middle">C'</text>
+  <text x="346" y="226" fill="#FBBF24" font-family="monospace" font-size="12" font-weight="bold">60°</text>
+  <text x="390" y="266" fill="#34D399" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">4 cm</text>
+  <text x="296" y="175" fill="#FBBF24" font-family="monospace" font-size="12" font-weight="bold">3 cm</text>
+
+  <text x="270" y="297" fill="#94A3B8" font-family="system-ui" font-size="12" text-anchor="middle">Included angle lies BETWEEN the two equal sides → △ABC = △A'B'C' (SAS)</text>
+</svg>
