@@ -1051,7 +1051,7 @@
       },
       {
         "id": "D",
-        "text": "Having burnt"
+        "text": "To be burnt"
       }
     ],
     "correctAnswer": "B",
@@ -1104,27 +1104,27 @@
     "explanation": "Thầy Thức hướng dẫn Thái: Nhà gỗ 'bị hư hại' bởi bão nhiệt đới (nghĩa bị động) ➔ dùng 'Damaged'. Chọn D."
   },
   {
-    "content": "__________ down hundreds of ancient trees, the construction company was fined a large sum of money.",
+    "content": "__________ cool in hot summer weather, farm animals can easily suffer from heat stress.",
     "options": [
       {
         "id": "A",
-        "text": "Having cut"
+        "text": "Not kept"
       },
       {
         "id": "B",
-        "text": "Being cut"
+        "text": "Not keeping"
       },
       {
         "id": "C",
-        "text": "Cut"
+        "text": "Didn't keep"
       },
       {
         "id": "D",
-        "text": "To cut"
+        "text": "To not keep"
       }
     ],
     "correctAnswer": "A",
-    "explanation": "Thầy Thức hướng dẫn Thái: Hành động chặt cây đã hoàn thành trước, sau đó công ty mới bị phạt. Nhấn mạnh tính hoàn tất dùng Phân từ hoàn thành chủ động ➔ 'Having cut'. Chọn A."
+    "explanation": "Thầy Thức hướng dẫn Thái: Mệnh đề điều kiện bị động phủ định ('If farm animals are not kept cool...') được rút gọn bằng 'Not + V3/ed' ➔ 'Not kept'. Phương án A là đáp án đúng!"
   },
   {
     "content": "__________ with plastic bags and bottles, the city canal looked very dirty and smelled awful.",
@@ -1143,34 +1143,34 @@
       },
       {
         "id": "D",
-        "text": "Having covered"
+        "text": "To cover"
       }
     ],
     "correctAnswer": "B",
     "explanation": "Thầy Thức hướng dẫn Thái: Con kênh 'bị bao phủ/ngập đầy' bởi rác thải (nghĩa bị động) ➔ dùng 'Covered'. Chọn B."
   },
   {
-    "content": "__________ the scientific documentary about melting ice caps, the students started a green campaign.",
+    "content": "__________ in large amounts by factories, carbon dioxide causes air pollution and global warming.",
     "options": [
       {
         "id": "A",
-        "text": "Watch"
+        "text": "Producing"
       },
       {
         "id": "B",
-        "text": "Watched"
+        "text": "To produce"
       },
       {
         "id": "C",
-        "text": "Having watched"
+        "text": "Produced"
       },
       {
         "id": "D",
-        "text": "Being watched"
+        "text": "Produce"
       }
     ],
     "correctAnswer": "C",
-    "explanation": "Thầy Thức hướng dẫn Thái: Xem xong bộ phim tài liệu trước rồi mới phát động chiến dịch. Nhấn mạnh hành động hoàn thành trước ➔ 'Having watched'. Chọn C."
+    "explanation": "Thầy Thức hướng dẫn Thái: Khí CO2 'được thải ra / tạo ra' bởi các nhà máy (nghĩa bị động: If it is produced...) ➔ dùng Quá khứ phân từ 'Produced'. Chọn C."
   },
   {
     "content": "__________ by the strong summer sun, the dry forest grass caught fire very easily.",
@@ -1196,27 +1196,27 @@
     "explanation": "Thầy Thức hướng dẫn Thái: Cỏ khô 'bị hun nóng' bởi ánh nắng mặt trời (bị động) ➔ dùng 'Heated'. Chọn D."
   },
   {
-    "content": "__________ their presentation on global warming, the group received loud applause from the class.",
+    "content": "__________ from sunlight and wind, renewable energy helps protect our atmosphere from harmful gases.",
     "options": [
       {
         "id": "A",
-        "text": "Having finished"
+        "text": "Created"
       },
       {
         "id": "B",
-        "text": "Finished"
+        "text": "Creating"
       },
       {
         "id": "C",
-        "text": "Being finished"
+        "text": "To create"
       },
       {
         "id": "D",
-        "text": "Finish"
+        "text": "Create"
       }
     ],
     "correctAnswer": "A",
-    "explanation": "Thầy Thức hướng dẫn Thái: Nhóm học sinh hoàn thành bài thuyết trình xong thì mới nhận tràng pháo tay ➔ dùng 'Having finished'. Chọn A."
+    "explanation": "Thầy Thức hướng dẫn Thái: Năng lượng tái tạo 'được tạo ra' từ ánh nắng và gió (nghĩa bị động: Because it is created...) ➔ dùng Quá khứ phân từ 'Created'. Chọn A."
   },
   {
     "content": "__________ by industrial waste, the river water could no longer be used for cooking or drinking.",
@@ -1235,7 +1235,7 @@
       },
       {
         "id": "D",
-        "text": "Having polluted"
+        "text": "To pollute"
       }
     ],
     "correctAnswer": "B",
@@ -1254,15 +1254,15 @@
       },
       {
         "id": "C",
-        "text": "Having been warned"
+        "text": "Warned"
       },
       {
         "id": "D",
-        "text": "Having warned"
+        "text": "To warn"
       }
     ],
     "correctAnswer": "C",
-    "explanation": "Thầy Thức hướng dẫn Thái: Người dân 'đã được cảnh báo' trước đó (hoàn thành + bị động) ➔ dùng 'Having been warned'. Chọn C."
+    "explanation": "Thầy Thức hướng dẫn Thái: Người dân làng 'được cảnh báo' về nguy cơ lũ lụt (nghĩa bị động: Because they were warned...) ➔ dùng Quá khứ phân từ 'Warned'. Chọn C."
   },
   {
     "content": "__________ by the powerful typhoon, hundreds of electric poles fell onto the road.",
@@ -1288,27 +1288,27 @@
     "explanation": "Thầy Thức hướng dẫn Thái: Các cột điện 'bị phá hủy' bởi cơn bão lớn (bị động) ➔ dùng 'Destroyed'. Chọn D."
   },
   {
-    "content": "__________ the school playground clean, the tired students sat under the tree shade to rest.",
+    "content": "__________ carefully on time, harmful factory waste can damage the local river ecology.",
     "options": [
       {
         "id": "A",
-        "text": "Having swept"
+        "text": "Not treated"
       },
       {
         "id": "B",
-        "text": "Swept"
+        "text": "Not treating"
       },
       {
         "id": "C",
-        "text": "Being swept"
+        "text": "Didn't treat"
       },
       {
         "id": "D",
-        "text": "Sweep"
+        "text": "Not treat"
       }
     ],
     "correctAnswer": "A",
-    "explanation": "Thầy Thức hướng dẫn Thái: Học sinh quét dọn sân trường xong xuôi rồi mới ngồi nghỉ (hành động trước sau) ➔ dùng 'Having swept'. Chọn A."
+    "explanation": "Thầy Thức hướng dẫn Thái: Điều kiện bị động phủ định ('If harmful factory waste is not treated...') rút gọn thành 'Not + V3/ed' ➔ 'Not treated'. Chọn A."
   },
   {
     "content": "__________ near the windy coastline, the new wind farm produces enough green energy for the whole city.",
@@ -1327,34 +1327,34 @@
       },
       {
         "id": "D",
-        "text": "Having located"
+        "text": "To locate"
       }
     ],
     "correctAnswer": "B",
     "explanation": "Thầy Thức hướng dẫn Thái: Trang trại điện gió 'được đặt vị trí' ở bờ biển (bị động: Because it is located...) ➔ dùng 'Located'. Chọn B."
   },
   {
-    "content": "__________ off all computers and lights in the room, the teacher locked the door carefully.",
+    "content": "__________ by thousands of green trees, the small mountain village enjoys cool and fresh air all year.",
     "options": [
       {
         "id": "A",
-        "text": "Turned"
+        "text": "Surrounding"
       },
       {
         "id": "B",
-        "text": "Being turned"
+        "text": "Surround"
       },
       {
         "id": "C",
-        "text": "Having turned"
+        "text": "Surrounded"
       },
       {
         "id": "D",
-        "text": "Turn"
+        "text": "To surround"
       }
     ],
     "correctAnswer": "C",
-    "explanation": "Thầy Thức hướng dẫn Thái: Thầy giáo tắt hết máy tính và đèn xong rồi mới khóa cửa phòng ➔ dùng 'Having turned'. Chọn C."
+    "explanation": "Thầy Thức hướng dẫn Thái: Ngôi làng 'được bao quanh' bởi hàng ngàn cây xanh (bị động: Because it is surrounded...) ➔ dùng 'Surrounded'. Chọn C."
   },
   {
     "content": "__________ by our biology teacher, we planted ten young fruit trees in our school garden.",
@@ -1545,23 +1545,23 @@
     "options": [
       {
         "id": "A",
-        "text": "Having eaten lunch, the dirty plates were washed by our mother."
+        "text": "Cleaning up the dirty beach, many old plastic bottles were found by the students."
       },
       {
         "id": "B",
-        "text": "Having eaten lunch, the table was cleaned up quickly."
+        "text": "Cleaning up the dirty beach, the hot sun made everyone very tired."
       },
       {
         "id": "C",
-        "text": "Having eaten lunch, the bell rang loudly for the next class."
+        "text": "Cleaning up the dirty beach, the ocean looked much cleaner and bluer."
       },
       {
         "id": "D",
-        "text": "Having eaten lunch, we helped our mother wash the dirty plates."
+        "text": "Cleaning up the dirty beach, the students felt very proud of their hard work."
       }
     ],
     "correctAnswer": "D",
-    "explanation": "Thầy Thức hướng dẫn Thái: Chủ ngữ ăn trưa xong phải là 'we' (chúng tôi). Đĩa bẩn, bàn hay chuông không thể ăn trưa! Chọn D."
+    "explanation": "Thầy Thức hướng dẫn Thái: Chủ ngữ thực hiện hành động dọn dẹp bãi biển ('Cleaning up the dirty beach') phải là 'the students' (các em học sinh). Chai nhựa, mặt trời hay đại dương không thể tự dọn bãi biển! Chọn D."
   },
   {
     "content": "__________ the severe impact of sea level rise, local engineers designed stronger sea dykes.",
@@ -1679,27 +1679,27 @@
     "explanation": "Thầy Thức hướng dẫn Thái: Bẫy phân từ lơ lửng! Nước mắt ('tears') không thể nghe tin tức được. Lỗi sai nằm ở chủ ngữ 'tears' (A). Phải sửa thành người nông dân khóc khi nghe tin. Chọn A."
   },
   {
-    "content": "Tìm 01 lỗi sai trong câu: 'Having turn (A) off all the lights, Lan went (B) to bed to save (C) household electricity (D).'",
+    "content": "Tìm 01 lỗi sai trong câu: 'Frightening (A) by the loud storm (B) last night, the little dog hid (C) under the wooden table (D).'",
     "options": [
       {
         "id": "A",
-        "text": "went"
+        "text": "the loud storm"
       },
       {
         "id": "B",
-        "text": "Having turn"
+        "text": "Frightening"
       },
       {
         "id": "C",
-        "text": "to save"
+        "text": "hid"
       },
       {
         "id": "D",
-        "text": "household electricity"
+        "text": "the wooden table"
       }
     ],
     "correctAnswer": "B",
-    "explanation": "Thầy Thức hướng dẫn Thái: Lỗi sai ở B (Having turn)! Cấu trúc phân từ hoàn thành là 'Having + V3/ed', do đó phải sửa 'Having turn' thành 'Having turned'. Chọn B."
+    "explanation": "Thầy Thức hướng dẫn Thái: Lỗi sai ở B (Frightening)! Chú chó nhỏ 'bị làm cho hoảng sợ' bởi cơn bão lớn (nghĩa bị động), nên phải sửa 'Frightening' thành Quá khứ phân từ 'Frightened'. Chọn B."
   },
   {
     "content": "Tìm 01 lỗi sai trong câu: 'Because (A) not knowing how to use (B) the solar cooker, the cook used (C) charcoal instead (D).'",
@@ -1764,34 +1764,34 @@
       },
       {
         "id": "D",
-        "text": "Having burned in huge quantities, harmful greenhouse gases release fossil fuels."
+        "text": "Burn in huge quantities, fossil fuels release harmful greenhouse gases."
       }
     ],
     "correctAnswer": "A",
     "explanation": "Thầy Thức hướng dẫn Thái: Mệnh đề điều kiện bị động 'If fossil fuels are burned...' rút gọn thành Past Participle 'Burned in huge quantities, fossil fuels release...'. Phương án A là đáp án chuẩn xác!"
   },
   {
-    "content": "\"After the workers had planted a thousand trees on the hill, they rested near the river.\"\nWhich sentence has the SAME meaning?",
+    "content": "\"If old coal plants are not closed soon, they will release more greenhouse gases.\"\nWhich sentence has the SAME meaning?",
     "options": [
       {
         "id": "A",
-        "text": "Planted a thousand trees on the hill, the river rested near the workers."
+        "text": "Not closing soon, old coal plants will release more greenhouse gases."
       },
       {
         "id": "B",
-        "text": "Having planted a thousand trees on the hill, the workers rested near the river."
+        "text": "Not closed soon, old coal plants will release more greenhouse gases."
       },
       {
         "id": "C",
-        "text": "The workers rested near the river, had planted a thousand trees on the hill."
+        "text": "Not to close soon, old coal plants will release more greenhouse gases."
       },
       {
         "id": "D",
-        "text": "Being planted a thousand trees on the hill, the workers rested near the river."
+        "text": "Closed not soon, old coal plants will release more greenhouse gases."
       }
     ],
     "correctAnswer": "B",
-    "explanation": "Thầy Thức hướng dẫn Thái: 'After S had V3/ed' (hành động hoàn thành trước) được rút gọn thành 'Having + V3/ed': 'Having planted a thousand trees on the hill, the workers...'. Phương án B là đáp án đúng!"
+    "explanation": "Thầy Thức hướng dẫn Thái: Mệnh đề điều kiện bị động phủ định 'If old coal plants are not closed soon...' rút gọn thành 'Not + V3/ed': 'Not closed soon, old coal plants will release more greenhouse gases.' Phương án B là đáp án đúng!"
   },
   {
     "content": "\"Since Thai felt very tired after the long cycling trip, he fell asleep early.\"\nWhich sentence has the SAME meaning?",

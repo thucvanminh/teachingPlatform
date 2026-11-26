@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cẩm Nang Ngữ Pháp Chi Tiết: Participle Clauses (Unit 5 - Thái Lớp 11)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-subtle: #f1f5f9;
+      --ink: #090d16;
+      --ink-muted: #475569;
+      --ink-subtle: #64748b;
+      --border: #e2e8f0;
+      --border-strong: #cbd5e1;
+      --blue: #2563eb;
+      --blue-bg: #eff6ff;
+      --blue-border: #bfdbfe;
+      --green: #059669;
+      --green-bg: #ecfdf5;
+      --green-border: #a7f3d0;
+      --red: #dc2626;
+      --red-bg: #fef2f2;
+      --red-border: #fecaca;
+      --amber: #d97706;
+      --amber-bg: #fffbeb;
+      --amber-border: #fde68a;
+      --purple: #7c3aed;
+      --purple-bg: #f5f3ff;
+      --purple-border: #ddd6fe;
+      --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      --sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --shadow-sm: 0 1px 3px rgba(9, 13, 22, 0.05), 0 1px 2px rgba(9, 13, 22, 0.03);
+      --shadow-md: 0 8px 20px -4px rgba(9, 13, 22, 0.07), 0 2px 6px -1px rgba(9, 13, 22, 0.03);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--bg-page);
+      color: var(--ink);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Layout */
+    .shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px 20px 64px;
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* Top Hero */
+    .hero {
+      grid-column: 1 / -1;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px 32px;
+      box-shadow: var(--shadow-sm);
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .badge {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.02em;
+    }
+    .badge-blue { background: var(--blue-bg); color: var(--blue); border: 1px solid var(--blue-border); }
+    .badge-slate { background: var(--bg-subtle); color: var(--ink-muted); border: 1px solid var(--border); }
+    .badge-green { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+
+    .hero h1 {
+      font-size: clamp(1.5rem, 2.8vw, 2.05rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      color: var(--ink-muted);
+      font-size: 0.98rem;
+      max-width: 78ch;
+    }
+
+    /* Sidebar TOC */
+    .toc {
+      position: sticky;
+      top: 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: var(--shadow-sm);
+    }
+    .toc-title {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-subtle);
+      margin-bottom: 12px;
+      padding-left: 8px;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    .toc-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--ink-muted);
+      transition: background 140ms ease, color 140ms ease;
+    }
+    .toc-link:hover, .toc-link.active {
+      background: var(--blue-bg);
+      color: var(--blue);
+    }
+    .toc-num {
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      background: var(--bg-subtle);
+      color: var(--ink);
+      font-size: 11px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .toc-link.active .toc-num, .toc-link:hover .toc-num {
+      background: var(--blue);
+      color: #fff;
+    }
+
+    .toc-progress {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--ink-subtle);
+    }
+    .progress-bar-bg {
+      height: 7px;
+      background: var(--bg-subtle);
+      border-radius: 999px;
+      margin-top: 6px;
+      overflow: hidden;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--green);
+      transition: width 250ms ease;
+    }
+
+    /* Main Content */
+    .main { display: flex; flex-direction: column; gap: 24px; }
+
+    .topic-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 26px 28px;
+      box-shadow: var(--shadow-sm);
+      scroll-margin-top: 20px;
+    }
+    .topic-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .topic-kicker {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--blue);
+      margin-bottom: 4px;
+    }
+    .topic-header h2 {
+      font-size: 1.32rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    /* Formula & Rule Boxes */
+    .formula-box {
+      background: #0f172a;
+      color: #f8fafc;
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin: 14px 0;
+      font-family: var(--mono);
+      font-size: 0.9rem;
+      line-height: 1.7;
+      overflow-x: auto;
+    }
+    .formula-label {
+      display: block;
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #93c5fd;
+      margin-bottom: 6px;
+    }
+    .hl-blue { color: #60a5fa; font-weight: 700; }
+    .hl-green { color: #34d399; font-weight: 700; }
+    .hl-amber { color: #fbbf24; font-weight: 700; }
+    .hl-red { color: #f87171; font-weight: 700; }
+
+    /* Callouts */
+    .callout {
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin: 14px 0;
+      font-size: 0.94rem;
+      border: 1px solid transparent;
+    }
+    .callout-title {
+      font-weight: 800;
+      font-size: 0.88rem;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .callout-blue { background: var(--blue-bg); border-color: var(--blue-border); color: #1e3a8a; }
+    .callout-amber { background: var(--amber-bg); border-color: var(--amber-border); color: #78350f; }
+    .callout-red { background: var(--red-bg); border-color: var(--red-border); color: #7f1d1d; }
+    .callout-green { background: var(--green-bg); border-color: var(--green-border); color: #064e3b; }
+
+    /* Decision Flow */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 16px 0;
+    }
+    .step-box {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+    }
+    .step-box strong {
+      display: block;
+      font-size: 0.86rem;
+      color: var(--blue);
+      margin-bottom: 6px;
+    }
+    .step-box p { font-size: 0.88rem; color: var(--ink-muted); }
+
+    /* Examples */
+    .section-subtitle {
+      font-size: 0.95rem;
+      font-weight: 800;
+      margin: 20px 0 10px;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .example-list { display: flex; flex-direction: column; gap: 12px; }
+    .example-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 15px 17px;
+      background: #fcfdff;
+    }
+    .ex-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: var(--bg-subtle);
+      color: var(--ink-muted);
+      margin-bottom: 8px;
+    }
+    .ex-original {
+      font-size: 0.95rem;
+      color: var(--ink-muted);
+      margin-bottom: 6px;
+    }
+    .ex-strike {
+      text-decoration: line-through;
+      color: var(--red);
+      background: var(--red-bg);
+      padding: 1px 4px;
+      border-radius: 4px;
+    }
+    .ex-result {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--ink);
+      background: var(--green-bg);
+      border-left: 3px solid var(--green);
+      padding: 8px 12px;
+      border-radius: 0 8px 8px 0;
+      margin: 6px 0 8px;
+    }
+    .ex-vi {
+      font-size: 0.88rem;
+      color: var(--ink-subtle);
+      font-style: italic;
+      margin-bottom: 6px;
+    }
+    .ex-explain {
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      background: var(--bg-subtle);
+      padding: 9px 12px;
+      border-radius: 8px;
+    }
+    .ex-explain strong { color: var(--ink); }
+
+    /* Bad vs Good Pair */
+    .compare-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 8px 0;
+    }
+    .pair-bad {
+      background: var(--red-bg);
+      border: 1px solid var(--red-border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 0.9rem;
+    }
+    .pair-good {
+      background: var(--green-bg);
+      border: 1px solid var(--green-border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 0.9rem;
+    }
+
+    /* Tables */
+    .table-wrap { overflow-x: auto; margin: 14px 0; border: 1px solid var(--border); border-radius: 12px; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.89rem; text-align: left; }
+    th {
+      background: var(--bg-subtle);
+      font-weight: 800;
+      color: var(--ink);
+      padding: 11px 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    td {
+      padding: 11px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      color: var(--ink-muted);
+    }
+    tr:last-child td { border-bottom: none; }
+    code {
+      font-family: var(--mono);
+      font-size: 0.84em;
+      background: var(--bg-subtle);
+      padding: 2px 6px;
+      border-radius: 5px;
+      color: var(--ink);
+    }
+
+    /* Interactive Quick Check */
+    .quiz-box {
+      margin-top: 20px;
+      border: 1px solid var(--blue-border);
+      background: #f8fbff;
+      border-radius: 14px;
+      padding: 18px;
+    }
+    .quiz-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .quiz-badge {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--blue);
+      background: var(--blue-bg);
+      padding: 3px 9px;
+      border-radius: 999px;
+    }
+    .quiz-q {
+      font-weight: 700;
+      font-size: 0.96rem;
+      margin-bottom: 12px;
+      color: var(--ink);
+    }
+    .quiz-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .quiz-opt {
+      text-align: left;
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--ink);
+      cursor: pointer;
+      transition: all 140ms ease;
+    }
+    .quiz-opt:hover:not(:disabled) {
+      border-color: var(--blue);
+      background: var(--blue-bg);
+    }
+    .quiz-opt.is-correct {
+      background: var(--green-bg);
+      border-color: var(--green);
+      color: #065f46;
+    }
+    .quiz-opt.is-wrong {
+      background: var(--red-bg);
+      border-color: var(--red);
+      color: #991b1b;
+    }
+    .quiz-feedback {
+      display: none;
+      margin-top: 12px;
+      padding: 11px 14px;
+      border-radius: 10px;
+      font-size: 0.89rem;
+      line-height: 1.55;
+    }
+    .quiz-feedback.show { display: block; }
+    .quiz-feedback.ok { background: var(--green-bg); border: 1px solid var(--green-border); color: #064e3b; }
+    .quiz-feedback.err { background: var(--red-bg); border: 1px solid var(--red-border); color: #7f1d1d; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .shell { grid-template-columns: 1fr; }
+      .toc { position: static; }
+      .steps-grid, .compare-pair, .quiz-options { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-badges">
+        <span class="badge badge-blue">UNIT 5 • GLOBAL WARMING</span>
+        <span class="badge badge-slate">Tiếng Anh 11 • Học sinh: Thái</span>
+        <span class="badge badge-green">Cẩm nang giải thích &amp; ví dụ chi tiết</span>
+      </div>
+      <h1>Mệnh Đề Phân Từ (Present &amp; Past Participle Clauses) — Giải Thích &amp; Ví Dụ Chi Tiết</h1>
+      <p>
+        Trang hướng dẫn chi tiết toàn bộ <strong>5 chuyên đề ngữ pháp</strong> chuẩn SGK Tiếng Anh 11 Global Success (Unit 5) của Thái.
+        Mỗi phần đều có <strong>công thức</strong>, <strong>cách biến đổi từng bước</strong>, <strong>ví dụ song ngữ phân tích rõ chủ ngữ – động từ</strong>,
+        <strong>bẫy mất điểm</strong> và <strong>câu hỏi kiểm tra nhanh ngay tại chỗ</strong>.
+      </p>
+    </header>
+
+    <!-- SIDEBAR TOC -->
+    <aside class="toc" aria-label="Mục lục chuyên đề">
+      <div class="toc-title">Mục lục 5 chuyên đề</div>
+      <ul class="toc-list">
+        <li><a class="toc-link active" href="#nen-tang"><span class="toc-num">0</span>Nguyên tắc vàng (S₁ = S₂)</a></li>
+        <li><a class="toc-link" href="#chuyen-de-1"><span class="toc-num">1</span>V-ing chỉ Nguyên nhân</a></li>
+        <li><a class="toc-link" href="#chuyen-de-2"><span class="toc-num">2</span>V-ing chỉ Thời gian</a></li>
+        <li><a class="toc-link" href="#chuyen-de-3"><span class="toc-num">3</span>V3/ed mang nghĩa Bị động</a></li>
+        <li><a class="toc-link" href="#chuyen-de-4"><span class="toc-num">4</span>Bẫy Phân từ lơ lửng (8.5+)</a></li>
+        <li><a class="toc-link" href="#chuyen-de-5"><span class="toc-num">5</span>5 Dạng Viết lại câu &amp; Bảng tra</a></li>
+      </ul>
+      <div class="toc-progress">
+        <div>Tiến độ làm Quick Check: <strong id="scoreText">0 / 5</strong> câu đúng</div>
+        <div class="progress-bar-bg"><div class="progress-bar-fill" id="progressFill"></div></div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <!-- SECTION 0: NỀN TẢNG -->
+      <section class="topic-card" id="nen-tang">
+        <div class="topic-header">
+          <div>
+            <span class="topic-kicker">Nền tảng bắt buộc</span>
+            <h2>0. Bản chất của Mệnh đề phân từ &amp; Điều kiện tiên quyết S₁ = S₂</h2>
+          </div>
+        </div>
+        <p>
+          <strong>Mệnh đề phân từ (Participle Clause)</strong> là cách <strong>rút gọn một mệnh đề phụ</strong>
+          (thường bắt đầu bằng <em>Because, Since, While, When, If</em> hoặc mệnh đề quan hệ) thành một cụm ngắn gọn mở đầu bằng
+          <strong>Present Participle (V-ing)</strong> hoặc <strong>Past Participle (V3/ed)</strong>. Mục đích là giúp câu văn cô đọng và học thuật hơn.
+        </p>
+
+        <div class="callout callout-red">
+          <div class="callout-title">⚠️ ĐIỀU KIỆN TIÊN QUYẾT BẮT BUỘC: S₁ = S₂</div>
+          Chỉ được phép rút gọn khi <strong>Chủ ngữ của mệnh đề phân từ (S₁) PHẢI TRÙNG với Chủ ngữ của mệnh đề chính (S₂)</strong>.
+          Nếu hai vế khác chủ ngữ mà vẫn rút gọn, câu sẽ sai ngữ pháp nặng (gọi là lỗi <em>Dangling Participle</em> ở Chuyên đề 4).
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-box">
+            <strong>Bước 1: Kiểm tra chủ ngữ</strong>
+            <p>Xem hai vế câu có cùng nói về một người / một vật không? Nếu <strong>KHÔNG</strong> ➔ không rút gọn được theo kiểu thông thường.</p>
+          </div>
+          <div class="step-box">
+            <strong>Bước 2: Xét Chủ động / Bị động</strong>
+            <p>Chủ ngữ <strong>tự làm</strong> hành động ➔ dùng <code>(Not) V-ing</code>. Chủ ngữ <strong>bị tác động</strong> ➔ dùng <code>(Not) V3/ed</code>.</p>
+          </div>
+          <div class="step-box">
+            <strong>Bước 3: Kiểm tra phủ định &amp; Bỏ to-be</strong>
+            <p>Nếu câu gốc có <code>not</code> ➔ đặt <strong>Not</strong> ngay trước <code>V-ing</code> hoặc <code>V3/ed</code>, bỏ hết trợ động từ <code>do/does/did/be</code>.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHUYÊN ĐỀ 1 -->
+      <section class="topic-card" id="chuyen-de-1">
+        <div class="topic-header">
+          <div>
+            <span class="topic-kicker">Chuyên đề 1</span>
+            <h2>Mệnh đề phân từ hiện tại (V-ing) chỉ Nguyên nhân &amp; Lý do</h2>
+          </div>
+        </div>
+        <p>
+          Dùng để thay thế cho mệnh đề phụ chỉ nguyên nhân (<em>Because / Since / As</em>) khi động từ ở vế nguyên nhân mang nghĩa <strong>CHỦ ĐỘNG</strong>.
+        </p>
+
+        <div class="formula-box">
+          <span class="formula-label">Công thức chuyển đổi</span>
+          Because / Since / As + S + V(chủ động) ➔ <span class="hl-green">V-ing + (O), S + V(chính)</span><br>
+          Dạng phủ định: Because + S + don't/doesn't/didn't + V ➔ <span class="hl-amber">Not + V-ing + (O), S + V(chính)</span>
+        </div>
+
+        <div class="callout callout-amber">
+          <div class="callout-title">💡 Lưu ý chuyển động từ về V-ing</div>
+          Dù động từ gốc ở thì Quá khứ đơn (<em>realized, saw, trapped</em>) hay Hiện tại đơn (<em>has, traps</em>), khi rút gọn luôn đưa về <strong>động từ nguyên mẫu + -ing</strong> (ví dụ: <em>saw ➔ seeing</em>, <em>had ➔ having</em>). Với câu phủ định, bỏ trợ động từ <em>don't/didn't</em> rồi đặt thẳng <strong>Not</strong> ngay trước V-ing.
+        </div>
+
+        <div class="section-subtitle">📌 Ví dụ phân tích từng bước</div>
+        <div class="example-list">
+          <div class="example-item">
+            <span class="ex-tag">Ví dụ 1 • Khẳng định (Hiện tại đơn)</span>
+            <div class="ex-original">
+              Câu gốc: <span class="ex-strike">Because</span> <span class="ex-strike">greenhouse gases</span> <strong>trap</strong> too much heat, <strong>greenhouse gases (they)</strong> cause global temperatures to rise.
+            </div>
+            <div class="ex-result">➔ Trapping too much heat, greenhouse gases cause global temperatures to rise.</div>
+            <div class="ex-vi">Nghĩa: Vì giữ quá nhiều nhiệt lượng, khí nhà kính khiến nhiệt độ toàn cầu tăng lên.</div>
+            <div class="ex-explain">
+              <strong>Giải thích chi tiết:</strong> Chủ ngữ 2 vế đều là <em>greenhouse gases</em> (S₁ = S₂). Khí nhà kính tự thực hiện hành động giữ nhiệt (chủ động). Ta bỏ <code>Because</code> và chủ ngữ lặp, thay <code>they</code> ở vế chính bằng danh từ gốc <code>greenhouse gases</code> để câu rõ nghĩa, rồi đổi <code>trap</code> ➔ <code>Trapping</code>.
+            </div>
+          </div>
+
+          <div class="example-item">
+            <span class="ex-tag">Ví dụ 2 • Khẳng định (Quá khứ đơn)</span>
+            <div class="ex-original">
+              Câu gốc: <span class="ex-strike">Since</span> <span class="ex-strike">many students</span> <strong>realized</strong> the danger of plastic waste, <strong>they</strong> brought reusable bottles.
+            </div>
+            <div class="ex-result">➔ Realizing the danger of plastic waste, many students brought reusable bottles.</div>
+            <div class="ex-vi">Nghĩa: Vì nhận thức được mối nguy của rác thải nhựa, nhiều học sinh đã mang theo bình nước dùng lại.</div>
+            <div class="ex-explain">
+              <strong>Giải thích chi tiết:</strong> Động từ gốc là quá khứ <code>realized</code>, nhưng khi rút gọn phải đưa về nguyên mẫu <code>realize</code> rồi thêm <code>-ing</code> thành <code>Realizing</code> (không viết <em>Realizeding</em> hay giữ quá khứ).
+            </div>
+          </div>
+
+          <div class="example-item">
+            <span class="ex-tag">Ví dụ 3 • Phủ định (Not + V-ing)</span>
+            <div class="ex-original">
+              Câu gốc: <span class="ex-strike">Because</span> <span class="ex-strike">Nam didn't</span> <strong>understand</strong> how to calculate his carbon footprint, <strong>he</strong> asked his teacher for help.
+            </div>
+            <div class="ex-result">➔ Not understanding how to calculate his carbon footprint, Nam asked his teacher for help.</div>
+            <div class="ex-vi">Nghĩa: Vì không hiểu cách tính dấu chân carbon, Nam đã nhờ giáo viên giúp đỡ.</div>
+            <div class="ex-explain">
+              <strong>Giải thích chi tiết:</strong> Không bao giờ viết <em>Didn't understanding</em> hay <em>Don't understanding</em>. Phủ định của mệnh đề phân từ luôn là <strong>Not + V-ing</strong>.
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-box" data-quiz="1" data-answer="B" data-explain="Chủ ngữ chính là 'the government' (tự thực hiện hành động nhận thức -> chủ động). Rút gọn mệnh đề nguyên nhân chủ động dùng V-ing: 'Recognizing'.">
+          <div class="quiz-head">
+            <span class="quiz-badge">Quick Check 1</span>
+          </div>
+          <div class="quiz-q">______ the severe consequences of global warming, the government decided to cut coal power.</div>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-opt="A">A. Recognized</button>
+            <button class="quiz-opt" data-opt="B">B. Recognizing</button>
+            <button class="quiz-opt" data-opt="C">C. To recognize</button>
+            <button class="quiz-opt" data-opt="D">D. Not recognize</button>
+          </div>
+          <div class="quiz-feedback"></div>
+        </div>
+      </section>
+
+      <!-- CHUYÊN ĐỀ 2 -->
+      <section class="topic-card" id="chuyen-de-2">
+        <div class="topic-header">
+          <div>
+            <span class="topic-kicker">Chuyên đề 2</span>
+            <h2>Mệnh đề phân từ hiện tại (V-ing) chỉ Thời gian &amp; Hành động đồng thời</h2>
+          </div>
+        </div>
+        <p>
+          Dùng để diễn tả <strong>hai hành động xảy ra cùng một lúc</strong> (trong khi đang...) hoặc <strong>hai hành động nối tiếp nhau ngay lập tức</strong> của cùng một chủ thể.
+        </p>
+
+        <div class="formula-box">
+          <span class="formula-label">Công thức chuyển đổi</span>
+          While / When + S + (was/were) + V-ing / V ➔ <span class="hl-green">(While / When) + V-ing + (O), S + V</span>
+        </div>
+
+        <div class="callout callout-red">
+          <div class="callout-title">🚫 Bẫy kinh điển: Tuyệt đối KHÔNG giữ trợ động từ was / were!</div>
+          Rất nhiều bạn rút gọn <em>"While they were walking..."</em> bằng cách bỏ <em>"While they"</em> và giữ lại <em>"were walking"</em>. Đây là lỗi sai rất hay gặp trong bài tìm lỗi sai!
+          <div class="compare-pair">
+            <div class="pair-bad">❌ <strong>Was walking</strong> through the forest, the tourists noticed fallen trees.</div>
+            <div class="pair-good">✅ <strong>Walking</strong> through the forest, the tourists noticed fallen trees.</div>
+          </div>
+        </div>
+
+        <div class="section-subtitle">📌 Ví dụ chi tiết</div>
+        <div class="example-list">
+          <div class="example-item">
+            <span class="ex-tag">Ví dụ 1 • Hai hành động diễn ra song song cùng lúc</span>
+            <div class="ex-original">
+              Câu gốc: <span class="ex-strike">While they were</span> <strong>walking</strong> along the polluted river, <strong>the volunteers</strong> picked up tons of plastic bottles.
+            </div>
+            <div class="ex-result">➔ Walking along the polluted river, the volunteers picked up tons of plastic bottles.</div>
+            <div class="ex-vi">Nghĩa: Trong khi đi dọc con sông bị ô nhiễm, các tình nguyện viên đã nhặt hàng tấn chai nhựa.</div>
+            <div class="ex-explain">
+              <strong>Giải thích chi tiết:</strong> Hành động "đi dọc bờ sông" và "nhặt chai nhựa" xảy ra song song cùng thời điểm. Bỏ cả <code>they</code> và <code>were</code>, chỉ giữ lại phân từ <code>Walking</code>.
+            </div>
+          </div>
+
+          <div class="example-item">
+            <span class="ex-tag">Ví dụ 2 • Hai hành động nối tiếp ngay lập tức</span>
+            <div class="ex-original">
+              Câu gốc: <span class="ex-strike">When the forest ranger</span> <strong>saw</strong> the spreading bushfire, <strong>he</strong> called the emergency helicopter immediately.
+            </div>
+            <div class="ex-result">➔ Seeing the spreading bushfire, the forest ranger called the emergency helicopter immediately.</div>
+            <div class="ex-vi">Nghĩa: Khi vừa nhìn thấy đám cháy rừng lan rộng, người kiểm lâm lập tức gọi trực thăng cứu hộ.</div>
+            <div class="ex-explain">
+              <strong>Giải thích chi tiết:</strong> Hành động "nhìn thấy" và "gọi cứu hộ" diễn ra gần như tức thì, nên rút gọn trực tiếp mệnh đề thời gian thành <code>Seeing</code>.
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-box" data-quiz="2" data-answer="A" data-explain="Lỗi sai nằm ở A ('Was walking'). Mệnh đề phân từ đứng đầu câu tuyệt đối không được chứa to-be 'was/were'. Phải sửa thành 'Walking'.">
+          <div class="quiz-head">
+            <span class="quiz-badge">Quick Check 2</span>
+          </div>
+          <div class="quiz-q">Chọn phương án chứa lỗi sai: "<u>Was walking</u> (A) <u>through</u> (B) the pine forest, the eco-tourists <u>noticed</u> (C) several <u>fallen</u> (D) trees."</div>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-opt="A">A. Was walking ➔ Walking</button>
+            <button class="quiz-opt" data-opt="B">B. through ➔ across</button>
+            <button class="quiz-opt" data-opt="C">C. noticed ➔ notice</button>
+            <button class="quiz-opt" data-opt="D">D. fallen ➔ falling</button>
+          </div>
+          <div class="quiz-feedback"></div>
+        </div>
+      </section>
+
+      <!-- CHUYÊN ĐỀ 3 -->
+      <section class="topic-card" id="chuyen-de-3">
+        <div class="topic-header">
+          <div>
+            <span class="topic-kicker">Chuyên đề 3</span>
+            <h2>Mệnh đề phân từ quá khứ (V3/ed) mang nghĩa Bị động</h2>
+          </div>
+        </div>
+        <p>
+          Khi mệnh đề phụ (chỉ nguyên nhân, thời gian hoặc điều kiện) ở thể <strong>BỊ ĐỘNG</strong>, ta lược bỏ liên từ, chủ ngữ và động từ <code>to be</code>, chỉ giữ lại <strong>Quá khứ phân từ (V3/ed)</strong>.
+        </p>
+
+        <div class="formula-box">
+          <span class="formula-label">Công thức chuyển đổi</span>
+          • Khẳng định: Because / As / If + S + be + <span class="hl-blue">V3/ed</span> ➔ <span class="hl-blue">V3/ed + (by O), S + V(chính)</span><br>
+          • Phủ định: &nbsp;&nbsp;If / Because + S + be + <strong>not</strong> + <span class="hl-amber">V3/ed</span> ➔ <span class="hl-amber">Not + V3/ed + (O), S + V(chính)</span>
+        </div>
+
+        <div class="callout callout-blue">
+          <div class="callout-title">🔍 Mẹo phân biệt V-ing vs. V3/ed trong 3 giây</div>
+          Lấy <strong>Chủ ngữ đứng ngay sau dấu phẩy</strong> ghép thử với động từ ở đầu câu:
+          <ul style="margin: 6px 0 0 18px;">
+            <li>Nếu chủ ngữ <strong>tự làm</strong> hành động đó ➔ <strong>V-ing</strong> (Chủ động).</li>
+            <li>Nếu chủ ngữ <strong>bị / được tác động</strong> bởi hành động đó ➔ <strong>V3/ed</strong> (Bị động).</li>
+          </ul>
+        </div>
+
+        <div class="section-subtitle">📌 Ví dụ chi tiết</div>
+        <div class="example-list">
+          <div class="example-item">
+            <span class="ex-tag">Ví dụ 1 • Điều kiện bị động (If + be + V3)</span>
+            <div class="ex-original">
+              Câu gốc: <span class="ex-strike">If fossil fuels are</span> <strong>burnt</strong> carelessly for energy, <strong>they</strong> release toxic gases into the atmosphere.
+            </div>
+            <div class="ex-result">➔ Burnt carelessly for energy, fossil fuels release toxic gases into the atmosphere.</div>
+            <div class="ex-vi">Nghĩa: Nếu bị đốt bất cẩn để lấy năng lượng, nhiên liệu hóa thạch sẽ thải ra khí độc vào khí quyển.</div>
+            <div class="ex-explain">
+              <strong>Giải thích chi tiết:</strong> Chủ ngữ sau dấu phẩy là <em>fossil fuels</em> (nhiên liệu hóa thạch). Nhiên liệu không thể tự đốt chính mình mà phải <em>bị con người đốt</em> (bị động) ➔ chọn <code>Burnt</code> (V3 của <em>burn</em>), không dùng <em>Burning</em>.
+            </div>
+          </div>
+
+          <div class="example-item">
+            <span class="ex-tag">Ví dụ 2 • Nguyên nhân bị động / Trạng thái (be worried about)</span>
+            <div class="ex-original">
+              Câu gốc: <span class="ex-strike">Because many young people were</span> deeply <strong>worried</strong> about climate catastrophe, <strong>they</strong> organized a strike.
+            </div>
+            <div class="ex-result">➔ Deeply worried about climate catastrophe, many young people organized a strike.</div>
+            <div class="ex-vi">Nghĩa: Vì vô cùng lo lắng về thảm họa khí hậu, nhiều bạn trẻ đã tổ chức tuần hành.</div>
+            <div class="ex-explain">
+              <strong>Giải thích chi tiết:</strong> Cụm gốc là <em>were deeply worried about</em>. Khi rút gọn, bỏ <code>Because + chủ ngữ + were</code>, giữ lại trạng từ + quá khứ phân từ <code>Deeply worried about...</code>.
+            </div>
+          </div>
+
+          <div class="example-item">
+            <span class="ex-tag">Ví dụ 3 • Điều kiện bị động PHỦ ĐỊNH (Not + V3/ed — Câu chuẩn SGK trang 55)</span>
+            <div class="ex-original">
+              Câu gốc: <span class="ex-strike">If farm animals are</span> <strong>not kept</strong> cool in hot weather, <strong>they</strong> can suffer from heat stress.
+            </div>
+            <div class="ex-result">➔ Not kept cool in hot weather, farm animals can suffer from heat stress.</div>
+            <div class="ex-vi">Nghĩa: Nếu không được giữ mát trong thời tiết nắng nóng, vật nuôi có thể bị sốc nhiệt.</div>
+            <div class="ex-explain">
+              <strong>Giải thích chi tiết:</strong> Bỏ <code>If</code>, chủ ngữ <code>farm animals</code> và động từ <code>are</code>, đặt thẳng <code>Not</code> trước quá khứ phân từ <code>kept</code>. Tuyệt đối không dùng <em>Not keeping</em> vì vật nuôi "được giữ mát" (bị động).
+            </div>
+          </div>
+
+          <div class="example-item">
+            <span class="ex-tag">Ví dụ 4 • Nguyên nhân bị động có "by"</span>
+            <div class="ex-original">
+              Câu gốc: <span class="ex-strike">Because the mountain road was</span> <strong>damaged</strong> by heavy rains, <strong>it</strong> was completely blocked by mud.
+            </div>
+            <div class="ex-result">➔ Damaged by heavy rains, the mountain road was completely blocked by mud.</div>
+            <div class="ex-vi">Nghĩa: Vì bị hư hại bởi mưa lớn, con đường miền núi đã bị bùn đất chặn hoàn toàn.</div>
+            <div class="ex-explain">
+              <strong>Giải thích chi tiết:</strong> Thấy dấu hiệu <code>by heavy rains</code> (bởi mưa lớn) và chủ ngữ <em>the mountain road</em> (con đường bị hư hại) ➔ chắc chắn là bị động, dùng <code>Damaged</code>.
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-box" data-quiz="3" data-answer="C" data-explain="Chủ ngữ sau dấu phẩy là 'the wild animals' (các loài động vật hoang dã). Có cụm 'by massive deforestation' -> chúng BỊ đe dọa (bị động) -> dùng 'Threatened'.">
+          <div class="quiz-head">
+            <span class="quiz-badge">Quick Check 3</span>
+          </div>
+          <div class="quiz-q">______ by massive deforestation, the wild animals lost their natural habitat and food sources.</div>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-opt="A">A. Threatening</button>
+            <button class="quiz-opt" data-opt="B">B. Threaten</button>
+            <button class="quiz-opt" data-opt="C">C. Threatened</button>
+            <button class="quiz-opt" data-opt="D">D. To threaten</button>
+          </div>
+          <div class="quiz-feedback"></div>
+        </div>
+      </section>
+
+      <!-- CHUYÊN ĐỀ 4 -->
+      <section class="topic-card" id="chuyen-de-4">
+        <div class="topic-header">
+          <div>
+            <span class="topic-kicker">Chuyên đề 4 • Phân hóa 8.5+</span>
+            <h2>Bẫy Phân từ lơ lửng (Dangling Participles)</h2>
+          </div>
+        </div>
+        <p>
+          Đây là dạng bẫy hay xuất hiện nhất trong các câu lấy điểm 8.5+ kỳ thi Giữa kì và THPT Quốc Gia.
+          Lỗi xảy ra khi <strong>cụm phân từ đứng đầu câu nói về hành động của người/vật A, nhưng chủ ngữ đứng ngay sau dấu phẩy lại là người/vật B</strong>!
+        </p>
+
+        <div class="callout callout-amber">
+          <div class="callout-title">🎯 Mẹo bắt lỗi trong 5 giây</div>
+          Khi thấy câu có dạng <code>V-ing / V3/ed ..., [Chủ ngữ S] + V</code>:
+          Hãy ghép thử <strong>[Chủ ngữ S]</strong> vào trước động từ đầu câu để dịch nghĩa. Nếu thấy <em>vô lý về mặt logic</em> (ví dụ: mùi hương biết đi bộ, sự ô nhiễm biết tự đốt than, nạn phá rừng biết bay máy bay...) ➔ Câu đó chắc chắn mắc lỗi <strong>Dangling Participle</strong>!
+        </div>
+
+        <div class="section-subtitle">📌 Các cặp câu Sai ➔ Đúng điển hình</div>
+        <div class="example-list">
+          <div class="example-item">
+            <span class="ex-tag">Cặp ví dụ 1 • Chủ ngữ vô tri không thể "đi bộ"</span>
+            <div class="compare-pair">
+              <div class="pair-bad">❌ <strong>Walking in the forest</strong>, <u>the thick smoke</u> hurt our eyes.<br><small>Vô lý: "làn khói dày đặc" không biết đi bộ trong rừng!</small></div>
+              <div class="pair-good">✅ <strong>Walking in the forest</strong>, <u>we</u> felt the thick smoke hurting our eyes.<br><small>Hợp lý: "we" (chúng tôi) là người đi bộ.</small></div>
+            </div>
+          </div>
+
+          <div class="example-item">
+            <span class="ex-tag">Cặp ví dụ 2 • Chuyển đổi chủ động sang bị động ở vế chính khiến sai chủ ngữ</span>
+            <div class="compare-pair">
+              <div class="pair-bad">❌ <strong>Burning fossil fuels</strong>, <u>severe air pollution</u> is caused.<br><small>Vô lý: "ô nhiễm không khí" không thể tự đi đốt nhiên liệu hóa thạch!</small></div>
+              <div class="pair-good">✅ <strong>Burning fossil fuels</strong>, <u>factories</u> cause severe air pollution.<br><small>Hợp lý: "factories" (các nhà máy) là chủ thể đốt nhiên liệu.</small></div>
+            </div>
+          </div>
+
+          <div class="example-item">
+            <span class="ex-tag">Cặp ví dụ 3 • Lỗi khi viết câu bị động với động từ quan sát</span>
+            <div class="compare-pair">
+              <div class="pair-bad">❌ <strong>Flying over the Amazon</strong>, <u>widespread deforestation</u> could be seen.<br><small>Vô lý: "nạn phá rừng" không thể bay trên bầu trời Amazon!</small></div>
+              <div class="pair-good">✅ <strong>Flying over the Amazon</strong>, <u>researchers</u> saw widespread deforestation.<br><small>Hợp lý: "researchers" (các nhà nghiên cứu) bay trên trực thăng để quan sát.</small></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-box" data-quiz="4" data-answer="B" data-explain="Ai là người thực hiện hành động 'Walking along the riverbank'? Chỉ có 'we' (chúng tôi) ở đáp án B mới biết đi bộ! Đáp án A (thousands of dead fish), C (the smell), D (it) đều là lỗi phân từ lơ lửng.">
+          <div class="quiz-head">
+            <span class="quiz-badge">Quick Check 4</span>
+          </div>
+          <div class="quiz-q">Câu nào dưới đây ĐÚNG ngữ pháp và KHÔNG mắc lỗi phân từ lơ lửng?</div>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-opt="A">A. Walking along the riverbank, thousands of dead fish were found by us.</button>
+            <button class="quiz-opt" data-opt="B">B. Walking along the riverbank, we found thousands of dead fish floating.</button>
+            <button class="quiz-opt" data-opt="C">C. Walking along the riverbank, the smell of dead fish was terrible.</button>
+            <button class="quiz-opt" data-opt="D">D. Walking along the riverbank, it shocked the tourists.</button>
+          </div>
+          <div class="quiz-feedback"></div>
+        </div>
+      </section>
+
+      <!-- CHUYÊN ĐỀ 5 -->
+      <section class="topic-card" id="chuyen-de-5">
+        <div class="topic-header">
+          <div>
+            <span class="topic-kicker">Chuyên đề 5 • Tổng kết</span>
+            <h2>5 Dạng Viết lại câu kinh điển với Present &amp; Past Participle Clauses</h2>
+          </div>
+        </div>
+        <p>
+          Bảng tổng hợp trọn vẹn <strong>5 kiểu câu hỏi viết lại câu / trắc nghiệm biến đổi câu</strong> chuẩn kiến thức SGK Unit 5:
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 24%;">Dạng bài</th>
+                <th style="width: 38%;">Câu gốc (Đầy đủ)</th>
+                <th style="width: 38%;">Câu rút gọn (Participle Clause)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Nguyên nhân chủ động</strong></td>
+                <td><em>Because Vietnam has a long coastline, it is vulnerable to sea level rise.</em></td>
+                <td><strong>Having a long coastline,</strong> Vietnam is vulnerable to sea level rise.</td>
+              </tr>
+              <tr>
+                <td><strong>2. Nguyên nhân / Điều kiện bị động (Khẳng định &amp; Phủ định)</strong></td>
+                <td><em>If farm animals are not kept cool in hot weather, they can suffer from heat stress.</em></td>
+                <td><strong>Not kept cool in hot weather,</strong> farm animals can suffer from heat stress.</td>
+              </tr>
+              <tr>
+                <td><strong>3. Hai hành động đồng thời / liên tiếp (1 chủ thể)</strong></td>
+                <td><em>Minh closed the book and turned off the lamp.</em></td>
+                <td><strong>Closing the book,</strong> Minh turned off the lamp.</td>
+              </tr>
+              <tr>
+                <td><strong>4. Rút gọn MĐQH chủ động</strong></td>
+                <td><em>The gases <u>which trap</u> heat warm the Earth.</em></td>
+                <td>The gases <strong>trapping</strong> heat warm the Earth.</td>
+              </tr>
+              <tr>
+                <td><strong>5. Rút gọn MĐQH bị động</strong></td>
+                <td><em>The conference <u>which was held</u> in Paris set strict targets.</em></td>
+                <td>The conference <strong>held</strong> in Paris set strict targets.<br><small>(Hoặc đảo lên đầu: <em>Held in Paris, the conference...</em>)</small></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="quiz-box" data-quiz="5" data-answer="A" data-explain="Câu gốc 'Because Vietnam has...' chỉ nguyên nhân mang nghĩa chủ động, cùng chủ ngữ 'Vietnam'. Rút gọn đưa động từ 'has' về nguyên mẫu + ing -> 'Having a long coastline, Vietnam is...'.">
+          <div class="quiz-head">
+            <span class="quiz-badge">Quick Check 5</span>
+          </div>
+          <div class="quiz-q">Viết lại câu sau dùng Mệnh đề phân từ: "Because Vietnam has a long coastline, it is vulnerable to sea level rise."</div>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-opt="A">A. Having a long coastline, Vietnam is vulnerable to sea level rise.</button>
+            <button class="quiz-opt" data-opt="B">B. Had a long coastline, Vietnam is vulnerable to sea level rise.</button>
+            <button class="quiz-opt" data-opt="C">C. Vietnam having a long coastline, vulnerable to sea level rise.</button>
+            <button class="quiz-opt" data-opt="D">D. To have a long coastline, Vietnam is vulnerable to sea level rise.</button>
+          </div>
+          <div class="quiz-feedback"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      const answered = new Map();
+      const totalQuizzes = document.querySelectorAll('.quiz-box').length;
+      const scoreText = document.getElementById('scoreText');
+      const progressFill = document.getElementById('progressFill');
+
+      function updateScore() {
+        let correctCount = 0;
+        answered.forEach((isOk) => { if (isOk) correctCount++; });
+        scoreText.textContent = `${correctCount} / ${totalQuizzes}`;
+        progressFill.style.width = `${(correctCount / totalQuizzes) * 100}%`;
+      }
+
+      document.querySelectorAll('.quiz-box').forEach((box) => {
+        const quizId = box.dataset.quiz;
+        const correctOpt = box.dataset.answer;
+        const explainText = box.dataset.explain;
+        const feedbackEl = box.querySelector('.quiz-feedback');
+        const buttons = box.querySelectorAll('.quiz-opt');
+
+        buttons.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const chosen = btn.dataset.opt;
+            const isCorrect = chosen === correctOpt;
+
+            buttons.forEach((b) => {
+              b.classList.remove('is-correct', 'is-wrong');
+              if (b.dataset.opt === correctOpt) b.classList.add('is-correct');
+            });
+
+            if (!isCorrect) {
+              btn.classList.add('is-wrong');
+            }
+
+            answered.set(quizId, isCorrect);
+            updateScore();
+
+            feedbackEl.className = `quiz-feedback show ${isCorrect ? 'ok' : 'err'}`;
+            feedbackEl.innerHTML = isCorrect
+              ? `<strong>✅ Chính xác!</strong> ${explainText}`
+              : `<strong>❌ Chưa đúng (Đáp án đúng là ${correctOpt}).</strong> ${explainText}`;
+          });
+        });
+      });
+
+      // Highlight active TOC link on scroll
+      const tocLinks = document.querySelectorAll('.toc-link');
+      const sections = Array.from(document.querySelectorAll('.topic-card'));
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const id = entry.target.getAttribute('id');
+              tocLinks.forEach((link) => {
+                link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+              });
+            }
+          });
+        },
+        { rootMargin: '-20% 0px -65% 0px' }
+      );
+
+      sections.forEach((sec) => observer.observe(sec));
+    })();
+  </script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 /**
  * SEED SCRIPT: UNIT 5 LECTURE & 80-QUESTION ASSESSMENT FOR THÁI (19/11/2026)
  * Thầy Thức - Tiếng Anh 11 (Global Success - Unit 5: Global Warming)
- * Trọng tâm: 6 Chuyên Đề Mệnh Đề Phân Từ (Participle Clauses) + Quick Check Drills + 80 Câu Trắc Nghiệm Chuẩn 5 Quy Tắc Vàng
+ * Trọng tâm: 5 Chuyên Đề Mệnh Đề Phân Từ (Present & Past Participle Clauses chuẩn SGK) + Quick Check Drills + 80 Câu Trắc Nghiệm Chuẩn 5 Quy Tắc Vàng
  */
 
 const fs = require('fs');
@@ -36,7 +36,7 @@ function getSectionName(index) {
   } else if (index <= 45) {
     return 'Phần 3: 10 Câu Biến đổi từ loại (Word Formation: Noun - Adj - Adv - Verb)';
   } else if (index <= 60) {
-    return 'Phần 4: Mệnh đề phân từ quá khứ (V3/ed) & Phân từ hoàn thành (Having V3)';
+    return 'Phần 4: Mệnh đề phân từ quá khứ (Past Participle Clauses - V3/ed)';
   } else if (index <= 70) {
     return 'Phần 5: Phân hóa 8.5+ - Bẫy Phân từ lơ lửng & Rút gọn cùng chủ ngữ (Dangling Participles)';
   } else {
@@ -65,7 +65,7 @@ Mục tiêu: **Chinh phục điểm 8.5+ Kì thi Giữa kì & Kì thi Tốt nghi
 
 ---
 
-## ⚡ PHẦN II: 6 CHUYÊN ĐỀ NGỮ PHÁP CHUYÊN SÂU & BÀI TẬP NHANH VẬN DỤNG (QUICK CHECK DRILLS)
+## ⚡ PHẦN II: 5 CHUYÊN ĐỀ NGỮ PHÁP CHUYÊN SÂU & BÀI TẬP NHANH VẬN DỤNG (QUICK CHECK DRILLS)
 
 ---
 
@@ -139,9 +139,11 @@ D. to pick up
 
 ### 📌 CHUYÊN ĐỀ 3: MỆNH ĐỀ PHÂN TỪ QUÁ KHỨ (V3/ED) MANG NGHĨA BỊ ĐỘNG
 
-Khi mệnh đề phụ mang nghĩa **BỊ ĐỘNG** (chỉ nguyên nhân, thời gian hoặc điều kiện):
+Khi mệnh đề phụ mang nghĩa **BỊ ĐỘNG** (chỉ nguyên nhân hoặc điều kiện):
 
 $$\\mathbf{Because / If + S + be + V_3/V_{ed} \\iff V_3/V_{ed} + (by\\ O),\\ S + V}$$
+
+- **Dạng phủ định:** Thêm trực tiếp **\`NOT\`** ngay trước $V_3/V_{ed}$: $\\mathbf{Not + V_3/V_{ed},\\ S + V}$ *(VD SGK: If farm animals are not kept cool... $\\rightarrow$ **Not kept** cool in hot weather, farm animals can suffer from heat stress.)*
 
 #### 1. Cơ chế phân biệt V-ing vs. V3/ed:
 - Nếu chủ ngữ sau dấu phẩy **TỰ THỰC HIỆN** hành động ➔ dùng **$V\\text{-ing}$** (Chủ động).
@@ -159,49 +161,19 @@ B. Burnt
 C. To burn  
 D. Burn  
 
-**Câu 3.2:** ______ by heavy tropical rains, the mountain road was completely blocked by mud.  
-A. Damaged  
-B. Damaging  
-C. Damage  
-D. Was damaged  
+**Câu 3.2:** ______ cool in hot weather, farm animals can suffer from heat stress.  
+A. Not keeping  
+B. Not kept  
+C. Didn't keep  
+D. Not keep  
 
 > #### 📝 ĐÁP ÁN & GIẢI THÍCH CHI TIẾT - CHUYÊN ĐỀ 3:
 > - **Câu 3.1: Chọn B (Burnt).** Nhiên liệu hóa thạch 'được đốt' (bị động: *If they are burnt*) ➔ dùng *Burnt*.
-> - **Câu 3.2: Chọn A (Damaged).** Con đường miền núi 'bị tàn phá' (bị động) ➔ dùng *Damaged*.
+> - **Câu 3.2: Chọn B (Not kept).** Điều kiện bị động phủ định (*If farm animals are not kept cool...*) ➔ rút gọn thành *Not + V3/ed*: *Not kept*.
 
 ---
 
-### 📌 CHUYÊN ĐỀ 4: MỆNH ĐỀ PHÂN TỪ HOÀN THÀNH (HAVING + V3/ED)
-
-Khi muốn nhấn mạnh hành động ở mệnh đề phân từ **ĐÃ HOÀN TẤT XONG TRƯỚC** hành động ở mệnh đề chính:
-
-$$\\mathbf{After + S + had + V_3/V_{ed} \\iff Having + V_3/V_{ed}\\ (Chủ\\ động) \\mid Having\\ been + V_3/V_{ed}\\ (Bị\\ động)}$$
-
-#### 1. Ví dụ thực chiến:
-- *After the company had dumped toxic waste into the river, it was fined heavily.*  
-  ➔ **Having dumped toxic waste into the river, the company was fined heavily.**
-- *After they had been warned about the coming storm, the fishermen moved their boats ashore.*  
-  ➔ **Having been warned about the coming storm, the fishermen moved their boats ashore.**
-
-#### 🎯 BÀI TẬP NHANH VẬN DỤNG NGAY (QUICK CHECK - CHUYÊN ĐỀ 4)
-
-**Câu 4.1:** ______ the scientific documentary on sea level rise, Nam decided to use public transport every day.  
-A. Watch  
-B. Having watched  
-C. Watched  
-D. Being watched  
-
-**Câu 4.2:** Viết lại câu sau dùng \`Having + V3/ed\`:  
-*After the volunteers had planted hundreds of trees on the hill, they sat down to rest.*  
-➔ Having ..........................................................................................................  
-
-> #### 📝 ĐÁP ÁN & GIẢI THÍCH CHI TIẾT - CHUYÊN ĐỀ 4:
-> - **Câu 4.1: Chọn B (Having watched).** Hành động xem phim hoàn tất trước rồi Nam mới quyết định ➔ dùng *Having watched*.
-> - **Câu 4.2: Đáp án:** *Having planted hundreds of trees on the hill, the volunteers sat down to rest.*
-
----
-
-### 📌 CHUYÊN ĐỀ 5: BẪY PHÂN TỪ LƠ LỬNG (DANGLING PARTICIPLE TRAP - PHÂN HÓA 8.5+)
+### 📌 CHUYÊN ĐỀ 4: BẪY PHÂN TỪ LƠ LỬNG (DANGLING PARTICIPLE TRAP - PHÂN HÓA 8.5+)
 
 Đây là **bẫy đề thi THPT và kiểm tra Giữa kì** phân loại học sinh giỏi:
 
@@ -210,41 +182,40 @@ Mệnh đề phân từ đứng đầu câu nhưng chủ ngữ ngay sau dấu ph
 - ❌ *Walking in the forest, the thick smoke hurt our eyes.* (Sai vì "smoke" không biết đi bộ!).
 - ✅ *Walking in the forest, we felt the thick smoke hurting our eyes.* (Đúng vì "we" là người đi bộ).
 
-#### 🎯 BÀI TẬP NHANH VẬN DỤNG NGAY (QUICK CHECK - CHUYÊN ĐỀ 5)
+#### 🎯 BÀI TẬP NHANH VẬN DỤNG NGAY (QUICK CHECK - CHUYÊN ĐỀ 4)
 
-**Câu 5.1:** Câu nào dưới đây đúng ngữ pháp và KHÔNG mắc lỗi phân từ lơ lửng?  
+**Câu 4.1:** Câu nào dưới đây đúng ngữ pháp và KHÔNG mắc lỗi phân từ lơ lửng?  
 A. Walking along the riverbank, thousands of dead fish were found by the boys.  
 B. Walking along the riverbank, the boys found thousands of dead fish.  
 C. Walking along the riverbank, the smell was completely terrible.  
 D. Walking along the riverbank, it shocked the local tourists.  
 
-> #### 📝 ĐÁP ÁN & GIẢI THÍCH CHI TIẾT - CHUYÊN ĐỀ 5:
-> - **Câu 5.1: Chọn B.** Chủ ngữ đứng sau dấu phẩy phải là thực thể thực hiện hành động đi bộ (*the boys*). Các câu A, C, D đều mắc bẫy phân từ lơ lửng sai ngữ pháp.
+> #### 📝 ĐÁP ÁN & GIẢI THÍCH CHI TIẾT - CHUYÊN ĐỀ 4:
+> - **Câu 4.1: Chọn B.** Chủ ngữ đứng sau dấu phẩy phải là thực thể thực hiện hành động đi bộ (*the boys*). Các câu A, C, D đều mắc bẫy phân từ lơ lửng sai ngữ pháp.
 
 ---
 
-### 📌 CHUYÊN ĐỀ 6: 6 DẠNG BÀI VIẾT LẠI CÂU KINH ĐIỂN VỚI PARTICIPLE CLAUSES
+### 📌 CHUYÊN ĐỀ 5: 5 DẠNG BÀI VIẾT LẠI CÂU KINH ĐIỂN VỚI PRESENT & PAST PARTICIPLE CLAUSES
 
 1. **Dạng 1 (Nguyên nhân chủ động):** $Because / Since + S + V \\iff V\\text{-ing},\\ S + V$
-2. **Dạng 2 (Điều kiện/Nguyên nhân bị động):** $If / Because + S + be + V_3/ed \\iff V_3/ed,\\ S + V$
-3. **Dạng 3 (Hành động hoàn thành trước):** $After + S + had + V_3/ed \\iff Having + V_3/ed,\\ S + V$
+2. **Dạng 2 (Điều kiện/Nguyên nhân bị động):** $If / Because + S + be + (not) + V_3/ed \\iff (Not)\\ V_3/ed,\\ S + V$
+3. **Dạng 3 (Hai hành động đồng thời/liên tiếp của 1 chủ thể):** $While / When + S + V \\iff V\\text{-ing},\\ S + V$ | $S + V_1\\ and\\ V_2 \\iff V_1\\text{-ing},\\ S + V_2$
 4. **Dạng 4 (Rút gọn mệnh đề quan hệ chủ động):** $The\\ gases\\ which\\ trap\\ heat \\iff The\\ gases\\ trapping\\ heat$
 5. **Dạng 5 (Rút gọn mệnh đề quan hệ bị động):** $Energy\\ which\\ is\\ produced\\ by\\ solar\\ panels \\iff Energy\\ produced\\ by\\ solar\\ panels$
-6. **Dạng 6 (Hai hành động liên tiếp của 1 chủ thể):** $Minh\\ locked\\ the\\ door\\ and\\ walked\\ away \\iff Locking\\ the\\ door,\\ Minh\\ walked\\ away$
 
-#### 🎯 BÀI TẬP NHANH VẬN DỤNG NGAY (QUICK CHECK - CHUYÊN ĐỀ 6)
+#### 🎯 BÀI TẬP NHANH VẬN DỤNG NGAY (QUICK CHECK - CHUYÊN ĐỀ 5)
 
-**Câu 6.1:** Viết lại câu sau dùng Participle Clause:  
+**Câu 5.1:** Viết lại câu sau dùng Present Participle Clause:  
 *Because the boys recognized the bad effects of trash, they joined the clean-up team.*  
 ➔ Recognizing ................................................................................................  
 
-**Câu 6.2:** Viết lại câu sau dùng Past Participle:  
+**Câu 5.2:** Viết lại câu sau dùng Past Participle Clause:  
 *If energy is produced from wind turbines, it does not pollute the atmosphere.*  
 ➔ Produced ....................................................................................................  
 
-> #### 📝 ĐÁP ÁN & GIẢI THÍCH CHI TIẾT - CHUYÊN ĐỀ 6:
-> - **Câu 6.1: Đáp án:** *Recognizing the bad effects of trash, the boys joined the clean-up team.*
-> - **Câu 6.2: Đáp án:** *Produced from wind turbines, energy does not pollute the atmosphere.*
+> #### 📝 ĐÁP ÁN & GIẢI THÍCH CHI TIẾT - CHUYÊN ĐỀ 5:
+> - **Câu 5.1: Đáp án:** *Recognizing the bad effects of trash, the boys joined the clean-up team.*
+> - **Câu 5.2: Đáp án:** *Produced from wind turbines, energy does not pollute the atmosphere.*
 
 ---
 
@@ -306,7 +277,7 @@ async function main() {
 
   // 1. Kiểm tra hoặc tạo mới Learning Unit
   const unitTitle = 'Unit 5: Global Warming - Cẩm Nang Ngữ Pháp Toàn Diện Participle Clauses & 24 Từ Vựng Cốt Lõi';
-  const unitDesc = 'Chuyên đề Ngữ pháp Trọng tâm Unit 5 Tiếng Anh 11 Global Success: Phân tích toàn diện 6 Chuyên đề Mệnh đề phân từ (Present & Past Participle Clauses, Perfect Participles, Bẫy Dangling Participles, 6 dạng viết lại câu) kết hợp 24 từ vựng Global Warming với hệ thống ví dụ song ngữ và bộ bài tập nhanh (Quick Check Drills) mục tiêu 8.5+.';
+  const unitDesc = 'Chuyên đề Ngữ pháp Trọng tâm Unit 5 Tiếng Anh 11 Global Success: Phân tích toàn diện 5 Chuyên đề Mệnh đề phân từ chuẩn SGK (Present Participle V-ing & Past Participle V3/ed, Phủ định Not V-ing / Not V3/ed, Bẫy Dangling Participles, 5 dạng viết lại câu) kết hợp 24 từ vựng Global Warming với hệ thống ví dụ song ngữ và bộ bài tập nhanh (Quick Check Drills) mục tiêu 8.5+.';
 
   let learningUnit = await prisma.learning_units.findFirst({
     where: {
@@ -351,8 +322,8 @@ async function main() {
   });
 
   const teacherNote = `Chào Thái! Thầy gửi em kế hoạch học tập ngày 19/11/2026:
-1. Đọc kỹ cẩm nang 6 Chuyên đề Ngữ pháp Mệnh Đề Phân Từ (Participle Clauses) và bấm vào Phòng Học Tương Tác Unit 5 để luyện Flashcard 3D 24 từ vựng Global Warming.
-2. Hoàn thành bài kiểm tra 90 phút gồm 80 câu hỏi trắc nghiệm chuyên sâu (bao gồm 10 câu Word Formation, các câu hỏi từ vựng bám sát bài học, bẫy phân từ lơ lửng Dangling Participles và các dạng viết lại câu).
+1. Đọc kỹ cẩm nang 5 Chuyên đề Ngữ pháp Mệnh Đề Phân Từ (Present & Past Participle Clauses chuẩn SGK Unit 5) và bấm vào Phòng Học Tương Tác Unit 5 để luyện Flashcard 3D 24 từ vựng Global Warming.
+2. Hoàn thành bài kiểm tra 90 phút gồm 80 câu hỏi trắc nghiệm chuyên sâu (bao gồm 10 câu Word Formation, các câu hỏi từ vựng bám sát bài học, bẫy phân từ lơ lửng Dangling Participles và các dạng viết lại câu Present/Past Participle).
 Chúc em học tốt và tự tin chinh phục điểm số cao nhất!`;
 
   if (!assignment) {
@@ -398,7 +369,7 @@ Chúc em học tốt và tự tin chinh phục điểm số cao nhất!`;
 
   // 4. Tạo Assessment mới
   const assessmentTitle = 'Luyện tập chuyên sâu: 80 Câu Ngữ Pháp Mệnh Đề Phân Từ (Participle Clauses) & 24 Từ Vựng Unit 5';
-  const instructions = 'Bộ đề 80 câu trắc nghiệm bao trọn 6 chuyên đề Mệnh Đề Phân Từ (Participle Clauses) của Unit 5: Global Success 11, kết hợp nhuần nhuyễn 10 câu Word Formation và 24 từ vựng Global Warming cốt lõi. Hãy đọc kỹ từng câu, phân tích chủ ngữ của hai mệnh đề và bản chất chủ động/bị động để đạt điểm 8.5+ nhé!';
+  const instructions = 'Bộ đề 80 câu trắc nghiệm bao trọn 5 chuyên đề Mệnh Đề Phân Từ (Present & Past Participle Clauses) của Unit 5: Global Success 11, kết hợp nhuần nhuyễn 10 câu Word Formation và 24 từ vựng Global Warming cốt lõi. Hãy đọc kỹ từng câu, phân tích chủ ngữ của hai mệnh đề và bản chất chủ động/bị động để đạt điểm 8.5+ nhé!';
 
   const assessment = await prisma.assessments.create({
     data: {

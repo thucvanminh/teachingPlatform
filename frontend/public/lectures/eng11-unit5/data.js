@@ -316,7 +316,7 @@ const LECTURE_DATA = {
   ],
 
   // ========================================================
-  // 6 CHUYÊN ĐỀ NGỮ PHÁP CHUYÊN SÂU & QUICK QUIZ DRILLS
+  // 5 CHUYÊN ĐỀ NGỮ PHÁP CHUYÊN SÂU & QUICK QUIZ DRILLS
   // ========================================================
   grammarModules: [
     {
@@ -393,12 +393,13 @@ const LECTURE_DATA = {
 
     {
       id: 3,
-      title: "Chuyên Đề 3: Mệnh Đề Phân Từ Quá Khứ (V3/ed) Mang Nghĩa BỊ ĐỘNG",
-      formula: "V3/ed + (by O), S + V ...",
-      equivalent: "Because / As / If + S + be + V3/ed ➔ V3/ed, S + V",
+      title: "Chuyên Đề 3: Mệnh Đề Phân Từ Quá Khứ (V3/ed) Mang Nghĩa Bị Động",
+      formula: "(Not) + V3/ed + (by O), S + V ...",
+      equivalent: "Because / As / If + S + be + (not) + V3/ed ➔ (Not) V3/ed, S + V",
       rules: [
         "Mệnh đề mang nghĩa BỊ ĐỘNG (Passive Voice): Chủ ngữ là người/vật tiếp nhận hành động.",
         "Rút gọn toàn bộ 'Because/If + S + be', chỉ giữ lại Động từ quá khứ phân từ (V3/ed).",
+        "Dạng phủ định: Đặt trực tiếp 'Not' ngay trước V3/ed ➔ Not + V3/ed, S + V (VD SGK: Not kept cool in hot weather, farm animals can suffer from heat stress).",
         "Diễn tả nguyên nhân bị động (Vì bị/được...) hoặc điều kiện bị động (Nếu được/bị...)."
       ],
       traps: "Phân biệt V-ing vs V3/ed: Hãy tự hỏi chủ ngữ chính ở vế sau tự thực hiện hành động (Active ➔ V-ing) hay bị tác động bởi hành động (Passive ➔ V3/ed).",
@@ -412,60 +413,29 @@ const LECTURE_DATA = {
           en: "If fossil fuels are burnt carelessly for energy, they release toxic gases into the atmosphere.",
           vi: "Nếu bị đốt bất cẩn để lấy năng lượng, nhiên liệu hóa thạch sẽ giải phóng khí độc vào khí quyển.",
           short: "➔ Burnt carelessly for energy, fossil fuels release toxic gases into the atmosphere."
+        },
+        {
+          en: "If farm animals are not kept cool in hot weather, they can suffer from heat stress.",
+          vi: "Nếu vật nuôi không được giữ mát trong thời tiết nắng nóng, chúng có thể bị sốc nhiệt.",
+          short: "➔ Not kept cool in hot weather, farm animals can suffer from heat stress."
         }
       ],
       quickQuiz: {
-        question: "______ by massive deforestation, the wild animals lost their natural habitat and food sources.",
+        question: "______ cool in hot weather, farm animals can easily suffer from heat stress.",
         options: [
-          { id: "A", text: "Threatening" },
-          { id: "B", text: "Threaten" },
-          { id: "C", text: "Threatened" },
-          { id: "D", text: "To threaten" }
+          { id: "A", text: "Not keeping" },
+          { id: "B", text: "Not kept" },
+          { id: "C", text: "Didn't keep" },
+          { id: "D", text: "To not keep" }
         ],
-        correct: "C",
-        explanation: "Các loài thú hoang dã 'bị đe dọa' bởi nạn phá rừng (nghĩa bị động). Do đó ta dùng Past Participle: 'Threatened by massive deforestation'."
+        correct: "B",
+        explanation: "Điều kiện bị động phủ định ('If farm animals are not kept cool...'). Bỏ 'If + chủ ngữ + are', đặt 'Not' ngay trước quá khứ phân từ 'kept' ➔ 'Not kept'."
       }
     },
 
     {
       id: 4,
-      title: "Chuyên Đề 4: Mệnh Đề Phân Từ Hoàn Thành (Having + V3/ed & Having been + V3/ed)",
-      formula: "Having + V3/ed (Chủ động) | Having been + V3/ed (Bị động), S + V ...",
-      equivalent: "After / As soon as + S + had + V3/ed ➔ Having + V3/ed, S + V",
-      rules: [
-        "Dùng khi muốn NHẤN MẠNH hành động ở mệnh đề phân từ ĐÃ HOÀN TẤT XONG TRƯỚC hành động ở mệnh đề chính.",
-        "Chủ động: Having + V3/ed (VD: Sau khi đã chặt phá... ➔ Having cut down...).",
-        "Bị động: Having been + V3/ed (VD: Sau khi đã được cảnh báo... ➔ Having been warned...)."
-      ],
-      traps: "Nếu hai hành động diễn ra cùng lúc thì chỉ dùng V-ing. Chỉ khi nào hành động 1 hoàn thành trước rồi hành động 2 mới diễn ra thì mới dùng 'Having V3/ed'.",
-      examples: [
-        {
-          en: "After the company had dumped tons of chemical waste into the river, it was fined heavily.",
-          vi: "Sau khi công ty đã đổ hàng tấn chất thải hóa học xuống sông, nó đã bị phạt rất nặng.",
-          short: "➔ Having dumped tons of chemical waste into the river, the company was fined heavily."
-        },
-        {
-          en: "After it had been severely destroyed by the acid rain, the forest took decades to recover.",
-          vi: "Sau khi đã bị tàn phá nặng nề bởi mưa axit, khu rừng mất hàng thập kỷ để phục hồi.",
-          short: "➔ Having been severely destroyed by the acid rain, the forest took decades to recover."
-        }
-      ],
-      quickQuiz: {
-        question: "______ the scientific documentary on sea level rise, Nam changed his daily habit of using plastic bags.",
-        options: [
-          { id: "A", text: "Having watched" },
-          { id: "B", text: "Watch" },
-          { id: "C", text: "Watched" },
-          { id: "D", text: "Being watched" }
-        ],
-        correct: "A",
-        explanation: "Hành động xem phim tài liệu đã hoàn thành trước, sau đó Nam mới thay đổi thói quen. Nhấn mạnh tính hoàn thành trước ➔ Dùng Perfect Participle: 'Having watched'."
-      }
-    },
-
-    {
-      id: 5,
-      title: "Chuyên Đề 5: Bẫy Phân Từ Lơ Lửng (Dangling Participles) & Phân Hóa Điểm 8.5+",
+      title: "Chuyên Đề 4: Bẫy Phân Từ Lơ Lửng (Dangling Participles) & Phân Hóa Điểm 8.5+",
       formula: "V-ing / V3/ed, [Chủ ngữ BẮT BUỘC phải là thực thể làm ra hoặc chịu hành động đó]",
       equivalent: "Sai lầm: Rút gọn mệnh đề nhưng chủ ngữ vế sau lại là vật vô tri vô giác không thể làm hành động.",
       rules: [
@@ -500,17 +470,16 @@ const LECTURE_DATA = {
     },
 
     {
-      id: 6,
-      title: "Chuyên Đề 6: 6 Dạng Viết Lại Câu Kinh Điển Dùng Participle Clauses Thi THPT",
-      formula: "1. Because/Since ➔ V-ing/V3 | 2. After had V3 ➔ Having V3 | 3. If be V3 ➔ V3 | 4. Relative clause ➔ V-ing/V3",
-      equivalent: "Biến đổi câu phức 2 mệnh đề thành 1 câu đơn chứa cụm phân từ tinh gọn, học thuật.",
+      id: 5,
+      title: "Chuyên Đề 5: 5 Dạng Viết Lại Câu Kinh Điển Dùng Present & Past Participle Clauses",
+      formula: "1. Because/Since ➔ (Not) V-ing | 2. If/Because be V3 ➔ (Not) V3 | 3. While/When ➔ V-ing | 4-5. MĐQH ➔ V-ing/V3",
+      equivalent: "Biến đổi câu phức 2 mệnh đề thành 1 câu đơn chứa cụm phân từ tinh gọn, chuẩn SGK Tiếng Anh 11.",
       rules: [
-        "Dạng 1 (Nguyên nhân chủ động): Because S + V ➔ V-ing, S + V.",
-        "Dạng 2 (Nguyên nhân/Điều kiện bị động): If/Because S + be + V3 ➔ V3, S + V.",
-        "Dạng 3 (Hành động trước sau): After S + had + V3 ➔ Having + V3, S + V.",
+        "Dạng 1 (Nguyên nhân chủ động): Because S + (not) + V ➔ (Not) V-ing, S + V.",
+        "Dạng 2 (Nguyên nhân/Điều kiện bị động): If/Because S + be + (not) + V3 ➔ (Not) V3, S + V.",
+        "Dạng 3 (Hai hành động đồng thời / liên tiếp của 1 người): While/When S + V ➔ V-ing, S + V | Minh closed the book and turned off the lamp ➔ Closing the book, Minh turned off the lamp.",
         "Dạng 4 (Rút gọn mệnh đề quan hệ chủ động): The gases which trap heat ➔ The gases trapping heat.",
-        "Dạng 5 (Rút gọn mệnh đề quan hệ bị động): Energy which is produced from solar panels ➔ Energy produced from solar panels.",
-        "Dạng 6 (Hai hành động liên tiếp của 1 người): Minh closed the book and turned off the lamp ➔ Closing the book, Minh turned off the lamp."
+        "Dạng 5 (Rút gọn mệnh đề quan hệ bị động): Energy which is produced from solar panels ➔ Energy produced from solar panels."
       ],
       traps: "Khi viết lại câu, phải kiểm tra kỹ thì của động từ và chủ ngữ của hai vế. Không được làm biến đổi nghĩa gốc của câu.",
       examples: [
