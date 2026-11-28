@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="100%" height="280" role="img" aria-labelledby="title desc">
+  <title id="title">Compass Construction HL SGK H.4.51</title>
+  <desc id="desc">Constructing right triangle ABC given leg AB=3cm and hypotenuse BC=5cm using compass arc</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0E1626"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="540" height="320" rx="18" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="95" y="14" width="350" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
+  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">COMPASS CONSTRUCTION · HL THEOREM (SGK H.4.51)</text>
+
+  <!-- Perpendicular Ray Ax going upward from A(150,245) -->
+  <line x1="150" y1="245" x2="150" y2="65" stroke="#94A3B8" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="140" y="65" fill="#94A3B8" font-family="monospace" font-size="13" font-weight="bold">x</text>
+
+  <!-- Triangle ABC: A(150,245), B(310,245), C(150,95) -->
+  <path d="M 164.0 245.0 L 164.0 231.0 L 150.0 231.0" fill="none" stroke="#38BDF8" stroke-width="2"/>
+  <polygon points="150,245 310,245 150,95" fill="rgba(56,189,248,0.12)" stroke="#38BDF8" stroke-width="2.8"/>
+
+  <!-- Compass Arc centered at B(310,245) with radius dist(B,C) = sqrt(160^2 + 150^2) = 219.3 -->
+  <!-- Arc passes through C(150,95) -->
+  <path d="M 130 80 A 219.3 219.3 0 0 1 180 120" fill="none" stroke="#F59E0B" stroke-width="2.4" stroke-dasharray="5,4"/>
+  <line x1="310" y1="245" x2="150" y2="95" stroke="#F59E0B" stroke-width="2.5"/>
+
+  <!-- Compass needle at B -->
+  <circle cx="310" cy="245" r="5" fill="#F59E0B"/>
+  <circle cx="150" cy="95" r="5" fill="#22D3EE"/>
+  <circle cx="150" cy="245" r="5" fill="#22D3EE"/>
+
+  <text x="135" y="258" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">A</text>
+  <text x="322" y="258" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">B</text>
+  <text x="135" y="98" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">C</text>
+
+  <text x="230" y="265" fill="#34D399" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">AB = 3 cm</text>
+  <text x="245" y="160" fill="#F59E0B" font-family="monospace" font-size="12" font-weight="bold" transform="rotate(-43 245 160)">BC = 5 cm (Compass Arc)</text>
+
+  <!-- Construction notes box -->
+  <rect x="330" y="90" width="185" height="70" rx="8" fill="rgba(15,23,42,0.85)" stroke="#38BDF8" stroke-width="1"/>
+  <text x="422" y="112" fill="#38BDF8" font-family="system-ui" font-size="11" font-weight="bold" text-anchor="middle">Step 1: Draw ∠xAB = 90°</text>
+  <text x="422" y="130" fill="#E2E8F0" font-family="system-ui" font-size="10.5" text-anchor="middle">Step 2: AB = 3 cm on ray</text>
+  <text x="422" y="148" fill="#F59E0B" font-family="system-ui" font-size="10.5" text-anchor="middle">Step 3: Arc (B, 5 cm) cuts Ax at C</text>
+
+  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">Right triangle is uniquely determined by hypotenuse and leg (HL uniqueness)</text>
+</svg>

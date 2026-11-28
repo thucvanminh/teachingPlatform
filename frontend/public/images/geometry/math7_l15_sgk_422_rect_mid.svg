@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="100%" height="280" role="img" aria-labelledby="title desc">
+  <title id="title">Rectangle Midpoint LL SGK 4.22</title>
+  <desc id="desc">Rectangle ABCD with M midpoint of bottom side BC, segments AM and DM drawn</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0E1626"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="540" height="320" rx="18" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="105" y="14" width="330" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
+  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">RECTANGLE MIDPOINT · LL THEOREM (SGK 4.22)</text>
+
+  <!-- A(130,95), D(410,95), B(130,245), C(410,245), M(270,245) -->
+  <path d="M 144.0 245.0 L 144.0 231.0 L 130.0 231.0" fill="none" stroke="#38BDF8" stroke-width="2"/>
+  <path d="M 396.0 245.0 L 396.0 231.0 L 410.0 231.0" fill="none" stroke="#34D399" stroke-width="2"/>
+
+  <rect x="130" y="95" width="280" height="150" fill="none" stroke="#64748B" stroke-width="2"/>
+  <polygon points="130,95 130,245 270,245" fill="rgba(56,189,248,0.12)" stroke="#38BDF8" stroke-width="2.5"/>
+  <polygon points="410,95 410,245 270,245" fill="rgba(52,211,153,0.12)" stroke="#34D399" stroke-width="2.5"/>
+
+  <!-- Segments AM and DM -->
+  <line x1="130" y1="95" x2="270" y2="245" stroke="#38BDF8" stroke-width="3"/>
+  <line x1="410" y1="95" x2="270" y2="245" stroke="#34D399" stroke-width="3"/>
+
+  <!-- Ticks on BM and CM -->
+  <line x1="200.0" y1="238.0" x2="200.0" y2="252.0" stroke="#FBBF24" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="340.0" y1="238.0" x2="340.0" y2="252.0" stroke="#FBBF24" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="137.0" y1="166.5" x2="123.0" y2="166.5" stroke="#38BDF8" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="137.0" y1="173.5" x2="123.0" y2="173.5" stroke="#38BDF8" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="417.0" y1="166.5" x2="403.0" y2="166.5" stroke="#38BDF8" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="417.0" y1="173.5" x2="403.0" y2="173.5" stroke="#38BDF8" stroke-width="2.2" stroke-linecap="round"/>
+
+  <circle cx="130" cy="95" r="4.5" fill="#22D3EE"/><text x="115" y="90" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">A</text>
+  <circle cx="410" cy="95" r="4.5" fill="#34D399"/><text x="422" y="90" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">D</text>
+  <circle cx="130" cy="245" r="4.5" fill="#22D3EE"/><text x="115" y="258" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">B</text>
+  <circle cx="410" cy="245" r="4.5" fill="#34D399"/><text x="422" y="258" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">C</text>
+  <circle cx="270" cy="245" r="4.5" fill="#FBBF24"/><text x="270" y="265" fill="#FBBF24" font-family="system-ui" font-size="14" font-weight="bold" text-anchor="middle">M</text>
+
+  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">AB = CD (rect sides), BM = CM (midpoint), ∠B = ∠C = 90° ⇒ △ABM = △DCM (LL) ⇒ AM = DM</text>
+</svg>

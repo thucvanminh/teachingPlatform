@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="100%" height="280" role="img" aria-labelledby="title desc">
+  <title id="title">Bowtie Right Triangles SGK H.4.56</title>
+  <desc id="desc">Crossed right triangles BAC and BDC with common hypotenuse BC, AB = CD, diagonals intersecting at E</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0E1626"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="540" height="320" rx="18" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="95" y="14" width="350" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
+  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">BOWTIE RIGHT TRIANGLES · HL THEOREM (SGK H.4.56)</text>
+
+  <!-- B(110,245), C(430,245), A(190,106), D(350,106), E(270,152) -->
+  <path d="M 183.5 117.3 L 194.8 123.8 L 201.2 112.5" fill="none" stroke="#38BDF8" stroke-width="2"/>
+  <path d="M 356.5 117.3 L 345.2 123.8 L 338.8 112.5" fill="none" stroke="#34D399" stroke-width="2"/>
+
+  <polygon points="110,245 430,245 190,106" fill="rgba(56,189,248,0.08)" stroke="#38BDF8" stroke-width="2.4"/>
+  <polygon points="110,245 430,245 350,106" fill="rgba(52,211,153,0.08)" stroke="#34D399" stroke-width="2.4"/>
+
+  <line x1="190" y1="106" x2="350" y2="106" stroke="#94A3B8" stroke-width="1.8" stroke-dasharray="4,4"/>
+
+  <line x1="143.9" y1="172.0" x2="156.1" y2="179.0" stroke="#FBBF24" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="383.9" y1="179.0" x2="396.1" y2="172.0" stroke="#FBBF24" stroke-width="2.4" stroke-linecap="round"/>
+
+  <circle cx="110" cy="245" r="4.5" fill="#22D3EE"/><text x="95" y="255" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">B</text>
+  <circle cx="430" cy="245" r="4.5" fill="#34D399"/><text x="444" y="255" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">C</text>
+  <circle cx="190" cy="106" r="4.5" fill="#22D3EE"/><text x="180" y="94" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">A</text>
+  <circle cx="350" cy="106" r="4.5" fill="#34D399"/><text x="360" y="94" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">D</text>
+  <circle cx="270" cy="152" r="3.5" fill="#F59E0B"/><text x="270" y="142" fill="#F59E0B" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">E</text>
+
+  <text x="270" y="265" fill="#38BDF8" font-family="monospace" font-size="11.5" font-weight="bold" text-anchor="middle">BC (Common Hypotenuse)</text>
+
+  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">BC common, leg AB = DC, ∠A = ∠D = 90° ⇒ △BAC = △BDC (HL) ⇒ △ABE = △DCE</text>
+</svg>

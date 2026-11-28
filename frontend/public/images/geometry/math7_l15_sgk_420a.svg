@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="100%" height="280" role="img" aria-labelledby="title desc">
+  <title id="title">Triangle Altitude &amp; Bisector SGK 4.20a</title>
+  <desc id="desc">Triangle ABD with altitude AC perp BD and equal angle arcs at vertex A</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0E1626"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="540" height="320" rx="18" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="105" y="14" width="330" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
+  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">ALTITUDE &amp; BISECTOR · LA (SGK 4.20a)</text>
+
+  <!-- Triangle ABD: A(270,75), B(130,245), D(410,245), C(270,245) -->
+  <path d="M 270 75 L 250.9 98.2 A 30 30 0 0 0 270.0 105.0 Z" fill="rgba(245,158,11,0.25)" stroke="none"/>
+  <path d="M 250.9 98.2 A 30 30 0 0 0 270.0 105.0" fill="none" stroke="#F59E0B" stroke-width="2.2"/>
+  <path d="M 270 75 L 270.0 105.0 A 30 30 0 0 0 289.1 98.2 Z" fill="rgba(245,158,11,0.25)" stroke="none"/>
+  <path d="M 270.0 105.0 A 30 30 0 0 0 289.1 98.2" fill="none" stroke="#F59E0B" stroke-width="2.2"/>
+
+  <path d="M 256.0 245.0 L 256.0 231.0 L 270.0 231.0" fill="none" stroke="#38BDF8" stroke-width="2"/>
+  <path d="M 284.0 245.0 L 284.0 231.0 L 270.0 231.0" fill="none" stroke="#34D399" stroke-width="2"/>
+
+  <polygon points="270,75 130,245 410,245" fill="rgba(56,189,248,0.1)" stroke="#38BDF8" stroke-width="2.6"/>
+  <line x1="270" y1="75" x2="270" y2="245" stroke="#34D399" stroke-width="2.6"/>
+
+  <circle cx="270" cy="75" r="4.5" fill="#22D3EE"/><text x="270" y="62" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold" text-anchor="middle">A</text>
+  <circle cx="130" cy="245" r="4.5" fill="#22D3EE"/><text x="115" y="255" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">B</text>
+  <circle cx="270" cy="245" r="4.5" fill="#34D399"/><text x="270" y="264" fill="#34D399" font-family="system-ui" font-size="14" font-weight="bold" text-anchor="middle">C</text>
+  <circle cx="410" cy="245" r="4.5" fill="#22D3EE"/><text x="424" y="255" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">D</text>
+
+  <text x="282" y="165" fill="#34D399" font-family="monospace" font-size="11.5" font-weight="bold">AC (Common)</text>
+
+  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">AC common leg, ∠BAC = ∠DAC, ∠BCA = ∠DCA = 90° ⇒ △ABC = △ADC (LA) ⇒ AB = AD</text>
+</svg>

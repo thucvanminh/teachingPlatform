@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="100%" height="280" role="img" aria-labelledby="title desc">
+  <title id="title">Hypotenuse-Leg Four Triangles SGK H.4.52</title>
+  <desc id="desc">Identify HL congruent pair among right triangles ABC, DEF, KGH, MNP</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0E1626"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="540" height="320" rx="18" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="85" y="14" width="370" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
+  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">HYPOTENUSE - LEG SCAN (SGK H.4.52)</text>
+
+  <!-- 1. △ABC: A(35,225), B(115,225), C(35,120) -->
+  <path d="M 46.0 225.0 L 46.0 214.0 L 35.0 214.0" fill="none" stroke="#38BDF8" stroke-width="2"/>
+  <polygon points="35,225 115,225 35,120" fill="rgba(56,189,248,0.12)" stroke="#38BDF8" stroke-width="2.2"/>
+  <line x1="75.0" y1="218.0" x2="75.0" y2="232.0" stroke="#FBBF24" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="71.6" y1="179.5" x2="82.7" y2="171.0" stroke="#38BDF8" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="67.3" y1="174.0" x2="78.4" y2="165.5" stroke="#38BDF8" stroke-width="2.2" stroke-linecap="round"/>
+  <text x="25" y="234" fill="#FFF" font-family="system-ui" font-size="12" font-weight="bold">A</text>
+  <text x="122" y="234" fill="#FFF" font-family="system-ui" font-size="12" font-weight="bold">B</text>
+  <text x="35" y="108" fill="#FFF" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">C</text>
+
+  <!-- 2. △DEF: D(160,225), E(240,225), F(160,120) -->
+  <path d="M 171.0 225.0 L 171.0 214.0 L 160.0 214.0" fill="none" stroke="#38BDF8" stroke-width="2"/>
+  <polygon points="160,225 240,225 160,120" fill="rgba(56,189,248,0.12)" stroke="#38BDF8" stroke-width="2.2"/>
+  <line x1="200.0" y1="218.0" x2="200.0" y2="232.0" stroke="#FBBF24" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="194.5" y1="167.0" x2="205.5" y2="178.0" stroke="#FB7185" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="194.5" y1="178.0" x2="205.5" y2="167.0" stroke="#FB7185" stroke-width="2.2" stroke-linecap="round"/>
+  <text x="150" y="234" fill="#FFF" font-family="system-ui" font-size="12" font-weight="bold">D</text>
+  <text x="247" y="234" fill="#FFF" font-family="system-ui" font-size="12" font-weight="bold">E</text>
+  <text x="160" y="108" fill="#FFF" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">F</text>
+
+  <!-- 3. △KGH: G(285,225), H(365,225), K(285,120) -->
+  <path d="M 296.0 225.0 L 296.0 214.0 L 285.0 214.0" fill="none" stroke="#34D399" stroke-width="2"/>
+  <polygon points="285,225 365,225 285,120" fill="rgba(52,211,153,0.12)" stroke="#34D399" stroke-width="2.2"/>
+  <line x1="325.0" y1="218.0" x2="325.0" y2="232.0" stroke="#FBBF24" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="321.6" y1="179.5" x2="332.7" y2="171.0" stroke="#38BDF8" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="317.3" y1="174.0" x2="328.4" y2="165.5" stroke="#38BDF8" stroke-width="2.2" stroke-linecap="round"/>
+  <text x="275" y="234" fill="#FFF" font-family="system-ui" font-size="12" font-weight="bold">G</text>
+  <text x="372" y="234" fill="#FFF" font-family="system-ui" font-size="12" font-weight="bold">H</text>
+  <text x="285" y="108" fill="#FFF" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">K</text>
+
+  <!-- 4. △MNP: M(410,225), N(490,225), P(410,120) -->
+  <path d="M 421.0 225.0 L 421.0 214.0 L 410.0 214.0" fill="none" stroke="#38BDF8" stroke-width="2"/>
+  <polygon points="410,225 490,225 410,120" fill="rgba(56,189,248,0.12)" stroke="#38BDF8" stroke-width="2.2"/>
+  <line x1="403.0" y1="176.0" x2="417.0" y2="176.0" stroke="#34D399" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="403.0" y1="169.0" x2="417.0" y2="169.0" stroke="#34D399" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="444.5" y1="167.0" x2="455.5" y2="178.0" stroke="#FB7185" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="444.5" y1="178.0" x2="455.5" y2="167.0" stroke="#FB7185" stroke-width="2.2" stroke-linecap="round"/>
+  <text x="400" y="234" fill="#FFF" font-family="system-ui" font-size="12" font-weight="bold">M</text>
+  <text x="497" y="234" fill="#FFF" font-family="system-ui" font-size="12" font-weight="bold">N</text>
+  <text x="410" y="108" fill="#FFF" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">P</text>
+
+  <rect x="75" y="262" width="390" height="42" rx="8" fill="rgba(15,23,42,0.8)" stroke="#38BDF8" stroke-width="1"/>
+  <text x="270" y="280" fill="#34D399" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">MATCH CONFIRMED · △ABC = △KGH (HL)</text>
+  <text x="270" y="296" fill="#94A3B8" font-family="system-ui" font-size="11" text-anchor="middle">Equal legs AB = GH (1 tick) &amp; equal hypotenuses BC = KH (2 ticks)</text>
+</svg>

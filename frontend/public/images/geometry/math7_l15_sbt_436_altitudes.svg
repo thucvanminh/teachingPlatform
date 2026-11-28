@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="100%" height="280" role="img" aria-labelledby="title desc">
+  <title id="title">Congruent Triangles with Altitudes SBT 4.36</title>
+  <desc id="desc">Congruent triangles ABC and DEF with corresponding altitudes AH perp BC and DK perp EF</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0E1626"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="540" height="320" rx="18" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="95" y="14" width="350" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
+  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">ALTITUDES IN CONGRUENT TRIANGLES (SBT 4.36)</text>
+
+  <!-- Left: △ABC with AH ⊥ BC. A(150,85), B(55,245), C(245,245), H(150,245) -->
+  <path d="M 137.0 245.0 L 137.0 232.0 L 150.0 232.0" fill="none" stroke="#38BDF8" stroke-width="2"/>
+  <polygon points="150,85 55,245 245,245" fill="rgba(56,189,248,0.1)" stroke="#38BDF8" stroke-width="2.5"/>
+  <line x1="150" y1="85" x2="150" y2="245" stroke="#FBBF24" stroke-width="2.4" stroke-dasharray="5,4"/>
+
+  <line x1="94.7" y1="164.4" x2="106.7" y2="171.6" stroke="#38BDF8" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="98.3" y1="158.4" x2="110.3" y2="165.6" stroke="#38BDF8" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="157.0" y1="165.0" x2="143.0" y2="165.0" stroke="#FBBF24" stroke-width="2.4" stroke-linecap="round"/>
+
+  <circle cx="150" cy="85" r="4.5" fill="#22D3EE"/><text x="150" y="72" fill="#FFF" font-family="system-ui" font-size="13.5" font-weight="bold" text-anchor="middle">A</text>
+  <circle cx="55" cy="245" r="4.5" fill="#22D3EE"/><text x="42" y="256" fill="#FFF" font-family="system-ui" font-size="13.5" font-weight="bold">B</text>
+  <circle cx="245" cy="245" r="4.5" fill="#22D3EE"/><text x="256" y="256" fill="#FFF" font-family="system-ui" font-size="13.5" font-weight="bold">C</text>
+  <circle cx="150" cy="245" r="4" fill="#FBBF24"/><text x="150" y="262" fill="#FBBF24" font-family="system-ui" font-size="13" font-weight="bold" text-anchor="middle">H</text>
+
+  <!-- Right: △DEF with DK ⊥ EF. D(390,85), E(295,245), F(485,245), K(390,245) -->
+  <path d="M 377.0 245.0 L 377.0 232.0 L 390.0 232.0" fill="none" stroke="#34D399" stroke-width="2"/>
+  <polygon points="390,85 295,245 485,245" fill="rgba(52,211,153,0.1)" stroke="#34D399" stroke-width="2.5"/>
+  <line x1="390" y1="85" x2="390" y2="245" stroke="#FBBF24" stroke-width="2.4" stroke-dasharray="5,4"/>
+
+  <line x1="334.7" y1="164.4" x2="346.7" y2="171.6" stroke="#38BDF8" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="338.3" y1="158.4" x2="350.3" y2="165.6" stroke="#38BDF8" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="397.0" y1="165.0" x2="383.0" y2="165.0" stroke="#FBBF24" stroke-width="2.4" stroke-linecap="round"/>
+
+  <circle cx="390" cy="85" r="4.5" fill="#34D399"/><text x="390" y="72" fill="#FFF" font-family="system-ui" font-size="13.5" font-weight="bold" text-anchor="middle">D</text>
+  <circle cx="295" cy="245" r="4.5" fill="#34D399"/><text x="282" y="256" fill="#FFF" font-family="system-ui" font-size="13.5" font-weight="bold">E</text>
+  <circle cx="485" cy="245" r="4.5" fill="#34D399"/><text x="496" y="256" fill="#FFF" font-family="system-ui" font-size="13.5" font-weight="bold">F</text>
+  <circle cx="390" cy="245" r="4" fill="#FBBF24"/><text x="390" y="262" fill="#FBBF24" font-family="system-ui" font-size="13" font-weight="bold" text-anchor="middle">K</text>
+
+  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">AB = DE (hypotenuses), AH = DK (altitudes), right at H, K ⇒ △ABH = △DEK (HL) ⇒ ∠B = ∠E</text>
+</svg>

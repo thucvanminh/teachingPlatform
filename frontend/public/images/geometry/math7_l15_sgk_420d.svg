@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="100%" height="280" role="img" aria-labelledby="title desc">
+  <title id="title">Frame Diagonals LL SGK 4.20d</title>
+  <desc id="desc">Vertical frame VSTU with diagonals VT and US, right angles at S and T, equal vertical sides VS = UT</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0E1626"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="540" height="320" rx="18" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="105" y="14" width="330" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
+  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">FRAME DIAGONALS · LL THEOREM (SGK 4.20d)</text>
+
+  <!-- V(150,95), U(390,95), S(150,245), T(390,245) -->
+  <path d="M 164.0 245.0 L 164.0 231.0 L 150.0 231.0" fill="none" stroke="#38BDF8" stroke-width="2"/>
+  <path d="M 376.0 245.0 L 376.0 231.0 L 390.0 231.0" fill="none" stroke="#34D399" stroke-width="2"/>
+
+  <polygon points="150,95 150,245 390,245" fill="rgba(56,189,248,0.1)" stroke="#38BDF8" stroke-width="2.5"/>
+  <polygon points="390,95 390,245 150,245" fill="rgba(52,211,153,0.1)" stroke="#34D399" stroke-width="2.5"/>
+  <line x1="150" y1="95" x2="390" y2="95" stroke="#E2E8F0" stroke-width="2" stroke-dasharray="5,4"/>
+
+  <line x1="157.0" y1="170.0" x2="143.0" y2="170.0" stroke="#FBBF24" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="397.0" y1="170.0" x2="383.0" y2="170.0" stroke="#FBBF24" stroke-width="2.4" stroke-linecap="round"/>
+
+  <circle cx="150" cy="95" r="4.5" fill="#22D3EE"/><text x="135" y="90" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">V</text>
+  <circle cx="390" cy="95" r="4.5" fill="#34D399"/><text x="404" y="90" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">U</text>
+  <circle cx="150" cy="245" r="4.5" fill="#22D3EE"/><text x="135" y="258" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">S</text>
+  <circle cx="390" cy="245" r="4.5" fill="#34D399"/><text x="404" y="258" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">T</text>
+
+  <text x="270" y="265" fill="#38BDF8" font-family="monospace" font-size="11.5" font-weight="bold" text-anchor="middle">ST (Common Leg)</text>
+
+  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">VS = UT, ST common, ∠VST = ∠UTS = 90° ⇒ △VST = △UTS (LL) ⇒ Diagonals VT = US</text>
+</svg>
