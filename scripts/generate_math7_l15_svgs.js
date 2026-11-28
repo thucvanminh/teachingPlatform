@@ -180,9 +180,7 @@ const svgs = {
   math7_l15_poles_shadows: () => wrapSvg(
     "Solar Towers & Shadows LA Application",
     "Two vertical towers AB and A'B' with equal height, equal sun angles at top, producing equal ground shadows AC and A'C'",
-    `  <rect x="95" y="14" width="350" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">SOLAR TOWERS &amp; SHADOWS · LA APPLICATION</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- Ground line -->
   <line x1="30" y1="245" x2="510" y2="245" stroke="#475569" stroke-width="2" stroke-dasharray="6,4"/>
 
@@ -217,17 +215,15 @@ const svgs = {
   <!-- Sun Rays indicator -->
   <line x1="64" y1="50" x2="96" y2="80" stroke="#FBBF24" stroke-width="2" stroke-dasharray="3,3"/>
   <line x1="284" y1="50" x2="316" y2="80" stroke="#FBBF24" stroke-width="2" stroke-dasharray="3,3"/>
-
-  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">Tower heights AB = A'B', Sun elevation ∠B = ∠B' ⇒ △ABC = △A'B'C' (LA) ⇒ Shadows AC = A'C'</text>`
+  </g>`,
+    540, 285
   ),
 
   // 3. Ramps HA (SGK H.4.47)
   math7_l15_ramps_ha: () => wrapSvg(
     "Cargo Ramps HA Criterion SGK H.4.47",
     "Two cargo ramps ABC and A'B'C' with equal hypotenuses BC = B'C' and equal slope angles B = B'",
-    `  <rect x="95" y="14" width="350" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">CARGO RAMPS · HYPOTENUSE - ACUTE ANGLE (HA)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- Ramp 1: B(60,240), A(220,240), C(220,110) -->
   ${angleArc(60, 240, 220, 110, 220, 240, 32, '#F59E0B', 'rgba(245,158,11,0.22)')}
   ${rightAngleMark(220, 240, 60, 240, 220, 110, 14, '#38BDF8')}
@@ -253,17 +249,15 @@ const svgs = {
   <circle cx="470" cy="110" r="4.5" fill="#34D399"/><text x="470" y="96" fill="#FFF" font-family="system-ui" font-size="13.5" font-weight="bold" text-anchor="middle">C'</text>
   <text x="375" y="165" fill="#FBBF24" font-family="monospace" font-size="11" font-weight="bold">Ramp B'C'</text>
   <text x="482" y="175" fill="#34D399" font-family="monospace" font-size="11" font-weight="bold">Height'</text>
-
-  <text x="270" y="296" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">BC = B'C' (hypotenuses), ∠B = ∠B' (slope) ⇒ △ABC = △A'B'C' (HA) ⇒ Heights AC = A'C'</text>`
+  </g>`,
+    540, 285
   ),
 
   // 4. Six Triangles SGK H.4.48
   math7_l15_six_triangles_h448: () => wrapSvg(
     "Six Right Triangles SGK H.4.48",
     "Find congruent pairs among 6 right triangles: ABC, DEF, PMN, GKH, RST, XYZ",
-    `  <rect x="95" y="10" width="410" height="26" rx="13" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="300" y="27" fill="#E2E8F0" font-family="system-ui" font-size="11.5" font-weight="bold" text-anchor="middle">SENSOR SCAN · 6 RIGHT TRIANGLES (SGK H.4.48)</text>
-
+    `  <g transform="translate(25, -24)">
   <!-- Row 1: Col 1: △ABC -->
   ${rightAngleMark(45, 145, 120, 145, 45, 75, 10, '#38BDF8')}
   ${angleArc(45, 75, 120, 145, 45, 145, 16, '#F59E0B')}
@@ -293,7 +287,7 @@ const svgs = {
 
   <!-- Row 2: Col 1: △XYZ -->
   ${rightAngleMark(45, 265, 120, 265, 45, 195, 10, '#34D399')}
-  ${angleArc(45, 195, 120, 265, 45, 195, 16, '#F59E0B')}
+  ${angleArc(45, 195, 120, 265, 45, 265, 16, '#F59E0B')}
   <polygon points="45,265 120,265 45,195" fill="rgba(52,211,153,0.12)" stroke="#34D399" stroke-width="2"/>
   ${tickMarks(45, 265, 45, 195, 'x', '#FBBF24')}
   <text x="35" y="272" fill="#FFF" font-family="system-ui" font-size="11" font-weight="bold">X</text>
@@ -317,21 +311,15 @@ const svgs = {
   <text x="425" y="272" fill="#FFF" font-family="system-ui" font-size="11" font-weight="bold">R</text>
   <text x="515" y="272" fill="#FFF" font-family="system-ui" font-size="11" font-weight="bold">T</text>
   <text x="435" y="186" fill="#FFF" font-family="system-ui" font-size="11" font-weight="bold" text-anchor="middle">S</text>
-
-  <!-- Congruence summaries below each column -->
-  <text x="82" y="302" fill="#38BDF8" font-family="system-ui" font-size="10.5" font-weight="bold" text-anchor="middle">△ABC = △XYZ (LA)</text>
-  <text x="277" y="302" fill="#34D399" font-family="system-ui" font-size="10.5" font-weight="bold" text-anchor="middle">△DEF = △GKH (HA)</text>
-  <text x="472" y="302" fill="#FBBF24" font-family="system-ui" font-size="10.5" font-weight="bold" text-anchor="middle">△PMN = △RST (LL)</text>`,
-    600, 320
+  </g>`,
+    600, 285
   ),
 
   // 5. Four Triangles SBT 1 (SBT H.4.31)
   math7_l15_four_triangles_sbt1: () => wrapSvg(
     "Four Right Triangles SBT H.4.31",
     "Identify equal triangles among ABC, DEF, MNP, XYZ",
-    `  <rect x="85" y="14" width="370" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">SCAN ARRAY · 4 TRIANGLES (SBT H.4.31)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- 1. △ABC: A(35,225), B(115,225), C(35,120) -->
   ${rightAngleMark(35, 225, 115, 225, 35, 120, 11, '#38BDF8')}
   <polygon points="35,225 115,225 35,120" fill="rgba(56,189,248,0.12)" stroke="#38BDF8" stroke-width="2.2"/>
@@ -367,19 +355,15 @@ const svgs = {
   <text x="400" y="234" fill="#FFF" font-family="system-ui" font-size="12" font-weight="bold">X</text>
   <text x="497" y="234" fill="#FFF" font-family="system-ui" font-size="12" font-weight="bold">Y</text>
   <text x="410" y="108" fill="#FFF" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">Z</text>
-
-  <rect x="75" y="262" width="390" height="42" rx="8" fill="rgba(15,23,42,0.8)" stroke="#38BDF8" stroke-width="1"/>
-  <text x="270" y="280" fill="#38BDF8" font-family="system-ui" font-size="11.5" font-weight="bold" text-anchor="middle">△ABC = △MNP (Leg - Leg / LL)  ·  AB = MN, AC = MP</text>
-  <text x="270" y="296" fill="#34D399" font-family="system-ui" font-size="11.5" font-weight="bold" text-anchor="middle">△DEF = △XYZ (Leg - Acute Angle / LA)  ·  DE = XY, ∠E = ∠Y</text>`
+  </g>`,
+    540, 285
   ),
 
   // 6. HL Four Triangles (SGK H.4.52)
   math7_l15_hl_four_triangles: () => wrapSvg(
     "Hypotenuse-Leg Four Triangles SGK H.4.52",
     "Identify HL congruent pair among right triangles ABC, DEF, KGH, MNP",
-    `  <rect x="85" y="14" width="370" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">HYPOTENUSE - LEG SCAN (SGK H.4.52)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- 1. △ABC: A(35,225), B(115,225), C(35,120) -->
   ${rightAngleMark(35, 225, 115, 225, 35, 120, 11, '#38BDF8')}
   <polygon points="35,225 115,225 35,120" fill="rgba(56,189,248,0.12)" stroke="#38BDF8" stroke-width="2.2"/>
@@ -415,19 +399,15 @@ const svgs = {
   <text x="400" y="234" fill="#FFF" font-family="system-ui" font-size="12" font-weight="bold">M</text>
   <text x="497" y="234" fill="#FFF" font-family="system-ui" font-size="12" font-weight="bold">N</text>
   <text x="410" y="108" fill="#FFF" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">P</text>
-
-  <rect x="75" y="262" width="390" height="42" rx="8" fill="rgba(15,23,42,0.8)" stroke="#38BDF8" stroke-width="1"/>
-  <text x="270" y="280" fill="#34D399" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">MATCH CONFIRMED · △ABC = △KGH (HL)</text>
-  <text x="270" y="296" fill="#94A3B8" font-family="system-ui" font-size="11" text-anchor="middle">Equal legs AB = GH (1 tick) &amp; equal hypotenuses BC = KH (2 ticks)</text>`
+  </g>`,
+    540, 285
   ),
 
   // 7. Compass Construction HL (SGK H.4.51)
   math7_l15_compass_hl: () => wrapSvg(
     "Compass Construction HL SGK H.4.51",
     "Constructing right triangle ABC given leg AB=3cm and hypotenuse BC=5cm using compass arc",
-    `  <rect x="95" y="14" width="350" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">COMPASS CONSTRUCTION · HL THEOREM (SGK H.4.51)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- Perpendicular Ray Ax going upward from A(150,245) -->
   <line x1="150" y1="245" x2="150" y2="65" stroke="#94A3B8" stroke-width="2" stroke-dasharray="6,4"/>
   <text x="140" y="65" fill="#94A3B8" font-family="monospace" font-size="13" font-weight="bold">x</text>
@@ -458,22 +438,19 @@ const svgs = {
   <text x="422" y="112" fill="#38BDF8" font-family="system-ui" font-size="11" font-weight="bold" text-anchor="middle">Step 1: Draw ∠xAB = 90°</text>
   <text x="422" y="130" fill="#E2E8F0" font-family="system-ui" font-size="10.5" text-anchor="middle">Step 2: AB = 3 cm on ray</text>
   <text x="422" y="148" fill="#F59E0B" font-family="system-ui" font-size="10.5" text-anchor="middle">Step 3: Arc (B, 5 cm) cuts Ax at C</text>
-
-  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">Right triangle is uniquely determined by hypotenuse and leg (HL uniqueness)</text>`
+  </g>`,
+    540, 285
   ),
 
   // 8. Kite Vidu 1 HA (SGK H.4.49)
   math7_l15_kite_vidu1_ha: () => wrapSvg(
     "Kite Model 1 HA SGK H.4.49",
     "Kite ABCD with right angles at B and D, common hypotenuse AC, equal acute angles at A, diagonals meeting at E",
-    `  <rect x="110" y="14" width="320" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">KITE MODEL 1 · HA THEOREM (SGK H.4.49)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- Scaled kite: A(175,160), C(365,160), B(220,79), D(220,241), E(220,160) -->
   <!-- Vector BA=(-45, 81), BC=(145, 81), dot = -6525 + 6561 ≈ 0 (Angle B = 90°) -->
   ${rightAngleMark(220, 79, 175, 160, 365, 160, 13, '#38BDF8')}
   ${rightAngleMark(220, 241, 175, 160, 365, 160, 13, '#38BDF8')}
-  ${rightAngleMark(220, 160, 365, 160, 220, 79, 10, '#94A3B8')}
 
   ${angleArc(175, 160, 365, 160, 220, 79, 26, '#F59E0B', 'rgba(245,158,11,0.25)')}
   ${angleArc(175, 160, 220, 241, 365, 160, 26, '#F59E0B', 'rgba(245,158,11,0.25)')}
@@ -488,18 +465,16 @@ const svgs = {
   <circle cx="220" cy="241" r="4.5" fill="#22D3EE"/><text x="220" y="260" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold" text-anchor="middle">D</text>
   <circle cx="220" cy="160" r="3.5" fill="#94A3B8"/><text x="228" y="152" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold">E</text>
 
-  <text x="300" y="150" fill="#34D399" font-family="monospace" font-size="11" font-weight="bold">AC (Common)</text>
-
-  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">∠ABC = ∠ADC = 90°, AC common, ∠BAC = ∠DAC ⇒ △ABC = △ADC (HA) ⇒ AB = AD</text>`
+  <text x="300" y="150" fill="#34D399" font-family="monospace" font-size="11" font-weight="bold">AC</text>
+  </g>`,
+    540, 285
   ),
 
   // 9. Bisector Perpendiculars HA (SGK H.4.50)
   math7_l15_bisector_perp: () => wrapSvg(
     "Angle Bisector Perpendiculars SGK H.4.50",
     "Ray Oz bisecting angle xOy with M on Oz, MA perp Ox and MB perp Oy",
-    `  <rect x="100" y="14" width="340" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">ANGLE BISECTOR PROPERTY · HA THEOREM (SGK H.4.50)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- O(75, 235), Ox to (470, 235), Oy to (320, 58), Oz to (445, 105) -->
   <line x1="75" y1="235" x2="470" y2="235" stroke="#94A3B8" stroke-width="2"/>
   <text x="478" y="239" fill="#94A3B8" font-family="monospace" font-size="13" font-weight="bold">x</text>
@@ -530,18 +505,16 @@ const svgs = {
   <circle cx="248" cy="80" r="4.5" fill="#22D3EE"/><text x="240" y="68" fill="#FFF" font-family="system-ui" font-size="13" font-weight="bold">B</text>
   <circle cx="315" cy="150" r="4.5" fill="#F59E0B"/><text x="328" y="152" fill="#F59E0B" font-family="system-ui" font-size="14" font-weight="bold">M</text>
 
-  <text x="180" y="180" fill="#34D399" font-family="monospace" font-size="11" font-weight="bold" transform="rotate(-19 180 180)">Common OM</text>
-
-  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">OM common, ∠AOM = ∠BOM, ∠OAM = ∠OBM = 90° ⇒ △OAM = △OBM (HA) ⇒ MA = MB</text>`
+  <text x="180" y="180" fill="#34D399" font-family="monospace" font-size="11" font-weight="bold" transform="rotate(-19 180 180)">OM</text>
+  </g>`,
+    540, 285
   ),
 
   // 10. Kite Vidu 2 HL (SGK H.4.53)
   math7_l15_kite_vidu2_hl: () => wrapSvg(
     "Kite Model 2 HL SGK H.4.53",
     "Kite ABCD with right angles at B and D, common hypotenuse AC, equal legs AB = AD",
-    `  <rect x="110" y="14" width="320" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">KITE MODEL 2 · HL THEOREM (SGK H.4.53)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- Scaled coordinates: A(175,160), C(365,160), B(220,79), D(220,241) -->
   ${rightAngleMark(220, 79, 175, 160, 365, 160, 13, '#38BDF8')}
   ${rightAngleMark(220, 241, 175, 160, 365, 160, 13, '#38BDF8')}
@@ -557,18 +530,16 @@ const svgs = {
   <circle cx="365" cy="160" r="4.5" fill="#22D3EE"/><text x="378" y="165" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">C</text>
   <circle cx="220" cy="241" r="4.5" fill="#22D3EE"/><text x="220" y="260" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold" text-anchor="middle">D</text>
 
-  <text x="300" y="150" fill="#34D399" font-family="monospace" font-size="11" font-weight="bold">AC (Common Hypotenuse)</text>
-
-  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">AC common hypotenuse, leg AB = AD, ∠B = ∠D = 90° ⇒ △ABC = △ADC (HL) ⇒ BC = DC</text>`
+  <text x="300" y="150" fill="#34D399" font-family="monospace" font-size="11" font-weight="bold">AC</text>
+  </g>`,
+    540, 285
   ),
 
   // 11. Circle Three HL (SGK H.4.54)
   math7_l15_circle_three_hl: () => wrapSvg(
     "Circle with Chords and Perpendiculars SGK H.4.54",
     "Circle centered at O with chords AB, BC, CA and perpendiculars OP, OM, ON forming 3 pairs of HL congruent right triangles",
-    `  <rect x="85" y="14" width="370" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">CHORDS &amp; RADII · 3 PAIRS OF HL CONGRUENCE (SGK H.4.54)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- Circle centered at O(270, 172), radius R=100 -->
   <circle cx="270" cy="172" r="100" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="6,4"/>
 
@@ -599,17 +570,15 @@ const svgs = {
   <circle cx="226.5" cy="147" r="3.5" fill="#FBBF24"/><text x="210" y="142" fill="#FBBF24" font-family="system-ui" font-size="12" font-weight="bold">P</text>
   <circle cx="313.5" cy="147" r="3.5" fill="#FBBF24"/><text x="326" y="142" fill="#FBBF24" font-family="system-ui" font-size="12" font-weight="bold">N</text>
   <circle cx="270" cy="222" r="3.5" fill="#FBBF24"/><text x="270" y="240" fill="#FBBF24" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">M</text>
-
-  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">OA = OB = OC (radii) ⇒ △OPA = △OPB (HL), △OMA = △OMB (HL), △ONA = △ONC (HL)</text>`
+  </g>`,
+    540, 285
   ),
 
   // 12. Ladders Wall HL (SGK H.4.55)
   math7_l15_ladders_wall_hl: () => wrapSvg(
     "Ladders on Vertical Wall HL SGK H.4.55",
     "Two ladders AB and A'B' of equal length leaning against vertical walls BH and B'H' of equal height",
-    `  <rect x="95" y="14" width="350" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">LADDERS ON WALL · HL APPLICATION (SGK H.4.55)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- Ground line -->
   <line x1="30" y1="245" x2="510" y2="245" stroke="#475569" stroke-width="2"/>
 
@@ -642,17 +611,15 @@ const svgs = {
 
   <text x="380" y="160" fill="#FBBF24" font-family="monospace" font-size="11" font-weight="bold" transform="rotate(-55 380 160)">Ladder A'B'</text>
   <text x="455" y="175" fill="#34D399" font-family="monospace" font-size="11" font-weight="bold">Wall B'H'</text>
-
-  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">Ladder AB = A'B', Wall BH = B'H', ∠H = ∠H' = 90° ⇒ △ABH = △A'B'H' (HL) ⇒ Base AH = A'H'</text>`
+  </g>`,
+    540, 285
   ),
 
   // 13. SGK 4.20a
   math7_l15_sgk_420a: () => wrapSvg(
     "Triangle Altitude & Bisector SGK 4.20a",
     "Triangle ABD with altitude AC perp BD and equal angle arcs at vertex A",
-    `  <rect x="105" y="14" width="330" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">ALTITUDE &amp; BISECTOR · LA (SGK 4.20a)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- Triangle ABD: A(270,75), B(130,245), D(410,245), C(270,245) -->
   ${angleArc(270, 75, 130, 245, 270, 245, 30, '#F59E0B', 'rgba(245,158,11,0.25)')}
   ${angleArc(270, 75, 270, 245, 410, 245, 30, '#F59E0B', 'rgba(245,158,11,0.25)')}
@@ -668,18 +635,16 @@ const svgs = {
   <circle cx="270" cy="245" r="4.5" fill="#34D399"/><text x="270" y="264" fill="#34D399" font-family="system-ui" font-size="14" font-weight="bold" text-anchor="middle">C</text>
   <circle cx="410" cy="245" r="4.5" fill="#22D3EE"/><text x="424" y="255" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">D</text>
 
-  <text x="282" y="165" fill="#34D399" font-family="monospace" font-size="11.5" font-weight="bold">AC (Common)</text>
-
-  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">AC common leg, ∠BAC = ∠DAC, ∠BCA = ∠DCA = 90° ⇒ △ABC = △ADC (LA) ⇒ AB = AD</text>`
+  <text x="282" y="165" fill="#34D399" font-family="monospace" font-size="11.5" font-weight="bold">AC</text>
+  </g>`,
+    540, 285
   ),
 
   // 14. SGK 4.20b
   math7_l15_sgk_420b: () => wrapSvg(
     "Crossed Right Triangles Shared Base SGK 4.20b",
     "Crossed right triangles EHG and FGH sharing hypotenuse HG with equal legs EH = FG",
-    `  <rect x="105" y="14" width="330" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">SHARED HYPOTENUSE · HL (SGK 4.20b)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- H(130,245), G(410,245), E(186,133), F(354,133) -->
   ${rightAngleMark(186, 133, 130, 245, 410, 245, 13, '#38BDF8')}
   ${rightAngleMark(354, 133, 410, 245, 130, 245, 13, '#34D399')}
@@ -695,18 +660,16 @@ const svgs = {
   <circle cx="186" cy="133" r="4.5" fill="#38BDF8"/><text x="180" y="120" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">E</text>
   <circle cx="354" cy="133" r="4.5" fill="#34D399"/><text x="360" y="120" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">F</text>
 
-  <text x="270" y="265" fill="#38BDF8" font-family="monospace" font-size="11.5" font-weight="bold" text-anchor="middle">HG (Common Hypotenuse)</text>
-
-  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">HG common hypotenuse, leg EH = FG, ∠E = ∠F = 90° ⇒ △EHG = △FGH (HL) ⇒ EG = FH</text>`
+  <text x="270" y="265" fill="#38BDF8" font-family="monospace" font-size="11.5" font-weight="bold" text-anchor="middle">HG</text>
+  </g>`,
+    540, 285
   ),
 
   // 15. SGK 4.20c
   math7_l15_sgk_420c: () => wrapSvg(
     "Perpendicular Rays HL SGK 4.20c",
     "Right angles at M on K-M-N with ray MQ upward, QK and PN equal hypotenuses",
-    `  <rect x="95" y="14" width="350" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">PERPENDICULAR RAYS · HL (SGK 4.20c)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- M(270,245), K(170,245), N(440,245), P(270,145), Q(270,75) -->
   <line x1="140" y1="245" x2="470" y2="245" stroke="#94A3B8" stroke-width="2"/>
   <line x1="270" y1="245" x2="270" y2="55" stroke="#94A3B8" stroke-width="2"/>
@@ -727,17 +690,15 @@ const svgs = {
   <circle cx="440" cy="245" r="4.5" fill="#34D399"/><text x="448" y="255" fill="#FFF" font-family="system-ui" font-size="13" font-weight="bold">N</text>
   <circle cx="270" cy="145" r="4.5" fill="#34D399"/><text x="282" y="148" fill="#FFF" font-family="system-ui" font-size="13" font-weight="bold">P</text>
   <circle cx="270" cy="75" r="4.5" fill="#22D3EE"/><text x="282" y="78" fill="#FFF" font-family="system-ui" font-size="13" font-weight="bold">Q</text>
-
-  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">Hypotenuses QK = PN, legs KM = PM, right at M ⇒ △QMK = △PMN (HL) ⇒ QM = MN</text>`
+  </g>`,
+    540, 285
   ),
 
   // 16. SGK 4.20d
   math7_l15_sgk_420d: () => wrapSvg(
     "Frame Diagonals LL SGK 4.20d",
     "Vertical frame VSTU with diagonals VT and US, right angles at S and T, equal vertical sides VS = UT",
-    `  <rect x="105" y="14" width="330" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">FRAME DIAGONALS · LL THEOREM (SGK 4.20d)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- V(150,95), U(390,95), S(150,245), T(390,245) -->
   ${rightAngleMark(150, 245, 390, 245, 150, 95, 14, '#38BDF8')}
   ${rightAngleMark(390, 245, 150, 245, 390, 95, 14, '#34D399')}
@@ -754,18 +715,16 @@ const svgs = {
   <circle cx="150" cy="245" r="4.5" fill="#22D3EE"/><text x="135" y="258" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">S</text>
   <circle cx="390" cy="245" r="4.5" fill="#34D399"/><text x="404" y="258" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">T</text>
 
-  <text x="270" y="265" fill="#38BDF8" font-family="monospace" font-size="11.5" font-weight="bold" text-anchor="middle">ST (Common Leg)</text>
-
-  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">VS = UT, ST common, ∠VST = ∠UTS = 90° ⇒ △VST = △UTS (LL) ⇒ Diagonals VT = US</text>`
+  <text x="270" y="265" fill="#38BDF8" font-family="monospace" font-size="11.5" font-weight="bold" text-anchor="middle">ST</text>
+  </g>`,
+    540, 285
   ),
 
   // 17. SGK 4.21 Bowtie (SGK H.4.56)
   math7_l15_sgk_421_bowtie: () => wrapSvg(
     "Bowtie Right Triangles SGK H.4.56",
     "Crossed right triangles BAC and BDC with common hypotenuse BC, AB = CD, diagonals intersecting at E",
-    `  <rect x="95" y="14" width="350" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">BOWTIE RIGHT TRIANGLES · HL THEOREM (SGK H.4.56)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- B(110,245), C(430,245), A(190,106), D(350,106), E(270,152) -->
   ${rightAngleMark(190, 106, 110, 245, 430, 245, 13, '#38BDF8')}
   ${rightAngleMark(350, 106, 430, 245, 110, 245, 13, '#34D399')}
@@ -784,18 +743,16 @@ const svgs = {
   <circle cx="350" cy="106" r="4.5" fill="#34D399"/><text x="360" y="94" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">D</text>
   <circle cx="270" cy="152" r="3.5" fill="#F59E0B"/><text x="270" y="142" fill="#F59E0B" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">E</text>
 
-  <text x="270" y="265" fill="#38BDF8" font-family="monospace" font-size="11.5" font-weight="bold" text-anchor="middle">BC (Common Hypotenuse)</text>
-
-  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">BC common, leg AB = DC, ∠A = ∠D = 90° ⇒ △BAC = △BDC (HL) ⇒ △ABE = △DCE</text>`
+  <text x="270" y="265" fill="#38BDF8" font-family="monospace" font-size="11.5" font-weight="bold" text-anchor="middle">BC</text>
+  </g>`,
+    540, 285
   ),
 
   // 18. SGK 4.22 Rect Midpoint (SGK 4.22)
   math7_l15_sgk_422_rect_mid: () => wrapSvg(
     "Rectangle Midpoint LL SGK 4.22",
     "Rectangle ABCD with M midpoint of bottom side BC, segments AM and DM drawn",
-    `  <rect x="105" y="14" width="330" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">RECTANGLE MIDPOINT · LL THEOREM (SGK 4.22)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- A(130,95), D(410,95), B(130,245), C(410,245), M(270,245) -->
   ${rightAngleMark(130, 245, 270, 245, 130, 95, 14, '#38BDF8')}
   ${rightAngleMark(410, 245, 270, 245, 410, 95, 14, '#34D399')}
@@ -819,17 +776,15 @@ const svgs = {
   <circle cx="130" cy="245" r="4.5" fill="#22D3EE"/><text x="115" y="258" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">B</text>
   <circle cx="410" cy="245" r="4.5" fill="#34D399"/><text x="422" y="258" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">C</text>
   <circle cx="270" cy="245" r="4.5" fill="#FBBF24"/><text x="270" y="265" fill="#FBBF24" font-family="system-ui" font-size="14" font-weight="bold" text-anchor="middle">M</text>
-
-  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">AB = CD (rect sides), BM = CM (midpoint), ∠B = ∠C = 90° ⇒ △ABM = △DCM (LL) ⇒ AM = DM</text>`
+  </g>`,
+    540, 285
   ),
 
   // 19. SBT 4.31b Bowtie (SBT 4.31b)
   math7_l15_sbt_431b_bowtie: () => wrapSvg(
     "Bowtie Vertical Angles HA SBT 4.31b",
     "Crossed right triangles EFG and KHG meeting at G with vertical angles and equal hypotenuses FG = HG",
-    `  <rect x="95" y="14" width="350" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">VERTICAL ANGLES BOWTIE · HA (SBT 4.31b)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- Left: E(130,95), F(130,245), G(270,170). Right at E -->
   <!-- Right: K(410,95), H(410,245), G(270,170). Right at K -->
   ${rightAngleMark(130, 95, 130, 245, 270, 170, 13, '#38BDF8')}
@@ -849,17 +804,15 @@ const svgs = {
   <circle cx="410" cy="95" r="4.5" fill="#34D399"/><text x="424" y="92" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">K</text>
   <circle cx="410" cy="245" r="4.5" fill="#34D399"/><text x="424" y="258" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">H</text>
   <circle cx="270" cy="170" r="4.5" fill="#F59E0B"/><text x="270" y="156" fill="#F59E0B" font-family="system-ui" font-size="14" font-weight="bold" text-anchor="middle">G</text>
-
-  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">Hypotenuses FG = HG, vertical ∠EGF = ∠KGH, right at E, K ⇒ △FEG = △HKG (HA)</text>`
+  </g>`,
+    540, 285
   ),
 
   // 20. SBT 4.31c Overlap (SBT 4.31c)
   math7_l15_sbt_431c_overlap: () => wrapSvg(
     "Overlapping Right Triangles LA SBT 4.31c",
     "Overlapping right triangles NMO and PQO sharing acute angle O with MN = PQ",
-    `  <rect x="85" y="14" width="370" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">OVERLAPPING RIGHT TRIANGLES · LA (SBT 4.31c)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- O(80,240), M(330,240), N(330,115), P(362,240), Q(302,130) -->
   ${angleArc(80, 240, 330, 115, 362, 240, 36, '#F59E0B', 'rgba(245,158,11,0.25)')}
   ${rightAngleMark(330, 240, 80, 240, 330, 115, 13, '#38BDF8')}
@@ -884,17 +837,15 @@ const svgs = {
   <circle cx="330" cy="115" r="4.5" fill="#38BDF8"/><text x="330" y="102" fill="#FFF" font-family="system-ui" font-size="13" font-weight="bold" text-anchor="middle">N</text>
   <circle cx="362" cy="240" r="4.5" fill="#34D399"/><text x="372" y="256" fill="#FFF" font-family="system-ui" font-size="13" font-weight="bold">P</text>
   <circle cx="302" cy="130" r="4.5" fill="#34D399"/><text x="290" y="122" fill="#FFF" font-family="system-ui" font-size="13" font-weight="bold">Q</text>
-
-  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">∠O common, leg MN = PQ, right at M and Q ⇒ △NMO = △PQO (LA) ⇒ ON = OP</text>`
+  </g>`,
+    540, 285
   ),
 
   // 21. SBT 4.31d V-Shape (SBT 4.31d)
   math7_l15_sbt_431d_vshape: () => wrapSvg(
     "V-Shaped Twin Right Triangles HL SBT 4.31d",
     "V-shaped twin right triangles XYZ and TSZ on base X-Z-S with triple ticks on hypotenuses YZ=TZ and double ticks on legs XZ=SZ",
-    `  <rect x="95" y="14" width="350" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">V-SHAPED TWINS · HL THEOREM (SBT 4.31d)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- Base X-Z-S: X(110,245), Z(270,245), S(430,245) -->
   <!-- Y(110,95), T(430,95) -->
   <line x1="80" y1="245" x2="460" y2="245" stroke="#94A3B8" stroke-width="2"/>
@@ -918,17 +869,15 @@ const svgs = {
   <circle cx="430" cy="245" r="4.5" fill="#34D399"/><text x="444" y="258" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">S</text>
   <circle cx="110" cy="95" r="4.5" fill="#22D3EE"/><text x="95" y="90" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">Y</text>
   <circle cx="430" cy="95" r="4.5" fill="#34D399"/><text x="444" y="90" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">T</text>
-
-  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">Hypotenuses YZ = TZ (3 ticks), legs XZ = SZ (2 ticks), right at X, S ⇒ △XYZ = △TSZ (HL)</text>`
+  </g>`,
+    540, 285
   ),
 
   // 22. SBT 4.33 Perp Diagonals (SBT 4.33)
   math7_l15_sbt_433_perp_diag: () => wrapSvg(
     "Perpendicular Diagonals LL SBT 4.33",
     "Quadrilateral ABCD with diagonals AC perp BD at E, EA = EB and EC = ED",
-    `  <rect x="95" y="14" width="350" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">PERPENDICULAR DIAGONALS · LL (SBT 4.33)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- E(270,175), A(175,175), C(395,175), B(270,80), D(270,270) -->
   ${rightAngleMark(270, 175, 175, 175, 270, 80, 12, '#38BDF8')}
   ${rightAngleMark(270, 175, 395, 175, 270, 270, 12, '#34D399')}
@@ -950,23 +899,20 @@ const svgs = {
   <circle cx="395" cy="175" r="4.5" fill="#34D399"/><text x="410" y="180" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">C</text>
   <circle cx="270" cy="270" r="4.5" fill="#34D399"/><text x="270" y="288" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold" text-anchor="middle">D</text>
   <circle cx="270" cy="175" r="3.5" fill="#FFF"/><text x="248" y="160" fill="#FFF" font-family="system-ui" font-size="13" font-weight="bold">E</text>
-
-  <text x="270" y="302" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">EA = EB, ED = EC, right at E ⇒ △EAD = △EBC (LL) ⇒ Opposite sides AD = BC</text>`
+  </g>`,
+    540, 285
   ),
 
   // 23. SBT 4.34 Square Midpoints (SBT 4.34)
   math7_l15_sbt_434_square_mid: () => wrapSvg(
     "Square Midpoints LL SBT 4.34",
     "Square ABCD with M midpoint of AB, N midpoint of AD, segments BN and CM intersecting at P",
-    `  <rect x="95" y="14" width="350" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">SQUARE MIDPOINTS · LL THEOREM (SBT 4.34)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- Square ABCD: A(180,80), D(360,80), B(180,260), C(360,260) -->
   <!-- M(180,170) on AB, N(270,80) on AD -->
   <!-- Intersection P(216,188) -->
   ${rightAngleMark(180, 80, 270, 80, 180, 170, 13, '#38BDF8')}
   ${rightAngleMark(180, 260, 360, 260, 180, 80, 13, '#34D399')}
-  ${rightAngleMark(216, 188, 270, 80, 360, 260, 11, '#F59E0B')}
 
   <rect x="180" y="80" width="180" height="180" fill="none" stroke="#64748B" stroke-width="2"/>
 
@@ -988,17 +934,15 @@ const svgs = {
   <circle cx="180" cy="170" r="4" fill="#FBBF24"/><text x="162" y="174" fill="#FBBF24" font-family="system-ui" font-size="12" font-weight="bold">M</text>
   <circle cx="270" cy="80" r="4" fill="#FBBF24"/><text x="270" y="68" fill="#FBBF24" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">N</text>
   <circle cx="216" cy="188" r="4.5" fill="#F59E0B"/><text x="232" y="182" fill="#F59E0B" font-family="system-ui" font-size="13" font-weight="bold">P</text>
-
-  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">AB = BC, AN = BM, right at A, B ⇒ △BAN = △CBM (LL) ⇒ BN ⊥ CM at P</text>`
+  </g>`,
+    540, 285
   ),
 
   // 24. SBT 4.36 Altitudes
   math7_l15_sbt_436_altitudes: () => wrapSvg(
     "Congruent Triangles with Altitudes SBT 4.36",
     "Congruent triangles ABC and DEF with corresponding altitudes AH perp BC and DK perp EF",
-    `  <rect x="95" y="14" width="350" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">ALTITUDES IN CONGRUENT TRIANGLES (SBT 4.36)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- Left: △ABC with AH ⊥ BC. A(150,85), B(55,245), C(245,245), H(150,245) -->
   ${rightAngleMark(150, 245, 55, 245, 150, 85, 13, '#38BDF8')}
   <polygon points="150,85 55,245 245,245" fill="rgba(56,189,248,0.1)" stroke="#38BDF8" stroke-width="2.5"/>
@@ -1024,17 +968,15 @@ const svgs = {
   <circle cx="295" cy="245" r="4.5" fill="#34D399"/><text x="282" y="256" fill="#FFF" font-family="system-ui" font-size="13.5" font-weight="bold">E</text>
   <circle cx="485" cy="245" r="4.5" fill="#34D399"/><text x="496" y="256" fill="#FFF" font-family="system-ui" font-size="13.5" font-weight="bold">F</text>
   <circle cx="390" cy="245" r="4" fill="#FBBF24"/><text x="390" y="262" fill="#FBBF24" font-family="system-ui" font-size="13" font-weight="bold" text-anchor="middle">K</text>
-
-  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">AB = DE (hypotenuses), AH = DK (altitudes), right at H, K ⇒ △ABH = △DEK (HL) ⇒ ∠B = ∠E</text>`
+  </g>`,
+    540, 285
   ),
 
   // 25. SBT 4.39 Rect EF
   math7_l15_sbt_439_rect_ef: () => wrapSvg(
     "Rectangle Segments LL SBT 4.39",
     "Rectangle ABCD with E on AD, F on BC such that AE = CF, proving AF = CE and BE = DF",
-    `  <rect x="95" y="14" width="350" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">RECTANGLE SEGMENTS · LL THEOREM (SBT 4.39)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- A(110,95), D(430,95), B(110,245), C(430,245) -->
   <!-- E(210,95) so AE=100, ED=220 -->
   <!-- F(330,245) so CF=100, BF=220 -->
@@ -1065,17 +1007,15 @@ const svgs = {
 
   <circle cx="210" cy="95" r="4" fill="#FBBF24"/><text x="210" y="82" fill="#FBBF24" font-family="system-ui" font-size="13" font-weight="bold" text-anchor="middle">E</text>
   <circle cx="330" cy="245" r="4" fill="#FBBF24"/><text x="330" y="265" fill="#FBBF24" font-family="system-ui" font-size="13" font-weight="bold" text-anchor="middle">F</text>
-
-  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">AE = CF ⇒ BF = DE; AB = CD, right at B, D ⇒ △ABF = △CDE (LL) ⇒ AF = CE</text>`
+  </g>`,
+    540, 285
   ),
 
   // 26. SBT 4.40 Perpendicular Cross (SBT 4.40)
   math7_l15_sbt_440_perp_cross: () => wrapSvg(
     "Perpendicular Cross LL SBT 4.40",
     "Right angle at D on line B-D-C with DA=DC, DB=DE, CE extended cuts AB perpendicularly at F",
-    `  <rect x="95" y="14" width="350" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">PERPENDICULAR EXTENSION · LL (SBT 4.40)</text>
-
+    `  <g transform="translate(0, -20)">
   <!-- Horizontal line B-D-C: D(220,245), B(130,245), C(360,245) -->
   <!-- DA=DC=140 => A(220,105) -->
   <!-- DB=DE=90 => E(220,155) -->
@@ -1085,7 +1025,6 @@ const svgs = {
 
   ${rightAngleMark(220, 245, 130, 245, 220, 105, 13, '#38BDF8')}
   ${rightAngleMark(220, 245, 360, 245, 220, 155, 13, '#34D399')}
-  ${rightAngleMark(197.3, 140.4, 220, 105, 360, 245, 11, '#F59E0B')}
 
   <!-- Triangles ADB and CDE -->
   <polygon points="130,245 220,245 220,105" fill="rgba(56,189,248,0.12)" stroke="#38BDF8" stroke-width="2.5"/>
@@ -1107,8 +1046,8 @@ const svgs = {
   <circle cx="220" cy="105" r="4.5" fill="#22D3EE"/><text x="220" y="92" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold" text-anchor="middle">A</text>
   <circle cx="220" cy="155" r="4.5" fill="#34D399"/><text x="232" y="160" fill="#34D399" font-family="system-ui" font-size="13" font-weight="bold">E</text>
   <circle cx="197.3" cy="140.4" r="4.5" fill="#F59E0B"/><text x="180" y="152" fill="#F59E0B" font-family="system-ui" font-size="13" font-weight="bold">F</text>
-
-  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">DA = DC, DB = DE, right at D ⇒ △ADB = △CDE (LL) ⇒ ∠A = ∠C ⇒ CF ⊥ AB at F</text>`
+  </g>`,
+    540, 285
   )
 };
 

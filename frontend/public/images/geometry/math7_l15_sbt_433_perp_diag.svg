@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="100%" height="280" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 285" width="100%" height="280" role="img" aria-labelledby="title desc">
   <title id="title">Perpendicular Diagonals LL SBT 4.33</title>
   <desc id="desc">Quadrilateral ABCD with diagonals AC perp BD at E, EA = EB and EC = ED</desc>
   <defs>
@@ -14,10 +14,8 @@
       </feMerge>
     </filter>
   </defs>
-  <rect width="540" height="320" rx="18" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.4"/>
-  <rect x="95" y="14" width="350" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">PERPENDICULAR DIAGONALS · LL (SBT 4.33)</text>
-
+  <rect width="540" height="285" rx="18" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.4"/>
+  <g transform="translate(0, -20)">
   <!-- E(270,175), A(175,175), C(395,175), B(270,80), D(270,270) -->
   <path d="M 258.0 175.0 L 258.0 163.0 L 270.0 163.0" fill="none" stroke="#38BDF8" stroke-width="2"/>
   <path d="M 282.0 175.0 L 282.0 187.0 L 270.0 187.0" fill="none" stroke="#34D399" stroke-width="2"/>
@@ -41,6 +39,5 @@
   <circle cx="395" cy="175" r="4.5" fill="#34D399"/><text x="410" y="180" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold">C</text>
   <circle cx="270" cy="270" r="4.5" fill="#34D399"/><text x="270" y="288" fill="#FFF" font-family="system-ui" font-size="14" font-weight="bold" text-anchor="middle">D</text>
   <circle cx="270" cy="175" r="3.5" fill="#FFF"/><text x="248" y="160" fill="#FFF" font-family="system-ui" font-size="13" font-weight="bold">E</text>
-
-  <text x="270" y="302" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">EA = EB, ED = EC, right at E ⇒ △EAD = △EBC (LL) ⇒ Opposite sides AD = BC</text>
+  </g>
 </svg>

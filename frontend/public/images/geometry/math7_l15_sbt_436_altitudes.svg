@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="100%" height="280" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 285" width="100%" height="280" role="img" aria-labelledby="title desc">
   <title id="title">Congruent Triangles with Altitudes SBT 4.36</title>
   <desc id="desc">Congruent triangles ABC and DEF with corresponding altitudes AH perp BC and DK perp EF</desc>
   <defs>
@@ -14,10 +14,8 @@
       </feMerge>
     </filter>
   </defs>
-  <rect width="540" height="320" rx="18" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.4"/>
-  <rect x="95" y="14" width="350" height="28" rx="14" fill="#0F172A" stroke="#22D3EE" stroke-width="1.2"/>
-  <text x="270" y="33" fill="#E2E8F0" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">ALTITUDES IN CONGRUENT TRIANGLES (SBT 4.36)</text>
-
+  <rect width="540" height="285" rx="18" fill="url(#bgGrad)" stroke="#06B6D4" stroke-width="1.5" stroke-opacity="0.4"/>
+  <g transform="translate(0, -20)">
   <!-- Left: △ABC with AH ⊥ BC. A(150,85), B(55,245), C(245,245), H(150,245) -->
   <path d="M 137.0 245.0 L 137.0 232.0 L 150.0 232.0" fill="none" stroke="#38BDF8" stroke-width="2"/>
   <polygon points="150,85 55,245 245,245" fill="rgba(56,189,248,0.1)" stroke="#38BDF8" stroke-width="2.5"/>
@@ -45,6 +43,5 @@
   <circle cx="295" cy="245" r="4.5" fill="#34D399"/><text x="282" y="256" fill="#FFF" font-family="system-ui" font-size="13.5" font-weight="bold">E</text>
   <circle cx="485" cy="245" r="4.5" fill="#34D399"/><text x="496" y="256" fill="#FFF" font-family="system-ui" font-size="13.5" font-weight="bold">F</text>
   <circle cx="390" cy="245" r="4" fill="#FBBF24"/><text x="390" y="262" fill="#FBBF24" font-family="system-ui" font-size="13" font-weight="bold" text-anchor="middle">K</text>
-
-  <text x="270" y="298" fill="#94A3B8" font-family="system-ui" font-size="11.5" text-anchor="middle">AB = DE (hypotenuses), AH = DK (altitudes), right at H, K ⇒ △ABH = △DEK (HL) ⇒ ∠B = ∠E</text>
+  </g>
 </svg>
